@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>Stayed here for one night, to go to a music festival in Hyde Park - very good area and central location. However, we encountered a problem with our booking upon arrival, and found the staff to be unfriendly. Our room was in need of refurbishment and was quite dark. The shower was rusted, and we <span class='review-span highlight' data-aligned-summaries='0'>could not get any hot water from the taps</span>. On the morning of our stay it rained and their was a leak from the ceiling onto our bed - nice! The <span class='review-span highlight' data-aligned-summaries='1'>breakfast wasn't up to much</span> either. Would not stay here again, and would not recommend it until it is refurbished. If you want to stay in this area, I would recommend the Hyde Park Radnor Hotel just around the corner - excellent, but book early.</div><div class='text-box'>We were booked into this hotel for a company event. However, on arrival (and after we had paid in full!) we were then told we would actually be staying in another of their hotels directly across the road - what?!? The other hotel was dire, it had not been touched or decorated since at least the 70's, there was mould in the bathrooms, no reception area (just a doorbell), threadbare carpets, <span class='review-span highlight' data-aligned-summaries='0'>musty smell</span> in corridors and rooms etc, etc. How can a hotel take a booking using images and reviews on one hotel and then send you to another which is in appalling condition? Avoid booking into this hotel at all costs, you may find yourself staying somewhere that you hadn't expected.</div><div class='text-box'>stayed here for 5 days .Front desk staff made an error with our booking when we arrived and we were asked to check out the day before we had planned to until we showed our invoice and proof of the error we had been treated like frauds.despite this lapse on their part we were still relocated to an inferior room for the same price! However, in fairness to them they tried to improve service levels after this but i guess the damage had already been done. On a separate note one of the ladies in the breakfast room was borderline rude and consistently served without a smile as though more interested to get you out and close the kitchen by 9am.</div><div class='text-box'>This hotel is in a great location but there is a lot to be desired in this hotel. there is no lift we had to carry out bags up four flights of stairs. The breakfast was fine but the staff were not very friendly . The rooms are in desperate need of refurbishment. There was stains on the ceiling and the window wouldn't open. There was paint feeling off the ceiling in the bathroom and and the light didn't work. We only stayed there two nights and at this price you cant expect much</div><div class='text-box'>We stayed at the hotel with some trepidation having read the reviews after we had booked. We were greeted by a very friendly polite receptionist. The room was in need of refurbishment but was clean enough. The dining room was clean and fresh <span class='review-span highlight' data-aligned-summaries='1'>the breakfast was fine</span>. Because we were using the hotel just as a base we did not intend to spend much time in the room. The location we like and have stayed at various hotels in Sussex Gardens.</div><div class='text-box'>I stayed here overnight for a business trip. Literally in at 9pm and out at 8am. It was perfect for my purposes, yes <span class='review-span highlight' data-aligned-summaries='0'>the room is small</span> but it is clean and the staff friendly. <span class='review-span highlight' data-aligned-summaries='0'>bathroom</span> a bit dated and <span class='review-span highlight' data-aligned-summaries='0'>small</span> but nice hot shower. <span class='review-span highlight' data-aligned-summaries='1'>I got good value for money</span> on a last minute deal. Would recommend it for this purpose but not for staying any length of time in the room.</div><div class='text-box'>Me & my partner stayed here for 2 nights in June, we needed place close to hyde park for a gig and somewhere with parking which was only 10 per day which is nothing in London. Staff where lovely. We basically only slept in <span class='review-span highlight' data-aligned-summaries='0'>the room</span> as they are <span class='review-span highlight' data-aligned-summaries='0'>rather on the small size</span> if youre looking for somewhere cheap and to crash I recommend Springfield however if you want luxury pay the price for it.</div><div class='text-box'>The hotel is very convenient located just close to two metro stations. Neighborhood is nice. The <span class='review-span highlight' data-aligned-summaries='0'>rooms were</span> quite <span class='review-span highlight' data-aligned-summaries='0'>small</span> and the <span class='review-span highlight' data-aligned-summaries='0'>bathrooms were</span> quite <span class='review-span highlight' data-aligned-summaries='0'>small</span>. The checkout time is quite early - 10am. Make sure to close the windows so you can have a sleep because of the busy street outside. In conclusion the hotel served its purpose - good location on fair price.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The room and the bathroom were very small, but we could manage to have a bath in spite of the broken shower and the sewer smell.</span> <span id="1" class="summary-sentence">Breakfast was included but the rate was too high for what we got.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

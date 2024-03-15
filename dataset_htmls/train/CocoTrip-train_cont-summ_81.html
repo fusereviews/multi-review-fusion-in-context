@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>Great Room.Great Location.Great Service! Great Room.Great Location.Great Service! <span class='review-span highlight' data-aligned-summaries='2'>The rooms</span> have been updated and <span class='review-span highlight' data-aligned-summaries='2'>are clean</span> and comfortable. The location is extremely close to most bus routes that will take you everywhere in the city. All bus stops are within walking distance from the hotel. <span class='review-span highlight' data-aligned-summaries='4'>It is also walking distance to many neighborhood eating and drinking establishments</span> which are clearly loved by the locals. <span class='review-span highlight' data-aligned-summaries='2'>The folks who work at the motel are extremely friendly and willing to help</span> with directions and city recommendations. Best of all, <span class='review-span highlight' data-aligned-summaries='5'>there is no charge for parking</span> - this is truly something when talking about a location in San Francisco! Many would consider this a no-frills motel; however, I consider it true hidden treasure!</div><div class='text-box'>Lovely place Stayed at La Luna Inn and it was just like the website shows - the pictures were of the room not just the best rooms. <span class='review-span highlight' data-aligned-summaries='1'>Its on</span> Lombard <span class='review-span highlight' data-aligned-summaries='1'>street which is a busy street, we stayed in the back part which was nice and quiet</span>. <span class='review-span highlight' data-aligned-summaries='2'>It was very clean</span> and had nice fresh decor, <span class='review-span highlight' data-aligned-summaries='2'>the staff were helpful</span> and the room serviced every day. There are also security cameras in the corridors which makes you feel safe.<span class='review-span highlight' data-aligned-summaries='4'>You can walk down to the Marina through some lovely streets</span> which is about a 7 minute walk and get some nice views of the Golden Gate bridge.I would definetely recommend this hotel to other travellers. <span class='review-span highlight' data-aligned-summaries='5'>The free parking is great</span> too.</div><div class='text-box'>Ok for the price Stayed for 3 nights before moving on to LA. The <span class='review-span highlight' data-aligned-summaries='1'>hotel was located at the Golden Gate bridge end of Lombard Street</span> about 30 minutes walk from Fishermans Wharf and Pier 39. <span class='review-span highlight' data-aligned-summaries='1'>There was a lot of traffic noise</span> from our front facing room which may bother some people but we didn't find it much of a problem. The <span class='review-span highlight' data-aligned-summaries='2'>rooms where clean</span> and the decor looked quiet modern. <span class='review-span highlight' data-aligned-summaries='2'>The beds where comfortable</span> and <span class='review-span highlight' data-aligned-summaries='2'>clean</span>. Breakfast was very basic and served in reception. <span class='review-span highlight' data-aligned-summaries='4'>There are lots of trendy bars and restaurants close</span> by and the area seemed very safe.<span class='review-span highlight' data-aligned-summaries='0 3'>Overall a fairly cheap motel style hotel</span> where we <span class='review-span highlight' data-aligned-summaries='6'>would stay again if the price was right</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 3'>Great budget stay</span> <span class='review-span highlight' data-aligned-summaries='3'>in San Francisco</span> The La Luna Inn was a highlight of our stay in the city. <span class='review-span highlight' data-aligned-summaries='2'>The rooms were clean</span>, <span class='review-span highlight' data-aligned-summaries='2'>beds comfortable, staff friendly and helpful</span>, <span class='review-span highlight' data-aligned-summaries='0'>and</span> <span class='review-span highlight' data-aligned-summaries='0 5'>there is free parking</span>. It was safe and we were lucky to have a view of the Golden Gate Bridge. <span class='review-span highlight' data-aligned-summaries='4'>It is 30 minutes by public bus from the big attractions</span> and <span class='review-span highlight' data-aligned-summaries='1'>the street can be noisy</span> so look at a map before you book. <span class='review-span highlight' data-aligned-summaries='4'>But, good restaurants and shopping nearby</span>. <span class='review-span highlight' data-aligned-summaries='6'>Overall, an excellent stay that I would recommend to friends</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Perfect Budget Honeymoon</span> We had a great experience at La Luna. <span class='review-span highlight' data-aligned-summaries='2'>The staff were friendly and helpful</span>. <span class='review-span highlight' data-aligned-summaries='2'>The room was immaculately clean</span>, the furnishings and decor simple and beautiful, <span class='review-span highlight' data-aligned-summaries='2'>the bed comfy</span>. We did take previous reviewers advice and ask for a quiet room in the back. <span class='review-span highlight' data-aligned-summaries='4'>There were many very good little restaurants one street over on Chestnut</span> and it was a pretty walk to the Exploratorium and a pretty hike to Fisherman's wharf. Just our style for our budget honeymoon and <span class='review-span highlight' data-aligned-summaries='6'>we plan to come back</span> for our anniversary next year.</div><div class='text-box'>The Place is Loud! You get what you pay for! I actually stayed here after reading the reviews. <span class='review-span highlight' data-aligned-summaries='4'>The place is in the Marina area</span> so it is in a good location, HOWEVER, it is <span class='review-span highlight' data-aligned-summaries='1'>right on Lombard street</span> (<span class='review-span highlight' data-aligned-summaries='1'>basically like a SF Freeway</span>). So it is <span class='review-span highlight' data-aligned-summaries='1'>extremely loud</span> unless you are in the back. The <span class='review-span highlight' data-aligned-summaries='2'>beds are comfortable</span>, the showers are horrible, and the carpeting is industrial. I <span class='review-span highlight' data-aligned-summaries='6'>would hesistate to stay</span> there <span class='review-span highlight' data-aligned-summaries='6'>again</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='6'>Did the Job</span>! We were a little unsure before heading to the hotel but when we arrived we were greeted with some <span class='review-span highlight' data-aligned-summaries='2'>very friendly and helpfull reception staff</span>. <span class='review-span highlight' data-aligned-summaries='2'>The room was</span> rather basic but very tidy and <span class='review-span highlight' data-aligned-summaries='2'>reasonably comfortable</span>. If you are looking for basic and in a good location this place works. <span class='review-span highlight' data-aligned-summaries='4'>In good walking distance to</span> the Golden gate bridge and <span class='review-span highlight' data-aligned-summaries='4'>the Marina</span>. <span class='review-span highlight' data-aligned-summaries='6'>Highly recomended</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 3'>great find</span> We had a pleasant stay at La Luna Inn. <span class='review-span highlight' data-aligned-summaries='2'>The room was</span> large and <span class='review-span highlight' data-aligned-summaries='2'>clean</span>, <span class='review-span highlight' data-aligned-summaries='2'>the beds were comfortable</span>. <span class='review-span highlight' data-aligned-summaries='2'>The staff was helpful</span>, the continental breakfast was a convenient way to start a day. <span class='review-span highlight' data-aligned-summaries='5'>The parking was free</span>. <span class='review-span highlight' data-aligned-summaries='0 3'>The price was a little over $100</span>. <span class='review-span highlight' data-aligned-summaries='6'>We'll definately stay there again</span>. Los Angeles</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Good value.</span> <span id="1" class="summary-sentence">The property is located off a busy street, and yes there is considerable noise.</span> <span id="2" class="summary-sentence">However, the hotel room was very clean, the bed was comfortable, and the staff was very friendly and helpful.</span> <span id="3" class="summary-sentence">The room rate was pretty reasonable for a stay in the middle of the city.</span> <span id="4" class="summary-sentence">We were in walking distance to Chesnut street which is where all the great bars and restaurants are in the Marina.</span> <span id="5" class="summary-sentence">The free parking was also a great help considering there is no parking in the city.</span> <span id="6" class="summary-sentence">Would stay again.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

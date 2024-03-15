@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>The location of this hotel is in the heart of the industrial market of Istanbul,</span> but that should not deter you from staying here for business or leisure. <span class='review-span highlight' data-aligned-summaries='0'>The location is ideal for tourists too because of its proximity to the peninsua, golden horn and beyoglu. Everything is within walking distance</span>. <span class='review-span highlight' data-aligned-summaries='0'>Excellent connectivity by bus or the tram</span>. <span class='review-span highlight' data-aligned-summaries='0'>The metro is not far off either</span>. I would recommend that one takes rooms ont he higher levels because they then offer excellent views of the golden horn. <span class='review-span highlight' data-aligned-summaries='2'>Breakfast is not that great</span> but their roof top restaurant serves excellent seafood. Service is prompt and <span class='review-span highlight' data-aligned-summaries='5'>the staff is very courteous</span>. Other than the people int he reception, nobody knows English. I'll definitely be staying here the next time too.</div><div class='text-box'>My friends and I arrived to Golden City Hotel only to realize we had incorrectly made our reservation for one week later. They were nearly full but Ali and the reservation manager Nergiz were very helpful and able to find us a room and shift our reservation. <span class='review-span highlight' data-aligned-summaries='4'>The rooms were very quiet at night</span>, and <span class='review-span highlight' data-aligned-summaries='2'>the view of sunrise from the roof deck at breakfast was amazing</span>. <span class='review-span highlight' data-aligned-summaries='0 1'>There's not much around the hotel</span>, but <span class='review-span highlight' data-aligned-summaries='1'>it's only about 10 mins walk to the bridge</span> over to the old city, and about the same <span class='review-span highlight' data-aligned-summaries='1'>up to Galata</span> tower, and the beginning of lively Istikal street. The streets and alleys coming down from Galata are a little dark at night but we never felt unsafe walking home. <span class='review-span highlight' data-aligned-summaries='3'>Would stay again</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 1'>This hotel is located on a perfect location: in between the old city and the modern part</span> of the city <span class='review-span highlight' data-aligned-summaries='0 1'>with a great view on the river and the mosques</span>. <span class='review-span highlight' data-aligned-summaries='2'>Rooms are not big but big enough</span> with everything you need. Especially a very nice shower. Rooms are cleaned everyday. <span class='review-span highlight' data-aligned-summaries='2'>Breakfast is very good</span>. There is a lot of choice and the food is tastful. <span class='review-span highlight' data-aligned-summaries='5'>The staf is very friendly and helpful</span>. You can ask them everything and they take care of it immediately. They all speak Enlish very well. The rooms are averagely priced: 70 euro per night ( incl. Breakfast)</div><div class='text-box'>The hotel was fantastic.! The view was very beautiful. <span class='review-span highlight' data-aligned-summaries='0 1 3'>The location of the hotel was very central</span>.<span class='review-span highlight' data-aligned-summaries='1 3'> The important places are very nearby</span>. <span class='review-span highlight' data-aligned-summaries='5'>The staff were very friendly</span>. The rooms and the hotel were very clean and comfertable. <span class='review-span highlight' data-aligned-summaries='2'>The breakfast</span> and lunch <span class='review-span highlight' data-aligned-summaries='2'>was delicious</span>. I do not know how to tell it. It was just super.! My partner and i stayed there seven days we did not leave:(( We will book again.! <span class='review-span highlight' data-aligned-summaries='3'>If you are looking for a hotel in Istanbul</span>, not think just do it and <span class='review-span highlight' data-aligned-summaries='3'>go to golden city istanbul</span>.! ;))</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 3'>The</span> <span class='review-span highlight' data-aligned-summaries='0 1 3'>location</span> <span class='review-span highlight' data-aligned-summaries='0 3'>of the hotel</span> <span class='review-span highlight' data-aligned-summaries='0 1 3'>is quite convenient</span>.<span class='review-span highlight' data-aligned-summaries='0 1'> For all the major sights of the city</span> <span class='review-span highlight' data-aligned-summaries='0'>although the surroundings were far from attractive</span> (a neglected side yard, <span class='review-span highlight' data-aligned-summaries='0'>plenty of hardware shops and</span> <span class='review-span highlight' data-aligned-summaries='0 3'>a very busy street in front</span> <span class='review-span highlight' data-aligned-summaries='0'>of the hotel</span>). The rooms were comfortable and spacious and <span class='review-span highlight' data-aligned-summaries='2'>our breakfast rich and tasty</span>. The hotel employees were forthcoming and friendly. Special thanks to Ali in the <span class='review-span highlight' data-aligned-summaries='5'>reception</span> for being <span class='review-span highlight' data-aligned-summaries='5'>so helpful and pleasant</span>. What we <span class='review-span highlight' data-aligned-summaries='2'>enjoyed the</span> most was the <span class='review-span highlight' data-aligned-summaries='2'>fantastic view of the city from the restaurant</span> on the roof terrace.</div><div class='text-box'>This Hotel is totally new. The location is very good. You can reach all Sites by Foot. <span class='review-span highlight' data-aligned-summaries='2'>It has a rooftop Restaurant with an amazing view</span> over istanbul. The rooms have an Amazone View too. Towards the Golden Horn and the Hot Spots of istanbul. <span class='review-span highlight' data-aligned-summaries='5'>The Staff is super friendly. It was the birthday of my Hutband and the Staff prepared a surprise and a birthday cake</span>, Served on the rooftop with candles etc. It was an outstanding stay! Thank you very much!</div><div class='text-box'>I like the hotel very much, its simple but in the same time its comfortable; <span class='review-span highlight' data-aligned-summaries='1'>the deluxe room have a very nice sea view</span>; <span class='review-span highlight' data-aligned-summaries='2'>when the breakfast be</span> <span class='review-span highlight' data-aligned-summaries='1 2'>on the roof you will enjoy a very nice view</span> <span class='review-span highlight' data-aligned-summaries='1'>for the amazing Istanbul mosques</span>; <span class='review-span highlight' data-aligned-summaries='0'>what i didn't like that the hotel is a way from the metro station</span>, but you can easily take a taxi to Taksim square with 6 TL.</div><div class='text-box'>The hotel was very nice and <span class='review-span highlight' data-aligned-summaries='5'>the staff was also good</span>. <span class='review-span highlight' data-aligned-summaries='0'>The location is a negative as it is in a more industrial area so at night the choices for food, and people on the street is zero</span>. In the day <span class='review-span highlight' data-aligned-summaries='1'>it was fine a short scenic wal accross the Gallata Bridge</span> to Emenou and Sultanhamet.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The hotel is located in the hardware section of Istanbul with very little around it.</span> <span id="1" class="summary-sentence">It is not far from Galata Bridge but beyond that, it has nothing to offer.</span> <span id="2" class="summary-sentence">I did like the view from the restaurant and the breakfast food was decent, however the rooms were small and you were literally at the bottom of a huge hill.</span> <span id="3" class="summary-sentence">It is better to stay at the Taksim area hotels where the people are.</span> <span id="4" class="summary-sentence">Also, if you room is facing the street, be prepared for LOTS OF NOISE.</span> <span id="5" class="summary-sentence">The staff was great and very nice.</span> <span id="6" class="summary-sentence">This is an average Super 8 type of motel in the United States.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

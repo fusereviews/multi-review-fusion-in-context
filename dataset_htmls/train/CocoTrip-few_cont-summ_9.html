@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>If you are looking for complete peace, beauty, and relaxation away from the crazy commercialism of Cancun</span>, <span class='review-span highlight' data-aligned-summaries='0'>this is the place</span>. The resort is located only 45 minutes south of the Cancun airport and the resort will arrange for transportation to and from the airport for you. The staff is very friendly and welcoming and will go out of their way to assist you with whatever you may need. The property itself is very beautiful and landscaped throughout with lush gardens. <span class='review-span highlight' data-aligned-summaries='0'>It is as close to paradise as one can get</span>. <span class='review-span highlight' data-aligned-summaries='2'>Mahekal is in walking distance of 5th Avenue (main strip for shopping, restaraunts, etc.)</span> Mahekal has a wonderful wedding planner on staff who helped arrange everything for my wedding from the flowers to the hair dresser, photographer and priest. The resort and beach is beautiful, <span class='review-span highlight' data-aligned-summaries='1'>the food is outstanding</span>, the people are extremely friendly and welcoming, the atmosphere is completely relaxing. Without a doubt, <span class='review-span highlight' data-aligned-summaries='0'>this is one of the most amazing experiences I have ever had</span> and <span class='review-span highlight' data-aligned-summaries='1'>am looking forward to going back again this year.and hopefully many more to come</span>.</div><div class='text-box'>A most relaxing holiday spot.the staff worked so hard to repair the hurricane damage,but in such a unobtrusive way that one's stay there was not impaired in the least.The beach area was always tidy,ample beds and shade,good service at all times and the room was directly facing the sand.blissful.I confess I didn't want to do anything but take to my sunbed,read,swim,bask and take refreshment.I felt secure there at all times;there was always an attendant around even at night but again without having a strong-arm presence.The hotel guests were obviously having a good time;the friendly approach of the dining attendants ensured this at meal-times.<span class='review-span highlight' data-aligned-summaries='5'>The towels in the rooms were "sculptured" into an array of animals,with a new piece of artwork appearing at every room service</span>. And as a final touch.on the morning of our departure,<span class='review-span highlight' data-aligned-summaries='1'>we were given a breakfast box;this contained appetising food and drink</span>. I cannot recommend <span class='review-span highlight' data-aligned-summaries='0'>this hotel</span> highly enough.a credit to Mexico and <span class='review-span highlight' data-aligned-summaries='0'>a jewel in the Yucatan</span>!</div><div class='text-box'>My wife and I really enjoyed the Mahekal - the staff was very friendly, <span class='review-span highlight' data-aligned-summaries='1'>food was excellent</span>, rooms very comfortable. This is <span class='review-span highlight' data-aligned-summaries='0 4'>a very low-key facility -</span> <span class='review-span highlight' data-aligned-summaries='0 3 4'>rooms do not have TVs, radios</span> <span class='review-span highlight' data-aligned-summaries='0 3'>or even clocks</span> - <span class='review-span highlight' data-aligned-summaries='3'>but</span> the beds are comfortable and <span class='review-span highlight' data-aligned-summaries='3'>the showers work well</span>. We stayed in the Garden area which was quite nice - and still only a short walk to the beach. Every room has a sheltered porch with two hammocks and a table and chairs. <span class='review-span highlight' data-aligned-summaries='2'>The location is near (a couple of blocks away) from the main shopping street</span>. The beach is well maintained. All-in-all, a very nice place and a good value. A few complaints - <span class='review-span highlight' data-aligned-summaries='7'>could use better internet accessibility</span> and some of the hotels in the area have music blasting a bit too loudly at times.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1'>16 years and still coming back</span>. It is such a fun, laid back, wonderfully relaxing place <span class='review-span highlight' data-aligned-summaries='3 4'>without a phone in your room or a tv</span> blaring in your ear. Kids around the pool, adults talking, the sound of wind, waves, and yet it is quiet. <span class='review-span highlight' data-aligned-summaries='1'>Excellent</span> staff, <span class='review-span highlight' data-aligned-summaries='1'>food</span>, and you sit next to the ocean or inside comfort.it is <span class='review-span highlight' data-aligned-summaries='0'>not at all like an all inclusive</span>, thank goodness. <span class='review-span highlight' data-aligned-summaries='0'>It is specially unique</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1'>Clean hotel rooms</span>, large tiled bathrooms, fans and air conditioning make for <span class='review-span highlight' data-aligned-summaries='1 3'>excellent cabana-like rooms</span>. Each equipped <span class='review-span highlight' data-aligned-summaries='1 3'>with two hammocks</span> <span class='review-span highlight' data-aligned-summaries='1'>for a lazy day at the beach</span>. The sand is clean and pure, <span class='review-span highlight' data-aligned-summaries='1'>the food is excellent</span> (2 meals a day are inclusive) and <span class='review-span highlight' data-aligned-summaries='2'>the location is central to every shop, restaurant</span> and anything else you could want. This is truely <span class='review-span highlight' data-aligned-summaries='0 1'>a diamond in the rough</span>.</div><div class='text-box'>Can't say enough about this place. We spent five days there and didn't want to leave. The atmosphere enables you to truly escape the realities of life. Staff was incredibly friendly and helpful. <span class='review-span highlight' data-aligned-summaries='1'>We'll be back</span>!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>This is a great place to stay</span>! <span class='review-span highlight' data-aligned-summaries='0 6'>Everything was perfect</span>,<span class='review-span highlight' data-aligned-summaries='6'> from the</span> gorgeous beach, <span class='review-span highlight' data-aligned-summaries='6'>2 big pools, to the ping pong tables</span>. Everyone can find something to enjoy! We loved it!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 1'>Terrific</span> <span class='review-span highlight' data-aligned-summaries='0 1 2'>place to stay</span>, quite, <span class='review-span highlight' data-aligned-summaries='1'>good food</span> <span class='review-span highlight' data-aligned-summaries='0'>unbelievable beach</span>. <span class='review-span highlight' data-aligned-summaries='2'>Close to shopping and restaurants</span>. <span class='review-span highlight' data-aligned-summaries='0'>Staff is the best</span>, always happy and willing to help in any way. .</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The hotel is a highlight of the Yucatan province and is different to the commercial areas such as Cancun.</span> <span id="1" class="summary-sentence">The food at the hotel is highly recommended and in general the hotel's worth repeat visits.</span> <span id="2" class="summary-sentence">The location is absolutely perfect and is really close to shopping and restaurants options.</span> <span id="3" class="summary-sentence">The rooms are basic but the showers work well.</span> <span id="4" class="summary-sentence">The rooms are purposefully lacking in mod cons such as TVs, radios and phones.</span> <span id="5" class="summary-sentence">Uniquely, the towels provided in the room are sculpted into animal shapes.</span> <span id="6" class="summary-sentence">The two big-sized pools were perfect as well as some ping-pong tables.</span> <span id="7" class="summary-sentence">The internet accessibility is a bit of a let-down unfortunately.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='4'>We have thoroughly enjoyed working with</span> <span class='review-span highlight' data-aligned-summaries='0 2 3'>Austin</span>,<span class='review-span highlight' data-aligned-summaries='0'></span> as he <span class='review-span highlight' data-aligned-summaries='0 2 3'>has helped us understand OnQ's management process</span>. We are considering renting out our home and will absolutely use <span class='review-span highlight' data-aligned-summaries='4'>OnQ</span> when we are ready! Thank you for the <span class='review-span highlight' data-aligned-summaries='0 4'>great experience thus far</span>!</div><div class='text-box'>When searching for new digs, <span class='review-span highlight' data-aligned-summaries='0 1 2 4'>it doesn't get much worse than a property management company that never responds</span>, despite your multiple communication efforts, persistence and patience. Zero responsiveness is a red flag to be taken seriously. Score of 'FAILED' to On Q.</div><div class='text-box'>I was referred to On Q by a friend who rented through them before... I called in, saw the house and was approved to move-in within 2 days... so far so good! <span class='review-span highlight' data-aligned-summaries='0 4'>Impressed with the process and quickness compared to where I rented before</span></div><div class='text-box'>We are renting a home from <span class='review-span highlight' data-aligned-summaries='0'>On Q. Ryan Haueter,</span> <span class='review-span highlight' data-aligned-summaries='0 1 2 4'>our Property Manager</span>,<span class='review-span highlight' data-aligned-summaries='4'> has been awesome</span>!! <span class='review-span highlight' data-aligned-summaries='1 2'>He response time to several requests has been almost immediate</span>. He <span class='review-span highlight' data-aligned-summaries='0 1'>is</span> <span class='review-span highlight' data-aligned-summaries='0'>polite, accommodating and so</span> <span class='review-span highlight' data-aligned-summaries='0 1'>easy to work with</span>. Thank you Ryan!!</div><div class='text-box'>On Q Property management <span class='review-span highlight' data-aligned-summaries='2'>has been</span> <span class='review-span highlight' data-aligned-summaries='1 2'>quick to respond</span> <span class='review-span highlight' data-aligned-summaries='1'>to our maintenance requests</span>. I appreciate the fact that <span class='review-span highlight' data-aligned-summaries='1'>I can call and actually speak with someone as opposed to sending an email</span>. <span class='review-span highlight' data-aligned-summaries='0'>They have been professional</span> and friendly and <span class='review-span highlight' data-aligned-summaries='0'>made the original rental process an easy one</span>.</div><div class='text-box'>Just leased a house with OnQ and everything has been so fast, east, and awesome. Been working with <span class='review-span highlight' data-aligned-summaries='0 3'>Kim</span>. She <span class='review-span highlight' data-aligned-summaries='0 3'>is very friendly, fun, and efficient</span>. The office is in a good location, very clean, and modern. <span class='review-span highlight' data-aligned-summaries='0 1'>Lease signing is done electronically</span> which is very convenient and <span class='review-span highlight' data-aligned-summaries='0 1'>payments can be made online</span>! <span class='review-span highlight' data-aligned-summaries='4'>Very excited to work with OnQ</span></div><div class='text-box'>We have thoroughly enjoyed working with <span class='review-span highlight' data-aligned-summaries='0 1 3'>Austin</span>, as he <span class='review-span highlight' data-aligned-summaries='0 1 3'>has helped us</span> <span class='review-span highlight' data-aligned-summaries='0 1'>understand OnQ's management process</span>. We are considering renting out our home and will absolutely use OnQ when we are ready! Thank you for the <span class='review-span highlight' data-aligned-summaries='0 4'>great experience thus far</span>!</div><div class='text-box'>I wanted to share my experience <span class='review-span highlight' data-aligned-summaries='0 3 4'>with On QThe transaction went smooth as butter</span> <span class='review-span highlight' data-aligned-summaries='3'>thanks to Tanner Lee</span>. Tanner is on top of his game. <span class='review-span highlight' data-aligned-summaries='1'>He made our transaction very easy</span>. Tanner has gone above and beyond for us in our new home. I look forward to working with On Q in the months to come. Keep up the good work!!</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">OnQ is a professional, rental service that makes the process smooth and easy.</span> <span id="1" class="summary-sentence">They are easy to work with and available on demand.</span> <span id="2" class="summary-sentence">There has been some response problems, but that may depend on the representative.</span> <span id="3" class="summary-sentence">Ask for Austin, Tanner or Kim for a great experience.</span> <span id="4" class="summary-sentence">Recommended with only a slight caution.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

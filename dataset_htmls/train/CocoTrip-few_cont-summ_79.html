@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Cheapest decent hotel</span> in Chicago that I could find. <span class='review-span highlight' data-aligned-summaries='0 4 5'>Nice large room</span> which was pretty modern looking considering the age of the building. <span class='review-span highlight' data-aligned-summaries='8'>Appreciated the free WiFi</span> and the fact that <span class='review-span highlight' data-aligned-summaries='9'>you have to swipe your key to get on the elevator or stairs- extra security</span> (though somehow the pizza delivery guy was able to get up to our room, must have an agreement with the hotel.) <span class='review-span highlight' data-aligned-summaries='10'>Street noise didn't bother me too much</span>. <span class='review-span highlight' data-aligned-summaries='7'>Breakfast was great</span>, although the room was a little cramped. The only complaint I have is that <span class='review-span highlight' data-aligned-summaries='10'>its hard to pull up to the front of the hotel to get valet parking</span> ($22/24 hours) Great hotel.</div><div class='text-box'>I stayed here by myself the night before a group tour and got a single room, which came with a double bed. The sheets are soft and <span class='review-span highlight' data-aligned-summaries='6'>there four pillows</span> on the bed! Awesome. The <span class='review-span highlight' data-aligned-summaries='4'>room is perfect for one or two people</span>. The area is great, although <span class='review-span highlight' data-aligned-summaries='2'>not serviceable by the train</span>, <span class='review-span highlight' data-aligned-summaries='1'>it has buses to the city</span>. The area itself is really upbeat, with a young crowd. <span class='review-span highlight' data-aligned-summaries='3'>Great little shops</span>, restaurants and bars. I'd stay here again for sure if I were in Chicago. It's <span class='review-span highlight' data-aligned-summaries='0'>a nice alternative</span> to the large downtown hotels.</div><div class='text-box'>This was my first trip to Chicago and Days Inn made it even better! It is <span class='review-span highlight' data-aligned-summaries='0'>a great bargain</span> especially for the location. <span class='review-span highlight' data-aligned-summaries='0 5'>The hotel was clean</span>,<span class='review-span highlight' data-aligned-summaries='0'> the staff was so darn nice</span>, <span class='review-span highlight' data-aligned-summaries='7'>the free bfast was mmm soo good-</span> the muffins were amazing, fresh squeezed juice, and even make your own waffles. The only complaint is the drain in the shower wasn't working as smoothly as it should have been. I can't see how anything could go wrong here and even if it did, front desk was just so ncie!</div><div class='text-box'>The staff at this hotel were extremely gracious and went out of their way to welcome me. I arrived early and the staff had a room cleaned and ready for me promptly. <span class='review-span highlight' data-aligned-summaries='3'>Property is located right in the heart of Lincoln Park and there are numerous dining and nightlife options at the property doorstep.</span> I will definitely return to this property. <span class='review-span highlight' data-aligned-summaries='0'>The Days Inn brand gets a serious upgrade in my mind</span> with properties of this character.</div><div class='text-box'>Travelled with a friend for a quick getaway. We were <span class='review-span highlight' data-aligned-summaries='4'>in a room with 2 beds, fridge, & micro(we</span> were in room 403), <span class='review-span highlight' data-aligned-summaries='0'>room with views of Clark St. As always it was a great stay</span>, staff very friendly, and willing to help in any way possible. If your not a continental b-fast kind-of-person, I would suggest The Golden Nugget one block south of Diversey on Clark.</div><div class='text-box'>This old <span class='review-span highlight' data-aligned-summaries='3'>Days Inn is in the heart of Lincoln Park</span> and <span class='review-span highlight' data-aligned-summaries='3'>a short walk to Boys Town</span>.<span class='review-span highlight' data-aligned-summaries='0'>The</span> <span class='review-span highlight' data-aligned-summaries='0 4'>hotel was clean</span> <span class='review-span highlight' data-aligned-summaries='0'>and</span> the <span class='review-span highlight' data-aligned-summaries='7'>free breakfeast was a big hit</span>. My only complait are the bathrooms. Time to upgrade! They all have this 3 inch step up which is just great to trip over at 3 am in the dark. Other then that <span class='review-span highlight' data-aligned-summaries='0'>this is a nice hotel</span>.</div><div class='text-box'>I have stayed at this hotel several times over the past 15 years. <span class='review-span highlight' data-aligned-summaries='0'>It is quiet</span>, <span class='review-span highlight' data-aligned-summaries='0'>clean</span>, <span class='review-span highlight' data-aligned-summaries='0'>moderately priced</span>, and very <span class='review-span highlight' data-aligned-summaries='1'>conveniently located near several bus lines</span>. Clark <span class='review-span highlight' data-aligned-summaries='3'>Street</span>, <span class='review-span highlight' data-aligned-summaries='3'>on which it is located</span>, is a <span class='review-span highlight' data-aligned-summaries='3'>major shopping street</span>, and <span class='review-span highlight' data-aligned-summaries='10'>there is parking</span> at the <span class='review-span highlight' data-aligned-summaries='10'>nearby</span> Century Mall. I have found the staff to be friendly and helpful.</div><div class='text-box'>We booked this hotel for a girl's trip to Chicago. I booked solely on written reviews.and boy were we impressed! <span class='review-span highlight' data-aligned-summaries='0'>For the price, this hotel is PERFECT</span>! <span class='review-span highlight' data-aligned-summaries='6'>The beds were great</span>, <span class='review-span highlight' data-aligned-summaries='0'>rooms were very clean</span>, <span class='review-span highlight' data-aligned-summaries='7'>breakfast was the best.waffles.YUMMY.and</span> the staff was so helpful and friendly! <span class='review-span highlight' data-aligned-summaries='2'>Great location to public transportation</span>. Highly recommend this property!</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This clean and affordable hotel is really nice and quite clean too.</span> <span id="1" class="summary-sentence">There are buses into the main city from this hotel</span> <span id="2" class="summary-sentence">so it is well-connected.</span> <span id="3" class="summary-sentence">There is also a major shopping street very close so the hotel is really conveniently located.</span> <span id="4" class="summary-sentence">Lovely rooms to stay in, particularly for one to two guests per room.</span> <span id="5" class="summary-sentence">Rooms are spacious and cleaned to a good standard.</span> <span id="6" class="summary-sentence">The bed is especially nice, as it is very soft and four pillows are provided, regardless of whether one or two people are staying.</span> <span id="7" class="summary-sentence">The breakfast is super tasty here at this hotel.</span> <span id="8" class="summary-sentence">The hotel provides free WiFi which is great.</span> <span id="9" class="summary-sentence">There's added peace of mind here too because the room key needs to be used to access the elevator or the stairs, therefore providing added security to guests.</span> <span id="10" class="summary-sentence">There was little street noise, too, but there was some difficulty in getting valet parking though.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

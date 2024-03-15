@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>this was a great place to stay for the two of us. Hotel decor was fun and the <span class='review-span highlight' data-aligned-summaries='5'>staff were quite accomodating</span>. <span class='review-span highlight' data-aligned-summaries='2 6'>There isalso a small restaraunt in this hotel that had great food</span> However, for us it was located a bit off course in the sense that is is not subway convenient. Further, because this is an old historic hotel, the rooms were small, coupled with a small bathroom. I do believe you can upgrade to a larger room but none was available at the time I reserved. As <span class='review-span highlight' data-aligned-summaries='8'>the elevator is original to the hotel</span>, it must be staff operated. At times we had to wait for someone to attend to this. Our other choice was walking 3 flights of stairs.</div><div class='text-box'>I stayed in the Gladstone this June for 7 nights. <span class='review-span highlight' data-aligned-summaries='7'>Its a great hotel</span> and represents great value <span class='review-span highlight' data-aligned-summaries='7'>in a really interesting area of the city</span>. The Drake hotel is 200 yards up the road, double the price and has half the character.although very smart. <span class='review-span highlight' data-aligned-summaries='3'>Our room was small but adequate and well kept</span>. <span class='review-span highlight' data-aligned-summaries='2 6'>The downstairs cafe serves great food</span>, and while we were <span class='review-span highlight' data-aligned-summaries='0 2'>there there was live music</span> <span class='review-span highlight' data-aligned-summaries='0'>and comedy</span> <span class='review-span highlight' data-aligned-summaries='0 2'>every single night</span>. <span class='review-span highlight' data-aligned-summaries='5'>The staff were very helpful and friendly</span> and i'd definitely recommend the hotel for future stays. The Gladstone would particularly suit young couples looking for some culture, good food and music at a reasonable price.</div><div class='text-box'>The Gladstone Hotel is a great place in Toronto for so many reasons, aside from being a hotel. <span class='review-span highlight' data-aligned-summaries='0'>They have created</span> <span class='review-span highlight' data-aligned-summaries='0 2'>unique spaces for musicians</span>,<span class='review-span highlight' data-aligned-summaries='0'> artists, foodies and families.to showcase,</span> <span class='review-span highlight' data-aligned-summaries='0 2'>perform</span> <span class='review-span highlight' data-aligned-summaries='0'>and indulge</span>. <span class='review-span highlight' data-aligned-summaries='6'>They support and promote local and organic eating ( by the way</span> <span class='review-span highlight' data-aligned-summaries='2 6'>they have a FRY BAR.sweet potato, potato and taro too with tons of toppings</span>)<span class='review-span highlight' data-aligned-summaries='6'></span>. <span class='review-span highlight' data-aligned-summaries='6'>Harvest Wednesdays supporting field to table</span> eating (yum) are not to be missed.and while you are there, you'll know why you need to try the Gladstone.</div><div class='text-box'>I was very much looking forward to staying here, but I was quite disappointed. I was in town on business for a week, and my wife and child stayed with me the first day. <span class='review-span highlight' data-aligned-summaries='0'>The Gladstone is clearly more interested in being an arts/cafe/performance/bar venue for hipsters than a hotel</span>. Details don't get addressed, the rooms are crazy small, and it's <span class='review-span highlight' data-aligned-summaries='0'>just not comfortable for any extended stay</span>. I will try The Drake next time.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2 6'>Fantastic</span> hotel, great drinks, <span class='review-span highlight' data-aligned-summaries='2 6'>food</span> and <span class='review-span highlight' data-aligned-summaries='5'>the staff super nice and cool</span>. only complaints were that our left over margarita glasses weren't cleaned up, <span class='review-span highlight' data-aligned-summaries='3 4'>mattress wasn't great as it sagged in the middle</span> and <span class='review-span highlight' data-aligned-summaries='3'>the shower felt like we were washing in a horizontal MRI machine</span>! Opted not to say anything as we were only there for a couple of nights though would probably stay at the Drake Hotel next time we take a trip.</div><div class='text-box'>After a long flight we found <span class='review-span highlight' data-aligned-summaries='5'>reception to be slightly frosty and unfriendly</span>. You need the opposite after a long trip. <span class='review-span highlight' data-aligned-summaries='3'>The room was also slightly disappointing</span>. We found it to be small and the design a bit half hearted with a very strange shower! It's beautiful old building but could do with a bit of warmth and character. Having stayed elsewhere in Toronto I'd recomend the hotel a couple of blocks east.</div><div class='text-box'>No 'Big City Attitude' here! <span class='review-span highlight' data-aligned-summaries='5'>The Gladstone had really friendly and engaging staff</span>. <span class='review-span highlight' data-aligned-summaries='0 3'>Rooms were unique</span> <span class='review-span highlight' data-aligned-summaries='3'>and</span> <span class='review-span highlight' data-aligned-summaries='0 3'>fun.no cookie cutter boxes</span> <span class='review-span highlight' data-aligned-summaries='3'>with the same old crap</span>. <span class='review-span highlight' data-aligned-summaries='8'>Even the elevator (circa 1900) was crazy and fun</span>. <span class='review-span highlight' data-aligned-summaries='2 6'>Great food</span>,<span class='review-span highlight' data-aligned-summaries='2'> music</span> and decor and location are killer. Lots to do around the hotel. <span class='review-span highlight' data-aligned-summaries='7'>Try it out if you want something different</span>!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='7'>The Gladstone is a great escape in the city</span>. <span class='review-span highlight' data-aligned-summaries='1'>It is well located to hang out on Queen St West as well as the theatre district and more mainstream shopping</span>, and has much more charm than most hotels. <span class='review-span highlight' data-aligned-summaries='3'>Overall the rooms are interesting and fun</span>, but <span class='review-span highlight' data-aligned-summaries='4'>the beds are the best part.</span></div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This hotel is a unique space for musicians and artists etc to hang out and perform, though some may find that a detriment to their stay.</span> <span id="1" class="summary-sentence">The hotel is ideally situated for socialising in Queen St West, as well as the theatre district and shopping areas.</span> <span id="2" class="summary-sentence">The hotel has great music and food available.</span> <span id="3" class="summary-sentence">The rooms are quite unique but a little disappointing, and the shower is like a horizontal MRI machine.</span> <span id="4" class="summary-sentence">However the beds are great.</span> <span id="5" class="summary-sentence">Aside from the unfriendly reception staff most of the hotel staff were very nice.</span> <span id="6" class="summary-sentence">The hotel has great food; from the small restaurant to the fry bar that promotes local organic produce with lots of variety.</span> <span id="7" class="summary-sentence">This is a great escape even in the city.</span> <span id="8" class="summary-sentence">The very old elevator was also crazily fun.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

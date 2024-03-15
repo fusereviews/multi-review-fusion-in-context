@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>Poor service <span class='review-span highlight' data-aligned-summaries='1'>We had a very rough start to our stay in this hotel</span>. We had booked a king room and were taken to a cramped room with no view and one double bed. When we complained, <span class='review-span highlight' data-aligned-summaries='5'>the staff said they had no rooms available</span> that fit our confirmed reservation. They offered to give us a comparable room at a related hotel down the street, which <span class='review-span highlight' data-aligned-summaries='3'>turned out to be off the beach</span> and much less nice than this hotel. We returned to reception to tell them <span class='review-span highlight' data-aligned-summaries='0'>the room was unacceptable</span> and were eventually upgraded to a king room at the Outrigger Reef with a partial ocean view. Why they didn't do this first if they didn't have a regular king room I will never know, but it <span class='review-span highlight' data-aligned-summaries='4 5'>made us very</span> <span class='review-span highlight' data-aligned-summaries='5'>grumpy to</span> <span class='review-span highlight' data-aligned-summaries='4 5'>wait nearly two hours to get a room</span> after a very long flight.<span class='review-span highlight' data-aligned-summaries='1 4'>The room was clean</span>,<span class='review-span highlight' data-aligned-summaries='1'> but nothing special</span>. <span class='review-span highlight' data-aligned-summaries='9'>It had a small outdoor patio, but overlooked the pool and many other patios, which made it very loud</span> and not at all private.<span class='review-span highlight' data-aligned-summaries='0'>We would not stay here again</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Loved the Outrigger Reef</span>! We stayed at the Outrigger for 4 nights on our honeymoon in October. They upgraded us to an ocean front room and brought us a bottle of champaign on our first night! This hotel is right on the beach and <span class='review-span highlight' data-aligned-summaries='3'>has 2 restuarants</span> right on the beach in addition to a great place to eat at the pool along with the sports bar at the pool. We never had a problem getting a chair at the pool. We spent most of our days going back and forth from the ocean to the pool - <span class='review-span highlight' data-aligned-summaries='8'>there is also a little sandwich, ice cram and smoothie shop right next door</span> that we would eat lunch at on the beach that is pretty cheap. It is on the far end of Waikiki, which we liked cause <span class='review-span highlight' data-aligned-summaries='3'>you are close to the action</span> but <span class='review-span highlight' data-aligned-summaries='2'>also have some quiet</span>. <span class='review-span highlight' data-aligned-summaries='0'>We will definitly stay here again</span> when we return to Oahu.</div><div class='text-box'>Loved the island- The Outrigger Reef was <span class='review-span highlight' data-aligned-summaries='1'>a</span> <span class='review-span highlight' data-aligned-summaries='0 1'>very nice hotel</span>. <span class='review-span highlight' data-aligned-summaries='10'>I</span> <span class='review-span highlight' data-aligned-summaries='6 10'>did not however like the enforced valet parking</span>. <span class='review-span highlight' data-aligned-summaries='6 10'>I was lead to believe we had to valet</span>,<span class='review-span highlight' data-aligned-summaries='6'> but we could have parked on the upper level on our own</span>, and still paid the $13 per day. From what I understand, it could have been worse, some hotels charged as much as $18 per day for parking. <span class='review-span highlight' data-aligned-summaries='3 8'>There are so many</span> hotels, <span class='review-span highlight' data-aligned-summaries='3 8'>restaurants</span> <span class='review-span highlight' data-aligned-summaries='3'>and shopping</span> <span class='review-span highlight' data-aligned-summaries='3 8'>in this small area</span> of Wikiki, that there is no parking space, so you pay dearly for having a car. Every place we went there were also tour busses that would do the same routes, but we did it at our leisure, and stayed at each site as long as we wanted. <span class='review-span highlight' data-aligned-summaries='2'>The next trip will be to another quieter less populated island</span>. But the Island was absolutely breathtaking, expensive but breathtaking.</div><div class='text-box'>Handicap access We stayed at Outrigger Reef for 7 days in mid-May 2003 and would go back in a heart beat. I am blind/visually impaired and my sighted companion is wheelchair confined. We <span class='review-span highlight' data-aligned-summaries='4'>booked a handicapped access room</span> and though a little small, <span class='review-span highlight' data-aligned-summaries='4'>the roll-in shower with bench was most comfortable</span> and the <span class='review-span highlight' data-aligned-summaries='0'>room clean and airy</span> <span class='review-span highlight' data-aligned-summaries='0 9'>with a balcony</span> <span class='review-span highlight' data-aligned-summaries='9'>overlooking the pool</span> and a partial ocen view.Breakfast each day was a delight pool side, with attentive courteous service. <span class='review-span highlight' data-aligned-summaries='0 7'>Ate dinner</span> several nights <span class='review-span highlight' data-aligned-summaries='0 7'>in the hotel dining rooms and were very pleased</span>. <span class='review-span highlight' data-aligned-summaries='3 8'>Found an Italian restaurant across the street</span> and dined there 2 nights as a change of pace. Tour amenities in the lobby were helpful, and <span class='review-span highlight' data-aligned-summaries='5'>the bell desk helped</span> arrange transportation to Pearl Harbor and my Korean War vessel the Mighty USS Missouri. All in all <span class='review-span highlight' data-aligned-summaries='1'>a most enjoyable trip and the Outrigger Reef staff contributed greatly</span>.Aloha!</div><div class='text-box'>Highly recommed We started our honeymoon on Waikiki beach and even though <span class='review-span highlight' data-aligned-summaries='1 2'>the Outrigger reef was under some construction</span>,<span class='review-span highlight' data-aligned-summaries='1'> their hospitality and kindness made up for it</span>. However we did have an Ocean view room which was near the construction but we asked to move to an Ocean front and they allowed us for a minor upgrade charge. Overall, <span class='review-span highlight' data-aligned-summaries='0 5'>I was</span> <span class='review-span highlight' data-aligned-summaries='0 5 7'>very happy with</span> <span class='review-span highlight' data-aligned-summaries='0'>the Outrigger,</span> <span class='review-span highlight' data-aligned-summaries='0 7'>their dining</span>,<span class='review-span highlight' data-aligned-summaries='0'></span> <span class='review-span highlight' data-aligned-summaries='0 5'>their hospitality</span> <span class='review-span highlight' data-aligned-summaries='0'>and especially happy with the free gifts</span> they gave us for staying there. <span class='review-span highlight' data-aligned-summaries='5'>Everything a hotel should do</span> when you are trying to enjoy your honeymoon.</div><div class='text-box'>demolition site six nearby buidings are being demolished to make way for new timeshare apartments which makes relaxing by the pool uncomfortable <span class='review-span highlight' data-aligned-summaries='2'>.The noise from the breakers can be heard all over the hotel</span>,so unless you like taking your holiday in the middle of a large building site, <span class='review-span highlight' data-aligned-summaries='0'>give this hotel a miss until 2007 when the projct is due for completion</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>For all the germaphobics out there, this hotel is for you</span>. Outrigger Reef on the beach</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>A Fantastic Time</span>! Outrigger Reef Hotel</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This is a decent place to stay and will leave you feeling happy overall.</span> <span id="1" class="summary-sentence">Initially there was a bit of a rough start here at the hotel but still a nice hotel.</span> <span id="2" class="summary-sentence">There is some peace and quiet here at this hotel</span> <span id="3" class="summary-sentence">but it is still quite close to the action with restaurants and shopping nearby.</span> <span id="4" class="summary-sentence">The room was clean with adequate disabled access , but it may take a while to get access to the room.</span> <span id="5" class="summary-sentence">The staff here are okay and mostly very helpful.</span> <span id="6" class="summary-sentence">They do enforce valet parking however which is a little offputting.</span> <span id="7" class="summary-sentence">Dinner at this hotel was really good and pleasing.</span> <span id="8" class="summary-sentence">There are also other food options nearby such as a restaurant that serves Italian food.</span> <span id="9" class="summary-sentence">There was a small outdoor patio which unfortunately overlooked the pool and other patios and that made it quite noisy.</span> <span id="10" class="summary-sentence">There are valet and parking services available too.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>The pizza I got yesterday was terrible</span>, however they said they would replace it, so I am going now to see how it is. <span class='review-span highlight' data-aligned-summaries='0'>I never had a bad pizza here until yesterday</span>. so, it could have been someone who didn't know what to do.</div><div class='text-box'>Ordered once and not impressed. What really turned me off was when <span class='review-span highlight' data-aligned-summaries='4'>I saw their employees drinking at 1: 00 in the afternoon at a local bar</span> just down the street <span class='review-span highlight' data-aligned-summaries='4'>in uniform</span>. I'm not making accusations as they may have been off work, but believe that it's a horrible way to represent your company. Just think it<span class='review-span highlight' data-aligned-summaries='4'>'s not very professional</span></div><div class='text-box'>Great pizza place! I <span class='review-span highlight' data-aligned-summaries='0'>had the white pizza and the Chicken Picatta pizza. Both were great</span>. I've also had the Sausage and Broccoli Rabe and the Pepper and Egg <span class='review-span highlight' data-aligned-summaries='1'>sandwiches</span>, both <span class='review-span highlight' data-aligned-summaries='1'>were delicious and the bread was soft and fresh</span>. My favorite thing about this place is that it's only 1 mile from home!</div><div class='text-box'>.. what can I say but.. Awesome! Had the chicken Parmesan sandwich, probably the best the best I'll ever have, and <span class='review-span highlight' data-aligned-summaries='2'>the homemade Cannolis</span>... I don't eat a lot of sweets, but wow.. <span class='review-span highlight' data-aligned-summaries='2'>just wow</span>! you gotta try em.</div><div class='text-box'>Sad to say <span class='review-span highlight' data-aligned-summaries='0'>they had great pizza at the beginning</span>.. <span class='review-span highlight' data-aligned-summaries='0'>Now</span> cutting corners... <span class='review-span highlight' data-aligned-summaries='3'>Very pricey</span> <span class='review-span highlight' data-aligned-summaries='0 3'>not worth the money</span>.. We will not be ordering there anymore. It's a shame because we didn't mind the high price for good pizza. But dominos pizza is close and way better and cheaper!!!</div><div class='text-box'>First time here introduced by friends. <span class='review-span highlight' data-aligned-summaries='1'>Had the linguini and clams. It is the best lineup I and clams that I had for a long time</span>!!!! Highly recommended to anyone who enjoys this dish. <span class='review-span highlight' data-aligned-summaries='4'>Mike and Matt are really nice and friendly</span>. Great food and service overall. Will definitely be back soon for other items in the future.</div><div class='text-box'>Whooooooo <span class='review-span highlight' data-aligned-summaries='0'>they have one of the best Pizza</span> and the service was awesome the location is great I didn't eat pizza like that for long time House of pizza <span class='review-span highlight' data-aligned-summaries='3'>they have a really great prices</span> I will come back again and I do recommend that place to anyone great pizza.......</div><div class='text-box'>Being from New Jersey and a huge Yankees fan this place is soo good. Felt like I was back on the west coast. <span class='review-span highlight' data-aligned-summaries='3'>Good prices</span> and <span class='review-span highlight' data-aligned-summaries='0'>even better pizza</span>! I'll definitely be back, glad i found this gem.;) A good environment and the Yankee memorabilia is so bomb.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The pizza is usually good, but it's not always consistent.</span> <span id="1" class="summary-sentence">The linguine and clams are worth trying, and the bread for the sandwiches is always fresh.</span> <span id="2" class="summary-sentence">For dessert, the cannolis can't be beat.</span> <span id="3" class="summary-sentence">However, the prices are on the high side for some of the portions.</span> <span id="4" class="summary-sentence">The staff is usually attentive and friendly, but aren't always as professional as they should be.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

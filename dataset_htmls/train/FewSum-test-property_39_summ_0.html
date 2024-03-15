@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>This place is totally legit barbecue</span>! <span class='review-span highlight' data-aligned-summaries='1'>Everything from the brisket to the ribs to the coleslaw and beans were absolutely amazing</span>! And we even got a tour of the smoker. The service was every bit as good as the food, and we are coming back again</div><div class='text-box'>Went to West Alley BBQlast night and we were very happy to find <span class='review-span highlight' data-aligned-summaries='0 1'>excellent ribs</span>. The rub used adds to the flavor of the meat. <span class='review-span highlight' data-aligned-summaries='2'>The ribs are meaty, tender</span> and juicy.A plus is that around 7pm there's live music. We are looking forward to our next meal.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1'>Wonderful food, must try bbq beans, crinkle cut seasoned fries, coleslaw and potato salad</span>. My only complaint was the ice tea / sweet tea had the hint containers may not be completely cleaned well or not fresh enough. <span class='review-span highlight' data-aligned-summaries='0'>All in all I am coming back! Great bbq</span>!!!!</div><div class='text-box'>OMG.... A must. We stopped by after Puro cigar lounge and had some of the best barbecue ever!! <span class='review-span highlight' data-aligned-summaries='1 2'>My girlfriends ribs were falling off the bone and the flavor was amazing</span>.<span class='review-span highlight' data-aligned-summaries='2'> No knife required</span>. <span class='review-span highlight' data-aligned-summaries='1'>The same with my brisket</span>. Could hardly pick it up with a fork. Owner and crew very nice. We'll definitely be back.:)</div><div class='text-box'>This barbecue joint certainly has a lot to offer it definitely can compete with any barbecue in town or out of town. IMHO, their <span class='review-span highlight' data-aligned-summaries='1'>brisket is top-shelf</span> and you're not like all you can eat catfish. <span class='review-span highlight' data-aligned-summaries='1'>My personal favorite is white beans I like them just like they make-im</span>. Shane was our server the certainly prettiest helpful <span class='review-span highlight' data-aligned-summaries='0'>I highly recommend the joint</span></div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Food was terrific and the Spicy barbecue sauce was super yummy</span>. Service was not so great. Took a long time for the waitress to take our order. Luckily we were not in a hurry. Food took a long time to arrive and the restaurant was not that busy - only about 8 tables.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>The best BBQ I have had in a long time</span>! Since living in the South!!!! They know how to serve great bbq and a southern bonus... vinegar slaw on the sand which, superb! Glad you are in Chandler!</div><div class='text-box'>Sadly, was not impressed. <span class='review-span highlight' data-aligned-summaries='3'>Sunday brunch</span>, <span class='review-span highlight' data-aligned-summaries='0 1 2'>Ribs tasted as if they were left from 1 or 2 days ago</span>.<span class='review-span highlight' data-aligned-summaries='2'></span> <span class='review-span highlight' data-aligned-summaries='0 2 3'>Meat was VERY burnt and DRY</span>. I was really wanting to like this place. Potato salad tasted like store bought, and white <span class='review-span highlight' data-aligned-summaries='1'>beans tasted like out of a can</span>. Hubby said Brisket was enjoyable so 2 stars for that.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The BBQ here is highly recommended.</span> <span id="1" class="summary-sentence">The ribs, brisket, and all of the sides like coleslaw, BBQ beans, and fries are delicious.</span> <span id="2" class="summary-sentence">The ribs in particular are full of meat and are very tender.</span> <span id="3" class="summary-sentence">However, it might be wise to avoid Sunday brunch as the food tends to be dry and burnt.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

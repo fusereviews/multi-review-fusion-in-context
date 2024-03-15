@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>First time here and <span class='review-span highlight' data-aligned-summaries='3'>was very pleasantly surprised</span>. Lo mein & shrimp pad Thai were delicious. Not overly saucy, salty, or greasy like some Chinese can be. <span class='review-span highlight' data-aligned-summaries='0 2'>Very fresh ingredients</span>. <span class='review-span highlight' data-aligned-summaries='1'>Friendly & fast service</span> & <span class='review-span highlight' data-aligned-summaries='0 2'>prices are great</span>!</div><div class='text-box'>This place was super quick to have our order ready for carry out and <span class='review-span highlight' data-aligned-summaries='0 2'>was</span> <span class='review-span highlight' data-aligned-summaries='0 2 3'>pretty tasty, especially for the great price</span>! I didn't particularly love how many veggies were thrown in with their Beijing beef (it was almost hard to find the bits of beef in the mixture), but the beef itself was very flavorful and I LOVED their potstickers!</div><div class='text-box'>I went to this place when it was still Feedbag and then turned into Wok In. I'm generous with the ratings, because <span class='review-span highlight' data-aligned-summaries='0 2 3'>the price is very good</span>, <span class='review-span highlight' data-aligned-summaries='1'>the staff is friendly and attentive</span>, and they <span class='review-span highlight' data-aligned-summaries='0 2 3'>have the best Vietnamese fresh spring roll</span>. Just love it!! That, and also spicy long beans with shrimp (and / or tofu).</div><div class='text-box'>We were Antique shopping and Yelp'd this location, so we decided to try it out. <span class='review-span highlight' data-aligned-summaries='3'>We will</span> definitely <span class='review-span highlight' data-aligned-summaries='3'>be back</span>! The <span class='review-span highlight' data-aligned-summaries='0'>prices were very inexpensive</span> and the meals were delicious. <span class='review-span highlight' data-aligned-summaries='2'>We had Spring Rolls, Pot Stickers</span>, Orange Chicken and the Pho. <span class='review-span highlight' data-aligned-summaries='2'>Everything was delicious</span>!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 2'>For $5 an entree</span> <span class='review-span highlight' data-aligned-summaries='0 2 3'>this place can't be beat</span>.<span class='review-span highlight' data-aligned-summaries='2'></span> <span class='review-span highlight' data-aligned-summaries='0 2'>Good food</span>, <span class='review-span highlight' data-aligned-summaries='1'>friendly and fast service</span>. I had the spicy Thai noodles and they're just as good as anything you'd pay for at another competing restaurant. Great place for a cheap, friendly, low pressure meal of good quality</div><div class='text-box'>We decided to give this place a try based on prior reviews. The first thing we noticed upon arrival in the parking lot was a <span class='review-span highlight' data-aligned-summaries='3'>horrible smell of rotten food</span> coming from the dumpster area. <span class='review-span highlight' data-aligned-summaries='0 2'>Prices are low</span> and the staff is pleasant. <span class='review-span highlight' data-aligned-summaries='3'>The menu is limited</span>. Crab angels were well flavored but cold. Orange chicken was overpoweringly citrusy. <span class='review-span highlight' data-aligned-summaries='0 2'>Vegetable lomein was unremarkable</span>.</div><div class='text-box'>My husband and I love this place! We especially love to come when we are super hungry because there's never a wait! <span class='review-span highlight' data-aligned-summaries='1 3'>The service is great and the food comes out very fast</span>. We always get the pho and love it!</div><div class='text-box'>Talk about a restaurant that has <span class='review-span highlight' data-aligned-summaries='0'>quality fresh food at a fantastic price</span>! I have been here twice and would <span class='review-span highlight' data-aligned-summaries='3'>highly recommend it</span>! The restaurant is clean and the <span class='review-span highlight' data-aligned-summaries='1'>staff provide superior customer service</span>! A wonderful environment for a couple or even a family. I will be visiting again when I'm back in the Mesa area! Thank you for such a wonderful experience!</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This place offers incredibly low priced food for the quality they provide.</span> <span id="1" class="summary-sentence">Service is friendly and also very fast to get the food out.  </span><span id="2" class="summary-sentence">Food is good, especially considering the price, in particular the spring rolls and pot stickers are recommended.</span> <span id="3" class="summary-sentence">Overall this place is highly recommended.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

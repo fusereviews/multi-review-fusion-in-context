@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>Good for what we needed Because we are a bi-racial couple, we were hesitant to book this hotel due to a negative review re. <span class='review-span highlight' data-aligned-summaries='1'>the hotel's service to minorities</span>. But we took a chance and were happy we did. <span class='review-span highlight' data-aligned-summaries='2'>The people at the hotel were actually very accomodating</span> and even offered to talk to the pizza-delivery place for us when we ordered dinner by phone. (Neither of us speak Spanish too well.)The location is pretty far from Barcelona proper, so <span class='review-span highlight' data-aligned-summaries='0'>we would recommend this hotel only if you need to stay close to the airport</span>. Also, <span class='review-span highlight' data-aligned-summaries='5'>the shuttle picked us up from the airport much later than we thought it would</span>. We would've given a higher rating if the shuttle service to the hotel was better.</div><div class='text-box'>Great Airport Hotel <span class='review-span highlight' data-aligned-summaries='0'>This hotel is a great hotel for the airport</span>. <span class='review-span highlight' data-aligned-summaries='5'>There is a free shuttle</span> which picks you up or drops you off <span class='review-span highlight' data-aligned-summaries='5'>from the airport</span> which is about 5 minutes drive away.<span class='review-span highlight' data-aligned-summaries='1'>The hotel itself was modern and clean, the bed was v comfortable and the bathroom spacious</span>. It is also convenient to get to the centre of Barcelona too from this hotel, you will need to walk 5 minutes and you will get to a train station which you can take to the centre in about 15 minutes. The trains are also quite frequent - every 15 minutes or so and also run until quite late.We didn't try the other facilities they had at the hotel like the gym or pool or jucuzzi unfortunately. <span class='review-span highlight' data-aligned-summaries='0'>I would definitely recommend</span> this hotel.</div><div class='text-box'>Great hotel if you want to be near the Airport <span class='review-span highlight' data-aligned-summaries='0'>If you need to be near the Barcelona airport then this is the hotel</span>. Upon our arrival to the airport we called for a free shuttle. It arrived within 15-20 minutes. The pickup point is outside between terminals BC and has a sign listing the hotels serviced. The hotel itself was very clean and quiet and <span class='review-span highlight' data-aligned-summaries='1'>the room was a good size</span>. <span class='review-span highlight' data-aligned-summaries='1'>The fitness room was really small</span> but fit our needs. We skipped breakfast and went down the street. Like another reviewer wrote, turn right outside the door and go down a couple blocks. On the right side is a good bakery with coffee too. Overall, a great deal and the service staff were excellent.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 6'>Good overnight</span>, <span class='review-span highlight' data-aligned-summaries='0 6'>would stay again</span> This hotel is relatively <span class='review-span highlight' data-aligned-summaries='5'>close to the airport and they do have a free shuttle</span> in the morning that you book the day before. It is however quite far away from the shopping and sites of Barcelona. We walked the 10mins to the train station and were in the action in about 30mins. <span class='review-span highlight' data-aligned-summaries='1'>Rooms were clean, antique furniture was neat</span>. Pool area was enclosed so very quiet and sauna was hot. We left to early to hit the breakfast. For an overnight this was great but if your in Barcelona for more than a day or so, you would probably want accomodations closer to the tourist areas.</div><div class='text-box'>Good Choice We chose this hotel as it was near to <span class='review-span highlight' data-aligned-summaries='5'>the airport with a free shuttle</span> as we were picking up a hire car at the airport 2 days later. We used the hotel shuttle bus which arrived in a few minutes. We found this hotel excellent value for money, the rooms were of a good standard and the breakfast more than adequate. We used the train to get to the centre which was a 15mins walk from the hotel. If I had been staying more than 2 nights I would have booked a hotel in the centre to save the train journey back and forwards but the hotel itself I couldn't fault.</div><div class='text-box'>Fine airport hotel <span class='review-span highlight' data-aligned-summaries='0 6'>It gets the job done as an airport hotel</span> but that's about it. <span class='review-span highlight' data-aligned-summaries='5'>The free shuttle picked us up</span> at 1am from the airport <span class='review-span highlight' data-aligned-summaries='5'>and drove us back</span> in the morning. <span class='review-span highlight' data-aligned-summaries='0 6'>The location is creepy</span> but who cares. <span class='review-span highlight' data-aligned-summaries='6'>I wouldn't stay here for any reason but convenience to the airport</span>. If you need to call the shuttle, the hotel phone number is on the hotel shuttle pick up sign outside the airport.</div><div class='text-box'>Great airport hotel. We stayed at this hotel the night of Oct. 31st because we had an early morning flight the next day. Room was clean comfy; hotel <span class='review-span highlight' data-aligned-summaries='2'>staff was courteous</span> and <span class='review-span highlight' data-aligned-summaries='2'>very helpful</span> and, best of all, <span class='review-span highlight' data-aligned-summaries='5'>there was a complimentary shuttle to the airport</span>.<span class='review-span highlight' data-aligned-summaries='0'>All in all, a good experience if you want to be close to the airport for an early morning flight.</span> Would definitely stay there again.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 6'>Avoid at all costs</span> Probably the worst 4* hotel we have had the misfortune to stay in! <span class='review-span highlight' data-aligned-summaries='3'>Restaurant was closed</span> on Saturday night, <span class='review-span highlight' data-aligned-summaries='1 2'>staff on the whole not helpful and one at least very rude</span>. <span class='review-span highlight' data-aligned-summaries='1'>The rooms were disgusting</span>. <span class='review-span highlight' data-aligned-summaries='1'>Our complaints were completely ignored</span>. Just don't go. You would have to be a prat to stay here!</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Avoid this hotel at all cost!</span> <span id="1" class="summary-sentence">The physical infrastructure of the hotel was great i.e room etc but the customer service for ethnic minority client was far from acceptable.</span> <span id="2" class="summary-sentence">The staff was very unhelpful and rude each time we rang or went to the front desk to enquire about anything.</span> <span id="3" class="summary-sentence">The bar was closed when we tried to get stuff to drink and order food.</span> <span id="4" class="summary-sentence">It was very obvious the service we recieved was very different from the caucasian clients at the hotel.</span> <span id="5" class="summary-sentence">We were not even informed or offer the free shuttle to the airport as the others were.</span> <span id="6" class="summary-sentence">I highly recommend all ethnic minorities avoid this hotel.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

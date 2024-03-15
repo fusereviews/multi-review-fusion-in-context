@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>Up till today this rating could not have said enough about <span class='review-span highlight' data-aligned-summaries='0'>this hotel unbelievable pool great service</span> at poolside bar from Ed, Zack and Gracie. except for room not cleaned till 3:30 rave reviews great beds clean updated great experience. Then today.still good service from Angela the bartender but ? bar full of local kids/angela's friends?,drinking heavily, dropping the F bomb every couple of minutes and getting loud and obnoxiousthey took up whole side of bar and most of Angela's time and sounded like they frequent the pool often so my question to the mangaement is the bar and pool for the use of your guests or the local kids. Big mistake we are the ones that pay for the rooms maybe you want to reconsider the use of the pool/ bar as for guest use. So far this is the only glitch in a wonderful stay with courteous staff hopefully and anamoly. <span class='review-span highlight' data-aligned-summaries='0'>I would still highly recommend this Inn</span> and its serene setting if some rules too the bartenders are made no drunken friends monopolizing the bar one incident doesn't warrant a bad report.</div><div class='text-box'>"The Inn at Key West" has accomodations at the level of roadside motels, but charges much higher prices. Rooms are small, with uncomfortable beds, dirty rug, and worn-out furniture. The only places that look better than other motels are the lobby and pool. However, nobody sleeps in the lobby. The pool area was crowded, with many smokers wandering around, giving second-hand smoke to children cheerfully playing. I booked a room with two queen beds, but they gave me one with a king bed. <span class='review-span highlight' data-aligned-summaries='0'>Talking to the</span> hotel <span class='review-span highlight' data-aligned-summaries='0'>staff</span> and customer rep of Hotels.com <span class='review-span highlight' data-aligned-summaries='0'>proved to be wasting of time</span> - almost an hour to be exact. Did I mention that the hotle is inconveniently located outside of the old town where the attractions are? I<span class='review-span highlight' data-aligned-summaries='0'>'ll never stay here again</span>!</div><div class='text-box'>Many nice things - walking distance to McDonalds and IHOP-breakfast there for 13.95/free coffee for guests-great location - right across from Gulf-<span class='review-span highlight' data-aligned-summaries='0'>Staff extremely helpful</span>-has trolley you can reserve spot on (on/off all day long) to see al of the well-known spots-my son did jet skiing and it was the same price as at home :) IF you live in florida ask for your Florida residence rate and that made it affordable for us - pool was beautiful <span class='review-span highlight' data-aligned-summaries='0'>-I would stay there again for sure!</span></div><div class='text-box'>It was a very comfortable and fun place to be at the end of an active day/evening in town. <span class='review-span highlight' data-aligned-summaries='0'>The staff was extremely friendly</span> and <span class='review-span highlight' data-aligned-summaries='0'>helpful</span>. We especially enjoyed the outside restaurant at breakfast and thought the lavish poolside landscaping was beautiful. Also enjoyed the live entertainment at the tiki bar. This was our second visit to Key West and we much preferred staying at The Inn at Key West instead of staying in town.</div><div class='text-box'>Everything about this place is top-notch. The lobby is beautiful - <span class='review-span highlight' data-aligned-summaries='0'>the staff is cheerful, friendly and helpful</span>. They make changes and solve problems with a great attitude. The rooms are clean, well-furnished and comfortable. The pool area and hot tub are well-maintained and a great place to just kick back. This would be my first choice if I ever return to Key West. <span class='review-span highlight' data-aligned-summaries='0'>Highly recommended</span>.</div><div class='text-box'>My wife wasn't too thrilled that I booked this hotel. She wasn't impressed by the outside. Her mind changed as soon as we entered our room. She loved it. It was one of the cleanest hotel we've stayed at. <span class='review-span highlight' data-aligned-summaries='0'>The staff was very nice. I would stay here on my next trip to the keys</span>.</div><div class='text-box'>We stayed two nights at this overpriced hotel! It looks just like a dirty motel with filthy rugs and roaches! <span class='review-span highlight' data-aligned-summaries='0'>The staff was rude and not very helpful</span>! <span class='review-span highlight' data-aligned-summaries='0'>You can stay at lovely B&B in old town that is actually cheaper than this dump! Please stay away</span>!</div><div class='text-box'>Exceeded our expectations ten fold. <span class='review-span highlight' data-aligned-summaries='0'>Clean, friendly</span>, gorgeous, only draw back is the location but it was also nice to be away from the main strip.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This hotel is highly recommended especially because the staff provide a good service that is both friendly and always helpful.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

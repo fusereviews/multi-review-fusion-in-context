@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>Great Hotel The River in Florence is a real find and probably was one of the best hotels that we stayed at on our trip. It is located across the street from the Arno in the San Croce area. Our daughter and I liked the location because this area of Florence was very clean and was away from the main hubbub of the city. There is a bus stop very close to the hotel. We arrived by train and took the number 13 to the hotel and the number 12 took us back to the train station. The staff is very accommodating and the reception area and <span class='review-span highlight' data-aligned-summaries='1'>breakfast area were very nice</span>. The hotel also offerred free internet access.</div><div class='text-box'>Fabulous service, great location We really enjoyed our stay at the Hotel River. The cheerful, personal touch and helpfulness of the staff (particularly Salvatore the concierge who gave great tips re restaurants) made our stay an absolute pleasure. The view of the river Arno from our terrace was beautiful and the location was just right - a short walk from the centre but far enough away from the attractions so as to be quiet.<span class='review-span highlight' data-aligned-summaries='0'>The room was</span> quite small but comfortable and <span class='review-span highlight' data-aligned-summaries='0'>clean</span> and had a nice bathroom and a great shower.There was free internet access in the hotel lobby.We would highly recommend the Hotel River and would definitely stay there again next time we visit Florence.</div><div class='text-box'>Nice and quiet Incredible little hotel away from the noise of Florence, but walking distance of only 10 minutes to city center. Great sized rooms and beautifully decorated. <span class='review-span highlight' data-aligned-summaries='0'>Very clean</span> with decently sized bathrooms for Europe. Beds were very hard. <span class='review-span highlight' data-aligned-summaries='1'>Breakfast served</span> beautifully and elegantly <span class='review-span highlight' data-aligned-summaries='1'>with many choices</span>, based on basic Italian breakfast of pastries, cold cuts, cheese, hard boiled eggs (with cute little cups and spoons), fruit and real coffee! Very small staff works hard to meet every need. Great place to have a drink before dinner in the lobby or on the rooftop balcony with view of the Arno.</div><div class='text-box'>Lovely hotel with pretty view of the river We stayed in this central hotel after changing from a dismal, allegedly three-star hotel. The <span class='review-span highlight' data-aligned-summaries='0'>room was</span> pretty and <span class='review-span highlight' data-aligned-summaries='0'>clean</span>, with a nice view of inner courtyard. Staff were friendly and very helpful, and we were close to all the main sights. The hotel balcony was lovely to sit around and watch the world go by and see the river below. I would recommend this as a good value, better than 3-star hotel and would visit again.</div><div class='text-box'>Small but perfectly formed A charming clean and comfortable hotel. Polite and helpful staff.A short walk (or inexpensive bus ride) to the historic attractions.The knowledgeable manager will tell you which buses go where as well as sell you the tickets. He also directed us to the shop selling the gorgeous room fragrance that was in our room.Standard breakfast in an enclosed terrace or in the elegant lower breakfast room. My only crticiscm is of the coffee, because I just prefer a pot at the table.</div><div class='text-box'>Nice hotel - great location Nice hotel in a great location on the Arno River. Rooms were large; bathroom was large compared to other places we stayed in Italy, and the A/C really worked! The staff was helpful and accomodating with maps, directions, restaurant recommendations, taxis, and laundry service. There is a booth in the hotel lobby with a computer with internet access. Don't miss gelato at Vivolo, near San Croce.</div><div class='text-box'>Great Hotel The Hotel River was a wonderful experience. It is a lovely European hotel with all the charm you would hope for. The location is good with a short walk to the action.The staff was very helpful and polite. <span class='review-span highlight' data-aligned-summaries='1'>Good breakfast</span>. We would definitely stay there again!</div><div class='text-box'>A Room with a View The Hotel River from across the Arno River.'immediately in front of the Duomo.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The rooms in the hotel are clean.</span> <span id="1" class="summary-sentence">The breakfast had a lot of choice which was really great.</span> </div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Food was average however</span>, <span class='review-span highlight' data-aligned-summaries='2'>I felt it was super overpriced and small portions. I got a regular size and a large size and they are in the same containers with the same portions</span>. I got double protein and it didn't even seem like it. Would not return.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>The freshest, tastiest</span>, <span class='review-span highlight' data-aligned-summaries='0'>and healthiest salads, sushi, vegetable bowls, and soups I've tasted</span>. Did I mention their wide selection of teas and other refreshing drinks? The restaurant is clean, bright, and <span class='review-span highlight' data-aligned-summaries='1'>well managed by cordial staff headed by always cheerful manager Louis</span>. I highly recommend Tokyo Joe's!</div><div class='text-box'>First time here and I was super happy about the food. <span class='review-span highlight' data-aligned-summaries='0'>Everything tastes fresh</span>. <span class='review-span highlight' data-aligned-summaries='0'>The only thing I would have liked to seen more of is the chicken that goes in the 'make it yourself bowl</span>'. Next time I'll just order extra chicken to it. Other than that I will be definitely coming back!</div><div class='text-box'>Discovered this extraordinary sushi gem while on a business trip to Phoeni. Albeit hidden near Nordstrom s Rack yet well worth the hint. <span class='review-span highlight' data-aligned-summaries='1'>Friendly staff</span>. <span class='review-span highlight' data-aligned-summaries='0'>High quality sushi</span>. <span class='review-span highlight' data-aligned-summaries='2'>Reasonable serving sizes</span>. Highly recommend. You won't be disappointed. Enjoy.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Food-born illness</span>? Gee, thanks so much. Just want I wanted. As if <span class='review-span highlight' data-aligned-summaries='1'>hearing the chef (and also possibly manager?) talk down to his employees</span> right in front of customers repeatedly wasn't enough to make me uncomfortable as a patron, imagine how I'm feeling hunched over my toilet here at 5: 00 am right now.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>The poke bowls are great</span>! I get the grilled shrimp over mixed greens with mango, edamame and avocado. Hawaiian dressing. Garnished with sushi ginger, red pepper flakes and green onions. Easy to get to, solid service, great iced tea. It's a lunchtime staple</div><div class='text-box'>Ate here tonight at 7 and the girl making sushi was great with helping me out. There was a mix up with the rolls ordered and she <span class='review-span highlight' data-aligned-summaries='1'>corrected my roll right away</span> and got my roomie his correct roll also. <span class='review-span highlight' data-aligned-summaries='1'>She knows amazing customer service</span>! Sad I didn't get her name.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Ramen soup had no flavor</span>, <span class='review-span highlight' data-aligned-summaries='0'>noodles were not ramen</span> but overcooked spaghetti, barely any bean sprouts and too many watercress... <span class='review-span highlight' data-aligned-summaries='2'>could of spent a lot less if I cooked my own ramen at home</span>.... unfortunately will not be back to give other dishes a try.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This sushi restaurant serves high quality sushi and poke bowls, though their other dishes can be hit or miss.</span> <span id="1" class="summary-sentence">The staff are friendly and experienced.</span> <span id="2" class="summary-sentence">The serving sizes vary by dish, but are generally considered to be reasonable for the cost.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

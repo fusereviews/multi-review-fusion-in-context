@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>That rating is based solely on the phone service when I called to place a delivery order just now. <span class='review-span highlight' data-aligned-summaries='0'>Rude</span> could be a little on the strong sode, but <span class='review-span highlight' data-aligned-summaries='0'>is not an entirely inaccurate description</span>. I will post more when we get our food I. 45 - 50 minutes.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='5'>The Tom kha is pretty good</span>, panang <span class='review-span highlight' data-aligned-summaries='2 5'>curry was okay</span> <span class='review-span highlight' data-aligned-summaries='2'>too but</span> <span class='review-span highlight' data-aligned-summaries='2 4'>they are stingy on the meat</span> <span class='review-span highlight' data-aligned-summaries='2'>and their tempura</span> is more like fishstick breading, <span class='review-span highlight' data-aligned-summaries='2'>definitely not tempura</span>. It was okay. Probably find a different place to eat next time.</div><div class='text-box'>Ordered tom kha today and opt for delivery. The soup came sooner than they had quoted which was nice, and <span class='review-span highlight' data-aligned-summaries='2 3 5'>the soup itself was delicious</span> and <span class='review-span highlight' data-aligned-summaries='4'>the portion is enough to last a few days</span>! <span class='review-span highlight' data-aligned-summaries='0'>The man who delivered it was also very kind</span>. Will absolutely be ordering again! Thank you papaya Thai!</div><div class='text-box'>Ordered deliver thru Eat24 tonight. <span class='review-span highlight' data-aligned-summaries='2'>Mixed app -</span> <span class='review-span highlight' data-aligned-summaries='2 3'>most items over cooked</span>. The brownish dipping sauce had an off flavor. No idea what it was. Pad Woon Sen - Bland and no heat. Overall a let down. I had hoped I'd have the same experience as many of the others that had given good reviews on the delivery. Oh well.</div><div class='text-box'>Awesome place! Called in and told them we would be heading over and we were running late and <span class='review-span highlight' data-aligned-summaries='0'>they held the restaurant open for us</span> until we got there. <span class='review-span highlight' data-aligned-summaries='0'>Truly nice people</span> and great management. I seriously recommend you go. Love their appetizers!</div><div class='text-box'>I ordered takeout and was <span class='review-span highlight' data-aligned-summaries='2 4'>disappointed</span> <span class='review-span highlight' data-aligned-summaries='4'>to find my</span> <span class='review-span highlight' data-aligned-summaries='2 4'>Broccoli Delight hardly contained any broccoli</span>. Five pieces max. <span class='review-span highlight' data-aligned-summaries='5'>What's worse, the Tom Yum soup tasted like spicy tomatoes</span>. There didn't seem to be any lemongrass. Not even a hint. <span class='review-span highlight' data-aligned-summaries='5'>So disgusting</span>, and contrary to what I ordered.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2 3'>Chicken was undercooked</span>.<span class='review-span highlight' data-aligned-summaries='2'> The</span> <span class='review-span highlight' data-aligned-summaries='2 5'>curry was pretty good</span>, <span class='review-span highlight' data-aligned-summaries='4'>very large serving</span>.<span class='review-span highlight' data-aligned-summaries='1'>The place looks run down and</span> it looks like the workers live there, looked <span class='review-span highlight' data-aligned-summaries='1'>dirty</span>, worn and really old.I doubt we'd ever dine in and with the to go order under cooked we will not be ordering from Papaya again.</div><div class='text-box'>Ordered via Grubhub while at a sand volleyball tournament. The food was great! <span class='review-span highlight' data-aligned-summaries='5'>Who knew pumpkin could make a great curry</span>! Then i read the reviews on here and was like uh oh. Never the less, <span class='review-span highlight' data-aligned-summaries='2'>this experience the food was great</span>. I took off a star just because they took longer than expected.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The staff is mostly kind and give good customer service.</span> <span id="1" class="summary-sentence">However, the restaurant looks dilapidated and dirty.</span> <span id="2" class="summary-sentence">The quality of the food varies.</span> <span id="3" class="summary-sentence">The food is sometimes under cooked or over cooked.</span> <span id="4" class="summary-sentence">The dishes may have limited amounts of the main ingredients, such as meat or broccoli, but the servings of the dishes are very large.</span> <span id="5" class="summary-sentence">Soups and curries are good.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>I love this sprouts. I come in often to pick up a few items for home dinner or lunch. <span class='review-span highlight' data-aligned-summaries='1'>They are</span> <span class='review-span highlight' data-aligned-summaries='0 1'>always in stock with everything I need</span> and <span class='review-span highlight' data-aligned-summaries='0 3'>often have sales</span>. <span class='review-span highlight' data-aligned-summaries='2'>The customer service is fantastic</span> and everyone is always very nice. The lunch sandwich section is really cool and <span class='review-span highlight' data-aligned-summaries='3'>very reasonable prices</span>!</div><div class='text-box'>ALWAYS out of the things I need. Easier to shop on Amazon. <span class='review-span highlight' data-aligned-summaries='3'>Not worth the prices</span>. The amount we have to spend here for one week is the same amount we would spend at other stores for 2 weeks. I've come back multiple times to try and give them more chances, but today was the worst.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2'>The friendliest staff of any</span> <span class='review-span highlight' data-aligned-summaries='0 2'>Sprouts</span> <span class='review-span highlight' data-aligned-summaries='2'>stores</span> I've been to. Special mention for Diana at checkout and one other gentleman (can't recall his name) that typically bags. The team at this location legitimately <span class='review-span highlight' data-aligned-summaries='0'>makes me look forward to shopping there</span>. They make a relatively mundane task, brighter and more enjoyable.</div><div class='text-box'>I am convinced that all the people that work here are aliens! <span class='review-span highlight' data-aligned-summaries='2'>Not one person shoes any type of warm response</span> even when my 2 year old happily sais Hi! Not even a smile cracked. Really? Never again will I shop there!</div><div class='text-box'>I come here primarily for the produce. <span class='review-span highlight' data-aligned-summaries='0 3'>It's much much cheaper than Whole Foods, Basha's, Frys, etc</span>. It's pretty groovy in here and <span class='review-span highlight' data-aligned-summaries='3'>they offer a lot of organic</span> / gluten free / vegetarian stuff. Yeah, that's not me. However <span class='review-span highlight' data-aligned-summaries='0'>the</span> <span class='review-span highlight' data-aligned-summaries='0 1'>produce is fresh, cheap and plentiful</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>This is the best Sprouts</span> store of the many Ive shopped at. They have a salad bar. Olive bar. Fresh pressed juices. Tons of options for meals on the go. A soup bar. the <span class='review-span highlight' data-aligned-summaries='0'>fruit & vegetables are in good condition</span>. <span class='review-span highlight' data-aligned-summaries='1'>And plenty stocked</span>. I get at least 2 lunch meals from this Sprouts a week</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 1 2'>They empty the salad bar way too early</span>. Yesterday about 7: 15 pm it was light and bright outside and people were buying dinner items to take home. No salad bar! This is nuts!! 'Management' should be waterboarded.</div><div class='text-box'>I <span class='review-span highlight' data-aligned-summaries='2'>had</span> <span class='review-span highlight' data-aligned-summaries='0 2'>an excellent experience</span> <span class='review-span highlight' data-aligned-summaries='2'>with one of the managers</span>, Christina. Was in a hotel and didn't have a microwave so her people heated up the prepared steak, etc. in the back for me. <span class='review-span highlight' data-aligned-summaries='2'>She's so generous</span>! I love her!</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Sprouts is the grocery shopping experience that makes healthy living easy and affordable.</span> <span id="1" class="summary-sentence">That's only if the food is in stock to start with.</span> <span id="2" class="summary-sentence">The staff doesn't seem to care about in person shopper while filling online orders, sometimes cold and to busy to deal with customers.</span> <span id="3" class="summary-sentence">Fruits and vegetables are very well priced for organic and the meat is all free range and reasonably priced.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

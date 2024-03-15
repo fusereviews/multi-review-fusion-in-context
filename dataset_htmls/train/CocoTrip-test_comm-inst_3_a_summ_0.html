@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>This is my second stay at the Pullman Hotel. Billed as a five star hotel. My view is its more like a 4* hotel, well situated in Barcelona, not too far from the 5 star establishment , the Arts Hotel. It's a functional business Hotel with all the room amenities, ( fast wi-fi in room, multi channel TV, Bath and shower, modern ( art deco) , nice roomy lobby etc. on most nights the restaurant was not open for dinner though the chef was flexible to prepare dinner for a small party per- arranged. We were not disappointed with the food. Tasty and well presented with generous portions <span class='review-span highlight' data-aligned-summaries='0'>Rooms are mid size and comfortable</span>, but pricey ( it was GSM congress week, I guess).</div><div class='text-box'>A great hotel for a weekend break. We thought the breakfast spread was excellent. Our room with a balcony and sea view was perfect and the sea breeze was lush. Everything was in good condition - smart bathrooms and good facilities. Only gripe would be <span class='review-span highlight' data-aligned-summaries='0'>crappy pillows and not the softest linen on the beds</span> but i suppose one can always find something to complain about (or at least i can!) The kids with the families tended to stay downstairs in the lower pool area leaving the younger set (us) to chill by the more modern pool on the roof. The location was great as it's a minute form the beach and it's a short walk or cab into town. well recommended</div><div class='text-box'>Very good hotel close to the party-beach-area: 1 minute walking! We got a room with sea view at 5th floor left wing which is great since the sun stays very long on the balcony. Distance to old town (picasso museum) is about 15 minutes onwards. <span class='review-span highlight' data-aligned-summaries='0'>Staff is superior: very friendly and very helpful</span>! Fitness: fitness centre in the hotel is tiny but there is a fitness park about 2 minutes walking distance for 16eur/day which provide a good facility. Fun: we were using the jacuzzi on the roof top few times. Very cool sitting there, enjoy a glass of wine and overlooking Barcelona. I will be here again!</div><div class='text-box'>Stayed at the hotel or 4 nights in August 2010. Everything about this hotel is 5 star and is a def hotel I wold stay in again if i stayed in barcelona. Breakfast was lovely and catered for all people(very impressed). Hotel has 2 pools which were fantastic My only negatives were 1. No English tv stations 2. Mini bar was very expensive so avoid at all costs FYI - If you don't want to be ripped off with expensive meals then avoid the sea front! We paid 55 euros for 2 pasta dishes and 2 fizzy drinks!</div><div class='text-box'>This is a thru 5 star hotel with excellent service. I can really recommend this hotel. It has <span class='review-span highlight' data-aligned-summaries='0'>very attentive staff</span>. I had a <span class='review-span highlight' data-aligned-summaries='0'>great room</span> (first floor 116), quiet, <span class='review-span highlight' data-aligned-summaries='0'>spacy</span>, <span class='review-span highlight' data-aligned-summaries='0'>clean</span> and very nicely decorated. This hotel has 2 great pools; 1 roof top pool with bar and 1 pool on the ground level. It is situated close to the Port Olympic, the Beach and Barcelonetta. So a great location. It is a great hotel for a combined city / beach vacation.</div><div class='text-box'>A beautiful hotel next to the beach with impeccable customer service. The <span class='review-span highlight' data-aligned-summaries='0'>rooms are nice</span>, the pool is great, but the hotel's greatest asset is the staff, who really go out of their way to treat all of their guests like they are special. Even though we are definitely not one of their high-revenue customers, everyone in the hotel treated us like we were royalty. I highly recommend the Pullman Skipper.</div><div class='text-box'>Though one short block off the actual sand, the place has great beaches in both directions. If you don't want the beach, there's a very fine rooftop pool with views of the sea. There's also a nice cafe right beside it with good, affordable breakfast. It's not cheap, but very nice.</div><div class='text-box'>Hotel was very trendy, loved the <span class='review-span highlight' data-aligned-summaries='0'>bathroom</span> which <span class='review-span highlight' data-aligned-summaries='0'>was utterly luxurious</span>:) large tv and <span class='review-span highlight' data-aligned-summaries='0'>comfortable bed</span>. Breakfast was good too. <span class='review-span highlight' data-aligned-summaries='0'>Staff were extremely helpful</span> with advice and hints on getting around the city.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The staff of the hotel were very helpful and the rooms are comfortable.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

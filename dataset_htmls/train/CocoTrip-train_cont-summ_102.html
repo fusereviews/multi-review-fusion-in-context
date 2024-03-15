@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>We stayed in this hotel in Jan 2003 for 3 nights. <span class='review-span highlight' data-aligned-summaries='2'>We where made so welcome by the hotel staff</span>. <span class='review-span highlight' data-aligned-summaries='0 2'>Very friendly and polite</span>. Our room was ready for us at 10am. Which was great. <span class='review-span highlight' data-aligned-summaries='0 1'>The room was</span> <span class='review-span highlight' data-aligned-summaries='0'>very nice and bathroom was</span> <span class='review-span highlight' data-aligned-summaries='0 1'>spotless</span>. Our room had french doors that opened up, which was nice. The buffet breakfast was very good. This was our 3rd stay in Amsterdam, we picked this hotel because we got a great deal. <span class='review-span highlight' data-aligned-summaries='3'>Very glad we stayed there</span>. In fact when we go again in June 2004, we have already rebooked this hotel. We travel a lot to Amsterdam, and like to try out the different hotels. <span class='review-span highlight' data-aligned-summaries='3'>This is well worth a stay</span>, also <span class='review-span highlight' data-aligned-summaries='2'>in a great location. Central Station is a mere 10 min walk</span>.</div><div class='text-box'>My partner and I have just come back from a 5 night stay at <span class='review-span highlight' data-aligned-summaries='0'>Avenue Hotel</span>. The room was basic but comfortable with all we needed as a base, <span class='review-span highlight' data-aligned-summaries='1'>the room was very clean</span> which is always a plus. The only downside was that we had nothing at all to look at out the window but who goes to Amsterdam to stay in their room! We made it to breakfast a couple times it was good plenty of choice of hot and cold options lots of coffee, tea and fresh fruit juice. <span class='review-span highlight' data-aligned-summaries='2'>The location of this hotel is spot</span> on with it being <span class='review-span highlight' data-aligned-summaries='2'>close enough to all sights</span> etc but also far enough away so it wasnt too noisy. <span class='review-span highlight' data-aligned-summaries='0'>We really enjoyed our time in</span> Amsterdam and <span class='review-span highlight' data-aligned-summaries='3'>would definatly stay at Avenue Hotel again</span>.</div><div class='text-box'>We must have chosen the coldest days in March for a break at "The Avenue". Despite the weather we enjoyed our stay. <span class='review-span highlight' data-aligned-summaries='2'>The hotel is</span> very <span class='review-span highlight' data-aligned-summaries='2'>convenient</span> for all the sights and <span class='review-span highlight' data-aligned-summaries='2'>transport , being a short walk from the station</span> and the canal bus. <span class='review-span highlight' data-aligned-summaries='2'>The hotel was friendly</span> and very clean and comfortable. The breakfast's were just great with lots of choice. The room was always very warm which we were very grateful for as it was so cold outside. <span class='review-span highlight' data-aligned-summaries='3'>We would definately go back there</span> when we visit Amsterdam again. I left a small item of clothing in the room and they returned this to me without any problems. <span class='review-span highlight' data-aligned-summaries='3'>Thank-you "The Avenue</span>"</div><div class='text-box'>We arrived to stay <span class='review-span highlight' data-aligned-summaries='0'>at Avenue</span> hotel and were told we had been <span class='review-span highlight' data-aligned-summaries='0'>upgraded to a Junior suite</span>, so immediately we were happy! Breakfast was good, <span class='review-span highlight' data-aligned-summaries='2'>the staff friendly</span> <span class='review-span highlight' data-aligned-summaries='0'>and</span> <span class='review-span highlight' data-aligned-summaries='0 2 3'>the location was perfect</span> <span class='review-span highlight' data-aligned-summaries='2'>in the centre of the city and 5 min walk from the train station</span>. The room we stayed in was nice. <span class='review-span highlight' data-aligned-summaries='3'>The only problem</span> with our stay <span class='review-span highlight' data-aligned-summaries='3'>was</span> the rooms had <span class='review-span highlight' data-aligned-summaries='3'>thin walls</span>. Both nights of our stay were woken by people on the floor above walking across there room and by the springs of the bed. <span class='review-span highlight' data-aligned-summaries='3'>It was annoying to have disturbed sleep but apart from that it was a great hotel</span>!</div><div class='text-box'>We stayed at Avenue Hotel in Amsterdam last week for 3 nights. The <span class='review-span highlight' data-aligned-summaries='2'>location of this hotel is perfect</span> as it is <span class='review-span highlight' data-aligned-summaries='2'>close to Centraal Station</span> and <span class='review-span highlight' data-aligned-summaries='2'>central to visits to key attractions</span> in the city. We were disappointed that our non-smoking room did stink of cigarettes when we first entered it however the <span class='review-span highlight' data-aligned-summaries='2'>staff were</span> apologetic and were more than <span class='review-span highlight' data-aligned-summaries='2'>happy to move us to another room</span>. The <span class='review-span highlight' data-aligned-summaries='1'>room was clean</span> and was cleaned every day with fresh towels. The beds were very comfortable too. Breakfast catered for all tastes and was very good. I would <span class='review-span highlight' data-aligned-summaries='3'>recommend this hotel</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2'>The Avenue Hotel is ideally located</span> for all Amsterdam's usual attractions. This was my first visit to Amsterdam and didn't know what to expect. <span class='review-span highlight' data-aligned-summaries='0'>I was very pleasantly surprised with the Avenue Hotel.</span> <span class='review-span highlight' data-aligned-summaries='1'>The room was spotlessly clean</span> and <span class='review-span highlight' data-aligned-summaries='1'>adequate for a 3nt stay</span>. The breakfast included in your rate was excellent and replenished on a regular basis. <span class='review-span highlight' data-aligned-summaries='2'>The staff at the hotel could not be faulted. Very friendly and helpful</span>. <span class='review-span highlight' data-aligned-summaries='3'>I would certainly recommend this hotel</span> and <span class='review-span highlight' data-aligned-summaries='3'>if I go back to Amsterdam, I would book the Avenue Hotel again</span>.</div><div class='text-box'>Have just returned from a visit to Amsterdam where we stayed at the Avenue Hotel after reading the reviews on Trip Advisor. <span class='review-span highlight' data-aligned-summaries='1'>The room was clean</span> and well decorated, <span class='review-span highlight' data-aligned-summaries='1'>the bathroom was spacious</span> and had a hairdryer, shower and bath. The breakfast was excellent, there was so much to choose from and <span class='review-span highlight' data-aligned-summaries='2'>the staff are very friendly and helpful</span>. <span class='review-span highlight' data-aligned-summaries='0 3'>We will be staying at the Avenue on our next visit as</span> <span class='review-span highlight' data-aligned-summaries='0 2 3'>it is also in an ideal location</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 3'>The Avenue Hotel was a great bargain for the money</span>. We stayed there in September 2004 and were <span class='review-span highlight' data-aligned-summaries='0'>quite pleased with the hotel</span>. We read the reviews on it in Trip Advisor and based our choice on them. <span class='review-span highlight' data-aligned-summaries='1 2'>The hotel was</span> <span class='review-span highlight' data-aligned-summaries='2'>well located</span>, <span class='review-span highlight' data-aligned-summaries='1'>clean</span>, nicely furnished, and the breakfast was terrific. <span class='review-span highlight' data-aligned-summaries='2'>The staff was more than helpful</span>. <span class='review-span highlight' data-aligned-summaries='3'>I'd stay there again.</span></div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Very impressed with the Avenue.</span> <span id="1" class="summary-sentence">The romms are of good size and clean.</span> <span id="2" class="summary-sentence">The staff were more than friendly and helpful and the location of the hotel was ideal - not far from the station and close to all the attractions.</span> <span id="3" class="summary-sentence">Can't recommend this hotel enough - will definitely stay again at the Avenue!</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

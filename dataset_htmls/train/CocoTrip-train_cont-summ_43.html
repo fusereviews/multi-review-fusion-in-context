@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Lovely Hotel</span>. This hotel is a very very nice hotel. I booked this through the hotel website (something I don't normally do, as I usually use one of the last-minute discount hotel websites) and stayed for four nights.The hotel is very new and everything is impeccably clean. <span class='review-span highlight' data-aligned-summaries='7'>It is very central, with a short walk to Ginza</span> and the JR line a 4 minutes walk and two other lines at the side door of the hotel. <span class='review-span highlight' data-aligned-summaries='2'>The lobby is on the 25th floor</span> and the rooms are above, <span class='review-span highlight' data-aligned-summaries='2'>with an atrium in the middle</span>.The room is small (average by Asian room standards), but not squashed. <span class='review-span highlight' data-aligned-summaries='1'>The price is less than a comparable room in, say, Hong Kong, Sydney, New York or Paris</span> and the hotel staff are perfect.</div><div class='text-box'>Very Stylish and very cool We stayed at the Park for three nights and loved it. <span class='review-span highlight' data-aligned-summaries='7'>The hotel</span> is so stylish <span class='review-span highlight' data-aligned-summaries='2'>the lobby area</span> and bars <span class='review-span highlight' data-aligned-summaries='2'>are great places</span> to relax and chill out. As the hotel starts on the 25th floor views are amazing from all areas (even the internet room has mindblowing views)The hotel has two Michelan star restaurants, <span class='review-span highlight' data-aligned-summaries='4'>we dinned at the Japanese one and the food was amazing</span>.Our room was a touch small but <span class='review-span highlight' data-aligned-summaries='5'>the bed and covers amazing, like sleeping in silk</span>. <span class='review-span highlight' data-aligned-summaries='5'>The room had all modern features</span> and teh view was <span class='review-span highlight' data-aligned-summaries='8'>amazingThe hotel has very easy access to a subway station</span> that takes you to all parts of the city and <span class='review-span highlight' data-aligned-summaries='7'>is walking distance from Ginza</span> <span class='review-span highlight' data-aligned-summaries='1'>A great hotel and at the price 100 night amazing value</span> in tokyo</div><div class='text-box'>Great Location with Awesome Skyline View of Tokyo Park Hotel is in a great location of Ginza district . It is walking distance to the posh shopping district in Ginza, as well as the to the famous Fish market. It is also about 7 minute walk to the JR Shimbashi station on the Yamonote, which can get you to all of the tourist attractions in Tokyo. The hotel room is a quite roomy compared to the business hotels in Japan with awesome views of the city. <span class='review-span highlight' data-aligned-summaries='2'>The hotel also has a fantastic lobby</span> with live jazz music. <span class='review-span highlight' data-aligned-summaries='1'>For the price that we paid</span> (about $160/night) <span class='review-span highlight' data-aligned-summaries='1'>this hotel seems like the biggest bang for buck</span> in Tokyo. I also recommend the restaurants on the first floor or basement for cheap lunches.</div><div class='text-box'>Great hotel with a great location! We just got back from a three week trip to Asia, and the Park Hotel in Tokyo was <span class='review-span highlight' data-aligned-summaries='0'>one of the best hotels we stayed in</span>. <span class='review-span highlight' data-aligned-summaries='2'>The view from the lobby is great</span>, and the view from the room wasn't too bad either. The room was bigger than I thought it would be given all I had heard about the size of hotel rooms in Japan. The concierge was very helpful about giving us directions to various places and even helped book us on a tour. The location is really convenient. <span class='review-span highlight' data-aligned-summaries='8'>We were able to walk to the subway without going outdoors</span>, which was a plus in December. We will definitely return to the Park Hotel the next time we are in Tokyo!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Wonderful hotel</span> My husband and I stayed at this hotel for 3 nights. <span class='review-span highlight' data-aligned-summaries='2'>The lobby is on the 25th floor</span> with the room above. The rooms are small but very well appointed. <span class='review-span highlight' data-aligned-summaries='0'>The view of the Sumida river and Tokyo is marvelous</span>. <span class='review-span highlight' data-aligned-summaries='7'>It is</span> clean, new and <span class='review-span highlight' data-aligned-summaries='7'>within walking distance to the fish market</span>. We took a taxi to the fish market because it's a little complicated figuring out which road it was on. The staff is very helpful. There is an internet connection in the room (ask for a two prong adaptor, it's free). <span class='review-span highlight' data-aligned-summaries='8'>It's right near the subway</span> and JR trains. We met a Tokyoite for lunch and ate in <span class='review-span highlight' data-aligned-summaries='4'>the restaurant</span> which <span class='review-span highlight' data-aligned-summaries='4'>was very good</span> but expensive.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Great Hotel in Tokyo</span> We stayed in the Park Hotel, Tokyo for 3 nights at the beginning of October 2006. <span class='review-span highlight' data-aligned-summaries='7 8'>The hotel is</span> <span class='review-span highlight' data-aligned-summaries='7'>in a great location in the center of Ginza</span> with <span class='review-span highlight' data-aligned-summaries='8'>easy access to the metro</span>, shops and restaurants. <span class='review-span highlight' data-aligned-summaries='2'>The hotel itself is located above the 23rd floor giving the rooms a great view of the city</span>, our room had a spectacular view over the bay. The room was small but very clean, comfortable and modern (LCD TV, Toto, nice products). The staff were very friendly and helpful and there was a very nice looby bar which had live music most nights. <span class='review-span highlight' data-aligned-summaries='0'>Highly recommended</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>very nice</span> We recently stayed at the Park and found it to be a pleasant stay. The location is good and the staff is excellent. They have custom pillow fitters which was interesting:) The rooms are small compared to american rooms. If you need space upgrade. We enjoyed the view very much due to the fact that <span class='review-span highlight' data-aligned-summaries='2'>the</span> <span class='review-span highlight' data-aligned-summaries='0 2'>hotel</span> <span class='review-span highlight' data-aligned-summaries='2'>is on the 25th floor</span>. <span class='review-span highlight' data-aligned-summaries='7'>This hotel is within walking distance to Ginza</span>. I would highly recommend going on a city tour if you are only there for a limited time. All in all it was a great place.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Great Hotel</span> We stayed here for two nights and were very impressed. We had a room on the top floor <span class='review-span highlight' data-aligned-summaries='0'>with an excellent view over Tokyo</span>. The room was lovely as was the rest of the hotel. <span class='review-span highlight' data-aligned-summaries='2'>The hotel is located on the 25th floor and the reception area has great views</span> over Tokyo. It is also very handy for travelling around and is right next to monorail etc.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Lovely hotel.</span> <span id="1" class="summary-sentence">The Park Hotel is a very hip hotel for a very good price.</span> <span id="2" class="summary-sentence">The lobby is impressive, as it is an open space that rises from the 25th floor, where the registration desk is, to the 35th floor.</span> <span id="3" class="summary-sentence">The morning breakfast buffet, which is served in the lobby, was good.</span> <span id="4" class="summary-sentence">The Japanese restaurant in the hotel was excellent.</span> <span id="5" class="summary-sentence">As for the room, the decor was nice, and the bed was comfortable, although a bit firm.</span> <span id="6" class="summary-sentence">The bathroom was small, but adequate.</span> <span id="7" class="summary-sentence">The location of the hotel is within walking distance of the Ginza shopping district and the fish market.</span> <span id="8" class="summary-sentence">It also sits above the subway station.</span> <span id="9" class="summary-sentence">The only downside to the hotel was the ventilation system, which filled with cigarette smoke from the other rooms.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

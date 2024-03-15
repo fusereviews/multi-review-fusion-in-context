@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>I would call myself a pizza snob having grown up and out with the pizza from Chicago. <span class='review-span highlight' data-aligned-summaries='1 5'>This place comes pretty darn close to the real thing</span>. If you are a transplanted Chicagoan you'll see how close they come. If you're from anywhere else, this could possibly be the best you've had.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1'>Pretty good.</span> <span class='review-span highlight' data-aligned-summaries='0 1'>I like the thin crust pizza</span>,<span class='review-span highlight' data-aligned-summaries='0'></span> <span class='review-span highlight' data-aligned-summaries='5'>comparable to Vito's but better.</span> Hubbys calzone didn't have ricotta, isn't that standard in a calzone? Is it strange they're only open for 5 hrs? I was wanting to pop in for lunch the other day but realized they open at 4pm.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1 5'>Absolutely the best pizza I have ever eaten</span>! They actually put sauce on the pizza.. with real tomatoes.... had thin flavorful crust... chocked <span class='review-span highlight' data-aligned-summaries='0'>full of the pepperoni, sausage, onion and mushrooms</span>! Yum... <span class='review-span highlight' data-aligned-summaries='3 5'>moderately priced</span> <span class='review-span highlight' data-aligned-summaries='3'>for all the cheese and toppings</span>.... a must try!</div><div class='text-box'>The chicken wings were disappointing. <span class='review-span highlight' data-aligned-summaries='0'>We ordered 5 wings</span> and got 5 chicken nuggets for $6, they were not worth 1.25 a piece. We also ordered an Italian beef. <span class='review-span highlight' data-aligned-summaries='2'>Was not impressed</span> concitering we are from Chicago it doesn't compare. Over all <span class='review-span highlight' data-aligned-summaries='3'>not good for the price</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 1 5'>Wow amazing deep dish pizza</span>!!! The food truck was up in Scottsdale got the <span class='review-span highlight' data-aligned-summaries='3'>deep dish cheese pizza for $5 a slice</span>, it's huge. I wanted to try it before driving over to the Gilbert or Chandler. Amazing taste, it's worth the drive.</div><div class='text-box'>Great location with a bar in house. Store is very clean and service is top notch. <span class='review-span highlight' data-aligned-summaries='0'>We ordered two 10 inch pizzas. One butter crust Sears Tower and one</span> <span class='review-span highlight' data-aligned-summaries='0 1'>deep dish with pineapple</span>.<span class='review-span highlight' data-aligned-summaries='1'></span> <span class='review-span highlight' data-aligned-summaries='1 5'>Pizza was</span> fresh, piping hot and <span class='review-span highlight' data-aligned-summaries='1 5'>melt in your mouth good</span>.My <span class='review-span highlight' data-aligned-summaries='0 2 3'>nephew got a huge Caesar salad</span> <span class='review-span highlight' data-aligned-summaries='2 3'>for $8</span> <span class='review-span highlight' data-aligned-summaries='2'>and added chicken.</span> <span class='review-span highlight' data-aligned-summaries='2 5'>We were all happy</span>.</div><div class='text-box'>This place never fails to hit the spot! It has always been my husband and I's <span class='review-span highlight' data-aligned-summaries='1'>favorite place for a deep dish pizza</span> and <span class='review-span highlight' data-aligned-summaries='2'>the wings are also one of my favorites</span>. <span class='review-span highlight' data-aligned-summaries='4'>The staff is always friendly</span> and attentive! <span class='review-span highlight' data-aligned-summaries='5'>I would definitely recommend this place</span>.</div><div class='text-box'>Pizza Chips were awesome with fresh salsa. <span class='review-span highlight' data-aligned-summaries='0 2'>I had the house salad with bacon</span> <span class='review-span highlight' data-aligned-summaries='2'>and</span> <span class='review-span highlight' data-aligned-summaries='2 5'>it was delicious</span>! <span class='review-span highlight' data-aligned-summaries='4 5'>Staff nice</span>, decor 'gangsta' style. Hope more people find this restaurant -its kinda tucked back in the parking lot next to Subway. <span class='review-span highlight' data-aligned-summaries='5'>We 'll be back</span>.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This pizza shop serves many styles of pizza and also wings and salad.</span> <span id="1" class="summary-sentence">The pizza is very good, especially the deep dish.</span> <span id="2" class="summary-sentence">The other offerings like wings and salads are also generally well-liked.</span> <span id="3" class="summary-sentence">The prices are reasonable.</span> <span id="4" class="summary-sentence">The staff is friendly.</span> <span id="5" class="summary-sentence">Overall, this pizza shop is recommended.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>The Residence Inn was great</span>. Very central to lots of things but the people working there were what made the stay so enjoybale. Leyla at the front desk was so helpful in guiding us as to what to do and never without a big smile on her face. Franco at the valet was so friendly and helpful and since he was our very frist imprerssion of the Residence Inn it certainly was a good one. <span class='review-span highlight' data-aligned-summaries='4'>The breakfast was great</span> but again the staff was wonderful. Kemika (sp) was so helpful and warm and it certainly made for an enjoyable breakfast time with our family. The rooms were clean and modern. The parking charge was the only downfall at $35 a day. It would be better to include it in the room price.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>I was treated very horribly by the staff at this hotel</span>, I <span class='review-span highlight' data-aligned-summaries='0'>would not recommend it to anyone</span> no matter who you are. Maybe its because they are new they don't know how to treat guests but I can tell you this much they ruined my entire stay and never bothered to do anything about it,until I took action. I am disappointed that a Marriott would act like this, but atleast now you know that they are not capable of effectively dealing with problem resolution during your stay.</div><div class='text-box'>I have stayed at this hotel numerous times since it opened. I love the location, and <span class='review-span highlight' data-aligned-summaries='3'>the kitchenette in the rooms makes any hotel stay so much more comfortable</span>. Of course, <span class='review-span highlight' data-aligned-summaries='4'>one can never complain about complementary breakfast</span>! The staff has always been super friendly and helpful, from the maintenance and housekeeping staff, to the front desk and valet. Every time I go to Toronto <span class='review-span highlight' data-aligned-summaries='0'>I look forward to staying there</span>!</div><div class='text-box'>We stayed in the residence inn over a weekend. After a Long drive from chicago we were assigned <span class='review-span highlight' data-aligned-summaries='2'>a room on a high floor as requested with a lovely view of the cn tower</span>! <span class='review-span highlight' data-aligned-summaries='1'>The</span> <span class='review-span highlight' data-aligned-summaries='0 1'>hotel</span> <span class='review-span highlight' data-aligned-summaries='0'>is in the perfect spot for exploring the surrounding area</span> and <span class='review-span highlight' data-aligned-summaries='1'>has lots of pubs and restaurants in close vicinity</span> also! Book it, you won't be dissapointed :)</div><div class='text-box'>Excellent location. 5 Minutes walking distance to both the Rogers Centre and CN Tower. Also walking distance to all the nightclubs in the entertainment district. Rooms are brand new and kept spotlessly clean. This property is also reasonably priced with the AAA discount. <span class='review-span highlight' data-aligned-summaries='0'>I can't think of a single negative thing to say about this property.</span></div><div class='text-box'>A thank you party for the clients on our first night, staff very polite and room very clean. <span class='review-span highlight' data-aligned-summaries='2'>Close to the CN tower</span> and King street, well located. The fact that you have a complete kitchen and a <span class='review-span highlight' data-aligned-summaries='4'>very nice breakfast included</span> also are some of the <span class='review-span highlight' data-aligned-summaries='0'>reasons to go back to this hotel</span>.</div><div class='text-box'>Stayed for 3 nights in August. <span class='review-span highlight' data-aligned-summaries='0'>Excellent location</span> next to the CN Tower. <span class='review-span highlight' data-aligned-summaries='0 3'>Lovely room</span> <span class='review-span highlight' data-aligned-summaries='3'>with full kitchen - handy with young children</span> - excellent deli round the corner which made preparing meals easier etc. - less stressful than taking youngsters to restaurants. <span class='review-span highlight' data-aligned-summaries='4'>Absolutely superb breakfast each morning</span>. Courteous staff throughout.</div><div class='text-box'>I have been staying in Residence Inn for the ast 5 months and its by far <span class='review-span highlight' data-aligned-summaries='0'>the best extended stay hotel I have ever visited</span>. Excelent location,Food and Guest Services</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This is a great hotel to visit and you will look forward to coming back again and again.</span> <span id="1" class="summary-sentence">The hotel is situated near lots of pubs and restaurants.</span> <span id="2" class="summary-sentence">The hotel room was on a high floor so there was a great view of the CN Tower.</span> <span id="3" class="summary-sentence">The room also had a full kitchen which was ideal.</span> <span id="4" class="summary-sentence">The morning breakfast was complimentary and served really great superb food.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

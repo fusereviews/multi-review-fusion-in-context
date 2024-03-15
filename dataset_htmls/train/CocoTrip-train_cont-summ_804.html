@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>This was my third time that i have stayed in Hotel Rossi.At's a clean and <span class='review-span highlight' data-aligned-summaries='1'>a cheap hotel in Venice</span>.<span class='review-span highlight' data-aligned-summaries='3'>The rooms are very small</span>,the breakfast is ok,the staff was helpful.At's in Canareggio so to go to the center , San Marco,you need to walk 20 minutes but it's not a problem in Venice because to discover the city you need to walk. <span class='review-span highlight' data-aligned-summaries='0'>Also it's very close to train</span> and bus <span class='review-span highlight' data-aligned-summaries='0'>station</span>.That's why i prefer to stay.5minutes to the train station,10 minutes to bus station by walk. A <span class='review-span highlight' data-aligned-summaries='1'>have searched a lot but couldn' find more cheapest hotel than Hotel Rossi</span>.The restaurants in Venice is expensive there is a food court very close to Hotel Rossi.The food is delicious-and costless. For my forth stay i can stay in Hotel rossi again:)</div><div class='text-box'>This was the second time that my husband and I stayed here, and we still found it to be <span class='review-span highlight' data-aligned-summaries='1'>a good value for a very expensive city</span><span class='review-span highlight' data-aligned-summaries='0'>.</span> <span class='review-span highlight' data-aligned-summaries='0 7'>It's conveniently located</span> <span class='review-span highlight' data-aligned-summaries='0'>near the train station, so you don't have to drag your bags all over</span> the city and up and down stairs. Both times we stayed on the first floor. <span class='review-span highlight' data-aligned-summaries='3 4'>The rooms were</span> <span class='review-span highlight' data-aligned-summaries='3'>small</span> but <span class='review-span highlight' data-aligned-summaries='4'>comfortable and clean</span>, and <span class='review-span highlight' data-aligned-summaries='5'>the bathrooms were tiny</span>, <span class='review-span highlight' data-aligned-summaries='5'>but clean and usable</span>. Since the hotel is at the end of a small alley, it's fairly quiet. <span class='review-span highlight' data-aligned-summaries='2'>The breakfast is very basic</span>, but the coffee is good and the rolls are fresh, so that was fine by us. <span class='review-span highlight' data-aligned-summaries='7'>If you're looking for a place to comfortably sleep and shower, then this hotel is great</span>.</div><div class='text-box'>Hotel Rossi is a 'budget hotel' by Venice standards. I did a lot of research before booking this Hotel and this came recommended from a friend who had stayed there a year before. <span class='review-span highlight' data-aligned-summaries='3'>The room was small</span> but big enough. Could have been bigger if it did not have so much unnecessary furniture. It was very quiet. We choose a ground floor room because we were travelling with a baby and did not want to carry a pram and luggage upstairs. The breakfast was basic but fine and a good way to start the day. The woman who served the breakfast was very very nice. The front desk staff were a bit cool but ok. <span class='review-span highlight' data-aligned-summaries='7'>The Hotel is very conveniently located</span>. I would recommend to others travelling to Venice.</div><div class='text-box'>We stayed at hotel Rossi with our 6 month year old baby. The hotel is a great location but a very average hotel. We paid 112 euros for a double room. The hotel has no lift so we had to carry the pram up three sets of stairs. We asked the hotel if we could get some boiling water for our babies formula, the receptionist took us to the coffee machine, showed us it was off and said we couldn't use it until 7.30am the next morning and that the room was locked. <span class='review-span highlight' data-aligned-summaries='7'>We found the staff particularly unfriendly and unhelpful</span>. <span class='review-span highlight' data-aligned-summaries='4'>The rooms are very very basic but clean</span>. The <span class='review-span highlight' data-aligned-summaries='2'>breakfast is</span> very basic, 4 <span class='review-span highlight' data-aligned-summaries='2'>bread rolls and jam and coffee</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='7'>the only thing good about Hotel Rossi is</span> <span class='review-span highlight' data-aligned-summaries='0 7'>its location</span> <span class='review-span highlight' data-aligned-summaries='0'>close to the train station</span> down a little street and so it was quiet. No matter what you couldn't get lost as the direction indicators on the walls in Venice always indicated either the way to the station or San Marco square. <span class='review-span highlight' data-aligned-summaries='2'>The breakfast was stale bread and jam/honey /butter and reasonably decent coffee</span> in a tight little room. <span class='review-span highlight' data-aligned-summaries='7'>The room we slept in was never swept.dust balls accumulated under the bed in our 4 night stay</span>. Only stairs to get up to the floors. The cot for our teenage son was uncomfortable. Fortunately we rarely spent anytime there.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1'>Great value for a no frills room</span>. We had a one night stay and I couldn't be happier. Had to get up the following morning and hit Piazzale Roma to get to the airport so location was perfect. The room we had faced a courtyard so it was nice and quiet. If we were there for a longer stay, I might look for something else. This is not the best place if you plan on spending a lot of time IN the room however, you're in Venice so that shouldn't be too much of an issue.</div><div class='text-box'>This hotel is nothing out of the ordinary. <span class='review-span highlight' data-aligned-summaries='3'>The rooms were kind of small</span>, <span class='review-span highlight' data-aligned-summaries='4'>but that is expected</span> in Italy. I have certainly seen smaller rooms. The bathroom in the single room was also tiny. But <span class='review-span highlight' data-aligned-summaries='5'>the shared bathroom was much larger and also very clean</span>. Breakfast was ok, nothing great. The best thing about <span class='review-span highlight' data-aligned-summaries='1'>the hotel was</span> that it was pretty <span class='review-span highlight' data-aligned-summaries='1'>cheap for Venice</span> and <span class='review-span highlight' data-aligned-summaries='0'>it was very close to the train station</span> (5 minutes at most). Staff spoke English well.</div><div class='text-box'>My single room in <span class='review-span highlight' data-aligned-summaries='3'>this hotel was the smallest hotel room that I have ever seen</span>. My room was very dusty and had obviously not been properly cleaned for a long time. The curtain was a piece of cloth pushed into the wall. I must say that the staff were very friendly but the <span class='review-span highlight' data-aligned-summaries='2'>breakfast was awful.</span> <span class='review-span highlight' data-aligned-summaries='7'>Not recommended</span>.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This hotel is near the train station, so it is great if you have luggage.</span> <span id="1" class="summary-sentence">The hotel is cheap for Venetian standards but the value for money is not so good compared to other cities.</span> <span id="2" class="summary-sentence">Though a full breakfast is advertised when booking, what is provided is very far from that - two bread rolls, jam, coffee and juice.</span> <span id="3" class="summary-sentence">The room was small</span> <span id="4" class="summary-sentence">but okay.</span> <span id="5" class="summary-sentence">The shared bathroom was not so good.</span> <span id="6" class="summary-sentence">Poor water pressure and not much of a barrier between the shower and the rest of the room.</span> <span id="7" class="summary-sentence">In terms of location I would recommend this hotel however some simple adjustments need to be made to service and maintenance before recommending overall.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

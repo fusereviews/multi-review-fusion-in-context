@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1'>really great hotel</span> My husband and I stayed at the Hotel Privilege for 3 nights - our first visit to Florence and we came as tourists for sightseeing in Italy. The hotel and <span class='review-span highlight' data-aligned-summaries='0 3 5'>staff were exceptionally nice</span> and <span class='review-span highlight' data-aligned-summaries='6'>the hotel was good value for money</span>. <span class='review-span highlight' data-aligned-summaries='4'>The rooms were a good size</span>, <span class='review-span highlight' data-aligned-summaries='5'>clean</span>, comfortable and with aircon (very necessary). <span class='review-span highlight' data-aligned-summaries='0 2 5'>The location is</span> <span class='review-span highlight' data-aligned-summaries='0 5'>perfect</span> and <span class='review-span highlight' data-aligned-summaries='2'>an easy walk to the centre</span>. The staff were extremely helpful and accomodating and helped us to arrange an onward travel itinerary and booked cars and hotels for us. <span class='review-span highlight' data-aligned-summaries='5'>They make an excellent breakfast here</span>! <span class='review-span highlight' data-aligned-summaries='6'>Would recommend this place</span> if you are looking for a good quality friendly 3 star hotel in a great location.</div><div class='text-box'>Wonderful small hotel on the Arno River. <span class='review-span highlight' data-aligned-summaries='1'>Wonderful</span> small <span class='review-span highlight' data-aligned-summaries='1'>hotel</span> on the Arno River. The managers were very helpful and could tell you just where to go and what to see. <span class='review-span highlight' data-aligned-summaries='5'>Breakfast was wonderful</span> and the service was too. The room we had on the water had a <span class='review-span highlight' data-aligned-summaries='2'>wonderful view of the river</span>, but it became a little warm for us with the windows and shutters closed since the AC was off (some guests thought it was getting cold, but wee from Alaska). We were moved to an interior room the next night and all was well since we could let a breeze blow through. <span class='review-span highlight' data-aligned-summaries='6'>I would recommend this hotel to anyone in this price range</span>.</div><div class='text-box'>Excellent staff and lovely hotels Hi,We stayed in this hotel couple of weeks back and I must admit that it was wonderful. The owner of the hotel was all out to help us with whatever we asked him and went out of his way to make us comfortable. <span class='review-span highlight' data-aligned-summaries='4'>The rooms are large</span> and nice, <span class='review-span highlight' data-aligned-summaries='5'>breakfast was good</span> and its <span class='review-span highlight' data-aligned-summaries='0 2 5'>walking distance from all the sights</span>.<span class='review-span highlight' data-aligned-summaries='6'>I would certain recommend this hotel</span> for anyone travelling with family. I travelled with my husband and 11 year old daughter.<span class='review-span highlight' data-aligned-summaries='1'>All in all great place</span>.Surekha</div><div class='text-box'>Nice place We were pleased with our stay at the hotel. It is in a <span class='review-span highlight' data-aligned-summaries='0 5'>good location</span> <span class='review-span highlight' data-aligned-summaries='2'>on the banks of the Arno</span>, and is <span class='review-span highlight' data-aligned-summaries='2'>close to the attractions</span> in the city. The <span class='review-span highlight' data-aligned-summaries='5'>breakfast was good</span> and <span class='review-span highlight' data-aligned-summaries='5'>the room was clean</span> (although the bed was a little soft). The shower <span class='review-span highlight' data-aligned-summaries='4'>room was a bit small</span>, but <span class='review-span highlight' data-aligned-summaries='6'>served its purpose for the price</span>. The <span class='review-span highlight' data-aligned-summaries='0 3 5'>owner and his wife were</span> <span class='review-span highlight' data-aligned-summaries='3'>very</span> <span class='review-span highlight' data-aligned-summaries='0 3 5'>friendly</span> and helpful. <span class='review-span highlight' data-aligned-summaries='6'>Would</span> definately <span class='review-span highlight' data-aligned-summaries='6'>consider staying here again</span>!</div><div class='text-box'>Great Hotel with Best Coffee in Europe! We would highly recommend this hotel to anyone looking for a <span class='review-span highlight' data-aligned-summaries='1'>comfortable</span> <span class='review-span highlight' data-aligned-summaries='0 1'>hotel in a good location</span> <span class='review-span highlight' data-aligned-summaries='1'>with wonderful service</span> by the owner/manager. Although <span class='review-span highlight' data-aligned-summaries='5'>our room</span> was a little worn, it <span class='review-span highlight' data-aligned-summaries='5'>was very clean</span> and comfortable. <span class='review-span highlight' data-aligned-summaries='5'>The buffet breakfast was excellent and the coffee is the best coffee in all of Europe</span>! <span class='review-span highlight' data-aligned-summaries='3 5'>The</span> <span class='review-span highlight' data-aligned-summaries='0 3 5'>management was very friendly</span> <span class='review-span highlight' data-aligned-summaries='3'>and helpful and gave us excellent suggestions</span> <span class='review-span highlight' data-aligned-summaries='5'>which</span> <span class='review-span highlight' data-aligned-summaries='5 6'>made our stay in Florence all the more enjoyable</span>.</div><div class='text-box'>Location is just perfect We stayed here after having been away for 5 weeks and it was fantastic. <span class='review-span highlight' data-aligned-summaries='0 3 5'>The</span> <span class='review-span highlight' data-aligned-summaries='0 1 3 5'>staff were great</span> <span class='review-span highlight' data-aligned-summaries='1 3 5'>and very helpful</span> with any information. <span class='review-span highlight' data-aligned-summaries='5'>The breakfast was good</span> and they pour a great Gin Tonic. <span class='review-span highlight' data-aligned-summaries='0 1 5'>The location could not be better</span>. <span class='review-span highlight' data-aligned-summaries='2'>You can walk to all tourist attractions</span>. The manager and his wife were fantastic and nothing to much trouble. He spoke good english. <span class='review-span highlight' data-aligned-summaries='6'>We will be staying again</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1'>Wonderful hotel</span> We stayed 5 nights at the Hotel Privilege in Florence, Italy, and would stay there again. The owners were wonderful people, the service was great, <span class='review-span highlight' data-aligned-summaries='4 5'>the room was</span> quiet, <span class='review-span highlight' data-aligned-summaries='4'>spacious</span> and <span class='review-span highlight' data-aligned-summaries='5'>clean</span>, <span class='review-span highlight' data-aligned-summaries='5'>the breakfast was fabulous</span>, <span class='review-span highlight' data-aligned-summaries='3'>the restaurant recommendations were terrific</span>, and <span class='review-span highlight' data-aligned-summaries='0 5'>the location was perfect</span>. My husband loved the big tub. <span class='review-span highlight' data-aligned-summaries='6'>We highly recommend this hotel to anyone visiting</span> the beautiful city of <span class='review-span highlight' data-aligned-summaries='6'>Florence</span>.</div><div class='text-box'>Great hospitality! We visited Florence for our first time and found that <span class='review-span highlight' data-aligned-summaries='1'>Hotel Privilege was great</span>. <span class='review-span highlight' data-aligned-summaries='4 5'>The rooms were</span> <span class='review-span highlight' data-aligned-summaries='4'>large</span> and <span class='review-span highlight' data-aligned-summaries='5'>clean</span> . <span class='review-span highlight' data-aligned-summaries='5'>The breakfast was excellent</span>. <span class='review-span highlight' data-aligned-summaries='0 5'>The location was very convenient</span> to the main tourist areas. The best feature was the hotel owners who were professional, personable, and extremely helpful. We felt as if they cared that our experience in Florence was wonderful - and it was.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Great location and friendly staff.</span> <span id="1" class="summary-sentence">The hotel was excellent.</span> <span id="2" class="summary-sentence">The location, right by the river, is beautiful - was a nice easy walk to all of the attractions.</span> <span id="3" class="summary-sentence">The staff were very friendly and made some excellent recommendations for dinner.</span> <span id="4" class="summary-sentence">Room are large and the beds are huge.</span> <span id="5" class="summary-sentence">The breakfast is OK (coffee not that good) but it was the location, good level of cleanliness and friendly staff that makes this such a good choice.</span> <span id="6" class="summary-sentence">The price was very reasonable and if we were to return to Florence we would definitely stay here again.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>After browsing through a long list of hotels in Rome, I decided on staying here, as <span class='review-span highlight' data-aligned-summaries='10'>Alessandrino appeared to have the best price-quality ratio. And so it did</span>. Although <span class='review-span highlight' data-aligned-summaries='2 3'>located on a pretty steep hill</span>, it's closer to the center than many others in its price range. <span class='review-span highlight' data-aligned-summaries='9'>The Vatican is no more than 15 minutes away by foot</span>. The rooms are.huge. The one we stayed in even had an interesting curved shape, so you didn't feel you were living in a box. The only downside was the poor breakfast. Admittedly, during the summer you can have it on the terrace atop the hotel, from where you can see far into the distance, to the mountains, and closer to the Vatican dome. <span class='review-span highlight' data-aligned-summaries='10'>Would definitely recommend this hotel</span> and would stay there again.</div><div class='text-box'>It was our first trip to Rome and we (two couples) stayed the week before Christmas for 3 nights and <span class='review-span highlight' data-aligned-summaries='10'>we can't fault it</span>! <span class='review-span highlight' data-aligned-summaries='9'>The location was ideal</span> - nice and quiet residential area <span class='review-span highlight' data-aligned-summaries='9'>close to the Vatican</span>. The hotel was very clean and nicely decorated. <span class='review-span highlight' data-aligned-summaries='6'>The staff were all very pleasant and helpful</span> and we would love to go back again! We looked at the reviews and it was helpful to know <span class='review-span highlight' data-aligned-summaries='2'>the hotel was situated on top of a hill</span>. Yes, <span class='review-span highlight' data-aligned-summaries='3 4 5'>there are steps</span> <span class='review-span highlight' data-aligned-summaries='3 4'>up to it,</span> <span class='review-span highlight' data-aligned-summaries='3 4 5'>alternatively</span> <span class='review-span highlight' data-aligned-summaries='3 4'>there is</span> <span class='review-span highlight' data-aligned-summaries='3 4 5'>a gently sloping pathway</span> - the choice is yours. But <span class='review-span highlight' data-aligned-summaries='5'>get a taxi back if you can't manage either of these</span> - it really is not a problem! Rome itself is abolutely wonderful and the people so friendly. Enjoy. Ciao!</div><div class='text-box'>We stayed in the basement annex apartment in early November. Totally agree with the assesment of the family from York. The extra room was nice, but the dampness cannot be overstated! We took to drying our bath towels out using an open oven. <span class='review-span highlight' data-aligned-summaries='8'>We, too, had problems getting dry bath towels without being charged extra</span> for <span class='review-span highlight' data-aligned-summaries='8'>them</span> (this on the third night of our stay!) The location is great. <span class='review-span highlight' data-aligned-summaries='2'>The hill is easy (take the hill and NOT the steps</span>) and is very close to St. Peters. There is a charming, friendly coffee shop on the way to the underground sidewalk to reach St. Peters Square. We LOVED Rome and are ready to return as soon as possible, but we would NOT recommend the basement annex apartment.</div><div class='text-box'>it was at the end of august and was the first time that i ve been in Rome while expecting to have a wonderful holiday . Because of this hotel , i couldnt sleep well and absolutaley recommend you to find another one. First it was so hot and the aircondition was not working , second the tv was one of the oldest one that an hotel can have in this decade and also the remote control was broken . Then there was only mineral water ,which i dont like , in the mini bar nothing more ,and the furnitures were terrible. On the other side the bathroom was ok but could be better , and <span class='review-span highlight' data-aligned-summaries='9'>the hotel is nearer to Vatican City</span> . This hotel doesn't deserve 3 stars maybe 2 .</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='10'>This hotel is very clean</span> and the <span class='review-span highlight' data-aligned-summaries='10'>room</span> we stayed in was very quiet (5th floor) room to the of the elevator. It <span class='review-span highlight' data-aligned-summaries='10'>had a HUGE private balcony that was beautiful</span>. The only thing is <span class='review-span highlight' data-aligned-summaries='0'>the directions to find it are AWFUL</span>. <span class='review-span highlight' data-aligned-summaries='2 3'>Its up a hill</span> <span class='review-span highlight' data-aligned-summaries='3'>that you need to climb</span>, there are no restaurants in the vicinity. <span class='review-span highlight' data-aligned-summaries='6'>The front desk staff was NOT friendly</span>, in fact <span class='review-span highlight' data-aligned-summaries='6'>they were condesending</span>. I booked on priceline europe and <span class='review-span highlight' data-aligned-summaries='9'>would recommend it if you want to be close to the Vatican</span> and are physically fit. There is no onsite parking, but <span class='review-span highlight' data-aligned-summaries='1'>the train station is nearby</span>.</div><div class='text-box'>We stayed here for 3 nights in Feb 2012 and although it is <span class='review-span highlight' data-aligned-summaries='1'>a little</span> <span class='review-span highlight' data-aligned-summaries='1 2 3'>walk (5 mins uphill) from San Pietro Station</span> <span class='review-span highlight' data-aligned-summaries='1'>(Not an underground station</span>) it is still a lovely little quaint hotel that <span class='review-span highlight' data-aligned-summaries='9'>offers very good views of the Vatican</span>. The rooms are nice, with <span class='review-span highlight' data-aligned-summaries='6'>good room service and very friendly staff</span>. <span class='review-span highlight' data-aligned-summaries='9'>You can access the free wi-fi</span> and breakfast is good. <span class='review-span highlight' data-aligned-summaries='10'>For the price of the hotel it is great value for money and Rome is amazing city</span>.</div><div class='text-box'>The bad critics are wrong. <span class='review-span highlight' data-aligned-summaries='1'>The hotel is in a quiet area close to the railway station</span> san pietro. <span class='review-span highlight' data-aligned-summaries='9'>The Vatican is very close to the hotel</span> too. We stayed 4 days in Rome. We used to take the bus 64 in front of the railway station. You can take the train to the trastevere station and then take the tram to the center of rome. Everything was fine at the hotel, the bed, people . Great place, I love Rome</div><div class='text-box'>Booked the alessandrino via the internet for a two night break, the hotel is clean and quiet with <span class='review-span highlight' data-aligned-summaries='6'>helpful staff</span> and an adequate breakfast included in the rate,<span class='review-span highlight' data-aligned-summaries='3'>you need to be prepared to walk</span> but <span class='review-span highlight' data-aligned-summaries='9'>the Vatican is only 10 minutes away</span>. My only problem was one rip off merchant in a taxi therefore ask the price to your destination <span class='review-span highlight' data-aligned-summaries='10'>The area in which the hotel is located is quiet and safe but there are no bars or restaurants</span></div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The hotel is difficult to find.</span> <span id="1" class="summary-sentence">It's not close to a metro station but to a train station.</span> <span id="2" class="summary-sentence">It is on a kind of hill</span> <span id="3" class="summary-sentence">so you'll have to walk a little.</span> <span id="4" class="summary-sentence">If you get lost, you'll climbe some stairs with the suitcases in your hands.</span> <span id="5" class="summary-sentence">So better take a taxi.</span> <span id="6" class="summary-sentence">The staff is indifferent to your needs.</span> <span id="7" class="summary-sentence">In the room there was a specific smell.</span> <span id="8" class="summary-sentence">The towels were not changed everyday.</span> <span id="9" class="summary-sentence">The good thing was the free Wi-Fi and the fact that it is close to Vatican.</span> <span id="10" class="summary-sentence">Sure are other best options to stay in Rome at the same price like this hotel.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

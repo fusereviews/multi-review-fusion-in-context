@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>My wife and I stayed at the Best Western Hotel Olimpia over the new year holiday for four nights. It is everything it claims to be and it looks just like the photos on the website. The front desk <span class='review-span highlight' data-aligned-summaries='0'>staff was very helpful</span> and the <span class='review-span highlight' data-aligned-summaries='0'>dining room staff was great</span> too. The Hotel is located about a minutes walk from the vaporetto station. You should buy an extended vaporetto pass if you are going to be in town for a stretch of time. The railway station was a short three minute walk away, and St. Mark's Square took about 1 hour at a leisurely pace to reach.</div><div class='text-box'>Hotel is quietly situated, although well located for the trains, buses and vaporetto. It is very clean and comfortable with <span class='review-span highlight' data-aligned-summaries='0'>friendly and efficient staff</span>. Excellent selection for breakfast. I developed a health problem whilst in Venice and the reception staff could not have been more helpful and supportive in assisting me to resolve the matter. <span class='review-span highlight' data-aligned-summaries='0'>I would certainly stay at this hotel if we return</span> to Venice. Our only criticism would be that the room was a little on the small side but as we spent a great deal of time sightseeing it did not affect our enjoyment of our stay.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>If you are cruising, this a great location</span>. We walked from cruise terminal to Piaza Roma. <span class='review-span highlight' data-aligned-summaries='0'>The hotel is visible from the Piaza</span>. You can get to the airport by bus, cab, or water taxi practically from the front door. The room was small but had a nice view. We left the window and shutters open and it still was not too noisy, although there is activity going on almost all night. Small but usable elevator, which you don't always get. The location and ease of travel made it worth the price.</div><div class='text-box'>This hotel was very nice. The room was quite beautiful, very large by Venice standards, with a canal view and good breakfast. The only complaint is that it is near the end of a vaparato route, and too far to walk at night from San Marco (unless you are actually familiar with the streets and alleys of Venice.) The restaurant, Brucinellis, in the same building was not so great. The bass was very disappointing, and I believe they refill the water bottles with tap water.</div><div class='text-box'>A 3 euro ticket from the airport takes you to Plaza da Roma in 15 mins, you can see the hotel as you get off the bus, A 2 minute walk up steps along small bridge and down steps brings you to Hotel Olimpia. We arrived at Marco Polo at 9p.m by 10p.m we had checked in and were eating supper overlooking canal by hotel-magical.Rooms very pretty, not big, but comfortable.Breakfast plentiful. Very convenient for leaving luggage there when checking out.<span class='review-span highlight' data-aligned-summaries='0'>Would definetly stay there again</span>, not cheap though.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>This is a good hotel</span>, cold air conditioning, <span class='review-span highlight' data-aligned-summaries='0'>warm and friendly staff</span>, and only two bridges from train station and one bridge from Water busses and Piazzaie Roma. They have tables with an awning outside their front door so <span class='review-span highlight' data-aligned-summaries='0'>you can sit and have some wine and enjoy Venice</span>. A good restaurant is right next door and the staff will tell which ones in the area to avoid.</div><div class='text-box'>We stayed here for three nights prior to our cruise, the hotel is very conveniently located transportation wise from the airport and pier. The <span class='review-span highlight' data-aligned-summaries='0'>staff at the hotel was</span> very helpful and <span class='review-span highlight' data-aligned-summaries='0'>friendly</span> and the breakfast was very good. The only note is that the shower was actually smaller than the one on the ship. Great hotel, I would stay there again and <span class='review-span highlight' data-aligned-summaries='0'>recommend it to friends</span>.</div><div class='text-box'>Located close to bus station need to take 2 bridges to get here from the train station. Everything is close by in venice, <span class='review-span highlight' data-aligned-summaries='0'>front-desk person was super nice and very talkative</span>. Have to climb 4 floors to go our room, luckily the doorman helped us with the luggages. Stayed here one night and they stored our luggage for free.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The staff at the hotel are friendly and the hotel is recommended.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

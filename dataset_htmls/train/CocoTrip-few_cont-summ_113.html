@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>This hotel is situated at around 10 min by cab from the center (barrio gotico). Must be max 10 years old. <span class='review-span highlight' data-aligned-summaries='1'>Can be reached also by tram</span> or metro. <span class='review-span highlight' data-aligned-summaries='3'>Rooms are clean</span>, <span class='review-span highlight' data-aligned-summaries='3'>beds a bit hard</span>. Bar is OK and the patio too but mostly in the shadom in the evening. Rooms that had a sea view don't have it anymore (see previous reviews). A bit expensive for the location and the lack of view (my room had a view on a skeleton building (crisis, what crisis?) on the side of the hotel, not charming at all). <span class='review-span highlight' data-aligned-summaries='0'>The pool on the 17th is not heated</span>, so quite difficult to swim at this time of the year, <span class='review-span highlight' data-aligned-summaries='0'>nice view on the utility building on the other side</span> and on the sea and beach, plus power plant for the rest.</div><div class='text-box'>The rooms and prices looked good and the pool looked attractive online, however the reality was different. I booked a family room which is really 2 separate bedrooms next to each other behind another door for privacy which was meant to lock but didn't. <span class='review-span highlight' data-aligned-summaries='4'>My kids room smelt like someone had smoked 100 cigarettes in it</span> and had drugs and booze on the table when we checked in. <span class='review-span highlight' data-aligned-summaries='4'>They cleaned but the smell didn't go away for all 3 days</span> and <span class='review-span highlight' data-aligned-summaries='5'>they would not change the rooms</span>. The pool is tiny and over crowded with hardly any beds to lie on which is quite difficult with kids in a very hot city. <span class='review-span highlight' data-aligned-summaries='7'>Well done for offering free WiFi but making people check into your Facebook page every time is very irritating</span>. Overall it is good value but it is most suited to weekend getaways for young party couples or mates.</div><div class='text-box'>I stayed in the diagonal zero for 4 nights while attending a congress. <span class='review-span highlight' data-aligned-summaries='0'>The area near the hotel is not nice</span>, however, <span class='review-span highlight' data-aligned-summaries='1'>the metro station is nearby</span> and you can visit the centre in a few minutes The <span class='review-span highlight' data-aligned-summaries='3'>rooms are spacious</span>, <span class='review-span highlight' data-aligned-summaries='3'>mattress is moderate</span>, <span class='review-span highlight' data-aligned-summaries='0 3 4'>views are poor</span>. The decoration is modern but on the poor side. Breakfast was ok, but <span class='review-span highlight' data-aligned-summaries='6'>i consider it unacceptable to drink disgusting coffee from a machine</span> in a 4 star hotel.it shows lack of respect for the client. The Personnel was very polite. <span class='review-span highlight' data-aligned-summaries='9'>There is a very good gym in the hotel</span> and <span class='review-span highlight' data-aligned-summaries='7'>free wifi</span> which is very important.</div><div class='text-box'>We only stayed one night but had most of 2 days sightseeing in Barcelona with fairly grown up family in 2 bedrooms. Hotel happy to look after our luggage. <span class='review-span highlight' data-aligned-summaries='1'>Perhaps in an area a bit far from the character of Barcelona, but very convenient for tram and subway</span>. <span class='review-span highlight' data-aligned-summaries='2'>Also large shopping centre close by with lots of dining choice</span>. <span class='review-span highlight' data-aligned-summaries='8'>Pool</span> a bit crowded as our trip was in the heat of August and slightly disappointing that they <span class='review-span highlight' data-aligned-summaries='8'>charged for towel use</span>. <span class='review-span highlight' data-aligned-summaries='5'>Very helpful porter</span> showed us control panel for lights/aircon etc - all very hi-tech.</div><div class='text-box'>Recently stayed here and was very impressed with this hotel. <span class='review-span highlight' data-aligned-summaries='0 5'>Friendly staff</span>, <span class='review-span highlight' data-aligned-summaries='0 3'>good clean rooms</span> and quiet so sleep no problem. <span class='review-span highlight' data-aligned-summaries='2'>The beach is with 10 mins walking distance from the hotel</span> and <span class='review-span highlight' data-aligned-summaries='2'>5 mins walk from a great shopping mall Diagonal Mar where there are lots of great restaurants</span>. The metro is a 2 min walk and a 10 min journey or 6 stops to the centre of the city with no changes. We loved it!</div><div class='text-box'>I stay for 3 nights in a business trip, the hotel is beautiful and <span class='review-span highlight' data-aligned-summaries='3'>the room was suburb</span>. Its <span class='review-span highlight' data-aligned-summaries='1'>far from the city town</span> but <span class='review-span highlight' data-aligned-summaries='1 2'>have the</span> <span class='review-span highlight' data-aligned-summaries='2'>beach nearby</span> and a <span class='review-span highlight' data-aligned-summaries='1'>subway station pretty close</span>. For sure I will come back again</div><div class='text-box'>We stayed for five nights at this hotel for a conference. By the end we could<span class='review-span highlight' data-aligned-summaries='0'>n't wait to leave</span> due to the <span class='review-span highlight' data-aligned-summaries='6'>monotonous breakfast</span>, <span class='review-span highlight' data-aligned-summaries='0'>below par cleanliness, and cold decor</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Wonderful hotel</span> <span class='review-span highlight' data-aligned-summaries='1'>just a short metro ride away from Barcelona attractions</span>, with gorgeous rooftop pool. <span class='review-span highlight' data-aligned-summaries='5'>Excellent customer service</span>.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">A very pleasant hotel to stay at, especially if visiting on business for a conference as many are held here.</span> <span id="1" class="summary-sentence">The location is convenient for the tram and subway but far from the character areas of Barcelona.</span> <span id="2" class="summary-sentence">But shopping and dining is close by and there is a beach within a 10-minute walk away.</span> <span id="3" class="summary-sentence">Average rooms at this hotel, that are spacious and reasonably comfortable.</span> <span id="4" class="summary-sentence">However, it noticeably smelt of cigarette smoke which wouldn't disappear, and the supposed sea views are quite poor.</span> <span id="5" class="summary-sentence">The staff at the hotel were all very helpful and friendly.</span> <span id="6" class="summary-sentence">breakfast was notable only in that it was monotonous and the coffee was from a machine.</span> <span id="7" class="summary-sentence">This hotel offers free WiFi as long as you check into their Facebook page each time you sign on.</span> <span id="8" class="summary-sentence">Also, there is a charge for towels at the pool but not a lot of room to sit.</span> <span id="9" class="summary-sentence">The hotel does have a good gym though.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

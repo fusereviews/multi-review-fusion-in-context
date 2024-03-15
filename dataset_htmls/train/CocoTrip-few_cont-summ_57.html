@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>Would NEVER Stay There Again I booked this Queen as part of a package from Pleasant Hawaiian Holidays. The flight (Delta) was packed but ok. <span class='review-span highlight' data-aligned-summaries='3'>The room at the Queen REEKED of mold</span>. We couldn't get another room, they claimed to be 100% full (actually, they told us they always overbook 3-5%).I took apart the air conditioner, cleaned out a bunch of black fungus/mold and bought a can of Lysol at ABC store for $8.It helped a little, but not much.I called Pleasant, they claimed they couldn't help me and that I was better off at the counter.If you stay here, remember you're paying $50/night in a $150 neighborhood and that the facility is old, moldy, overbooked, and that <span class='review-span highlight' data-aligned-summaries='4'>they don't have much for customer service</span>.By the way, I think Pleasant Holidays is off my list too becase of their complete lack of support.</div><div class='text-box'>A Good Deal Stayed for 4 nights and had a really good stay. <span class='review-span highlight' data-aligned-summaries='4'>Friendly, helpful staff</span>. <span class='review-span highlight' data-aligned-summaries='4'>Tour/Activities staff in lobby very knowledgeable</span>. Poor points are very limited parking and having to go to basement to get a pool towel from Housekeeping versus poolside on 3rd floor. The AC units chill your room quickly. Breakfast buffet good deal for the money and their dinners are just as good as any other restaurant. <span class='review-span highlight' data-aligned-summaries='1'>Excellent location (beach, zoo, aquarium, shopping, etc</span>) and easy to find. <span class='review-span highlight' data-aligned-summaries='3'>Rooms are</span> dated but <span class='review-span highlight' data-aligned-summaries='3'>clean</span> and <span class='review-span highlight' data-aligned-summaries='3'>larger than you'd expect</span> for the price. I would definitely stay there again and plan to do so!</div><div class='text-box'>Getting Pretty Bad Liike every one has said , the location view are wonderful , but then there's your room and the slow elevators. The rooms need a new face lift bad and the <span class='review-span highlight' data-aligned-summaries='3'>bathrooms are getting gross,</span> I went to have breakfast with my family, and after waiting over 20 minutes for a elevator they where leaving the restraunt by the time I got there. <span class='review-span highlight' data-aligned-summaries='6'>And the tile around the pool is VERY SLIPPERY, my grandchildren fell many times</span>. I would recommend this hotel only if it's all you can afford and you want to be close to the beach.</div><div class='text-box'>great <span class='review-span highlight' data-aligned-summaries='0'>hotel good value</span> We stayed at Queen Kap for 11nights to the 09 sept 04. It was great we requested an ocean view studio with kitchenette. <span class='review-span highlight' data-aligned-summaries='1 2'>The room</span> was on the 8th floor <span class='review-span highlight' data-aligned-summaries='1 2'>had a view of</span> <span class='review-span highlight' data-aligned-summaries='2'>diamond head</span>, beach, pool and <span class='review-span highlight' data-aligned-summaries='1'>zoo</span>! <span class='review-span highlight' data-aligned-summaries='3'>It was</span> old but <span class='review-span highlight' data-aligned-summaries='3'>clean</span> and very comfortable, and reasonably priced with every 5th night free and <span class='review-span highlight' data-aligned-summaries='5'>free buffets</span> thrown in <span class='review-span highlight' data-aligned-summaries='5'>everyday</span> too! Check their websites for specials. We will be staying there again its old but good and <span class='review-span highlight' data-aligned-summaries='4'>staff are friendly</span> but request a room with a view and pay the extra! Mahalo</div><div class='text-box'>Wonderful Value - Good for GLBT Customers If you are used to the Ritz-Carlton and the W Hotel, then this place is not for you. But, if you want a wonderful bargain right in the heart of Waikiki, this is great! And if you are a GLBT customer, you are right next door to Hula's and across the street from Queen's Surf Beach. I would definitely stay again. I got a great deal too. <span class='review-span highlight' data-aligned-summaries='0'>Stay 3 nights and get the 4th night free</span>.</div><div class='text-box'>Nice stay This was a pretty nice hotel. The location was great and very convenient. <span class='review-span highlight' data-aligned-summaries='3'>The amenities were</span> nothing fancy, but definitely <span class='review-span highlight' data-aligned-summaries='3'>adequate</span>. <span class='review-span highlight' data-aligned-summaries='2 3'>We got a</span> <span class='review-span highlight' data-aligned-summaries='2'>balcony that overlooked the city</span> and ocean and <span class='review-span highlight' data-aligned-summaries='3'>a sizeable bathroom</span>; I couldn't really ask for more. This is definitely not a luxury palace, but I doubt anyone booking this hotel expects that!</div><div class='text-box'>Can't Recomment This hotel is in need of a big makeover, <span class='review-span highlight' data-aligned-summaries='3'>standard rooms are really small</span>, seems some motels have better rooms than their standard rooms. <span class='review-span highlight' data-aligned-summaries='4'>Service was good</span>, but thats about it for this hotel.</div><div class='text-box'>happy with the Queen Kap! <span class='review-span highlight' data-aligned-summaries='2'>photo from our balcony</span></div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The hotel has a deal that you get the fourth night free if you stay three nights.</span> <span id="1" class="summary-sentence">The hotel is in close proximity to a zoo and aquarium, amongst other tourist sights.</span> <span id="2" class="summary-sentence">The hotel room overlooked the city., diamond head and the zoo.</span> <span id="3" class="summary-sentence">The room and bathroom were an adequate size but could generally do with a deep clean.</span> <span id="4" class="summary-sentence">The staff at the hotel were friendly and knowledgeable for the most part, although there were some that were not as helpful.</span> <span id="5" class="summary-sentence">There were free buffets every single day at this hotel, which has to be taken advantage of!</span> <span id="6" class="summary-sentence">The tiles around the hotel's swimming pool are very slippery, so caution is advised if using the facility.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

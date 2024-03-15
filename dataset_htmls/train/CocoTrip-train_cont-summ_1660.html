@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>We stayed for 3 nights in this hotel. We arrived a few hours before check-in but the room was ready and <span class='review-span highlight' data-aligned-summaries='6 7'>the check-in guy that served us</span> <span class='review-span highlight' data-aligned-summaries='6'>friendly</span> and <span class='review-span highlight' data-aligned-summaries='7'>efficient</span>. <span class='review-span highlight' data-aligned-summaries='3'>The room was a bit unusual in that it had a big pillar in the room</span> and a porthole shaped window on one side. The bed was comfortable not too hard. The air-conditioning in the room worked well which was good as it was fairly warm when we were there. The room had a fridge which also worked well. The shower was in the bathtub. The balcony was shared with the room next door & was enclosed in glass which made it quite warm but did keep out a lot of the traffic noise. From the balcony there was a view of the Colosseum which was just down the road.</div><div class='text-box'>Well I had reviewed some of the previous reviews and decided to book Mercure Roma Delta Colosseo as it was an Accor group and <span class='review-span highlight' data-aligned-summaries='0'>close to the Colossium and Ruins</span>. Well the reviews were right, not the greatest hotel, but it had a bed for me to sleep in and that is all I needed. So the cleaniness wasn't the great, <span class='review-span highlight' data-aligned-summaries='2 5'>the room smelled</span> and it was the bedding that made it smell, what ever the wash the bedding in needs t change. <span class='review-span highlight' data-aligned-summaries='2'>The room was small</span> and the bathroom ws smaller and the shower was smaller still. <span class='review-span highlight' data-aligned-summaries='5 9'>Won't be staying here again</span>. Not worth the price paid! <span class='review-span highlight' data-aligned-summaries='6'>The people in the bar were</span> good, <span class='review-span highlight' data-aligned-summaries='6'>friendly</span> and nice, gave me some nibbles with my drink even though I didn't ask for it!</div><div class='text-box'>Having read some of the other reviews of this hotel, we were a little dubious of our choice. However, <span class='review-span highlight' data-aligned-summaries='5 8 9'>the</span> <span class='review-span highlight' data-aligned-summaries='0 5 8 9'>hotel was excellent</span>, <span class='review-span highlight' data-aligned-summaries='6 8'>the stff very helpful and friendly</span>, and the setting is stunning! The room was pretty much standard for he Accor chain, but <span class='review-span highlight' data-aligned-summaries='0'>had a superb view of the Colosseum</span> - there was a sign at reception stating that rooms with Colosseum views cost extra - this was not the case for our room! Breakfasts were the usual bland fare, but there was plenty of good strong coffee available! Finally, the ABSOLUTE <span class='review-span highlight' data-aligned-summaries='2 8'>best part of this hotel was</span> <span class='review-span highlight' data-aligned-summaries='1 2 8'>the rooftop</span> <span class='review-span highlight' data-aligned-summaries='1'>bar and pool - fantastic views over the Colosseum area</span>, and watching the sunset over Rome with a cold glass of beer was sublime! <span class='review-span highlight' data-aligned-summaries='5 9'>Highly recommended</span>!</div><div class='text-box'>I have recently stayed at this Hotel, the design is quite modern in reception and in the bar area, the rooms are not as modern and are slightly dated. <span class='review-span highlight' data-aligned-summaries='2'>The rooms are of an average size</span> and not the biggest room Ive ever had but was ok for the 5 days that I was there. The reception staff are excellent and speak good English which is always a plus and from the one day that I had the breakfast, there were a variety of things available hot and cold.I had the pleasure of venturing up to the top floor of the hotel where there is a swimming pool and a bar, <span class='review-span highlight' data-aligned-summaries='1'>this provides great views of the Colosseum</span> and could be a slightly different experience when these features are open in summer.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='5 9'>We really enjoyed our stay at the Mecure hotel</span>. The thing we liked most about this hotel was its <span class='review-span highlight' data-aligned-summaries='0 1'>location</span> as it <span class='review-span highlight' data-aligned-summaries='0 1'>was</span> <span class='review-span highlight' data-aligned-summaries='0'>only a short walk from the termini and</span> <span class='review-span highlight' data-aligned-summaries='0 1'>directly across from the coloseum</span>. This made it very easy for us to travel around to see all the sights and we got so much done in our short stay. <span class='review-span highlight' data-aligned-summaries='2'>The hotel was clean</span> and <span class='review-span highlight' data-aligned-summaries='6'>the staff were friendly</span> and very helpful to us. We liked the option we got prior to our arrival to have <span class='review-span highlight' data-aligned-summaries='1'>a room with a view of the coloseum</span>.The only thing that dissappointed us was <span class='review-span highlight' data-aligned-summaries='2 8'>we were unable to see the roof pool and get the view from there</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>The hotel location was great</span> with stunning views of the Colosseum from the pool! . However the hotel is very old and needs a make over badly! The room size was good and had everything that you needed it just wasnt 4 star value though. I didnt eat or drink at the hotel because the prices were very expensive so i cant comment on that. If you want a fairly central location then <span class='review-span highlight' data-aligned-summaries='9'>this is a good hotel</span> its about a 10 min walk to the station or you can walk to most of the sites if your up for it.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='5 6 8 9'>The service at this hotel was amazing</span>. The accomodations were excellent. <span class='review-span highlight' data-aligned-summaries='2 9'>The room was cozy, clean</span> and unique. It is right in the heart of Rome, just two blocks away from the Colesseum and the metro(train station). If you enjoy walking, <span class='review-span highlight' data-aligned-summaries='0'>you can walk to any of the Rome's attractions from this location</span>. What I enjoyed the most was being <span class='review-span highlight' data-aligned-summaries='1'>able to see the Colesseum from my room</span>. <span class='review-span highlight' data-aligned-summaries='1 5 8'>We also had</span> <span class='review-span highlight' data-aligned-summaries='1 2 5 8'>an amazing view from the rooftop pool</span>.</div><div class='text-box'>A good hotel. <span class='review-span highlight' data-aligned-summaries='6'>Staff and service was very good</span>. <span class='review-span highlight' data-aligned-summaries='8'>Rooms were dated and in need of refurbishment</span>. <span class='review-span highlight' data-aligned-summaries='0'>Location was good</span>. Beds lovely and comfortable and the linen was good. <span class='review-span highlight' data-aligned-summaries='2 8'>Lovely pool and bar on the roof top</span> which was a great way to relax at the end of the day <span class='review-span highlight' data-aligned-summaries='5 9'>Would be happy to stay again</span> <span class='review-span highlight' data-aligned-summaries='5'>and would be happy to recommend this hotel</span> to anyone.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Location was excellent-</span> <span id="1" class="summary-sentence">Just a short walk to the Colosseum and great view from the top of the hotel.</span> <span id="2" class="summary-sentence">The best parts of the hotel were the lobby and the roof top other than that the room was small and smelly.</span> <span id="3" class="summary-sentence">Our room and family's room had an intrusive big pole in the room at the end of the bed.</span> <span id="4" class="summary-sentence">The hallways stank and there were layers of dust on the carpet on the sides of stairs.</span> <span id="5" class="summary-sentence">Was happy to leave the hotel.</span> <span id="6" class="summary-sentence">The staff were nice though.</span> <span id="7" class="summary-sentence">Check in process was slow.</span> <span id="8" class="summary-sentence">i give it 2 stars for the roof top but it didn't make up for the rest of the hotel.</span> <span id="9" class="summary-sentence">Would not stay in the hotel again not unless i could sleep on the sofa or on the roof : )</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

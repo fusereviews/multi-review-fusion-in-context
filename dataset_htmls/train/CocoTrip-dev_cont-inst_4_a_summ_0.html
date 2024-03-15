@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='5'>The best part of this hotel is the staff</span>. <span class='review-span highlight' data-aligned-summaries='5'>We were greeted by the ubiquitous doorman</span> and <span class='review-span highlight' data-aligned-summaries='5'>all staff every time we entered the hotel</span>. <span class='review-span highlight' data-aligned-summaries='5'>We felt as if we were the most important guests in the hotel</span> and <span class='review-span highlight' data-aligned-summaries='5'>the staff were constantly concerned about our needs</span>. <span class='review-span highlight' data-aligned-summaries='6'>The breakfast was a lavish buffet</span> and again the wait staff was outstanding <span class='review-span highlight' data-aligned-summaries='0 9'>This is a beautiful</span> <span class='review-span highlight' data-aligned-summaries='0 1 9'>hotel</span> <span class='review-span highlight' data-aligned-summaries='1'>in the old part of Montreal and close to good restaurants, art galleries, and shopping</span>. <span class='review-span highlight' data-aligned-summaries='0 3 4 9'>The room was</span> <span class='review-span highlight' data-aligned-summaries='0 3 9'>luxurious</span>, <span class='review-span highlight' data-aligned-summaries='0 9'>beautifully appointed</span>, <span class='review-span highlight' data-aligned-summaries='0 4 9'>comfortable</span> <span class='review-span highlight' data-aligned-summaries='0'>and</span> <span class='review-span highlight' data-aligned-summaries='0 4'>spotless</span>. <span class='review-span highlight' data-aligned-summaries='1 2'>It is just around the corner from a major theater and the cathedral and the river</span>. <span class='review-span highlight' data-aligned-summaries='1'>It is short cab ride to the cultural center</span> where they have the symphony, ballet and etc. <span class='review-span highlight' data-aligned-summaries='1'>The metro station is about a 10 minute walk</span>.</div><div class='text-box'>We stayed at the Saint Sulpice in early October. <span class='review-span highlight' data-aligned-summaries='0 1'>The hotel has a perfect location</span> right in the heart of the Old Quarter. <span class='review-span highlight' data-aligned-summaries='1 2'>Lots of</span> <span class='review-span highlight' data-aligned-summaries='1'>restaurants and</span> <span class='review-span highlight' data-aligned-summaries='1 2'>attractions in the surrounding area</span>. <span class='review-span highlight' data-aligned-summaries='0'>The hotel staff is excellent, the rooms are beautiful</span> with great bathrooms. Restaurant us good quality and group members enjoyed meals there. <span class='review-span highlight' data-aligned-summaries='5'>Concierge and front desk staff was warm and helpful</span>. <span class='review-span highlight' data-aligned-summaries='5'>The doorman are always there to help and offer a smile</span>. Stop reading these reviews and book it! There is nothing not to like with the Saint Sulpice. We travel and book hotels all over the world, this one is a keeper!</div><div class='text-box'>I rely heavily on reviews for visiting all over the world. <span class='review-span highlight' data-aligned-summaries='0'>This hotel was hands down one of the nicest</span> and most beautiful <span class='review-span highlight' data-aligned-summaries='0'>places</span>. It was a <span class='review-span highlight' data-aligned-summaries='3 4 9'>extremely spacious room, with a</span> <span class='review-span highlight' data-aligned-summaries='4 9'>queen bed</span>,<span class='review-span highlight' data-aligned-summaries='4'> couch</span>, <span class='review-span highlight' data-aligned-summaries='3 9'>fire place</span>, large fridge, stove and sink and a window that opened toward the street and a good size bathroom. Everyone that worked there was very helpful and nice and we felt very welcomed. <span class='review-span highlight' data-aligned-summaries='1'>The location is perfect and very central to a grocery store, liquor store, restaurants, etc</span>. I would highly recommend this Hotel and really enjoyed our stay because of it.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='4 9'>Cozy,</span> <span class='review-span highlight' data-aligned-summaries='0 4 9'>comfortable</span>,<span class='review-span highlight' data-aligned-summaries='0 9'> elegant</span> <span class='review-span highlight' data-aligned-summaries='9'>and reasonably priced</span> the Saint-Sulpice is <span class='review-span highlight' data-aligned-summaries='2'>in the heart of old Montreal</span> between <span class='review-span highlight' data-aligned-summaries='2'>just behind the cathedral</span>. It is quiet, friendly and pet friendly. Although we were in Montreal on the shortest days of the year <span class='review-span highlight' data-aligned-summaries='3'>our first floor room next to a courtyard garden was sunny and welcoming</span>. <span class='review-span highlight' data-aligned-summaries='0'>One of our favorite hotels</span> anywhere.</div><div class='text-box'>Vacation with 3 sisters and Mom for Mother's Day. The only place I could find where the <span class='review-span highlight' data-aligned-summaries='4'>suite could accomodate 4 of us nicely</span>. <span class='review-span highlight' data-aligned-summaries='0 4'>Clean</span>,<span class='review-span highlight' data-aligned-summaries='4'></span> <span class='review-span highlight' data-aligned-summaries='0 4'>bright, and</span> <span class='review-span highlight' data-aligned-summaries='0 4 9'>comfortable</span> plus and it is <span class='review-span highlight' data-aligned-summaries='1'>right in the Old City</span> (which was good for my mother). <span class='review-span highlight' data-aligned-summaries='7'>There outdoor dining area was great for lunch!</span> <span class='review-span highlight' data-aligned-summaries='5'>Good staff</span>, too.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='5'>Great service</span>, <span class='review-span highlight' data-aligned-summaries='0 9'>beautiful stylish contemporary decor</span>! And even a Tassimo espresso maker in every room. L'Occitane bath products were amazing! Plus free Wi-Fi ! <span class='review-span highlight' data-aligned-summaries='1 2'>Central as it is located right next to Notre Dame Cathedral</span>! <span class='review-span highlight' data-aligned-summaries='0'>Would definitely recommend this hotel</span> to the most finicky of people!</div><div class='text-box'>I love montreal, this hotel was available at a <span class='review-span highlight' data-aligned-summaries='0 9'>good value</span> and came highly recommended. <span class='review-span highlight' data-aligned-summaries='0 1'>Very pleased with the location</span> <span class='review-span highlight' data-aligned-summaries='0'>and hotel in general</span> although slightly disappointed with saunda and fitness centre. I think <span class='review-span highlight' data-aligned-summaries='9'>there are better values out there</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Love this hotel</span>. <span class='review-span highlight' data-aligned-summaries='1'>Perfect location to explore old town</span>. Wouldn't even consider any other hotel in town. Our third visit and certainly will return again. <span class='review-span highlight' data-aligned-summaries='6'>The comp. breakfasts alone would bring us back</span>.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This greatly loved hotel is well kept and comfortable.</span> <span id="1" class="summary-sentence">Everything you could need in terms of shops and restaurants are really close to this hotel making it superbly located.</span> <span id="2" class="summary-sentence">Additionally there are plenty of attractions such as a theatre and cathedral just around the corner.</span> <span id="3" class="summary-sentence">The view from the luxurious room was really nice overlooking the courtyard when it was sunny.</span> <span id="4" class="summary-sentence">Additionally rooms can accommodate four people while still being comfortable and really clean.</span> <span id="5" class="summary-sentence">The doorman was always at the entrance of the hotel to greet guests and the great staff were very welcoming.</span> <span id="6" class="summary-sentence">There was a buffet for breakfast and it provided great-tasting food.</span> <span id="7" class="summary-sentence">Additionally there is a great outdoor dining area that was well-suited for eating lunch.</span> <span id="8" class="summary-sentence">There were some really great toiletries available at this hotel.</span> <span id="9" class="summary-sentence">The price was really reasonable as well considering how comfortable and elegant the hotel is.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

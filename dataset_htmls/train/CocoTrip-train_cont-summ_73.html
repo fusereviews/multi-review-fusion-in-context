@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2'>The AND hotel is located</span> <span class='review-span highlight' data-aligned-summaries='2 8'>just around the corner of the Blue Mosque</span>, nevertheless quiet enough. The beds are very good and <span class='review-span highlight' data-aligned-summaries='5'>the rooms are clean</span>. <span class='review-span highlight' data-aligned-summaries='3 8'>The staff is very friendly and willing to help</span>: almost everything is possible (although not all of them speak sufficient english). The hotel has free wifi. I think the hotel offers good value for money: we (me and my two sons of 13 and 14 years old) payed EUR 140 per night for a 3-bed room. The only negative point: <span class='review-span highlight' data-aligned-summaries='4'>the quality of the breakfast buffet is</span> included but <span class='review-span highlight' data-aligned-summaries='4'>only sort of ok</span> (but good enough to survive). If I go to Istanbul again, I would certainly stay here again.</div><div class='text-box'>The AND <span class='review-span highlight' data-aligned-summaries='8'>Hotel</span> in Istanbul <span class='review-span highlight' data-aligned-summaries='8'>was fabulous</span>, <span class='review-span highlight' data-aligned-summaries='8'>the location was perfect</span> for exploring the city and its sights. The rooms were small but really nice linens and a <span class='review-span highlight' data-aligned-summaries='0 6 7'>great view out our window out to the Aya Sophia</span>, very quiet for a big city, <span class='review-span highlight' data-aligned-summaries='3 8'>staff very helpful and friendly</span> and most important for us was the safety of our motorcycle which we got to park in front of the hotel but out of sight. The Turkish bath we had behind the Blue Mosque was great, the Whirling Dervishes we saw at the Cultural Center was great too and its right across the road from the Sisterns a must see, <span class='review-span highlight' data-aligned-summaries='1 2 4'>5min walk to</span> <span class='review-span highlight' data-aligned-summaries='2'>the Blue Mosque and Aya Sophia</span> <span class='review-span highlight' data-aligned-summaries='1 4'>great restaurants</span> and shopping, perfect spot!</div><div class='text-box'>I travel to Istanbul at least twice a year. Since I discovered the AND Hotel<span class='review-span highlight' data-aligned-summaries='8'>, I don't stay anywhere else</span>. This hotel does feel like home, <span class='review-span highlight' data-aligned-summaries='3 8'>the staff are very welcoming and friendly</span>. The rooms are lovely and clean. <span class='review-span highlight' data-aligned-summaries='8'>The location</span> and view simply <span class='review-span highlight' data-aligned-summaries='8'>cannot be beat</span>. Sitting on the balcony of the restaurant during call to prayer is a highlight of any trip to Istanbul. <span class='review-span highlight' data-aligned-summaries='0'>You can see</span> the Bosphorus, <span class='review-span highlight' data-aligned-summaries='0'>the Hagia Sophia and the Blue Mosque at once</span>. The call to prayer seems to begin at the Blue Mosque with other voices from the rest of the mosques joining in. It transports you. I would an frequently do recommend this hotel to anyone.</div><div class='text-box'>AND-Hotel is located with <span class='review-span highlight' data-aligned-summaries='0'>direct view to Hagia Sophia</span>, just around the corner is the Blue Mosque, nevertheless very quiet. The beds are very good and <span class='review-span highlight' data-aligned-summaries='5'>the rooms are clean</span>. <span class='review-span highlight' data-aligned-summaries='3 8'>The staff is very friendly</span> <span class='review-span highlight' data-aligned-summaries='3'>and willing to help</span>. If you get no room, try the restaurant with its wunderful roundview. The hotel has free wifi. I think the hotel offers good value for money. <span class='review-span highlight' data-aligned-summaries='4'>Quality of the breakfast-buffet is only 3 stars</span>, but outstand good for turkey. If I go to Istanbul again, I would certainly stay here again.</div><div class='text-box'>This is our 6th time staying at The And Hotel and <span class='review-span highlight' data-aligned-summaries='8'>we are always happy to come back</span>. The hotel is getting more nicer every time we come. <span class='review-span highlight' data-aligned-summaries='3 8'>The staffs are very nice</span>, <span class='review-span highlight' data-aligned-summaries='4'>the food is very good</span>. <span class='review-span highlight' data-aligned-summaries='8'>Splendid location</span> <span class='review-span highlight' data-aligned-summaries='1 2'>just a short walking distance from</span> <span class='review-span highlight' data-aligned-summaries='2'>The Hagia Sopia, The Blue Mosque,</span> <span class='review-span highlight' data-aligned-summaries='1 2'>The Cistern</span> <span class='review-span highlight' data-aligned-summaries='2'>and several other important historical sites</span>. Also just a walking distant to the Grand Bazar. Nice view of The Golden Horn from the restaurant on the 6th floor.</div><div class='text-box'>I stayed here at the start and end of a tour. <span class='review-span highlight' data-aligned-summaries='3 8'>The staff and friendly and helpful</span>. The rooms are of a good size, however the bathrooms were a little small for my liking. <span class='review-span highlight' data-aligned-summaries='2 8'>Excellent location</span> <span class='review-span highlight' data-aligned-summaries='2'>just across the road form Aya Sofia</span>. There is an empty lot next door, and I would imagine that <span class='review-span highlight' data-aligned-summaries='0 7'>the views of Aya Sofia</span> will be blocked with the site is developed. <span class='review-span highlight' data-aligned-summaries='4'>Decent turkish breakfast with some cereals to choose from also</span>.</div><div class='text-box'>And Hotel is a great choice for everybody who wants to stay in Sultanhamet and <span class='review-span highlight' data-aligned-summaries='2'>enjoy the</span> <span class='review-span highlight' data-aligned-summaries='2 8'>closeness of</span> <span class='review-span highlight' data-aligned-summaries='2'>all</span> <span class='review-span highlight' data-aligned-summaries='2 8'>main historical</span> <span class='review-span highlight' data-aligned-summaries='2'>sites</span> of Istanbul. I was there with my girlfriend in August and had an amazing <span class='review-span highlight' data-aligned-summaries='0 6'>room with balcony overlooking the</span> <span class='review-span highlight' data-aligned-summaries='0'>hagia</span> <span class='review-span highlight' data-aligned-summaries='0 6'>sophia</span> <span class='review-span highlight' data-aligned-summaries='0'>and the blue mosque</span>! The <span class='review-span highlight' data-aligned-summaries='5'>rooms are recently renovated</span> and fully equipped with everything you may need. The <span class='review-span highlight' data-aligned-summaries='3'>staff is nice</span> and quite friendly so as the <span class='review-span highlight' data-aligned-summaries='4'>breakfast is ok</span>. I will definitely go back there.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2'>This hotel is the perfect location to be for seeing all the sites,</span> <span class='review-span highlight' data-aligned-summaries='1 2'>just steps from</span> <span class='review-span highlight' data-aligned-summaries='2'>the Hagia Sophia, the Blue Mosque. the Topkapi Palace</span> and <span class='review-span highlight' data-aligned-summaries='1'>the cistern and right on the tram line</span>. <span class='review-span highlight' data-aligned-summaries='6'>The rooms</span> are small but very nice, and <span class='review-span highlight' data-aligned-summaries='6'>with</span> <span class='review-span highlight' data-aligned-summaries='0 6'>views of Hagia Sophia</span>. <span class='review-span highlight' data-aligned-summaries='3'>The staff is really attentive</span>. The rooftop restaurant excellent and main floor cafe good for breakfast. Perfect for singles, families and couples.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">A small hotel with fantastic views of Aya Sophia and the Blue Mosque.</span> <span id="1" class="summary-sentence">It is across the street from the Cistern and around the corner from the Tram and many restaurants.</span> <span id="2" class="summary-sentence">Most of the major tourist sights are within easy walking distance and a park is being built directly in front of the hotel.</span> <span id="3" class="summary-sentence">The staff is wonderful and very helpful.</span> <span id="4" class="summary-sentence">The buffet breakfast is more than adequate in a city filled with great food.</span> <span id="5" class="summary-sentence">Recently, remodeled, the rooms are clean and modern.</span> <span id="6" class="summary-sentence">All the rooms at the front of the hotel face the Aya Sophia and some have balconies.</span> <span id="7" class="summary-sentence">The night-time view of the Aya Sophia is breath-taking.</span> <span id="8" class="summary-sentence">The location of the AND Hotel and the friendly, efficient staff are reason to return.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

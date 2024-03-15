@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>Good place to stay We stayed at the Galeria Plaza for the Thanksgiving break. The hotel location is in the business and night life district, Zona Rosa and felt very secure. <span class='review-span highlight' data-aligned-summaries='5'>The hotel is</span> not in a tourist area but <span class='review-span highlight' data-aligned-summaries='5'>in clean, upmarket sorroundings</span> and only 2 mins walk to the Tourist bus stop. <span class='review-span highlight' data-aligned-summaries='3'>The rooms were</span> as expected for a upper class hotel and <span class='review-span highlight' data-aligned-summaries='3'>very comfortable</span>. The staff were excellent. We used the services of the <span class='review-span highlight' data-aligned-summaries='2'>very helpful concierge</span> in organizing guides and sightseeing in and around Mexico city. The restaurant at the hotel was OK although there is a lot of choice of good eating places in the neighbouring streets. Minor quibble-to get the free internet, one had to use the business centre or the lobby. All in all, <span class='review-span highlight' data-aligned-summaries='0 7'>a comfortable and satisfying stay</span>.</div><div class='text-box'>Nice, affordable hotel This is a great hotel with a very convenient location. Although <span class='review-span highlight' data-aligned-summaries='3'>the beds are as hard as a rock</span>, <span class='review-span highlight' data-aligned-summaries='2'>the staff are very helpful</span>, <span class='review-span highlight' data-aligned-summaries='2'>most speak fluent English</span>, and the location and price ($135 average a night) are hard to beat. <span class='review-span highlight' data-aligned-summaries='1'>The modern, dark chocolate decorating scheme is a nice touch</span>, and the water here is purified - which definitely matters and helps keep the cost of all those bottles of agua purificado down. The hotel gouges guests on the little things ($3.30 for 15 mins on a computer with internet, $28 for a five minute cab ride to the Ballet and back), but <span class='review-span highlight' data-aligned-summaries='7'>in the end, its convenience, service and overall affordable room rates make it a worthwhile choice</span>. ~B</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1'>Modern, well appointed</span> and quiet The room was a delight-attractive, light- and soundproof. Located in the Pink Zone not far from Chapultapec Park, <span class='review-span highlight' data-aligned-summaries='2'>the Galeria Plaza staff is helpful, cooperative and friendly</span>. The hotel has a strong commitment to green hospitality. The card key unlocks the door and, inside, provides access to lighting. When the card is removed as you exit the room, the lights go off. The hotel gives you the option of reusing your towels to reduce energy and water use. (How often do you change your towels at home?)Except for the $8 shots at the bar, <span class='review-span highlight' data-aligned-summaries='0'>I had no complaints about my four-day stay and</span> <span class='review-span highlight' data-aligned-summaries='0 7'>would recommend the hotel</span> <span class='review-span highlight' data-aligned-summaries='0'>to anyone</span> not needing to be downtown.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1'>Very nice hotel</span> The Galeria Plaza is a nice hotel located in the Zona Rosa area, close to restaurants, shops and other attractions. <span class='review-span highlight' data-aligned-summaries='2'>The staff was very friendly and helpful</span>. <span class='review-span highlight' data-aligned-summaries='3'>The rooms had a nice size</span> and are very clean. My room (on the 7th floor) had a view of the Angel of Independence monument and the Sheraton Hotel, one block away on beaufitul Reforma Avenue. I really enjoyed my stay in this hotel.</div><div class='text-box'>DF dulce DF <span class='review-span highlight' data-aligned-summaries='0 7'>Great location</span>! We also loved the <span class='review-span highlight' data-aligned-summaries='1'>modern clean design</span> of the hotel and the <span class='review-span highlight' data-aligned-summaries='2'>professional,</span> <span class='review-span highlight' data-aligned-summaries='0 2'>courteous and competent staff</span>. <span class='review-span highlight' data-aligned-summaries='3 4'>The rooms were</span> <span class='review-span highlight' data-aligned-summaries='4'>clean</span> and <span class='review-span highlight' data-aligned-summaries='3'>large</span> and <span class='review-span highlight' data-aligned-summaries='7'>I highly recommend the rooftop pool</span> to cool down after a busy day in the city. My only complaints - <span class='review-span highlight' data-aligned-summaries='3'>the bed might be a little firm for some tastes</span>, the hotel has a definite business traveler vibe and you might have to ask for more towels.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Comfortable place to stay</span>, wonderful concierge! This is a very good hotel, located about 10 min walk from Chapultepec Park and only 5 min away from the metro. <span class='review-span highlight' data-aligned-summaries='3'>The rooms were</span> very clean and <span class='review-span highlight' data-aligned-summaries='3'>comfortable</span>. The small pool and exercise room were nice as well. The greatest thing about the hotel was the impeccable <span class='review-span highlight' data-aligned-summaries='2'>concierge service</span> who <span class='review-span highlight' data-aligned-summaries='2'>was always ready to recommend activities</span> (whether the commercial day trips or our DIY activities).</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Excellent hotel in</span> the heart of <span class='review-span highlight' data-aligned-summaries='0'>Mexico City</span> Great <span class='review-span highlight' data-aligned-summaries='5'>hotel in a</span> very <span class='review-span highlight' data-aligned-summaries='5'>good location</span> indeed. The <span class='review-span highlight' data-aligned-summaries='2'>staff is helpful</span>, the <span class='review-span highlight' data-aligned-summaries='3'>rooms are very very nice</span>, the breakfast buffet is just fantastic. Extremely good value for the money. We had a great and relaxing time there and would have loved to stay longer than the 1 night we spent. If ever back in Mexico City <span class='review-span highlight' data-aligned-summaries='7'>will</span> definitely <span class='review-span highlight' data-aligned-summaries='7'>use it again</span>.</div><div class='text-box'>Great Location-Friendly Staff Stayed recently at the Galeria Plaza for the first time and I was <span class='review-span highlight' data-aligned-summaries='2'>very satisfied with the staff</span> and the location, it's <span class='review-span highlight' data-aligned-summaries='0 7'>within walking distance of the famed zona rosa</span> <span class='review-span highlight' data-aligned-summaries='0'>in Mexico City</span> an area filled with restaurants, nightclubs and excellent shopping. I will be coming back to Mexico City in the coming months and <span class='review-span highlight' data-aligned-summaries='0 7'>I will be staying at the Galeria Plaza once again</span>.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Great place to stay in Mexico City.</span> <span id="1" class="summary-sentence">The hotel is very stylish and pretty.</span> <span id="2" class="summary-sentence">The staff is so helpful and nice, and most speak English.</span> <span id="3" class="summary-sentence">The rooms are big and comfortable.</span> <span id="4" class="summary-sentence">The maids are great - you will come back each day to a lovely clean room stocked with toiletries and water bottles.</span> <span id="5" class="summary-sentence">The area the hotel is in is very safe.</span> <span id="6" class="summary-sentence">There are police everywhere and the hotel staff looked out for the guests' safety.</span> <span id="7" class="summary-sentence">I would highly recommend this hotel.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

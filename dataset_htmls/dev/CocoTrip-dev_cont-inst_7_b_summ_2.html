@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>Stayed here for 4 nights with my partner in August '09. The hotel is located 50m <span class='review-span highlight' data-aligned-summaries='2'>around the corner from the famous Campo De 'Fiori</span> which is a <span class='review-span highlight' data-aligned-summaries='0 2'>wonderful area for eating and drinking</span> <span class='review-span highlight' data-aligned-summaries='2'>as well as having great nightlife</span>. <span class='review-span highlight' data-aligned-summaries='0 4 5'>The room itself was beautifully done</span> <span class='review-span highlight' data-aligned-summaries='4 5'>in a period setting</span>. Bed was large and aircon was fine. <span class='review-span highlight' data-aligned-summaries='7'>Staff extremely passionate and friendly about when and where to see the sights</span>. <span class='review-span highlight' data-aligned-summaries='1'>Location is excellent as only a 5 minute walk to the piazza navona</span>, <span class='review-span highlight' data-aligned-summaries='1 2'>10 min walk to the trevi fountain and pantheon and</span> <span class='review-span highlight' data-aligned-summaries='1 2 3'>15 min walk to Vaticano and Colosseum</span>.<span class='review-span highlight' data-aligned-summaries='3'> Also only a 10 min walk to the river</span> and the wonderful trastevere area of eating/nightlife. There is a viewing deck above the top floor which is great to relax and have a few drinks and offers a really nice view of the area as well which was a bonus! No complaints whatsoever here, had a wonderful stay!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>I can't say enough about the wonderful Hotel Campo De Fiori</span>! <span class='review-span highlight' data-aligned-summaries='1'>The location is perfect for sight seeing in Rome</span>. <span class='review-span highlight' data-aligned-summaries='4 5'>The rooms are</span> <span class='review-span highlight' data-aligned-summaries='5'>typical European sized</span> but <span class='review-span highlight' data-aligned-summaries='4'>beautiful and well-appointed</span>. I was a little concerned about <span class='review-span highlight' data-aligned-summaries='6'>potential noise from the nearby square but with my windows shut I didn't hear a peep</span>. The photos on the web site are accurate and <span class='review-span highlight' data-aligned-summaries='9'>the roof-top deck is a dream</span>! <span class='review-span highlight' data-aligned-summaries='8'>The breakfast was ample with excellent coffee</span>. The best thing about the hotel is <span class='review-span highlight' data-aligned-summaries='7'>the amazing staff</span> - Valentina, Matteo, Barbara, Gabriele, Angelo, Adam, Andrea & Andrew - not only <span class='review-span highlight' data-aligned-summaries='7'>efficient and well-versed on the city</span>, they were kind hearted and lovely. They bent over backwards to make my stay truly special and I can't wait to return!</div><div class='text-box'>My wife and I visited Rome for the first time this past November, and <span class='review-span highlight' data-aligned-summaries='0'>we couldn't be happier with our stay at Hotel Campo de Fiori</span>. <span class='review-span highlight' data-aligned-summaries='1'>The location of the hotel is perfect,</span> <span class='review-span highlight' data-aligned-summaries='1 2 3'>5 minute walk to most of the sites</span>,<span class='review-span highlight' data-aligned-summaries='2 3'> 20 minute walk to the Vatican City and 20 minutes the other way to the Coliseum</span>. <span class='review-span highlight' data-aligned-summaries='7'>The hotel staff is extremely helpful and make good recommendations on restaurants</span> (La Scalla and The Library were two of our favorites, and will go back for sure to both). <span class='review-span highlight' data-aligned-summaries='4 5'>The rooms were smaller - but they were loaded with character</span> <span class='review-span highlight' data-aligned-summaries='5'>and the bathrooms were superb</span>.</div><div class='text-box'>After our port intensive Med cruise <span class='review-span highlight' data-aligned-summaries='0'>it was a relief to have such a haven as this hotel</span> to unwind for three nights. <span class='review-span highlight' data-aligned-summaries='4'>We loved our top floor room</span> with it's own terrace and the access to the fabulous large rooftop terrace was right outside our door. <span class='review-span highlight' data-aligned-summaries='8 9'>The terrace was</span> <span class='review-span highlight' data-aligned-summaries='9'>not only a great 360 degree view of the historic area of Rome but it was such</span> <span class='review-span highlight' data-aligned-summaries='8 9'>a great social place to join others over wine</span> <span class='review-span highlight' data-aligned-summaries='9'>in the hours leading up to sunset</span>. Magic. <span class='review-span highlight' data-aligned-summaries='7'>The staff is so helpful</span> and made us feel so welcome there. Highly recommend this boutique hotel.</div><div class='text-box'>If you are looking for a place with a central location and superb roofterrace and don't mind being ripped off, this is it. <span class='review-span highlight' data-aligned-summaries='0'>All you need to overlook is the</span> <span class='review-span highlight' data-aligned-summaries='0 8'>dreadfull breakfast</span> (for instance, the cheese had never seen a cow and the orange juice looks radio-active), <span class='review-span highlight' data-aligned-summaries='0'>the</span> <span class='review-span highlight' data-aligned-summaries='0 4 5'>claustrophobic rooms</span> <span class='review-span highlight' data-aligned-summaries='0'>and lack of any extras</span> cq basics in the room (water, toilettries, etc.) that you might expect for the price they charge.</div><div class='text-box'>Thank you very much for your hospitality while we stayed with you during Aug 1 - 4, 2008. My wiffe and I were extremely pleased with the hospitable staff, general cleanliness, quiet rooms, <span class='review-span highlight' data-aligned-summaries='8'>delicious breakfast</span> and all. <span class='review-span highlight' data-aligned-summaries='0'>The overall experience at your hotel was very good</span> and this made Rome even better for us. We would look forward to coming back to Rome to stay in the Hotel Campo de' Fiori. Thank you.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Great hotel</span> with very kind and <span class='review-span highlight' data-aligned-summaries='7'>very helpful personnel</span>. <span class='review-span highlight' data-aligned-summaries='8 9'>The roof garden is absolutely great</span>! Very nice view over Rome. <span class='review-span highlight' data-aligned-summaries='4'>The rooms are lovely</span>! <span class='review-span highlight' data-aligned-summaries='1 2'>The location is</span> <span class='review-span highlight' data-aligned-summaries='1'>perfect</span>: <span class='review-span highlight' data-aligned-summaries='1 2'>at the Campo de' Fiori and near the ancient centre of Rome</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 4 6 9'>I would so recommend this hotel</span> <span class='review-span highlight' data-aligned-summaries='4 6 9'>for</span> <span class='review-span highlight' data-aligned-summaries='6'>the location</span>, <span class='review-span highlight' data-aligned-summaries='4'>the accomodations</span>, the friendliness of the staff and <span class='review-span highlight' data-aligned-summaries='9'>the amazing roof garden</span>. I thank Travel Advisors for sending us in the right direction in the first place</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The experience at Hotel Campo de ' Fiori was very special and wonderful.</span> <span id="1" class="summary-sentence">The location at this hotel is great for sight seeing.</span> <span id="2" class="summary-sentence">It is near Campo de ' Fiori and near central Rome and is great for food and nightlife.</span> <span id="3" class="summary-sentence">Also within walking distance to the river and many other sites including Vatican City or the Coliseum.</span> <span id="4" class="summary-sentence">Lovely rooms, designed beautifully in a period setting.</span> <span id="5" class="summary-sentence">The rooms are typically small in size, however they are loaded with charm and character that makes up for this, and the bathroom is fantastic.</span> <span id="6" class="summary-sentence">Although the location is noisy, you are unable to hear anything with the windows closed.</span> <span id="7" class="summary-sentence">The staff was knowledgeable about the city and the sights.</span> <span id="8" class="summary-sentence">This hotel offers ample breakfast but also drinks are available on the viewing deck, and the coffee is excellent.</span> <span id="9" class="summary-sentence">The hotel's roof garden is great.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

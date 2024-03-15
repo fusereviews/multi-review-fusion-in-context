@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>I have stayed in this hotel for 10 days for the second time and will definetely be back again! Apart from hotels <span class='review-span highlight' data-aligned-summaries='0'>excellent location</span> ( it's near all sightseeing places ) the rooms were cozy and <span class='review-span highlight' data-aligned-summaries='1'>staff friendly</span> and <span class='review-span highlight' data-aligned-summaries='1'>ready to help me with connecting</span> my laptop <span class='review-span highlight' data-aligned-summaries='1'>to</span> the <span class='review-span highlight' data-aligned-summaries='1'>wireless internet</span>, to give me advice where to go and which trasport to catch. Beside fluent English and Turkish they speak all ex-Yu languages ( Serbian, Croatian, Macedonian, Bosnian ) so it is very convinient for people from these countries to stay there. Room service was quick ( beverages only ) , towels changed daily and room and bathroom kept perfectly clean -spotless! Definetely coming back here when I come back to Istanbul for some leather jackets shopping :) and this time bringing friends as well ! Miljana Jovanovic</div><div class='text-box'>Excellent money/value hotel, <span class='review-span highlight' data-aligned-summaries='1'>breakfast included</span>. <span class='review-span highlight' data-aligned-summaries='0'>Location is great</span> just opposite of Grand Bazar in quite street, good for tourist who want to stay close to everything. If you are one of us, looking for a cheap stay, and you look for very clean and secure hotel/hostel this is a great choice. Rooms are comfortable, especially those on 6th floor. The only minus is that you have only one way transfer, if you choose airport pickup as we did, you have to pay for transfer to the airport, but fortunately this is not a big problem while they have pretty cheap taxi's there in Istanbul :-). All in all, really worth every cent. Great job guys. Greetings from Croatia.</div><div class='text-box'>We stayed here for several nights in mid March. The rooms were clean and comfortable, <span class='review-span highlight' data-aligned-summaries='1'>free internet access in the lobby</span> and a <span class='review-span highlight' data-aligned-summaries='1'>tasty breakfast</span> in the morning. <span class='review-span highlight' data-aligned-summaries='0'>Great location in the old city</span>. Right near the Grand Bazaar, and walking distance to Haggia Sophia and the Blue Mosque.The only issue we had was the cigarette smoke from the lobby constantly drifted into our room. We had to put a damp towel under the door. For 35 Euro's per night - it was well worth it.</div><div class='text-box'>my wife and I stayed 3 weeks there. do we need to add more.? of course you might find better somewhere but more expensive, but you will for sure find lot worst at same price <span class='review-span highlight' data-aligned-summaries='0'>The hotel is very well located</span> , close to grand Bazaar and blue mosque but also seashore where we could go for a run <span class='review-span highlight' data-aligned-summaries='1'>the staff was very friendly</span> and gave us on 6 floor a room <span class='review-span highlight' data-aligned-summaries='0'>with view on the Bosphorus</span> at a attractive price so I will be back there when back to Isatnbul</div><div class='text-box'>Booked in Inter Hotel last August 2009 but <span class='review-span highlight' data-aligned-summaries='1'>had to cancel</span> after a month due to work load. I just sent them an email <span class='review-span highlight' data-aligned-summaries='1'>and they returned my Deposit</span> of 25 Euros to my credit card. <span class='review-span highlight' data-aligned-summaries='1'>Other hotels will not do that</span>! Will definitely book again in this hotel because I read a lot of satisfied guests. I also want to experience what they experienced from staying in INTER HOTEL. Thank you guys!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>The hotel is</span> not only <span class='review-span highlight' data-aligned-summaries='0'>a convenient location</span>, but very clean and very comfortable. <span class='review-span highlight' data-aligned-summaries='1'>The staff are friendly</span> and <span class='review-span highlight' data-aligned-summaries='1'>the breakfast delicious</span>. Very reasonable rates and altogether a good place to stay which is situated 5 mins from the Grand Bazaar and the tram. I have been before and will stay there again without a doubt.</div><div class='text-box'>very good service, <span class='review-span highlight' data-aligned-summaries='1'>staff is very friendly and helping</span>, pick and dropp of when you stay few days, <span class='review-span highlight' data-aligned-summaries='1'>free internet</span> ( for me very important), near to meny historical places.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1'>The breakfast was excelent</span>, <span class='review-span highlight' data-aligned-summaries='1'>very friendly and helpful staff</span>, clean rooms, and well worth the price. I would stay here again and again.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The hotel's location is great with its views of the Bosphorus.</span> <span id="1" class="summary-sentence">The breakfast is good, the staff is friendly and helpful and there is free internet.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

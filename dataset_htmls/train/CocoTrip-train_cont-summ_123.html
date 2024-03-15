@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>My wife and I recently attended a wedding in Toronto and stayed at the Primrose Hotel as it was close to the reception. We were pleased with the service we received. We were given room 1904 which had a large king bed and sitting area. <span class='review-span highlight' data-aligned-summaries='4'>The room was clean</span> and well decorated. The bed was extremely comfortable. I found however that <span class='review-span highlight' data-aligned-summaries='4'>the room was a little dark at night</span> though as there were several lamps but only an overhead light by the door. <span class='review-span highlight' data-aligned-summaries='2'>The staff were very pleasant and we had no issues with them</span>. We did not use the restaurant in the hotel but did enjoy the Tim Hortons coffee shop beside the check in area. We had a good time in the city and <span class='review-span highlight' data-aligned-summaries='5'>would use the Primrose Hotel again</span>.</div><div class='text-box'>My travels landed me in Toronto and I booked in at the Primrose Best Western hotel. <span class='review-span highlight' data-aligned-summaries='0'>It is in a great location</span> and was able to walk to some great restaurants and shopping places. <span class='review-span highlight' data-aligned-summaries='4'>The room</span> was great, and I was given room 1705 which had a king bed and a fantastic view. It <span class='review-span highlight' data-aligned-summaries='4'>was really clean</span>, and <span class='review-span highlight' data-aligned-summaries='2'>the housekeeping lady was very friendly and always asking if I needed any additional toiletries or coffee</span>. The front desk staff were superb and went out of their way to help with one girl at the front desk loaning me her personal umbrella so I could go to the shops without getting soaked. <span class='review-span highlight' data-aligned-summaries='3'>The price was great</span>, and <span class='review-span highlight' data-aligned-summaries='1'>the rooms large</span>. <span class='review-span highlight' data-aligned-summaries='5'>This place is a definite choice when I return to the city</span>.</div><div class='text-box'>So this family vacation was a short stop in Toronto and then onto Niagara falls. We stayed in Toronto at the Primrose hotel which was great cuz it was right downtown. The kids had a blast in the pool and the lifeguard there was amazing. The hotel has everything we needed and <span class='review-span highlight' data-aligned-summaries='1 4'>the room was</span> <span class='review-span highlight' data-aligned-summaries='4'>clean</span> and <span class='review-span highlight' data-aligned-summaries='1'>large</span> for the family. The restaurant was also a great deal since our kids ate free from the buffet since they are younger. Hotel also was able to give us a crib for the 2 year old which was good as my wife was worried he would fall out of bed. Was a great start to our mini vacation and <span class='review-span highlight' data-aligned-summaries='5'>looking forward now to seeing the falls</span>.</div><div class='text-box'>My firm booked me into the Primrose Hotel for a conference I had to attend in the city. I was pleased with service of the hotel and appreciated the free internet connection. The hotel was very nice, and looks like they are doing renovations. I thought the <span class='review-span highlight' data-aligned-summaries='0'>hotel</span> was <span class='review-span highlight' data-aligned-summaries='0'>in a good location</span> and I found it was easy to walk to restaurants at night. The Tim Hortons in the lobby was also convenient for a late night coffee. All in all, I had a good stay and <span class='review-span highlight' data-aligned-summaries='5'>would recommend</span> this hotel to others looking for good service, <span class='review-span highlight' data-aligned-summaries='4'>clean rooms</span> and <span class='review-span highlight' data-aligned-summaries='3'>reasonable</span> room <span class='review-span highlight' data-aligned-summaries='3'>rates</span>.</div><div class='text-box'>We spent 5 nights at the Primrose this month. Granted the area is on the seedy side but the hotel was much better than expected. <span class='review-span highlight' data-aligned-summaries='4'>Our</span> <span class='review-span highlight' data-aligned-summaries='1 4'>room was</span> <span class='review-span highlight' data-aligned-summaries='1'>spacious</span> and <span class='review-span highlight' data-aligned-summaries='4'>clean</span>. <span class='review-span highlight' data-aligned-summaries='2'>Staff was friendly</span> and efficient. The subway and public transportation was convenient and there were sufficient restaurants in the area. The biggest complaint would be the elevators. They were very slow. We happen to be in Toronto during the Grey Cup so there was lots of noise at night in the hotel. <span class='review-span highlight' data-aligned-summaries='5'>I would stay here again</span> and would recommend it to everyone looking for a clean, <span class='review-span highlight' data-aligned-summaries='0'>conveniently located</span> budget hotel.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2'>Hotel staff were very friendly and accomadating</span>. Vicky at the front desk was very nice and made us feel welcome. The hotel is situated in a good area and walking distance to Eaton Centre and many other attractions. We were there for a Chicago concert at Massey Hall and it was about a ten minute walk. We also experienced the subway and found it was very easy to get around. Over all our hotel was clean and we had a newly renovated room. <span class='review-span highlight' data-aligned-summaries='5'>I would stay here again</span>!</div><div class='text-box'>Went to the leafs game on Saturday and stayed at the Primrose Hotel as it seemed like the city was full. <span class='review-span highlight' data-aligned-summaries='3'>The price was good</span> and <span class='review-span highlight' data-aligned-summaries='0'>the location was close to the ACC</span>, so was a good choice. Happy overall with the hotel. <span class='review-span highlight' data-aligned-summaries='4'>The room was clean</span>, the check in and out was fast and <span class='review-span highlight' data-aligned-summaries='2'>the staff were always smiling</span>. <span class='review-span highlight' data-aligned-summaries='5'>This hotel is a good pick</span> for those who want to be downtown but donat want to pay huge dollars to stay right in the city.</div><div class='text-box'>Came for 1 night to see a concert and stayed at the Primrose Hotel since it was <span class='review-span highlight' data-aligned-summaries='0'>close to the club</span>. Was a good stay. <span class='review-span highlight' data-aligned-summaries='4'>Room was clean</span> and quite and the bed was really confortable. Loved the Tim Hortons in the Lobby the next morning. <span class='review-span highlight' data-aligned-summaries='5'>Would stay there again</span> as <span class='review-span highlight' data-aligned-summaries='3 5'>price was great</span> <span class='review-span highlight' data-aligned-summaries='5'>and</span> <span class='review-span highlight' data-aligned-summaries='0 5'>location perfect</span>.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The location is perfect.</span> <span id="1" class="summary-sentence">The rooms are large.</span> <span id="2" class="summary-sentence">The staff are very friendly and cheery.</span> <span id="3" class="summary-sentence">The price is also quite reasonable.</span> <span id="4" class="summary-sentence">The entire hotel is very bright and the rooms are very clean.</span> <span id="5" class="summary-sentence">Would definitely stay there again.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

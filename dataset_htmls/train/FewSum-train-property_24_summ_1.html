@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>I am going to keep this one short and simple. <span class='review-span highlight' data-aligned-summaries='2'>Six beers for $15 on the Strip</span>. Good luck finding a better deal. <span class='review-span highlight' data-aligned-summaries='2'>Plus a juke box playing some great Oldies</span> and Classic Rock. It may be <span class='review-span highlight' data-aligned-summaries='0'>dirty</span>, <span class='review-span highlight' data-aligned-summaries='0 1'>old</span>, and smoky but <span class='review-span highlight' data-aligned-summaries='0 1'>Slots of Fun</span> <span class='review-span highlight' data-aligned-summaries='1'>is</span> a nice place to chill for a bit.</div><div class='text-box'>When you walk into a place and <span class='review-span highlight' data-aligned-summaries='0'>even the air feels dirty</span> something is amiss. It's all electronic games. No tables with real people dealing. We went out of our way to check it out and were vary disappointed. Not worth the walk from anywhere.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Had to Valet @ CIRCUS CIRCUS</span>... umm well, <span class='review-span highlight' data-aligned-summaries='1'>not many new machines</span>, you can def say this is a <span class='review-span highlight' data-aligned-summaries='0'>hole in the wall casino</span>. <span class='review-span highlight' data-aligned-summaries='1 2'>You will find great deals</span> <span class='review-span highlight' data-aligned-summaries='2'>on alchohol and snacks /</span> <span class='review-span highlight' data-aligned-summaries='1 2'>hot dogs</span> etc if thats your stee-lo.</div><div class='text-box'>This place <span class='review-span highlight' data-aligned-summaries='0'>is a real dump</span> but <span class='review-span highlight' data-aligned-summaries='2'>I love it</span>! You can't have every Vegas experience be 1st class; sometimes you have to get down and dirty with the locals and some low rollers. <span class='review-span highlight' data-aligned-summaries='2'>The drinks are cheap I think u get 2 pitchers of beer for $10</span> (beer pong)</div><div class='text-box'>My husband and I <span class='review-span highlight' data-aligned-summaries='0'>took a special side trip to Circus Circus just to try out Slots A Fun</span>. Maybe this place has just lost its charm, but <span class='review-span highlight' data-aligned-summaries='1'>I couldn't find the hot dog stand (I think its gone)</span> and there was just an overpriced Subway inside. <span class='review-span highlight' data-aligned-summaries='2'>Nothing special at all about this place and wouldn't go back</span>.</div><div class='text-box'>If you're looking for <span class='review-span highlight' data-aligned-summaries='1'>the cheap hot dog</span>, apparently, <span class='review-span highlight' data-aligned-summaries='1'>they don't sell them anymore</span>. There's just a Nathan's cart near the entrance that <span class='review-span highlight' data-aligned-summaries='1'>offers two piss ant hot dogs for five bucks</span>. <span class='review-span highlight' data-aligned-summaries='2'>No reason to ever step foot in this place</span>.</div><div class='text-box'>Great place came here when I lived in Vegas, Jersey Joe is the best bartender in Vegas and one of the nicest guys I have ever met. One of the bartenders is a pompous a * * (Slade). <span class='review-span highlight' data-aligned-summaries='2'>Cheap beer and fun times</span>, nothing like the Wynn, and <span class='review-span highlight' data-aligned-summaries='0'>it is connected to circus circus but kids are not allowed in here</span>!!</div><div class='text-box'>1 star for the <span class='review-span highlight' data-aligned-summaries='1'>nasty 99 cent 1 / 2 pound hot dog that is uneatable even when starved</span>. But 5 stars for having <span class='review-span highlight' data-aligned-summaries='1'>dime slot machines</span> and video poker machines <span class='review-span highlight' data-aligned-summaries='1'>from 1983</span> and those old games where the quarters shoot out and try to push other quarters down to you. After everything, it's an average spot if your in the area to check out.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">An adults only outdated, dingy, dirty casino attached to the famous Circus Circus.</span> <span id="1" class="summary-sentence">The slot machines are inexpensive but they are old and unexciting This used to be a spot for tasty hot dogs but they have been replaced with cheap, disgusting hot dogs.</span><span id="2" class="summary-sentence">The only positive about this place is the inexpensive beer.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

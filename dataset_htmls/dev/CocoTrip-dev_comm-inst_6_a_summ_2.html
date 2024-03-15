@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Terrible disappointment Maybe a 1 or 2 star, but NOT 4</span>! <span class='review-span highlight' data-aligned-summaries='2'>The staff was exceptional. Very helpful and thoughtful</span>.The rooms were a disappointment. They are all run down (at least the 3 we saw), items are missing and not replaced, i.e. soap dishes, etc. The carpeting is torn and worn. The Air conditioners barely work, and are rusty and noisy. All the rooms we saw smell from odor. We had to pay to Upgrade to the top floor to get a halfway decent room, which is still 2 star in my opinion. The elevator is not large enough for a surfboard to fit in it (kind of ironic don't you think), so you have to leave your board in a lockup room in the lobby.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Great little hotel</span>! We stayed here for two days before leaving the islands after getting married on Kaua`i in August, 2004. We booked with the Entertainment Card discount, so the price ?even with daily parking ?was great. I prefer being at the eastern end of Waikiki (where the Beachside is) and it's proximity to the <span class='review-span highlight' data-aligned-summaries='0 1'>beach</span> itself, <span class='review-span highlight' data-aligned-summaries='0 1'>right ACROSS THE STREET</span>,<span class='review-span highlight' data-aligned-summaries='0'> is perfect</span>. The room was small but nice. Upon hearing that we just got married, <span class='review-span highlight' data-aligned-summaries='2'>the desk clerk upgraded us to a full ocean view room and sent up a split of champagne</span> ?a very nice touch. Needless to say, the view was spectacular and we enjoyed having a glass of wine on the balcony before heading out to dinner both nights.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Would recommend this hotel</span>. We stayed at this hotel in October of 2005 for 7 days. The hotel was small but we knew that when we made our reservations. We found that <span class='review-span highlight' data-aligned-summaries='0 2'>the stafff was extremely helpful</span> <span class='review-span highlight' data-aligned-summaries='2'>and gave us advice on the various activities</span> that we should participate in and would help us to sign up for them. If your looking for full on resort than this is not your place but it was perfect for what we needed. The rooms are small and there is no pool on site. Being <span class='review-span highlight' data-aligned-summaries='1'>across the street from the beach</span> we wouldn't have used the pool anyways. We thought that is was in the perfect location, we were able to walk to everything. I would recommend this hotel and would also stay here again.</div><div class='text-box'>Fab Location <span class='review-span highlight' data-aligned-summaries='0 1'>Literally across the road from Waikik beach</span>, easy walk to all Waikik has to offer. Understand hotel has recently been bought by Aqua chain and looks as if <span class='review-span highlight' data-aligned-summaries='0'>it will be undergoing renovation in the near future</span> - scaffolding all around hotel during my stay with workmen there friom 9 - 5. Interior does need updating and is rather worn and dated - however, location compensates for this.Breakfast is a bit of a joke though and unless you are there when it goes out forget it, my 1st morning there I arrived at about 8.15am to be told there was nothing left! Even when there there is food left it's poor quality muffins only.</div><div class='text-box'>Great Staff, superb location - will be back ! First time visit to Hawaii - <span class='review-span highlight' data-aligned-summaries='0'>this hotel's location could not be beaten</span> - <span class='review-span highlight' data-aligned-summaries='1'>just cross the road and you are on Waikiki beach</span> and the International Market Place is a few yards down the road. <span class='review-span highlight' data-aligned-summaries='2'>Staff are very friendly and cannot do enough to help</span>. Rooms are spotlessly clean - <span class='review-span highlight' data-aligned-summaries='0'>will definitely stay there again without hesitation</span>.</div><div class='text-box'>Very oriental The rooms are not large, but decorated beautifullly with antiques. Breakfast in the atrium with the Kona coffee was great. <span class='review-span highlight' data-aligned-summaries='1'>Short walk across the stree to the beach</span>. <span class='review-span highlight' data-aligned-summaries='0'>I would recommed it to anyone</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Excellent for the price</span> This was taken from the beach, the brown building to the left of the blue signed building is the</div><div class='text-box'>Small room.Great view View from the balcony.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This hotel is highly recommended.</span> <span id="1" class="summary-sentence">It is just across the road from Waikiki beach.</span> <span id="2" class="summary-sentence">The staff are really helpful and incredibly thoughtful.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

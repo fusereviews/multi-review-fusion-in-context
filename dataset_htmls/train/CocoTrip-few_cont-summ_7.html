@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1'>We had a pleasant stay</span> at hotel playa karma. <span class='review-span highlight' data-aligned-summaries='1'>It's located on a busy street so if you're a light sleeper, the traffic might bother you at night</span>. We did hear the dog a couple of times but was it was only for a few minutes. Overall, I was impressed with their customer service. <span class='review-span highlight' data-aligned-summaries='1'>The staff was very nice and accomodating</span>. Mario was very friendly. We arranged a couple of tours with karma trails and we were happy with the tours we chose. <span class='review-span highlight' data-aligned-summaries='5'>Antonello arranged a breakfast-to-go box before we headed out to one of our tours in the morning and it was abundant, filled with fruits, bread, water and cake</span>. If you prefer a hotel with great customer service, choose hotel playa karma.</div><div class='text-box'>We had a wonderful time at Playa del Karma! We finished our Yucatan-trip with 2 nights, and really <span class='review-span highlight' data-aligned-summaries='1'>enjoyed the friendly atmosphere</span>. We had two several rooms (one at the garden and one above the lobby/reception), <span class='review-span highlight' data-aligned-summaries='4'>both really nice with lots of space</span> and big beds! The Italian people who run this place are really helpful with everything you need and provide <span class='review-span highlight' data-aligned-summaries='5'>great service with the breakfast</span> buffet (we loved the mexican eggs in the morning) and free beachtowels. <span class='review-span highlight' data-aligned-summaries='0'>Playa del Karma is a lovely place</span> with a beautiful garden with a small but wonderful pool, <span class='review-span highlight' data-aligned-summaries='1'>lovely to relax</span> after a day at the beach.</div><div class='text-box'>This hotel is a great value, the service is very friendly, <span class='review-span highlight' data-aligned-summaries='0 1'>the inner courtyard with small pool and lights strung across palm trees is a</span> <span class='review-span highlight' data-aligned-summaries='0 1 2'>lovely</span> <span class='review-span highlight' data-aligned-summaries='0 1'>oasis</span>, and <span class='review-span highlight' data-aligned-summaries='4'>the rooms are clean</span> and equipped with AC, tv and small deposit box. There was a <span class='review-span highlight' data-aligned-summaries='4'>high vaulted thatched roof</span> which made the room feel airy but unfortunately not too sound proof. Right across from the new ADO bus station so a good place to stay if you are catching an early morning bus from the station. <span class='review-span highlight' data-aligned-summaries='3'>Just a couple blocks from 5th ave</span> where all the action happens at Playa.</div><div class='text-box'>For those of us baby boomers who remember being sensitive flower children <span class='review-span highlight' data-aligned-summaries='0 1 2'>Hotel Play del Karma</span> really suited us. The <span class='review-span highlight' data-aligned-summaries='0 2'>mature greenery of the courtyard</span> <span class='review-span highlight' data-aligned-summaries='1'>had</span> the <span class='review-span highlight' data-aligned-summaries='0 1 2'>serenity and grace</span> <span class='review-span highlight' data-aligned-summaries='0'>of years of wise existence</span>; of course we could relate! The <span class='review-span highlight' data-aligned-summaries='0'>patter of raindrops on</span> <span class='review-span highlight' data-aligned-summaries='0 2'>the thatched roof</span> of the room reminded us that we were in a <span class='review-span highlight' data-aligned-summaries='0 1 2'>beautiful</span> <span class='review-span highlight' data-aligned-summaries='0 2'>tropical climate</span>. It was <span class='review-span highlight' data-aligned-summaries='0 1'>a charming effect</span> that would have been absent had we stayed in a concrete & glass megalith. <span class='review-span highlight' data-aligned-summaries='0'>We thoroughly enjoyed the ambience</span> here. <span class='review-span highlight' data-aligned-summaries='5'>The breakfasts above the garden were special</span>.</div><div class='text-box'>We stayed at Playa del Karma on a recommendation from a friend. We were <span class='review-span highlight' data-aligned-summaries='0'>extremely satisfied with the accomadations and the staff</span>. This hotel was the best hotel I've ever stayed at in terms of value for what you receive. <span class='review-span highlight' data-aligned-summaries='4'>The rooms are</span> cute (a little rustic but <span class='review-span highlight' data-aligned-summaries='4'>clean and comfortable</span>), <span class='review-span highlight' data-aligned-summaries='2'>the courtyard is beautiful</span> and the staff went above and beyond to serve us or answer questions. The location is great, just three blocks from the beach. We would definitely come back.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 1'>This little hotel</span> <span class='review-span highlight' data-aligned-summaries='0'>is lovely with nice rooms</span> <span class='review-span highlight' data-aligned-summaries='0 1'>with a lot of character</span>. Staff could not have been more friendly and helpful. <span class='review-span highlight' data-aligned-summaries='5'>Free breakfast at their sister hotel about a five minute away is nothing special but very good</span>. Only problem was that the hot water didn't last very long, but everything else was perfect.</div><div class='text-box'>Very good 3 star <span class='review-span highlight' data-aligned-summaries='0 1 2'>hotel</span> a few blocks from beach.Everyone very helpful.<span class='review-span highlight' data-aligned-summaries='4'>Rooms large</span> <span class='review-span highlight' data-aligned-summaries='0 1 2 4'>with</span> <span class='review-span highlight' data-aligned-summaries='0 1'>patios and</span> <span class='review-span highlight' data-aligned-summaries='0 1 4'>hammocks</span>,<span class='review-span highlight' data-aligned-summaries='0 1 2'>nice little courtyard</span> with <span class='review-span highlight' data-aligned-summaries='0 1'>small pool</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 4'>Small but</span> <span class='review-span highlight' data-aligned-summaries='0 1 4'>very comfortable rooms</span>. Extremely helpfull staff. <span class='review-span highlight' data-aligned-summaries='6'>No private parking</span>. <span class='review-span highlight' data-aligned-summaries='3'>Near all of 5th Ave</span> fun.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Playa del Karma is perfect for ambiance.</span> <span id="1" class="summary-sentence">It has charm, serenity, and is relaxing and pleasant.</span> <span id="2" class="summary-sentence">It is simply lovely and beautiful.</span> <span id="3" class="summary-sentence">The hotel is in close proximity to 5th Avenue Playa Del Carmen.</span> <span id="4" class="summary-sentence">The rooms are adequately sized, but comfortable, clean and with high-vaulted ceilings.</span> <span id="5" class="summary-sentence">Breakfasts were really good above the garden but also the breakfast-to-go option was great too.</span> <span id="6" class="summary-sentence">Unfortunately there was no private parking available here at this hotel.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

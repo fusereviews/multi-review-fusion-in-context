@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>This is our 4th stay at the Orleans since 2008. <span class='review-span highlight' data-aligned-summaries='3'>We like</span> the casino, <span class='review-span highlight' data-aligned-summaries='3'>the friendly staff</span>, the restaurants are good and very reasonably priced, and we also like the less-hectic, off-strip atmosphere. We usually take in a move in the 16-movie theater. <span class='review-span highlight' data-aligned-summaries='7 10'>Our favorite place to eat is the Prime Rib Loft -</span> <span class='review-span highlight' data-aligned-summaries='6 7 10'>best prime rib ever</span> - and, even if we want to go to the strip, it is <span class='review-span highlight' data-aligned-summaries='5 11'>a 10-minute ride on the shuttle to center strip</span> (Bill's Gamblin' Hall and Casino) <span class='review-span highlight' data-aligned-summaries='4'>The Orleans' rooms are very</span> spacious and <span class='review-span highlight' data-aligned-summaries='4'>clean</span>. <span class='review-span highlight' data-aligned-summaries='0 8 11'>We always stay at the Orleans when we come to Vegas</span>. It is our home away from home in Vegas. Can't wait for the next visit!</div><div class='text-box'>Great place to stay! Lots going on but very quiet in rooms. Off-strip is great. The locals like to gamble here because they find he odds to be better. We enjoy it because the gambling is good and the food is great. <span class='review-span highlight' data-aligned-summaries='6 7'>The Prime Rib Loft</span> <span class='review-span highlight' data-aligned-summaries='6'>serves an excellent meal</span> at <span class='review-span highlight' data-aligned-summaries='7'>a very reasonable price</span>. The Buffet is very good and also priced well. <span class='review-span highlight' data-aligned-summaries='5'>For those excursions to the strip The Orleans provides free shuttle</span> service to the middle of the strip giving you easy access to all the hotels on the strip. We have stayed here many time over the years and will continue to do so. The people at the hotel always treat you as family. Thanks Orleans!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 8'>A trip to Vegas wouldn't be the same without spending 3 or 4 nights</span> <span class='review-span highlight' data-aligned-summaries='0 5 8'>at the Orleans</span>.<span class='review-span highlight' data-aligned-summaries='8'></span> We just love the place. The rooms are very large, especially the bathroom. <span class='review-span highlight' data-aligned-summaries='6'>The restaurants are all great</span> and reasonably priced and <span class='review-span highlight' data-aligned-summaries='10'>the food court is very good</span>. We enjoy going to the movies and gambling in such a large casino. If you want a great room at a great price <span class='review-span highlight' data-aligned-summaries='8'>the Orleans is the place for you</span>. The location is perfect for a home base if you have a car and If not there <span class='review-span highlight' data-aligned-summaries='5'>is a shuttle that runs back and forth to the strip</span>. <span class='review-span highlight' data-aligned-summaries='11'>There is a good chance though you wouldn't even want to leave this wonderful hotel & casino</span>!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 8'>We just love the Orleans</span>. <span class='review-span highlight' data-aligned-summaries='0 8 11'>Even though it is a bit off the Strip it is a good place to stay</span>. The food is great. The shows are terrific. The hockey games at the Arena (with all the great seats and the pricing) are something you just have to experience. <span class='review-span highlight' data-aligned-summaries='5 11'>The shuttle to the Strip is easy to use</span>. <span class='review-span highlight' data-aligned-summaries='9'>The vast selection of video poker machines in my opinion is the best in Vegas</span>. And best of all, <span class='review-span highlight' data-aligned-summaries='4'>the rooms are as good as any you will find</span> in Vegas. Henry and Betsy</div><div class='text-box'>Another great stay at the Orleans! <span class='review-span highlight' data-aligned-summaries='6'>The Prime Rib Loft is an excellent place for dinner</span>. <span class='review-span highlight' data-aligned-summaries='4'>The rooms are</span> large and <span class='review-span highlight' data-aligned-summaries='4'>clean</span>. I have no complaints about the Orleans. <span class='review-span highlight' data-aligned-summaries='0 8'>This is the only place that we stay when we are in Vegas</span>.<span class='review-span highlight' data-aligned-summaries='0'> You can't beat the value, excellent service, and great hospitality at the Orleans</span>. I like the fact that it is off the strip after a while I like to get away from the hustle and bustle of the strip. I'll be back next time I'm in Vegas!</div><div class='text-box'>This was our second stay at the Orleans. Always stayed on the strip. Decided to try <span class='review-span highlight' data-aligned-summaries='0'>something quieter</span>. <span class='review-span highlight' data-aligned-summaries='0 8'>Orleans is the place</span>! <span class='review-span highlight' data-aligned-summaries='4'>Rooms are</span> spacious, <span class='review-span highlight' data-aligned-summaries='4'>clean and comfortable</span>. <span class='review-span highlight' data-aligned-summaries='7'>The price is amazing for</span> rooms and <span class='review-span highlight' data-aligned-summaries='7'>food</span>. We ate <span class='review-span highlight' data-aligned-summaries='7'>at</span> <span class='review-span highlight' data-aligned-summaries='6 7 10'>the Prime Rib Loft</span> and it <span class='review-span highlight' data-aligned-summaries='6 10'>was delicious</span>. The service in every area was wonderful. Check in a breeze and <span class='review-span highlight' data-aligned-summaries='11'>should you decide to go</span> <span class='review-span highlight' data-aligned-summaries='5 11'>to the strip</span> for a visit <span class='review-span highlight' data-aligned-summaries='5 11'>the shuttle is so convinient</span> but we were always so glad to get back to the Orleans.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>I have stayed at almost every hotel in Vegas and I keep going back to the Orleans</span>. I feel really comfortable there, not out of place like I do in other hotels. <span class='review-span highlight' data-aligned-summaries='6'>The food is diverse and fantastic</span>. I have not had a single bad meal there. <span class='review-span highlight' data-aligned-summaries='3'>The staff is friendly and courteous</span>. and the gambling is great. <span class='review-span highlight' data-aligned-summaries='9'>I seem to always win there</span>. <span class='review-span highlight' data-aligned-summaries='8 11'>I will continue to stay at the Orleans</span>.</div><div class='text-box'>When you get to the Orleans it has everything you need- <span class='review-span highlight' data-aligned-summaries='6 10'>food was great from the buffet to</span> <span class='review-span highlight' data-aligned-summaries='10'>the</span> <span class='review-span highlight' data-aligned-summaries='6 10'>Prime Rib Loft</span> and everything in between. <span class='review-span highlight' data-aligned-summaries='9'>Gambling was friendly</span>, room service great and the staff on the whole was great. I have <span class='review-span highlight' data-aligned-summaries='8 11'>been going to Las Vegas for</span> the past <span class='review-span highlight' data-aligned-summaries='8'>fifteen</span> <span class='review-span highlight' data-aligned-summaries='11'>years</span> and the <span class='review-span highlight' data-aligned-summaries='8 11'>last ten I have spent at the Orleans</span>.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">If you're going to Las Vegas, there is no other place like the Orleans.</span> <span id="1" class="summary-sentence">Check in is no hassel.</span> <span id="2" class="summary-sentence">In and out in minutes.</span> <span id="3" class="summary-sentence">The workers are very polite and will help in any way.</span> <span id="4" class="summary-sentence">The rooms are clean and very comfortable.</span> <span id="5" class="summary-sentence">The orleans offer a free shuttle to and from the strip.</span> <span id="6" class="summary-sentence">The dining is always excellent.</span> <span id="7" class="summary-sentence">At the Prime Rib loft, the best prime rib in Vegas, at great prices.</span> <span id="8" class="summary-sentence">The only place to stay in Vegas.</span> <span id="9" class="summary-sentence">The Orleans is Always player friendly like no other casino.</span> <span id="10" class="summary-sentence">They have the best restaurants, food court anywhere.</span> <span id="11" class="summary-sentence">You will never have to go anywhere else.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

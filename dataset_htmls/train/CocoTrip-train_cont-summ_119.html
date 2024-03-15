@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>We have just returned from the Acta Mimic and after reading some previous comments felt I had to write to say <span class='review-span highlight' data-aligned-summaries='0'>how we enjoyed this hotel</span>. Reception staff helpful, first impression of the room was wow so clean and this was kept up all the time we were there. Yes it is different but is that not the beauty of it to go to another city and live slightly different! We didn't see any drug dealers - in the Ramblas we did see quite a few Police quietly walking and watching so felt safe. Barcelona we felt was a buzzy fresh and safe city and the Hotel Acta was like that - <span class='review-span highlight' data-aligned-summaries='3'>the staff</span> are smiley friendly and <span class='review-span highlight' data-aligned-summaries='3'>couldn't be more helpful</span>. We can't wait to come back and of course we will certainly stay at the Hotel Acta Mimic</div><div class='text-box'>After reading some of the reviews about the Hotel, I was slightly worried where we were going to end up, Yes the hotel is in a little bit of a run down area. but isn't most of Barcelona! The hotel staff were very friendly, the room was very nice. yes the style isn't to everyone's taste but our room was very spacious. The only thing that lets it down is it has no window/ventilation. We had <span class='review-span highlight' data-aligned-summaries='4'>breakfast at the hotel which was very good</span>, and after looking <span class='review-span highlight' data-aligned-summaries='4'>at</span> the dinner menu and how busy it was we wish we had maybe had dinner in there too. <span class='review-span highlight' data-aligned-summaries='6'>If you want an ideal location just of the Rambla</span>, good price, and nice hotel <span class='review-span highlight' data-aligned-summaries='6'>then this is ideal</span> x</div><div class='text-box'>I stayed at the Mimic for 2 nights on business trip to the MWC. In the pictures I saw it looked <span class='review-span highlight' data-aligned-summaries='3'>a cool minimalist hotel</span> and it was.black walls & red lights in the halls, white walls etc in the rooms. Sadly my <span class='review-span highlight' data-aligned-summaries='0 1 5'>room on the ground floor was noisy</span> with the doors to the stairs banging all night with loud voices both nights. Room was a good size, weirdly with a spiral staircase leading from the bathroom entrance up to the sleeping area.bed was big and v comfortable. Bar area in the basement was luvly with sofas, tv's and a great bar. Sadly on the second evening I fancied a quick meal & bed however <span class='review-span highlight' data-aligned-summaries='3'>I was told</span> <span class='review-span highlight' data-aligned-summaries='0 1 3'>there was no food available</span> as <span class='review-span highlight' data-aligned-summaries='3'>the kitchen was broken</span>.</div><div class='text-box'>I went with <span class='review-span highlight' data-aligned-summaries='0'>my wife</span> to barcelona for three nights <span class='review-span highlight' data-aligned-summaries='0'>and I enjoyed the stay at this hotel very much</span>. The room was clean, convenient and felt furturistic. <span class='review-span highlight' data-aligned-summaries='6'>It was very close to la rambla so it saved us a lot on travelling</span> (previous visits involved hotels in the business district). It has 3 metro stations near-by and is very simple to get to from the airport. Only drawback is that <span class='review-span highlight' data-aligned-summaries='5'>the actual road it self</span> is still developing and at late night it <span class='review-span highlight' data-aligned-summaries='5'>can feel intimidating</span> if you are on your own. <span class='review-span highlight' data-aligned-summaries='5'>There were a few drug users and homeless people</span> on the road. But <span class='review-span highlight' data-aligned-summaries='1'>we had no problems</span>.</div><div class='text-box'>We booked Acta Mimic because it was the cheapest central hotel we could find. <span class='review-span highlight' data-aligned-summaries='5'>The hotel is situated on a back street with hardly any traffic so noise is minimal</span>. Yes <span class='review-span highlight' data-aligned-summaries='5'>it can seem a little seedy</span> but <span class='review-span highlight' data-aligned-summaries='1'>we had no problems</span> and did not feel threatened. <span class='review-span highlight' data-aligned-summaries='3'>The staff were very pleasant and helpful</span>, and spoke some English. <span class='review-span highlight' data-aligned-summaries='0 1'>The only thing we didn't like were the</span> <span class='review-span highlight' data-aligned-summaries='0 1 3'>black corridors with red lights</span> which led to the rooms. Just a little off putting. <span class='review-span highlight' data-aligned-summaries='0'>The rooms</span> however were mostly white (black ceilings) and <span class='review-span highlight' data-aligned-summaries='0'>were spotlessly clean</span>. Not a lot of storage but enough for a long weekend.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='5'>The Mimic is in a relatively run down area</span> of Barcelona, but it is easy to get to the places you need to see. Although the rooms are small, ours was absolutely spotless and I am surprised to hear other reviewers saying different. <span class='review-span highlight' data-aligned-summaries='3'>The decor was different and imaginative</span>, and added to the experience. <span class='review-span highlight' data-aligned-summaries='3'>Staff were welcoming and friendly</span>, and <span class='review-span highlight' data-aligned-summaries='4'>the breakfast first class</span><span class='review-span highlight' data-aligned-summaries='0'>.</span> <span class='review-span highlight' data-aligned-summaries='0 1'>We had a fabulous time in Barcelona and I would certainly stay here again</span>. Thankyou staff!</div><div class='text-box'>I took my girlfriend away for a surprise weekend break in March 2011 and we stayed at Acta Mimic. When we got there <span class='review-span highlight' data-aligned-summaries='1 3'>the staff were wonderful</span> <span class='review-span highlight' data-aligned-summaries='3'>and helped us with everything</span>. <span class='review-span highlight' data-aligned-summaries='0 1'>The room</span> we stayed in was on the first floor and <span class='review-span highlight' data-aligned-summaries='0 1'>was clean and very nice</span>. The hotel is also perfectly placed to get around and see everywhere. <span class='review-span highlight' data-aligned-summaries='0'>Loved the break and</span> if I'm returning to Barcelona <span class='review-span highlight' data-aligned-summaries='0'>I will return here</span>!</div><div class='text-box'>design hotel in a perfect location for touring and shopping.very clean and the <span class='review-span highlight' data-aligned-summaries='3'>personel was very</span> <span class='review-span highlight' data-aligned-summaries='1 3'>helpful.the</span> <span class='review-span highlight' data-aligned-summaries='1'>only trouble that we had was with the fact that there was no fresh air in the room</span> because there is no window and especially after the shower you could hardly breath and see</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">We enjoyed our stay very much.</span> <span id="1" class="summary-sentence">We had no problems.</span> <span id="2" class="summary-sentence">It was close to the cruiseport.</span> <span id="3" class="summary-sentence">Very modern and the staff was very helpful.</span> <span id="4" class="summary-sentence">The breakfast area was nice and so was the breakfast.</span> <span id="5" class="summary-sentence">The area to the right of the hotel was noisy and sleezy in parts.</span> <span id="6" class="summary-sentence">The other way to Las Ramblas was fine.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

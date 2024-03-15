@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 7'>We absolutely loved our experience at the Stoneleigh</span>, <span class='review-span highlight' data-aligned-summaries='0 7'>and</span> <span class='review-span highlight' data-aligned-summaries='0 1 7'>wished we could have stayed another couple of nights</span>. From the moment we checked in until the time we checked out, <span class='review-span highlight' data-aligned-summaries='1'>the service was excellent - attentive, but not overbearing</span>. <span class='review-span highlight' data-aligned-summaries='2'>The rooms were very clean</span>, bathrooms of a good size for this type of hotel, very large closet, nice flat-screen TV, and the bed was very comfortable. We also stopped in the bar for dessert - it was delicious, and <span class='review-span highlight' data-aligned-summaries='2'>the service was fantastic.</span> The bar/patio area was actually very busy the Saturday night we were there. <span class='review-span highlight' data-aligned-summaries='2'>We were in easy walking distance to the McKinney Trolley, which was very helpful</span> since we had not rented a car. I'd love to stay here again and would recommend it without hesitation.</div><div class='text-box'>At the last minute I changed my reservations to the Stoneleigh due to all the rave reviews on Tripadvisor. <span class='review-span highlight' data-aligned-summaries='0 1 7'>I was very pleased that I switched to the Stoneleigh</span>. <span class='review-span highlight' data-aligned-summaries='2'>Great location</span>, beautiful, newly renovated, very friendly and <span class='review-span highlight' data-aligned-summaries='2'>fantastic rooms</span>. The only complaint was the air conditioning vent was right above the bed and it was a bit uncomfortable when it went on. I do not know if this applies to all the room. I loved the decor in the lobby. It reminded me Gaudi and the Casa Fuster in Barcelona. The bar was happening at night and <span class='review-span highlight' data-aligned-summaries='4'>the breakfast innovative and delicious</span>. We also at a massage at the spa and it was very nice. <span class='review-span highlight' data-aligned-summaries='1 7'>I would absolutely recommend and and repeat my stay</span> at the Stoneleigh.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 1 7'>The Stoneleigh was lovely and</span> <span class='review-span highlight' data-aligned-summaries='0 1 2 7'>we had a beautiful room</span> that was clean and ready upon arrival. <span class='review-span highlight' data-aligned-summaries='2 3 5 7'>The service was perfect</span> <span class='review-span highlight' data-aligned-summaries='3 5'>from the valet, front desk</span>,<span class='review-span highlight' data-aligned-summaries='5'> maids, bellmen, and bartender</span>. What made this more special was that I had received a last minute deal on the room. Despite the greatly reduced rate, we were treated like royalty. Parking was expensive at $21, but it is what it is. The only downside was that the doors to the rooms have a large gap at the bottom and I could hear the elevator and the guests in the hall throughout the night. Fortunately, the maids were completely quiet as not to disturb the guests. Overall, It is a fun place to stay.</div><div class='text-box'>We stayed in one of the Premier Rooms at the Stoneleigh. <span class='review-span highlight' data-aligned-summaries='1 2 7'>It was</span> <span class='review-span highlight' data-aligned-summaries='2 7'>a</span> <span class='review-span highlight' data-aligned-summaries='1 2 7'>lovely</span>,<span class='review-span highlight' data-aligned-summaries='2'> good size, corner room</span> with a nice big bathroom. <span class='review-span highlight' data-aligned-summaries='1'>Our only gripe was the described "sitting area" was a chair in the corner</span>. We just moved it to the open space we thought it should have been in, and we were happier. The renovations of the hotel are beautiful. The chandeliers in the lobby and bar held my attention for a long time. <span class='review-span highlight' data-aligned-summaries='0'>The hotel is described as Beaux-Arts and Art Deco</span>. Truly beautiful. <span class='review-span highlight' data-aligned-summaries='0'>Lots of history</span>. <span class='review-span highlight' data-aligned-summaries='2 7'>And a good location</span>.<span class='review-span highlight' data-aligned-summaries='2'> We walked to Nick and Sam's for dinner, and had other options within walking distance</span>, too.</div><div class='text-box'>I've stayed in many beautiful hotels and I would have to say that <span class='review-span highlight' data-aligned-summaries='0'>the Stoneleigh is the</span> <span class='review-span highlight' data-aligned-summaries='0 1'>best boutique hotel I've ever experienced</span>. The <span class='review-span highlight' data-aligned-summaries='2'>quality of the room was outstanding</span>, maintaining the original 1920s feel but updated stylishly for a luxurious finish and incredibly comfortable stay. Ideally located in a fashionable part of town and within easy walking distance to some great eating places and McKenny drive. The size of the room and bathroom was very generous. <span class='review-span highlight' data-aligned-summaries='2'>The only downside was the noise of the aircon</span> - however, <span class='review-span highlight' data-aligned-summaries='2'>earplugs did the trick</span>. The best value for money. <span class='review-span highlight' data-aligned-summaries='6 7'>I would highly recommend anyone visiting Dallas to look no further than the Stoneleigh Hotel</span>. <span class='review-span highlight' data-aligned-summaries='1'>I can't wait to visit again</span>!</div><div class='text-box'>This small boutique hotel located <span class='review-span highlight' data-aligned-summaries='0'>in the trendy Uptown of area of Dallas</span> is indeed a real jewel. My wife and I travel to Dallas often to see our children and grandchild. <span class='review-span highlight' data-aligned-summaries='0 1 7'>The Stoneleigh makes us feel "at home" every time</span> <span class='review-span highlight' data-aligned-summaries='0 7'>we are there</span>.<span class='review-span highlight' data-aligned-summaries='0'></span> <span class='review-span highlight' data-aligned-summaries='2 3'>The entire staff is friendly and helpful.always willing to go the extra mile</span> for a guest. The rooms are not expensive.especially relative to the competition in the immediate area.and <span class='review-span highlight' data-aligned-summaries='2'>the rooms are each</span> a little <span class='review-span highlight' data-aligned-summaries='2'>different.reflecting the old world charm</span> of this historic structure. <span class='review-span highlight' data-aligned-summaries='4'>The restaurant</span> , bar and spa <span class='review-span highlight' data-aligned-summaries='4'>are wonderful</span>. <span class='review-span highlight' data-aligned-summaries='1 7'>At The Stoneleigh Hotel.nothing is a problem.we</span> look forward to our next visit!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 1 7'>Definitely one of the nicest hotels I have ever been to</span>. <span class='review-span highlight' data-aligned-summaries='2'>The room was beautiful</span> and quite <span class='review-span highlight' data-aligned-summaries='1 2'>comparable to some of the 5 star hotels</span> in Hollywood and Beverly Hills. <span class='review-span highlight' data-aligned-summaries='2 3'>The staff was really friendly and helpful and made us feel</span> as <span class='review-span highlight' data-aligned-summaries='2 3'>special</span> as anyone else there. We had dinner at the restaurant there and it was perfect. The servers were so nice (even when we used a Travelzoo coupon) and the food was delicious. The next morning I had a massage in the spa and that was one of the best massages I have ever had (ask for Mac). All in all a perfect romantic getaway.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='6'>Of all the great hotels in Dallas, TX,</span> <span class='review-span highlight' data-aligned-summaries='0 6'>we chose The Stoneleigh</span> Hotel for our weekend getaway. <span class='review-span highlight' data-aligned-summaries='2'>The staff was extremely friendly</span>, <span class='review-span highlight' data-aligned-summaries='2'>mannerly and accomodating</span>. <span class='review-span highlight' data-aligned-summaries='2'>Our room was very well-appointed</span> and the mattress, pillows and bedding were so comfortable and luxurious. Even more cozy than what we have at home! <span class='review-span highlight' data-aligned-summaries='2'>Room service was very speedy with delicious food</span>. <span class='review-span highlight' data-aligned-summaries='0'>We truly enjoyed the spa treatments</span> we selected from this first-class facility<span class='review-span highlight' data-aligned-summaries='1'>.</span> <span class='review-span highlight' data-aligned-summaries='1 6 7'>We loved this boutique hotel and will definitely return</span>!</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">We have stayed at the Stoneleigh in the past and enjoyed this historic hotel in the Uptown area of Dallas.</span> <span id="1" class="summary-sentence">However, recently we found the place disappointing.</span> <span id="2" class="summary-sentence">The rooms are great and the location was perfect for our visit - but this time the service made the stay less enjoyable than we expected.</span> <span id="3" class="summary-sentence">Maintenance issues were not addressed, the valets were difficult to locate and not always friendly, the front desk was not responsive to our complaints or knowledgeable about the area.</span> <span id="4" class="summary-sentence">The breakfasts at the restaurant were disappointing.</span> <span id="5" class="summary-sentence">The hotel seemed understaffed.</span> <span id="6" class="summary-sentence">There are lots of choices in Dallas and despite a great rate from hotels.com</span> <span id="7" class="summary-sentence">I'm sorry we chose the Stoneleigh.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

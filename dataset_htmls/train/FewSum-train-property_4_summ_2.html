@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>Just OK in my book. <span class='review-span highlight' data-aligned-summaries='2'>I've had better burgers in Charlotte</span>. The sweet potato fries were very good. The regular fries were fine - but the portion was pretty small. <span class='review-span highlight' data-aligned-summaries='1 4'>The service was efficient</span> - no complaints.Never been there in the past, so I don't have an opinion on the old management / new management debate.</div><div class='text-box'>A quick, simple math equation to describe my feelings toward the Penguin: Pixies + Frank Sinatra + cheap, <span class='review-span highlight' data-aligned-summaries='2'>delicious burgers</span> = my kinda placeI'd even say it's a good alternative for a weekend spot, as it's open late, has a full bar and <span class='review-span highlight' data-aligned-summaries='6'>just a fun atomosphere</span>.</div><div class='text-box'>The Penguin has the <span class='review-span highlight' data-aligned-summaries='2 6'>best burgers</span> <span class='review-span highlight' data-aligned-summaries='2'>in town</span>! I usually get mine 'southern style'. It's a small place, <span class='review-span highlight' data-aligned-summaries='3 4'>so there's usually a wait</span>. But, I don't mind waiting because the food is soo good! <span class='review-span highlight' data-aligned-summaries='5'>They have a nice bar selection as well</span>. It's also <span class='review-span highlight' data-aligned-summaries='6'>in a cool, eclectic area in Charlotte</span>.</div><div class='text-box'>First of all, <span class='review-span highlight' data-aligned-summaries='2'>burgers have buns, not toasted white bread</span>. 2 out of 4 orders were wrong toppings. No refills on drinks, never once asked how the food was, and it took 45 minutes to get us 4 orders. <span class='review-span highlight' data-aligned-summaries='6'>What the hell has this place become</span>?</div><div class='text-box'>The food is really really good and is not very expensive. I love hush puppies and they were probably the best I have ever had. The <span class='review-span highlight' data-aligned-summaries='2'>burgers</span> and sandwiches <span class='review-span highlight' data-aligned-summaries='2'>are all really good</span> and the service is fantastic. The only problem is that the place is small and <span class='review-span highlight' data-aligned-summaries='3 4'>the wait is usually long</span>.<span class='review-span highlight' data-aligned-summaries='3'></span></div><div class='text-box'>Used to love this place but it has gone to s * * t. The food isn't the same and neither is the atmosphere. <span class='review-span highlight' data-aligned-summaries='0'>My friend got food poisoning</span> from a chicken sandwich he ate here and it messed him up for three days. Save your self a bad meal and walk around the corner. Its <span class='review-span highlight' data-aligned-summaries='6'>no longer the charlotte staple it once was</span></div><div class='text-box'>Any place that serves Corn Dogs and Banana Pudding is always a winner for me. Has one of the best Juke Boxes in the city. I have never had a bad experience here. Watch out for Friday and Saturday evenings because <span class='review-span highlight' data-aligned-summaries='3 4'>it gets busy fast</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2'>The burger was really good</span> and the fried pickles were awsome. Although the wait <span class='review-span highlight' data-aligned-summaries='1'>staff was very friendly</span>, <span class='review-span highlight' data-aligned-summaries='4'>we waited a really long time</span> for our food! Looked like <span class='review-span highlight' data-aligned-summaries='3'>there were alot of other people waiting</span> too. If the food had come in a more timely manner I would have said 5 stars.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Enjoyed the cleanliness of this place.</span> <span id="1" class="summary-sentence">The staff was very nice and professional.</span> <span id="2" class="summary-sentence">Burgers were nice but nothing to write home about.</span> <span id="3" class="summary-sentence">It can get busy quick</span> <span id="4" class="summary-sentence">so expect long wait times.</span> <span id="5" class="summary-sentence">The beer selection and bar are top notch.</span> <span id="6" class="summary-sentence">Overall, a great concept with a local flare.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

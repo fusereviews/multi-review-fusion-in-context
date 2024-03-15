@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>Huge place. Not a cozy joint. Booked through OpenTable and it worked perfectly.<span class='review-span highlight' data-aligned-summaries='2'>The service was excellent</span>. Attentive and professional the whole way through. Really impressed. The food was creative and <span class='review-span highlight' data-aligned-summaries='0'>the cocktails were very good</span>. <span class='review-span highlight' data-aligned-summaries='1'>My vegetarian partner had a great meal. My salmon was perfectly cooked</span>.<span class='review-span highlight' data-aligned-summaries='2'>Lot of larger parties around us</span>. Seems like a great spot for events.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2'>The experience lived up to its recommendation</span>. The staff were very knowledgeable, the wine selection was great; recommend a lazy cabreze. So goooood! <span class='review-span highlight' data-aligned-summaries='1'>The seabass was a new edition on the menu and did not disappoint</span>.Had the opportunity to meet the head chef and made us feel right at home.</div><div class='text-box'>Came here for summerlicious lunch this year.Food: Albacore tuna sashimi- this was decentCold poached wild salmon - both my guest and I thought this dish was very bland Pana cotta - okayMaple + whiskey marinated cheddar - good <span class='review-span highlight' data-aligned-summaries='2'>The service was great</span>, the servers were very friendly.<span class='review-span highlight' data-aligned-summaries='1'>The food is decent</span>. I <span class='review-span highlight' data-aligned-summaries='1'>would recommend coming here for their regular menu</span></div><div class='text-box'>Their Magic Hour special can't be beat. Strong, tasty cocktails for $6 between 4p-9p.Another consistency after many visits is <span class='review-span highlight' data-aligned-summaries='2'>the staff almost completely ignore you.</span> <span class='review-span highlight' data-aligned-summaries='1 2'>Be prepared to wait up to half an hour</span> <span class='review-span highlight' data-aligned-summaries='2'>for a server, or stand at the bar for 5 minutes until someone notices you.</span></div><div class='text-box'>Dinner here on Saturday, pre-show. Even though I had to send my <span class='review-span highlight' data-aligned-summaries='1'>steak</span> back because it <span class='review-span highlight' data-aligned-summaries='1'>was undercooked</span> I <span class='review-span highlight' data-aligned-summaries='2'>have to compliment the chef</span> as it was <span class='review-span highlight' data-aligned-summaries='1'>very delicious</span>. Also, <span class='review-span highlight' data-aligned-summaries='1'>the charred octopus is fantastic</span>. I would recommend this restaurant to my friends.</div><div class='text-box'>Had diner at Luma a few weeks ago. <span class='review-span highlight' data-aligned-summaries='1'>Food (4.5 / 5) - Pork Tenderloin- Muskox</span> <span class='review-span highlight' data-aligned-summaries='0'>Drinks (4 / 5) - Cool Hand Luke- Chocolate Martini-</span> <span class='review-span highlight' data-aligned-summaries='2'>Fairy TaleService (4.5 / 5)</span> Price (3.5 / 5) <span class='review-span highlight' data-aligned-summaries='0'>Ambiance (4 / 5)</span></div><div class='text-box'>This restaurant has great food. It's well decorated and if you are lucky enough to <span class='review-span highlight' data-aligned-summaries='0'>get a window seat you get to face the CN tower</span> and people watch. <span class='review-span highlight' data-aligned-summaries='1'>The food is delicious</span>. <span class='review-span highlight' data-aligned-summaries='1 2'>Service can be slow though</span> depending on who you get as a server. <span class='review-span highlight' data-aligned-summaries='0'>Overall great atmosphere</span> and a nice place to eat prior to seeing a show.</div><div class='text-box'>Made a yelp account to tell you all just how bad the food was at luma. <span class='review-span highlight' data-aligned-summaries='1'>All 8 of us eating different things</span> from the summerlicous menu <span class='review-span highlight' data-aligned-summaries='1'>were completely dissatisfied</span> with our meals. <span class='review-span highlight' data-aligned-summaries='1'>Bland tasting beef to over salty chicken</span>, and mediocre chocolate whatever it was called for dessert. Avoid wasting ur summer at luma.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Great views, ambiance and cocktails.</span> <span id="1" class="summary-sentence">However, the wait time can often be longer than average and with a few excellent dishes the food in general tends to be bland and not worth the price.</span> <span id="2" class="summary-sentence">While large parties are welcome the lack of customer service and long waits make for a less than enjoyable experience.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

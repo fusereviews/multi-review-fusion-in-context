@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>My friend and I stayed here in late march for 7 nights and loved it</span>. <span class='review-span highlight' data-aligned-summaries='4 5'>The hotel is located very close to</span> <span class='review-span highlight' data-aligned-summaries='5'>the arc de triumphe</span>, air France bus stop and CDG Etoile <span class='review-span highlight' data-aligned-summaries='4'>metro station</span>. <span class='review-span highlight' data-aligned-summaries='3'>The hotel staff were all very friendly and helpful</span>. the breakfasts had the basics and was ok for 12. <span class='review-span highlight' data-aligned-summaries='1 2'>We stayed in a club twin room which was</span> <span class='review-span highlight' data-aligned-summaries='1'>small but very</span> <span class='review-span highlight' data-aligned-summaries='1 2'>clean</span>.<span class='review-span highlight' data-aligned-summaries='1'></span> <span class='review-span highlight' data-aligned-summaries='1 2'>The beds were very comfortable</span> <span class='review-span highlight' data-aligned-summaries='1'>and bathroom clean and modern (with a pretty good hair dryer).</span> <span class='review-span highlight' data-aligned-summaries='6'>We did hear a bit of noise from the street</span> on a few occasions as there is a cinema across the road but nothing that disturbed us too much. We also heard a tv from another night once but otherwise no noise from other rooms. I would definitely recommend it and would stay here again.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 3'>The staff here were very helpful</span>. <span class='review-span highlight' data-aligned-summaries='0 1 2'>The rooms were</span> <span class='review-span highlight' data-aligned-summaries='0'>lovely and</span> <span class='review-span highlight' data-aligned-summaries='0 2'>clean</span>, <span class='review-span highlight' data-aligned-summaries='1'>good shower pressure and very comfy</span>. They were <span class='review-span highlight' data-aligned-summaries='1'>not very big</span> as is typical in Paris. The breakfasts were good and <span class='review-span highlight' data-aligned-summaries='5'>the location was just behind the Arc De Triomphe. From here you can explore The Champs Elysee</span>, The Arc, Palais Royal, The Invalides and more- and the shopping is pretty good too. <span class='review-span highlight' data-aligned-summaries='4'>There is a Metro 2 minutes walk away</span>. It is The Charles De Gaulle which is a central line. We found the Metro easy to use and a brilliant way to move around the city. It is worth the walk from here to The Laduree Salon- a beautiful tearoom. Try the 4 berry tea with and the macaroons. 6 Euro for a pot but you can share. Yumm</div><div class='text-box'>We stayed at this hotel at the beginning of our trip and since we were flying out of Paris again decided to rebook when we returned <span class='review-span highlight' data-aligned-summaries='0'>we loved it so much</span>. The location of the hotel is wonderful just near the Arc de Triomphe and the Champs Elysees. That being said <span class='review-span highlight' data-aligned-summaries='6'>the hotel</span> itself <span class='review-span highlight' data-aligned-summaries='6'>is in a quite street that does not have a lot of</span> traffic that could cause <span class='review-span highlight' data-aligned-summaries='6'>noise</span>. <span class='review-span highlight' data-aligned-summaries='3'>The staff were lovely and were always very helpful</span>. We arrived and upgraded both times, so <span class='review-span highlight' data-aligned-summaries='2'>the room</span> we had <span class='review-span highlight' data-aligned-summaries='2'>was</span> on the 5th floor and amazing. <span class='review-span highlight' data-aligned-summaries='1'>There was so much space</span>, <span class='review-span highlight' data-aligned-summaries='2'>very clean</span> and well planned out. We thought the hotel was just wonderful and were very happy to go back!</div><div class='text-box'>We loved this hotel for the location and the hotel itself. <span class='review-span highlight' data-aligned-summaries='5'>It is just a few short blocks from the Arc de Triomphe and the Champs Elysees,</span> which is a direct line to all of the other beautiful sights of Paris. It is also close to restaurants, cafes and neighborhood shops. The hotel itself was clean, very comfortable, and <span class='review-span highlight' data-aligned-summaries='3'>the staff was very helpful</span> and courteous. <span class='review-span highlight' data-aligned-summaries='0'>We have stayed at other hotels</span> in Paris, <span class='review-span highlight' data-aligned-summaries='0'>but the Royal Magda was the best experience of all</span>. The rooms were modern, quiet, and <span class='review-span highlight' data-aligned-summaries='2'>the beds were comfortable</span>. What more could you ask for? Oh yes, the price was also very reasonable, especially for Europe. Enjoy!</div><div class='text-box'>Having read all the reviews on Tripadvisor, we choose Hotel Royal Magda. <span class='review-span highlight' data-aligned-summaries='4'>The hotel is convenient for the Metro and RER line at Charles de Gaule Etoile, which is a five minute walk</span>. You do not need to be overly energetic to <span class='review-span highlight' data-aligned-summaries='5'>walk to the Champes Elysee</span>, and the Eiffel Tower is probably twenty minutes walk from the hotel. <span class='review-span highlight' data-aligned-summaries='1'>The hotel is small</span> with no more than 40 rooms. <span class='review-span highlight' data-aligned-summaries='1 2'>The rooms are</span> <span class='review-span highlight' data-aligned-summaries='1'>in turn small but</span> <span class='review-span highlight' data-aligned-summaries='1 2'>comfortable</span> <span class='review-span highlight' data-aligned-summaries='2'>and very clean</span>. <span class='review-span highlight' data-aligned-summaries='6'>The hotel resides in a side street</span> just of the main boulevard Wagram <span class='review-span highlight' data-aligned-summaries='6'>which helps reduce noise</span> etc. The price is very reasonable and <span class='review-span highlight' data-aligned-summaries='0'>we enjoyed our stay.</span> Recommended.</div><div class='text-box'>We stayed at the deluxe suite of Royal Magda Etoile in the end of January 2010, and <span class='review-span highlight' data-aligned-summaries='0'>we certainly enjoyed our stay</span>. The hotel was very quite. <span class='review-span highlight' data-aligned-summaries='1 2'>The rooms</span> and the bathroom <span class='review-span highlight' data-aligned-summaries='1'>were very spacious</span> (more than adequate for 3 adults). <span class='review-span highlight' data-aligned-summaries='1'>Everything</span> <span class='review-span highlight' data-aligned-summaries='1 2'>was</span> <span class='review-span highlight' data-aligned-summaries='2'>clean</span> and <span class='review-span highlight' data-aligned-summaries='1'>comfortable</span>. There was really high speed internet connection in the room. <span class='review-span highlight' data-aligned-summaries='3'>The personnel were very friendly and helpful</span>. The breakfast buffet was complete. <span class='review-span highlight' data-aligned-summaries='4 5'>The hotel is only 1 min walking distance from</span> <span class='review-span highlight' data-aligned-summaries='5'>the Arc de Triomphe</span> and <span class='review-span highlight' data-aligned-summaries='4'>the metro station</span>. The taxi from and to the airport (ChDG) cost about 40-45 euro.</div><div class='text-box'>We just returned from 4 nights in Paris where we stayed at the Hotel Magda. <span class='review-span highlight' data-aligned-summaries='0'>The experience was very nice</span> as <span class='review-span highlight' data-aligned-summaries='1 2'>the room was</span> <span class='review-span highlight' data-aligned-summaries='1'>tiny</span> but <span class='review-span highlight' data-aligned-summaries='2'>very clean</span> as was also the bathroom. <span class='review-span highlight' data-aligned-summaries='2'>We marvelled at the comfortable bed</span> and were appreciative of the quiet street that let us sleep after a day of exhausting but exhilarating sight seeing. <span class='review-span highlight' data-aligned-summaries='4 5'>The location is right near</span> <span class='review-span highlight' data-aligned-summaries='4'>the Metro</span>, <span class='review-span highlight' data-aligned-summaries='5'>the L'arc Du Triomphe and the Champs Elysees</span>. <span class='review-span highlight' data-aligned-summaries='3'>The staff were very polite and friendly</span> as well as professional. We enjoyed our stay for our first visit to Paris.</div><div class='text-box'>We spent 4 nights at the Royal Magda hotel and for the price, <span class='review-span highlight' data-aligned-summaries='0'>we were extememely pleased</span>. <span class='review-span highlight' data-aligned-summaries='1'>The rooms were small</span> but clean, same with the bathroom. Since we didn't come to Paris to stay in the room, it was perfect. The location was <span class='review-span highlight' data-aligned-summaries='5'>within walking distance to the Champes Elysee</span> and <span class='review-span highlight' data-aligned-summaries='4'>the subway was a block away</span>. <span class='review-span highlight' data-aligned-summaries='3'>Everyone at the hotel was polite and helpful</span>. Would definitely stay there again</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">We had a very nice stay.</span> <span id="1" class="summary-sentence">The hotel is a boutique style hotel, so the rooms are on the small side, but has everything you need to make your stay comfortable.</span> <span id="2" class="summary-sentence">The rooms were clean and the bed was comfortable.</span> <span id="3" class="summary-sentence">The staff, Lilly and Mila, were very helpful and friendly.</span> <span id="4" class="summary-sentence">The metro is within walking distance to the hotel.</span> <span id="5" class="summary-sentence">You can walk to the Arc de Triomphe and the Champs Elysees from the hotel.</span> <span id="6" class="summary-sentence">The only issue is that in some of the rooms there is a lot of noise, which is coming from a club which is located across the street from the hotel.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

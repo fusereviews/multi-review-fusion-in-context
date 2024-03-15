@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>This place can be summed up in one word . flawless ! Located across the street from the most beautiful beach in Key West - Smathers Beach and literally 1.7 miles from Duval street it is prefect! <span class='review-span highlight' data-aligned-summaries='0'>The service was fantastic</span>, the grounds are very well kept, with a cool pool. and the piece de Resistance . the room - comfortable, huge, it is literally the size of a small apartment, with a small kitchenette, a dining table a huge couch and and super comfortable bed, oh yeah and the bathroom is also pretty darn big. We had a magical weekend staying here and every went on without a hitch, good laid back service at a very reasonable price. This is the place to stay in Key West. Since we brought our bikes, we did not have to move our car at all in the 3 days we were there, Duval street is just a short ride from the hotel. don't own a bike? Or don't feel like shipping them down with you ? No problem, the hotel has plenty of bikes for rent as well.</div><div class='text-box'>The hotel has a great location, across from the beach and away from Duval street, but a free shuttle every hour into town and airport. Rooms are all suites large and comfortable with microwave and wet bars, living room areas , well designed space with pocket doors to close off the bedroom for privacy. Comfortable beds and nice vanity area, lots of storage space. We were a large group and treated very well. The restaurant staff was particularly accomodating. As people in our group trickled into the restaurant , we kept adding to tables, asked for separate checks etc and it was never a problem. <span class='review-span highlight' data-aligned-summaries='0'>Many of us asked for a late checkout last minute and they accomodated as many as possible</span>. Pool was heated and lovely, a hot tub in the corner. Restaurant closed at 9 and bar at 11pm, a little early for our crowd and Key West but that is my only complaint.</div><div class='text-box'>The hotel was decorated beautifully for X-mas and I loved the Palm trees with Christmas lights! <span class='review-span highlight' data-aligned-summaries='0'>The staff was very helpful and friendly</span>. The rate was what is to be expected for Key West, right by the airport! The beach is across the street from the hotel with multiple activities for one to participate in. Since the hotel is out of the was a smidge, they offer shuttles, numerous shuttles to all the hot spots in Key West. The rooms were beautiful, and very clean, unless you looked directly behind the toilet, which could use a little extra scrubbing. I would stay here again, tomorrow!</div><div class='text-box'>The hotel is an all suite hotel so the rooms were very spacious and allowed us to kick back in our room mid afternoons and mornings. If you like a slower pace and a public beach across the street, this is a good place to stay. You will have to drive or take the shuttle to Duval Street area and the shuttle is only once an hour. Parking in the Duval Street area will cost from $10 to $35 per day.</div><div class='text-box'>I took my girlfriend here for a long weekend and to propose. <span class='review-span highlight' data-aligned-summaries='0'>The hotel was great</span>, obviously, it wasn't a St Regis or even a Westin, but it was very nice, very functional and enjoyable. The food and services were VERY expensive. <span class='review-span highlight' data-aligned-summaries='0'>I thought they took care of us well</span> even though we were staying on points for free.</div><div class='text-box'>This hotel has huge rooms and bathrooms and is in a great location across from the beach and close to the airport. Great food in the restaurant and <span class='review-span highlight' data-aligned-summaries='0'>staff is wonderful</span>! I <span class='review-span highlight' data-aligned-summaries='0'>highly recommend</span> to anyone needing some extra space and doesnt care about being downtown!</div><div class='text-box'>Large, modern, clean rooms across from one of the few beaches in Key West. While far from downtown, this hotel offers a lot of comfort, a nice little pool, and regular shuttle service. <span class='review-span highlight' data-aligned-summaries='0'>We would stay there again</span>!</div><div class='text-box'>We went to enjoy Key West and our daughters were so excited and this motel was a complete disappointment! Dirty, unsafe, only thing really redone was the lobby! Elevators were very scary, our daughters would not even ride without us.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This hotel is highly recommended especially because the staff provide a good service that is both friendly and always helpful.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

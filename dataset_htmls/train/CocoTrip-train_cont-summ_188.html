@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Pleasantly Surprised</span>. We were a bit concerned about staying at the Marseilles after reading some of the reviews on the internet but I have to say we were more than pleasantly surprised. <span class='review-span highlight' data-aligned-summaries='1'>The front desk staff couldn't have been friendlier</span> and our <span class='review-span highlight' data-aligned-summaries='4'>room was</span> much better than we had anticipated. <span class='review-span highlight' data-aligned-summaries='1'>It was</span> <span class='review-span highlight' data-aligned-summaries='1 4'>spacious and clean</span>. <span class='review-span highlight' data-aligned-summaries='3'>The bar area is small</span> but, again, the bartender was great. <span class='review-span highlight' data-aligned-summaries='3'>The pool area was attractive</span> and, contrary to other reviews, the pool was very clean. <span class='review-span highlight' data-aligned-summaries='0'>The location is worth a much higher rate</span> with the best hotels <span class='review-span highlight' data-aligned-summaries='1 2 3'>on the beach</span> <span class='review-span highlight' data-aligned-summaries='1'>within a block of the Marseilles</span>. <span class='review-span highlight' data-aligned-summaries='1'>All area attractions are within a very short walk</span>. The Marseilles is a work in progress with renovations ongoing. <span class='review-span highlight' data-aligned-summaries='6'>I look forward to staying there on my next visit to Miami</span>.</div><div class='text-box'>for budget traveler for the location in south beach you cant beat the price for this little hotel,if you wanna spend 300.00 per night then you need to go somewhere else ,<span class='review-span highlight' data-aligned-summaries='4'>rooms are very basic but clean</span> ,<span class='review-span highlight' data-aligned-summaries='3'>easy access to the beach or you can stay in the pool area</span>,the best part was to meet Moses the bartender this guy is gret and seems like he works 24 hours a day ,he is in charge from the <span class='review-span highlight' data-aligned-summaries='3'>bar</span> in the pool and then you'll see him at the lobby bar some times untill 2 or 3 am and dont be surprise if almost al the guests stop by and say hello to him.In my experience this hotel was really good for the price so if you look for an inexpensive place give it a shot</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Good value hotel</span> for the district Originally booked a cheaper hotel, then came across this website so decided to cancel the earlier booking and re-book the Marseille. An excellent decision. <span class='review-span highlight' data-aligned-summaries='0 1'>The hotel was very clean</span> <span class='review-span highlight' data-aligned-summaries='0'>and had all the required facilities</span>. We had standard rooms, no great views but we don't spend time staring out the window! We stayed for 2 nights (2-3 Aug) at $82 (45) per night incl taxes. Parking was available at $12 per day just round the corner. The rooms were not large, but everything worked. <span class='review-span highlight' data-aligned-summaries='2'>The location was great for the beach</span> and all that South Beach has to offer.</div><div class='text-box'>Loved It! I took my Mom to Miami for her birthday and stayed at the Marseilles for 3 nights in August. I have to say that I was absolutely pleased with everything there. The lobby is beautiful, great for pictures! <span class='review-span highlight' data-aligned-summaries='1 4'>The rooms are</span> <span class='review-span highlight' data-aligned-summaries='4'>small yes, but</span> <span class='review-span highlight' data-aligned-summaries='1 4'>very clean</span> and the beds were super comfortable. <span class='review-span highlight' data-aligned-summaries='3'>The pool and</span> hammock area <span class='review-span highlight' data-aligned-summaries='3'>are absolutely the best</span>! And as if nothing could get better right after that is <span class='review-span highlight' data-aligned-summaries='2 3'>THE BEACH</span>! <span class='review-span highlight' data-aligned-summaries='1'>The staff was very nice</span>, helpful and attentive. <span class='review-span highlight' data-aligned-summaries='0 6'>My Miami experience was amazing and the Marseilles Hotel was definitely a big part of that</span>. <span class='review-span highlight' data-aligned-summaries='6'>I will be back!</span></div><div class='text-box'>Cool Place, <span class='review-span highlight' data-aligned-summaries='0 6'>Good Stay</span>! Needed a hotel in Miami Beach that would be close to my couple of business appointments, but I also wanted to just enjoy a couple of beach days. A friend had mentioned the Marseilles, booked it (February) and, in looking back, it was perfect for me. <span class='review-span highlight' data-aligned-summaries='1 2 3'>The ocean and beach were right therend</span> my view took it all in, right across the road from the lobby. <span class='review-span highlight' data-aligned-summaries='4'>My room was small but a decent size</span>. The lobby was unexpectedly big, and the public wi-fi worked great. <span class='review-span highlight' data-aligned-summaries='0 6'>Il definitely come back</span>.</div><div class='text-box'>good value Even though this <span class='review-span highlight' data-aligned-summaries='1'>hotel is a ten minute walk to the main strip</span> it has many perks. <span class='review-span highlight' data-aligned-summaries='4'>The rooms are large</span>, and <span class='review-span highlight' data-aligned-summaries='4'>clean</span>. <span class='review-span highlight' data-aligned-summaries='3'>The hotel bar is a good place to grab a drink</span> before u go otu for the night. <span class='review-span highlight' data-aligned-summaries='3'>The pool is</span> small but <span class='review-span highlight' data-aligned-summaries='3'>good for taking a dip</span> after a long day on the beach.The <span class='review-span highlight' data-aligned-summaries='3'>walkway to the beach</span> and hammock area is a nice place to relax in the shade. Overall I was very happy with the price and the hotel overall.just wish it was a little closer to the action. No complaints</div><div class='text-box'>Very Satisfied with the Marsielles on South Beach My family spent five nights at the Marseilles during the holidays. <span class='review-span highlight' data-aligned-summaries='0'>The hotel is filled with the grandeur of a spectacular era</span>. <span class='review-span highlight' data-aligned-summaries='1 2'>The hotel was in a prime location for us to take advantage of the beach, shopping, dining</span> <span class='review-span highlight' data-aligned-summaries='1'>and even two museums</span>. <span class='review-span highlight' data-aligned-summaries='3'>The children enjoyed the pool</span>, <span class='review-span highlight' data-aligned-summaries='3'>and it was wonderful to have the beach right outside</span>. <span class='review-span highlight' data-aligned-summaries='1'>Cheery happy to help, the staff were a delight</span>. <span class='review-span highlight' data-aligned-summaries='0 6'>We would recommend the hotel for the price and location</span>.</div><div class='text-box'>Don't be scared by the bad reviews Marseilles was nice, not fancy, but nice. <span class='review-span highlight' data-aligned-summaries='1'>Very clean</span>, staff was helpful, <span class='review-span highlight' data-aligned-summaries='4'>rooms were small</span> but very <span class='review-span highlight' data-aligned-summaries='4'>clean</span> and nice. Good location for nightlife, and <span class='review-span highlight' data-aligned-summaries='3'>right on the beach</span> for beach time. <span class='review-span highlight' data-aligned-summaries='0'>For the price, it is a great place to stay</span>.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Not a bad hotel at all.</span> <span id="1" class="summary-sentence">The staff was very friendly, the hotel was very clean and the best part is that the hotel was right in the middle of all the action.</span> <span id="2" class="summary-sentence">Dining, shopping and beach.</span> <span id="3" class="summary-sentence">The hotel had a pool, bar, pool table and direct access to the beach.</span> <span id="4" class="summary-sentence">The rooms were clean but small but enough for a couple.</span> <span id="5" class="summary-sentence">The road side restaurent was good.</span> <span id="6" class="summary-sentence">Will surely go back and stay in this hotel.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

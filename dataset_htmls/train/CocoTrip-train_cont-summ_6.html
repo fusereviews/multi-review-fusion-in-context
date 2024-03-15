@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='8'>loved this place</span> I just spent one week at the melasti and <span class='review-span highlight' data-aligned-summaries='8'>what a great vacation</span>.The only thing i could possibly complain about was the breakfast but <span class='review-span highlight' data-aligned-summaries='0'>for what i paid per night I cant even complain</span> about that.<span class='review-span highlight' data-aligned-summaries='0'>The location is great</span>. Maybe a 30 minute cab ride from the airport.I had a supperior <span class='review-span highlight' data-aligned-summaries='6'>room overlooking the big pool</span> and my A/C worked great.<span class='review-span highlight' data-aligned-summaries='1'>Everyone at the hotel treated me great</span> along with all the Balinese people.There are many shops within walking distance and I paid with tip about $2 u.s.d. for a cab ride into Kuta.Many restaurants in the area but i would look for the ones with a crowd since i did make the mistake several times of avoiding the crowd just to be very dissapointed.poser's was one restaurant in the neighborhood I can highly reccommend.I will surely stay at the melasti again.</div><div class='text-box'>Loved The Melasti - <span class='review-span highlight' data-aligned-summaries='8'>Will Stay There Again</span> <span class='review-span highlight' data-aligned-summaries='1'>Melasti Beach ResortSpent</span> 8 nights in a superior room overlooking the pool near the lobby in March 2006. <span class='review-span highlight' data-aligned-summaries='6'>The property has 3 pools</span> and does represent <span class='review-span highlight' data-aligned-summaries='0 8'>good value for $$</span>. <span class='review-span highlight' data-aligned-summaries='1'>The superior rooms were very clean</span> quite large. <span class='review-span highlight' data-aligned-summaries='1'>Staff were very friendly</span> would stay there again. The only downside is the restaurant. Forget it. Food is very average. Had breakfast included in the package but ended up sourcing my meals from other resorts and/or restaurants. For a good feed at a very reasonable price, the Bali Niksomma is a short 3 minute walk away up the beach (go there and try their Nasi Goreng Niksomma?FANTASTIC!)For those on a budget, the Melasti Beach Resort in Legian is great!</div><div class='text-box'>spa great! We stayed here for 12 nights <span class='review-span highlight' data-aligned-summaries='2'>the staff were very pleasant</span> and the spa centre was great! <span class='review-span highlight' data-aligned-summaries='6'>we had a deluxe rooms at the front of the hotel over looking a small swimming pool</span> <span class='review-span highlight' data-aligned-summaries='2'>the rooms were very clean</span> and the air con was great. The only thing we didn't like about the hotel was the breakfast and all the food it was terrible so what ever you do don't get breakfast included go elsewhere we went to the padma and paid for breakfast it was expensive but worth every cent. In general we had a great time in bali and met some really nice people young and old so go to bali but stay at a more expensive hotel remember you get what you pay for.</div><div class='text-box'>Great Place for All! We have just returned from Bali and stayed at <span class='review-span highlight' data-aligned-summaries='1'>Melasti Beach Resort</span> it is our first stay at Melasti, we usually stay in Kuta but have stayed at another hotel in legian about five years ago. <span class='review-span highlight' data-aligned-summaries='8'>I really enjoyed our stay</span> the staff and <span class='review-span highlight' data-aligned-summaries='1 2 8'>service could not be faulted</span>.We originally had one of the new superior rooms around the new pool but as we are night owls we found the screaming kids a bit much in the mornings so we just approached the staff and <span class='review-span highlight' data-aligned-summaries='2'>they immediately got us another room in a quiet area</span>. The food at the hotel was fine and <span class='review-span highlight' data-aligned-summaries='5'>the breakfast was huge</span>. We would have no hesitation in recommending this resort to anyone.We will be returning next year.</div><div class='text-box'>Loved the Melasti Beach Resort We were in a suite room and <span class='review-span highlight' data-aligned-summaries='1 8'>cannot fault the service</span>. Breakfast was great. Some people are critical of the Melasti, saying breakfasts is boring and hotel outdated. We did stay in other hotels during our stay, ones which we would not return to because of the location. We had <span class='review-span highlight' data-aligned-summaries='0 5'>our 12 year old</span> with us, and he <span class='review-span highlight' data-aligned-summaries='0 5 8'>enjoyed the location</span>. <span class='review-span highlight' data-aligned-summaries='0'>Quiet in the hotel and</span> walk out onto the <span class='review-span highlight' data-aligned-summaries='0'>busy streets</span>. Don't have to catch a taxi everywhere. Great restaurants around the area.</div><div class='text-box'>Loved the Melasti Resort After many visits to Bali my children I decided to stay somewhere different so we decided on the Melasti Resort. It was fantastic. We had one of the new rooms, right by the pool. <span class='review-span highlight' data-aligned-summaries='1 2 4'>Very</span> <span class='review-span highlight' data-aligned-summaries='4'>spacious</span> <span class='review-span highlight' data-aligned-summaries='1 2'>clean</span>. <span class='review-span highlight' data-aligned-summaries='1 2'>The people at the hotel were very friendly</span>. We had Reflexology many massages which are a definate must if you stay there.<span class='review-span highlight' data-aligned-summaries='5'>Breakfast was good</span>, food by the pool was delicious <span class='review-span highlight' data-aligned-summaries='0 8'>the location is great</span>.Overall, for a 3 star hotel, <span class='review-span highlight' data-aligned-summaries='8'>I would definately recommend it will stay there again next year</span>.</div><div class='text-box'>Friendly We had a lovely stay at the Melasti Beach. <span class='review-span highlight' data-aligned-summaries='1 2'>All the staff were so</span> <span class='review-span highlight' data-aligned-summaries='1'>friendly and</span> <span class='review-span highlight' data-aligned-summaries='1 2'>accomadating</span>. <span class='review-span highlight' data-aligned-summaries='1 3'>The gardens were swept everyday and was very clean</span>. The drivers were lovely and showed us a great time around bali at a resonable rate. From our room the restaurant was a long walk but was a great location on the beach. We had alot of fun meeting people in the pool and sharing a drink at the pool side bar. <span class='review-span highlight' data-aligned-summaries='8'>We</span> felt so welcomed and <span class='review-span highlight' data-aligned-summaries='8'>would not hesitate to recommend this hotel</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='8'>loved melasti</span> just returned from 16 days at the melasti <span class='review-span highlight' data-aligned-summaries='0 8'>my son and i enjoyed very much location to the beach</span> and shops were great <span class='review-span highlight' data-aligned-summaries='4'>room large</span> the spa was wonderful went there about 6 times <span class='review-span highlight' data-aligned-summaries='5'>breakfast was okay</span> as you werent hungry till about 3pm <span class='review-span highlight' data-aligned-summaries='5'>the beach out the front</span> was quieter than the rest of the beach close to good restaurants they had security at the gates would definately recomend and <span class='review-span highlight' data-aligned-summaries='8'>will stay there again next year.</span></div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Great Value/Location</span> <span id="1" class="summary-sentence">The Melasti Beach Resort was a very clean and friendly hotel.</span> <span id="2" class="summary-sentence">The hotel room was cleaned daily and the staff were very accomadating.</span> <span id="3" class="summary-sentence">The grounds of the hotel are very neat.</span> <span id="4" class="summary-sentence">The superior suite room was very large.</span> <span id="5" class="summary-sentence">The location was right on the beach and the breakfast overlooking the beach is very enjoyable.</span> <span id="6" class="summary-sentence">There are three large pools but not enough chairs around the paved pool area.</span> <span id="7" class="summary-sentence">No lawn to lay on.</span> <span id="8" class="summary-sentence">Other than that great place to stay for the price and location.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

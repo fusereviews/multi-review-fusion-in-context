@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Overpriced</span> Stayed there with my family Aug 1 to 4 2005. Good points - its on Bourbon Street. Bad points - its on Bourbon Street + everything else. Asked for a quiet room months ahead, we were given a room next to the elevator: noisy, lots of convention goers yelling up and down the corridor at 3 a.m. Parking is difficult - they have a garage (about $30/ day !) but its small and spaces are tight. My wife had to go to ER whilst we were there, they didn't even know where the nearest hospital was ! Constant feeling that they wanted our cash but didn't want to provide anything like service in return. <span class='review-span highlight' data-aligned-summaries='0'>Avoid</span>.</div><div class='text-box'>Had a great time! We splurged and booked two Bourbon Street balcony rooms for a post-graduation celebration with our two young adult daughters. Although the hotel itself is a little long-in-the-tooth, its <span class='review-span highlight' data-aligned-summaries='0'>location</span> on lower Bourbon Street <span class='review-span highlight' data-aligned-summaries='0'>can't be beat</span>. There are nicer, fancier hotels and inns nearby, but we chose the Royal Sonesta specifically for its location. Yes, it's noisy and you can hear music and rowdy crowds until late at night, but we anticipated this too. Bourbon Street was busier for an early June Monday and Tuesday night than I would have expected, but we had <span class='review-span highlight' data-aligned-summaries='0'>fun sitting on the balcony</span>, throwing beads at the crowds who happened to walk by.</div><div class='text-box'>Jazzfest Stay here for 8 nights and for the most part it was very enjoyable except for a few monir things that added up. For about 3-4 days the hot water was only luke warm, one day I went out and took off the privacy sign and by 3pm the room was not made up, had to call housekeeping and when I returned at 4pm, it still was not done, had to put in an angry second call to have the room done ASAP. Also one monring I had the privacy sign on and housekeeping still knocked on my door, lucky I was not sleeping.<span class='review-span highlight' data-aligned-summaries='0'>The location cannot be beat and service/staff is still very good</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Great hotel</span>! I have family in New Orleans so I am pretty familiar with the city.I have stayed in a good deal of places/areas of town. <span class='review-span highlight' data-aligned-summaries='0'>The Royal Sonesta, by far, offers the best location and experience</span>. One of the three hotel bars to the GREAT restaurant for breakfast to the fabulous rooms, <span class='review-span highlight' data-aligned-summaries='0'>this place is a treasure.</span> We had a courtyard room that opened up to the pool deck. BEAUTIFUL! And the price was right too!</div><div class='text-box'>No one returns emails or calls.Upcoming Stay I have booked a room for an upcoming Conference-American College of Cardiology; I have sent emails to various managers at hotel inquiring what amenities are included for the room price of $300+/ SHOCKER - No one responds. I haven't even arrived there for my MARCH Conference, and <span class='review-span highlight' data-aligned-summaries='0'>I am feeling like this is a poorly managed hotel</span>.</div><div class='text-box'>Great place on Bourbon Street Stayed one night at the Royal Sonesta on Bourbon Street. <span class='review-span highlight' data-aligned-summaries='0'>What a great place</span>, very classy and you can't beat the location. Went in June so the rates were very inexpensive. Rooms were very clean and quiet. Definitely would stay there again. First Class.</div><div class='text-box'>Great location, tiny rooms <span class='review-span highlight' data-aligned-summaries='0'>Nice hotel in a great location</span>, but very overpriced. The room was small and not very well maintained. Parking was also overpriced and the scratched my spouse's custom car when the valet parked it.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Very nice hotel</span> Very nice hotel. The reception area is extremely nice. The rooms are also very nice with large flat screens although they are quite small.Very good breakfast. Very good location though as a result quite noisy.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This is a great hotel.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

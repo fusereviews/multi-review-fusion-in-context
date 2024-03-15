@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>I really like Harkins the only thing here is no reserved seating. We have a large family and need to always sit together. <span class='review-span highlight' data-aligned-summaries='1'>I</span> also <span class='review-span highlight' data-aligned-summaries='1 4'>wish they had the recliners</span>. I think <span class='review-span highlight' data-aligned-summaries='0 4'>Harkin's have the best popcorn</span> <span class='review-span highlight' data-aligned-summaries='0'>and loyalty program. But</span> due to the non reserved seats and recliners <span class='review-span highlight' data-aligned-summaries='0'>we aren't loyal to this theater</span>. I want to be loyal though!</div><div class='text-box'>My favorite theatre in the valley to go to, always clean, and the <span class='review-span highlight' data-aligned-summaries='1 4'>staff is usually well mannered</span> <span class='review-span highlight' data-aligned-summaries='4'>and ready to serve</span>. Student discount is the biggest reason I go here over AMC because <span class='review-span highlight' data-aligned-summaries='0 1'>Harkins is a smarter business and</span> <span class='review-span highlight' data-aligned-summaries='0 1 4'>offers better value</span> to any customer. I will always go here first unless I have to go to one of the other guys.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2'>Childcare</span>, distance from my home, away from hustle of malls is why <span class='review-span highlight' data-aligned-summaries='4'>this place rocks.</span> Harkins has it figured out, except Dan Harkins needs to not leave his dog in a hot car. But who cares, the dog lived... right?</div><div class='text-box'>Digital Screens makes for <span class='review-span highlight' data-aligned-summaries='0'>the best picture in town</span>. However, the <span class='review-span highlight' data-aligned-summaries='2'>child care center is the main reason I give this place 5-Stars</span> and it's why it's our favorite. Our <span class='review-span highlight' data-aligned-summaries='3'>5 year old actually prefers to go to the kid's club</span> than to see a movie with us!</div><div class='text-box'>Came here with my 2 year old daughter for our first date last night. Halfway through the movie she got tired ad wanted to go home and when the front desk saw us leave, she asked if everything was ok. We old her what happened and she <span class='review-span highlight' data-aligned-summaries='4'>gave us 2 free passes to come back again</span>! Awesome! Clean place, great seating!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Our family enjoys coming to this theatre</span>, <span class='review-span highlight' data-aligned-summaries='2'>especially because of the on site child care</span>. The child care staff is friendly - they just require your child to be fully potty trained. <span class='review-span highlight' data-aligned-summaries='3'>Our son watched movies, played games, and did some crafts while my wife and I enjoyed our movie in peace</span>. Great theatre, plus good food options are in the area.</div><div class='text-box'>Our regular theatre. <span class='review-span highlight' data-aligned-summaries='1'>Always clean and comfortable</span>. Saw The Giver today and were 2 or 4 viewers! The <span class='review-span highlight' data-aligned-summaries='1 4'>staff is always helpful</span> and nice. We appreciate the location and typically plenty of parking. We always have our souvenir cup to get a reasonable soda.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Best theater. Thanks Harkins</span>. Love that I can butter my own popcorn. Great location and <span class='review-span highlight' data-aligned-summaries='1'>decent seating</span>. (Some theaters have really awkward seating) well kept and <span class='review-span highlight' data-aligned-summaries='2'>great daycare set up</span> for those who need it. Love that I <span class='review-span highlight' data-aligned-summaries='4'>can use my college I.d. to get a discount</span> on tickets.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Harkins is the best place in town to catch a movie.</span> <span id="1" class="summary-sentence">Comfortable seating, friendly staff, and cleanliness make this theater stand out from the others in town.</span> <span id="2" class="summary-sentence">Perhaps the best feature is the onsite daycare.</span> <span id="3" class="summary-sentence">With crafts and  games children can have fun while parents enjoy a date night.</span> <span id="4" class="summary-sentence">The staff goes above and beyond to ensure a great experience at a reasonable price.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

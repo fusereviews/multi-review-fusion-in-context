@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>The only place I have stayed in Rome, so hard to contextualise, however. <span class='review-span highlight' data-aligned-summaries='4'>Far out of the city</span>, <span class='review-span highlight' data-aligned-summaries='4'>but does run a shuttle bus</span> (I didn't try this). <span class='review-span highlight' data-aligned-summaries='0'>The desk staff were extremely helpful</span>, giving (good) maps & advice on buses, the metro and taxis. I could not fault the service they gave, which was the best part of the hotel. Otherwise ok but not remarkable. <span class='review-span highlight' data-aligned-summaries='2'>Breakfast adequate but not inspiring</span>. However I must say that <span class='review-span highlight' data-aligned-summaries='3'>the balcony rooms have views over the city that are quite spectacular</span>. <span class='review-span highlight' data-aligned-summaries='6 7'>I would try and stay somewhere closer in next time</span>,<span class='review-span highlight' data-aligned-summaries='6'> if I could get a comparable price</span>. However, with taxis from the centre around 11 Euros, this would still be a contender.</div><div class='text-box'>Traveled with a group of five couples, who do a lot of traveling, and all were very happy with the Pineta Palace. We had also read the reviews, but <span class='review-span highlight' data-aligned-summaries='0'>found the staff kind and accommodating</span>. <span class='review-span highlight' data-aligned-summaries='4'>The location is not in the city center</span>, but we found <span class='review-span highlight' data-aligned-summaries='7'>the hotel shuttle very reasonable</span> and taxi rates were not bad. The breakfast is excellent and <span class='review-span highlight' data-aligned-summaries='2'>the hotel restaurants served wonderful food</span> and were not over priced. We especially loved the food <span class='review-span highlight' data-aligned-summaries='1'>in the lounge</span> off the lobby. <span class='review-span highlight' data-aligned-summaries='1'>The staff</span> that worked that area <span class='review-span highlight' data-aligned-summaries='1'>were great</span>. I would recommend this hotel to anyone who would like to have <span class='review-span highlight' data-aligned-summaries='4 7'>a convenient location to the vatican, shopping areas</span> and really get <span class='review-span highlight' data-aligned-summaries='6'>a good value for</span> their <span class='review-span highlight' data-aligned-summaries='6'>money</span>.</div><div class='text-box'>We also stayed at the end of a Cosmos trip after the appraisal forms had been handed in. <span class='review-span highlight' data-aligned-summaries='3'>While</span> the room was <span class='review-span highlight' data-aligned-summaries='3'>clean</span> and the breakfast OK and we slept fine it is definitely <span class='review-span highlight' data-aligned-summaries='4 6 7'>not a place I would have chosen to stay to see Rome</span>. <span class='review-span highlight' data-aligned-summaries='4 7'>It was a long walk to the metro</span>. We chose to take a taxi straight to St Peters because it was unlikely to cost much more than taking a cab to the nearest station. <span class='review-span highlight' data-aligned-summaries='3'>The room was very cheaply and poorly built</span> so it didn't feel comfortable. <span class='review-span highlight' data-aligned-summaries='0'>The desk staff did their best to ignore the customers</span> and chatted among themselves. The internet was expensive. If you have a choice, don't stay here to see Rome.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='4 7'>This hotel is out of the way and hard to find</span>. The walls are very thin and you can hear your neighbors conversations from 3 rooms down. <span class='review-span highlight' data-aligned-summaries='3'>I heard the bathroom as if it was in my room</span>. The balconies are nice and there is a cute <span class='review-span highlight' data-aligned-summaries='1'>bartender who works in the bar on the evenings</span> who <span class='review-span highlight' data-aligned-summaries='1'>is really nice</span>. <span class='review-span highlight' data-aligned-summaries='0'>The hotel staff are all nice</span>. <span class='review-span highlight' data-aligned-summaries='3 6'>The rooms were yucky</span> and the tv hardly worked. the <span class='review-span highlight' data-aligned-summaries='6'>bed linen is worse than that at a best western</span>. <span class='review-span highlight' data-aligned-summaries='6'>4 1/2 stars how</span>? i have stayed at motel 6's with more luxury. The buffet was nasty at best. The eggs were so runny and I never seen that dark of eggs in all my life</div><div class='text-box'>Following our sightseeing trip to Rome we thought we should compliment the friendly <span class='review-span highlight' data-aligned-summaries='0'>helpful staff</span> during our stay .The Hotel was clean ,comfortable and amenities good. The food a lovely continental breakfast and plenty of it .Also you could arrange a packed lunch to take out with you a bonus when out sightseeing.We ate in <span class='review-span highlight' data-aligned-summaries='2'>the restaurant</span> on two nights and the <span class='review-span highlight' data-aligned-summaries='2'>food was good</span> and reasonable in price.There had been comments it was a little far out of the city but it is on the main bus route and a quick ten minute trip on the bus to the vatican. <span class='review-span highlight' data-aligned-summaries='3'>The rooms clean ,daily maid service ,a fridge and a bonus of a balcony</span>. We thoroughly enjoyed our stay in this hotel thank you.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='6'>Booked on Hotwire, or</span> <span class='review-span highlight' data-aligned-summaries='4 6 7'>we wouldn't have stayed so far out</span>.<span class='review-span highlight' data-aligned-summaries='7'></span> <span class='review-span highlight' data-aligned-summaries='4 7'>WE needed to take the subway then a bus to reach the hotel</span> from the train station. There is a shuttle 3 times a day into Rome, be sure to ask. The breakfast was awesome, lots to pick from and plenty of varitety. <span class='review-span highlight' data-aligned-summaries='3 6'>The room was adequate</span>,<span class='review-span highlight' data-aligned-summaries='3'> comfortable and clean</span>. <span class='review-span highlight' data-aligned-summaries='0'>The staff was half and half, we felt like a bother or catered to, depending on who was at the desk</span>. <span class='review-span highlight' data-aligned-summaries='2'>The resturant had good food</span> and service.</div><div class='text-box'>we really enjoyed our stay in rome ,the hotel was lovely ,<span class='review-span highlight' data-aligned-summaries='3'>the room was a great size</span> ,cleaned daily with fresh towels.reception staff were very helpful giving map of streets in rome <span class='review-span highlight' data-aligned-summaries='4'>.the hotel was a bit out of town but easy to get bus to metro station ,10mins on bus and 10 mins on metro to get to centre of rome.the</span> breakfast in the hotel was excellent lots of choice,selection of cereal,hot and cold buffet style.no complaints at all. <span class='review-span highlight' data-aligned-summaries='6'>great value for money</span>,will certainly go back to this hotel.</div><div class='text-box'>Good hotel. <span class='review-span highlight' data-aligned-summaries='4 7'>Perfect shuttle service to the city center</span>. And the diner in this hotel is really good, bud the atmosphere in the restaurant terrible. <span class='review-span highlight' data-aligned-summaries='0'>The service was average</span> bud the hotel needs a complete makeover. <span class='review-span highlight' data-aligned-summaries='3'>The rooms were clean</span> though. What bottered us was the noise at night, the walls are so thin! At the end I would recommend this Hotel. Esspecially because of the price we paid. <span class='review-span highlight' data-aligned-summaries='6 7'>Good value for the money</span>.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The staff were helpful for the most part.</span> <span id="1" class="summary-sentence">The lady who worked at at the bar in the evenings was not very friendly, however.</span> <span id="2" class="summary-sentence">The restaurant's food was mediocre.</span> <span id="3" class="summary-sentence">The rooms were reasonable and a decent size for a European hotel.</span> <span id="4" class="summary-sentence">The worst part was the location - you had to take a bus from the hotel to the metro station and then take the metro to the city centre.</span> <span id="5" class="summary-sentence">It took about 35-40 minutes to get to the city centre on average depending on the wait time at the bus stop.</span> <span id="6" class="summary-sentence">For the price, it was ok.</span> <span id="7" class="summary-sentence">I would try to find a hotel closer to the metro station to avoid the bus.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

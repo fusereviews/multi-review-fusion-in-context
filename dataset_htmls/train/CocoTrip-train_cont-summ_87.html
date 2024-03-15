@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>This hotel is enormous and their art collection is world class so you should go see that if you are in the area. The room was spacious & beautiful and the service was impeccable everywhere. <span class='review-span highlight' data-aligned-summaries='7'>We ate only breakfast at the hotel since it was included in our package & the buffet was wonderful</span>. <span class='review-span highlight' data-aligned-summaries='5'>The pool is so much fun, even for those not with children</span>. it's like a water park with several slides, a lazy river, etc. <span class='review-span highlight' data-aligned-summaries='2'>The beach is also very nice</span> and there was good snorkeling right from the beach. I didn't like the distance from our room to the beach/pool area. it felt like a mile. But once you got down there it was fantastic!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 2 9'>The lush gardens, the fabulous pools, and the beach are all wonderful</span>. The hotel is very large and thus can hold many, many people. When we visited in August, <span class='review-span highlight' data-aligned-summaries='4'>the hotel was very full and included</span> <span class='review-span highlight' data-aligned-summaries='4 5'>lots of families</span>. By mid-morning all beach umbrellas were gone and <span class='review-span highlight' data-aligned-summaries='5'>all sitting spots around the pools were also taken</span>. So don't expect just a few people at the beach and around the pools. The location is great as it is right next door to an upscale shopping mall and great restaurants; and several more wonderful beaches are within walking distance. The onsite "humuhumu" restaurant is located in a lagoon and offers great sunset views.a great place to have dinner.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='9'>We returned for another great stay</span> in Maui, and <span class='review-span highlight' data-aligned-summaries='0'>everything was awesome yet again</span>. The staff is pretty friendly, especially the housekeepers. One thing we learned to do is run by the grocery store for the basics like water and <span class='review-span highlight' data-aligned-summaries='7'>breakfast</span> items, because it <span class='review-span highlight' data-aligned-summaries='7'>is</span> really <span class='review-span highlight' data-aligned-summaries='7'>expensive at the hotel</span>. <span class='review-span highlight' data-aligned-summaries='1'>The coffee in the room is great</span> and free. The pools and the ocean out front are so much fun and were very clean. We travel a lot and stay in nice hotels all over, but <span class='review-span highlight' data-aligned-summaries='0'>Grand Wailea is our favorite</span> and cannot wait to return next year!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 2 9'>This resort was wonderful</span>. It is beautiful! <span class='review-span highlight' data-aligned-summaries='7'>The buffet breakfast is fabulous</span>. Complete with handmade pastries, fresh fruit, custom omelttes, and more. The restaruants at the resort were great. My husband and I looked at the other neighboring resorts like the 4 seasons and they are not as spectacular and they were more expensive. <span class='review-span highlight' data-aligned-summaries='1 2'>THe beach is one of the best in Maui</span> <span class='review-span highlight' data-aligned-summaries='1'>and the gardens are a vacation all on their own</span>. The staff was friendly and helpful. <span class='review-span highlight' data-aligned-summaries='8'>This is an expensive resort but</span> <span class='review-span highlight' data-aligned-summaries='0 8 9'>it was worth the money</span>!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Our stay at the Grand Wailea was outstanding</span>! We stayed at the resort for 8 nights and the service provided by the entire staff was exceptional. The room was very large, clean and quiet. The pool was incredible and the grounds were immaculate. <span class='review-span highlight' data-aligned-summaries='9'>Our stay at the Grand Wailea exceeded our expectations</span> and as a result of the great service we received from the entire Wailea staff, <span class='review-span highlight' data-aligned-summaries='9'>we are planning to return in the near future</span>.</div><div class='text-box'>From the time you get out of your car and are greeted the experience at this resort was amazing. The landscaping was beautiful, the staff friendly, the pools were perfect, and <span class='review-span highlight' data-aligned-summaries='2'>the beach was one of the best</span> in Maui. If you are looking for an "experience" <span class='review-span highlight' data-aligned-summaries='9'>I highly recommend staying at the Grand Wailea</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 1 9'>Great location on Maui</span>. <span class='review-span highlight' data-aligned-summaries='0 2'>The Grand Wailea staff were wonderful</span>. <span class='review-span highlight' data-aligned-summaries='2'>The beach was beautiful, water was warm</span> and beach staff were very accommodating, offering all the beach activities, the pool was great as well as all <span class='review-span highlight' data-aligned-summaries='7'>the restaurants with all the</span> <span class='review-span highlight' data-aligned-summaries='1 7'>gorgeous breathtaking ocean views</span>, <span class='review-span highlight' data-aligned-summaries='9'>had a great time, vacation of a lifetime.</span></div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>The Grand Wailea is a beautiful resort with lots of amenities</span>. <span class='review-span highlight' data-aligned-summaries='5'>The pool and the slides are a wonderful addition</span>. <span class='review-span highlight' data-aligned-summaries='6'>The spa is, by far</span>, <span class='review-span highlight' data-aligned-summaries='6'>the best one that I have been too</span>! <span class='review-span highlight' data-aligned-summaries='0'>The food is great and the location is perfect</span>! <span class='review-span highlight' data-aligned-summaries='9'>It would have to be the best hotel in Maui</span>!</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The Grand Wailea is the perfect hotel-resort.</span> <span id="1" class="summary-sentence">The rooms were great with wonderful views of the ocean and it is in the perfect location in Wailea, Maui.</span> <span id="2" class="summary-sentence">The beach is wonderful and the resort is great.</span> <span id="3" class="summary-sentence">At Christmas, it's busiest time of the year</span> <span id="4" class="summary-sentence">there are lots of families</span> <span id="5" class="summary-sentence">so the resort (pool, slides etc) is overrun with children everywhere.</span> <span id="6" class="summary-sentence">The spa was great and well priced.</span> <span id="7" class="summary-sentence">Only issue was that the breakfast in the large dinning area was terrible and expensive.</span> <span id="8" class="summary-sentence">In addition, the prices at all of the restaurants like the one at the pool are outrageous.</span> <span id="9" class="summary-sentence">Overall we had a great stay and would highly recommend it.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

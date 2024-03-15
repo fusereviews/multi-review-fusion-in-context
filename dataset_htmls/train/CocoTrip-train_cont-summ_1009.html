@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>The hotel is in a good area and we called in advance to make certain that the room was clean for an early check-in. I was quite happy that they were able to accommodate me under short notice. The staff was nice to meet my needs. The room itself was a standard room. It is a small hotel and there was no restaurant on site. However, there are lots of places to eat close by so we had many choices. They have refrigerators in the room so we were able to keep our drinks cool. If you expect a 5 star hotel for amenities, then this is not the place. <span class='review-span highlight' data-aligned-summaries='7'>If you want</span> <span class='review-span highlight' data-aligned-summaries='0 7'>a reasonable budget hotel</span> <span class='review-span highlight' data-aligned-summaries='7'>then it will fit your needs</span> like it did for me. <span class='review-span highlight' data-aligned-summaries='7'>I'll likely return.</span></div><div class='text-box'>We booked a room at this hotel because of <span class='review-span highlight' data-aligned-summaries='1'>the location</span>. It <span class='review-span highlight' data-aligned-summaries='1'>is an easy walk to the CBS studios</span> where we attended the Price is Right. When we first walked in it looked to be clean, but upon closer investigation we noticed MOLD in the shower, visibly <span class='review-span highlight' data-aligned-summaries='6'>dirty comforters and very OLD pillows</span> that had lost their shape. The parking stalls were VERY close and we could BARELY get out without banging the car next to us. I <span class='review-span highlight' data-aligned-summaries='0'>paid $74 for this room</span> and I <span class='review-span highlight' data-aligned-summaries='0'>don't think it was worth that</span>. The pool is very small if you plan to swim. I would only recommend this hotel if you are without a car and need to walk to the CBS studios. Otherwise, <span class='review-span highlight' data-aligned-summaries='7'>try somewhere else</span>.</div><div class='text-box'>My Friend and I stayed at this hotel because we went to a concert at the El Rey theater. <span class='review-span highlight' data-aligned-summaries='0 7'>It was every thing we expected for the price</span>.<span class='review-span highlight' data-aligned-summaries='7'></span> <span class='review-span highlight' data-aligned-summaries='1 2 7'>Great location</span>, parking wasn't too bad, and the front desk even called us a cab when we needed a ride to the theater. The room was decent and the bed had clean sheets. The only thing I would complain about is the lack of seals on the door. You could pretty much hear everything that was going on outside. For some reason people decided to get up early (about 7:00am) and hang around on the balcony and talk loudly. Besides the early risers, this place great! <span class='review-span highlight' data-aligned-summaries='7'>I would definitely stay here again</span>!</div><div class='text-box'>This motel may not be the Ritz Carlton but <span class='review-span highlight' data-aligned-summaries='0 7'>if your looking for value</span>, <span class='review-span highlight' data-aligned-summaries='1 2 7'>a great location</span> <span class='review-span highlight' data-aligned-summaries='2 7'>and</span> <span class='review-span highlight' data-aligned-summaries='2 4 7'>safe neighborhood</span> then <span class='review-span highlight' data-aligned-summaries='0 7'>you've chosen the right place</span>! <span class='review-span highlight' data-aligned-summaries='1'>It is right across the street from the CBS studios</span>, the line for the price is right is just around the corner. My son and I stayed there for a week and received great service from the maids right on to the front desk. The front desk was more helpful than any concierge I have ever seen and they are just a wonderful hard working family. If I ever go back to LA I will definitely stay at the Beverly Inn even if it's only for the friendly service.</div><div class='text-box'>We wanted this hotel to be good, <span class='review-span highlight' data-aligned-summaries='0'>the price is great</span>, <span class='review-span highlight' data-aligned-summaries='1 2'>the area is great</span>,<span class='review-span highlight' data-aligned-summaries='1'></span> parking was good, staff was friendly, plenty of hot water, but, the bedspread was torn, the pillows were the size of towels, the lighting was bright neon with no shades, the staff was hanging bedspreads and blankets across the fence of the pool, you couldn't get ice after 7 PM ( and you had to pay for it), the room was dusty and yucky. <span class='review-span highlight' data-aligned-summaries='7'>This could be a great hotel, but I think it may be for sale</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1'>We booked this hotel due to the location.and</span> that is basically the only thing going for it. <span class='review-span highlight' data-aligned-summaries='3'>The neighbourhood is safe</span> .and convenient to The Grove and Farmers Market. Our room was dark and seedy.a small window that had a lovely view to a brick wall and back alley.and could hear everything happening in the room nextdoor. Luckily we only stayed for a couple of nights so we could see the sights of that end of Hollywood.and as soon as morning came.bags were packed and we were out of there. Seeya - bye! Won't be choosing to stay here again.lesson learnt.</div><div class='text-box'>This is one of the worse motels that I have ever stayed at. I got locked in the bathroom because the handle was broken, there <span class='review-span highlight' data-aligned-summaries='6 7'>seemed to be bugs in the bed the mattress was very bad</span>, It smelled, and there was a building with NO VIEW except a wall. They say they offer Coffee but the doors are locked to the office and there was none. the people was not nice just a very bad experience all together. <span class='review-span highlight' data-aligned-summaries='7'>Stay away from this place</span>.No parking except in very small places.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='7'>It is the worst place I have ever stayed</span> the room is dirty <span class='review-span highlight' data-aligned-summaries='5'>the bathroom don't work</span> and when you cAll the front desk they tell you come get the planger. <span class='review-span highlight' data-aligned-summaries='5'>The linons are old and when you ask for the towels they give the small towel</span> <span class='review-span highlight' data-aligned-summaries='7'>.horeble</span></div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">It was a good value.</span> <span id="1" class="summary-sentence">The location was the reason why we booked this hotel as it is right across the street from CBS studios.</span> <span id="2" class="summary-sentence">West Hollywood is not the best part of town.</span> <span id="3" class="summary-sentence">Saw many homeless people on the streets right by the hotel and overall did not feel very safe in the surroundings.</span> <span id="4" class="summary-sentence">The hotel just gave me the creeps.</span> <span id="5" class="summary-sentence">It needs to be updated.</span> <span id="6" class="summary-sentence">The furniture was old and the beds were uncomfortable.</span> <span id="7" class="summary-sentence">Not recommended.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

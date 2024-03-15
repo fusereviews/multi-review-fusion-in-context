@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>We chose the Hilton Bonaventure for our recent stay in Montreal based on the glowing recommendation of a frequent flying family member. The downtown location proved to be a great starting point for our city explorations. The room was clean, well laid out, and comfortable. The <span class='review-span highlight' data-aligned-summaries='0'>staff was courteous</span> and al spoke flawless English. One evening we decided to sample some local ice wine we had purchased, the hotel quickly <span class='review-span highlight' data-aligned-summaries='0'>brought us glasses, opened, and then served us our wine</span>. The breakfast was delicious, and the selection at the bar was above average. The rooftop garden was beautiful, although we didnat have time to walk though it in its entirety. Over all <span class='review-span highlight' data-aligned-summaries='0'>I give this hotel my full recommendation</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Hilton Bonaventure definitely provides bang for your buck</span>. The layout for this hotel is very unique. It has many "wings" and each wing has access to its own private pool. It also has many water features and excellent landscaping throughout the outdoor patios that are accessible privately via the rooms. You don't even realize that you are on the 17th floor once you get off the main elevator at the reception level and the view of the city from that floor is breathtaking. <span class='review-span highlight' data-aligned-summaries='0'>The staff is quite friendly and accomodating</span>. The only drawback: wired interenet only available for 1 computer in each room. Wireless internet is only available in the lobby. However, I enjoyed my stay!</div><div class='text-box'>Recently in Montreal to attend a concert with my teen Grand daughter and her friend. We chose the Bonaventure after much consideration due to it's proximity to the bell Centre( concert Venue and also Hockey Game Venue which my husband was attending). The decision could not have been better.The <span class='review-span highlight' data-aligned-summaries='0'>Bonaventure is connected to Montreal's extensive underground City</span>, lots of shopping, a skating rink, movie theatres.we were thrilled. To say nothing of the <span class='review-span highlight' data-aligned-summaries='0'>friendly hotel staff.to a person they were helpful and welcoming</span>. <span class='review-span highlight' data-aligned-summaries='0'>This is obviously a very well run facility</span>. The management and staff should be proud.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>There are no elevators and the staff doesn't tell you</span>. I had to drag my bags upstairs and then downstairs. There were no bellmans available when we arrived. It was horrible for $100US per night. When I asked for a closer room, I was given a downgraded room. I've never stayed at a 4 star hotel without elevators and no bellmen. Also, the drain in the bathtub was very slow. You end up showering in 4 inches of water.</div><div class='text-box'>hotel in central downtown location. Comfortable, the greatest asset is the garden with swimming pool on the top floor is even heated in winter ! <span class='review-span highlight' data-aligned-summaries='0'>Book a room</span> on the executive floor and enjoy complimentary breakfast and evening appetizers and snacks for a small fee. A perfect hotel to stay in the city.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Wonderful quality hotel</span>. The garden and pool are a great escape from the city below. The room was clean, comfortable and tastefully renovated - very modern yet so comfy. The <span class='review-span highlight' data-aligned-summaries='0'>staff was very helpful</span> and the location of the hotel is perfect for every sight in Montreal.</div><div class='text-box'>Was participating at a business convention in Montreal. We stayed at this hotel. <span class='review-span highlight' data-aligned-summaries='0'>Nice hotel with comfortable beds</span> and nice view of downtown Montreal. Near Place Bonaventure. <span class='review-span highlight' data-aligned-summaries='0'>Closed to Bell centre and all fancy restaurant around</span>.</div><div class='text-box'>Everything about this hotel was fine. It is a typical, better-than-averagely run downtown Hilton property. I went there for a few days on business and ended up liking it a lot.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The hotel is definitely recommended and the front of house staff were particularly amiable and helpful.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

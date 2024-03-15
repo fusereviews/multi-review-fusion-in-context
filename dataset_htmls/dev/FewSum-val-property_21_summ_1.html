@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>Tried them twice, <span class='review-span highlight' data-aligned-summaries='3'>they can't cook an egg to save a life</span>. <span class='review-span highlight' data-aligned-summaries='0'>Wait time is always long</span>, <span class='review-span highlight' data-aligned-summaries='3'>food came out cold</span>. Bummer too because it's so close to home and really the only breakfast place close by. I really wanted them to be better.</div><div class='text-box'>Coming from LA, this place disappointed me because it claimed to be healthy yet gourmet but really was just boring. <span class='review-span highlight' data-aligned-summaries='3'>The avocado toast is on sliced storebought bread</span>. <span class='review-span highlight' data-aligned-summaries='3'>The multigrain pancake was nothing to remember</span>. The house coffee is watered down. Maybe we ordered the wrong items but it really was a forgettable experience.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='3'>Great food</span>, great atmosphere. <span class='review-span highlight' data-aligned-summaries='2'>Has a patio to enjoy the outdoors</span>. <span class='review-span highlight' data-aligned-summaries='0'>Staff is always friendly</span>. <span class='review-span highlight' data-aligned-summaries='1'>They offer free coffee and infused water while you wait</span>. The menu is extensive with plenty of healthy options as well. Parking is easy. The only complaint is that <span class='review-span highlight' data-aligned-summaries='0'>the wait is sometimes really long</span>, but thats because it's popular.</div><div class='text-box'>We have came twice within the last two weeks and <span class='review-span highlight' data-aligned-summaries='3'>food was good. Fresh and tasty</span>! My kids love the chocolate chip pancakes. The potatoes are my favorite! <span class='review-span highlight' data-aligned-summaries='0'>Staff is friendly and attentive</span>. Inside is clean and very modern. <span class='review-span highlight' data-aligned-summaries='2'>They also have outside patio seating that will be nice</span> once the temperature cools down.</div><div class='text-box'>I'll be honest, <span class='review-span highlight' data-aligned-summaries='0'>I'm really sick of the faux local cafes</span>. We won't be back. <span class='review-span highlight' data-aligned-summaries='3'>The food is overpriced for the quality</span>, my omelet had about three sprinkles of chorizo, and the potatoes were uninteresting. Coffee is cheaper at Starbucks. Upsides- <span class='review-span highlight' data-aligned-summaries='0'>Our waitress was very good</span> and the <span class='review-span highlight' data-aligned-summaries='3'>millionaire's bacon was tasty</span>.</div><div class='text-box'>It's was pretty cold in here. The morning juiced beet juice was absolutely delicious. The menu had a variety of healthy meals. I was pretty impressed. I had lemon risotto blueberry pancakes. <span class='review-span highlight' data-aligned-summaries='3'>This was the best pancakes I've had. The flava just popped in my mouth</span>. I will be back to try something different.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 3'>Good</span> <span class='review-span highlight' data-aligned-summaries='3'>food</span> & <span class='review-span highlight' data-aligned-summaries='0'>service</span>. <span class='review-span highlight' data-aligned-summaries='0'>Usually crazy busy on the weekends</span>!! <span class='review-span highlight' data-aligned-summaries='4'>A must here for us is their lemon ricotta pancakes</span>, they taste better than they sound I promise!! I also like that <span class='review-span highlight' data-aligned-summaries='1'>they have complimentary coffee & ice water while you wait to be seated</span>.</div><div class='text-box'>I've eaten here before when it was The Good Egg but am LOVING the First Watch changes. The <span class='review-span highlight' data-aligned-summaries='0'>manager came over to greet me personally</span> and <span class='review-span highlight' data-aligned-summaries='0'>my server (Desmond) was polite</span>, knowledgeable of the new menu and <span class='review-span highlight' data-aligned-summaries='3'>offered an excellent suggestion</span> to my normal favorite. <span class='review-span highlight' data-aligned-summaries='3'>I tried the healthy egg white omelette w / spinach, feta cheese</span> and sli</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This is a local cafe that excels at customer service, though the wait can be long.</span> <span id="1" class="summary-sentence">To compensate, there is complimentary free coffee and infused, ice water.</span> <span id="2" class="summary-sentence">There is a patio outside that adds to the ambiance.</span> <span id="3" class="summary-sentence">The food is hit or miss being that it is not upscale.</span> <span id="4" class="summary-sentence">The lemon ricotta pancakes is the best dish.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

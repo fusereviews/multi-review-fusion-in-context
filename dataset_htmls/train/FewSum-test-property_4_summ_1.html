@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1'>Food was strictly ok</span>, I've had way better dimsum. The <span class='review-span highlight' data-aligned-summaries='1 2'>service was pretty bad</span> - the <span class='review-span highlight' data-aligned-summaries='2 3'>waiter kept coming by to see if we were done</span> eating starting at 9: 30pm, when the restaurant closes at 10pm. I wouldn't go back.</div><div class='text-box'>I don't have a lot of good things to say about this place except that <span class='review-span highlight' data-aligned-summaries='1'>the food is decent but</span> <span class='review-span highlight' data-aligned-summaries='1 2'>service is lacking</span>. This restaurant is relatively new but will not last long if they do not change / improve things. Food is good but service needs to be improved (they are understaffed).</div><div class='text-box'>We had a great time at Kwan. <span class='review-span highlight' data-aligned-summaries='1'>The food wasn't cheap, but everything was really unique and pretty good</span>. <span class='review-span highlight' data-aligned-summaries='2'>Service</span> and <span class='review-span highlight' data-aligned-summaries='3'>staff</span> <span class='review-span highlight' data-aligned-summaries='2 3'>was</span> <span class='review-span highlight' data-aligned-summaries='2'>nice</span> and <span class='review-span highlight' data-aligned-summaries='3'>friendly</span>. I'd say the dim sum is comparable to uptown restaurants. This is a good choice if you live in midtown of Toronto.</div><div class='text-box'>Came here for the first time today for dim sum. I was really wanting to love it because it's so close to my place, but the service really let me down. <span class='review-span highlight' data-aligned-summaries='2'>The food came out very slowly and the servers weren't very attentive or friendly</span>.</div><div class='text-box'>Not really a fan. High rent district forces <span class='review-span highlight' data-aligned-summaries='1'>higher pricing, but the food made me feel light headed</span>, which is often the case if there is MSG consumption. Overall, the depth & complexity of the dim sum left me wanting for dim sum from Richmond Hill instead. I won't be back.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1'>Hands down this is my new favorite go to for tasty and healthier Chinese. We tried 10 different dim sum items and they were all excellent and not drenched in oil</span>. <span class='review-span highlight' data-aligned-summaries='0'>The space is quite elegant</span> and <span class='review-span highlight' data-aligned-summaries='2'>the service was above average</span>.</div><div class='text-box'>Was feeling under the weather one day at work so I decided to get some congee for takeout. I ordered the <span class='review-span highlight' data-aligned-summaries='1'>congee with century egg and pork for $5</span>. <span class='review-span highlight' data-aligned-summaries='1'>It definitely hit the spot</span> and was a good portion. Would like to return and try the dim sum some day!</div><div class='text-box'>As a Chinese restaurant catering to the affluent multicultural midtown clientele, <span class='review-span highlight' data-aligned-summaries='1'>this place has ALMOST</span> <span class='review-span highlight' data-aligned-summaries='1 2'>nailed everything except for the service</span>. <span class='review-span highlight' data-aligned-summaries='3'>The</span> <span class='review-span highlight' data-aligned-summaries='2 3'>waiters</span> <span class='review-span highlight' data-aligned-summaries='3'>are always in a rush,</span> <span class='review-span highlight' data-aligned-summaries='2 3'>talk rudely</span> <span class='review-span highlight' data-aligned-summaries='3'>and dictatively</span>, make minimal eye contact <span class='review-span highlight' data-aligned-summaries='3'>and deliver (more like dump) dishes to the wrong table</span> (especially during busy weekends) .Also be careful to check your bill before you pay.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">A very elegant space.</span> <span id="1" class="summary-sentence">The food was quite expensive, everything was pretty good and really unique.  </span><span id="2" class="summary-sentence">But the service delivery was very bad.</span> <span id="3" class="summary-sentence">The waiters were always in a hurry, talk dictatively and rudely, they also delivered dishes to wrong table.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

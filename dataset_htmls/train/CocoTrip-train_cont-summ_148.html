@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>Just back from 3 nights celebrating my 50th birthday at this Fantastic hotel, the hotel upgraded us to a suite and also added breakfast as a special treat for my birthday. <span class='review-span highlight' data-aligned-summaries='2'>The location of this hotel is great</span>, <span class='review-span highlight' data-aligned-summaries='4'>5 mins from the nearest tube station/main shopping district and 10 mins to the Spanish Steps and Trevi Fountain</span>. The room was spacious, spotless and very trendy, throughout the hotel the theme is very modern and on par with other 5 star hotels we have been fortunate to stay in over the years. <span class='review-span highlight' data-aligned-summaries='6'>I must say a very special thank you to all the excellent staff who made our trip very special</span>. If you are looking for a modern boutique hotel in the centre of Rome, this is the place to stay ! Colin & Kim McLean</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 7'>Left the hotel and wish I were still there</span>. I had a great time, especially thanks to the service and location of the hotel. From the moment you walk in you feel like you're in an art museum, but done in a very delicate and non-pretentious way. Then, the very open and welcoming front desk gives the hotel a different and modern vibe to other 5 star hotels I've stayed at. I'd like to personally thank Alex at the front desk for his <span class='review-span highlight' data-aligned-summaries='5'>prompt and attentive service throughout our entire stay</span>. He made us feel very welcome and was extremely polite. Also, <span class='review-span highlight' data-aligned-summaries='2'>the hotel is really well located, near city life, but</span> <span class='review-span highlight' data-aligned-summaries='2 3'>tucked away in a quaint side street</span>. Overall, great hotel!</div><div class='text-box'>We recently stayed here for four nights and <span class='review-span highlight' data-aligned-summaries='7'>highly recommend the hotel</span>. In particular, the staff went well above and beyond - from the moment we walked in, they couldn't have been more friendly and helpful. We loved the in-room check-in, the quality of the bed and linens, the antipasti and drinks at the bar, the large bathroom in the room, the fantastic roof deck with lovely views, the strong and dependable wifi, and well, just about everything else. I'm generally one to find fault, but <span class='review-span highlight' data-aligned-summaries='0'>I'd be hard pressed to complain about anything</span>. And above all else, the staff were just wonderful. Stay here!</div><div class='text-box'>It was a dream week. <span class='review-span highlight' data-aligned-summaries='0 7'>The hotel is designed so well</span>, every point is carefully. <span class='review-span highlight' data-aligned-summaries='0 1'>Everything was clean</span> <span class='review-span highlight' data-aligned-summaries='0'>and cozy</span>. Warm and dedicated staff gives personal attention 24 hours a day, for a moment we forgot that we were without our family . <span class='review-span highlight' data-aligned-summaries='5'>Professional and responsible service</span>, all staff speak excellent English. <span class='review-span highlight' data-aligned-summaries='2 3 7'>The hotel is close to</span> <span class='review-span highlight' data-aligned-summaries='2 7'>everything</span>, especially <span class='review-span highlight' data-aligned-summaries='3'>the important street - Corsso shopping district</span>. Do not miss a meal at the hotel because it turns out that the chef is an artist as well and as far as the meal in the hotel was the best we eat in Rome. I already miss the hotel. have fun!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>The First Hotel is a beautiful</span> and well managed hotel. I have been treated like a little princess from check in to check out. <span class='review-span highlight' data-aligned-summaries='0'>The rooms are larged and well equiped</span>, very cozy. The bed is extremely confortable. There is a great walk in closet and the bathroom is just stuning. <span class='review-span highlight' data-aligned-summaries='2 3'>The location is just perfect</span> <span class='review-span highlight' data-aligned-summaries='3'>tuck up in a side street</span> so <span class='review-span highlight' data-aligned-summaries='2'>very quiet and discreet</span>. <span class='review-span highlight' data-aligned-summaries='5'>The staff is discreet, attentive and warm</span>. <span class='review-span highlight' data-aligned-summaries='6'>The breakfast and dinner is really enjoyable</span>. In the evening there is a musician in the bar so <span class='review-span highlight' data-aligned-summaries='7'>you won't feel the need to leave the hotel</span>! I <span class='review-span highlight' data-aligned-summaries='7'>could not recommend the hotel enough</span> !</div><div class='text-box'>From the moment you enter the doors at <span class='review-span highlight' data-aligned-summaries='0'>this hotel</span> you feel like a royal. The warm welcome in the reception and the following guide <span class='review-span highlight' data-aligned-summaries='0'>up to the marvelous room is just breathtaking</span>. We had a junior suite for three nights, and the room was one of the best we have ever been staying at. The facilities was good, the service was EXCELLENT! E However, the breakfast was not the most exciting I've seen, and with a price of 30 per person it's rather expensive and not as valuable as I was hoping for.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>This hotel is</span> called the first, and it is true is just the first, number one, good choice to set up in a real art gallery, the inside is very elegant, <span class='review-span highlight' data-aligned-summaries='0'>beautiful</span> their restaurant, where we ate really well, is not very economical as a hotel but if you want the best these is money really well spent, thanks to the concierge for having recommended then Porto di Ripetta restaurant good advice!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>This hotel is absolutely the best of the best</span>. <span class='review-span highlight' data-aligned-summaries='1'>Brand new. Clean</span>. <span class='review-span highlight' data-aligned-summaries='5'>Helpful staff</span>. Everything you wish for on your holiday. Do not hesitate and book a room! The view form the top floor is spectacular. There is nothing bad that I can say about this great hotel.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This hotel is beautiful, and the accommodations were lovely.</span> <span id="1" class="summary-sentence">Everything is new and very clean!</span> <span id="2" class="summary-sentence">The location can not be beat.</span> <span id="3" class="summary-sentence">The hotel is on a little street very close to the best shopping and excellent restaurants.</span> <span id="4" class="summary-sentence">You can walk everywhere!</span> <span id="5" class="summary-sentence">The staff were young and professional.</span> <span id="6" class="summary-sentence">The service in the restaurant was outstanding, and the food was delicious.</span> <span id="7" class="summary-sentence">Definitely worth another visit!</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

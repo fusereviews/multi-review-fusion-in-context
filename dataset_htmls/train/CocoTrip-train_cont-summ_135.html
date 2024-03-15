@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>nice cozy hotel right in the centre of all that is happening around. BUT - found it a bit pricey considering they do not have a porter, there are no lifts, the staircase is steep and narrow, rooms are slightly bigger than the bed! the location also was slightly slimey (narrow roads, can't see anything clearly, and feels like you are in dark alleys). the tv was small (though sufficient for the room that small) and hardly had any english channels. on the flip side - the <span class='review-span highlight' data-aligned-summaries='3'>staff was friendly</span>, <span class='review-span highlight' data-aligned-summaries='0'>everything was just around the corner</span>, the furnishing looked ancient but then was well maintained. not too sure whether i would want to go back to this place - as i was expecting a bit more from it.</div><div class='text-box'>Hotel Lux has an excellent location to stay at while in Venice. This was our first of 3 hotels and first time in Italy. Everything worked out fine. Right in the heart of everything, but the side streets have great cafes and shops. Internet cafe right down the street. Room was small, but clean. We did walk up 3 flights of stairs, but they carried our luggage up and down for us. Breakfast area was small, but sufficient. Other reviews say something about having a room in another building. We didn't experience this and didn't hear of anyone complaining while we were there. <span class='review-span highlight' data-aligned-summaries='0'>The location was excellent-right next to a water taxi stop</span>. Easy to get around all over Venice.</div><div class='text-box'>I had friends that stayed there and thought it was very nice. However, my experience was the same as some of the other negative reviews. We entered an lovely lobby to register and then we were taken outside, down the way and around the corner to another building. <span class='review-span highlight' data-aligned-summaries='4'>The room was dank</span>, low ceilinged and almost claustraphobic. We had stayed at 2 star hotels in Rome and Florence for nearly half the price and they were both better. <span class='review-span highlight' data-aligned-summaries='4'>After complaining about the malfunctioning air conditioning several times, we were moved to a different room</span> the next day. It was substantially better. It seems the quality of rooms varies wildly. I wouldn't risk booking a room here again.</div><div class='text-box'>We stayed for 3 nights. The stairs were exactly as we saw on the intenet which was comforting as we had not booked over the net before. <span class='review-span highlight' data-aligned-summaries='3'>The reception was vey helpfull</span>. Our room was typical venetian very nice, a bit dark but clean. <span class='review-span highlight' data-aligned-summaries='2'>We found the bed a bit hard</span> and in the early hours you can hear the early workers and bin collection going on, but overall it's ok for 3 nights. <span class='review-span highlight' data-aligned-summaries='4'>Basic breakast</span>, small rolls and coiussants, spread cheese and chocolate spread! coffee,tea,juice. I think <span class='review-span highlight' data-aligned-summaries='0'>the location is perfect, easy to find on arrival</span> after getting of the water bus. a good hotel for the price.</div><div class='text-box'>Great location - very close to San Marco Square. We stayed in a room around the corner from the main entrance to the hotel. It felt like our own private apartment. If you can't walks stairs, stay away from this hotel. The room was nicely decorated and <span class='review-span highlight' data-aligned-summaries='2'>the bed was comfortable</span>. <span class='review-span highlight' data-aligned-summaries='4'>There was central A/C which you control in your room. In fact it got sooooo cold, in the room</span>, we had to turn it down. <span class='review-span highlight' data-aligned-summaries='4'>The breakfast was o.k</span>. <span class='review-span highlight' data-aligned-summaries='0'>A great location - 1 block from the San Marco Square boat dock and 3 blocks from the Alilaguna boat that takes you to the Venice Airport</span>.</div><div class='text-box'>After a disaster and a half in Rome it was a delite to arrive at this place. We were a little surprise to find we got checked in in one building but walked around the corner to another building but none the less the rooms were very nice (small) but very very nice, <span class='review-span highlight' data-aligned-summaries='3'>the staff helpful</span> and <span class='review-span highlight' data-aligned-summaries='4'>breakfast was great.</span> We were very <span class='review-span highlight' data-aligned-summaries='0'>very close to everything</span> (note, if your going for the first time you need catch the water taxi to San Zaccheria). If we go back to venice we will stay here for sure, without a doubt. Thanks Hotel Lux.</div><div class='text-box'>Stayed in hotel lux in venice after reading reviews on tripadvisor. Prices in venice were a fortune so we found this one and took a chance. <span class='review-span highlight' data-aligned-summaries='0'>Hotel had a great location near the water taxis</span> and was easy to find. <span class='review-span highlight' data-aligned-summaries='3'>The staff was friendly</span> and the room was charming. The one caveat is that the hotel has no elevator so bringing baggage up the steps can be difficult but worth the effort. Room was nice and clean and hotel had small area for breakfast. Price was great. My wife was worried when I booked hotel but loved after we got there.</div><div class='text-box'>The room was in another building down the street from the hotel. We had to carry our luggage up several stairs with no help. The room was nothing fancy. We were glad it was for only 1 night. The only positive things about the hotel is that they let us store our luggage for several hours while we explored Venice and the location. We stayed in other 3 star hotels in Italy that were considerably better. Not worth the money we paid.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The location was out of the way but not too hard to find.</span> <span id="1" class="summary-sentence">The bath is clean and adequate.</span> <span id="2" class="summary-sentence">the beds are passable for a short amount of time.</span> <span id="3" class="summary-sentence">the staff was a bit gruff and the breakfast is a few doors down in another building.</span> <span id="4" class="summary-sentence">The offerings for breakfast is good but the rooms are on the warm side.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

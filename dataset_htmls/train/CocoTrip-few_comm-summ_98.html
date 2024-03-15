@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>We have just spent 4 great nights at this hotel. My wife is in a wheel chair and the room was fully accessible, the bath is even wider in the middle so you can turn round in the shower. All the <span class='review-span highlight' data-aligned-summaries='0'>staff were</span> very <span class='review-span highlight' data-aligned-summaries='0'>friendly</span> and the <span class='review-span highlight' data-aligned-summaries='0'>doors were always opened for</span> us before we got there, even when it was snowing like mad - <span class='review-span highlight' data-aligned-summaries='0'>Thanks</span> everyone. You must visit the Rock Bottom Brewery just around the corner - the burgers are great and huge, the main courses are elegant and sophisticated and the carrot cake is big enough to use as a building brick - but a lot tastier! BUT the main attraction is the great beers available all local brews and tasting great. Again would recommend this hotel to everyone, they were still filling up the breakfast racks with 5 minutes to go (Finish -10 am weekdays, 11 am weekends), and fresh coffee is always available in the breakfast room.</div><div class='text-box'>1. <span class='review-span highlight' data-aligned-summaries='0'>Neighborhood is great</span> and safe. 2. Lots of local bars a couple streets over on Wells and Clark all the way up to Chicago Ave. 3. <span class='review-span highlight' data-aligned-summaries='0'>Every employee greeted us nicely, not a negative person in the place</span>! 4. 160 a night more than I'm used to but had a free night coupon so helped 5. Breakfast included to get the day going 6. I would stay here again, we had a great time!</div><div class='text-box'>We got to the hotel early in the morning and <span class='review-span highlight' data-aligned-summaries='0'>they let us check in at aronud 9 am</span>. <span class='review-span highlight' data-aligned-summaries='0'>It is a block away from the Grand Train Station (</span>red line), so you can get anywhere from there. The room was so clean and comfortable. The complementary breackfast buffet is really good. The employees have excelent knowledge of the nearby good restaurants. It was a pleasant stay.</div><div class='text-box'>The hotel suites are very large considering you are in downtown Chicago. Our king suite had a full size refrigerator, stove, microwave oven, and dishes. They provided free breakfast, and free coffee and tea 24 hours a day. <span class='review-span highlight' data-aligned-summaries='0'>The location is very convenient and a couple of blocks from Michigan Ave</span>. The rooms need a little remodeling, though, but are clean and comfortable.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>The hotel staff were very friendly and competent</span> . The hotel is clean and our room was fine. <span class='review-span highlight' data-aligned-summaries='0'>The location of the hotel is good</span>, it's about a 2 block walk to the red line subway. Breakfast is served from 6-10AM. The breakfast bar is very popular with families. If you plan to eat after 8AM be prepared to deal with a swarm of children.</div><div class='text-box'>I was in Chicago for a meeting and I was staying in Hampton Inn and Suites for one week. <span class='review-span highlight' data-aligned-summaries='0'>It it very close to Michigan Ave</span> (Magnificent miles) less than 5-10 min walking, very close to the subway. Everything was perfect. So If I come back to Chicago I'll stay there</div><div class='text-box'>The hotel was great - clean, attractive, comfortable. <span class='review-span highlight' data-aligned-summaries='0'>It's in a terrific location</span>. <span class='review-span highlight' data-aligned-summaries='0'>The staff went above and beyond</span> - <span class='review-span highlight' data-aligned-summaries='0'>friendly</span>, welcoming, knowledgeable, and just very very nice. They were all wonderful - we particularly enjoyed speaking with Janita Walton. We would definitely stay there again.</div><div class='text-box'>Hotel was clean, spacious, <span class='review-span highlight' data-aligned-summaries='0'>good location</span> and good value for money. Only criticism I would say is that it's right next to the fire department, therefore can be a little noisy at times, certainly not enough to stop me coming back. Overall, very good.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The location of the hotel is great and close to Michigan Avenue and the staff are friendly and helpful.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>I took a quick 3 day weekend trip to Toronto (my first trip there) with friends to see a ballgame and the Hockey Hall of Fame and take a quick tour of the city. The staff at the Grand was very friendly, helpful and attentive. Feeling welcome is very unusual in todays mega-chain hotels, but the Grand was top notch in that respect. Any flaws that the Grand may have vanish thanks to the staff and <span class='review-span highlight' data-aligned-summaries='7'>many complimentry features</span>. <span class='review-span highlight' data-aligned-summaries='5'>Excellent</span> free <span class='review-span highlight' data-aligned-summaries='5'>breakfast buffet</span>, <span class='review-span highlight' data-aligned-summaries='7'>nice indoor pool</span> and <span class='review-span highlight' data-aligned-summaries='7'>jacuzzi</span>, <span class='review-span highlight' data-aligned-summaries='7'>two rooftop jacuzzis</span> and <span class='review-span highlight' data-aligned-summaries='7'>sitting areas</span> (make sure you use them on warm summer night!) and free gym. <span class='review-span highlight' data-aligned-summaries='8'>Underground parking is expensive, $19.00 per night</span>, but I was not charged. <span class='review-span highlight' data-aligned-summaries='1 3'>The neighborhood is very colorful</span>, but if you want a sanitized version of a city, stay on the Las Vegas strip. <span class='review-span highlight' data-aligned-summaries='3'>You will feel safe anywhere you walk in Toronto</span>, and Toronto is a city that should be walked to be experienced.</div><div class='text-box'>We were satisfied with our stay at this hotel. The service was very good, the hotel was clean, the <span class='review-span highlight' data-aligned-summaries='5'>breakfast was decent</span>, and the rooms were just fine. The <span class='review-span highlight' data-aligned-summaries='1 3'>hotel is in a not great area</span>, but <span class='review-span highlight' data-aligned-summaries='0'>I felt safe</span>, nonetheless. A bit <span class='review-span highlight' data-aligned-summaries='2'>outside of the city center</span>, but the hotel itself is nice and it is <span class='review-span highlight' data-aligned-summaries='2'>close to a subway station</span>, <span class='review-span highlight' data-aligned-summaries='2'>as well as a trolley line</span>. Don't bother renting a vehicle, you won't need it! Also, the hotel offers a shuttle to sites within the downtown district. The <span class='review-span highlight' data-aligned-summaries='7'>swimming pool is</span> very <span class='review-span highlight' data-aligned-summaries='7'>nice</span>, and <span class='review-span highlight' data-aligned-summaries='7'>the roof space is very nice with plenty of seating</span> and <span class='review-span highlight' data-aligned-summaries='7'>the hot tubs were great</span>. The staff were attentive and very gracious. I would definitely stay here again.</div><div class='text-box'>We got a great deal online for a nice room with a beautiful view - the small suite with a foldout couch was perfect for our family of four. <span class='review-span highlight' data-aligned-summaries='2 4'>The hotel</span> <span class='review-span highlight' data-aligned-summaries='4'>staff was pleasant, knowledgeable and helpful, with lots of tips for getting around</span>. <span class='review-span highlight' data-aligned-summaries='1'>The location is not excellent</span> - <span class='review-span highlight' data-aligned-summaries='2'>it's on the outskirts of downtown</span>, and the neighborhood is a bit scary even for those of us from other large cities - but the hotel provides a free shuttle, and <span class='review-span highlight' data-aligned-summaries='2 6'>we were able to walk to restaurants</span> <span class='review-span highlight' data-aligned-summaries='2'>and shopping without a problem</span>. <span class='review-span highlight' data-aligned-summaries='7'>The pool room was hot and overchlorinated</span> but adequate to calm down the kids before dinner. All in all, a nice stay, and we'd go back.</div><div class='text-box'>I have just returned home from my Canadian Getaway. The hotel is fantastic and we have never experienced such incredible service before. Our room always looked spectacular, and the <span class='review-span highlight' data-aligned-summaries='4'>front desk staff was always extremely helpful</span>. We ate a couple <span class='review-span highlight' data-aligned-summaries='5'>meals at the hotel</span> which <span class='review-span highlight' data-aligned-summaries='5'>were both great</span>. I would recommend this restaurant and hotel to anyone travelling into Toronto or that even live in Toronto! I've visited Toronto many times and love the city, yet i've never wanted to stay in the hotel so much before. <span class='review-span highlight' data-aligned-summaries='7'>The roof top was beautiful</span> at night or in the day. If you want to <span class='review-span highlight' data-aligned-summaries='0'>mix a little luxury</span> with the odd trip to Toronto then this Hotel is an absolute must.</div><div class='text-box'>We stayed at the Grand hotel for 2 nights, and it was great. Our Junior Suites were clean, spacious, and very comfortable. <span class='review-span highlight' data-aligned-summaries='4'>The staff was very friendly, helpful, and accomodating</span>. <span class='review-span highlight' data-aligned-summaries='1 2'>The location was excellent</span> <span class='review-span highlight' data-aligned-summaries='2'>- steps away from the Eaton Centre and great shopping</span>. We had a <span class='review-span highlight' data-aligned-summaries='5'>lovely complementary breakfast each morning including both hot and cold food</span>. <span class='review-span highlight' data-aligned-summaries='7'>Complementary internet access</span> was very useful in keeping in touch with family. We pretty much had the <span class='review-span highlight' data-aligned-summaries='7'>beautiful pool, whirpool, and locker room facilities</span> to ourselves - also very clean. I will definitely be staying at the Grand hotel again.</div><div class='text-box'>The only complaint I have with this hotel is that <span class='review-span highlight' data-aligned-summaries='5'>the buffet breakfast, which was included</span> in the price of the room, <span class='review-span highlight' data-aligned-summaries='5'>was lousy</span>. <span class='review-span highlight' data-aligned-summaries='5'>Watery scrambled eggs, pay extra for a cappuccino, bacon that died two days ago</span> - apart from that though, a great hotel with terrific service. <span class='review-span highlight' data-aligned-summaries='1 2'>A short walk to the Eaton Centre and Yonge Street</span>. <span class='review-span highlight' data-aligned-summaries='6'>A good diner/grill/bar across the road</span>. Despite the breakfasts, I'd stay there again.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 7'>Liked the hotel, the rooms, the pool, the hot tub</span> <span class='review-span highlight' data-aligned-summaries='7'>on the roof</span>. <span class='review-span highlight' data-aligned-summaries='1 2'>Location close to everything you need</span>, <span class='review-span highlight' data-aligned-summaries='1'>but</span> <span class='review-span highlight' data-aligned-summaries='3'>somehow the blocks surrounding the Grand Hotel are</span> <span class='review-span highlight' data-aligned-summaries='0 1 3'>not the nicest area</span>.<span class='review-span highlight' data-aligned-summaries='0'> I didn't feel safe there.</span></div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='4'>Staff was very helpfull with directions around the city</span>. <span class='review-span highlight' data-aligned-summaries='1'>Location was fine</span> , We had <span class='review-span highlight' data-aligned-summaries='3'>no problems with anyone in the area</span> despite what other people have said in their reviews.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This hotel gives a mix of luxury and odd unsafe feeling.</span> <span id="1" class="summary-sentence">The location was fine.</span> <span id="2" class="summary-sentence">It is on the outskirts of downtown and close to everything you need: it is steps away from Eaton Centre, Yonge Street, and great shopping areas.</span> <span id="3" class="summary-sentence">However, the blocks surrounding it aren't ideal.</span> <span id="4" class="summary-sentence">The hotel staff pleasantly provided lots of great local recommendations.</span> <span id="5" class="summary-sentence">The food here is okay including the hot and cold options for breakfast buffet.</span> <span id="6" class="summary-sentence">It is worth checking restaurants across the road as well.</span> <span id="7" class="summary-sentence">This hotel provides so many amazing additions, such as a nice swimming pool with hot tubs and locker room facilities, a beautiful roof top space with plenty of seating, and complementary internet access.</span> <span id="8" class="summary-sentence">The only downside is the expensive underground parking.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

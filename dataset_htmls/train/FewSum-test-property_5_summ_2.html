@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>This is probably my favorite Persian cuisine resturant in Vegas. <span class='review-span highlight' data-aligned-summaries='1'>The</span> <span class='review-span highlight' data-aligned-summaries='1 3'>place is</span> <span class='review-span highlight' data-aligned-summaries='0 1 3'>nicely decorated</span> <span class='review-span highlight' data-aligned-summaries='3'>and very clean</span>. I am very impressed with their food: <span class='review-span highlight' data-aligned-summaries='4'>the portions are huge and</span> <span class='review-span highlight' data-aligned-summaries='0 4'>the food is delicious</span>. I have tried their lamb shank and beef kebab.... Amazing!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1'>It was a nice place in a very odd spot</span>. Hard to find entrance and I don't think their vents work very well in kitchen since it was <span class='review-span highlight' data-aligned-summaries='0'>extremely smokey</span> when we walked in. <span class='review-span highlight' data-aligned-summaries='2'>They don't have fountain soda only cans, so no free refills</span>. <span class='review-span highlight' data-aligned-summaries='0'>The food was ok</span>. Not anything I really think we would go back for though.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Great food</span> and we had a <span class='review-span highlight' data-aligned-summaries='0'>great time here</span> interfering a party that seemed to be going on here. The family platter we got was sooo good, would definitely return! I also really liked the sour milk yogurt drink they have here.</div><div class='text-box'>If you are <span class='review-span highlight' data-aligned-summaries='4'>looking for great</span> Iranian (Persian) or Mediterranean <span class='review-span highlight' data-aligned-summaries='4'>food this is the place to go</span>! <span class='review-span highlight' data-aligned-summaries='0 5'>They have</span> <span class='review-span highlight' data-aligned-summaries='0'>the best food</span> and <span class='review-span highlight' data-aligned-summaries='0 5'>the greatest customer service</span>. If you are in Vegas stop by this place, don't miss out on it!</div><div class='text-box'>I am very excited that I found this restaurant. They offer a very <span class='review-span highlight' data-aligned-summaries='0'>good lunch special menu</span> with <span class='review-span highlight' data-aligned-summaries='5'>good prices for</span> <span class='review-span highlight' data-aligned-summaries='4 5'>generous portions</span> <span class='review-span highlight' data-aligned-summaries='4'>of</span> <span class='review-span highlight' data-aligned-summaries='0 4'>delicious food</span>. I plan on returning often. The beef koobideh kabob was succulent and the side salad was refreshingly bright.</div><div class='text-box'>I highly recommend American Gypsy Cafe. I stop by for lunch or dinner whenever I'm in Vegas. I have ordered pretty much everything on the menu, and I have never been disappointed. <span class='review-span highlight' data-aligned-summaries='0 4'>Great food</span>,<span class='review-span highlight' data-aligned-summaries='0'></span> <span class='review-span highlight' data-aligned-summaries='0 5'>great service</span>,<span class='review-span highlight' data-aligned-summaries='0'> great all around dining experience</span>!</div><div class='text-box'>Eaten there twice so far and both time <span class='review-span highlight' data-aligned-summaries='0'>everything has been excellent</span>. <span class='review-span highlight' data-aligned-summaries='0'>Very tasty food</span> and the owner actually goes in the back and cooks it all up himself. Falafel appetizer and hummus are great starters and the beef koobideh kabobs are great. My friend had the chicken koobideh kabob and loved it. Lunch specials have great deals too.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1 3'>I saw ants in the kitchen area on the way to bathroom</span>. Do not eat here!!! Omg unsanitary. Be aware!! I canceled my order and left asap. You could get staph infection from ants and other bugs. Costumer beware!</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The food, service and all around dining experience is great.</span> <span id="1" class="summary-sentence">Such a nice place in an odd spot.</span> <span id="2" class="summary-sentence">They have only cans and no fountain soda, so there are no free refills.</span> <span id="3" class="summary-sentence">The place is clean and very nicely decorated.</span> <span id="4" class="summary-sentence">The portions are massive and the food is very delicious.</span> <span id="5" class="summary-sentence">The customer service is great and the price is good.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

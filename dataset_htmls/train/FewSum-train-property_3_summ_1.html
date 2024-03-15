@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Coffee is usually good</span>, <span class='review-span highlight' data-aligned-summaries='0'>today</span> they had to finish brewing the decaf. I waited and what did I end up with, <span class='review-span highlight' data-aligned-summaries='0'>a cup full of coffee grounds</span>. Had to spit out most of the cup of coffee.Guess I need to bring my own filter when I visit this Starbucks. Very disappointed.</div><div class='text-box'>I just went thru the drive thru, and the <span class='review-span highlight' data-aligned-summaries='0 1'>coffee was extremely cold</span>. <span class='review-span highlight' data-aligned-summaries='0'>The guy at the window didn't seem to be coherent</span>! I am paying $7 for a cold cup of coffee?? This isn't the first time my coffee is cold.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>This location has pretty much gone down hill through the years in terms of service</span>. The baristas seem like they don't want to be there and who ever is stationed at the register in the morning acts like its a burden that you're ordering coffee so early. Weird.</div><div class='text-box'>I come here everyday. <span class='review-span highlight' data-aligned-summaries='0'>The baristas are all very friendly and always recognize us</span> when we walk in. <span class='review-span highlight' data-aligned-summaries='0'>The manager John is very nice</span>. They always have our mobile orders ready when we walk in. Never had an issue here. Will continue to come back!</div><div class='text-box'>Great place to stop by first thing in the morning. There's an Asian chick that works there who's the bomb! <span class='review-span highlight' data-aligned-summaries='0'>It's nice to have someone recognize you and start making your drink as soon as you walk through the front door</span>! Definitely one of my favorite spots.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Terrible service</span>! I came in to get iced coffee.. Sat outside and came back for my refill and they said 'no.. Can't do it if you leave the store!' Wow... I love Starbucks and never had an issue like this before. Not ever coming back to this location ever!!!!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 1'>Worst cappuccino ever. Burnt flavor</span> and they made it twice. Way to throw $4 down the toilet. If they can't train people to do it right then don't waste your time. <span class='review-span highlight' data-aligned-summaries='0'>McDonald's coffee is better then this</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Excellent coffee</span> and seating areas. I like it when seating areas take up more space than stupid retail. Who's thinking of buying an espresso machine early in the morning. Let me drink my coffee and hop on the wifi. I'm here every week so, <span class='review-span highlight' data-aligned-summaries='0'>no complaints and my order is always exactly how I like it</span>.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The place used to be good, but now they have bad customer service and not so great coffee.</span> <span id="1" class="summary-sentence">Customers are getting cold and burnt coffee.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>stayed at this hotel for three nights. <span class='review-span highlight' data-aligned-summaries='4'>It is very central to most of the tourist sites in Rome but on a very</span> busy, <span class='review-span highlight' data-aligned-summaries='4'>noisy street</span>. Sound proofing was not very good and even with the windows closed, <span class='review-span highlight' data-aligned-summaries='1'>the rooms facing the street were very noisy</span> long into the night. We were given a new updated room which was very comfortable and modern with a flat screen TV, however the new bathroom did not have a shower screen which meant the floor was flooded after every shower with only two towels and no bathmat. <span class='review-span highlight' data-aligned-summaries='7'>The best was the breakfast</span> in a lovely glassed enclosed verandah on the 5th floor, <span class='review-span highlight' data-aligned-summaries='7'>plenty to satisfy all tastes</span>. <span class='review-span highlight' data-aligned-summaries='6'>Don't let me put you off completely but I have stayed in better hotels in Rome for less</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='6'>I absolutely enjoyed the quantness of this small hotel</span>, <span class='review-span highlight' data-aligned-summaries='4'>situated around the corner from the Trevi Fountain</span>. I found it very centrally situated as we were in walking distance to all the major spots. The Concierge/Receptionist was always very helpful and pleasant. It has an old fashioned tiny lift that just fits two people but it is beautiful. <span class='review-span highlight' data-aligned-summaries='1'>The room we were in was suitably sized</span>, and although on a busy main road, <span class='review-span highlight' data-aligned-summaries='1'>the windows were double glazed and blocked out all noise</span>, and we slept peacefully. The bathroom was lovely with a huge shower. <span class='review-span highlight' data-aligned-summaries='7'>Breakfast was excellent</span>. We stayed at a few other hotel during our trip to Italy but none had the particular charm that the Tritone had. <span class='review-span highlight' data-aligned-summaries='6'>I definately would stay there again</span></div><div class='text-box'>I have just come back from staying with some friends at the Tritone Hotel. All facilities were very modern in the room, and the hotel was in <span class='review-span highlight' data-aligned-summaries='4'>an ideal location for sightseeing</span>. Breakfast was available until 10.30 which was nice if you don't want to get up too early, it was set up in a rooftop breakfast room, with a view over the city. Our flight didnt leave until late on the last day, and <span class='review-span highlight' data-aligned-summaries='0'>we were able to leave our bags at reception whilst we did shopping which was very handy</span>. <span class='review-span highlight' data-aligned-summaries='1'>The room was a bit noisy in the morning due to the fact that the hotel is on a main road</span>, but it is double glazed and you are in the heart of the city.</div><div class='text-box'>It was obvious <span class='review-span highlight' data-aligned-summaries='1'>the room</span> (101) <span class='review-span highlight' data-aligned-summaries='1'>was</span> recently renovated, it was very clean, comfortable and fully equiped, although <span class='review-span highlight' data-aligned-summaries='1'>a bit small</span>. <span class='review-span highlight' data-aligned-summaries='4'>The location was fantastic, very close to Trevi Fountain</span>, Via Condotti and Piazza Montecitorio, that is in walking distance of everything that must be seen in Rome's historic center. The breakfast room was at the last floor of the building and had a beautiful roof-top view. <span class='review-span highlight' data-aligned-summaries='0'>The staff were very helpful</span> and spoke fluent English. <span class='review-span highlight' data-aligned-summaries='1'>What i liked least, was the noise- it was annoying coming both from inside the hotel</span> (people speaking in the corridors) as well as outside (traffic from the street) and it was annoying, especially in the night.</div><div class='text-box'>We just spent 4 days in Rome at the Tritone. <span class='review-span highlight' data-aligned-summaries='4'>Great location</span> but we were very disappointed in the room. Room was dirty: carpet soiled, bathroom dirty, broken furntiure, cigarette burns in drapes and blankets. <span class='review-span highlight' data-aligned-summaries='2'>Only one small elevator big enough for two people</span>. Hotel was definitely not worth 275. a night. We recommend using the Frommer's Italy book for choosing your hotels. We chose our hotels in Venice and Florence from Frommer's and we were very satisfied with the hotels. Tritone was not in the Frommer's book. After reading mixed reviews on Tritone, most positive, we decided to take a chance and stay there. Very disappointed in accommodations. Choose another hotel!</div><div class='text-box'>We stayed in the hotel from October 29 through November 2, 2008. We were 2 adults and 3 children and booked the suite on the 5th floor. <span class='review-span highlight' data-aligned-summaries='1'>The rooms were a bit small</span> but you don't need more because you spend your time outdoor. <span class='review-span highlight' data-aligned-summaries='3 6'>The place was clean and elegant</span>. The bathroom very comfortable. <span class='review-span highlight' data-aligned-summaries='7'>The breakfast</span> area <span class='review-span highlight' data-aligned-summaries='7'>is wonderful on the roof of the hotel</span>. <span class='review-span highlight' data-aligned-summaries='7'>Everything is good (except the dreadful orange juice</span>). The reception area is small and <span class='review-span highlight' data-aligned-summaries='0'>the staff a bit cold, but nice and helpful</span>. <span class='review-span highlight' data-aligned-summaries='6'>We had a wonderful stay and would recommend the place</span>.</div><div class='text-box'>We stayed for 4 days at the Tritone and found it comfortable and clean. It is very central and the breakfasts were very good. The only fault we found was the stairs leading from the front door to the checkin counter were a little difficult with suitcases but <span class='review-span highlight' data-aligned-summaries='0'>the porter was very helpful</span>. We loved Roma. We would stay at this hotel again.</div><div class='text-box'>We <span class='review-span highlight' data-aligned-summaries='6'>thoroughly enjoyed our stay at the Hotel</span> Tritone. It is <span class='review-span highlight' data-aligned-summaries='4'>situated in the heart of Rome</span>, with everything being walking distance from there. The <span class='review-span highlight' data-aligned-summaries='0'>service was</span> very <span class='review-span highlight' data-aligned-summaries='0'>good</span> and <span class='review-span highlight' data-aligned-summaries='0'>helpful</span> and the rooms modern, clean and well equipped. <span class='review-span highlight' data-aligned-summaries='7'>One of the best features was breakfast</span> at the restaurant on the top floor. We <span class='review-span highlight' data-aligned-summaries='2'>enjoyed the</span> really old/historic little <span class='review-span highlight' data-aligned-summaries='2'>elevator</span>.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The service was very poor and the desk clerks were very discourtious.</span> <span id="1" class="summary-sentence">The room was extremely small and very noisy.</span> <span id="2" class="summary-sentence">The elevator was often out of service.</span> <span id="3" class="summary-sentence">The lobby was dirty,shabby and very unattractive.</span> <span id="4" class="summary-sentence">The location was excellent, around the corner from the Trevi Fountain.  </span><span id="5" class="summary-sentence">The pictures were not as they appear on the Internet.</span> <span id="6" class="summary-sentence">I would never refer anyone to this hotel.</span> <span id="7" class="summary-sentence">The breakfast was also less than acceptable.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

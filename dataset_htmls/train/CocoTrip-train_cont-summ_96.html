@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>We stayed here for a long weekend in Istanbul and have no complaints. The room was on the 12th floor which provided some good views. <span class='review-span highlight' data-aligned-summaries='1'>The room was small</span> and well decorated and the bathroom was a little tired but acceptable. The hotel is in what is a pretty nasty looking building from the outside but the rooms and common areas seemed to have been upgraded so the outside appearance is not a reflection of the interior reality. The roof terrace is small but we managed to get some space to get some sun. The roof top cocktail bar is excellent as is the Mikla restraurants. <span class='review-span highlight' data-aligned-summaries='0'>The hotel is very well located for all the action in Beyoglu</span>. I would give it 3-4 stars and suggest trying it.</div><div class='text-box'>I was staying at this hotel for 3 nights, it is true the rooms are basic for the price and I wasn't too impressed until I went upstairs on the terrace. The view at the sunset is UNBELIEVABLE!The resto is really nice too, and the food really good. If you go in summer time, <span class='review-span highlight' data-aligned-summaries='4'>you will definitely enjoy spending time on the roof toop</span>, having drinks <span class='review-span highlight' data-aligned-summaries='4'>at the bar and in the swimming pool with the spectacular view</span>. And you walk one block and you are right at the Istiklal street, but at the opposite side of Taksim square so you can walk to the sultanameth district <span class='review-span highlight' data-aligned-summaries='0'>easy.you can't beat the location</span>.</div><div class='text-box'>The hotel seems to be coming to the end of a big renovation project and <span class='review-span highlight' data-aligned-summaries='1'>the renovated rooms</span> and the lobby/bar area <span class='review-span highlight' data-aligned-summaries='1'>are smart and well furnished</span>, and <span class='review-span highlight' data-aligned-summaries='5'>the staff are efficient and helpful</span>. The hotel is just a few minutes' walk from Istiklal, the busy shopping, restaurant and nightlife street that seems to be the best place to hang around when not sightseeing. <span class='review-span highlight' data-aligned-summaries='0'>It's definitely much better to stay in this district, Beyoglu</span>, and to take the tram to Sultanahmet, the touristy zone where the Topkapi Palace, Ayia Sofia, etc, are located. <span class='review-span highlight' data-aligned-summaries='0'>The restaurants in particular are much better</span> around Istiklal than in Sultanahmet.</div><div class='text-box'>This is a slightly high end hotel on the Pera side{Near Taksim Square} which according to me is the better side to live in as compared to the Sultanamet Area. The hotel has lots and <span class='review-span highlight' data-aligned-summaries='0'>lots of eating joints and bars, all walking distance</span>. The hotel is quite classy, <span class='review-span highlight' data-aligned-summaries='1'>the rooms are spacious</span>, <span class='review-span highlight' data-aligned-summaries='5'>the staff was extremely friendly and courteous</span>, we were on <span class='review-span highlight' data-aligned-summaries='2 3'>the upper floors</span> so <span class='review-span highlight' data-aligned-summaries='0 2 3'>cud get a great sight of Istanbul City</span>. Breakfast was limited. Night life around this place rocks though for all the sightseeing one has to go to the Sultanamet Area which is not really far.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 6'>The location of the Marmara Pera is excellent and convenient to many of the sights in Istanbul</span>. The hotel is also right in front of a taxi stand and ATM machine which I found to be very convenient as well. <span class='review-span highlight' data-aligned-summaries='1'>The room was on the small</span>, but adequate <span class='review-span highlight' data-aligned-summaries='1'>and very clean</span> as were the common areas of the hotel. <span class='review-span highlight' data-aligned-summaries='3 4'>There is also a</span> <span class='review-span highlight' data-aligned-summaries='4'>rooftop bar and pool</span> <span class='review-span highlight' data-aligned-summaries='3 4'>area with amazing views of the city</span> that unfortunately we didn't get to take full advantage of because of the weather. All in all, a very nice hotel.</div><div class='text-box'>We stayed here from 3 nights and really liked the hotel. We had a <span class='review-span highlight' data-aligned-summaries='2 3'>room on the 7th floor</span> which <span class='review-span highlight' data-aligned-summaries='2 3'>had a great view</span>. <span class='review-span highlight' data-aligned-summaries='4'>The roof terrace is great</span> <span class='review-span highlight' data-aligned-summaries='0 4'>with fab views of the city</span>. <span class='review-span highlight' data-aligned-summaries='4'>There is a small pool and</span> sundeck as well as <span class='review-span highlight' data-aligned-summaries='4'>a bar</span> area. All <span class='review-span highlight' data-aligned-summaries='5'>the staff were very friendly and helpful</span> and the <span class='review-span highlight' data-aligned-summaries='0'>hotel is in a great location for bars and restaurants</span>. Our only slight gripe was that some of the furniture in <span class='review-span highlight' data-aligned-summaries='1'>the room was a bit shabby</span>. <span class='review-span highlight' data-aligned-summaries='1'>However</span> the room was <span class='review-span highlight' data-aligned-summaries='1'>very tastefully decorated</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>The Marmara Pera is located in Beyoglu</span> and <span class='review-span highlight' data-aligned-summaries='3'>has nice views to the old city</span> and the sea. That's the good thing about it. We stayed for 3 nights and payed 180a per night without breakfast which was way too expensive for the quality of the rooms. The size and the ambience of the rooms are typical for a 3-star hotel with rate no more than 100 euros / night.</div><div class='text-box'>i have been to Istanbul 10 times and always stayed at <span class='review-span highlight' data-aligned-summaries='0'>the Marmara Pera</span>, <span class='review-span highlight' data-aligned-summaries='5'>the service is excellent</span> and <span class='review-span highlight' data-aligned-summaries='6'>good for business</span> and leisure, <span class='review-span highlight' data-aligned-summaries='6'>it</span> <span class='review-span highlight' data-aligned-summaries='0 6'>is centrally located</span> <span class='review-span highlight' data-aligned-summaries='6'>and not far by bus or tram to the all the tourists spots</span>. <span class='review-span highlight' data-aligned-summaries='0'>a hop away from</span> Taxim which has <span class='review-span highlight' data-aligned-summaries='0'>some great restaurants</span>, pubs and shopping.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The Marmara Pera is a great location in the bohemian area of Beyoglu which boasts some of the best restaurants in Istanbul.</span> <span id="1" class="summary-sentence">The rooms are a good size and well appointed and very clean.</span> <span id="2" class="summary-sentence">The upper rooms at the back have a great view of the Bosphorus.</span> <span id="3" class="summary-sentence">The front rooms have a city view which is great for city watching.</span> <span id="4" class="summary-sentence">The views from the roof top bar and pool are probably the best in Istanbul.</span> <span id="5" class="summary-sentence">The service and staff are excellent.</span> <span id="6" class="summary-sentence">The hotel is conveniently located close to the metro which makes getting to the major business districts pain free and it is easy to get to the old city, Sultanahmet, by taking the historic Tunel funicular railway and the tram.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

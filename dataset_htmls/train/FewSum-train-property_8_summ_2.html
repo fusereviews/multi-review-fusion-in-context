@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>Have been here multiple times in <span class='review-span highlight' data-aligned-summaries='2'>hopes they get better but they don't.</span> <span class='review-span highlight' data-aligned-summaries='0 1 2'>3 out of 3 times messed my order up</span>. Unfortunately they are closest Einstein's to me so in stuck. I have been to others and they are much faster and don't tend to mess up orders quite like this location.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2'>I love to eat here</span>! I get lunch here a lot. <span class='review-span highlight' data-aligned-summaries='0'>I like their</span> chicken salad sandwiches and <span class='review-span highlight' data-aligned-summaries='0'>asiago cheese bagels</span> with garden veggie cream cheese. They should keep it opened an hour longer, though. I know bakeries are all into fresh foods, but it closes before most get to eat dinner.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 2'>Nothing too spectacular - just another bagel place</span>. I got the good grains bagel w / honey almond cream cheese (yummy) while others in my group got: the pizza bagel, thin bagel sandwiches, jalapeno w / plain cream cheese, spinach florentine, and some holiday one that was super sweet.Price wasn't anything too expensive.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 2'>Surprisingly good breakfast</span> thin asparagus mushroom and egg white. Wraps not so much. Asiago toasted with veggie always decent. However <span class='review-span highlight' data-aligned-summaries='2'>please get a better system in place</span> because I've <span class='review-span highlight' data-aligned-summaries='0 1'>never been able to get out of there in less than 15 min</span> <span class='review-span highlight' data-aligned-summaries='0'>for a bagel</span>!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>The best Einstein location in Summerlin</span>. Always in and out with ease and <span class='review-span highlight' data-aligned-summaries='1'>professionalism from the staff</span>. I usually go on Mondays as they have a dozen bagels for $7! I have never ordered a specialty bagel sandwich but I <span class='review-span highlight' data-aligned-summaries='0 2'>would recommended for any bagel lover</span> <span class='review-span highlight' data-aligned-summaries='0'>who wants a bulk deal</span>.</div><div class='text-box'>I grab a cup from these guys every morning at this location. <span class='review-span highlight' data-aligned-summaries='1 2'>Great, friendly serviceThey</span> <span class='review-span highlight' data-aligned-summaries='2'>have the best coffee</span>, fresh, strong never burned. Jeanie is the one you want to help you when your there. She makes you feel at home.</div><div class='text-box'>This <span class='review-span highlight' data-aligned-summaries='2'>place is neat and clean and</span> <span class='review-span highlight' data-aligned-summaries='0 2'>they have really good bagels</span>. I also appreciate that they have a soda machine, given that I don't drink coffee. <span class='review-span highlight' data-aligned-summaries='1'>The staff is always friendly and helpful</span>. I think it's extra nice that they will bring food to your table, even if it is merely a toasted bagel with cream cheese.</div><div class='text-box'>Waited like 20 minutes for a dozen bagels. Finally got home and the box with the bagels opened up from the bottom and all the bagels fell onto the driveway. Brought them back and was reluctantly given a refund and the doofus manager still tried to charge me for the cream cheese even though I had know bagels. Definitely <span class='review-span highlight' data-aligned-summaries='2'>won't be going back</span>!</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">A great place for bagel lovers, remarkably affordable and decent in quality.</span> <span id="1" class="summary-sentence">Time management and order processing seem to fall a little below par, but the staff is friendly and helpful.</span> <span id="2" class="summary-sentence">Clean environment and overall recommended place.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

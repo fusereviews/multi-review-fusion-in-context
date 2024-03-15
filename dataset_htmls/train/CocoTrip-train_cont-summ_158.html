@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Very Nice Hotel</span> The hotel was very nice, <span class='review-span highlight' data-aligned-summaries='5'>staff was very helpful</span>. <span class='review-span highlight' data-aligned-summaries='0'>Location was excellent</span>, if you don't mind staying outside HongKong city proper. <span class='review-span highlight' data-aligned-summaries='2'>Hotel provided free shuttle service</span> to and from airport, and we just took the Airport Express from the airport <span class='review-span highlight' data-aligned-summaries='2'>to get to the city</span>. Although <span class='review-span highlight' data-aligned-summaries='2'>you can</span> also <span class='review-span highlight' data-aligned-summaries='2'>take the local MTR train which is very close</span>, as in walking distance, from the hotel.<span class='review-span highlight' data-aligned-summaries='3'>Hotel is directly connected to the outlet shopping center</span>, which also has 3 restaurants, a huge food court and a grocery on the ground floor.Rooms are small but very clean and modern. You have to pay for Wi-Fi internet access.Overall, the hotel was very convenient especially for those who are only spending a short time in HongKong.</div><div class='text-box'>Best hotel ever! <span class='review-span highlight' data-aligned-summaries='0'>This hotel is</span> <span class='review-span highlight' data-aligned-summaries='0 7'>the best hotel</span> <span class='review-span highlight' data-aligned-summaries='7'>I have ever stayed in</span>. <span class='review-span highlight' data-aligned-summaries='1'>The hotel is modern and so are the rooms</span>. We stayed for 10 nights and it was quiet and we slept soundly and the air con was quiet too. Enjoyed the outlook over the pool and the nice comfy bed. <span class='review-span highlight' data-aligned-summaries='5 6'>Staff are very courteous and quick to help</span>. We did eat at the resturant and the food was delicious.<span class='review-span highlight' data-aligned-summaries='3'>The shopping mall attached is a great way to spend a day</span> and provides extra restuarants to try.Pool was clean and warm and we thorougly enjoyed ourselves. Being <span class='review-span highlight' data-aligned-summaries='0 2'>close to the airport</span> is a bonus <span class='review-span highlight' data-aligned-summaries='2'>and the free shuttle was prompt</span>.<span class='review-span highlight' data-aligned-summaries='7'>STAY STAY STAY here next time you are in Hong Kong. You will not be dissapointed</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 7'>Best ever airport hotel</span>! I flew from Auckland to Hong Kong and wanted to stopover before travelling on to London.<span class='review-span highlight' data-aligned-summaries='2'>This hotel is</span> <span class='review-span highlight' data-aligned-summaries='0 2'>about a five minute drive from the airport</span> <span class='review-span highlight' data-aligned-summaries='2'>in the free shuttle bus</span>, and I spent one night in a deluxe room.<span class='review-span highlight' data-aligned-summaries='1'>The room was big with a comfy bed</span>, <span class='review-span highlight' data-aligned-summaries='1'>very modern decor</span>, large LCD TV, nice view towards the airport/harbour, very very quiet with no outside noise, beautiful shower with great water pressure.<span class='review-span highlight' data-aligned-summaries='2 3'>It's directly connected to the shopping mall which is pretty good</span>.<span class='review-span highlight' data-aligned-summaries='5 6'>The staff were friendly and helpful</span>, and I had absolutely no problems with anything, and enjoyed a great night's sleep.I found this to be the perfect place to stopover after a long flight, and <span class='review-span highlight' data-aligned-summaries='7'>will definitely stay here again</span>.</div><div class='text-box'>Fantastic location We stayed here on our last night in Hong Kong and loved it.<span class='review-span highlight' data-aligned-summaries='0'>The hotel is in a great location</span> and with the <span class='review-span highlight' data-aligned-summaries='3'>shopping mall in the same complex</span> and all in air conditioned comfort, it makes for an enjoyable stay.<span class='review-span highlight' data-aligned-summaries='1'>The room was</span> quite large, <span class='review-span highlight' data-aligned-summaries='1'>was ultra modern in design</span> and we will stay there on our next trip on the night prior to leaving.The open plan bathroom layout is not what a couple of just friends would like as there is no privacy to get changed but for a couple it is great, as well the separate shower cubicle and WC is a great idea.<span class='review-span highlight' data-aligned-summaries='4'>The MTR station is in the same complex</span> and <span class='review-span highlight' data-aligned-summaries='2'>a short shuttle bus away from the airport</span>.</div><div class='text-box'>Great stay in Hong Kong Stayed at the City gate in Hong Kong for 2 nights had a great time the food and <span class='review-span highlight' data-aligned-summaries='5'>service was fantastic and all</span> <span class='review-span highlight' data-aligned-summaries='5 6'>the staff where very friendly</span> <span class='review-span highlight' data-aligned-summaries='5'>and helpful</span>.Whilst the Hotel is classed as an airport Hotel <span class='review-span highlight' data-aligned-summaries='1'>it is a very modern up-market hotel</span> <span class='review-span highlight' data-aligned-summaries='2'>only 5 mins from the airport via a free shuttle bus</span> the <span class='review-span highlight' data-aligned-summaries='3'>shopping mall next door is huge with all the outlet stores</span> selling very well priced items, <span class='review-span highlight' data-aligned-summaries='2'>if you want to go into town it is very easy with</span> <span class='review-span highlight' data-aligned-summaries='2 4'>the MTR station located within the complex</span> <span class='review-span highlight' data-aligned-summaries='4'>and is only a 25 min trip to Hong Kong Island</span>.<span class='review-span highlight' data-aligned-summaries='0'>A great place to stay</span> would recommend anyone going to Hong Kong to try this Hotel.</div><div class='text-box'>location! location! location! This is our second time to stay in the same hotel. <span class='review-span highlight' data-aligned-summaries='0'>The location of this hotel is very convenient</span> to the stop-over travelers, it is much better than the one (Regal Airport Hotel). We bought a day pass for HK$50, that we <span class='review-span highlight' data-aligned-summaries='2 4'>can take the MTR to the city</span>,<span class='review-span highlight' data-aligned-summaries='4'> which is only a 30min ride</span>. As <span class='review-span highlight' data-aligned-summaries='0'>this</span> <span class='review-span highlight' data-aligned-summaries='0 1'>hotel is</span> <span class='review-span highlight' data-aligned-summaries='0'>new</span> and modern, <span class='review-span highlight' data-aligned-summaries='0'>good service and</span> the <span class='review-span highlight' data-aligned-summaries='0'>convenient transportation</span>, this is <span class='review-span highlight' data-aligned-summaries='7'>still our first choice when we stop</span>-over <span class='review-span highlight' data-aligned-summaries='7'>in HK</span>.</div><div class='text-box'>Nice hotel Stayed for one night at <span class='review-span highlight' data-aligned-summaries='0'>this hotel</span> and it <span class='review-span highlight' data-aligned-summaries='0'>was great</span>! The <span class='review-span highlight' data-aligned-summaries='1'>room is comfortable, clean</span> and affordable. An <span class='review-span highlight' data-aligned-summaries='3'>outlet mall is attached</span> to this hotel, and there is a food court if you prefer to sample local food at a cheaper price, although the breakfast at the hotel is worth the money (HKD118 per person). There is a <span class='review-span highlight' data-aligned-summaries='2'>free</span> <span class='review-span highlight' data-aligned-summaries='0 2'>airport</span> <span class='review-span highlight' data-aligned-summaries='2'>shuttle</span> service that starts at 6am and it is <span class='review-span highlight' data-aligned-summaries='0'>less than 10-minutes away</span>. The <span class='review-span highlight' data-aligned-summaries='5'>staff are friendly</span> and <span class='review-span highlight' data-aligned-summaries='5'>helpful</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Excellent hotel close to airport</span> We stayed at the Novotel Citygate for business.<span class='review-span highlight' data-aligned-summaries='1'>The hotel is ultra-modern</span>, clean and contemporary. <span class='review-span highlight' data-aligned-summaries='1'>The rooms are nicely decorated, bright and fresh</span>. <span class='review-span highlight' data-aligned-summaries='5 6'>The staff are friendly</span> and the food is great.<span class='review-span highlight' data-aligned-summaries='0'>It attached to the Citygate outlet shopping centre</span>, which <span class='review-span highlight' data-aligned-summaries='2'>also has a bus terminal and train station</span> (MTR) <span class='review-span highlight' data-aligned-summaries='2'>which is convenient</span>.It not in the city, so <span class='review-span highlight' data-aligned-summaries='7'>I would recommend this hotel</span> for a stopover or for someone that needs to be in the airport area.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This is a great hotel in a great location.</span> <span id="1" class="summary-sentence">It is a modern, up-market hotel and the rooms are very nice and well presented.</span> <span id="2" class="summary-sentence">The free shuttle bus only 5 mins from the airport and easy train ride to the city tourist attractions make this very convenient for travellers.</span> <span id="3" class="summary-sentence">The adjacent outlet shopping mall is an added bonus as is the coffee shop, which serves the best coffee in HK!</span> <span id="4" class="summary-sentence">The train station is located in the same complex and HK city is less than half an hour away.</span> <span id="5" class="summary-sentence">To cap off a memorable stay, the staff were friendly, polite and efficient.</span> <span id="6" class="summary-sentence">The hotel had a very friendly feel to it</span> <span id="7" class="summary-sentence">and I will certainly stay there again.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

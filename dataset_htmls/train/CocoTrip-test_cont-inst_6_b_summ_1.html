@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Other reviews already pointed out some of the unusual features of this hotel</span>, which is located on the quiet water front close to the cruise ship terminal, an ideal location for an overnight stay before and after the cruise. <span class='review-span highlight' data-aligned-summaries='5'>The staff was friendly</span> & <span class='review-span highlight' data-aligned-summaries='5'>helpful</span>. <span class='review-span highlight' data-aligned-summaries='4'>Internet in the room was free and worked without any problem</span>. <span class='review-span highlight' data-aligned-summaries='6'>The restaurant downstairs, with a good choice of wine by the glass, served tasty but pricey meals. However,</span> <span class='review-span highlight' data-aligned-summaries='3 6'>there are several restaurants</span>,<span class='review-span highlight' data-aligned-summaries='6'> grocery</span> <span class='review-span highlight' data-aligned-summaries='3 6'>stores and deli shops</span> <span class='review-span highlight' data-aligned-summaries='3'>in the neighbourhood</span> frequented by the locals. <span class='review-span highlight' data-aligned-summaries='8'>One fish shop in the mall down the street</span>, with a long queue at lunch hour, served a variety of seafood take-outs at reasonable prices, and the herring I tried that day was probably as good as it can be. For those who are health conscious, a morning stroll/jog along the water front would definitely help to kick off the day in the right mood.</div><div class='text-box'>Firstly the good thing about the hotel is cultural and clean, but <span class='review-span highlight' data-aligned-summaries='0'>it doesn't really feel much like a hotel, instead, a B&B.</span> The overall service is just fair, we booked it in advance through zuji, but when we arrived, they had no record and we need to wait for an hour for checking in. In the first day out, we left the wallets inside a luggage which is locked. Of course it may be not wise to do it, but it was too late when we found 300 euro was gone when we back while everything seems fine in the appearance. Probably it was stolen by the clean-up staff. We were very disappointed with this hotel and would not recommend to travelers.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>This is an unusual</span> <span class='review-span highlight' data-aligned-summaries='0 2'>hotel</span>,<span class='review-span highlight' data-aligned-summaries='0'> different from the normal run of the mill</span>. I had a large and comfortable room, minimalist design which actually turned out to be quite relaxing! <span class='review-span highlight' data-aligned-summaries='2'>Its a few stops on the tram from the city</span>, the road is reasonably quiet. The tram stop is close by, as is the canal hopper service. If you like design, or want to try something different then this might be for you.</div><div class='text-box'>I was there for 4 days. So all i have to say is that <span class='review-span highlight' data-aligned-summaries='1'>all we got were damaged walls and floors</span>. <span class='review-span highlight' data-aligned-summaries='0 4'>the rooms are very manky</span>. The <span class='review-span highlight' data-aligned-summaries='4'>toilets and showers</span> were separately, but they <span class='review-span highlight' data-aligned-summaries='4'>were usually too dirty</span>. <span class='review-span highlight' data-aligned-summaries='5'>The service often forget to finish their work</span>. Only <span class='review-span highlight' data-aligned-summaries='2'>the location was good, there is a tram directly to the near Central Train Station</span></div><div class='text-box'>strengths: - <span class='review-span highlight' data-aligned-summaries='0'>nice old building with history</span> (old prison) weaknesses: - <span class='review-span highlight' data-aligned-summaries='9'>too expensive (very bad price performance) 150 a for a two star room</span> ! - bad tv reception - rooms looks like hospital/prison - old towels - <span class='review-span highlight' data-aligned-summaries='5'>lousy unfriendly service</span> - addtional extra fees: parking 22 a, touristfee 7 a, breakfast17 a - to far form the center - noisy</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='7'>I did enjoy the stay</span>, I will list the pros and the cons Pro -nice price -close to the trams <span class='review-span highlight' data-aligned-summaries='5'>-helpful staff -sweet</span> to be able to order food in the middle of the night (it was possible in the hotel) -cool rooms cons -It was to far away from the city center to be able to walk.</div><div class='text-box'>The concept of <span class='review-span highlight' data-aligned-summaries='9'>having 1* to 5* rooms is great</span>. Translation is another thing <span class='review-span highlight' data-aligned-summaries='9'>though</span> because <span class='review-span highlight' data-aligned-summaries='9'>the service does not span that range</span>. <span class='review-span highlight' data-aligned-summaries='0 4'>Definitely quirky rooms</span> <span class='review-span highlight' data-aligned-summaries='0'>but many have an open toilet</span>, which is fine if you are single occupant. <span class='review-span highlight' data-aligned-summaries='3 6 7'>Restaurant not great</span>.</div><div class='text-box'>I return from a weekend at the LLOYD hotel, <span class='review-span highlight' data-aligned-summaries='7'>it is a very good hotel</span>, not useull, stuff are very freindly, room very nice (2 stars) I would come back again and again!</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The hotel was a unique, historical building and different from your standard fare.</span> <span id="1" class="summary-sentence">It is worth noting that the walls and floors were damaged though.</span> <span id="2" class="summary-sentence">The hotel is a few stops on the tram to the centre of the city.</span> <span id="3" class="summary-sentence">There are restaurants, shops and delis all close to the hotel.</span> <span id="4" class="summary-sentence">Whilst the quirky room had decent, working and free internet, it did not make up for how dirty the room was overall.</span> <span id="5" class="summary-sentence">The staff are sometimes helpful and sweet but forget to finish tasks and can be unfriendly at times.</span> <span id="6" class="summary-sentence">The hotel restaurant has a nice choice of wines but the meals cost a bit too much.</span> <span id="7" class="summary-sentence">It was ok.</span> <span id="8" class="summary-sentence">There is a very nice fish shop in the mall though.</span> <span id="9" class="summary-sentence">This hotel is unfortunately really expensive especially when compared to the performance of the hotel.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

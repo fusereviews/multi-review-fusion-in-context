@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>The hotel is a very typical European hotel with <span class='review-span highlight' data-aligned-summaries='0 4'>smaller rooms</span> and a tiny elevator. However, <span class='review-span highlight' data-aligned-summaries='6'>the staff were extremely pleasant</span> and the rooms were very clean. Unfortunately there is no view to speak of from the rooms but step outside and you are only steps away from the subway and <span class='review-span highlight' data-aligned-summaries='4 5'>blocks away from the Eiffel Tower</span>. There was free wifi in the hotel but it was very patchy and I had to login time and time again. The bathroom was newly renovated and the shower always had hot water. All in all a very pleasant stay, if you get a chance to stay here be sure to check out Rue St. Dominique as there are plenty of restaurants, bakeries, bars and shops. Invalides is a great area and <span class='review-span highlight' data-aligned-summaries='2'>I will be open to staying at this hotel again</span>.</div><div class='text-box'>In my opinion <span class='review-span highlight' data-aligned-summaries='4'>this hotel is more 2 star than 3</span> with <span class='review-span highlight' data-aligned-summaries='0'>tiny rooms</span> and a few things lacking. <span class='review-span highlight' data-aligned-summaries='5'>The location is the best thing being in a nice quiet area near the eiffel tower</span> and only 200 yards from the essential metro underground service. <span class='review-span highlight' data-aligned-summaries='6'>The reception staff are very friendly and helpful</span> with good english spoken. The breakfast however is terrible and i would avoid this if possible as it consists of bread (they ran out on 2 of our 3 days)and pastries and very little else. There are also only about 6 tables in the breakfast room which if the hotel was full i could imagine being a problem. The walls were paper thin too and we were woken at early hours by people showering close by. <span class='review-span highlight' data-aligned-summaries='2 4'>Fine for a budget hotel but nothing more</span>.</div><div class='text-box'>We stayed here on our honeymoon in Paris in September 2004. <span class='review-span highlight' data-aligned-summaries='2'>For the price, we thought it was a good deal</span>. <span class='review-span highlight' data-aligned-summaries='0 4'>Room was a decent size</span>. The location was the best part about the hotel. There were a lot of nice restaurants on the streets surrounding, and a few good breakfast spots. <span class='review-span highlight' data-aligned-summaries='5'>The walk to the Eiffel Tower was not too long</span>. And it was very close to the train and subway stations, which made it extremely easy to get around. <span class='review-span highlight' data-aligned-summaries='3 4'>The elevator was very tiny</span> and slow, <span class='review-span highlight' data-aligned-summaries='4'>only 2 people with luggage could fit</span> in it. But overall, the location was great, and the place was clean. I would stay here again (unless I win the lottery before our next trip to Paris :) )</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='4 5'>Centrally located hotel</span> <span class='review-span highlight' data-aligned-summaries='5'>in the</span> Invalides/<span class='review-span highlight' data-aligned-summaries='5'>Tour Eiffel area</span> close to metro and train station. The room was clean, serviced every day and probably slightly larger than average for Paris. We stayed on the 6th floor and had a small balcony overlooking the Bld del la Tour Maubourg. We didn't spend a lot of time in the hotel but <span class='review-span highlight' data-aligned-summaries='6'>front desk staff were friendly and helpful</span>. We didn't bother with the hotel breakfast which seemed steep at 15 euro pp and instead enjoyed the offering at the "Le Recrutement" bar/cafe across the road. Plenty of shops, bars and eateries close to the hotel, and just a 10 minute walk to the Eiffel Tower. <span class='review-span highlight' data-aligned-summaries='2 4'>Reasonable value</span> - <span class='review-span highlight' data-aligned-summaries='2'>we</span> booked through a website and <span class='review-span highlight' data-aligned-summaries='2'>paid 357 euro for 3 nights.</span></div><div class='text-box'>We picked this hotel because <span class='review-span highlight' data-aligned-summaries='5'>it is in the 7th arrondissement</span>, <span class='review-span highlight' data-aligned-summaries='5'>close to the Eiffel Tower</span>. It was an easy walk to the Louvre as well. We stayed in a Club suite which has two rooms. <span class='review-span highlight' data-aligned-summaries='0 4'>The rooms</span> <span class='review-span highlight' data-aligned-summaries='0'>are small</span> but clean, and <span class='review-span highlight' data-aligned-summaries='1'>we</span> <span class='review-span highlight' data-aligned-summaries='1 4'>had two full bathrooms</span>. One had a shower while the other had a tub, but <span class='review-span highlight' data-aligned-summaries='4'>it made it so much easier for our family of four to get ready</span> in the morning. <span class='review-span highlight' data-aligned-summaries='2'>We did not have breakfast at the hotel</span>, but <span class='review-span highlight' data-aligned-summaries='2'>instead</span> had croissants and beverages <span class='review-span highlight' data-aligned-summaries='2'>at a small cafe near the hotel for about half the price</span>. Parking is not on site, but it is a short drive away; and my husband had no trouble parking our Toyota 4Runner.</div><div class='text-box'>We stayed in this hotel for three nights and we quite enjoyed our stay. The hotel is 5 minutes from the Seine River, 15 minutes from the Louvre Museum and <span class='review-span highlight' data-aligned-summaries='5'>10 miutes from the Eiffel Tower( on foot</span> all this). <span class='review-span highlight' data-aligned-summaries='0 4'>Our room was quite small</span> <span class='review-span highlight' data-aligned-summaries='4'>but very clean</span>. <span class='review-span highlight' data-aligned-summaries='6'>The staff were very helpful</span> and <span class='review-span highlight' data-aligned-summaries='2'>the breakfast which was not included in the price was quite good for the 13 euros</span>. <span class='review-span highlight' data-aligned-summaries='4'>I would recommend this hotel</span> and I would stay here again if I visited Paris again.</div><div class='text-box'>This small hotel did not disappoint. <span class='review-span highlight' data-aligned-summaries='5'>It was</span> one block from a metro stop, and <span class='review-span highlight' data-aligned-summaries='5'>approximately a 10 minute walk from the Eiffel Tower. It was situated on a relatively quiet street lined with trees</span> and cafes. <span class='review-span highlight' data-aligned-summaries='6'>The staff was so pleasant and helpful</span>. <span class='review-span highlight' data-aligned-summaries='0'>The room was considered a "superior room" which was large for European standards</span> and had a nice bathroom as well. <span class='review-span highlight' data-aligned-summaries='4'>Very pleased with this hotel overall and would stay again</span>!</div><div class='text-box'>We stayed here for 3 nights. <span class='review-span highlight' data-aligned-summaries='4'>The room was very clean</span> and had a window that opened into a courtyard. <span class='review-span highlight' data-aligned-summaries='6'>The front desk staff was very helpful</span> and the <span class='review-span highlight' data-aligned-summaries='4 5'>hotel was in a good location</span> <span class='review-span highlight' data-aligned-summaries='5'>for walking to</span> most sites like <span class='review-span highlight' data-aligned-summaries='5'>the Eiffel Tower</span>, Le Louvre and Notre Dame. We loved the "La Source" Care that was down the block on the corner and ate there more than once!</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The triple room was very small, and there was hardly any room to move about.</span> <span id="1" class="summary-sentence">The toilet and bathroom was tiny.</span> <span id="2" class="summary-sentence">The price was not worth it.</span> <span id="3" class="summary-sentence">The lift too was very small.</span> <span id="4" class="summary-sentence">This hotel is ok, if you are alone, cause it's ok for only one person.</span> <span id="5" class="summary-sentence">the only thing it is situated in a clean and quite area and is close to the Eiffel tower, and was close to the stop for the hop-on -buses.</span> <span id="6" class="summary-sentence">The staff was friendly.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Just stayed at the ESH</span> after spending a 3 day trip in Rome. <span class='review-span highlight' data-aligned-summaries='2'>The hotel is rather nice and modern, very clean</span>. The staff are not exactly the friendliest bunch of people in the world especially when you ask for a drink at the bar (which is hardly ever attended by staff). The hotel is situated in the student area of Rome alongside universities, <span class='review-span highlight' data-aligned-summaries='1'>it is NOT central but has a bus stop outside</span>. <span class='review-span highlight' data-aligned-summaries='1'>Its a 20 minute walk to the nearest underground metro station</span>. The real joke came when I took <span class='review-span highlight' data-aligned-summaries='0'>2 cokes</span> out of the mini bar after reading <span class='review-span highlight' data-aligned-summaries='0'>on the mini bar menu</span> they <span class='review-span highlight' data-aligned-summaries='0'>were 3 euros each but when i came to checkout</span> they slapped an 18 percent city tax on 2 cokes! Making them the princely sum of <span class='review-span highlight' data-aligned-summaries='0'>24 euros</span>! Outrageous!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2'>The hotel</span> is a converted monastery which has been open for about a year. The refurbishment has been carried out to a high standard, and as you would expect in Italy, <span class='review-span highlight' data-aligned-summaries='2'>is both elegant and stylish</span>. The colours throughout the building are pale cream through to chocolate brown and all shades in between - delightful. <span class='review-span highlight' data-aligned-summaries='2'>Our room was spacious</span> and the bathroom fabulous. The staff, led by the owner, were helpful and pleasant. The bottle of wine on arrival was a welcome gesture. <span class='review-span highlight' data-aligned-summaries='3'>A decent breakfast was provided</span> and I can only describe the food in the restaurant as superb, particularly the fish dishes. It is a shame that the hotel did not sell tickets for the buses but they are prevented from doing so by the City of Rome authorities.</div><div class='text-box'>I booked this Hotel through Broadway Travel for a suprise birthday present for my husband. Just got back and loved the city of Rome. The hotel is very stylish and the staff are all very friendly and cant do enough for you . <span class='review-span highlight' data-aligned-summaries='2'>The room was small</span> and basic but <span class='review-span highlight' data-aligned-summaries='2'>very clean and quiet</span>. <span class='review-span highlight' data-aligned-summaries='3'>Breakfast is</span> on the top floor and is <span class='review-span highlight' data-aligned-summaries='3'>what you would expect a continental breakfast to be</span>. <span class='review-span highlight' data-aligned-summaries='0'>The location was the only problem as you are a long way from anything</span> and although their is a bus route at the end of the drive you cannot actually walk to a restaurant or bar easily in the evening. I would go back to this Hotel and recommend it as it is in a quiet suburb away from the madness that is Rome</div><div class='text-box'>My husband and I could not have guessed that we would be in Rome during it's first snow storm in 30 years. We had choosen the Executive Style Hotel and we are very happy we did. Even with the weather being so bad the owner and staff went out of their way to make us feel as welcome and warm as possible. The rooms are of the highest quality and very comfortable. The food was great with a nice selection. The staff at <span class='review-span highlight' data-aligned-summaries='3'>the buffet breakfast often surprised the guests with little treats like hot crepes</span>. I can only guess how great this hotel will be with out snowmen on the front lawn. You will not be disappointed at the ESH. Enjoy!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>This hotel was cheap</span> so we weren't expecting much. We were pleasantly surprised when we checked in. <span class='review-span highlight' data-aligned-summaries='2'>The hotel is modern</span> and <span class='review-span highlight' data-aligned-summaries='2'>clean</span>. <span class='review-span highlight' data-aligned-summaries='2'>The room was a bit small</span>, but again <span class='review-span highlight' data-aligned-summaries='2'>clean</span> and <span class='review-span highlight' data-aligned-summaries='2'>modern</span> with <span class='review-span highlight' data-aligned-summaries='2'>a nice bathroom</span>. <span class='review-span highlight' data-aligned-summaries='0'>It is a little out of way</span> for all the tourist attractions in Rome, but if you walk 10-15 minutes (or catch a local bus on the road outside the hotel) to Cornelia metro station you will be in the city centre in no time. <span class='review-span highlight' data-aligned-summaries='3'>Breakfast was</span> good, your <span class='review-span highlight' data-aligned-summaries='3'>standard buffet breakfast, eggs, toast, cereal, pastries etc</span>. We didn't eat dinner at the hotel because we were out and about so much.</div><div class='text-box'>My husband and I enjoyed our 3 night stay in an executive room. <span class='review-span highlight' data-aligned-summaries='2'>The room was very spacious</span> with a large comfortable bed and a luxurious bathroom with a lovely big, powerful shower. <span class='review-span highlight' data-aligned-summaries='3'>The breakfast was fine and catered for all tastes</span>.We ate dinner twice in the restaurant and the food and service were both very good. We hired a car from the airport and parked in the hotel grounds. On trips into Rome,<span class='review-span highlight' data-aligned-summaries='1'>we drove to Batitstini metro station and parked the car in one of the no charge parking spaces nearby</span>. On our last day, we drove to Marino and Frascati in the Roman hills which made a nice quiet contrast. We would definitively return.</div><div class='text-box'>There is no getting away from the fact that <span class='review-span highlight' data-aligned-summaries='0'>this hotel is a little bit out of the centre of Rome</span> (about 1.5 km from St Peters Square), however <span class='review-span highlight' data-aligned-summaries='1'>the bus stop right outside takes you straight to St Peters</span> (No 98 or 881) and from their its easy to get everywhere. <span class='review-span highlight' data-aligned-summaries='2'>The hotel itself was</span> clean, <span class='review-span highlight' data-aligned-summaries='2'>modern</span>, had a <span class='review-span highlight' data-aligned-summaries='3'>great choice for breakfast</span> and had helpful and friendly staff. We ate in the restaurant on one night and the food was lovely and once again the staff were great. The rooms were very comfortable and the shower was fantastic. Would definitely stay here again if we visited Rome.</div><div class='text-box'>Had a lovely stay here. The facilities were excellent, and the staff were friendly and accommodating. The manager that we dealt with was fluent in English and gave us some useful local information. <span class='review-span highlight' data-aligned-summaries='2'>The hotel is newly opened, and all the facilities are contemporary and stylish</span>. <span class='review-span highlight' data-aligned-summaries='0 1'>The hotel is a short bus ride from</span> the main <span class='review-span highlight' data-aligned-summaries='0 1'>Rome</span> attractions(bus stop is outside the gate), which means less traffic noise and a good nights' sleep!</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Travelled to the ESH Hotel, it was very reasonably priced if a little out of the way.</span> <span id="1" class="summary-sentence">The Rome bus service is very hit and miss so travelled on the Metro most of the time.</span> <span id="2" class="summary-sentence">The ESH is very modern and very well presented, the rooms are spacious however no tea/coffee facilities in the room and no English channels on the TV not even world news.</span> <span id="3" class="summary-sentence">The breakfast is continental style and plentiful with a good coffee machine with loads of choices.</span> <span id="4" class="summary-sentence">We were B&B, and we did find a really good supermarket up the street for nibbles in the room.</span> <span id="5" class="summary-sentence">We only had one drink in the bar due to the top prices charged so beware.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

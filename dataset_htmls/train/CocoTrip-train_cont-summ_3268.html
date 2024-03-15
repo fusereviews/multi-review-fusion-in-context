@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>Stayed at the Hotel La Forcola 4 nights during our trip to the Venice region. <span class='review-span highlight' data-aligned-summaries='3'>The room was clean, quiet and comfortable</span>. <span class='review-span highlight' data-aligned-summaries='1 2'>Staff was nice enough, but not overly friendly</span>. The room we stayed in was <span class='review-span highlight' data-aligned-summaries='3'>small</span>, but we were still able to move around quite well. We requested a balcony and recieved one on the canal side. <span class='review-span highlight' data-aligned-summaries='4'>The bathroom was quite small</span>, especially the shower, but it felt great after the long trip from the U.S. ( reguardless of the amount of water on the floor!). <span class='review-span highlight' data-aligned-summaries='5'>Breakfast was good</span> (croissants, cake, yogurt, cereal, coffee, juice, water, nutella, jam.). <span class='review-span highlight' data-aligned-summaries='6'>Overall it was a nice stay and would book there again</span>.</div><div class='text-box'>We stayed here on route to a cruise. <span class='review-span highlight' data-aligned-summaries='2'>The staff were pleasant</span> and helpful. <span class='review-span highlight' data-aligned-summaries='3'>Our room was clean and comfortable</span>, but beware of the bath. I stepped into the bath to find that the bottom was not flat, but shaped to accommodate the shower. I slipped, and it could have ended our holiday there and then! however it didn't,and we had a good afternoon and evening exploring that part of Venice.It is well located with a waterbus stop not many minutes away. <span class='review-span highlight' data-aligned-summaries='5'>The breakfast buffet was very good</span> with plenty of variety. Our luggage was looked after while we spent the morning out before joining the cruise early afternoon.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>The location was fantastic</span>. We arrived at the train station and took the waterbus two stops and then a very short walk (easy to find) to the hotel. When we left the hotel two days later we walked back to the train station. It really is close enough to walk even if you're dragging a bag or two. The area is perfect for walking everywhere which is what we did. <span class='review-span highlight' data-aligned-summaries='1'>We loved how clean the hotel was</span>, the staff were very helpful, <span class='review-span highlight' data-aligned-summaries='1 6'>everything was just great</span>. We found great restaurants close by and <span class='review-span highlight' data-aligned-summaries='6'>totally recommend this place</span> for all kinds of travellers.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>The location of this hotel was very</span> <span class='review-span highlight' data-aligned-summaries='0 1 6'>well positioned</span>, only a couple minutes walk from the station. Breakfast was ok, with cereals, yogurts and fruit. <span class='review-span highlight' data-aligned-summaries='1 6'>However, this was the only real positive attributes about the hotel</span>. <span class='review-span highlight' data-aligned-summaries='3'>The air conditioner in the room leaked</span> water onto the floor and created a nice puddle right by the door. <span class='review-span highlight' data-aligned-summaries='3 4'>The bed was very uncomfortable</span> <span class='review-span highlight' data-aligned-summaries='3'>as were the pillows</span>. Luckily we did not spend too much time in the hotel. Overall while the hotel was fairly priced due to its location and breakfast, we were quite disappointed with the condition of the room.</div><div class='text-box'>While <span class='review-span highlight' data-aligned-summaries='2'>the staff was friendly</span>, <span class='review-span highlight' data-aligned-summaries='5'>we did not get breakfast</span> as we had to leave before they served breakfast. <span class='review-span highlight' data-aligned-summaries='0'>The location was good</span> but <span class='review-span highlight' data-aligned-summaries='1'>the</span> <span class='review-span highlight' data-aligned-summaries='1 3'>room was not worth it</span>. <span class='review-span highlight' data-aligned-summaries='1'>We stayed in many hostels that were far better</span>! The room was <span class='review-span highlight' data-aligned-summaries='3'>dark and so musky</span>, when you walked into <span class='review-span highlight' data-aligned-summaries='4'>the bathroom</span>, the source of the musky smell was apparent. Along the top of 2 walls and on the ceiling <span class='review-span highlight' data-aligned-summaries='4'>was very large portions of black mold</span>! Both ended up sick after one night of staying here! <span class='review-span highlight' data-aligned-summaries='6'>Will not ever stay here again. Will find a hostel next time</span>.</div><div class='text-box'>Stayed here for 4 days. <span class='review-span highlight' data-aligned-summaries='1'>It had to be the worst hotel we stayed in</span>. <span class='review-span highlight' data-aligned-summaries='3'>The rooms were bad</span>, the hotel <span class='review-span highlight' data-aligned-summaries='2'>staff very unfriendly</span> and not helpful at all. <span class='review-span highlight' data-aligned-summaries='5'>The breakfast was terrible</span> and <span class='review-span highlight' data-aligned-summaries='5'>very basic</span>. The only positive about this hotel was that is was a 10 minute walk from the main train station. There were better hotels in the area at much better prices. Too far from San Marco's Square. Avoid this hotel. The hotel staff needs training on how to interact with tourists. Definitely will not recommend this hotel to anyone.</div><div class='text-box'>We spend two nights at this small hotel. The <span class='review-span highlight' data-aligned-summaries='3'>room</span> and <span class='review-span highlight' data-aligned-summaries='4'>bathroom</span> <span class='review-span highlight' data-aligned-summaries='3 4'>were small</span> but we didn't care a lot since we visited the room only to take a shower and sleep. The <span class='review-span highlight' data-aligned-summaries='5'>breakfast was average</span> but <span class='review-span highlight' data-aligned-summaries='5'>ok</span>. The hotel looked to be refurbished recently, and even though it was <span class='review-span highlight' data-aligned-summaries='0'>situated on a main street it was quiet enough</span> due to double glazing. 15 minutes walking distance from Rialto bridge.</div><div class='text-box'>this <span class='review-span highlight' data-aligned-summaries='0'>hotel was very well situated</span> to use as a base, with the San Marcuola waterbus stop very nearby. The room suited our needs for the stay, and we <span class='review-span highlight' data-aligned-summaries='1'>found the hotel a pleasant place</span> to stay in. <span class='review-span highlight' data-aligned-summaries='2'>The staff were courteous</span> and helpful, and the <span class='review-span highlight' data-aligned-summaries='3'>rooms were kept well</span>. <span class='review-span highlight' data-aligned-summaries='5'>Breakfasts were good</span> and gave us a good start to the day.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">We thought the location was really good, easy walking distance to st marks square and good shopping nearby</span> <span id="1" class="summary-sentence">but we were disappointed with the hotel itself.</span> <span id="2" class="summary-sentence">The staff weren't very friendly and seemed grumpy all the time!</span> <span id="3" class="summary-sentence">The room was nothing special.</span> <span id="4" class="summary-sentence">The bed was 2 singles pushed together and uncomfortable and the bathroom was dirty and tiny, we even saw a cockroaches running on the floor!</span> <span id="5" class="summary-sentence">Breakfast was basic but not bad and the coffee was good.</span> <span id="6" class="summary-sentence">I don't think we would come back to this hotel.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

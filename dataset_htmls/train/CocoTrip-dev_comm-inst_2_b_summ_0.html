@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>My name is Vince Palumbo and I am a coach/player for the Australian Stickfighting Team, and I would like to tell you all about this beautiful Regal International Airport Hotel which is in Hong Kong. Me and my team of 16 athletes did a one night stop-over in Hong Kong on our way to the Philippines where we were travelling to so that we could all compete at the 2009 World Stickfighting Championships which were being held in Cebu City there in Philippines. Our stay at the Regal International Airport Hotel in Hong Kong was just fantastic, and we all enjoyed the hotel and service very much, so if ever you need to do a stop-over there in Hong Kong for the night, please do not hesitate to contact the manager at the hotel by the name of Mt Jon Chiu, and I am sure that he <span class='review-span highlight' data-aligned-summaries='0'>will bend over backwards to really try and accommodate you</span> or your group. So go ahead and spoil yourself for the night, and I am sure that you will be pleased with the service that you recieve there, ok! Enjoy this Fantastic Hotel in Hong Kong! Regards from GM Vince Palumbo (Australia)</div><div class='text-box'>My family and I concluded our two-week Easter trip to Berlin and London and returned to Hong Kong. After a long flight, we landed in Hong Kong's international airport around midnight despite very bad weather - raining cats and dogs. As we were very tired and the weather was terrible, we decided to spend the night at the Regal Airport Hotel before returning home in the city centre the next morning. Thanks to the convenient location of Regal, the heavy downpour did not get us wet as the hotel is connected to the airport by an enclosed link bridge. As a regular hotel guest, we got an upgrade this time. Our <span class='review-span highlight' data-aligned-summaries='0'>suite</span> has a family room and a bed room, <span class='review-span highlight' data-aligned-summaries='0'>large</span> and comfortable <span class='review-span highlight' data-aligned-summaries='0'>enough for my family of three</span>. We had the best sleep in days amd woke up the next morning refreshed. The buffet breakfast at the cafe on the lower ground floor was very good too, not to mention the <span class='review-span highlight' data-aligned-summaries='0'>good and friendly services provided by its staff</span>. No wonder, Regal was awarded the best airport hotel title for last couple of years.</div><div class='text-box'>We've stayed twice at this hotel. Rooms were good but the more important factor for us was the hotel's location. For both times, the hotel's location allowed us to make the most out of our short visit to HK. We did not waste any travel time between hotel and airport, either at arrival or for departure, since it was interconnected. We are not hassled or stressed with rushing to the airport to catch our flight. The hotel also had regular free shuttle service to Tung Chung (outlet mall) and several stops at downtown HK. This also saved us bus/train fares. The hotel also has a pool and gym which unfortunately we were not able to try since we were always out exploring HK.</div><div class='text-box'>I stayed here for a night in transit to Kathmandu. Average hotel to stay only if you are in transit, otherwise, why one should spend more money here at the airport rather than staying in city areas. Everything was expensive but <span class='review-span highlight' data-aligned-summaries='0'>some of staff were nice</span> and room facilities were okay. So many things in my room was initially not working and I had to call house keeping to fix it such as safety deposit box, TV remote, Refrigerator (with anything inside).and so on. There was nothing that really attracted me so much. But in general I saw they have different facilities within hotel complex, including many restaurants and bar, pools etc.</div><div class='text-box'>We stayed one night between our flights from Australia to North America and arrived late in the evening. The room temperature never rose above 18 degrees Celcius and the shower taps were broken and therefore shower temperature adjustment was extremely difficult. <span class='review-span highlight' data-aligned-summaries='0'>Service was just OK</span> and the breakfast which was included in our package was pretty good. For the price of the room we did not feel we received good value at all. <span class='review-span highlight' data-aligned-summaries='0'>Room was clean</span> but bed was like sleeping on a sheet of plywood and there were no face cloths.</div><div class='text-box'>My third time in this hotel, <span class='review-span highlight' data-aligned-summaries='0'>excellent staff</span> from Front desk. Luggage was sent quickly and quick check in. There is no other hotel closer to the airport. Good location for early flight visitor like me.</div><div class='text-box'>I usually avoid airport hotels like the plague, but the Regal at HK is very good. <span class='review-span highlight' data-aligned-summaries='0'>Clean spacious room</span>, good dining facilities and a reasonable room rate.</div><div class='text-box'>A quiet place despite the airport. Free transport was wonderful.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The rooms at the hotel were clean and spacious and the hotel staff were great.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

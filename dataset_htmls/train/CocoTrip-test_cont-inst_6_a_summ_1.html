@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>Returned yesterday from a 2 night stay at the Hotel New Amsterdam with my wife and 11 year old son and have to say <span class='review-span highlight' data-aligned-summaries='1'>what a joy it was,from the initial welcoming cup of tea to the final goodbye it was a superb experience</span>. <span class='review-span highlight' data-aligned-summaries='2'>The hotel is very centrally located</span> just a 10 minute walk from the Central Station and next to a charming canal and although <span class='review-span highlight' data-aligned-summaries='3 6'>the rooms</span> <span class='review-span highlight' data-aligned-summaries='6'>are on the small side(we had the mini-suite in the loft which had a tricky low ceiling! and generally traditional Amsterdam hotels are on the small side)</span> they <span class='review-span highlight' data-aligned-summaries='3'>are beautifully decorated and very cosy with high quality furnishings</span>.<span class='review-span highlight' data-aligned-summaries='7'>Just look out for the steep stairs if you have large suitcases it can be hard work</span>! <span class='review-span highlight' data-aligned-summaries='4 5'>The breakfast was</span> <span class='review-span highlight' data-aligned-summaries='4'>typically continental</span> with cold meats,cereals and a lovely selection of bread ,fresh juice and good coffee <span class='review-span highlight' data-aligned-summaries='5'>etc.served in a smart little dining room</span> with a tv showing BBC news. What set this place apart for me was the service from all the staff who went out of their way to help and make us feel special-we have used many hotels in the US and Europe and can honestly say this hotel is right at the top when it comes to service,nothing was too much trouble. Would not hesitate in returning to this hotel.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2'>The hotel is located in Jordaan, beautiful district with very cozy restaurants</span>. <span class='review-span highlight' data-aligned-summaries='0'>The hotel has modern looks</span>, <span class='review-span highlight' data-aligned-summaries='4'>great breakfast</span>, and the staff are nice and friendly. I stayed in room 342, which is in the third floor, and has two twin beds. <span class='review-span highlight' data-aligned-summaries='1 3'>The room was OK</span>, <span class='review-span highlight' data-aligned-summaries='3'>but</span> I do have to say that <span class='review-span highlight' data-aligned-summaries='1 3'>each bed was extremely small</span>! 68 cm wide (which is very small) I actually asked the staff if this was normal, and they said that in Amsterdam hotels it is normal. Apart from this, I would recommend the hotel, but I would make sure, before making the reservation that they book you a room with normal sized beds. Oh, also, the room rate doesn't include breakfast (<span class='review-span highlight' data-aligned-summaries='4'>which was 7 euros, more or less</span>)</div><div class='text-box'>I was in this hotel during 4 days, and <span class='review-span highlight' data-aligned-summaries='1'>it was perfect</span>. Staff is really kind,they help us in any moment. <span class='review-span highlight' data-aligned-summaries='4'>Breakfast for free and also tea and coffe</span>. Internet too for free. <span class='review-span highlight' data-aligned-summaries='2'>The hotel is only 5 minutes from central station, and it is placed in the best area of Amsterdam</span>, in the city center.<span class='review-span highlight' data-aligned-summaries='3'>Very nice room, so clean</span> and beatifull with canal view. In my opinion, <span class='review-span highlight' data-aligned-summaries='0'>the hotel style is great</span>, it is different, and <span class='review-span highlight' data-aligned-summaries='0 2 6'>prices are ok</span>.<span class='review-span highlight' data-aligned-summaries='2'></span></div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='6'>Hotels in Amsterdam is not cheap</span>. <span class='review-span highlight' data-aligned-summaries='2'>This hotel has a reasonable price</span> and <span class='review-span highlight' data-aligned-summaries='2'>has an excellent location near the central station</span> but still in a very nice area, Jordaan. <span class='review-span highlight' data-aligned-summaries='3'>The rooms</span> (we chose a L) <span class='review-span highlight' data-aligned-summaries='3'>are</span> of a good size and <span class='review-span highlight' data-aligned-summaries='3'>reasonably clean</span>. <span class='review-span highlight' data-aligned-summaries='4'>The "continental breakfast" was toast and jam, with coffee or tea</span>, which was kind of a let down. But, <span class='review-span highlight' data-aligned-summaries='2'>at this price</span> and location, <span class='review-span highlight' data-aligned-summaries='2'>it's a great hotel</span>.</div><div class='text-box'>The staff were friendly and helpful. <span class='review-span highlight' data-aligned-summaries='3'>The room was comfortable</span> but small. We believe they cater for a gay market, whilst this does not bother us at all, <span class='review-span highlight' data-aligned-summaries='1'>we did find the explicit gay pornography left in the common areas</span> offensive and gave the hotel a seedy element. We would feel the same way about heterosexual material being availabe in the same way. <span class='review-span highlight' data-aligned-summaries='1'>Would not stay there again based on this</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='6'>This is a small hotel</span> <span class='review-span highlight' data-aligned-summaries='2'>located about a 5 minute walk from the Central Station in a quiet neighborhood in Amsterdam</span>. <span class='review-span highlight' data-aligned-summaries='1'>The staff is friendly and the rooms are simple and clean</span>. <span class='review-span highlight' data-aligned-summaries='0 2 6'>Most rooms</span> tend to be a little small but <span class='review-span highlight' data-aligned-summaries='0 2 6'>are generally a pretty good value</span>. <span class='review-span highlight' data-aligned-summaries='4'>They provide a breakfast which unfortunately is only bread/toast and jelly/jam</span> but there are plaves to eat nearby. They also offer free wireless internet.</div><div class='text-box'>I stayed at this just last week. <span class='review-span highlight' data-aligned-summaries='1'>Great place to stay</span>, <span class='review-span highlight' data-aligned-summaries='4'>free breakfast</span> and internet. Just have to wait for everyone to log off so you can get on. Even books to read if you don't want to sightsee in a number of languages. Coffee and tea available all the time as well - free! Really <span class='review-span highlight' data-aligned-summaries='2'>close to everything</span> as well.</div><div class='text-box'>very <span class='review-span highlight' data-aligned-summaries='0 1'>good value</span> <span class='review-span highlight' data-aligned-summaries='0'>for money</span>. <span class='review-span highlight' data-aligned-summaries='1'>great location</span>, great service, <span class='review-span highlight' data-aligned-summaries='3'>great room</span>, <span class='review-span highlight' data-aligned-summaries='4'>great breakfast</span> wish there was one of these hotels in every city</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This hotel is reasonably priced and has great style to it.</span> <span id="1" class="summary-sentence">It will provide a perfect stay.</span> <span id="2" class="summary-sentence">The hotel is centrally located therefore close to everything and for the price it really makes this hotel great.</span> <span id="3" class="summary-sentence">The rooms are very nice and clean but be sure to book a large room or you will end up with small beds.</span> <span id="4" class="summary-sentence">The hotel provided a complimentary Continental breakfast with hot drinks available at all times.</span> <span id="5" class="summary-sentence">Food is served in a reserved dining room.</span> <span id="6" class="summary-sentence">Hotels here are not cheap and very often are quite small.</span> <span id="7" class="summary-sentence">In this hotel there are quite steep stairs that make large suitcases quite hard work.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

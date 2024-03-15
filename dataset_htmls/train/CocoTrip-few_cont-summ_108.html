@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>I have stayed here three times -all on business trips where the hotel was booked for me. In fact, there are many meetings held here, and so you might find yourself surrounded by a large group of businessmen - not necessarily a bad thing -but just be aware. <span class='review-span highlight' data-aligned-summaries='8'>The two lifts are small and infrequent, and so you may have to wait a long time</span> - which is annoying if you are on the top floors. <span class='review-span highlight' data-aligned-summaries='0 2'>The location is great</span> <span class='review-span highlight' data-aligned-summaries='2'>for seeing Barcelona -you can reach most of the central sights by foot -including the Gaudi cathedral</span>. <span class='review-span highlight' data-aligned-summaries='3'>Very near to a metro line</span> , which is also a bonus. <span class='review-span highlight' data-aligned-summaries='0 9'>Rooms are fine</span> <span class='review-span highlight' data-aligned-summaries='9'>-just try to get one facing the courtyard at the back -the ones to the front can be noisy</span>. <span class='review-span highlight' data-aligned-summaries='0 7'>Biggest disappointment was the breakfast -17 for a very poor selection - definitely not worth it</span>. I didn`t bother after the first morning.</div><div class='text-box'>We got a really good deal on the rooms at this hotel and, therefore, it was worth what we paid for it. However, <span class='review-span highlight' data-aligned-summaries='0'>I would have been dissapointed if we had payed full price for this</span>. We went in january which I know is not in season however, the terraces were closed and the pools were not open. They were also doing refurbishment works to one of the terraces, none of this was really communicated until you checked in. <span class='review-span highlight' data-aligned-summaries='0 4'>The room was a reasonable size</span> as we had one at the end of a corridor <span class='review-span highlight' data-aligned-summaries='0 4'>and the bed was comfy</span>. <span class='review-span highlight' data-aligned-summaries='5'>The bathrooms</span> however, <span class='review-span highlight' data-aligned-summaries='5'>need some updating</span>, they were tired and not in the best condition. Also be warned <span class='review-span highlight' data-aligned-summaries='1 9'>if you stay on the front of the hotel, the spanish like to beep their horns and this can be disturbing</span>.</div><div class='text-box'>Second time in this hotel and kinda disappointed. <span class='review-span highlight' data-aligned-summaries='0'>Rooms are ok</span> and it is <span class='review-span highlight' data-aligned-summaries='0'>a good value for money mainly due to the great location</span> on Paseig de Gracia, <span class='review-span highlight' data-aligned-summaries='0'>but the service does not seem to care so much about their customers</span>. They are physically present behind the desk, but it stops here. It seems that they are breathing boredom. If you go to Barcelona for a short weekend and do not plan to spend too much time at the hotel, it'll be alright. If not, i'm sure you can pick a better place where the service will show you a more positive and customer focused attitude.</div><div class='text-box'>The <span class='review-span highlight' data-aligned-summaries='0'>hotel staff was very helpful</span>, <span class='review-span highlight' data-aligned-summaries='0'>rooms very modern with everything that we could think of</span><span class='review-span highlight' data-aligned-summaries='2'>. It is a short walk away from Gaudi's Casa Batllo, la Pedrera</span> and a bit longer to la Sagrada Familia, <span class='review-span highlight' data-aligned-summaries='2'>the location couldn't be better</span>! <span class='review-span highlight' data-aligned-summaries='2'>Within a couple of blocks it has many restaurants</span> to chose from and can't forget to mention that it<span class='review-span highlight' data-aligned-summaries='2'>'s in a great shopping area</span>. From now on the place where we'll stay when visiting Barcelona.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Great hotel</span>! i can only think of a few things wrong with our stay, for one, <span class='review-span highlight' data-aligned-summaries='0 7'>breakfast was not worth the price</span> paid and <span class='review-span highlight' data-aligned-summaries='0 6'>room service was a bit overpriced</span> as well, but with such a wide variety of other places to eat in barcelona, it didn{t really mattter much. <span class='review-span highlight' data-aligned-summaries='4'>The standard room was small</span> but then again <span class='review-span highlight' data-aligned-summaries='4'>the bed was huge</span>! <span class='review-span highlight' data-aligned-summaries='2'>and the location. it can't get eny better!</span></div><div class='text-box'>This hotel is located in a <span class='review-span highlight' data-aligned-summaries='0 2'>great location</span> <span class='review-span highlight' data-aligned-summaries='0'>however is very expensive</span>. If your looking for a place near Gaudi's buildings and shopping areas, then stay here.</div><div class='text-box'>A lovely pillow menu.WOW.rooms <span class='review-span highlight' data-aligned-summaries='2'>excellent.location is very central and many many shops near the hotel</span>, staff very helpful. <span class='review-span highlight' data-aligned-summaries='0'>A bit pricey but Lovely</span></div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Great place and location</span>. Would defo stay here again. Loved it. Go see it.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This is overall a really great hotel but a bit pricey.</span> <span id="1" class="summary-sentence">It could be quite disturbing if you stay on the front of the hotel due to the horns from the street.</span> <span id="2" class="summary-sentence">The location of this hotel is absolutely great and central, you can walk to many shops, Gaudi 's Casa Batllo , and la Pedrera.</span> <span id="3" class="summary-sentence">The metro station is also really close.</span> <span id="4" class="summary-sentence">A standard room at this hotel is smaller than expected, with most of the space being taken by the huge but very comfortable bed inside.</span> <span id="5" class="summary-sentence">The bathrooms was outdated and need some updating.</span> <span id="6" class="summary-sentence">The room service was overpriced.</span> <span id="7" class="summary-sentence">Unfortunately the hotel's breakfast definitely not worth the money.</span> <span id="8" class="summary-sentence">The lifts were a bit inconvenient and request long time wait because there are only two of small and infrequent ones.</span> <span id="9" class="summary-sentence">Also, the rooms facing courtyard at the back are quieter than the ones to the front.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

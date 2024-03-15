@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>The Courtyard isn't exactly in the quietest part of town (you can hear take offs and landings during the day since <span class='review-span highlight' data-aligned-summaries='4'>it's very close to the runway</span>). After the airport quiets down, it's a nice relaxing <span class='review-span highlight' data-aligned-summaries='7'>beachfront hotel</span>. The casino is small but enough to get your slot machine or blackjack fix in. A wide range of restaurants is in the lobby to serve you. Best of all, <span class='review-span highlight' data-aligned-summaries='3'>the staff is incredibly accomodating, helpful and nice</span> 24/7. The pool/beach attendants are great and the rum drinks are yummy (we even got coupons for 2 free ones). Bed is comfortable, bottled water in the room is a nice touch. All-in-all, <span class='review-span highlight' data-aligned-summaries='9'>a peaceful stay</span>.</div><div class='text-box'>This is one of three hotels that I stayed at in this area and it is by far my favorite! The check in was smooth. <span class='review-span highlight' data-aligned-summaries='2'>The ocean front view was amazing</span>. The common areas were bustling but not too crowded. The food was decent but a bit over priced like at any resort. The casino was nice but small. The free arcade was nice as well. <span class='review-span highlight' data-aligned-summaries='0'>The beach was great</span>! Not overly crowded and the staff was attentive. And unlike other hotels, you walk right out the back entrance to the beach instead of having to go through a maze and a gate. Would definitely stay here again if in the area and would recommend to others</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>The hotel is dated but clean</span>. <span class='review-span highlight' data-aligned-summaries='3 9'>The staff was fine</span>. Restaurants in the hotel are mediocre but it is fun to watch locals dance in the Salsa bar in the evenings. <span class='review-span highlight' data-aligned-summaries='0 9'>The beach is better than</span> we experienced at <span class='review-span highlight' data-aligned-summaries='0 9'>The Intercontinental or El San Juan</span> up the road. However, <span class='review-span highlight' data-aligned-summaries='4'>this hotel is very close to the airport</span> and every twenty to thirty minutes you hear one of the jets take off from the airport. You don't really hear the jets from inside the hotel but definitely while on the beach. <span class='review-span highlight' data-aligned-summaries='5'>Not many restaurants within walking distance</span> and it is a $20-30 cab ride to Old San Juan.</div><div class='text-box'>Stayed here 1 night prior to our cruise. the hotel was clean and the staff were very nice. I wouldn't say it's the nicest hotel, but it's worth the money compared to most san juan hotels <span class='review-span highlight' data-aligned-summaries='7'>located on the beach</span>. One annoying thing, was <span class='review-span highlight' data-aligned-summaries='4'>the hotel is very close to the airport</span> so it was loud at times (not the end of the world). The area was good and <span class='review-span highlight' data-aligned-summaries='5'>there are some restaurants in the area (walking distance</span>). <span class='review-span highlight' data-aligned-summaries='9'>I would recommend this hotel and would consider returning</span> if in the area!</div><div class='text-box'>The staff was great. <span class='review-span highlight' data-aligned-summaries='3'>Everyone was super friendly and helpful</span>. <span class='review-span highlight' data-aligned-summaries='0'>The beach and pool area were great</span>, not crowded and <span class='review-span highlight' data-aligned-summaries='0'>very clean</span>. The few negatives are that there is no real lounge area in the lobby. You can only sit at a table near the bar or at the restaurant. <span class='review-span highlight' data-aligned-summaries='5'>It is a bit of a walk</span> or a cab ride <span class='review-span highlight' data-aligned-summaries='5'>to go to shops or any other restaurant</span>. <span class='review-span highlight' data-aligned-summaries='4'>Be prepared to hear all flights from the airport</span>. But <span class='review-span highlight' data-aligned-summaries='9'>do not hesitate to stay here</span> if Isla Verde is the location you are looking for.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='3'>The staff here is great. Helpful, responsive, and friendly staff</span> <span class='review-span highlight' data-aligned-summaries='3 9'>made our stay the most enjoyable</span>. <span class='review-span highlight' data-aligned-summaries='0'>Great pool bar bartenders</span>! The location is absolutely ideal, and <span class='review-span highlight' data-aligned-summaries='0 7'>on the most beautiful beach</span> <span class='review-span highlight' data-aligned-summaries='0'>in San Juan</span>. <span class='review-span highlight' data-aligned-summaries='0'>Hotel rooms are very</span> nice and <span class='review-span highlight' data-aligned-summaries='0'>clean</span>, <span class='review-span highlight' data-aligned-summaries='0'>pool area is awesome</span> and casino is fun! Food and <span class='review-span highlight' data-aligned-summaries='6'>drinks are reasonably priced</span> in comparison to other hotels. Puerto Rico is beautiful and this hotel is amazing. <span class='review-span highlight' data-aligned-summaries='3'>Great staff</span>, <span class='review-span highlight' data-aligned-summaries='0'>great beach</span>, and great rooms at a very good price. it really can't be beat.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='4'>The hotel is extremely close to the airport</span> (like you could cross the street and be on the runway), but I didn't find the noise to be obnoxious and constant. The rooms are nice, beds comfortable. The downside is that <span class='review-span highlight' data-aligned-summaries='5'>this hotel is at the very end of the strip in Isla Verde. The closest restaurant outside of the hotel was between a 5 and 10 minute walk</span>. The hotel restaurants were overpriced and nothing phenomenal. <span class='review-span highlight' data-aligned-summaries='7'>The hotel does have a nice beach</span> and pool.</div><div class='text-box'>I stayed at the Courtyard for a week in June on business. Isla Verde is great, but this hotel is somewhat removed from the main area (about one mile). The rooms were very clean, internet service is free and <span class='review-span highlight' data-aligned-summaries='2'>the view from the room was terrific</span>. Stay away from the buffet, the food is not good quality for $22. For $150 per night <span class='review-span highlight' data-aligned-summaries='9'>I think the place is great</span> and I would definitely stay again.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This is a clean hotel with a great beach and pool area.</span> <span id="1" class="summary-sentence">The free breakfast buffett is a real plus.</span> <span id="2" class="summary-sentence">The rooms are comfortable and most have a great view of the Ocean.</span> <span id="3" class="summary-sentence">The service was very good.</span> <span id="4" class="summary-sentence">Isla Verde is very close to the airport.</span> <span id="5" class="summary-sentence">The courtyard is at the end of the Isla Verde "strip", so it is a bit of a walk to get to the other hotels or shopping and restaurants.</span> <span id="6" class="summary-sentence">The only other negative things I noticed were the price of the drinks, and 6 dollars for a beach chair rental.</span> <span id="7" class="summary-sentence">The chairs at the pool are free, and the beach is right there.</span> <span id="8" class="summary-sentence">You can easily go from pool to beach.</span> <span id="9" class="summary-sentence">Very enjoyable stay.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

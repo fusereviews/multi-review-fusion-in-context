@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>The way this place works is pretty cool. <span class='review-span highlight' data-aligned-summaries='0'>You get a bowl and just stack it with all different types of meat and seafood</span>. <span class='review-span highlight' data-aligned-summaries='1'>The choices were overwhelming</span> but all great. <span class='review-span highlight' data-aligned-summaries='0 3'>It was interesting to watch them make your creation</span>. For the amount of food you get, the price is good as well. I'll definitely be back.</div><div class='text-box'>I was excited to return here and we had <span class='review-span highlight' data-aligned-summaries='2'>such a good dinner</span>. <span class='review-span highlight' data-aligned-summaries='0 3'>Watching dinner being prepared</span> <span class='review-span highlight' data-aligned-summaries='0'>on the large grill</span> <span class='review-span highlight' data-aligned-summaries='3'>and</span> <span class='review-span highlight' data-aligned-summaries='0 1 3'>picking what you want makes this a fun place</span>. Don't forget to hit the gong to thank them! I opted for 2 bowls and also tried some different ingredients. I just really like the large options that are available.</div><div class='text-box'>This restaurant is barely worthy of one star. <span class='review-span highlight' data-aligned-summaries='1 2 3'>They leave raw food sit out on a buffet</span>. <span class='review-span highlight' data-aligned-summaries='0'>They have a very large disk where they attempt to cook your food</span>. <span class='review-span highlight' data-aligned-summaries='1 2 3'>Mine wasn't fully cooked</span> <span class='review-span highlight' data-aligned-summaries='2 3'>and I got food poisoning</span>. I'm never coming back EVER.</div><div class='text-box'>I like it, <span class='review-span highlight' data-aligned-summaries='2'>the food tastes good</span>, and <span class='review-span highlight' data-aligned-summaries='1 3'>it's a cool concept</span>.<span class='review-span highlight' data-aligned-summaries='1'>But they're not very clear on what to do</span> and where to go to with the plates. And it's not very clear how much stuff costs, like is a side of rice included?</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2'>The food was decent</span> but the overall experience is not. <span class='review-span highlight' data-aligned-summaries='0 1 3'>The process of creating your bowl is not fun</span> <span class='review-span highlight' data-aligned-summaries='1 3'>and is very difficult to manage</span> <span class='review-span highlight' data-aligned-summaries='1'>if you have small children</span> in tow. <span class='review-span highlight' data-aligned-summaries='2'>The place was also a mess with virtually every point</span> being point <span class='review-span highlight' data-aligned-summaries='2'>being dirty</span>. We have no intention of ever returning again.</div><div class='text-box'>Our server was extremely rude. She was slamming utensils and rolling her eyes constantly. No greetings and was not tentative. We felt like we were not welcome and were rushed.<span class='review-span highlight' data-aligned-summaries='2 3'>The food is overpriced and we got egg shells in our meal</span>.It was so bad that I created this Yelp account to give this review.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='3'>I would recommend this to anyone</span>. <span class='review-span highlight' data-aligned-summaries='1 2'>The food is great</span>.<span class='review-span highlight' data-aligned-summaries='1'>.. well if you know what you are doing</span> (<span class='review-span highlight' data-aligned-summaries='0'>build your own bowl</span>). Endless food is on $2 more than the standard price. Come hungry and eat well.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2 3'>Great food</span>. Great service. The grill master was fantastic. They were great about keeping up with the lunchtime rush too. I will be back next time I'm in Pittsburgh. Prices are also good. <span class='review-span highlight' data-aligned-summaries='0 3'>Unlimited stir fry for 12.99</span>!</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Customers in this stir-fry restaurant pick their ingredients buffet style, then the cook prepares the meal in front of them.</span> <span id="1" class="summary-sentence">The process can be confusing and chaotic for some, especially small children.</span> <span id="2" class="summary-sentence">Overall, the food is good, however, sometimes there is a mess in the food station.</span> <span id="3" class="summary-sentence">This is recommended for people who want a unique experience.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

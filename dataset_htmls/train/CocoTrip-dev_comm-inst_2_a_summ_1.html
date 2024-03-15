@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>Would come back again and again We have been staying at Island Shangri-la once every year for the past 7 years. <span class='review-span highlight' data-aligned-summaries='0'>They have continued to improve their service year after year</span>. The service is impeccable. The rooms were renovated a couple of years ago and they added a modern twist. But the level of comfort and 'homeyness' has been retained. With the Pacific Place mall right underneath the hotel, it is so convenient to just go down and shop, knowing that even if you carry a lot of bulky items. There is no worry about riding through the mrt or lining up to get a taxi. You can just catch the elevator and go right up to your room. It is always a perfect experience staying at the hotel.</div><div class='text-box'>Good, but not unforgettable This hotel is certainly good enough as a business hotel. However, I really will not stay here for a leisure trip. As mentioned in another review, there are just no personal touches or charm. <span class='review-span highlight' data-aligned-summaries='0'>The staff is polite but</span> the service is more <span class='review-span highlight' data-aligned-summaries='0'>mechanical</span>, rather than from the heart. There is a pool, but it offers a view of skyscrapers nearby. It's really quite hard to relax in this evironment.The location is not bad as it is connected to the subway via a big shopping mall. However, in the morning, a cab ride can take quite long to reach the central business district due to traffic jam.</div><div class='text-box'>OK, not spectacular. I spent a few nights at the Shangri La in August. I found the overall experience lacking.The rooms are bland, all function with surprisingly little style (surprising given the strong feng shui influence in HK). <span class='review-span highlight' data-aligned-summaries='0'>The rooms are</span> also <span class='review-span highlight' data-aligned-summaries='0'>small</span>, even by HK/Toyko standards. Lunch at the cafe was expensive and disappointing. Breakfast was much better, though also very expensive.The pool is really nice, and the gym is good. <span class='review-span highlight' data-aligned-summaries='0'>The staff was OK</span>, but interactions felt rushed and reminded me more of a NYC business hotel than a true 5 star.Don't be afraid to try somewhere else.</div><div class='text-box'>once again, great stay once again, a great stay, upgraded to a harbour view as it was our silver wedding aniversary, flowers, fruit etc as well, i love this hotel so much, <span class='review-span highlight' data-aligned-summaries='0'>such humble and smilley</span> staff considering it is regullaly voted one of the best hotels in the world for everything, fab possition, great rooms, <span class='review-span highlight' data-aligned-summaries='0'>wonderfull staff</span>, do i own it or work for them? no,we just love staying here, well done, shangri- la once again!</div><div class='text-box'>consistently excellent I stay at the island SRL frequently with business, and it isconsistently excellent - <span class='review-span highlight' data-aligned-summaries='0'>staff are always amazing</span>. Isupposethe only picky downside is if you like modern it may be a littlechinzy for you!The service is outstanding.the bar lady in the foyer bar has remembered the drink I have on every visit (as she does with every repeat guest!) and the pool is simply relaxation at its best!Highly recommended</div><div class='text-box'>Great hotel, deserves its reputation Really great location next to luxury shopping mall and park. We stayed in the lowest category room (deluxe peakview) and had no complaints. <span class='review-span highlight' data-aligned-summaries='0'>Service was excellent, staff couldn't do enough for us and our 2 kids, great welcome</span>. Breakfast amazing, loved the outdoor pool - a great stay.</div><div class='text-box'>Excellent This place is great. The welcome was impressive, the location is great above Pacific place and the MTR station.<span class='review-span highlight' data-aligned-summaries='0'>The rooms were spacious, clean</span> and had everything you could ask for<span class='review-span highlight' data-aligned-summaries='0'>. Staff are very polite and efficient</span>.Highly recommended.</div><div class='text-box'>top of the line but you pay for it showReview(3417094, 'full');</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The rooms here are clean as well as spacious and the staff are really excellent too.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

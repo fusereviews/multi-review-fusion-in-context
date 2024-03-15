@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>Visited this <span class='review-span highlight' data-aligned-summaries='0'>location</span> on Friday Aug 3 2018As usual it <span class='review-span highlight' data-aligned-summaries='0'>was a busy</span> Friday <span class='review-span highlight' data-aligned-summaries='0'>happy hour</span>, however our <span class='review-span highlight' data-aligned-summaries='3'>waitress Jocelyn was fabulous</span>. Not only was she <span class='review-span highlight' data-aligned-summaries='3'>pleasant, and attentive</span>, she offered fabulous options for wine. Good help is hard to find, don't loose this girl!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 4'>Food is expected and average</span>. But the Tuna Stack and Calamari are above average. It's the corporate industry types' flavour du jour and how can you blame them. <span class='review-span highlight' data-aligned-summaries='2'>The food is decent</span>, the <span class='review-span highlight' data-aligned-summaries='0 4'>service is never sub-par</span>, and the <span class='review-span highlight' data-aligned-summaries='1'>ambience is quite attractive</span>.</div><div class='text-box'>There is <span class='review-span highlight' data-aligned-summaries='2'>only</span> <span class='review-span highlight' data-aligned-summaries='0 2 4'>one vegan option</span> <span class='review-span highlight' data-aligned-summaries='2'>on the menu</span> (unmarked), but it <span class='review-span highlight' data-aligned-summaries='0 2 4'>was pretty good</span>. About 4 stars.The beer choices are limited and the descriptions misleading. Minus 1 / 2 a star for that.<span class='review-span highlight' data-aligned-summaries='0 4'>The service was definitely 5-star</span>. <span class='review-span highlight' data-aligned-summaries='3'>I was amazed at how friendly they were are how deftly they handled the difficult diners</span> in our group. Huzzah!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='3'>My server is a cow - period</span> - this sucks when we get the pretentious one - I am not familiar with the night servers as I take clients here during the day - <span class='review-span highlight' data-aligned-summaries='3'>she is not going to serve me again</span> - Chloe - sorry 'babe' as you call us - <span class='review-span highlight' data-aligned-summaries='4'>not good enough</span></div><div class='text-box'>The <span class='review-span highlight' data-aligned-summaries='1 3 4'>hostesses are so rude</span>! I don't mind waiting for the lounge when it's busy but don't be rude about it and when I ask if I can order a drink while I wait.. they walk away and ignore us. I <span class='review-span highlight' data-aligned-summaries='0 1'>enjoy going to the Barlow location</span>.<span class='review-span highlight' data-aligned-summaries='0'> Not Stephen Ave</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Wonderful restaurant</span> with <span class='review-span highlight' data-aligned-summaries='1 4'>great atmosphere</span>. Our server was very friendly and knowledgable about the menu items. I had the salmon and my husband had a steak. <span class='review-span highlight' data-aligned-summaries='2'>Both</span> <span class='review-span highlight' data-aligned-summaries='2 4'>entrees were prepared to perfection</span>. We will definitely return next time we are in Calgary.</div><div class='text-box'>My boyfriend and I came here for happy hour. Although the <span class='review-span highlight' data-aligned-summaries='2 4'>food wasn't all that amazing</span>,<span class='review-span highlight' data-aligned-summaries='4'></span> <span class='review-span highlight' data-aligned-summaries='1 4'>the patio is gold</span>! The cocktails + this patio = love. It's <span class='review-span highlight' data-aligned-summaries='1'>such a wonderful spot to just people watch and hangout</span> especially at lunch on a workday or during happy hour as you can see the people hustling and bustling around town.</div><div class='text-box'>Our waitress was extremely kind. Our group had to go to this place last minute on a very busy night and <span class='review-span highlight' data-aligned-summaries='3'>they found a way to accommodate 9 of us</span>. <span class='review-span highlight' data-aligned-summaries='0'>Very happy with the speed and quality of service</span> as well. <span class='review-span highlight' data-aligned-summaries='4'>Will be coming back and bringing friends</span></div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Good restaurant in a nice location.</span> <span id="1" class="summary-sentence">Atmosphere is great and it features a nice patio for hanging out.</span> <span id="2" class="summary-sentence">Food is decent and menu is limited for vegans.</span> <span id="3" class="summary-sentence">Staff is nice and accommodating but customer service can be a hit and miss.</span> <span id="4" class="summary-sentence">Overall recommended place.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

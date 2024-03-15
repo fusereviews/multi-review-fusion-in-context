@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2'>The hotel is very good located in a large garden</span>. Although being inmidst Istanbul, you can open the window, hear birds singing, breathe fresh air and have <span class='review-span highlight' data-aligned-summaries='3'>a beautiful view into the amazing garden and onto the Bosphorus itself</span>. Most exiting is the roof bar / <span class='review-span highlight' data-aligned-summaries='8'>restaurant from where you have an even more excellent view while receiving very good food</span>, drinks and service. Vety advantage is that you can reach the old town with Topkapi, Blue Mosc and all other attractions by tram. Just take a walk or a quick taxi to the end point of the tram and enjoy riding over the Golden Horn on its own rail not being bothered by any of that really crazy traffic.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2 3'>The hotel is ideally located</span> <span class='review-span highlight' data-aligned-summaries='3'>on a hillside with a 60 acre garden. The views are superb. You can see the sea from everywhere</span>. <span class='review-span highlight' data-aligned-summaries='0 1 4'>The rooms are large</span> <span class='review-span highlight' data-aligned-summaries='0 1'>and</span> <span class='review-span highlight' data-aligned-summaries='5'>the bathrooms of a good size</span>. <span class='review-span highlight' data-aligned-summaries='0 1'>The spa is very good</span>. <span class='review-span highlight' data-aligned-summaries='3 8'>Many restaurants</span> <span class='review-span highlight' data-aligned-summaries='3'>& shopping</span> <span class='review-span highlight' data-aligned-summaries='3 8'>close to the hotel</span>. Old city is only 20 minutes by taxi. The staff is very friendly. The bar is good but the coffee shop is not so good. <span class='review-span highlight' data-aligned-summaries='8 9'>Food in the hotel is not as per Turkish standards</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1'>The hotel had a party of it's own shortly after we arrived but they chose not to warn us that we wouldn't be able to use the outdoor pool</span> for 48 hours or that we wouldn't be able to sleep because of the considerable noise and disruption. This is not a cheap hotel and <span class='review-span highlight' data-aligned-summaries='7'>the charming staff are badly let down by the poor management</span>. I have been staying here, on and off, for nearly twenty years and <span class='review-span highlight' data-aligned-summaries='7'>it used to be very well run</span>.</div><div class='text-box'>Stayed for five nights, <span class='review-span highlight' data-aligned-summaries='0 1'>very attentive staff</span>, <span class='review-span highlight' data-aligned-summaries='0 1'>very clean and well kept</span> <span class='review-span highlight' data-aligned-summaries='1'>hotel</span>. Breakfast buffet is outstanding. <span class='review-span highlight' data-aligned-summaries='7'>Have good security to drive on property must pass guard house and barrier's, metal detector when accessing lobby</span>. <span class='review-span highlight' data-aligned-summaries='10'>The worst aspect is the cost of internet for your room, about $25</span> a day.ouch! <span class='review-span highlight' data-aligned-summaries='2'>Location is okay not great</span> depending on what your doing.near river, but a good little walk and uphill coming back. Nice view of river from the lobby lounge area.</div><div class='text-box'>Stayed at this hotel for 3 nights during a business trip in Istanbul. <span class='review-span highlight' data-aligned-summaries='1'>From the outside the hotel looks a bit out of date</span>. However, <span class='review-span highlight' data-aligned-summaries='0 1 4 6'>the room are</span> <span class='review-span highlight' data-aligned-summaries='0 1 4'>spacious</span> <span class='review-span highlight' data-aligned-summaries='0 1'>and</span> <span class='review-span highlight' data-aligned-summaries='0 1 6'>refurnished</span>. <span class='review-span highlight' data-aligned-summaries='7'>I found the staff friendly and helpful</span>. <span class='review-span highlight' data-aligned-summaries='3 8'>There is a good choice of restaurants</span> - but <span class='review-span highlight' data-aligned-summaries='9'>beware of high prices</span>. Overall it was a good experience and I would recommend to all business travellers.</div><div class='text-box'>really <span class='review-span highlight' data-aligned-summaries='1'>the place to stay in Istanbul. perfect</span>, professional and friendly service, <span class='review-span highlight' data-aligned-summaries='8'>great breakfast buffet</span>, <span class='review-span highlight' data-aligned-summaries='2'>beautiful position</span> <span class='review-span highlight' data-aligned-summaries='2 3'>overlooking the Bosphorus</span>.<span class='review-span highlight' data-aligned-summaries='2'></span> An oasis of peace in a big garden. <span class='review-span highlight' data-aligned-summaries='4'>Big</span>, clean <span class='review-span highlight' data-aligned-summaries='4 6'>rooms</span> <span class='review-span highlight' data-aligned-summaries='6'>with all amenities</span>. <span class='review-span highlight' data-aligned-summaries='7'>Great turndown service in the evenings with even bathrobes changed</span>. worth repeating over and over again !</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 8'>The restaurants and the quality of the foods</span> <span class='review-span highlight' data-aligned-summaries='0'>and services</span> <span class='review-span highlight' data-aligned-summaries='0 8'>were excellent</span> but the whole hotel and <span class='review-span highlight' data-aligned-summaries='6'>the rooms are looking tired and really need a renovation.</span> <span class='review-span highlight' data-aligned-summaries='0'>The spa was fantastic</span> especially the turkish hamam. <span class='review-span highlight' data-aligned-summaries='2'>The location is great</span> with the whole bosphorus view and nearness to the favorite places.</div><div class='text-box'>I had the best time . Nice room, friendly staff, . <span class='review-span highlight' data-aligned-summaries='2'>It has a great location</span> too, . <span class='review-span highlight' data-aligned-summaries='0'>Highly recommended</span>!</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">A highly recommended hotel that has luxuries such as its own spa for guests to enjoy.</span> <span id="1" class="summary-sentence">A great experience to be had here, although the outside of the hotel could do with being updated.</span> <span id="2" class="summary-sentence">The location at this hotel is great.</span> <span id="3" class="summary-sentence">It sits on a hillside with 60 acres of garden to enjoy and offers fantasic views of the whole Bosphorus as well as being close to several restaurants and shopping.</span> <span id="4" class="summary-sentence">The rooms at this hotel are particularly large and spacious.</span> <span id="5" class="summary-sentence">The bathroom in particular is of a decent size.</span> <span id="6" class="summary-sentence">It has been refurnished and includes all amenities.</span> <span id="7" class="summary-sentence">The staff at this hotel are very good at paying to the needs of their guests, and the on site security make you feel safe with the guard house, barriers and metal detector to get to the reception.</span> <span id="8" class="summary-sentence">The quality of the food at this hotel is good, and there is a good selection of restaurants to choose from.</span> <span id="9" class="summary-sentence">However, the food can be pricey and it doesn't quite meet Turkish standards.</span> <span id="10" class="summary-sentence">The cost of $25 per day for in-room internet service is a drawback.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

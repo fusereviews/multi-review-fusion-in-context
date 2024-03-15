@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='5'>We found the Chancellor hotel to a great spot</span> for our first trip to San Francisco. <span class='review-span highlight' data-aligned-summaries='2'>We could easily access transportation, shopping, and restaurants. We also enjoyed people watching in Union Square</span>. Our room was small, but very quiet and comfortable-we requested a room in back when we made our reservation. The view was not great, but <span class='review-span highlight' data-aligned-summaries='6'>we had no problems with street noise</span>. <span class='review-span highlight' data-aligned-summaries='4'>There was always</span> plenty of apples, <span class='review-span highlight' data-aligned-summaries='4'>cookies, coffee</span>, and tea <span class='review-span highlight' data-aligned-summaries='4'>in the lobby</span>. All of the staff members were helpful and friendly. The tours we booked picked us up and dropped us off at the hotel. It was one of our least stressful vacations.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='5'>My husband and I loved staying at the Chancellor Hotel</span> when we visited San Francisco for the first time last June. We are planning on going again this year, and plan on staying there again. The service was perfect, and we loved the charm of the building as well as the friendly people who worked there. The selection of pillows was awesome. <span class='review-span highlight' data-aligned-summaries='1'>I also loved the soaking tub</span>, which I used every night after a long day of walking all over the city. The bed was very comfortable, and I thought <span class='review-span highlight' data-aligned-summaries='0'>the size of the room was just fine</span> for two people.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='5'>The Chancellor Hotel is a great place to stay</span>. <span class='review-span highlight' data-aligned-summaries='2'>Located on Union Square, you are close to restaurants, shopping, and</span> <span class='review-span highlight' data-aligned-summaries='2 3'>the cable car stops right outside the hotel</span>. <span class='review-span highlight' data-aligned-summaries='0'>The staff was friendly and helpful</span>. They recommended several restaurants, which we tried, and they were good choices. <span class='review-span highlight' data-aligned-summaries='6'>The room was quiet</span>, comforable, and well decorated. We enjoyed sleeping with the windows open. After returning from a long day of sightseeing, <span class='review-span highlight' data-aligned-summaries='4'>we always found cookies and coffee</span>/tea <span class='review-span highlight' data-aligned-summaries='4'>in the lobby</span>. The Chancellor is the hotel we will stay in during our next visit to San Francisco.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2'>Great location</span> and <span class='review-span highlight' data-aligned-summaries='5'>very nice hotel</span>! <span class='review-span highlight' data-aligned-summaries='5'>We had a great time</span> using the Chancellor as our base for 2 days in San Francisco. <span class='review-span highlight' data-aligned-summaries='0'>The staff was helpful</span> and <span class='review-span highlight' data-aligned-summaries='0'>the room was small</span> but nice. We stayed on the 14th floor, looking for a quieter space with this hotel being on Powell St and the Cable Car line. We found it noisy during the day - but who cares. <span class='review-span highlight' data-aligned-summaries='6'>We slept with the window open at night and found it to be quiet enough</span>. Oh, and the pillows were very nice. I'd definitely stay here again.</div><div class='text-box'>This was our first trip to San Francisco and <span class='review-span highlight' data-aligned-summaries='5'>we were delighted with this hotel</span>. <span class='review-span highlight' data-aligned-summaries='2'>The location is perfect, it is so close to the shops and</span> <span class='review-span highlight' data-aligned-summaries='2 3'>a cable car runs right past the front door</span>! The room had modern decor, the bed was really comfy and it even had a jar of sweets in the room- nice touch! <span class='review-span highlight' data-aligned-summaries='4'>Another great touch was the coffee/tea/cookies/apples available in the lobby</span>. <span class='review-span highlight' data-aligned-summaries='0'>The staff were very friendly and helpful</span> and overall this hotel was great value for money. We would definitely recommend it and hope to stay there again ourselves.</div><div class='text-box'>Our stay at the Chancellor Hotel on Union Square was excellent! <span class='review-span highlight' data-aligned-summaries='0 5'>The staff was friendly and helpful</span>, <span class='review-span highlight' data-aligned-summaries='0'>the room was clean</span> and comfortable, <span class='review-span highlight' data-aligned-summaries='2 5'>and the location was outstanding</span> <span class='review-span highlight' data-aligned-summaries='2'>as</span> <span class='review-span highlight' data-aligned-summaries='2 3'>the cable cars ride past</span> <span class='review-span highlight' data-aligned-summaries='3'>the front of the hotel</span>. <span class='review-span highlight' data-aligned-summaries='2'>There are so many nice restaurants and shops</span> near the hotel and the location is extremely safe. We will definitely go back to the Chancellor when we return to San Francisco later this year!</div><div class='text-box'>We stayed at the Chancellor hotel for three nights in August of 2007, and have nothing to complain about. <span class='review-span highlight' data-aligned-summaries='2'>The location was great</span>, the rooms were very nice for the price paid, and the staff was attentive to our needs. <span class='review-span highlight' data-aligned-summaries='2 3'>The hotel is on the cable car line</span> <span class='review-span highlight' data-aligned-summaries='2'>and close to many restaurants</span>. <span class='review-span highlight' data-aligned-summaries='5'>When we visit San Francisco next time, we will definitely stay here</span>!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2'>Location was great</span> right at Union Square and <span class='review-span highlight' data-aligned-summaries='3'>the cable car to</span> Fisherman's Wharf ran <span class='review-span highlight' data-aligned-summaries='3'>right in front of hotel</span>. <span class='review-span highlight' data-aligned-summaries='0'>Staff were friendly</span> and <span class='review-span highlight' data-aligned-summaries='0'>rooms were clean</span>. <span class='review-span highlight' data-aligned-summaries='4'>The free coffee & cookies in the lobby was a nice touch</span>. The water pressure in the shower was the best I've ever had in a hotel room.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">It was very clean with great staff and the room was a great size.</span> <span id="1" class="summary-sentence">There's also a big tub.</span> <span id="2" class="summary-sentence">The location was great - very central.</span> <span id="3" class="summary-sentence">It is right on the cable car line and also within walking distance of a great many attractions.</span> <span id="4" class="summary-sentence">The coffee and cookies in the lobby are a great touch.</span> <span id="5" class="summary-sentence">The whole experience at this hotel was great.</span> <span id="6" class="summary-sentence">It was very quiet at night.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

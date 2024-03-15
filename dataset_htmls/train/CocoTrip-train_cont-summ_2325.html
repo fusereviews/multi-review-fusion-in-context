@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>My daughter and <span class='review-span highlight' data-aligned-summaries='0'>I stayed at the Fairfield</span> in Key West for a weekend in February 2012. I was pleassantly surprised at how well the hotel fit in to the Key West atmosphere. <span class='review-span highlight' data-aligned-summaries='2'>I am used to Marriotts being the same everywhere, but this one had amenities you don't usually find</span>. <span class='review-span highlight' data-aligned-summaries='2'>the pool was great</span>, larger than normal and not the standard rectangular pool. <span class='review-span highlight' data-aligned-summaries='0 1'>The rooms were</span> <span class='review-span highlight' data-aligned-summaries='0'>comfortable and clean -</span> <span class='review-span highlight' data-aligned-summaries='0 1'>a bit small</span>, but who stays in their room in Key West anyway? There were moped and electric car rentals available, and <span class='review-span highlight' data-aligned-summaries='2'>I was VERY impressed with the breakfast area</span>! It was outside on a veranda and there was actual staff handling the service and the food. There was also a tiki bar near the pool. I would DEFINITELY go back!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>My family and I stayed at the Fairfield Inn</span> for one night last week. <span class='review-span highlight' data-aligned-summaries='2'>The pool and breakfast areas are certainly beautiful</span>. The older rooms, which I was told were "gutted and redone", are still lacking. <span class='review-span highlight' data-aligned-summaries='0'>The door jamb was missing on the first room</span> we were in <span class='review-span highlight' data-aligned-summaries='0'>so</span> <span class='review-span highlight' data-aligned-summaries='0 2'>the noise from street traffic was unbelievable</span>. The staff were very kind and moved us to a room toward the back. The noise from traffic was less but, <span class='review-span highlight' data-aligned-summaries='0'>the noise from the air conditioner kept us up most of the night</span>. Try to get a suite in the new section of the hotel if booking at this location.</div><div class='text-box'>The wife and I are fresh back from <span class='review-span highlight' data-aligned-summaries='0'>3 days at the Fairfield inn Key West.</span> <span class='review-span highlight' data-aligned-summaries='2'>What a great experience</span>. The Fairfield was very clean and appeared to be recently remodeled. The pool was a great place to kick back and relax before heading down to Duval to be with the crazies. <span class='review-span highlight' data-aligned-summaries='2'>The breakfast was better than most places with a great selection</span>. Starting off the day sitting outside having our first cup of coffee poolside was the best. Most of all the Staff was very sincere about our helping us out and could not do enough to make sure we had a great stay day. <span class='review-span highlight' data-aligned-summaries='2'>They succeeded!</span></div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>We did a spur of the monment</span> trip to Key West <span class='review-span highlight' data-aligned-summaries='0'>and the Fairfield Inn was great</span>. It would have been nice to be on the beach but they have a <span class='review-span highlight' data-aligned-summaries='2'>very nice pool</span> and a great tiki bar right on the deck. The staff at this facility were extremely knowledgeable and very accommodating. The one staff member that went out of her way to help was Lindsley. <span class='review-span highlight' data-aligned-summaries='0'>Our only complaint was the size of</span> <span class='review-span highlight' data-aligned-summaries='0 1'>our room</span>, <span class='review-span highlight' data-aligned-summaries='1'>very small</span>, but again this was take what was available because of our timing.</div><div class='text-box'>I love the laid back feel of the Keys! I have stayed in this hotel once before and loved it. So when I decided to plan a friends get together, <span class='review-span highlight' data-aligned-summaries='0'>I thought that the Fairfield in Key West was perfect</span>. The staff is so hospitable, and the hotel was very reasonably priced and a good location. <span class='review-span highlight' data-aligned-summaries='2'>We had a good time at the pool</span> and the bar is great. Everything was perfect, especially <span class='review-span highlight' data-aligned-summaries='2'>the yummy breakfast</span>.<span class='review-span highlight' data-aligned-summaries='0'>I can't wait to go back next year</span>!</div><div class='text-box'>We almost always stay at Marriott hotels and when <span class='review-span highlight' data-aligned-summaries='0'>we saw the Fairfield Inn and Suites</span> in Key West was a category 5, we made a reservation for two nights. The staff was really great and helpful but <span class='review-span highlight' data-aligned-summaries='0'>the hotel itself was not quite as modern as we expected</span>. One advantage it did have was being a stop on the Old Town Trolley so it was easy to get around but I think next time we would stay closer to downtown. Loved Key West!</div><div class='text-box'>I must say, almost as great as the comforts of your own home. Being that this was my first time to The Keys, I thought I would be disappointed not being right there in the center of all the action on Duval Street. Wow, I'm glad I wasn't in the middle of the action. If I choose to go back to The Keys, Fairfield Inn would be my choice of hotel.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>My friends and I stayed at the Fairfield Inn and Suites</span> for the weekend. <span class='review-span highlight' data-aligned-summaries='0'>The accommodations were pleasant</span> and <span class='review-span highlight' data-aligned-summaries='2'>the complimentary breakfast</span> in the morning <span class='review-span highlight' data-aligned-summaries='2'>was the perfect way to start</span> the day!.The young lady at the desk who checked us in (Nora from Hungary) was most helpful and was able to put another couple of friends in the room next to ours.truly enjoyed my stay and would recommend this hotel to anyone!</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">We stayed at the Fairfield Inn and Suites - I was extremely disappointed in the rooms.</span> <span id="1" class="summary-sentence">I thought that they were exceptionally small.</span> <span id="2" class="summary-sentence">Pool area was great as was the breakfast but by Marriott standards - this was certaintly not a category 5 hotel.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

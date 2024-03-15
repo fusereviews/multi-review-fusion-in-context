@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>I was lucky enough to be able to accompany my husband on a business trip to the Gaylord Palms Resort. We were thrilled from beginning to end. We pulled up to the magnificent resort and were delighted at the front desk with warm welcomes and friendly personalities from all. The <span class='review-span highlight' data-aligned-summaries='0'>front desk engaged us</span> both in conversation and gave many tips on how I could enjoy the resort while my husband was working. Our room in the Emeral Bay section of the hotel was very clean and <span class='review-span highlight' data-aligned-summaries='0'>whenever we needed anything</span> (toiletries, turn down service, directions) <span class='review-span highlight' data-aligned-summaries='0'>we dialed #88</span> on our room phone and were connected to <span class='review-span highlight' data-aligned-summaries='0'>friendly staff</span> with all the answers! I explored resturants, the spa, and the pools and truly enjoyed my relaxing few days at this resort. I <span class='review-span highlight' data-aligned-summaries='1'>recommended this hotel</span> to couples, families, business travelers, and soloists.</div><div class='text-box'>We loved the hotel and the grounds. We got an incredible deal on hotwire, so we couldn't beat the value. <span class='review-span highlight' data-aligned-summaries='0'>The service was excellent</span>. We were traveling with two small children and they were very accomodating. The only complaint was that the food was very expensive. We were not traveling on an expense account and we had failed to rent a car, so our dining options were limited to the Resort. A simple continental breakfast cost us over $8-too much to spend on a bowl of cereal and a banana for a two year old. The restaurants were very expensive and we wound up ordering in pizza one night. But if you're on an expense account or have a car to get to the store (each room has a refrigerator) or to other dining options, <span class='review-span highlight' data-aligned-summaries='1'>this is a fantastic place to stay.</span></div><div class='text-box'>I have stayed at the gaylord Palms for the past couple of years for a yearly convention . I love this place and the <span class='review-span highlight' data-aligned-summaries='0'>friendly service</span> we receive while there . I'm sure the prices are higher than other hotels , but I feel we get what we pay for . I do think the boat could be a little better as far as the food they serve . etc. . I look forward to this as a weekend spot every year for my convention and while I am only an hour away after the weekend we feel like we have had a mini vacation . I wouldn't change one thing about my stay except that I would love to be able to stay a week . I look forward to this years convention and the fun times my kids will have</div><div class='text-box'>Most rooms overlook an interior, glass covered courtyard which reminded me of the habitats you see at the zoo. If you are the spouse of a convention goer, you are trapped there. There is nothing to do but sit at the pool or work out if you don't want to go to Disney World. Even the chairs and benches are uncomfortable and designed to make you move on. I longed to find a window and look out at the real world.</div><div class='text-box'>The Shrek the Halls display was very cool (no pun intended). It's quite chilly, but very neat to see all the figures made of ice. The ICE attraction with the snow was very simple. Young children that have never seen snow would appreciate it,but that's about it. Our 9 year old was very bored. Thought the prices were quite expensive. Plus it's $13 to park.ugh!</div><div class='text-box'>Our 1 bedroom suite was spectacular! Large bedroom and living room each with flat screen in HD. Wifi throughout the facility. Very clean resort. Beautiful atriums with fish, alligators etc. Daily feedings with question and answer periods. Many restaurants and bars located within. Only minutes from Disney. Golf nearby at Celebration with preferred rates when booked through the concierge. <span class='review-span highlight' data-aligned-summaries='1'>Nothing bad to say at all</span></div><div class='text-box'>Brought my mother to celebrate her b-day. Both restaurants where we dined were very good - cannot say enough great things about Old Hickory. The steak was one of the best I've had. <span class='review-span highlight' data-aligned-summaries='0'>The massage was terrific and you must wear their most comfortable robe back to your room</span>. <span class='review-span highlight' data-aligned-summaries='1'>Highly recommend this hotel</span> and would definitley stay there again.</div><div class='text-box'>Visited the Gaylord Palms this past weekend and was definitely impressed. Rooms extremely clean, <span class='review-span highlight' data-aligned-summaries='0'>staff very helpful, check-in was speedy</span>, and activities to keep my son occupied for awhile. I definitely will be visiting again. <span class='review-span highlight' data-aligned-summaries='1'>Beautiful hotel, great staff and great location</span>.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The service provided by the friendly staff here was really excellent.</span> <span id="1" class="summary-sentence">Overall a very recommended hotel.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>stayed in the hotel for 2 nights and liked it. The hotel was grand, <span class='review-span highlight' data-aligned-summaries='1'>service was good</span> (Cant say the same for the breakfast though, very limited options for indian vegetarians and they didnt accomodate even upon request. No veg bread also to have atleast the toast). <span class='review-span highlight' data-aligned-summaries='0'>Hotel</span> is <span class='review-span highlight' data-aligned-summaries='0'>located</span> in the tsim sha tsui and is <span class='review-span highlight' data-aligned-summaries='0'>close to</span> prime <span class='review-span highlight' data-aligned-summaries='0'>shopping locations</span> of the district. Not so close to the Metro though, but a 15 minutes walk, which is alright. The rooms were spacious as per the HK standard and had all the facilities. Loved the toilet, it had heated seats and was electronically operated. The <span class='review-span highlight' data-aligned-summaries='2'>rooms</span> seemed a bit old, but <span class='review-span highlight' data-aligned-summaries='2'>was clean</span> and nice so didnt mind it. However if they refurbish, it will be a great hotel overall.</div><div class='text-box'>We stayed in a Delux room on the 7th floor with an excellent view of the Hong Kong skyline. <span class='review-span highlight' data-aligned-summaries='2'>The room & bathroom were very spacious</span>, something which is rare for a hotel in Hong Kong. <span class='review-span highlight' data-aligned-summaries='2'>The room was clean and tidied every day</span>. The only negative point about the rooms were the hard beds, making it a bit uncomfortable for someone who prefers a softer bed. The hotel is located 15 minutes walk from MTR Tsim Sha Tsui, which was ok. Along the way to the MTR station you can find plenty of places to have your breakfast (Delifrance, Subway, Starbucks). <span class='review-span highlight' data-aligned-summaries='0 3'>The location is very central and convenient</span> - around Tsim Sha Tsui you can find large shopping malls with excellent restaurants. <span class='review-span highlight' data-aligned-summaries='3'>We had a great stay!</span></div><div class='text-box'>Nikko Hotel is in Kowloon, near to the harbour. You need to <span class='review-span highlight' data-aligned-summaries='0'>walk a bit to get to the main shopping district</span> of Tsim Sha Tsui and you need to cross the harbour to get to Hong Kong Island proper. There are <span class='review-span highlight' data-aligned-summaries='0'>plenty of restaurants near the hotel</span> and some rooms have a good view of the harbour. The Nikko Floor Lounge has a good selection of drinks and ice cream, although it is a little cramped. <span class='review-span highlight' data-aligned-summaries='1'>The staff are mainly very attentive and responsive</span>. The room is fairly standard. Comfortable. Nothing to complain about. Breakfast choices at the Cafe Serena is not that wide but lunch buffet is good. Overall, <span class='review-span highlight' data-aligned-summaries='3'>a decent place to stay. Nothing much to complain about</span>.</div><div class='text-box'>Stayed a the Nikko hotel for 3 nights again after 7 years. Hotel is still okay but in my opinion, too tailored for the Japanese tourists. I think it needs a little bit of update. One thing I disliked was that the rooms have no possibility to open windows to air the room, something I can't understand. Rooms a lttle smallish but typical of HG where square meters are not cheap. The Nikko Executive Plant at the top has excellent views of the HK harbour. <span class='review-span highlight' data-aligned-summaries='1'>Service</span> of the employees <span class='review-span highlight' data-aligned-summaries='1'>is all right but could be better</span> for a 5 star hotel.</div><div class='text-box'>Stayed there on the purpose of taking a small family on a quick weekend holiday. This is a nice and comfortable hotel indeed. Got upgraded to the Nikko floor, the room size is very acceptable, and the extra technology the bathroom is so great to me. <span class='review-span highlight' data-aligned-summaries='0'>Location needs you to walk a little bit further to the MTR station</span>, but as a city walker, it was not a problem at all. <span class='review-span highlight' data-aligned-summaries='3'>Overall, it is worth the price</span> you paid for all the things <span class='review-span highlight' data-aligned-summaries='3'>you'll get :Location, Access, Service and Comfort</span>.</div><div class='text-box'>We stayed in a Club Room for 5 nights on our way to Europe and felt that we had value for money. <span class='review-span highlight' data-aligned-summaries='1'>The staff were excellent</span> and the view from our Habour View Room was lovely. <span class='review-span highlight' data-aligned-summaries='0'>The position is about 15 minutes walk along the water</span>-front to the Star Ferry & the Entertainment Centre . There is a bridge across the busy road and then the walk is by the harbour <span class='review-span highlight' data-aligned-summaries='0'>and along The Avenue of Stars</span>. The hotel also has a regular shuttle bus down to the ferry area.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1'>The service was great</span>, <span class='review-span highlight' data-aligned-summaries='1'>the only issue is that not all of the hotel staff masters English, but you always find a way to explain yourself eventually</span>. <span class='review-span highlight' data-aligned-summaries='2'>The rooms in the hotel are clean, the bathroom is huge and has both a shower and a bathtub</span>. <span class='review-span highlight' data-aligned-summaries='3'>The hotel is a bit pricy but it worth the price, I will visit again</span>.</div><div class='text-box'>I stayed here for one night in September 2008. <span class='review-span highlight' data-aligned-summaries='2'>The hotel is</span> very modern and <span class='review-span highlight' data-aligned-summaries='2'>clean</span>. The room was very nice and I had a great view of the harbour. <span class='review-span highlight' data-aligned-summaries='2'>The bathroom was huge</span>! All in all, a very comfortable stay and a great breakfast in the morning.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The hotel location is great, it is very close to the Avenue of Stars.</span> <span id="1" class="summary-sentence">The service was great, the only issue is that not all of the hotel staff masters English, but you always find a way to explain yourself eventually.</span> <span id="2" class="summary-sentence">The rooms in the hotel are clean, the bathroom is huge and has both a shower and a bathtub.</span> <span id="3" class="summary-sentence">The hotel is a bit pricy but it worth the price, I will visit again.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

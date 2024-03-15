@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>I am not overwhelmed. <span class='review-span highlight' data-aligned-summaries='0'>Been here twice and found the food to be just ok</span>. Had the strip steak (38 $) on my most recent visit. <span class='review-span highlight' data-aligned-summaries='1'>Good flavor but the meat was tough</span>. <span class='review-span highlight' data-aligned-summaries='2 4'>My daughter loves the ambiance</span> so we will be back.</div><div class='text-box'>First time going here and i was impressed. <span class='review-span highlight' data-aligned-summaries='2'>Very cozy with a great vibe</span>. <span class='review-span highlight' data-aligned-summaries='3'>Staff is very polite</span> (called me sir) and <span class='review-span highlight' data-aligned-summaries='3'>batender was very knowledgable about the wine</span>. I would go back anytime. Had some apps but I'm sure the food would have been awesome.</div><div class='text-box'>We were greeted cordially and given a prime outside table for 4 w / o a reservation.<span class='review-span highlight' data-aligned-summaries='3'>Service was great from Angel</span>.We had a true Tartine experience <span class='review-span highlight' data-aligned-summaries='0'>2 of us had</span> <span class='review-span highlight' data-aligned-summaries='0 1'>duck confi tartines</span> <span class='review-span highlight' data-aligned-summaries='0'>one</span> <span class='review-span highlight' data-aligned-summaries='0 1'>chicken</span> <span class='review-span highlight' data-aligned-summaries='0'>and my pork was slightly dry the others</span> <span class='review-span highlight' data-aligned-summaries='0 1'>were awesome</span>.The House Red wine was great snd a great value.</div><div class='text-box'>My fiance and I really enjoyed eating here for dinner on a special night out. She especially <span class='review-span highlight' data-aligned-summaries='0'>loved the cheese plate and french onion soup</span>. We thoroughly enjoyed our visit here, especially the <span class='review-span highlight' data-aligned-summaries='4'>warm hospitality from the owner</span> who was there at dinner and <span class='review-span highlight' data-aligned-summaries='4'>welcomed us</span>.</div><div class='text-box'>I'm not sure why I was so hard with my first review of Tartine. <span class='review-span highlight' data-aligned-summaries='0 1'>The food is really good</span> and <span class='review-span highlight' data-aligned-summaries='2'>although you are right on top of your neighboring table, that doesn't make it a 3</span>. Maybe I was being too selective that day...</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2 4'>The best</span> combination of <span class='review-span highlight' data-aligned-summaries='4'>atmosphere</span>, food, and '<span class='review-span highlight' data-aligned-summaries='2'>vibe</span>' in Cleveland. Would be great if they took reservations, but this is the rare place that gets me to suspend my usual 'no reservations / no business from me' policy.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2 4'>Love the atmosphere of this place</span>. It tends to attract a slightly older crowd but that is okay by me! <span class='review-span highlight' data-aligned-summaries='0'>The Brie was very good but the French onion soup was just okay</span>. Quite a bit if oil in it and it tasted under seasoned to me. I should have gotten the beet salad like my friend did! Excellent wine list.</div><div class='text-box'>Amazing. Excellent choice for lunch. Baked Brie and crab cake <span class='review-span highlight' data-aligned-summaries='0'>appetizer. Perfect</span>. Lamb stew over phylo pastry had just the right amount of burgandy. <span class='review-span highlight' data-aligned-summaries='0 1'>Steak</span> A Poivre was a small portion, <span class='review-span highlight' data-aligned-summaries='0 1'>amazing taste and cooked as ordered</span>. Outstanding choice for family, friends or customers. <span class='review-span highlight' data-aligned-summaries='3'>Great service</span> was a serendipity.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Been here twice and the food is quite okay.</span> <span id="1" class="summary-sentence">Good flavor but tough meat.</span> <span id="2" class="summary-sentence">Great vibe and very cozy.</span> <span id="3" class="summary-sentence">Very polite staff and the bartender is quite knowledgeable about the wine.</span> <span id="4" class="summary-sentence">The atmosphere of this place is very lovely.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

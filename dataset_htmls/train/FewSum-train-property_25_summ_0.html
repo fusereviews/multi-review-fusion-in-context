@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='3'>Really disappointed</span>. Just order chicken tikka for lunch via postmates. <span class='review-span highlight' data-aligned-summaries='0 3'>The chicken was dry, minimal sauce</span> (which was probably <span class='review-span highlight' data-aligned-summaries='1'>the most flavorless tikka masala</span> I've ever had) and the <span class='review-span highlight' data-aligned-summaries='0'>salad had zero dressing</span> on it. Will give them another shot but really disappointed.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Food blew my mind so good! Prices were great</span> and so was customer service. Got a meal it was <span class='review-span highlight' data-aligned-summaries='0'>huge portion</span> have dinner for tonight, thanks! <span class='review-span highlight' data-aligned-summaries='3'>Service was great, very nice staff</span>! Got and <span class='review-span highlight' data-aligned-summaries='1'>would recommend</span> chicken shawarma and <span class='review-span highlight' data-aligned-summaries='1'>tikka masala</span>! Both fantastic!</div><div class='text-box'>Fresh food yum. I stopped by during Ramadan for the <span class='review-span highlight' data-aligned-summaries='2'>late night buffet</span>! <span class='review-span highlight' data-aligned-summaries='0'>It's over at 10z for 16.99</span>. It's a really great way to try everything they have to offer. I wish they had a few more options for veggies but other than that <span class='review-span highlight' data-aligned-summaries='0'>great food</span></div><div class='text-box'>I <span class='review-span highlight' data-aligned-summaries='1'>always have the chicken curry</span> and can't stop eating until I have finished everything. Always walk out of there feeling way too full. Today I decided to keep it light and have a <span class='review-span highlight' data-aligned-summaries='1'>lentil soup and tabbouleh</span>. <span class='review-span highlight' data-aligned-summaries='0'>It was delicious</span> and I am full again! How did that happen?</div><div class='text-box'>Look! Eat here and <span class='review-span highlight' data-aligned-summaries='3'>experience great food</span>. <span class='review-span highlight' data-aligned-summaries='0'>Great food, and dirt cheap prices</span>. The quantity of food you receive will make it almost impossible to finish. The people working there are great to chat with, and are good at making suggestions. They have a market attached. I wish they would offer cooking classes.</div><div class='text-box'>I love this place. It's our go to spot for a quick lunch at work. I highly recommend pretty much everything. The <span class='review-span highlight' data-aligned-summaries='0'>chicken burger is my favorite</span> and I avoid eating the <span class='review-span highlight' data-aligned-summaries='0'>massive quantity of rice</span> that is served with the <span class='review-span highlight' data-aligned-summaries='2'>options on the hot bar</span>.</div><div class='text-box'>Another awesome meal. <span class='review-span highlight' data-aligned-summaries='1'>Had the kufta kebab</span> meal which came with <span class='review-span highlight' data-aligned-summaries='0'>huge side</span> of rice and 3 kebabs that were sublime. Not greasy and cooked perfectly. Also had the garlic Naan which was hot out of the over and it was the bomb! Just go there an eat, you won't be sorry.</div><div class='text-box'>I don't even live in Pittsburgh but anytime we are on a road-trip and Pittsburgh is along Route... <span class='review-span highlight' data-aligned-summaries='3'>we take a two hour detour just for Salem's Grill</span>! <span class='review-span highlight' data-aligned-summaries='0'>The chicken burger is best I've ever had</span>. <span class='review-span highlight' data-aligned-summaries='0'>The meat curry</span> and and their spinach <span class='review-span highlight' data-aligned-summaries='0'>is another must try</span>! We wish they had market like this in every state!</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This restaurant offers large portions of delicious, flavorful foods at cheap prices.</span> <span id="1" class="summary-sentence">The curries are the main attraction, but there is of course the tikka masala, soups, kufta kebab,  naan, etc.</span> <span id="2" class="summary-sentence">all with a hot bar/buffet.</span> <span id="3" class="summary-sentence">The service makes sure that a wonderful experience is to be had.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

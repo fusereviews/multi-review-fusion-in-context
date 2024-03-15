@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>I did a tour with Tour East which included High Tea at Raffles Hotel. I had been told it was great but had to do it to find out how good! I would recomend it to any one that asks! I also did the Tour East Tour that included a Singapore Sling at Raffles, I opted out of the Singapore Sling for $29.50,Thought it was over priced. I can understand some one who says having the Singapore Sling as a memorable experience, to note as having done it. Tick it off as been there done that. I can say the same as having just experiencing the aura of The Long Bar and <span class='review-span highlight' data-aligned-summaries='5'>treading on peanut shells as an experience</span> in itself. Can recomend to anyone thinking of doing these tours or others with Tour East. Very professional group Thank you for a wonderful holiday.</div><div class='text-box'>This one is easy. Go there, <span class='review-span highlight' data-aligned-summaries='5'>try to make it to a table without slipping on the (signature) peanut shells on the floor</span>. A Singapore sling (comes in several flavours) is 26 SGD plus 17 percent. <span class='review-span highlight' data-aligned-summaries='1'>The place is normally crowded</span>, yes there is even a queue at the door at times. The place is <span class='review-span highlight' data-aligned-summaries='1'>full of tourists</span>, Americans are there in large numbers. <span class='review-span highlight' data-aligned-summaries='6'>The toilets around the corner are totally out of character</span> with the Raffles hotel in particular <span class='review-span highlight' data-aligned-summaries='6'>and Singapore standards</span> in general. Hence try to avoid them. <span class='review-span highlight' data-aligned-summaries='0'>The hotel is very neat</span>, the <span class='review-span highlight' data-aligned-summaries='0'>beautiful reception</span> is closed to non-guests and the restaurants of top class. The Long bar is there for tourists and the profit only. It could as well be closed as it no longer has anything to do with the hotel as such.</div><div class='text-box'>Very disappointed with the afternoon tea in the Tiffin Room. The <span class='review-span highlight' data-aligned-summaries='4'>sandwiches had been made for hours and the bread was very dry</span>. <span class='review-span highlight' data-aligned-summaries='4'>Not much selection of other food</span>. Must say <span class='review-span highlight' data-aligned-summaries='3'>the service was excellent and all staff at the hotel were pleasant</span>. We stayed at the Fullerton Bay Hotel and are sorry now that we did not partake of their aftenoon tea service, but Raffles being Raffles, we thought it was going to be "the tops".</div><div class='text-box'>Whats not to like about the Raffles Hotel Singapore? The staff is <span class='review-span highlight' data-aligned-summaries='3'>almost perfect</span> in their <span class='review-span highlight' data-aligned-summaries='3'>service</span> and attentiveness. The <span class='review-span highlight' data-aligned-summaries='2'>rooms are exquisite</span>. The hotel is gorgeous and a nice oasis in the midst of an urban landscape. <span class='review-span highlight' data-aligned-summaries='0'>Its a beautiful place</span> with an appropriately high-class staff that gives excellent recommendations for restaurants, tourist information, and navigating the city. We think everyone deserves to stay here at least once in his or her lifetime.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2'>Bed was super comfy</span>, c, water power is strong - something which I miss in some hotels. <span class='review-span highlight' data-aligned-summaries='2'>Room was also equipped with DVD player</span> - it was useful one afternoon when it rained so hard so we spent the time watching films. Other than that, the rest of our stay was wonderful and we'd surely come .</div><div class='text-box'>The Spa is out of this world. <span class='review-span highlight' data-aligned-summaries='0'>Expensive but fabulous</span>. Restaurants are great. Overall I would say this is probably the best hotel we have ever stayed.</div><div class='text-box'>Bit <span class='review-span highlight' data-aligned-summaries='0'>pricey</span> but loved it, rooms amazing so <span class='review-span highlight' data-aligned-summaries='3'>many service buttons</span> didnt know which to press would stay again in a flash on any special occasion</div><div class='text-box'>The hotel is well located, <span class='review-span highlight' data-aligned-summaries='0'>Very beautiful rooms</span>, good breakfast & location. <span class='review-span highlight' data-aligned-summaries='3'>The staff was exceedingly friendly and helpful</span>.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The hotel is beautiful but expensive.</span> <span id="1" class="summary-sentence">There are normally a lot of guests at the hotel as it is popular.</span> <span id="2" class="summary-sentence">The rooms in the hotel are comfortable and come equipped with a DVD player.</span> <span id="3" class="summary-sentence">The service was truly exceptional from the staff who were all always pleasant.</span> <span id="4" class="summary-sentence">The hotel did not provide much selection of food or anything that was really fresh.</span> <span id="5" class="summary-sentence">The hotel has signature peanut shells on the floor which are a slipping hazard.</span> <span id="6" class="summary-sentence">The toilets around the corner are below Singapore standards.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

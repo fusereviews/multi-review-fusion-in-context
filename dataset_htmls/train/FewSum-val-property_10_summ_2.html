@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>Atmosphere: located on the famous baldwin street, <span class='review-span highlight' data-aligned-summaries='1'>modern, trendyFood</span>: cold noodles special, 3 / 5, the noodles were legit cold. which was unexpectedly different. <span class='review-span highlight' data-aligned-summaries='0 1'>definitely different approach to ramen</span>.Overall: probably wont be back, ill rather go to kinton down the road.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>This was my first time trying ramen in the city</span>, and it was a fabulous first experience. <span class='review-span highlight' data-aligned-summaries='0'>I have yet to try anything that lived up to this place</span>. The food was delicious and filling, and the service impeccable. Will definitely be back, many many times.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 1'>Ryus owner is Japanese</span> <span class='review-span highlight' data-aligned-summaries='0'>and it shows. I tried other ramen restaurants in Toronto but some others are NOT Japanese</span>. These other restaurants do not serve the Japanese style. Please try Ryus Miso ramen. That is real Japanese ramen!!! I love it!!!</div><div class='text-box'>One of my favourite ramen places. <span class='review-span highlight' data-aligned-summaries='2'>Broth is so flavourful and when they say spicy, it's spicy</span>. Not the watered down Canadian level of spicy. The service is excellent and free refills on pop, I'll take it.</div><div class='text-box'>I'm glad Ryus reopened after the fire which completely destroyed the Baldwin location. <span class='review-span highlight' data-aligned-summaries='2'>I've always been a loyal follower because of</span> <span class='review-span highlight' data-aligned-summaries='1 2'>their unique broth</span> <span class='review-span highlight' data-aligned-summaries='1'>and the non traditional toppings they use</span>. Plus their menu is very vegetarian friendly. Service is efficient and attentive. This new locale is across from the Broadview station with lots of street parking.</div><div class='text-box'>Absolutely outstanding Ramen. Pork blaster 'hot' has to be a personal favourite. <span class='review-span highlight' data-aligned-summaries='2'>Very filling and rich broth and the spice was good enough to excite my Indian palate</span>... That's really saying something! Will definitely return although I can't say I'd try much else since I'm sold on this one dish. Patio is highly recommended!</div><div class='text-box'>I had the vegetarian bowl! Yummy, just right for me.. I prefer it to Kinton's veg. bowl. I really like the atmosphere! Service was very nice and attentive, was a great meal to have with some out of town friends. Ps....... Bathrooms are really cool. Toilet seats are heated. Crazy.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>It's hard to compete with 'Kinton</span>' a few shops down, but with their prices and original / <span class='review-span highlight' data-aligned-summaries='2'>delicious broths</span>, they are in contention. It's a nice place to go for cheap, fast, and feeling Ramen. <span class='review-span highlight' data-aligned-summaries='1'>They let you choose which oil / sauce you want</span> on the side which is neat.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">There are other popular ramen restaurants in the area, but this one is truly authentic.</span> <span id="1" class="summary-sentence">The owner is Japanese and although there are a lot of traditional dishes on the menu, there are also some unique sauces, oils, etc., used, as well.</span> <span id="2" class="summary-sentence">The broths are fantastic and there's plenty of spice to accommodate the most adventurous palate.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

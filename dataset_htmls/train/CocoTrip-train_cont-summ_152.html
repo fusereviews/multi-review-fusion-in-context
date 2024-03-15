@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>The hotel Eiffel Seine is lovely. <span class='review-span highlight' data-aligned-summaries='1'>The location</span> <span class='review-span highlight' data-aligned-summaries='1 2'>just opposite the metro</span> <span class='review-span highlight' data-aligned-summaries='1'>and being</span> <span class='review-span highlight' data-aligned-summaries='1 2 5'>able to walk to the eiffel Tower</span> <span class='review-span highlight' data-aligned-summaries='1'>was extremely convenient</span>. <span class='review-span highlight' data-aligned-summaries='4'>The rooms are smallish</span> but adequate and the bathrooms are great. <span class='review-span highlight' data-aligned-summaries='3'>The staff are gracious and happy to be of assistance</span>. Breakfast was included in the price and there was a wide variety to choose from. Part of the attraction was the small lift as after a day touring, stairs just weren't an option. We also made use of the free internet which was great. The small fridge in the room also enabled us to get some drinks and snacks from the supermarket to take on our travels. <span class='review-span highlight' data-aligned-summaries='0'>Overall we were very impressed</span> with the Eiffel Seine <span class='review-span highlight' data-aligned-summaries='0'>and would most definitely stay there again</span> and <span class='review-span highlight' data-aligned-summaries='5'>I wouldn't hesitate to recommend it to anyone</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='5'>I would happily recommend this hotel to others</span>. <span class='review-span highlight' data-aligned-summaries='1'>The hotel was in an ideal location</span>, <span class='review-span highlight' data-aligned-summaries='2'>just a minutes walk to the nearest metro station and 5 minutes walk to the eiffel tower</span>. <span class='review-span highlight' data-aligned-summaries='3'>The hotel staff are all really friendly and helpful</span>. <span class='review-span highlight' data-aligned-summaries='4'>The rooms are comfortable and clean but are quite small</span>, however the location and the price of the hotel more than makes up for this. The only qualm I did have with the hotel was that the rooms were far to hot at night, however considering it was minus 10 outside others may have appreciated this. I would not hesistate to rate our overall experience as excellent and would advise anyone who is after a clean, comfortable hotel, in the heart of Paris and at a reasonable price to give the Eiffel Seine a go</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>We stayed at this hotel for five nights and it was perfect</span>. <span class='review-span highlight' data-aligned-summaries='4'>The room was a very good size for paris</span> and <span class='review-span highlight' data-aligned-summaries='3'>the staff were really helpful</span>. Our room was facing the street which is <span class='review-span highlight' data-aligned-summaries='2'>right across from the metro station</span>. To our surprise you cant hear the metro pass by with the wondow closed so it wasnt a problem at night and it just made <span class='review-span highlight' data-aligned-summaries='1'>the location</span> more <span class='review-span highlight' data-aligned-summaries='1'>convenient</span>. There are good restaurants nearby and <span class='review-span highlight' data-aligned-summaries='2'>it is a short walk (5-10 min) to the Eiffel tower</span>. <span class='review-span highlight' data-aligned-summaries='0'>I can't think of anything that was bad about the hotel</span>! <span class='review-span highlight' data-aligned-summaries='5'>I highly recommend this hotel</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>The Eiffel Seine was perfect for our first trip to Paris</span>. <span class='review-span highlight' data-aligned-summaries='1'>It is easy to get anywhere in Paris by using</span> <span class='review-span highlight' data-aligned-summaries='1 2'>the metro just right across the street</span>. There are several nice places to eat in the neighborhood and the eiffel tower is literally right around the corner. <span class='review-span highlight' data-aligned-summaries='3'>The staff was very friendly</span> and the breakfast filling. <span class='review-span highlight' data-aligned-summaries='4'>The rooms were small but spotless</span> and the shower was great. <span class='review-span highlight' data-aligned-summaries='0 5'>I would definitely recommend this hotel to anyone and will stay with them again</span>.</div><div class='text-box'>A great little hotel <span class='review-span highlight' data-aligned-summaries='1 2'>right around the corner from the Eiffel Tower</span> <span class='review-span highlight' data-aligned-summaries='1'>and directly</span> <span class='review-span highlight' data-aligned-summaries='1 2'>across the street from the Metro station</span> <span class='review-span highlight' data-aligned-summaries='1'>(subway)</span>. <span class='review-span highlight' data-aligned-summaries='4'>Rooms are tiny</span> but <span class='review-span highlight' data-aligned-summaries='3'>the staff are very friendly</span> and <span class='review-span highlight' data-aligned-summaries='3'>helpful</span>. The only issue was that <span class='review-span highlight' data-aligned-summaries='4'>the rooms were warm</span> and leaving the window open was a little noisy. Did not eat there but they have a nice room set up for breakfast. <span class='review-span highlight' data-aligned-summaries='1 2'>Great little cafe</span> <span class='review-span highlight' data-aligned-summaries='1'>and Italian restaurant</span> <span class='review-span highlight' data-aligned-summaries='1 2'>just outside the hotel</span>. <span class='review-span highlight' data-aligned-summaries='5'>Would strongly recommend this hotel</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>The hotel was very nice</span> and <span class='review-span highlight' data-aligned-summaries='2'>just a 2 minute walk to the Eiffel tower</span>. We also used the subway to get to the hotel and <span class='review-span highlight' data-aligned-summaries='1'>it is a perfect location</span> for that as well since <span class='review-span highlight' data-aligned-summaries='2'>there is 2 subway station across the street</span>. We did not eat at the hotel, but thought the accommodations were very clean, nicely decorated, very comfortable and the staff was very helpful. <span class='review-span highlight' data-aligned-summaries='0'>We will stay at the Eiffel Seine the next time in Paris</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1'>The hotel is</span> <span class='review-span highlight' data-aligned-summaries='1 2'>just around the corner from the Eiffel Tower</span>.<span class='review-span highlight' data-aligned-summaries='1'></span> <span class='review-span highlight' data-aligned-summaries='1 2'>There is a Metro station just across the street</span>.<span class='review-span highlight' data-aligned-summaries='1'> There are restaurants and cafes nearby and the area is very safe</span>. The lobby is attractive and <span class='review-span highlight' data-aligned-summaries='4'>the rooms are large</span> and <span class='review-span highlight' data-aligned-summaries='4'>clean</span>. <span class='review-span highlight' data-aligned-summaries='3'>The staff was was friendly</span> and did a fine job. The concierge Jean Francois was just wonderful. Helpful, welcoming and he had a great sense of humour. <span class='review-span highlight' data-aligned-summaries='0 5'>I highly recommend this hotel</span>!</div><div class='text-box'>I spent two nights in Paris with my mom at the Hotel Eiffel Seine and it was wonderful. <span class='review-span highlight' data-aligned-summaries='2'>It is right across from the Metro</span> and the Seine, <span class='review-span highlight' data-aligned-summaries='2'>and a short walk to the Eiffel tower</span>. The hotel was very clean and comfortable, and <span class='review-span highlight' data-aligned-summaries='3'>the staff were</span> awesome - <span class='review-span highlight' data-aligned-summaries='3'>very friendly and helpful</span>. <span class='review-span highlight' data-aligned-summaries='0 5'>Loved it all</span>!</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">I could not have been more pleased.</span> <span id="1" class="summary-sentence">The location is great.</span> <span id="2" class="summary-sentence">It is right across the street from a Metro station, around the corner from an RER station, a short walk to the Eiffel Tower and there are several good little cafes on the block.</span> <span id="3" class="summary-sentence">The staff was extremely friendly and helpful.</span> <span id="4" class="summary-sentence">The room, although small, was cute, clean and comfortable.</span> <span id="5" class="summary-sentence">I would not hesitate to recommend this hotel to anyone visiting Paris!</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

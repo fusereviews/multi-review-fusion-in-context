@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>As a regular business traveller to Singapore I always look forward to staying at the Shangri-La. <span class='review-span highlight' data-aligned-summaries='5'>Great service, attention to detail</span> and <span class='review-span highlight' data-aligned-summaries='5'>the ever present taxi-hailer</span> - make it feel like coming home. <span class='review-span highlight' data-aligned-summaries='3 4'>Rooms</span> <span class='review-span highlight' data-aligned-summaries='3'>are spacious</span> and comfortable <span class='review-span highlight' data-aligned-summaries='4'>with quiet aircon</span> and welcoming tea and fruit. Room service is of a good standard and reasonably priced. <span class='review-span highlight' data-aligned-summaries='5'>One improvement could be to remember details such as non-smoking preferences</span> - I had to really push for the hotel to move me to a non-smoking room, which they did have available, though at a higher level. Given i was checking in at midnight, for just one night, I really was disappointed that I had to push - who else would have taken the room at that time! That said, generally no complaints and <span class='review-span highlight' data-aligned-summaries='0'>a great hotel with a few extras that you don't always find in Singapore</span>.</div><div class='text-box'>You have to love the far east. The hotels are the best in the world and the Shangri la is up there amoungst the very best, <span class='review-span highlight' data-aligned-summaries='4'>From check in to the room every thing was seamless and calm</span>. This is a word "calm" that i would use to describe the Shangri la a lot. <span class='review-span highlight' data-aligned-summaries='9'>The subtle touches like the changing of the carpet in the lift showing the day of the week, to cold water and iced face towels around the pool.</span> Service cannot be faulted and the old world touch of kneeling to serve although a shock to someone from the west was done with such style and grace you grow to enjoy the gesture.</div><div class='text-box'>All the good points have been made in previous reviews but I would like to just emphasise how good the service is here. I stayed in the Valley Wing and, <span class='review-span highlight' data-aligned-summaries='7'>though very expensive,</span> <span class='review-span highlight' data-aligned-summaries='0 7'>the free afternoon tea, canapes and drinks go some way</span> <span class='review-span highlight' data-aligned-summaries='0'>to mitigating</span> <span class='review-span highlight' data-aligned-summaries='0 7'>against the high cost</span>. <span class='review-span highlight' data-aligned-summaries='8'>The eggs benedict for breakfast was the best I've had</span> and the Singapore Sling was far better at the Shangri La than the ready mixed mediocrity being served at Raffles. <span class='review-span highlight' data-aligned-summaries='1'>It isn't as centrally located as some hotels but taxis are pretty cheap</span> and it's worth a few minutes in a taxi if it means you can stay at <span class='review-span highlight' data-aligned-summaries='0'>such a wonderful hotel</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>The Valley Wing at the Shangri-La is a must</span>! Familiar atmosphere, the absolute friendly and warm <span class='review-span highlight' data-aligned-summaries='5'>staff members knew our name from the first day</span>. <span class='review-span highlight' data-aligned-summaries='0 6'>In the Lobby all Champagne</span> <span class='review-span highlight' data-aligned-summaries='0'>(Moet Chandon)</span> <span class='review-span highlight' data-aligned-summaries='0 6'>is free</span>, you will get a glass even when you wait 3 minutes for a taxi. Service is Top-end, nothing to do better. <span class='review-span highlight' data-aligned-summaries='3'>Rooms are</span> beautiful and <span class='review-span highlight' data-aligned-summaries='3'>large</span>, garden and <span class='review-span highlight' data-aligned-summaries='9'>pool</span>-site are very relaxing, so I spent most of the afternoons in the pool with our baby-daughter. If you go to the Shangri-La, book the Valley Wing! Enter the Lobby, sit down, relax and sip your Champagne. Thanks a lot, Achem!</div><div class='text-box'>Spent 2 nights at this fabulous hotel during a recent business trip. Excellant service and staff. <span class='review-span highlight' data-aligned-summaries='3'>Rooms are large</span> and <span class='review-span highlight' data-aligned-summaries='4'>standard of cleanlines is very high</span>. Wifi access free throughout the hotel with great connectivity. <span class='review-span highlight' data-aligned-summaries='1 2'>Hotel is within walking distance of the Orchard Road shopping area</span>, however I believe <span class='review-span highlight' data-aligned-summaries='1'>the hotel also offer a free shuttle service</span>. <span class='review-span highlight' data-aligned-summaries='9'>Hotel has a gym and swimming pool</span>. <span class='review-span highlight' data-aligned-summaries='8'>Buffet breakfast was great</span>, with a huge choice and fresh products. As my departure flight was at 11pm, the hotel allowed freshing up in the health club, with towels etc provided for shower. <span class='review-span highlight' data-aligned-summaries='0'>Would definately return to this hotel for both business and pleasure</span>.</div><div class='text-box'>We tacked on 5 days at the Shangri La staying in the Garden Valley wing at the end of our SE Asia Honeymoon and I cannot praise it highly enough, <span class='review-span highlight' data-aligned-summaries='6'>the garden valley wing is an all inclusive</span> break and it's <span class='review-span highlight' data-aligned-summaries='6'>free champagne (Moet)</span> and high class food from 11.00 am till 10.00 pm. <span class='review-span highlight' data-aligned-summaries='3'>The rooms are spacious and luxurious</span> and <span class='review-span highlight' data-aligned-summaries='5'>the staff are very attentive</span>, a reasonable location and a much better option than the faded grandour of Raffles.</div><div class='text-box'>Fantastic hotel - wonderful rooms, great beds, <span class='review-span highlight' data-aligned-summaries='0'>fruit in the room every day</span>, extensive gym.could not have asked for more. <span class='review-span highlight' data-aligned-summaries='1 2'>A few minutes walk from Orchard Road</span> <span class='review-span highlight' data-aligned-summaries='2'>so</span> <span class='review-span highlight' data-aligned-summaries='0 2'>when I wanted to do a bit of shopping it was close</span> <span class='review-span highlight' data-aligned-summaries='1'>but far enough away</span> to not hear the noise. <span class='review-span highlight' data-aligned-summaries='9'>The gym and LINE restaurant were WONDERFUL</span>. I will definitely stay here again - <span class='review-span highlight' data-aligned-summaries='0'>perfect for my business trips to Singapore</span>.</div><div class='text-box'>What a <span class='review-span highlight' data-aligned-summaries='0'>wonderful atmosphere and a great room</span> for a great price. <span class='review-span highlight' data-aligned-summaries='8'>The breakfast buffet was out of this world</span>. <span class='review-span highlight' data-aligned-summaries='3 4'>The room was gorgeous</span>. <span class='review-span highlight' data-aligned-summaries='5'>Service was exceptional</span>.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This hotel is an ideal stay for those seeking both business and pleasure and with a few extras that aren't typical of most hotels in Singapore.</span> <span id="1" class="summary-sentence">This hotel isn't exactly central but taxis are pretty cheap and the hotel also provides a shuttle service for free.</span> <span id="2" class="summary-sentence">There is a large shopping area within walking distance as well.</span> <span id="3" class="summary-sentence">The rooms in the hotel were large, spacious and luxurious.</span> <span id="4" class="summary-sentence">The rooms were really clean with quiet air conditioning a pleasant surprise.</span> <span id="5" class="summary-sentence">The staff at the hotel had good attention to detail and the member of staff outside the hotel would always hail the taxi for guests.</span> <span id="6" class="summary-sentence">The hotel is all inclusive and guests receive free champagne in the lobby.</span> <span id="7" class="summary-sentence">The expense of the rooms if offset by a free afternoon tea, canapes and the provision of drinks.</span> <span id="8" class="summary-sentence">The breakfast buffet is particularly good, with the eggs benedict highly recommended.</span> <span id="9" class="summary-sentence">Brilliant amenities available for guests, including free Wi-Fi, a gym and a swimming pool.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

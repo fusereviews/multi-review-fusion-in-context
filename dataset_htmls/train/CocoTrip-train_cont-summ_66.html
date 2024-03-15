@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Fantastic Hotel</span>! We chose the Silla Hotel from a guide book because it was a small hotel and on the quieter side of the River Arno and the building itself sounded interesting. <span class='review-span highlight' data-aligned-summaries='3'>The staff were friendly and helpful</span> to any questions we asked. Even though we didn't have one of the most expensive rooms, <span class='review-span highlight' data-aligned-summaries='1 5'>we had a lovely view over the balcony with flowers, trees and partially of the river</span>. <span class='review-span highlight' data-aligned-summaries='2'>Everything was clean with extra amenities</span> such as the safe included in the cost.<span class='review-span highlight' data-aligned-summaries='0 1 4'>The location was perfect</span>, <span class='review-span highlight' data-aligned-summaries='4 5'>it was easy walking distance to all</span> <span class='review-span highlight' data-aligned-summaries='5'>the cities</span> <span class='review-span highlight' data-aligned-summaries='4 5'>main attractions</span> and behind the hotel we walked to some beautiful Tuscan views. There is an excellent pizzeria on the same road too!I would definitely recommend staying at this hotel.</div><div class='text-box'>Brillant Hotel <span class='review-span highlight' data-aligned-summaries='0 1 4'>Perfect location</span>, great hotel, friendly staff and a lovely breakfast. <span class='review-span highlight' data-aligned-summaries='0'>Couldn't have picked a better hotel</span>. Our room was large, <span class='review-span highlight' data-aligned-summaries='1'>view of the Arno</span> and <span class='review-span highlight' data-aligned-summaries='2'>the beds were comfy</span>. <span class='review-span highlight' data-aligned-summaries='3'>The staff was very friendly and helpful</span> throughout our stay (we were there a week). The greatest surprise was that there was a breakfast buffet every morning which set up our day of sightseeing just great. The hotel is located <span class='review-span highlight' data-aligned-summaries='0 4 5'>a few minutes walk from the Ponte Vecchio one way or Santa Croce church the other</span>. The bus stop is just across the street and the number 23 takes you straight in town all the way to the train station. I highly recommend this hotel.</div><div class='text-box'>Loved it! This <span class='review-span highlight' data-aligned-summaries='0'>hotel</span> was recommended to me by friends and it <span class='review-span highlight' data-aligned-summaries='0'>was great</span>. The <span class='review-span highlight' data-aligned-summaries='3'>front desk staff were so helpful</span> to us in our first visit to Florence. The <span class='review-span highlight' data-aligned-summaries='2'>room was clean</span> and comfortable and the <span class='review-span highlight' data-aligned-summaries='0 4'>location of the hotel was</span> very <span class='review-span highlight' data-aligned-summaries='0 4'>convenient</span>. Also, the breakfast was included which consisted of plenty of options (although not an American breakfast, I surely didn't go hungry!) and the lady in the breakfast room always had our American Coffee with Milk on the way when we came in. <span class='review-span highlight' data-aligned-summaries='3'>Great staff</span>, great place.Wouldn't hesitate to go back - as often as I can manage it!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Great location</span>, <span class='review-span highlight' data-aligned-summaries='0'>great service</span> <span class='review-span highlight' data-aligned-summaries='0 1'>Hotel Silla</span> <span class='review-span highlight' data-aligned-summaries='1'>is located across the</span> Arno <span class='review-span highlight' data-aligned-summaries='1'>river with a view of the Duomo</span> and a short walk to the Uffizi and the Ponte Vecchio. <span class='review-span highlight' data-aligned-summaries='2'>The room was very comfortable</span>, <span class='review-span highlight' data-aligned-summaries='3'>the staff very helpful and personable</span>. <span class='review-span highlight' data-aligned-summaries='3'>They made reservations for us</span> at the Uffiz and the Academy (to see Michaelangelo's David). We walked everywhere from the hotel after parking the car in their garage. <span class='review-span highlight' data-aligned-summaries='5'>You are just minutes away from most of the major sites in Florence at Hotel Silla</span>. I'd stay again in a heartbeat.</div><div class='text-box'>Clean with good location My husband and I stayed at Hotel Silla for 2 nights in September. Based on some of the reviews, I was concerned about the location but <span class='review-span highlight' data-aligned-summaries='0 1'>it</span> <span class='review-span highlight' data-aligned-summaries='0 1 4'>was a great location</span>. <span class='review-span highlight' data-aligned-summaries='5'>It was quiet</span> and <span class='review-span highlight' data-aligned-summaries='4 5'>a very quick walk over the bridge to all the action</span>. <span class='review-span highlight' data-aligned-summaries='0 2'>The hotel was</span> <span class='review-span highlight' data-aligned-summaries='0 2 5'>very clean</span> <span class='review-span highlight' data-aligned-summaries='0 5'>and comfortable</span> and the breakfast was more than enough. The AC worked too and was very much needed in September! We would definitely recommend staying here and would stay again ourselves if ever lucky enough to return to Florence.</div><div class='text-box'>Best place to stay in Florence <span class='review-span highlight' data-aligned-summaries='0'>Our stay at the Hotel Silla was our best experience in all of Italy</span>! The hotel has <span class='review-span highlight' data-aligned-summaries='0 2'>very clean rooms</span> and the most spacious I have ever stayed in all of Europe. <span class='review-span highlight' data-aligned-summaries='3'>The staff was very friendly and very helpfuland went out of their way to assist us</span>. <span class='review-span highlight' data-aligned-summaries='0 1 4'>The location was on the banksof the Arno and</span> <span class='review-span highlight' data-aligned-summaries='0 1 4 5'>away from the crowded alleys of Florence</span>. <span class='review-span highlight' data-aligned-summaries='1'>We had a great view</span> from our room! <span class='review-span highlight' data-aligned-summaries='0 1 5'>Very close to the Ponte Vecchio and the Ufizzi</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Great</span> <span class='review-span highlight' data-aligned-summaries='0 1'>hotel in great location</span> in Florence This is a great old hotel in Florence. <span class='review-span highlight' data-aligned-summaries='3'>The hotel staff were wonderful - always helpful and willing to help arrange reservations at museums and restaurants</span>. The room we staying in was very big. Breakfast was excellent. <span class='review-span highlight' data-aligned-summaries='4'>We loved the location of the hotel</span>. It was away from the crowds and tourists, but very easy to walk to the museums and other sights. There is also a great little neigborhood right behind the hotel.</div><div class='text-box'>Loved Hotel Silla <span class='review-span highlight' data-aligned-summaries='0'>The hotel was amazing and beautiful</span>. The service was great and <span class='review-span highlight' data-aligned-summaries='2 5'>the rooms were clean</span>. Every morning we were served breakfast in a pretty breakfast room. It was really nice and tasty! <span class='review-span highlight' data-aligned-summaries='3'>The staff was great as well</span>. <span class='review-span highlight' data-aligned-summaries='3'>They were very helpful when directions were or restaurant recommendations were needed</span>. I would recommed Hotel Silla to anyone traveling to Florence!</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Great Hotel, Great Price, Great Location Hotel Silla was a great hotel.</span> <span id="1" class="summary-sentence">The location was incredible, with a beautiful view of the park and the river in the background.</span> <span id="2" class="summary-sentence">The rooms were well appointed, and very clean.</span> <span id="3" class="summary-sentence">The front desk staff and the breakfast staff were just so wonderful, had great recommendations and were eager to help us in any way.</span> <span id="4" class="summary-sentence">The location was perfect as it was across the bridge from the city.</span> <span id="5" class="summary-sentence">It was a quick walk to all of the sights in Florence, and a calm, quiet respite at the end of the day.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

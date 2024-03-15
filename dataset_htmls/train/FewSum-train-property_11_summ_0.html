@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>Yum! <span class='review-span highlight' data-aligned-summaries='0 2'>That frosted cinnamon roll</span> <span class='review-span highlight' data-aligned-summaries='2'>and endless cup of coffee</span> we enjoyed <span class='review-span highlight' data-aligned-summaries='0 2'>was de-licious</span>! <span class='review-span highlight' data-aligned-summaries='1'>The wait staff was friendly</span>, and the atmosphere open and cheerful. The three salads we ordered to go were each fresh and delicious. My sassy cousin and I will return!</div><div class='text-box'>New location, but same <span class='review-span highlight' data-aligned-summaries='0'>great food</span>! <span class='review-span highlight' data-aligned-summaries='2'>Food is always fresh</span> and the staff is always friendly. Best cinnamon roles around. Period. I refuse to eat anyone else's cinnamon roles. Give this place a try for breakfast, lunch or to cater your next event or party. You won't be disappointed.</div><div class='text-box'>My daughter and I are in Scottsdale for a meeting when we decided to try Sassy's. <span class='review-span highlight' data-aligned-summaries='2'>It was fantastic</span>! The portions are really big. But the <span class='review-span highlight' data-aligned-summaries='0 2'>salad and sandwich was great</span>. We decided to try the <span class='review-span highlight' data-aligned-summaries='0'>cupcakes</span> and they <span class='review-span highlight' data-aligned-summaries='0'>are just as amazing</span>!</div><div class='text-box'>Wanted to grab some cupcakes for a family members birthday and noticed that Sassy's <span class='review-span highlight' data-aligned-summaries='2'>had a little more variety than other places</span> around. They did not disappoint. <span class='review-span highlight' data-aligned-summaries='0'>Stopped in for the cupcakes, stayed for bacon, eggs and toast</span> (with purchased cupcakes awaiting me in the cooler) <span class='review-span highlight' data-aligned-summaries='0 2'>They were a big hit</span>!<span class='review-span highlight' data-aligned-summaries='0'></span></div><div class='text-box'>Just started eating here a few weeks ago and it's amazing. I work close by and so I have had lunch there 4 times and <span class='review-span highlight' data-aligned-summaries='2'>each time the</span> <span class='review-span highlight' data-aligned-summaries='0 2'>food is delicious</span>. Order on the phone a head of time make it even easier to pick up and eat lunch on my break. My favorite sandwich is the Sassy Club!</div><div class='text-box'>Why have I not heard of this place before? <span class='review-span highlight' data-aligned-summaries='0'>I</span> <span class='review-span highlight' data-aligned-summaries='0 2'>had breakfast. It was filling and yummy</span> <span class='review-span highlight' data-aligned-summaries='2'>the tea was good</span>. I souls try the coffee next time. Oh yes. I will be back. Clean place. Decorated well. Do wish there was pricing on the desserts in the cases I hated to ask on each thing. Overall great experience.</div><div class='text-box'>This is the second winter my wife and I have been in the Mesa area. Sassy's in one of our favorites. We love the cinnamon roll french toast! If you want your sweet fix, that's the stuff to get. <span class='review-span highlight' data-aligned-summaries='1'>Staff very friendly and helpful</span>. Oh yea, <span class='review-span highlight' data-aligned-summaries='0 2'>great freshly baked bakery treats</span>!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Shabby Chic meets the dining room</span>. Think of a poor man's Sweet Cakes Cafe... complete with the sandwiches, cookies, and the scores of women gathering for the lunch and the latest gossip. Sandwiches above average but man <span class='review-span highlight' data-aligned-summaries='0 2'>those cookies are something special</span>. My dentist thanks you.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Its shabby chic meets a high-end bakery that happens to serve amazing food.</span> <span id="1" class="summary-sentence">The service is always top notch, the staff is knowledgeable with every item on the menu and in the bakery case.</span> <span id="2" class="summary-sentence">They are invested in putting out a quality product every time and its always an amazing experience here including the wide variety of teas and coffees.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

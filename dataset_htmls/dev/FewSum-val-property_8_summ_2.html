@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>This place has changed to <span class='review-span highlight' data-aligned-summaries='0'>Stacks and Yolks</span> so we decided to give it another try. What a change!!! <span class='review-span highlight' data-aligned-summaries='0 1'>Food was great</span>.<span class='review-span highlight' data-aligned-summaries='1'></span> <span class='review-span highlight' data-aligned-summaries='0 1 4'>Service was great</span>. <span class='review-span highlight' data-aligned-summaries='4'>Food was a little slow</span> coming out because there was a car show but worth the wait. Definitely worth another look if you've been to previous restaurant.</div><div class='text-box'>Arrived at 9: 50 am on a Sunday morning.... Seated rather quickly, then <span class='review-span highlight' data-aligned-summaries='4'>waited over an HOUR</span> before our food came. <span class='review-span highlight' data-aligned-summaries='0 4'>The wait is not worth it</span>, especially when you have kids. Avoid this restaurant on a weekend.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1'>This place has good food, not great but good</span>. The decor is outdated and needs a good cleaning but i guess it can be good if you're looking for an old fashion diner.<span class='review-span highlight' data-aligned-summaries='1 4'>Customer service is great</span> and <span class='review-span highlight' data-aligned-summaries='4'>they get your food to you extremely fast</span>.</div><div class='text-box'>I have had breakfast here a couple times now. <span class='review-span highlight' data-aligned-summaries='4'>It's always busy weekend mornings,</span> <span class='review-span highlight' data-aligned-summaries='0 4'>the customer service is always very good</span>,<span class='review-span highlight' data-aligned-summaries='0'> however</span> <span class='review-span highlight' data-aligned-summaries='0 1'>their food isn't all that impressionable</span>. <span class='review-span highlight' data-aligned-summaries='2 3'>My oatmeal was missing some of the ingredients</span> <span class='review-span highlight' data-aligned-summaries='3'>that it was supposed to have and their skillet ingredients aren't fresh</span>. You're better off going home and making the stuff yourself.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Pass on this place</span>. <span class='review-span highlight' data-aligned-summaries='1 3'>Food was ok, nothing special</span>. <span class='review-span highlight' data-aligned-summaries='0 4'>Service was bad</span>. When you <span class='review-span highlight' data-aligned-summaries='4'>have to continually go to the counter to ask for things</span> it kinda puts a damper on the dining experience. Won't be going back.</div><div class='text-box'>Walked in, <span class='review-span highlight' data-aligned-summaries='0'>it was nice and clean</span>. Silverware was spotless the <span class='review-span highlight' data-aligned-summaries='0 4'>waitress was nice</span> <span class='review-span highlight' data-aligned-summaries='4'>but kinda of slow on attending to us</span>. Finally the lady at register noticed we were ready and approached us and took our order. <span class='review-span highlight' data-aligned-summaries='1'>The food was great and the drinks were great</span> as well! Very 'Moms & Pops' type of place! Loved it</div><div class='text-box'>Not bad for a little Hole in the wall breakfast diner! <span class='review-span highlight' data-aligned-summaries='2'>I had the pancakes</span> which by the way are huge, fluffy, and delicious. <span class='review-span highlight' data-aligned-summaries='1'>Turkey</span> <span class='review-span highlight' data-aligned-summaries='1 2'>sausage</span> <span class='review-span highlight' data-aligned-summaries='1'>had good flavor</span>. <span class='review-span highlight' data-aligned-summaries='1'>The homeFries are decent</span>. And the scrambled <span class='review-span highlight' data-aligned-summaries='2'>eggs</span> were made just right. <span class='review-span highlight' data-aligned-summaries='4'>Good service</span> by the waitress. I would recommend this place to any person wanting breakfast.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>ok place</span> I feel for what you get its a little pricey <span class='review-span highlight' data-aligned-summaries='1 2'>orange juice it's good</span> <span class='review-span highlight' data-aligned-summaries='1'>but for sure its not fresh squeeze</span> it has like a very weird sweet good flavor but I am sure it's not squeeze I don't think I'll be back</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Stacks and Yolks is a nice, homely diner.</span> <span id="1" class="summary-sentence">Everything is good, but nothing is great.</span> <span id="2" class="summary-sentence">All the typical staple diner foods is here, from pancakes, eggs, sausages, fries, oatmeal, OJ, etc.</span> <span id="3" class="summary-sentence">It's all cooked exactly how it needs to be with nothing fancy added to it.</span> <span id="4" class="summary-sentence">The service can be slow, though the servers are friendly.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

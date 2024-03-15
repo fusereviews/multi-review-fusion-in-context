@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='4'>Decent food</span> - my <span class='review-span highlight' data-aligned-summaries='0 1'>daughter had the Avocado Toast and I had the Frittata Rustica - both top notch</span>. Downside was the <span class='review-span highlight' data-aligned-summaries='4'>terrible coffee</span> (so weak) and the annoyingly loud music being piped into the speaker directly above our table. Would come back for the food, but next time grab a coffee for the Starbucks a couple of doors down</div><div class='text-box'>NOT dog friendly! Just opened, absolutely no other customers, but wouldn't let me be at an outside, sidewalk table with my 4lb purse pup. The tables are on a public sidewalk of a strip center. <span class='review-span highlight' data-aligned-summaries='4'>If you have a dog, go to the Hilton, right next door</span>. They sat me at a lovely table near the pool.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 4'>Great healthy food</span> <span class='review-span highlight' data-aligned-summaries='4'>and</span> <span class='review-span highlight' data-aligned-summaries='2 4'>even better service</span>. I was in town for the weekend and LOVED this place. I liked it so much that I ordered a sandwich and salad to go for my lunch. The pic is my breakfast of protein packed <span class='review-span highlight' data-aligned-summaries='1'>mini pancakes with almond butter. Yum yum yummmm</span></div><div class='text-box'>1st time <span class='review-span highlight' data-aligned-summaries='3'>here today for a breakfast meeting</span>. I ordered the power bowl. <span class='review-span highlight' data-aligned-summaries='2'>When the waiter</span> brought out our food me <span class='review-span highlight' data-aligned-summaries='2'>messed my order up. He quickly apologized and ran my correct order out FAST</span>. Upon getting the bill he comp'd my whole meal! Wow i was so surprised and <span class='review-span highlight' data-aligned-summaries='4'>he went above and beyond</span>! The <span class='review-span highlight' data-aligned-summaries='4'>quinoa bowl was amazing</span> also!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1'>Went here for breakfast</span>. Had the <span class='review-span highlight' data-aligned-summaries='0 4'>American breakfast. It was good</span>. <span class='review-span highlight' data-aligned-summaries='1'>Turkey sausage was good</span>. Someone got the <span class='review-span highlight' data-aligned-summaries='1'>pancake</span> and it was huge. They said it <span class='review-span highlight' data-aligned-summaries='1'>was good</span>. Someone else <span class='review-span highlight' data-aligned-summaries='0'>got the waffle, said it was good</span>. Someone also got the avocado toast and said it was really good. <span class='review-span highlight' data-aligned-summaries='4'>Service was great</span>.</div><div class='text-box'>Came here for a business breakfast. Nice, open environment with fast, friendly service. I ordered the Farmhouse Skillet and it was delicious. I wouldn't go out of my way to come here, <span class='review-span highlight' data-aligned-summaries='4'>but will definitely stop in if in the area</span> and <span class='review-span highlight' data-aligned-summaries='3'>would have other business meetings here</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 4'>Great food</span>! So healthy they have <span class='review-span highlight' data-aligned-summaries='1'>choices of all sausage</span> which I love! I had the <span class='review-span highlight' data-aligned-summaries='1'>breakfast tacos and banana granola pancakes</span> so amazing! I <span class='review-span highlight' data-aligned-summaries='0'>would definitely return to try more on the menu</span>! Wanted to try everything!! My boyfriend got a morning juice and he loved it! Felt so cleansed. <span class='review-span highlight' data-aligned-summaries='4'>Staff was nice</span> and gave you your space!</div><div class='text-box'>Ask for Carlos. He was awesome. The <span class='review-span highlight' data-aligned-summaries='0 1 4'>pumpkin pancakes were terrific</span>. <span class='review-span highlight' data-aligned-summaries='2'>I had had a bad experience last time and I told Carlos and he made it great</span>. And did I mention the pumpkin pancakes? I almost didn't come back but so glad I did.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">They offer a variety of great foods on their menu.</span> <span id="1" class="summary-sentence">They focus on breakfast, sausage and a variety of flavorful pancakes are among their top hits, but also offer foods for other times of the day.  </span><span id="2" class="summary-sentence">Some of their waitstaff can be a bit lacking at times and make mistakes, but they will go out of their way to correct things to please the customer if mistakes are brought to their attention.</span> <span id="3" class="summary-sentence">They are also a good location to hold business meetings.  </span><span id="4" class="summary-sentence">Overall this restaurant is highly recommended.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

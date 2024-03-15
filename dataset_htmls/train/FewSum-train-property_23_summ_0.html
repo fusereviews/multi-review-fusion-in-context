@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>I got my dog a little treat</span> for his birthday and he absolutely loved it! It was a peanut butter cookie and it was easy and soft for him to eat. <span class='review-span highlight' data-aligned-summaries='0'>It wasn't expensive at all</span> either and was cute to use for some photos of him too!</div><div class='text-box'>Just moved to the area and I'm very picky about my little one and who grooms her. Happy to say that <span class='review-span highlight' data-aligned-summaries='1'>Courtney did a fabulous job</span> and Peanut was happy and relaxed <span class='review-span highlight' data-aligned-summaries='1'>during her first grooming visit</span>. I would highly recommend Courtney and Bogart's!</div><div class='text-box'>Stopped by here to pick up some honest kitchen which I usually buy online just ran out and needed some right away. <span class='review-span highlight' data-aligned-summaries='2'>Both the cashiers were rude, trying to rush me out of the store</span> and not helpful at all. You'll never be finding me here again after that kind of customer service.</div><div class='text-box'>So far I've had nothing but positive experiences here. Great customer support, <span class='review-span highlight' data-aligned-summaries='2'>friendly greeting</span>, <span class='review-span highlight' data-aligned-summaries='2 3'>passionate employees</span> more than willing to get you a healthy treat for your furr baby, and some gluten free food. <span class='review-span highlight' data-aligned-summaries='0 3'>Love the selection of food</span>,<span class='review-span highlight' data-aligned-summaries='0'></span> <span class='review-span highlight' data-aligned-summaries='0 3'>snacks</span>,<span class='review-span highlight' data-aligned-summaries='0'> and</span> <span class='review-span highlight' data-aligned-summaries='0 3'>treats</span>, but the <span class='review-span highlight' data-aligned-summaries='3'>backroom</span> <span class='review-span highlight' data-aligned-summaries='1 3'>groomers are average</span> <span class='review-span highlight' data-aligned-summaries='1'>at best</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>What an</span> <span class='review-span highlight' data-aligned-summaries='0 3'>amazing selection</span> <span class='review-span highlight' data-aligned-summaries='0'>of pet stuff</span> with <span class='review-span highlight' data-aligned-summaries='0'>great prices</span>. We travel to Vegas 4-5 times a year and will make sure this is one of our stops since we always travel with our dog. <span class='review-span highlight' data-aligned-summaries='0 3'>Better selection</span> <span class='review-span highlight' data-aligned-summaries='0'>than any pet store in LA</span>!</div><div class='text-box'>Love the doggie wash. Our pup is 130 pounds of love and <span class='review-span highlight' data-aligned-summaries='1'>Because of his size I don't trust anyone washing him</span>, but me. <span class='review-span highlight' data-aligned-summaries='1'>This is great alternative of washing a giant dog at home</span> and having half of the house wet during the process.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>It's so nice to have a pet store with</span> <span class='review-span highlight' data-aligned-summaries='2 3'>employees that genuinely care</span> and will take the time to help you make decisions buying the right food for your pet! <span class='review-span highlight' data-aligned-summaries='0 3'>Such a wide variety of quality food</span> <span class='review-span highlight' data-aligned-summaries='0'>at competitive prices</span>. Highly recommend!!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 3'>My dogs love everything I buy them</span> especially the pizza! Icarrot cake for her birthday, looked so cute and smelled delicious... I've bought cannolis, donut cookies, doggie o's, and coconut bites and will continue going! Highly recommend</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This is a solid pet store with good prices and a nice variety of items including tasty treats.</span> <span id="1" class="summary-sentence">There's a groomer and a self-use doggie wash that get the job done well even with bigger dogs.</span> <span id="2" class="summary-sentence">The employees are friendly and passionate although cashiers can be a bit rude and make the customer feel rushed.</span> <span id="3" class="summary-sentence">Overall, a good selection of food, snacks and treats with a good although slightly inconsistent staff.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

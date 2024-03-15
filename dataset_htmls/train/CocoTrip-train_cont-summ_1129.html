@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>My husband, our teenage son, our five year old son, and I stayed one night here before getting on our cruise ship. The location is excellent. We checked in and walked <span class='review-span highlight' data-aligned-summaries='2'>across the street to the Bayside Mall which had a good variety of shops, excellent restaurants</span>, and great bars and music. <span class='review-span highlight' data-aligned-summaries='3'>This hotel</span> is right in the center of activity, yet it <span class='review-span highlight' data-aligned-summaries='3'>was a very safe area and quiet</span> in the hotel. We had a suite which was large and comfortable. The pool area was kind of small, but totally acceptable. <span class='review-span highlight' data-aligned-summaries='0 3'>It is only a short cab ride to the port</span>. We could actually see our ship from our hotel room window. Excellent place to stay, especially if you are cruising or even if you just want to have some fun.</div><div class='text-box'>My family stayed at the <span class='review-span highlight' data-aligned-summaries='0'>Holiday Inn Port of Miami</span> the night before a cruise. <span class='review-span highlight' data-aligned-summaries='3'>This hotel</span> <span class='review-span highlight' data-aligned-summaries='0 3'>is in an excellent location for port travelors</span>. <span class='review-span highlight' data-aligned-summaries='2'>It is also directly across the street from the Biscayne Marketplace with lots of shops and restaurants</span>. The pool is very nice in the day. <span class='review-span highlight' data-aligned-summaries='4'>The pool gets a little crowded</span> in the evening <span class='review-span highlight' data-aligned-summaries='4'>with families/kids</span> arriving to go on cruises the next day. There is a CVS just down from the hotel and a McDonalds behind if for breakfast. Keep in mind this is downtown Miami, <span class='review-span highlight' data-aligned-summaries='4'>and there is a large homeless population</span>. McDonalds seemed to be a popular location for the homeless. There is also security in the parking lot to protect your car, if you are driving.</div><div class='text-box'>I stayed here the night before going on my Cruise. <span class='review-span highlight' data-aligned-summaries='4'>The attendants at the front desk were very accommodating</span> to my needs. I was pleasantly surprised about <span class='review-span highlight' data-aligned-summaries='4'>my room</span> it <span class='review-span highlight' data-aligned-summaries='4'>was very clean</span> and roomy plus I loved the view from the 10th floor. Also, there is a great restaurant located on the premises just in case you did not want to leave the hotel. <span class='review-span highlight' data-aligned-summaries='0 1 3'>This hotel was in walking distance to</span> <span class='review-span highlight' data-aligned-summaries='0 1'>the nightlife at</span> <span class='review-span highlight' data-aligned-summaries='0 1 3'>the harbor</span>, but if you wanted to ride to South Beach it will cost you $25.00 and the ride to the port will run you about $12.00. If you want to want to relax or get your romance on this is a great hotel to be at.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='3'>This is a great hotel for the price and location</span>. <span class='review-span highlight' data-aligned-summaries='4'>The staff was super friendly</span>. <span class='review-span highlight' data-aligned-summaries='4'>The room extremely</span> comfortable and <span class='review-span highlight' data-aligned-summaries='4'>clean</span>. The only downside - which is not the hotel's fault - is that <span class='review-span highlight' data-aligned-summaries='0 1 3'>it is just across the street from the Port of Miami</span>. <span class='review-span highlight' data-aligned-summaries='4'>By 5 am, you can hear the trucks coming and going</span>. If you're not an early riser, ask to stay in room away from street. Also, parking is limited, so you might not get a space if you don't check in early, and once you check in, you might not have a spot when you return.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>The hotel was</span> just OK, not great or nothing to really talk about. But <span class='review-span highlight' data-aligned-summaries='3'>if you are taking a cruise and want to be</span> <span class='review-span highlight' data-aligned-summaries='0 3'>close to the Port of Miami</span> <span class='review-span highlight' data-aligned-summaries='3'>this hotel will do</span>. The rates are good, but don't spend or waste your money on getting a Suite if your only going to be there for one or two nights it is not worth it. The Port of Maimi is very very close.</div><div class='text-box'>Stayed here a few years ago the night before going on a cruise. <span class='review-span highlight' data-aligned-summaries='0 1 4'>The hotel was</span> <span class='review-span highlight' data-aligned-summaries='0 1'>only minutes to the Port</span> and was <span class='review-span highlight' data-aligned-summaries='4'>very nice, clean and accomadating</span>. <span class='review-span highlight' data-aligned-summaries='3'>I would definetely recommend this hotel if in the Miami area or would like to spend a few days</span> in Miami area <span class='review-span highlight' data-aligned-summaries='3'>before cruising</span>. <span class='review-span highlight' data-aligned-summaries='2'>The Miami Heat play across the street as well</span>, so if you need a hotel, this is the perfect stay!</div><div class='text-box'>We stayed at the <span class='review-span highlight' data-aligned-summaries='0 2'>Holiday Inn Port of Miami</span> for one night before our cruise. <span class='review-span highlight' data-aligned-summaries='4'>It</span> <span class='review-span highlight' data-aligned-summaries='0 2 4'>was</span> <span class='review-span highlight' data-aligned-summaries='4'>fine - clean</span>, <span class='review-span highlight' data-aligned-summaries='0 3'>close to the port</span> and <span class='review-span highlight' data-aligned-summaries='2'>across the street from Bayside Marketplace</span>. If you want to go to South Beach, a cab will run about 17 bucks. If we were going out of this port, <span class='review-span highlight' data-aligned-summaries='3'>I would stay again as long as the price was right</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='3'>We stayed at this hotel the night before we went on a cruise</span>. <span class='review-span highlight' data-aligned-summaries='3'>The</span> <span class='review-span highlight' data-aligned-summaries='3 4'>staff was wonderful</span>, the location was incredible. <span class='review-span highlight' data-aligned-summaries='2'>So many thing to go right across the street from the hotel</span>. <span class='review-span highlight' data-aligned-summaries='0 1'>The ride to the port was less than 10 minutes</span> and only $6.00.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This hotel is very close to the Port of Miami</span> <span id="1" class="summary-sentence">(ten minute or less cab ride).</span> <span id="2" class="summary-sentence">The hotel is right across the street from American Airlines Arena and the Bayside Marketplace, which has many shops and restaurants.</span> <span id="3" class="summary-sentence">I recommend this hotel if you want a place to stay for one night, maybe before or after a Cruise.</span> <span id="4" class="summary-sentence">The hotel is decently clean and staff was friendly, but if you want luxury this is not the place for you.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

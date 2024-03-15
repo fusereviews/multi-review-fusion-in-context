@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='4'>3 stars for the garlic knots.I've had better</span>, they were kinda doughey, but the garlic and butter flavor was good and you get a generous tub of marinara too. I think <span class='review-span highlight' data-aligned-summaries='0 4'>I'll stick to the</span> <span class='review-span highlight' data-aligned-summaries='0 1 4'>pizza, the slices are PERFECT</span>.<span class='review-span highlight' data-aligned-summaries='0 1'></span></div><div class='text-box'>I won't get too verbose about the food. I will merely say this: <span class='review-span highlight' data-aligned-summaries='0 1 2 4'>it's</span> <span class='review-span highlight' data-aligned-summaries='0 2 4'>the best</span> <span class='review-span highlight' data-aligned-summaries='0 4'>pizza I've ever eaten</span>, period. I don't know what makes it different from the other <span class='review-span highlight' data-aligned-summaries='2'>New York-style</span> <span class='review-span highlight' data-aligned-summaries='1 2'>pizza</span>-<span class='review-span highlight' data-aligned-summaries='1'>by-the-slice</span> joints around town, but it's head and shoulders above anything I've had in the valley.</div><div class='text-box'>My guys love love this pizza... They say it's the best combo of cheese and crisp of the crust.I did try the wings and just not a fan, but <span class='review-span highlight' data-aligned-summaries='0'>if you want great pizza then you'll love it here</span>.I came back and had the 10 'gluten free pepperoni pizza and it was awesome! Best Gf pizza I've had!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 2 4'>A very nice pizza</span>. I haven't made up my mind which is more authentic, NYPD or Ray's. Both, have <span class='review-span highlight' data-aligned-summaries='0 2'>the thin NY style crust</span>, but NYPD makes me feel like I'm waiting for an E train to Queens; whereas Ray's feels more upper east side-ish.</div><div class='text-box'>Place has been on a slide last few years. Loved the food when they first opened. As a NY transplant I was happy to have Ray's nearby. <span class='review-span highlight' data-aligned-summaries='0 4'>Disappointing crust had a cardboard texture</span>. <span class='review-span highlight' data-aligned-summaries='0 4'>So little sauce that the pizza was dry</span>. Cheese not fully melted. The crust ends were skinny and poorly formed. Slightly better than frozen supermarket pizza.</div><div class='text-box'>Not a fan, not even a little bit. <span class='review-span highlight' data-aligned-summaries='0 1 4'>Underwhelmed by</span> <span class='review-span highlight' data-aligned-summaries='0 4'>the overall taste and the sauce on</span> <span class='review-span highlight' data-aligned-summaries='0 1 4'>the slice</span>,<span class='review-span highlight' data-aligned-summaries='4'></span> which I think is the most significant ingredient was bland. Not likely to give Ray a chance to make a second impression.</div><div class='text-box'>Yummy pizza! Every time I got <span class='review-span highlight' data-aligned-summaries='3'>they are super nice</span> and <span class='review-span highlight' data-aligned-summaries='0 4'>the pizza is delicious</span>. <span class='review-span highlight' data-aligned-summaries='1'>I order a pie to go-</span> so <span class='review-span highlight' data-aligned-summaries='1'>I haven't tried the pizza by the slice</span>. Oh and <span class='review-span highlight' data-aligned-summaries='4'>don't forget wings, they are great too</span>!</div><div class='text-box'>I overheard and <span class='review-span highlight' data-aligned-summaries='0 3'>watched the owner being very rude a customer</span> <span class='review-span highlight' data-aligned-summaries='0'>who asked</span> about gluten-free customer say that and his place he's the boss here and he'll do the things he wants and he doesn't want to here about <span class='review-span highlight' data-aligned-summaries='0'>gluten free pizza</span>.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This place serves delicious New York style pizza.</span> <span id="1" class="summary-sentence">They offer both pies to-go and the classic pizza by the slice.</span> <span id="2" class="summary-sentence">Both options taste great for fans of the thin, crisp New York style crust.</span> <span id="3" class="summary-sentence">The staff are also very nice.</span> <span id="4" class="summary-sentence">The other menu dishes are ok, but pizza is the specialty here.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>this was a great place to stay</span> for the two of us. Hotel decor was fun and the staff were quite accomodating. There isalso a small restaraunt in this hotel that had great food However, for us it was located a bit off course in the sense that is is not subway convenient. Further, because this is an old historic hotel, the rooms were small, coupled with a small bathroom. I do believe you can upgrade to a larger room but none was available at the time I reserved. As the elevator is original to the hotel, it must be staff operated. At times we had to wait for someone to attend to this. Our other choice was walking 3 flights of stairs.</div><div class='text-box'>I stayed in the Gladstone this June for 7 nights. Its a <span class='review-span highlight' data-aligned-summaries='0'>great hotel</span> and represents great value in a really interesting area of the city. The Drake hotel is 200 yards up the road, double the price and has half the character.although very smart. Our room was small but adequate and well kept. The downstairs cafe serves great food, and while we were there there was live music and comedy every single night. The staff were very helpful and friendly and i'd <span class='review-span highlight' data-aligned-summaries='0'>definitely recommend the hotel</span> for future stays. The Gladstone would particularly suit young couples looking for some culture, good food and music at a reasonable price.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>The Gladstone Hotel is a great place</span> in Toronto for <span class='review-span highlight' data-aligned-summaries='0'>so many reasons, aside from being a hotel</span>. They have created unique spaces for musicians, artists, foodies and families.to showcase, perform and indulge. They support and promote local and organic eating ( by the way they have a FRY BAR.sweet potato, potato and taro too with tons of toppings). Harvest Wednesdays supporting field to table eating (yum) are not to be missed.and while you are there, you'll know why <span class='review-span highlight' data-aligned-summaries='0'>you need to try the Gladstone</span>.</div><div class='text-box'>I was very much looking forward to staying here, but I was quite disappointed. I was in town on business for a week, and my wife and child stayed with me the first day. The Gladstone is clearly more interested in being an arts/cafe/performance/bar venue for hipsters than a hotel. Details don't get addressed, the rooms are crazy small, and it's just <span class='review-span highlight' data-aligned-summaries='0'>not comfortable for any extended stay</span>. <span class='review-span highlight' data-aligned-summaries='0'>I will try The Drake next time</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Fantastic hotel</span>, great drinks, food and the staff super nice and cool. only complaints were that our left over margarita glasses weren't cleaned up, mattress wasn't great as it sagged in the middle and the shower felt like we were washing in a horizontal MRI machine! Opted not to say anything as we were only there for a couple of nights though would probably stay at the Drake Hotel next time we take a trip.</div><div class='text-box'>After a long flight we found reception to be slightly frosty and unfriendly. You need the opposite after a long trip. <span class='review-span highlight' data-aligned-summaries='0'>The room was also slightly disappointing. We found it to be small and the design a bit half hearted with a very strange shower</span>! It's beautiful old building but could do with a bit of warmth and character. <span class='review-span highlight' data-aligned-summaries='0'>Having stayed elsewhere in Toronto I'd recomend the hotel a couple of blocks east</span>.</div><div class='text-box'>No 'Big City Attitude' here! <span class='review-span highlight' data-aligned-summaries='0'>The Gladstone had really friendly and engaging staff. Rooms were unique and fun.no</span> cookie cutter boxes with the same old crap. Even the elevator (circa 1900) was crazy and fun. Great food, music and decor and location are killer. Lots to do around the hotel. <span class='review-span highlight' data-aligned-summaries='0'>Try it out</span> if you want something different!</div><div class='text-box'>The Gladstone is a <span class='review-span highlight' data-aligned-summaries='0'>great escape</span> in the city. It is well located to hang out on Queen St West as well as the theatre district and more mainstream shopping, and has much <span class='review-span highlight' data-aligned-summaries='0'>more charm than most hotels</span>. Overall the rooms are interesting and fun, but the beds are the best part.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This hotel is very recommended and it is an excellent hotel to stay at.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>We found the reception staff very friendly. As everyone else commented, the rooms are very cramped and odd shaped, but you are in ROME and shouldn't be spending any time in your room other than to sleep! So much to see and do. Giotto is a decent enough base. The walk to the Metro is about 10 mins and the perfect way to get around Rome. Day tickets are 4 Euros and a one way ticket was 1 Euro. Bargain! The coach from the airport was 6 Euros one way. <span class='review-span highlight' data-aligned-summaries='3'>Breakfast was fine</span>. Bit disappointed regarding the lack of toast, but I wouldn't have expected a banquet with the price we paid for our room! You pay for what you get and I think <span class='review-span highlight' data-aligned-summaries='7'>Hotel Giotto is a great budget hotel</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>This</span> <span class='review-span highlight' data-aligned-summaries='0 2'>hotel</span> <span class='review-span highlight' data-aligned-summaries='0'>is far to far away from</span> <span class='review-span highlight' data-aligned-summaries='0 1'>the main attractions</span> <span class='review-span highlight' data-aligned-summaries='1'>of Rome. To get there you have to walk to</span> <span class='review-span highlight' data-aligned-summaries='0 1'>the local Metro station</span> <span class='review-span highlight' data-aligned-summaries='0'>which is about a 15 minute walk away</span>, down a steep hill and along a busy main road that dosen't have any pavements, so you are walking in the road trying to dodge the traffic.After a full day of sightseeing there is the prospect of the return journey on the metro and a walk up a steep hill which is fine if you are young and healthy.The hotel is also used by many foreign school parties so was quite noisy during the night. On the plus side <span class='review-span highlight' data-aligned-summaries='2'>it is clean</span> and <span class='review-span highlight' data-aligned-summaries='3'>the staff are friendly and helpful</span>. I would say that this hotel was more suitable for the young.</div><div class='text-box'>Having stayed many places throughout Italy and in Rome, Hotel Giotto was by far the least desirable and least accommodating. <span class='review-span highlight' data-aligned-summaries='0'>Extremely far and inconvenient location</span>; it took us up to an hour each way to get to and from the Rome city center. The address is located on a different street than the hotel was actually located, so we were walking around in the rain pulling luggage looking for an incorrect address. The staff was cold and minimally helpful. <span class='review-span highlight' data-aligned-summaries='2'>Our room was the smallest room I have ever stayed in</span> in Europe, <span class='review-span highlight' data-aligned-summaries='4 5'>the shower was located OVER the toilet</span>, and the <span class='review-span highlight' data-aligned-summaries='3'>breakfast was a joke (dried, old croissants)</span>. <span class='review-span highlight' data-aligned-summaries='7'>I would NEVER recommend</span> someone to stay at <span class='review-span highlight' data-aligned-summaries='7'>the Hotel Giotto</span>. Avoid at all costs.you have been warned!</div><div class='text-box'>My husband and I stayed at the Giotto to celebrate our birthdays in January. The hotel was better than some and no worse than others we have stayed in. Yes <span class='review-span highlight' data-aligned-summaries='2'>the rooms are small</span> and <span class='review-span highlight' data-aligned-summaries='4'>the bathroom shower was a challenge</span> to even the best contortionist but we only needed a room for a base as we were out every day. <span class='review-span highlight' data-aligned-summaries='0'>The bus service</span> was cheap and regular, <span class='review-span highlight' data-aligned-summaries='0'>just down the road</span> and the train service was excellent. <span class='review-span highlight' data-aligned-summaries='3'>The buffet style continental breakfast was adequate</span> and set us up till lunchtime. The little cafe over the road could have been a little more adventurous but the food was cooked fresh and was good. All in all you get what you pay for and we thought it was quite good value for money.</div><div class='text-box'>Stayed her from 27 Nov to 30 Nov 2011. <span class='review-span highlight' data-aligned-summaries='3'>The hotel</span> was clean and <span class='review-span highlight' data-aligned-summaries='3'>reception staff very helpful</span>.Our room was at the front of the hotel and was quite noisy <span class='review-span highlight' data-aligned-summaries='3'>.The breakfast wasn't great</span> just one meat and one cheese available and white rolls/ croissants. The fruit juice was from a machine not fresh and the fruit salad was tinned. It is about a 15 minute walk from the metro station ok on the way down but quite a hill on the way back up.Nice cafe facing the hotel and staff there very friendly. <span class='review-span highlight' data-aligned-summaries='0'>Not a lot to do or any shops in the area immediately around the hotel</span>.Overall not a bad choice for the price but I would prefer something more central.</div><div class='text-box'>My friends and I stayed here for two nights. The room wasn't HUGE, but it did suffice for the four of us. <span class='review-span highlight' data-aligned-summaries='2'>The rooms were clean</span>. The hotel itself overall was great, especially the roof. It was really nice up there at night, nice view of the city lights. Also, located directly across the street is a little cafe. The service there was excellent, as was the food & drink. <span class='review-span highlight' data-aligned-summaries='7'>We all had a great time there and certainly would go & stay there</span>.</div><div class='text-box'>We stayed here on a Top Deck tour, the hotel is not the easiest to find and is serviced by intermittent public transport. <span class='review-span highlight' data-aligned-summaries='2 7'>The room was small but clean</span> but the shower was definately interesting as it was a <span class='review-span highlight' data-aligned-summaries='4'>shower head</span> attached to the wall <span class='review-span highlight' data-aligned-summaries='4'>and</span> then <span class='review-span highlight' data-aligned-summaries='4'>the drain</span> was on the bathroom floor. It <span class='review-span highlight' data-aligned-summaries='4'>made the bathroom very slippery and somewhat dangerous</span>. <span class='review-span highlight' data-aligned-summaries='3 7'>The breakfast was ok nothing flash</span> but they did have fruit which was nice.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='7'>a quite good hotel, but not something special</span>. <span class='review-span highlight' data-aligned-summaries='2'>the room is a bit smaller for 2 persons</span>, <span class='review-span highlight' data-aligned-summaries='2'>but very clean</span>, <span class='review-span highlight' data-aligned-summaries='4'>the curtain in the bathroom was dirty</span>. <span class='review-span highlight' data-aligned-summaries='3'>breakfast was included</span>, <span class='review-span highlight' data-aligned-summaries='3'>buffet, but not so much food</span>. only non smoking rooms. :o( not so far from the metro station that can take you to the center of the city</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The location of the hotel is not the best, but a short distance (3 blocks) away there is a bus stop.</span> <span id="1" class="summary-sentence">The bus takes you to the center of Rome.</span> <span id="2" class="summary-sentence">The room was clean but too small.</span> <span id="3" class="summary-sentence">The buffet breakfast was fine and the staff cordial and helpful.</span> <span id="4" class="summary-sentence">The worst part of the room was the bathroom.</span> <span id="5" class="summary-sentence">You don't have enough space to take a shower and you are constantly bumping your elbows against the window that is one side of the shower stall.</span> <span id="6" class="summary-sentence">The shower stall was covered with mold.</span> <span id="7" class="summary-sentence">Not recommended.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

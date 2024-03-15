@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>We read the reviews on Trip Advisor and reluctantly decided to stay at the Buckminster anyway. The Buckminster is an older hotel that is <span class='review-span highlight' data-aligned-summaries='0'>less than a 5 minute walk to Fenway Park</span> and <span class='review-span highlight' data-aligned-summaries='0'>to a T-Stop</span>. <span class='review-span highlight' data-aligned-summaries='0'>We could see Fenway Park from our window</span>. We were pleasantly surprised with the hotel. We stayed in a one-bedroom, two room suite that had a king sized bed. Although the bathroom was a bit tiny, <span class='review-span highlight' data-aligned-summaries='3'>the suite was spacious</span> and clean. The continental breakfast had cold cereal, bagels, assorted pastries and doughnuts, coffee and juice. The hotel staff was courteous and helpful. The Buckminster is not a five-star hotel, but we enjoyed our stay there and will book a room there again in the future.</div><div class='text-box'>We spent four nghts at this hotel. The staff were friendly and helpful and the reception area was ok but the rest of the hotel was in need of modernisation. Our room had all the facilities you would need but <span class='review-span highlight' data-aligned-summaries='4'>the furniture was worn and dated and the bathroom was badly in need of a facelift</span>. <span class='review-span highlight' data-aligned-summaries='6'>The hotel is located in a busy location and the traffic noise was quite bad</span> but we didn't really expect it to be quiet. <span class='review-span highlight' data-aligned-summaries='1'>Breakfast was continental which was basic</span> in a very boring and dimly lit room. The breakfast could have been laid out better as it was very cramped and caused unnecessary hold-ups. Also, bit disappointed we were charged for the Wifi and no tea/coffee facilities in the room.</div><div class='text-box'>Overall the hotel was not bad. True, there are planks that you have to walk across, but they are renovating, what do you expect? The room we had was not exactly sparkling, but it was clean, and it didn't smell like grease or vomit. I had an incredible view of the city and a view of the Park from the bedroom. The staff was very very helpful and nice. If you want a four star hotel, go stay at the Marriott and pay 289 dollars a night. I used the room just for sleeping and had a wonderful stay, and the price was very reasonable especially for being so close to the Park and the excitement.</div><div class='text-box'>We just returned from our 3 day trip to Boston over the 4th of July. We loved the Buckminster and would without a doubt stay there again. Of course, it didn't hurt that <span class='review-span highlight' data-aligned-summaries='0'>my son and his family had the green monster as their view</span> and my oldest grandson <span class='review-span highlight' data-aligned-summaries='0'>opened the window listened to the crowd as he watch the game on TV</span> our first night. It was close to restaurants, the subway, the Charles River, everything we wanted. The staff was absolutely great and the rooms while old, were very clean and we had plenty of hot water for showers. Thanks!</div><div class='text-box'>Found a great deal on a suite and was nervous that it was too good to be true. It was not! We had a great weekend and <span class='review-span highlight' data-aligned-summaries='0'>the location was great</span>! There were a few minor problems - <span class='review-span highlight' data-aligned-summaries='6'>the room was a bit cold and the bathroom was hot</span> so we propped the door open to even things out. Also the walls are kind of thin. The staff was super friendly and helpful as well. Would definitely recommend and stay here again in the future :)</div><div class='text-box'>We had never been to Boston before and really didn't know where to stay. We took a shot in the dark with the Buckminister. To say the least we were very pleased with the selection. The front desk staff was great! We were greeted with a warm smile (nice to weary travelers) and even given an upgrade to a two bedroom suite. I believe that the attendants name was Gary. <span class='review-span highlight' data-aligned-summaries='0'>We walked to Fenway Park. Great location</span> and good price!</div><div class='text-box'>The Buckminster was in a good location and the staff were friendly and really helpful. <span class='review-span highlight' data-aligned-summaries='0'>Located in Kenmore Square it's close to Fenway Park</span>, House of Blues and many restaurants. Easy walk to the subway. The price was reasonable, as was parking for the night. <span class='review-span highlight' data-aligned-summaries='3'>Our room was spacious</span> and very clean, <span class='review-span highlight' data-aligned-summaries='4'>the bed was comfortable</span>. <span class='review-span highlight' data-aligned-summaries='1'>The continental breakfast was nice</span>. I would definitely stay here again. The rooms may need some updating, but were very clean.</div><div class='text-box'>We arrived to the hotel not knowing if we had picked out a good location or not? <span class='review-span highlight' data-aligned-summaries='0'>The location was</span> good for us real close to the kenmore subway line and <span class='review-span highlight' data-aligned-summaries='0'>right across the street from Fenway park</span>. The hotel elegant and quite, they offered <span class='review-span highlight' data-aligned-summaries='1'>breakfast</span> and it <span class='review-span highlight' data-aligned-summaries='1'>was nice</span>. We would stay here again if i come back.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The Good Right by the Kenmore stop on the Green Line of the T. Excellent location for Fenway Park.</span> <span id="1" class="summary-sentence">The continental breakfast was good.</span> <span id="2" class="summary-sentence">The Bad</span> <span id="3" class="summary-sentence">The room was very small and a bit of a strange shape.</span> <span id="4" class="summary-sentence">The decor was very tired, and the bed was very hard.</span> <span id="5" class="summary-sentence">The Ugly</span> <span id="6" class="summary-sentence">The room was very hot and when we opened the window we found we were right by the extractor fans, it was incredibly noisy.</span> <span id="7" class="summary-sentence">We didn't sleep well.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

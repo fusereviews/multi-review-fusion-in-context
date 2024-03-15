@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>We stayed at the Erboy for 4 nights at the begining of our trip and 3 nights at the end. The hotel is like a boutique hotel, offering free airport pickup, a delicious free meal in their restaurant, and <span class='review-span highlight' data-aligned-summaries='3'>the staff are great</span>! <span class='review-span highlight' data-aligned-summaries='1'>The rooms are stylish and clean(try</span> to get a room on the back over looking the pedestrian walkway with all the little cafes), and the <span class='review-span highlight' data-aligned-summaries='6'>great breakfasts</span> are included in the price! <span class='review-span highlight' data-aligned-summaries='4'>The location is the best part! They are with in a few blocks of all the important tourist attractions, the Blue Mosque,Haggia Sofia, Topkapi Palace, the Bosphorous, and of course the Spice and Grand bazaars</span>! The best part of Istanbul is right in this area! Explore and enjoy! G and A</div><div class='text-box'>We stayed for six days at this nice <span class='review-span highlight' data-aligned-summaries='4'>hotel</span>. <span class='review-span highlight' data-aligned-summaries='4'>The</span> Erboy <span class='review-span highlight' data-aligned-summaries='4'>is situated excellent</span>. <span class='review-span highlight' data-aligned-summaries='4'>The Topkapi palace, the Blue Mosque and the Hagia Sofia are very nearby</span>. So are the Galatabridge and the bazaars. <span class='review-span highlight' data-aligned-summaries='5'>Around the corner you will find the tram station</span>. <span class='review-span highlight' data-aligned-summaries='3'>The staff is friendly</span> and <span class='review-span highlight' data-aligned-summaries='1'>the rooms are very clean</span>. <span class='review-span highlight' data-aligned-summaries='6'>Each morning we have had a very good breakfast</span>. The rooms are good but a bit old-fashioned. Ask for the restaurant guide of the Sirkezy group. Every evening we have had a very fine dinner with good food. The restaurant in the hotel serves good meals. Value for money.</div><div class='text-box'>The Erboy hotel is definitely one that i can recommend to fellow travelliers. <span class='review-span highlight' data-aligned-summaries='4'>The Erboy allows short walks to most interesting places of Istanbul ( Hagia Sophia, Topkapi palace</span>, Great Bazar, Egyptian Bazar, Cisterns. etc.) and to the railway station. <span class='review-span highlight' data-aligned-summaries='1'>The rooms and bathrooms were clean and nice</span>. <span class='review-span highlight' data-aligned-summaries='2'>We always had fresh sheets and towels</span>. <span class='review-span highlight' data-aligned-summaries='3'>The service was excellent from the reception and from the rest of the staff</span>. <span class='review-span highlight' data-aligned-summaries='6'>The breakfast was lovely and breakfast area was nice</span>. The staff were, without exception, very friendly and helpful. <span class='review-span highlight' data-aligned-summaries='8'>You wont regret staying in this hotel</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 8'>This hotel is great</span>! <span class='review-span highlight' data-aligned-summaries='0 3'>The staff is very nice helpful and informative</span>. <span class='review-span highlight' data-aligned-summaries='1'>The hotel is very clean, nice</span> and it has free fast internet. <span class='review-span highlight' data-aligned-summaries='6'>Breakfast is good</span> and the best thing of all is that <span class='review-span highlight' data-aligned-summaries='4 8'>it is in the middle of everything</span>. <span class='review-span highlight' data-aligned-summaries='5'>It is a block away from the Tram</span> (public transportation) and a <span class='review-span highlight' data-aligned-summaries='4'>walking distance from most of the top sites to visit in Istanbul</span>. For many people the rooms are small but truly the rooms have all you need and if you are on vacations in Istanbul.you should not stay in your hotel there is a lot to see!</div><div class='text-box'>Me and my wife travelled with some friends to Istanbul staying 4 nights at Erboy. <span class='review-span highlight' data-aligned-summaries='0'>We all found the hotel very nice with</span> <span class='review-span highlight' data-aligned-summaries='0 3'>friendly</span> <span class='review-span highlight' data-aligned-summaries='3'>personnel</span> and <span class='review-span highlight' data-aligned-summaries='1'>nice rooms</span>. The only comment on the room in the new part of the building would be better lighting over the mirror in the bathroom and more and bigger hooks for towels. <span class='review-span highlight' data-aligned-summaries='6'>Breakfast very good</span> and restaurant for dinner very good. <span class='review-span highlight' data-aligned-summaries='4'>Location of hotel was super - close to all major attractions</span> - walking distance and also with <span class='review-span highlight' data-aligned-summaries='5'>the tram station just close to the hotel</span>. <span class='review-span highlight' data-aligned-summaries='8'>We highly recommend this hotel</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='4 8'>Perfect location, in the heart of everything you want to see in Istanbul</span>! A short walk to all the major sights and the spice market. <span class='review-span highlight' data-aligned-summaries='5'>A quick tram ride to the Grand Bazaar</span>. <span class='review-span highlight' data-aligned-summaries='6'>The hotel had very good breakfast</span> and <span class='review-span highlight' data-aligned-summaries='7'>two restaurants that were very good for supper</span>. <span class='review-span highlight' data-aligned-summaries='0 3'>The staff was friendly and helpful</span>. The hotel was clean, the rooms were small but comfortable, with A/C and large opening windows. The view of the Bosphorus from the roof restaurant was great!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 3'>The staff was always friendly and ready to help</span>. <span class='review-span highlight' data-aligned-summaries='1'>The rooms werd well maintained and very clean</span>, with the standard comfort. <span class='review-span highlight' data-aligned-summaries='4'>The hotel is situated on a top location</span>, at <span class='review-span highlight' data-aligned-summaries='4'>walking distance of the most important historic monuments in the old town</span>. It was the third time we went to Istanbul and <span class='review-span highlight' data-aligned-summaries='8'>the best hotel of the three hotels we stayed in</span>. If we return to Istanbul, <span class='review-span highlight' data-aligned-summaries='8'>we would without hesitation choose to go back to the Erboy Hotel</span>.</div><div class='text-box'>I stayed in this hotel for a month while studying in Istanbul. <span class='review-span highlight' data-aligned-summaries='4'>This hotel is in a great location</span>, <span class='review-span highlight' data-aligned-summaries='4'>central to everything and walking distance to the Grand Bazaar</span>, <span class='review-span highlight' data-aligned-summaries='4'>Hagia Sophia</span>, and the Blue Mosque. <span class='review-span highlight' data-aligned-summaries='3'>The staff are very friendly and helpful</span>. <span class='review-span highlight' data-aligned-summaries='7'>The restaurant is located on a beautiful terrace</span> with a spectacular view of the Hagia Sophia and the Golden Horn. A great experience!</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">We really enjoyed the hotel because of the friendly atmosphere.</span> <span id="1" class="summary-sentence">The rooms and bathrooms are clean and nice.</span> <span id="2" class="summary-sentence">There are always fresh sheets and towels.</span> <span id="3" class="summary-sentence">The service is excellent from the reseption and from the rest of the staff.</span> <span id="4" class="summary-sentence">This hotel is in an exellent location, very close to all the wonderful sights of istanbul- Topkapi, Hagia Sophia, Spice bazaar and the blue mosque.</span> <span id="5" class="summary-sentence">The hotel is located close to the tram, so is easy to go to other parts of the town.</span> <span id="6" class="summary-sentence">The breakfast is lovely and the breakfast area is nice.</span> <span id="7" class="summary-sentence">Close to the hotel you can find lot of restaurants.</span> <span id="8" class="summary-sentence">I recommend this hotel for a enjoyable stay.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

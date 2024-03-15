@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>Kingyo never disappoints whether you are in Vancouver or Toronto.<span class='review-span highlight' data-aligned-summaries='0'>Their pressed mackerel is</span> my favorite and <span class='review-span highlight' data-aligned-summaries='0'>a definite must try</span> if you go.<span class='review-span highlight' data-aligned-summaries='0 2'>It is a bit expensive if you order mainly sashimi and sushi</span>, but if you get their stone pot rice bowls or some noodles (tantan noodles!) they will help fill you up a bit more and they are always good.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='3'>Hostess was outrageously inexperienced</span>. Gave random, false wait time and <span class='review-span highlight' data-aligned-summaries='3'>was still unable to accommodate a party of 2</span> with a table after having waited more than double the time as promised. That's 1.5 hr wait. No systematic booking system but a simply old note pad. <span class='review-span highlight' data-aligned-summaries='4'>Don't bother coming without reservation</span>. And don't trust the hostess.</div><div class='text-box'>Ordered at 9: 15 and dishes started coming out in an hour, even for the most basic dishes. Drinks took about 30 minutes to come out. <span class='review-span highlight' data-aligned-summaries='3'>Ordered short ribs at 9: 15 and they came out at 11: 15. Right before the store closes</span>. Never again and don't recommend.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Food is A-OK</span>! <span class='review-span highlight' data-aligned-summaries='0 2'>Was a bit pricey</span>,<span class='review-span highlight' data-aligned-summaries='2'> approx. $130 for 5 items</span> and not full at all..... (could be because I eat a lot.... haha). Even thought the server explain each dish, my friend and I still don't what we were eating.... Probably won't come back again</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>It's ok, nothing special</span>. I still think Sushi Run is better. <span class='review-span highlight' data-aligned-summaries='0 2'>Their price is kind of high for little amounts of food</span>.<span class='review-span highlight' data-aligned-summaries='0'> Hubby and I ordered 5 assorted sashimi and we only got about 10 pieces for $27</span>. Spicy tuna <span class='review-span highlight' data-aligned-summaries='1'>sushi had too much rice</span>. The only cool thing about this spot is that it's actually Japanese owned.</div><div class='text-box'>They have limited amount for the deluxe lunch bento, which I recommend. The portion might not look a lot, but once you start eating you will get full in the end. I also tried <span class='review-span highlight' data-aligned-summaries='0'>the katsu-don bento</span>, which <span class='review-span highlight' data-aligned-summaries='0'>is very good</span>. So, make sure more than 2 people go so you can try variety from the menu.</div><div class='text-box'>Now I don't need to wait for trips to Vancouver to get my fix. This is the best Japanese tavern in town. It's much more comfortable than Guu (chairs have backs). <span class='review-span highlight' data-aligned-summaries='0'>The Tuna Tataki is brilliant</span>. <span class='review-span highlight' data-aligned-summaries='0'>Try the addictive Pork Ramen</span>.</div><div class='text-box'>I love Kingyo, I'm always satisfied when I come here and <span class='review-span highlight' data-aligned-summaries='0'>have yet to order something I don't like</span>. A couple of staples I always order are, the sashimi salad, tako wasabi, hamachi cheek, ebi shrimp the green tea matcha dessert.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The Food is okay, but quite expensive.</span> <span id="1" class="summary-sentence">The tuna was spicy and too much rice in the sushi.</span> <span id="2" class="summary-sentence">The price is quite high for the small quantity of food.</span> <span id="3" class="summary-sentence">The hostess was very much inexperienced and was unable to accommodate a party of two.</span> <span id="4" class="summary-sentence">Get a reservation before coming.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

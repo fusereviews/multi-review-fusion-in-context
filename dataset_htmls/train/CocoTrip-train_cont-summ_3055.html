@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>We picked this hotel from the internet because of its proximatey to the Atoche Rail Station, as we were traveling on the fast train to Seville from that station. <span class='review-span highlight' data-aligned-summaries='4'>The hotel was very clean</span> and the room was comfortable. For a large city we thought the cost was reasonable - ~$85.00 for a room with two twins. The bathroom was also very nice. <span class='review-span highlight' data-aligned-summaries='11'>The staff were friendly and helpful</span>. If you wish to save money, <span class='review-span highlight' data-aligned-summaries='1'>the hotel can be reached from the airport by taking the metro to the Atoche Renfe Station</span> (You change lines twice) <span class='review-span highlight' data-aligned-summaries='2'>It is then about a</span> <span class='review-span highlight' data-aligned-summaries='2 10'>5-10 minute walk from the metro stop</span>/<span class='review-span highlight' data-aligned-summaries='10'>train</span> station. The cost from the airport is 2 euro per person on the metro. It is <span class='review-span highlight' data-aligned-summaries='10'>also</span> <span class='review-span highlight' data-aligned-summaries='1 10'>within walking distance of the Prado</span> and Retiro Park.</div><div class='text-box'>Stayed in this hotel in the middle of summer for 4 nights, overall we were happy with the hotel. Things we liked: - Location - <span class='review-span highlight' data-aligned-summaries='1'>very close to all major museums</span> and Madrid major park. Also well connected by metro to the rest of the city. The immediate area around the hotel doesnt offer much (<span class='review-span highlight' data-aligned-summaries='8'>very few</span> shops, cafes or <span class='review-span highlight' data-aligned-summaries='8'>restaurants</span>) but the <span class='review-span highlight' data-aligned-summaries='10'>close proximity to the city helps</span>. - <span class='review-span highlight' data-aligned-summaries='4'>Service rooms are clean</span> and very comfortable. Nice beds. Bathrooms are big and clean. <span class='review-span highlight' data-aligned-summaries='11'>Hotel staff are friendly</span>. - Good value for money. Things we did not like: - <span class='review-span highlight' data-aligned-summaries='5'>Internet in the foyer too expensive and slow. - No safes in the rooms</span>. Our stay was pleasant and comfortable, would definitely go back there.</div><div class='text-box'>We stayed in this hotel for a week and it couldn't have been better, it was ideally located for the metro. <span class='review-span highlight' data-aligned-summaries='4'>The hotel was</span> lovely and <span class='review-span highlight' data-aligned-summaries='4'>clean</span>, <span class='review-span highlight' data-aligned-summaries='4'>our room was cleaned every single day</span> but we were never disturbed by cleaners when we slept until the afternoon. It was quiet, had everything we needed and we had no complaints at all. <span class='review-span highlight' data-aligned-summaries='11'>The staff were efficient</span>, <span class='review-span highlight' data-aligned-summaries='8'>the restaurant</span>, which we ate in once and it <span class='review-span highlight' data-aligned-summaries='8'>was</span> quite late at night served us with a <span class='review-span highlight' data-aligned-summaries='8'>lovely</span> meal and excellent wine. I think the people who may not have enjoyed this hotel are probably used to the 'holiday beach resort' type hotel and need to remember this is a city centre hotel more set up for business trippers than the 'benidorm crews'.</div><div class='text-box'>I spent four days in "Agumar" and both I and my friend were quite content with the quality of the room, the food and the service. <span class='review-span highlight' data-aligned-summaries='4'>It was clean</span> and comfortable, <span class='review-span highlight' data-aligned-summaries='4'>the beds were soft and welcoming</span> after a day's walking and in the morning a rich and tasty breakfast gave us all the energy to explore Madrid and Toledo ( which is less than an hour away if you stay in this hotel ). Pros: nice area, <span class='review-span highlight' data-aligned-summaries='1 10'>close to</span> a metro station and <span class='review-span highlight' data-aligned-summaries='1 10'>the railway station</span>, good standard of service and qualified personnel. <span class='review-span highlight' data-aligned-summaries='11'>We did not find any significant shortcomings and this is quite a compliment for the staff</span> because we are professional travellers - stewardesses.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='10'>This hotel is about a 5 minute walk to the Atocha train station</span>. It was perfect for a quick stay in Madrid where I needed to get the train stations 4 times in 3 days. The buses outside run near Sol and it was near the El Retiro park. Walking around was easy and <span class='review-span highlight' data-aligned-summaries='2 10'>it is about a 5 minute walk to some musuems</span> <span class='review-span highlight' data-aligned-summaries='2'>and restaurants</span> . there is not much near the hotel but it is only a few minute walk to more action. <span class='review-span highlight' data-aligned-summaries='11'>The hotel staff was very helpful</span> and the <span class='review-span highlight' data-aligned-summaries='4'>hotel was very</span> nice and <span class='review-span highlight' data-aligned-summaries='4'>clean</span>. I booked using bancotel and paid 50 euros per night.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 1'>This hotel is located very near the main train station</span>. The train station has the metro and the high-speed train to nearby cities. <span class='review-span highlight' data-aligned-summaries='1'>You can take one train to and from the airport to this train station (Atocha-Renfe)</span>. The walk at night to the hotel from the train station can be scary due to poor street lighting, but it is not a reflection of the neighborhood. <span class='review-span highlight' data-aligned-summaries='1'>The hotel is</span> also <span class='review-span highlight' data-aligned-summaries='1'>very close to</span> the botanical gardens, el Parque del Retiro, and <span class='review-span highlight' data-aligned-summaries='1'>El Museo del Prado</span>. The hotel staff were friendly and <span class='review-span highlight' data-aligned-summaries='4'>the hotel is very clean</span>. I highly recommend this hotel.</div><div class='text-box'>This was a well located hotel. <span class='review-span highlight' data-aligned-summaries='4'>It was clean</span> and comfortable. Bus to center was right outside and the metro was a few blocks away. <span class='review-span highlight' data-aligned-summaries='11'>The staff were very friendly and helpful</span>. We enjoyed our stay. The only negative was <span class='review-span highlight' data-aligned-summaries='5'>you had to pay to use the safe</span> deposit box in the room. Also, wifi was extra but that was not a big deal for us.</div><div class='text-box'>We only stayed here for one night but found <span class='review-span highlight' data-aligned-summaries='11'>the staff very helpful</span> and friendly the rooms were a good size and had everything we needed. It is in a nice location as it is a quiet area but <span class='review-span highlight' data-aligned-summaries='1 8 10'>very close to</span> <span class='review-span highlight' data-aligned-summaries='1'>transport links</span>, bars and <span class='review-span highlight' data-aligned-summaries='8'>resturants</span> and <span class='review-span highlight' data-aligned-summaries='10'>all of the museums</span>. The park is amazing and our favourite spot in Madrid.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">After staying at the Best Western Atlantico on Gran Via the Agumar Hotel was in a much quieter residential neighborhood.</span> <span id="1" class="summary-sentence">Very close to the Prado and the Reina Sofia Museums and the Atoche Rail Station.</span> <span id="2" class="summary-sentence">5 min walk.</span> <span id="3" class="summary-sentence">The Hotel seemed like a "tour group" hotel.</span> <span id="4" class="summary-sentence">It was very clean, but stark and cold.</span> <span id="5" class="summary-sentence">You had to pay for the use of the internet and also to use the safe.</span> <span id="6" class="summary-sentence">The beer and wine were very expensive.</span> <span id="7" class="summary-sentence">better to go down the street to a local pub.</span> <span id="8" class="summary-sentence">There was a restaurant there but again.</span> <span id="9" class="summary-sentence">expensive.</span> <span id="10" class="summary-sentence">Though we liked it for its proximity to the museums and the train.</span> <span id="11" class="summary-sentence">The staff were helpful.</span> <span id="12" class="summary-sentence">they had limited English.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

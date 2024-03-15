@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>We stayed in this hotel for three nights. We arrived and the friendly young man at the desk checked us in and took us to our rooms which were cosy, <span class='review-span highlight' data-aligned-summaries='1'>very clean</span> and <span class='review-span highlight' data-aligned-summaries='1'>both had ensuite bathrooms</span>. <span class='review-span highlight' data-aligned-summaries='4'>The continental buffet breakfast</span>, it <span class='review-span highlight' data-aligned-summaries='4'>was good, adequate</span> for the morning start. Most importantly the place was very clean, something you can't take for granted. <span class='review-span highlight' data-aligned-summaries='5'>Great location</span>, <span class='review-span highlight' data-aligned-summaries='5'>very close to</span> Paddington station and <span class='review-span highlight' data-aligned-summaries='5'>Lancaster gate which made it easy for us to go shopping and sightseeing</span>. There are also a lot of restaurants and pubs in the neighbourhood, so you have a lot of choice. All in All, hotel is good value for money and we will be back.</div><div class='text-box'>For real? I stayed here about 7 years ago and it was <span class='review-span highlight' data-aligned-summaries='0'>the worst hotel ever</span>, like something out of a movie. There was a cockroach in our room (and I see by other reviews here that they still have this problem). They blamed us for letting in cockroaches by leaving the window open (how else are we supposed to get fresh air in this hell hole). <span class='review-span highlight' data-aligned-summaries='1'>The room was tight and the bathroom even tighter</span>. There are no elevators and the stairways are narrow. And the towels are not exactly the cleanest. <span class='review-span highlight' data-aligned-summaries='4'>Skip the breakfast buffet</span>, it's down in the claustophobic basement <span class='review-span highlight' data-aligned-summaries='4'>and they're cheap</span>. Actually, please skip this hotel altogether.</div><div class='text-box'>It was our first time in Beverley hotel. Small hotel with very friendly staff and good value for money. <span class='review-span highlight' data-aligned-summaries='5'>The location is very good</span>, <span class='review-span highlight' data-aligned-summaries='5'>so close to the station and very good connection with the rest of the city</span> as well as Heathrow airport. <span class='review-span highlight' data-aligned-summaries='1'>It was all great, clean rooms, clean shower</span> , <span class='review-span highlight' data-aligned-summaries='4'>nice breakfast</span> but best of all - the staff. Just after a couple of stays they remembered my name and they always had great advice on how to get to places I needed and were more than happy to print me a map whenever I asked for one. We enjoyed our stay and we will return soon.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='5'>The hotel is just 5 minutes walk from Paddington station</span>, so it was great for us getting in from the airport. As soon as we got there we liked the feel of this small hotel. <span class='review-span highlight' data-aligned-summaries='1 3'>The room was</span>n<span class='review-span highlight' data-aligned-summaries='1'>'t large but it was really nice,</span> <span class='review-span highlight' data-aligned-summaries='1 3'>very clean</span> and <span class='review-span highlight' data-aligned-summaries='2'>the bed supercomfortable</span>. We have stayed in London before <span class='review-span highlight' data-aligned-summaries='0'>always choosing 3 star hotels and the Beverley is probably the nicest</span> we have stayed in. <span class='review-span highlight' data-aligned-summaries='4'>Also Breakfast was more than we expected with fresh boiled eggs, cheese and ham, very nice</span>! We stayed over the weekend for two nights and we will go back on our next visit.</div><div class='text-box'>I was very surprised, given the reviews I had read. <span class='review-span highlight' data-aligned-summaries='5'>This hotel is very well situated</span>, close to Paddington station and to many restaurants shops and bars. We arrived at the hotel a bit early and the friendly receptionist let us store our luggage. <span class='review-span highlight' data-aligned-summaries='5'>Our room was located on the front side of the hotel</span> with a huge window almost 3m high <span class='review-span highlight' data-aligned-summaries='5'>overlooking at Sussex gardens</span>, <span class='review-span highlight' data-aligned-summaries='3'>the room and</span> <span class='review-span highlight' data-aligned-summaries='1 3'>bathroom were clean</span>. <span class='review-span highlight' data-aligned-summaries='4'>The breakfast was very good for continental breakfast</span>. There was a good variety of items to choose from and everything was fresh. We definitely return back in our next trip to London</div><div class='text-box'>The hotel is clean and the staff are almost friendly. <span class='review-span highlight' data-aligned-summaries='5'>Location is good but there's better</span>. <span class='review-span highlight' data-aligned-summaries='1'>Rooms are very small</span> (thank God I'm not tall or else I would've suffered). <span class='review-span highlight' data-aligned-summaries='3 4'>Breakfast is simply boiled eggs</span>,<span class='review-span highlight' data-aligned-summaries='4'> cheese, jam, cereals, juice,</span> <span class='review-span highlight' data-aligned-summaries='3 4'>coffee and tea</span>. Would recommend it for young people that just need a clean place to sleep in and for young couples who need to save money for other more useful purposes. London is AMAZING.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='5'>The hotel is situated in a very handy area</span> , near 2 tube stations and near Paddington train station. <span class='review-span highlight' data-aligned-summaries='1 3'>We were impressed with the cleanliness of the</span> <span class='review-span highlight' data-aligned-summaries='3'>room and the</span> <span class='review-span highlight' data-aligned-summaries='1 3'>bathroom</span>. The man at the reception was very kind and changed our room on a lower floor when we requested. The breakfast staff always willing to serve with a nice smile. We have enjoyed our stay , and we will return with the family.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>I booked The Beverley City hotel</span> as a last minute act of panic. I <span class='review-span highlight' data-aligned-summaries='0'>wish I had chosen any other London hotel</span>. <span class='review-span highlight' data-aligned-summaries='1'>The room was tiny</span>, had a bad smell, <span class='review-span highlight' data-aligned-summaries='1 3'>the bathroom was filthy</span> (and unhealthy, I am sure), and <span class='review-span highlight' data-aligned-summaries='4'>the breakfast was poor</span>. <span class='review-span highlight' data-aligned-summaries='4'>They ran out of bread</span> 20 minutes before the breakfast ended, and provided no alternatives - <span class='review-span highlight' data-aligned-summaries='4'>there was nothing else to eat</span>.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Beverley house hotel is the equivalent of a two star property.</span> <span id="1" class="summary-sentence">The ensuite room was average with a small but clean bathroom.</span> <span id="2" class="summary-sentence">The bed was nice and comfortable.</span> <span id="3" class="summary-sentence">However no tea or coffee making facilities and it is a shame the room was not as clean as the bathroom!</span> <span id="4" class="summary-sentence">The breakfast is the worst breakfast i have ever had in any B and B or hotel-watered down cordial orange juice and the choice of three cereals- all of which were very untasty.</span> <span id="5" class="summary-sentence">The hotel is in a pleasant location, near to Lancater Gate tube for easy accessibility around London.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

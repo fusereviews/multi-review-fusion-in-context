@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>Well the <span class='review-span highlight' data-aligned-summaries='1'>atmosphere is excellent</span> - especially in CU. The <span class='review-span highlight' data-aligned-summaries='1'>staff was all very friendly</span> and attentive. Kudos to them! The <span class='review-span highlight' data-aligned-summaries='1'>food was a bit better than average</span> but nothing to knock your socks off. A good place to go with family or friends.They have a cheese sauce that is a bit spicy but tasty!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1 2'>Great location and atmosphere</span>. <span class='review-span highlight' data-aligned-summaries='0 2'>Authentic and Mexican American fare</span> that was served in generous portions and <span class='review-span highlight' data-aligned-summaries='1'>DELICIOUS</span>! The Guadalajara burrito was simple and <span class='review-span highlight' data-aligned-summaries='1'>SO flavorful</span>. Hubs had Molcalambres and ranked them near the top of his fajita list. Not hoiity toity; not trying to be hip and trendy like Maize. Will come back whenever in town.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 2'>Love this place</span>! <span class='review-span highlight' data-aligned-summaries='1'>The waitstaff is great and friendly, they are very quick</span> but also allow you to relax and not feel rushed. I go here in the summer with some friends and <span class='review-span highlight' data-aligned-summaries='0 1'>we just sit on the patio (great outdoor seating</span>)<span class='review-span highlight' data-aligned-summaries='0'></span> and drink margaritas and enjoy the complimentary fresh chips and salsa. <span class='review-span highlight' data-aligned-summaries='1 2'>Also great food</span>!</div><div class='text-box'>They took a while to bring the food, my son ordered a chicken quesadilla that was very soggy and tasteless, <span class='review-span highlight' data-aligned-summaries='1'>the</span> rest of the <span class='review-span highlight' data-aligned-summaries='1'>food was edible but far from good</span>, place was ok, it's far from the best but <span class='review-span highlight' data-aligned-summaries='2'>if you hungry and desperate you can</span> certainly <span class='review-span highlight' data-aligned-summaries='2'>go</span> eat <span class='review-span highlight' data-aligned-summaries='2'>there</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1 2'>Good food</span> <span class='review-span highlight' data-aligned-summaries='2'>at a great price</span>, the restaurant has become <span class='review-span highlight' data-aligned-summaries='2'>a great lunch destination</span>. <span class='review-span highlight' data-aligned-summaries='0'>The food is</span> <span class='review-span highlight' data-aligned-summaries='0 1'>basic American-Mexican combinations</span> (burrito, enchilada, tamale for example) <span class='review-span highlight' data-aligned-summaries='1'>with very quick service</span>. Honestly have not been to a sit down restaurant with such speedy service during the lunch rush.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1'>Their food is decent</span>, but the reason I'm writing this review is their healthy margarita. It's incredible and I'm not even usually a margarita fan! My husband ordered the regular margarita and we both agreed that the healthy was much better than the regular margarita. Go try it!</div><div class='text-box'>The first time I went here, I ordered a taco salad with beef, and the beef was pink. Not brown on the outside and pink on the inside, pink pink pink. The second time I went, <span class='review-span highlight' data-aligned-summaries='1'>my friend and I had the</span> same <span class='review-span highlight' data-aligned-summaries='1'>burrito</span> combination platter <span class='review-span highlight' data-aligned-summaries='1'>and both of us got sick</span> the next day.</div><div class='text-box'>Went here with a group to drink some margaritas and eat some chips and salsa. <span class='review-span highlight' data-aligned-summaries='1'>Wonderful</span> service <span class='review-span highlight' data-aligned-summaries='1'>and friendly staff</span>. I ordered a grande raspberry margarita and it was nice and strong. Chips were hot and delicious and salsa was good (wish it was spicier but that's a personal preference)</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Decent place for Mexican dishes featuring a patio for outdoor relaxation.</span> <span id="1" class="summary-sentence">Food quality is average, great atmosphere and location, friendly and courteous staff and quick service.</span> <span id="2" class="summary-sentence">Slightly recommended place.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

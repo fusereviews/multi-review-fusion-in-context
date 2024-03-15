@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2 4'>They mess up your order</span> and <span class='review-span highlight' data-aligned-summaries='3'>make you wait 15 min literally</span> I'm not over exaggerating 15 min then when you go into get your money back mind you I didn't ask to keep the food I just wanted my money <span class='review-span highlight' data-aligned-summaries='2 4'>they don't refund</span> save yourself the money don't go to this KFC.</div><div class='text-box'>We had takeout from KFC tonight. <span class='review-span highlight' data-aligned-summaries='0'>Horrible - chicken greasy and cold</span>. <span class='review-span highlight' data-aligned-summaries='2'>For what you pay it is a rip off</span>! The original recipe use to be good - what happened - Colonel Sanders must be rolling over in his grave.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='4'>Usually they screw up the order and then give attitude</span> when you ask them to fix it. We are in the building right now and it's cooler outside, no A / C, freakin hot. Don't seem like they care, not site we'll be back to this one</div><div class='text-box'>Zero star all the way. <span class='review-span highlight' data-aligned-summaries='0'>I don't like kfc anymore</span> and went vegetarian after going to this chain. <span class='review-span highlight' data-aligned-summaries='0'>Chicken doesn't taste as good</span> like 20 or so years ago, <span class='review-span highlight' data-aligned-summaries='4'>the management doesn't believe in good quality and even good service</span>. I rather go to Popeyes and <span class='review-span highlight' data-aligned-summaries='2'>not waste my money to this chain</span>.</div><div class='text-box'>We have been moving all week and the KFC was right bear the new house do we thought sure it would be easy and good. Boy were we wrong. <span class='review-span highlight' data-aligned-summaries='2'>The food was terrible</span>. <span class='review-span highlight' data-aligned-summaries='0'>My green beans were sour rotten</span> and my sons <span class='review-span highlight' data-aligned-summaries='0'>strips tasted like they had a chemical in them</span>. Not good. Very disappointing</div><div class='text-box'>Stop. Just go to Frys and purchase their chicken. <span class='review-span highlight' data-aligned-summaries='2'>You are making a mistake eating here</span>. <span class='review-span highlight' data-aligned-summaries='3'>This location is super slow</span>. Never trust a restaurant that cannot turn over food via consumption quickly. Last amount of advice... go elsewhere.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 2'>Over priced chicken that is just ok</span> I remember when the cornel owned KFC back in the late 50s and 60s it was so much better than now. <span class='review-span highlight' data-aligned-summaries='1'>The chicken pieces</span> look like they came from a pigeon they <span class='review-span highlight' data-aligned-summaries='1'>were so small</span>! Go to Albertsons about a mile away 8 large pieces $6.99</div><div class='text-box'>Stop by for a <span class='review-span highlight' data-aligned-summaries='0'>chicken</span> little. <span class='review-span highlight' data-aligned-summaries='1'>Boy</span> <span class='review-span highlight' data-aligned-summaries='0 1'>was</span> <span class='review-span highlight' data-aligned-summaries='1'>it</span> <span class='review-span highlight' data-aligned-summaries='0 1'>little</span>. More like a very expensive bun with mayo. <span class='review-span highlight' data-aligned-summaries='0'>No quality controls</span>, the cook couldn't even fix it correctly. Probably a one off, but definitely <span class='review-span highlight' data-aligned-summaries='2'>not up to any standards</span>.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The chicken is terrible and so is the rest of the food.</span> <span id="1" class="summary-sentence">The servings are also incredibly small.</span> <span id="2" class="summary-sentence">The food is not worth the money.</span> <span id="3" class="summary-sentence">Also, the cooks are slow so expect to wait a long time on line.</span> <span id="4" class="summary-sentence">The manager does nothing to resolve these issues.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>We stayed here for four night at the end of August. <span class='review-span highlight' data-aligned-summaries='0 1 4'>The rooms were</span> <span class='review-span highlight' data-aligned-summaries='0 4'>good</span>, and <span class='review-span highlight' data-aligned-summaries='1'>cleaned every day to a high standard</span>. <span class='review-span highlight' data-aligned-summaries='0'>The staff were nice</span>. <span class='review-span highlight' data-aligned-summaries='3'>The lift</span> to get up to the hotel was small and sometimes took ages to come and it <span class='review-span highlight' data-aligned-summaries='3'>closed at midnight in which case you'd have to walk up a flight of outdoor stairs</span>, not great late at night and in the heat! <span class='review-span highlight' data-aligned-summaries='2'>What was</span> <span class='review-span highlight' data-aligned-summaries='0 2 4'>great</span> <span class='review-span highlight' data-aligned-summaries='2'>about this hotel was the</span> <span class='review-span highlight' data-aligned-summaries='0 2 4'>location</span>. <span class='review-span highlight' data-aligned-summaries='2'>Our bus from the airport dropped us straight across the road and you are on top of the train and tube station</span> so anywhere is accessible from here. Some lovely cafes, shops and resturants in the little streets surrounding it which definately deserve a try.</div><div class='text-box'>It was quite simple really! We arrived by air and took the main Airport Bus straight to the front of the hotel. <span class='review-span highlight' data-aligned-summaries='1'>The hotel was clean</span>, in great condition, cool and the rooms comfortable and modern. <span class='review-span highlight' data-aligned-summaries='2'>The location was excellent as it was above the main train station with metro routes</span> available right throughout the city. The hotel had its own lift from the station, which was open till 11pm. Once this was shut then it was quite easy to climb the well-lit stairs on the side of the hotel. I am sure there are more quaint hotels with a central location but this one was excellent quality, price and with Taxi's and metro trains was accessible and a great hideaway!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2 4'>The hotel is</span> <span class='review-span highlight' data-aligned-summaries='0 4'>a very decent hotel</span> <span class='review-span highlight' data-aligned-summaries='4'>for the frequent business traveller</span> as it is <span class='review-span highlight' data-aligned-summaries='2'>located right above the stacio sants or the sants station</span> which connects you to most part of barcelona and also has acess to a food court and a taxi stand <span class='review-span highlight' data-aligned-summaries='2'>and the bus stops</span>. very easily accessible from every part of the city and just a 25 minute drive from the airport. <span class='review-span highlight' data-aligned-summaries='0 4'>the staff here is extremely co-operative</span> and speak comprehendable and gramatically correct english which could be a problem in other parts of the city. so it becomes very easy to communicate with the staff.also very close to the olympic stadium and the FC Barcelona stadium which is one of the major attractions of barcelona. <span class='review-span highlight' data-aligned-summaries='1'>the rooms are spacious</span> and comfortable.</div><div class='text-box'>We stayed at the Barcelo Sants for 4 nights in March 2005 and <span class='review-span highlight' data-aligned-summaries='0 4'>found the hotel to live up to our expectations</span>. <span class='review-span highlight' data-aligned-summaries='2'>The location is great as it is located right above the train, bus and metro stations</span>. Service to the airport, the rest of Spain (and even France) and elsewhere in the city are fast and practical. The hotel has its own entrance directly in the station. Also, for those who do not want to eat at the hotel restaurant, the station has several restaurants which are not expensive. <span class='review-span highlight' data-aligned-summaries='1'>The room was big enough, clean</span>, and <span class='review-span highlight' data-aligned-summaries='0'>the service impeccable</span>. <span class='review-span highlight' data-aligned-summaries='4'>We would return</span>.</div><div class='text-box'>Went for this hotel after reading reviews on this site, and was not disapointed. <span class='review-span highlight' data-aligned-summaries='2'>The hotel is easy to get to from the airport</span> as <span class='review-span highlight' data-aligned-summaries='2'>the train goes straight from the airport to the train station below the hotel</span>. <span class='review-span highlight' data-aligned-summaries='2'>The station also has</span> many places to eat and <span class='review-span highlight' data-aligned-summaries='2'>easy access to the metro and the tourist bus</span>. <span class='review-span highlight' data-aligned-summaries='0'>The staff were friendly and were able to get us a reservation at the city's top mexican restaurant</span> at short notice. Rooms were nice and bright with large windows and we had a good view of the city below. <span class='review-span highlight' data-aligned-summaries='0 4'>Would recommend this hotel to anyone going to Barcelona.</span></div><div class='text-box'>We stayed at the Sants in January and thought <span class='review-span highlight' data-aligned-summaries='4'>the location and price was wonderful</span>. <span class='review-span highlight' data-aligned-summaries='0'>The staff were very helpful</span> with most speaking english. <span class='review-span highlight' data-aligned-summaries='2'>The train took us right from the airport to the hotel and the metro connects you to the rest of the city right under the hotel</span>. There is construction going on but we spent most of our time exploring the rest of the city. For the price it was a great deal.</div><div class='text-box'>The thing about this hotel is its convenience. The train from the airport goes directly to Sants station and the <span class='review-span highlight' data-aligned-summaries='2'>hotel has an entrance inside the station</span>. It is only <span class='review-span highlight' data-aligned-summaries='2'>one stop on the metro to the Ramblas</span>. The hotel sits on top of the station but you are totally unaware of noise from the trains. The rooms are functional, modern and comfortable. We were well pleased with our stay there.</div><div class='text-box'>very well done up rooms and hotel. <span class='review-span highlight' data-aligned-summaries='1'>It was impressive, that my friend who stayed somewhere else in the city, shifted to Barcelo sants due to the facility of the room</span> and the convenience of the hotel. felt comfortable in all ways and the team at the reception was informative at all times. <span class='review-span highlight' data-aligned-summaries='0'>I enjoyed being at the Barcelo Sants</span>.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">I found the hotel to be great - the staff were friendly and willing to accomodate requests such as early check in.</span> <span id="1" class="summary-sentence">The rooms were spacious and very clean, the lobby area was impressive and the facilities in the hotel were of good standard.</span> <span id="2" class="summary-sentence">The location of the hotel was great for accessing metro and trains as well as being on the red route of the hop on hop off tour bus.</span> <span id="3" class="summary-sentence">The only down side of the hotel was the entrance at night when the street easy access was closed - to get to the front of the hotel meant climbing lots of steps and walking through a deserted car park.</span> <span id="4" class="summary-sentence">However, I would recommend the hotel and return to it.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>oh my god what a dump ! this poor excuse for a hotel has got to take the prize for the <span class='review-span highlight' data-aligned-summaries='0 1'>worst hotel in the world</span>. <span class='review-span highlight' data-aligned-summaries='2'>The room</span> that they allocated to my husband and I <span class='review-span highlight' data-aligned-summaries='2'>was</span> a <span class='review-span highlight' data-aligned-summaries='2'>tiny</span> and grotty with 2 single beds squeezed into it (even though I had pacifficaly asked for a double bed when I booked) The carpet as other people had mentioned in their reveiw was <span class='review-span highlight' data-aligned-summaries='0'>FILTHY</span>. <span class='review-span highlight' data-aligned-summaries='6'>We</span> also <span class='review-span highlight' data-aligned-summaries='6'>found the enterance through the restaurant grotty</span> and a bit intimidating. Hotel staff were also unhelpful and miserable. <span class='review-span highlight' data-aligned-summaries='8'>The only good point about this place was it's location</span> it is in an ideal place to get to see amsterdam. As for the hotel itself <span class='review-span highlight' data-aligned-summaries='1 8'>I would never stay there again</span> in a million years not <span class='review-span highlight' data-aligned-summaries='1 8'>even if I was paid</span>!<span class='review-span highlight' data-aligned-summaries='1'></span></div><div class='text-box'>Beware-<span class='review-span highlight' data-aligned-summaries='0'>this hotel is a dump</span>! This Hotel is a <span class='review-span highlight' data-aligned-summaries='8'>1st class dump situated on Damrak</span>, which is a very busy street day and night. It is run by a rather dubious lot who will do anything and employ any trick to get your money. The rooms are delapidated , damaged and scruffy. Lights do not work and the TV has little by way of reception. <span class='review-span highlight' data-aligned-summaries='5'>The rooms overlooking Damrak are</span> <span class='review-span highlight' data-aligned-summaries='0 1 5 8'>impossible to get a decent nights sleep in</span> <span class='review-span highlight' data-aligned-summaries='5'>as none have double glassing</span>, in fact paper had been stuffed in the gaps by previous occupants.All in all only it is a very bad place to stay. So if your going to Amsterdam the motto is <span class='review-span highlight' data-aligned-summaries='1'>BOOK EARLY in a nice hotel which you will get for the price that this dump charges</span>.</div><div class='text-box'>Rat running in the room in the night <span class='review-span highlight' data-aligned-summaries='1 8'>This is the worst hotel I've ever experienced</span>. <span class='review-span highlight' data-aligned-summaries='1 8'>I didn't get what I've paid for</span>. <span class='review-span highlight' data-aligned-summaries='0'>Room is poorly furnished</span>. <span class='review-span highlight' data-aligned-summaries='0 2'>Bathroom disgustingly smelled</span>. TV remained out of use although I've informed the front desk to change. In the night it was even much awful, a rat was running in the room. <span class='review-span highlight' data-aligned-summaries='5'>Noisy construnction lasted until midnight</span> which made it impossible to sleep. Supply for breakfast was poor too. Waitresses were in rude manner. For the first time, I was asked by the hotel to pay the room charge as soon as I've checked in.Hard to believe it names itself a 3-star hotel.My recommendation: DO NOT CHOOSE this HOTEL!</div><div class='text-box'>Not for Us! Stayed at this hotel after a friend booked it for us.Was very wary after reading the reviews,and it was everything we expected apart from the <span class='review-span highlight' data-aligned-summaries='4'>bedding was very clean</span> and the bed was comfy.<span class='review-span highlight' data-aligned-summaries='2'>The room was very tiny</span> and it is <span class='review-span highlight' data-aligned-summaries='0'>a grotty dirty hotel</span>.The staff were lovely, but that could have been because we were part of a large group so they had made a lot of money from us.We wanted to move to another hotel after the first night but didnt want to fall out with the others so we reluctantly stayed.We will never return to this hotel and <span class='review-span highlight' data-aligned-summaries='1 8'>would gladly have payed for another hotel just to escape</span> the depressing excuse of a room.<span class='review-span highlight' data-aligned-summaries='0 1 8'>Would not recommend to anyone</span>!</div><div class='text-box'>Dark, dirty, cramped.awful! <span class='review-span highlight' data-aligned-summaries='0'>This hotel really is terrible</span>. <span class='review-span highlight' data-aligned-summaries='2'>The room was tiny</span> and cramped, there was no wardrobe, and one electricity socket situated behind the chest of drawers, so every time we needed to use it we had to move the chest of drawers out of the way! We were put at the very top of the building, with one window facing a brick wall. <span class='review-span highlight' data-aligned-summaries='2'>The shower was absolutely tiny with a low sloped ceiling so you had to crouch to use it</span>. <span class='review-span highlight' data-aligned-summaries='8'>Only good thing is the location</span>, ideal on the Damrak. <span class='review-span highlight' data-aligned-summaries='0 1 8'>For the price, it really is not worth it</span>.<span class='review-span highlight' data-aligned-summaries='1'></span></div><div class='text-box'>Seriously misrepresented in the photos We booked this hotel through Easyjet before we discovered tripadvisor-what a mistake. The pictures are probably from 2 rooms that we happened to walk past accidentally. Our room was dirty, freezing and had no redeeming qualities. We had no problems at the reception, but it always seemed someone new was arguing with them when we walked past. <span class='review-span highlight' data-aligned-summaries='1'>Don't make the mistake we did, do the research</span>. <span class='review-span highlight' data-aligned-summaries='8'>This was a good location</span>, but that's about it. I<span class='review-span highlight' data-aligned-summaries='8'>'m sure there are other hotels for better prices in the same location</span>.</div><div class='text-box'>Staff very cheeky we booked this hotel as our other hotel had double booked us. <span class='review-span highlight' data-aligned-summaries='0 1 2'>The rooms were stinking</span>. The carpets were filthy, the smell of the rooms was disgusting, curtains were hanging of the rail 's + were filthy, says there is safe in your room no safe, <span class='review-span highlight' data-aligned-summaries='0'>the breakfast was even worse</span>, the staff were very unfriendly + cheeky. we payed 50 a night each to stay in this dirty hotel it's not worth 10 a nite each. <span class='review-span highlight' data-aligned-summaries='1 8'>dont stay here it's not worth the money</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1'>dont waste your money</span> <span class='review-span highlight' data-aligned-summaries='8'>the only thing this hotel has going for it is its location</span> our pre paid room was down graded and nothing was done to fix the problem or to refund our money,it was dirty and our sheets weren't changed all week,the service was non existent it was even a major task just to get into the room half the time,oh and not that it bothered us much but if you want any peace anytime of day or night forget it</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Absolutely Terrible.</span> <span id="1" class="summary-sentence">Do not stay at this hotel, no matter how cheap it may be!</span> <span id="2" class="summary-sentence">The rooms are tiny, smelly and covered in damp, the shower wasn't much better, in fact we couldn't even bear to use it!</span> <span id="3" class="summary-sentence">Also we had to put the duvet on the bed ourselves and</span> <span id="4" class="summary-sentence">when we done so we discovered it was covered in stains, disgusting.</span> <span id="5" class="summary-sentence">There is constant noise outside.</span> <span id="6" class="summary-sentence">The hotel reception is in the middle of a restaurant</span> <span id="7" class="summary-sentence">and we had to walk through the restaurant dragging out bags bumping into the diners on the way.</span> <span id="8" class="summary-sentence">The only good thing about the hotel is the location but that would not entice me to stay there again.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

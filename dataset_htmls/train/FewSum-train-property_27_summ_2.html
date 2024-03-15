@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>Sara is amazing. <span class='review-span highlight' data-aligned-summaries='2'>She has been doing my eyebrows</span> for over two years and <span class='review-span highlight' data-aligned-summaries='0 2'>her work is the BEST</span>! I don't know how she does it, but she makes magic happen with my brows! Go see her!!!!</div><div class='text-box'>Excellent service, friendly staff and very <span class='review-span highlight' data-aligned-summaries='1'>clean</span> / <span class='review-span highlight' data-aligned-summaries='1'>peaceful environment</span>. I'm definitely not letting anyone else touch my eyebrows ever again. <span class='review-span highlight' data-aligned-summaries='3'>Will be trying</span> their facial and <span class='review-span highlight' data-aligned-summaries='3'>henna service</span> soon and will let you all know how it goes, but I have a feeling it will be just as excellent. Thank you Sara's Threadding for a great job</div><div class='text-box'>She's amazing. Found her on Yelp and I'm never letting anyone else touch my eyebrows ever again and I will follow her wherever she goes!!! <span class='review-span highlight' data-aligned-summaries='0'>She has a great new office</span> and <span class='review-span highlight' data-aligned-summaries='0'>she's very professional</span> and polite and accommodating! And best of all <span class='review-span highlight' data-aligned-summaries='2'>she knows the perfect shape for my brows</span>!!</div><div class='text-box'>Tried Sara out for the first time this week, she was awesome! Super <span class='review-span highlight' data-aligned-summaries='4'>easy to book an appointment</span>. She <span class='review-span highlight' data-aligned-summaries='4'>gave a wonderful consultation</span>, you could tell <span class='review-span highlight' data-aligned-summaries='0'>she knew what she was doing and took her time</span>. <span class='review-span highlight' data-aligned-summaries='2'>She even offered to fill in my brows after</span> since <span class='review-span highlight' data-aligned-summaries='2'>she</span> removed the makeup to <span class='review-span highlight' data-aligned-summaries='2'>thread them</span>. I will be back for sure</div><div class='text-box'>I have been coming to Sara for 3 years and <span class='review-span highlight' data-aligned-summaries='0'>I love the services she provides</span> for me. She is honest professional and care how you look. She is the <span class='review-span highlight' data-aligned-summaries='2'>best stylist I have had to thread my eyebrows</span>... <span class='review-span highlight' data-aligned-summaries='0'>She now has her own business</span> and I'm very proud of her. It was hard finding her but I did Yayyyy</div><div class='text-box'>I have been coming to Sara since I was a freshman in high school, I am now a sophomore in college. I <span class='review-span highlight' data-aligned-summaries='0'>do not let any one touch my eyebrows except her</span>. <span class='review-span highlight' data-aligned-summaries='2'>She did my moms eyebrows (microblading)</span> and my mom loves them! 10 / 10 recommend</div><div class='text-box'>I have <span class='review-span highlight' data-aligned-summaries='0'>been going to Sara for YEARS now and I am always 100% satisfied</span>!! She is so kind, and her workplace is so cute and welcoming. I always recommend Sara to everyone I know when they tell me my <span class='review-span highlight' data-aligned-summaries='2'>eyebrows look good. It's thanks to her</span>!!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Sara is hands down AMAZING</span>! It's hard to find a good person who <span class='review-span highlight' data-aligned-summaries='0'>actually listens and does quality work</span>! <span class='review-span highlight' data-aligned-summaries='3'>She does wonders with</span> your brows & I just got her <span class='review-span highlight' data-aligned-summaries='3'>Henna</span> work done <span class='review-span highlight' data-aligned-summaries='3'>for my birthday</span> & 2 weeks later I'm still getting compliments left and right about your wonderful work!!! <span class='review-span highlight' data-aligned-summaries='2'>I will never let anyone else touch and thread my eyebrows</span>!</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This service provider recently opened a new business and is known for bein receptive to suggestions, and maintains a high level of quality of work.</span> <span id="1" class="summary-sentence">The facility is clean, organized, and peaceful.</span> <span id="2" class="summary-sentence">This facility offers services such as microblading, eyebrow threadind, and other misc.</span> <span id="3" class="summary-sentence">items such as Henna for special events.</span> <span id="4" class="summary-sentence">Book an appointment and receive a free consultation.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

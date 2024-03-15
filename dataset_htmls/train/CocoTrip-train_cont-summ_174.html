@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>We stayed for 2 nights at the Marmara on February. <span class='review-span highlight' data-aligned-summaries='0'>The hotel is at Taxim sq and the Bosphorus view rooms have a great</span> great <span class='review-span highlight' data-aligned-summaries='0'>view</span>. <span class='review-span highlight' data-aligned-summaries='2'>Rooms are nicely decorated, clean</span> and <span class='review-span highlight' data-aligned-summaries='2'>the service is excellent</span>. It does not have the luxury of a 5 star hotel.more of a 4 star i would say.but with a 6 star view. <span class='review-span highlight' data-aligned-summaries='5'>There is free high speed internet in the business centre, and free wifi also</span>.The position is ok but in istanbul due to the terrible traffic u never know how much time it will take to arrive anywhere. We had a dinner at the roof garden restaurant which has very nice views over the city and Bosphorus. Food was good as was the service. Generally this hotel is a good choice to explore istanbul and have a really pleasant stay.</div><div class='text-box'>We were lucky to be at this wonderful hotel as we had booked in at the very last minute. <span class='review-span highlight' data-aligned-summaries='0'>The location is perfect</span> - you are at the starting point of the ever exuberent Istiklal Street and the buzzing Taksim Square. The metro station is right in front of the hotel and all the transport options are easily available. The hotel is a delight to stay in - <span class='review-span highlight' data-aligned-summaries='2'>very comfortable rooms</span> of more than the avearge size in Istanbul hotels. The only issue I have is that the mattress was a bit too soft. <span class='review-span highlight' data-aligned-summaries='4'>The breakfast was good enough</span> by the European standards. The view from the rooms is great, on all 4 sides. Strongly recommended that should you wish to stay in the new Istanbul area, this is the hotel to be in.</div><div class='text-box'>Actually I stayed in Marmara hotel for 5 days, <span class='review-span highlight' data-aligned-summaries='2'>the receptions are not bad but I wait more than 20 minutes</span> waiting until my room gets ready. The hotel view is great, I took besphour view but next time if I returned back to this hotel I will take a golden horn view. see pictures <span class='review-span highlight' data-aligned-summaries='0'>the location is great every thing around you</span>. also <span class='review-span highlight' data-aligned-summaries='4'>the breakfast is wonderful and rich</span>. one of the disadvantages. that this hotel is really busy if you set in the lobby you will feel you are in the mall. sometimes <span class='review-span highlight' data-aligned-summaries='2'>in</span> the breakfast <span class='review-span highlight' data-aligned-summaries='2'>the restaurant</span> is so busy. but <span class='review-span highlight' data-aligned-summaries='2'>the service are fast</span> and can speak English and this is great advantage in city like Istanbul</div><div class='text-box'>At first when you walk in you think you are in Vegas. The lobby is very modern is always bustling with activity. <span class='review-span highlight' data-aligned-summaries='2'>The staff were very helpful and nice</span>. The upstairs bar is a great place to get drinks because of the amazing views of the city. The rooms were adequate, they weren't huge. <span class='review-span highlight' data-aligned-summaries='4'>Not sure I would consider it a 5 star hotel</span> but it was nice. The only issue I had was the amount of smoke that was in our hallway. <span class='review-span highlight' data-aligned-summaries='3'>The rooms are listed as no smoking but I could smell smoke</span> in our hallway and it eventually seeped into our room as well. All in all, <span class='review-span highlight' data-aligned-summaries='0'>great location with a lot going on around</span>.</div><div class='text-box'>This is a real 5* <span class='review-span highlight' data-aligned-summaries='0'>hotel in the heart of Taxsim Square</span> with <span class='review-span highlight' data-aligned-summaries='0'>Istiklal Street just around the corner</span> - so it is very convenient for lots of local attractions, shopping etc. The <span class='review-span highlight' data-aligned-summaries='4'>hotel has</span> lots to offer - from <span class='review-span highlight' data-aligned-summaries='4'>fine dining</span> (the panoramic restaurant must have the best views of Istannbul in the whole city) and the swimming pool and sunbathing area offering fantasctic views across the Bosphorus. The <span class='review-span highlight' data-aligned-summaries='2'>staff are</span> extremely helpful and <span class='review-span highlight' data-aligned-summaries='2'>friendly</span> and nothing is too much trouble. <span class='review-span highlight' data-aligned-summaries='2'>Rooms are</span> extremely <span class='review-span highlight' data-aligned-summaries='2'>clean</span> and tidy with <span class='review-span highlight' data-aligned-summaries='5'>free wi-fi provided in</span> all <span class='review-span highlight' data-aligned-summaries='5'>rooms</span>. Overall a very nice experience and a hotel which we are sure to return to on our next visit to Istanbul</div><div class='text-box'>I have been several time in this hotel both for business and turism. The hotel is not new but the quality is still high. <span class='review-span highlight' data-aligned-summaries='0'>The location is just in the center of Istanbul</span> and to go to historical part you can use the metro or do a long but nice walk in the city. The shopping area is very close. The room are nice and many of them are <span class='review-span highlight' data-aligned-summaries='0'>with a great view of the the sea</span>. <span class='review-span highlight' data-aligned-summaries='4'>The breakfast is very rich</span>, <span class='review-span highlight' data-aligned-summaries='2'>the service is good and the staff very efficient</span>.</div><div class='text-box'>We really enjoyed our stay in Marmara Hotel. The rooms are nice designed and big. The view from the rooms and especially from the roof (with the pool) is fabulous. We had always a place by the pool to relax after a day in the city. <span class='review-span highlight' data-aligned-summaries='0'>The location is perfect</span>, the shopping area is a few minutes away and <span class='review-span highlight' data-aligned-summaries='1'>there are</span> also <span class='review-span highlight' data-aligned-summaries='1'>a lot of different restaurants</span> and bars <span class='review-span highlight' data-aligned-summaries='1'>around the hotel</span>. <span class='review-span highlight' data-aligned-summaries='2'>The receptionist were very friendly</span> and helpful.</div><div class='text-box'>My husband and I stayed in Marmara Istanbul hotel in Taksim. We were in the 14th floor, <span class='review-span highlight' data-aligned-summaries='0'>view to Bosphorous</span>. The View was really wonderful. <span class='review-span highlight' data-aligned-summaries='2'>The room very clean</span>. The service just excellent. <span class='review-span highlight' data-aligned-summaries='4'>The breakfast ( lots of varieties) and really tasty</span>. <span class='review-span highlight' data-aligned-summaries='2'>The staff of the hotel, very polite, friendly and cooperative</span>. We enjoyed our stayed indeed in this hotel.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The hotel has really great location; the metro is only 2 minutes from the hotel, the Istiklal Street only 2 minutes from the hotel.</span> <span id="1" class="summary-sentence">There are a lot of cafes around the hotel.</span> <span id="2" class="summary-sentence">The service in the Hotel is very friendly, rooms are clean, comfortable and cosy.</span> <span id="3" class="summary-sentence">If you need non-smoking room you just need to tell this to the reception upon your check in.</span> <span id="4" class="summary-sentence">The breakfast is very nice but this is not 5-star hotel breakfast.</span> <span id="5" class="summary-sentence">There is Free Wi Fi internet in the rooms.</span> <span id="6" class="summary-sentence">The luggage delivery is very poor.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

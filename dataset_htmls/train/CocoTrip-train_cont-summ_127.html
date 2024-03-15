@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>We stayed at the Waldorf</span> 3rd - 7th July 2005. We were given a very large corner room on the 14th floor and it was just what we'd expected of the Waldorf. The decor in the room was tasteful and in keeping with the rest of the hotel (the rest of the hotel being very plush from what we saw!) and <span class='review-span highlight' data-aligned-summaries='1'>the bed</span>, although not the biggest, <span class='review-span highlight' data-aligned-summaries='1'>was the most comfy we had ever stayed in</span>! On our first night they also bought us a bottle of champagne and strawberrys dipped in chocolate because we were on our honeymoon! You can't beat the location of the hotel either, it's in walking distance to just about everything. <span class='review-span highlight' data-aligned-summaries='0'>Overall an extremely pleasant stay</span> and we would definitely recommend it to others.</div><div class='text-box'>This is the second time we've stayed <span class='review-span highlight' data-aligned-summaries='0'>at the Waldorf</span>, the first time we were upgraded to a fantastic suite, this time <span class='review-span highlight' data-aligned-summaries='0'>we were given the smallest hotel room I've ever seen, for three of us</span>! We asked to move and <span class='review-span highlight' data-aligned-summaries='1'>the room we were given</span> was certainly larger but <span class='review-span highlight' data-aligned-summaries='1'>with peeling wallpaper, ripped cushions</span> on the furniture <span class='review-span highlight' data-aligned-summaries='1'>and a very unusual smell</span>. We had originally booked for four nights but checked out the next day and went to the London Hotel on 54th and 7th which was a breath of fresh air. The Waldorf has great history and a rare presence, but if you need quality accommodation at a this price you can do a lot better. There is no wireless internet in the room and the wired service is expensive.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>This hotel is amazing. From the moment we checked in</span>, we felt like Royalty. We checked in early, and as expected our room wasn't ready. Rather than tell us to just check our bags, we were given access to the elegant lounge on the 26th floor to have a refreshment and a snack. It was amazing. We set out for the day after checking our bags only to return to the most incredible room I have ever seen-and I've seen a lot of rooms. We were upgraded to an Astor Suite! Basically a beautiful room with a sitting area. Not enough room to say all the good things about this facility, but if you ever have the chance-stay here. I can promise you won't regret it.</div><div class='text-box'>We were booked to stay here 9-13 November 2011 and it was amazing. <span class='review-span highlight' data-aligned-summaries='1'>Rooms were very</span> comfortable and <span class='review-span highlight' data-aligned-summaries='1'>clean</span> - as we would expect. <span class='review-span highlight' data-aligned-summaries='1'>The beds have to be the most comfortable we have ever experienced</span> in a hotel. Our room was by the lifts on the 15th floor (not that we heard them) and although we didn't have a view this did not spoil our stay. <span class='review-span highlight' data-aligned-summaries='0 2'>The service was superb</span> and the food choice for breakfast was unbeliveable. Prices were as expected for a hotel of this calibre although we didn't touch the mini bar as felt this was quite pricey! <span class='review-span highlight' data-aligned-summaries='0 3'>Well placed to explore this fabulous city</span> and we were very lucky with the weather. Would we stay here again? - you bet we would!</div><div class='text-box'>Our first time in New York City and we wanted it to be memorable. Our suite was elegant and everything we expected. Just walking into the hotel was a treat and we were thrilled when we were shown our room. The hotel lives up to its past glory and is a gem. <span class='review-span highlight' data-aligned-summaries='4'>We found the location to be</span> <span class='review-span highlight' data-aligned-summaries='3 4'>within walking distance to</span> <span class='review-span highlight' data-aligned-summaries='4'>may of our planned sightseeing spots</span> and <span class='review-span highlight' data-aligned-summaries='3'>Grand Central Station if we needed the subway</span>. Taxis were also always in que as well. We did not dine at the hotel as prices were said to be quite high. <span class='review-span highlight' data-aligned-summaries='0'>We were very happy we chose to stay at the Waldorf</span>, well worth the price for the experience of a bygone era of elegance.</div><div class='text-box'>We went to New York for the first time over Easter 2011 and <span class='review-span highlight' data-aligned-summaries='0'>stayed at the Waldorf Hotel. What an amazing hotel</span>. From the moment we arrived until the moment we left <span class='review-span highlight' data-aligned-summaries='2'>the service was impeccable and we were treated like royalty</span>. Our room was on the floor below the tower and we had spectacular views of the city. Room service was excellent and we also had a two meals at the Bull and Bear Restaurant which was very good. We are already planning our next trip to New York and the Waldorf!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>This was THE PERFECT hotel</span> for our girls trip! Centrally located, <span class='review-span highlight' data-aligned-summaries='4'>close to the museums, 5th avenue, and our Broadway shows</span> we were going to. <span class='review-span highlight' data-aligned-summaries='2'>The staff were very friendly and helpful</span>. <span class='review-span highlight' data-aligned-summaries='1'>The room</span> was large for New York standards and everything <span class='review-span highlight' data-aligned-summaries='1'>was clean</span>. We had 2 double beds which was perfect for all of us girls. I'm so glad we picked this place. We barely had to catch a cab or ride the subway the whole time we were there! So convenient!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>We</span> stayed here for my husbands birthday and both <span class='review-span highlight' data-aligned-summaries='0'>thoroughly enjoyed the whole experience</span>. From the moment we entered the hotel we couldn't fault a single thing. <span class='review-span highlight' data-aligned-summaries='2'>The staff were very helpful and pleasant</span> at all times, our room was perfect for us, and we were delighted when we were given a bottle of Champagne and chocolate coated strawberries to celebrate my husbands birthday. Would certainly recommend this hotel and we will be back again on our next visit.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">We found the Waldorf Astoria to be a very pleasant place to stay.</span> <span id="1" class="summary-sentence">The rooms are clean and the beds are very comfortable.</span> <span id="2" class="summary-sentence">The staff are friendly and helpful.</span> <span id="3" class="summary-sentence">The hotel is located on Park Avenue and Lexington, Its close to the subway which gives access to the whole of New York</span> <span id="4" class="summary-sentence">and it's easily accessible to Times Square and the other sites in New York.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

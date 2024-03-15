@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>I traveled here for business for the first time and was somewhat disappointed</span>. <span class='review-span highlight' data-aligned-summaries='1'>There is only wireless internet service in most of the rooms, which I can not use with my office laptop for security reasons. I had to switch rooms in order to have high speed internet access. and the internet service seemed to work only some of the time. The connection wasn't working consistently and nobody in the hotel could help. They offered a toll free number for the tech people at the DSL company. The front desk failed to provide me with my mini-bar key and the mirror in the bathroom had a huge crack in it</span>. <span class='review-span highlight' data-aligned-summaries='0'>There were many many tourists in the hotel, which isn't good for business travelers because they tend to make a lot of noise</span>. I don't think I'll travel here again unless I am a tourist.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>I stay at this hotel very frequently</span>, and every single time, <span class='review-span highlight' data-aligned-summaries='6'>my experience has been fabulous</span>. <span class='review-span highlight' data-aligned-summaries='1 3'>The hotel is</span> <span class='review-span highlight' data-aligned-summaries='1'>right in the downtown area and</span> <span class='review-span highlight' data-aligned-summaries='1 3'>5 min. walk from South Station</span> <span class='review-span highlight' data-aligned-summaries='1'>which really helps me</span> as I frequently take the train from/to New York. <span class='review-span highlight' data-aligned-summaries='4'>The rooms are really nice</span>, <span class='review-span highlight' data-aligned-summaries='1'>bathrooms and linen really clean</span> and above all else, the staff is some of the most friendly I have ever come across, rifht from the front desk to the concierge and housekeeping. Samir Boukhari, the front desk manager is delightfully courteous and has always gone out of his way to help and make my stay very comfortable every single time. Dianna, Aruna and Lexi at the front desk and Anthony with the concierge are wonderful as ever. <span class='review-span highlight' data-aligned-summaries='0'>I would stay here as long as business/pleasure keeps taking me into Boston</span>.</div><div class='text-box'>We stayed here for business. <span class='review-span highlight' data-aligned-summaries='2'>It was</span> in a great location, <span class='review-span highlight' data-aligned-summaries='2'>close to the theater district</span>, shopping, etc. <span class='review-span highlight' data-aligned-summaries='5'>There is only one restaurant and a very small bar in the hotel. It would have been nice to have additional options</span>. <span class='review-span highlight' data-aligned-summaries='3'>There were restaurants close by</span>, but again, it would have been nice to have had the convenience of additional dining places. <span class='review-span highlight' data-aligned-summaries='7'>The fitness center was so so</span>. <span class='review-span highlight' data-aligned-summaries='6'>I was very disappointed that there was a charge for internet</span>. When paying the price we paid per night, that should have been included in the room cost. Great concierges.</div><div class='text-box'>We stayed at the Hyatt Regency Boston for one night during Memorial Day weekend. <span class='review-span highlight' data-aligned-summaries='0'>The staff was great</span>, we were upgraded to a <span class='review-span highlight' data-aligned-summaries='4'>Terrace Suite</span> when we checked in. <span class='review-span highlight' data-aligned-summaries='1'>It</span> <span class='review-span highlight' data-aligned-summaries='1 4'>was beautiful and very clean</span>/<span class='review-span highlight' data-aligned-summaries='4'>pleasant</span>, although you can't actually go out onto the Terrace so that was bittersweet. We ordered room service which was excellent! <span class='review-span highlight' data-aligned-summaries='5'>The breakfast buffet was wonderful as well</span>! <span class='review-span highlight' data-aligned-summaries='0 1'>Great location to all of Boston</span>. Overall a great trip! <span class='review-span highlight' data-aligned-summaries='0'>Will return to this hotel whenever we are in Boston</span>.</div><div class='text-box'>When we booked this hotel we were worried because we saw more negative reviews than good at that time. I have no complainst.the staff was very helpful, the in house restaurant was excellent, <span class='review-span highlight' data-aligned-summaries='4'>the</span> <span class='review-span highlight' data-aligned-summaries='1 4'>rooms were very clean</span>. <span class='review-span highlight' data-aligned-summaries='2'>Very close to Macy's, TJ Maxx and Marshall's</span>. . <span class='review-span highlight' data-aligned-summaries='1'>.walking distance to all other sites</span> that we wanted to see. . . <span class='review-span highlight' data-aligned-summaries='6'>The only thing I can say negatively is paying for WIFI</span> but that is a problem with all hotels.</div><div class='text-box'>hi, i have read all the reviews and they are a bit mixed.We have <span class='review-span highlight' data-aligned-summaries='0'>just stayed there n i have to say it 's great</span>.<span class='review-span highlight' data-aligned-summaries='1'>Its a central location</span> - we hired a car and left it back 4 days early as parking is so expensive-unless u have to dont hire a car-otherwise park it in the place out in front of the hotel its the cheapest we checked them all i have the sore feet to prove it!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='6'>Disappointing when hotels such as this still charge for wifi access</span>. <span class='review-span highlight' data-aligned-summaries='5'>We didn't get notified verbally about the complimentary breakfast</span> either although it was no doubt in the fine print somewhere. <span class='review-span highlight' data-aligned-summaries='0 1 4'>Rooms were nice</span> <span class='review-span highlight' data-aligned-summaries='0 1'>and clean</span> although a little boring and the bed not that comfortable. <span class='review-span highlight' data-aligned-summaries='0 1'>Can't fault the location</span>, <span class='review-span highlight' data-aligned-summaries='1'>it was very easy to get anywhere with the subway station a few hundred metres away</span>.</div><div class='text-box'>Great location and greater service at this Hyatt in Boston. <span class='review-span highlight' data-aligned-summaries='1'>No more convient place to stay</span>. Came in by train and never needed to have a car. You are right in the middle of everything! <span class='review-span highlight' data-aligned-summaries='0'>The hotel & service is top notch</span> and <span class='review-span highlight' data-aligned-summaries='0'>this isn't my first stay in Boston</span>!</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This hotel is great for business or pleasure and will be frequented over and over by its visitors.</span> <span id="1" class="summary-sentence">It is clean and beautiful and very convenient.</span> <span id="2" class="summary-sentence">This hotel is not only close to the theatre district but to shopping at Macy's, TJ Maxx and Marshall's.</span> <span id="3" class="summary-sentence">There are close by restaurants to choose from but also the subway station isn't far away for those wanting to go further on.</span> <span id="4" class="summary-sentence">The rooms are nice.</span> <span id="5" class="summary-sentence">The restaurant and small bar lacked availability of food options for guests, however they do serve a complimentary breakfast.</span> <span id="6" class="summary-sentence">There was a disappointing downside to this hotel in that you have to pay for WiFi access.</span> <span id="7" class="summary-sentence">There is a fitness centre but that is a little so-so.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

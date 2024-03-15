@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>My wife and i <span class='review-span highlight' data-aligned-summaries='0'>stayed in the Wellington</span> fro 4 nights from 30th Jan, i was a bit worried about the hotel due to some reviews on here like dirty rooms and rude staff which i can tell you it all crap ! <span class='review-span highlight' data-aligned-summaries='2'>Our room</span> on the 10th floor (1042) <span class='review-span highlight' data-aligned-summaries='2'>was small</span> but <span class='review-span highlight' data-aligned-summaries='2'>spotless</span> and shower room was also really clean the <span class='review-span highlight' data-aligned-summaries='0'>maid was great</span> and <span class='review-span highlight' data-aligned-summaries='2'>the room was made up every day</span>, the bell boys and rest of <span class='review-span highlight' data-aligned-summaries='8'>the</span> <span class='review-span highlight' data-aligned-summaries='0 8'>staff</span> <span class='review-span highlight' data-aligned-summaries='0'>was great</span> <span class='review-span highlight' data-aligned-summaries='8'>always said hi</span> but left you alone if you wanted. <span class='review-span highlight' data-aligned-summaries='7'>The hotel is ten mins walk to Times Square and 5 mins to Central Park</span> , we have been NYC before and <span class='review-span highlight' data-aligned-summaries='9'>would stay in this hotel again 100%</span> , <span class='review-span highlight' data-aligned-summaries='0 4'>starbucks across the road was great</span> <span class='review-span highlight' data-aligned-summaries='4'>(not far for wife to walk in morning</span> !).</div><div class='text-box'>Recently Stayed in <span class='review-span highlight' data-aligned-summaries='0'>the Wellington Hotel</span> In Manhatten. <span class='review-span highlight' data-aligned-summaries='0'>Was a nice hotel</span>, <span class='review-span highlight' data-aligned-summaries='4'>great location</span>, <span class='review-span highlight' data-aligned-summaries='7'>just a 5 minute walk from times square and a 5 min walk from central park</span>.<span class='review-span highlight' data-aligned-summaries='5'>There was also a subway right next to the hotel</span>. Hotel was a bit dated and we had a problem with the toilet and the shower. The toilet leaked whenever we flushed it so the floor was always soaking wet and the shower made the most horrific loud noise if you turned it too hot so we had to have cold showers the whole time we were there, which wasnt very nice as it was -8 outside! We did complain to the receptionist but nothing was done. Besides the problems we had with the bathroom, the bedroom was nice. Quite basic but had everything we need.</div><div class='text-box'>Stayed at this hotel for my 21st Birthday on December 14th for 3 nights. Got to the hotel at 2am and <span class='review-span highlight' data-aligned-summaries='1'>we checked in really quick</span>. Service was great and very fast, <span class='review-span highlight' data-aligned-summaries='8'>staff were pleasant</span>. <span class='review-span highlight' data-aligned-summaries='2'>The room was very clean and tidy</span>, we stayed on the 10th floor, there was quite alot of noise from outside, this was with the window closed, but we were staying in the city that never sleeps. The resteraunt next door was great also, very busy in the morning so expect to wait 10-15 minutes for a table. <span class='review-span highlight' data-aligned-summaries='4'>The location of the hotel couldn't be any better</span>, <span class='review-span highlight' data-aligned-summaries='7'>only 5 minutes walk to Times Square</span>, Radio Centre, <span class='review-span highlight' data-aligned-summaries='7'>Central Park</span> and train stations. <span class='review-span highlight' data-aligned-summaries='9'>I would definately go back to this hotel.</span></div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='4'>The hotel had a fantastic location</span>, <span class='review-span highlight' data-aligned-summaries='5'>just a few blocks away from Broadway, Times Square, Central Park, Fifth Ave., and others. It also has a subway station right outside the door</span>, which was <span class='review-span highlight' data-aligned-summaries='6'>perfect to travel around the city</span> for a low cost in transportation. On the other hand, <span class='review-span highlight' data-aligned-summaries='8'>the service was good not great</span>. In order to get to the room we (my wife & I), had to walk to the middle of the hotel to get to an elevator that was broken at all times and when it worked it was really slow. <span class='review-span highlight' data-aligned-summaries='2'>The rooms were</span> outdated and very <span class='review-span highlight' data-aligned-summaries='2'>small</span>. <span class='review-span highlight' data-aligned-summaries='0'>The bed was so bad both of us wokeup in the morning with back pain</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Our Stay Was Great</span>. I found no one rude <span class='review-span highlight' data-aligned-summaries='8'>.They all wanted to help</span>. you just had to ask & Be nice , The Bell Captain was Great, so was the door men & Our Maid . I tipped them all <span class='review-span highlight' data-aligned-summaries='2'>.The Room .ours was clean</span> & <span class='review-span highlight' data-aligned-summaries='2'>Very Nice</span> we had a suite , <span class='review-span highlight' data-aligned-summaries='3'>bathroom was small</span> & room had no view but we also didnt have the street noise. <span class='review-span highlight' data-aligned-summaries='4'>The Location was The Best</span> , I cant wait to go back , travelled with 6 of us total & 1 teenager & we all loved the place <span class='review-span highlight' data-aligned-summaries='9'>.for the price it can not be BEAT</span> . <span class='review-span highlight' data-aligned-summaries='9'>We will all return to this hotel</span> .who goes to NEW YORK & looks for stuff to complain about anyway .</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='4'>This hotel is in the most fantastic location</span>, <span class='review-span highlight' data-aligned-summaries='5'>turn left and walk 15 mins to Times Square or turn right and</span> <span class='review-span highlight' data-aligned-summaries='5 7'>walk 5 mins to Central Park</span>. <span class='review-span highlight' data-aligned-summaries='2'>Room was</span> adequate. It was <span class='review-span highlight' data-aligned-summaries='2'>clean and tidy</span> and the miad came in every day and changed the beds and replaced towels etc. <span class='review-span highlight' data-aligned-summaries='2'>It is a small room</span> but we weren't disappointed. <span class='review-span highlight' data-aligned-summaries='8'>The staff seemed pretty friendly and were always available if you needed anything</span> - not that we did. The only problem is the heating, the pipes start banging loudly in the early hours of the morning and did wake us up a few times but other than that everything was fine and <span class='review-span highlight' data-aligned-summaries='0 9'>I would definately recommend a stay at the Wellington Hotel</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 4 9'>This hotel was the most centrally located</span> anyone could ever ask for. <span class='review-span highlight' data-aligned-summaries='5 6'>It was right in the mist of everything</span>, everywhere for everybody. <span class='review-span highlight' data-aligned-summaries='0 2'>The room was great</span>,<span class='review-span highlight' data-aligned-summaries='2'> clean, not large but very accommondating</span>. The price was excellent. The air conditioner was great too. No problems with this hotel at all. I would highly recommend it for anyone wanting to sight see in New York. <span class='review-span highlight' data-aligned-summaries='5 6'>It was close to the subway</span>. Close to the bus tours. Just a wonderful location. When we come back we will surely try to get a room here again, we feel like it is the best. Thanks again for the facility and <span class='review-span highlight' data-aligned-summaries='9'>we would definitely recommend it to anyone</span>.</div><div class='text-box'>I took my husband to <span class='review-span highlight' data-aligned-summaries='9'>New York</span> for his 30th and read some really bad reviews on <span class='review-span highlight' data-aligned-summaries='0'>the Wellington. We were really pleased with the hotel</span>, <span class='review-span highlight' data-aligned-summaries='4'>the location was fab</span> and everything was accessible. We were in a <span class='review-span highlight' data-aligned-summaries='2'>room</span> on the 26th floor and <span class='review-span highlight' data-aligned-summaries='2'>it was huge</span> and <span class='review-span highlight' data-aligned-summaries='2'>really clean</span> and i woke up to a view of time square every morning. <span class='review-span highlight' data-aligned-summaries='8'>The staff were really helpful and try everything to ensure my checkout was easy and that we didn't have to wait around, they even organised a taxi to the airport</span>. <span class='review-span highlight' data-aligned-summaries='0'>All in all i was really please with the hotel</span> and <span class='review-span highlight' data-aligned-summaries='9'>if given the chance i would go back</span>.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The Wellington was a great choice.</span> <span id="1" class="summary-sentence">Check in is quick and painless.</span> <span id="2" class="summary-sentence">The room was small, but clean and nice.</span> <span id="3" class="summary-sentence">The bathroom was tiny but sufficient.</span> <span id="4" class="summary-sentence">The location was the best of all.</span> <span id="5" class="summary-sentence">It is so close to it all and the subway being right outside the door</span> <span id="6" class="summary-sentence">is great.</span> <span id="7" class="summary-sentence">It's about a 5 minute walk to Times Square and Central Park.</span> <span id="8" class="summary-sentence">The staff was all helpful and friendly.</span> <span id="9" class="summary-sentence">We will definitely recommend this hotel to others and will stay again if we ever go back to the city.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

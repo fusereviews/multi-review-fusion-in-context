@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Pleasant Suprise</span> <span class='review-span highlight' data-aligned-summaries='1'>If you are traveling by train, this is a great location.</span> <span class='review-span highlight' data-aligned-summaries='1 2'>Only a 5 minute walk from the station</span>. We were a little concerned about the construction. There was not much noise when we were in the hotel, even when we had the windows opened.<span class='review-span highlight' data-aligned-summaries='3'>The room was large</span> and lovely. Very clean. We especially liked the bathroom, with a large marble tub. <span class='review-span highlight' data-aligned-summaries='3'>The bed was very comfortable</span> and plenty of pillows, which is sometimes a problem for those needing more than one. <span class='review-span highlight' data-aligned-summaries='4'>Breakfast was nice with a good variety of cold and hot foods</span>. The staff was professional and friendly. We were only at this hotel for two nights, but we enjoyed our experience. <span class='review-span highlight' data-aligned-summaries='5'>Would stay again</span>, especially if we were traveling by train again.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Great Hotel</span>, <span class='review-span highlight' data-aligned-summaries='1'>Great Location</span> We stayed at this hotel for 2 nights during our honeymoon - for a stop between Montepulciano and the Amalfi Coast. The location is amazing - <span class='review-span highlight' data-aligned-summaries='1 2'>you can walk everywhere, including the train station</span>. We were in Florence 6 months ago and stayed at the Excelsior down by the river and this location was just as good if not better, and the hotel was half the price. <span class='review-span highlight' data-aligned-summaries='3'>The room was huge</span>, and really nice, great amenities. <span class='review-span highlight' data-aligned-summaries='5'>Exactly what you would expect from a 4 star, but not the price</span>. <span class='review-span highlight' data-aligned-summaries='5'>The only disappointment was that they knew it was our honeymoon and didn't acknowledge it</span> (the hotel in Rome and on the Amalfi coast sent us champage and fruit/chocolate).</div><div class='text-box'>A "Charming Gem" <span class='review-span highlight' data-aligned-summaries='0'>Everything about this hotel was great</span>! We arrived at the train station at 2 in the morning from Rome. <span class='review-span highlight' data-aligned-summaries='1 2'>We walked a few hundred yards to the hotel from the train station</span>. As we walked in we were greated by name by a friendly staff person who was obviously anticipating our arrival. The room was beautifully decorated and <span class='review-span highlight' data-aligned-summaries='3'>the bathroom was cozy and spacious</span>. We loved <span class='review-span highlight' data-aligned-summaries='3'>the bathroom shower head</span> which <span class='review-span highlight' data-aligned-summaries='3'>had great water pressure</span>. :-). All the shopping and restaurants were within walking distance. There is some construction going on at the church square but we did not find it to be a bother. <span class='review-span highlight' data-aligned-summaries='5'>Overall a great experience and would definately stay there again</span>.</div><div class='text-box'>loved the hotel The staff was pleasant, Marco, was excellent. I thought <span class='review-span highlight' data-aligned-summaries='3'>the room size was large</span>, but not as spacious as suggested. <span class='review-span highlight' data-aligned-summaries='4'>The breakfast was top notch</span> and the staff was exceptional. Since we both had terrible colds the first few days, the staff prefered tea for my husband to take to our room.<span class='review-span highlight' data-aligned-summaries='1'>I loved the view of Santa Maria Church</span>, and the construction did not bother us. A few nights <span class='review-span highlight' data-aligned-summaries='5'>it was noisy, but the staff took care of it, when we complained</span>. <span class='review-span highlight' data-aligned-summaries='3'>The beds were very comfortable</span>.<span class='review-span highlight' data-aligned-summaries='0 5'>I would stay at this hotel again</span>.</div><div class='text-box'>Great Find My wife and I just spent seven days in Florence staying at the SMN Hotel. <span class='review-span highlight' data-aligned-summaries='1 5'>We really enjoyed the central location</span> <span class='review-span highlight' data-aligned-summaries='1'>and</span> <span class='review-span highlight' data-aligned-summaries='1 2'>short walk to the train station</span>. <span class='review-span highlight' data-aligned-summaries='0 5'>The hotel itself was wonderful</span> with <span class='review-span highlight' data-aligned-summaries='3'>good size rooms</span> and friendly staff. <span class='review-span highlight' data-aligned-summaries='4'>Breakfast was quite nice</span>, served in beautifully decorated dining rooms. Unfortunately, the building beside the hotel and the plaza across the street were under construction so the view wasn't much to see. The rooms were quiet in spite of the noise from the all the constructionhowever. <span class='review-span highlight' data-aligned-summaries='0 5'>We would definitely recommend this hotel to anyone</span> visting Florence.</div><div class='text-box'>Florence Hotel <span class='review-span highlight' data-aligned-summaries='0'>This hotel overall was excellent</span>. <span class='review-span highlight' data-aligned-summaries='1'>The location is great</span>. <span class='review-span highlight' data-aligned-summaries='1 2'>It is across the street from the train station</span> and <span class='review-span highlight' data-aligned-summaries='1'>within walking distance from all of the main attractions (5 minutes to almost anything)</span>. The hotel itself is very charming. The <span class='review-span highlight' data-aligned-summaries='3'>rooms</span> are really nice and <span class='review-span highlight' data-aligned-summaries='3'>are a decent size by European standards</span> and are very quite. The front desk staff was very helpful w/ directions recommended sights. The only down side to this hotel is that Santa Maria Novella church is under construction which impacted the view.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 5'>Very Nice</span>, Convenient Location. We did have some trouble finding the hotel because the only sign is small and slightly hidden by a decorative planter. <span class='review-span highlight' data-aligned-summaries='1'>The location is excellent and close to the train station</span>. The room was beautiful and very clean. We overlooked the piazza which is currently under construction. We could not hear any construction noise in our room. <span class='review-span highlight' data-aligned-summaries='5'>The staff were not very friendly</span> but Florence is easy to get around so we did not require much assistance.</div><div class='text-box'>Nice Hotel <span class='review-span highlight' data-aligned-summaries='0 5'>Very nice hotel</span>. <span class='review-span highlight' data-aligned-summaries='3 5'>Our room was beautiful and big</span>.<span class='review-span highlight' data-aligned-summaries='3'> Great bathroom</span>. <span class='review-span highlight' data-aligned-summaries='4'>Breakfast was really nice</span> as well. <span class='review-span highlight' data-aligned-summaries='5'>Staff was very friendly and helpful</span>. <span class='review-span highlight' data-aligned-summaries='1 2'>Fairly short walk from the train station</span>. The city itself very walkable. <span class='review-span highlight' data-aligned-summaries='1'>The area the hotel is in is okay, not great</span>, but <span class='review-span highlight' data-aligned-summaries='1'>a short walk and you're in the center of things</span>. <span class='review-span highlight' data-aligned-summaries='5'>We would stay there again</span>.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Great hotel!</span> <span id="1" class="summary-sentence">It is in a great location- close to the train station as well as all the major sights.</span> <span id="2" class="summary-sentence">A very short walk from the train station.</span> <span id="3" class="summary-sentence">The room and bathroom were good sized, the bed was very comfortable and the shower was huge.</span> <span id="4" class="summary-sentence">The breakfast was top notch- cold and hot selections and fresh coffee/lattes/cappachinos which was really nice.</span> <span id="5" class="summary-sentence">Overall there are no complaints, Very recommended for the value.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>My boyfriend and I booked at room here for two nights over a weekend and we were so surprised! At 44 dollars a night (for a single, non smoking room), the value of the place was great! The room was newly remodeled and the bathrooms were really nice. Everything was clean and well kept. I would definitely recommend this for a quick stay. You only have to cross the street to the beach, and it's right near one of the beach ramps so that if you want to drive on the beach, that's an option too! The only other thing I would recommend is to bring your own pillows because the hotel only provides one per guest. Other than that <span class='review-span highlight' data-aligned-summaries='2'>this place is great</span>!</div><div class='text-box'>Pleasantly surprised, our room was very clean, recently remodeled. Did not experience the horror stories in previous reviews. Front desk, at check in was very polite and helpful. The room attendants/maid were not overly friendly but did their job, although <span class='review-span highlight' data-aligned-summaries='2'>this is a no frills place, not the Ritz</span>. Reminder that <span class='review-span highlight' data-aligned-summaries='2'>you are not paying for the Ritz</span> either. The owners live on premise with their children and seem to be very nice. The showers are great older high pressure. The beach is just across the street. Great location. You can see the waves from the motel. Great place on a budget. Although if you do not have a cell phone, <span class='review-span highlight' data-aligned-summaries='1'>there were no phones in our room</span>.</div><div class='text-box'>We stayed in a non-smoking double bed room there for three nights. It was a horrible experience. The room had no window and when we asked the receptionist, she said that is the case for all double bed rooms. The sheets seemed dirty although they were changed daily. <span class='review-span highlight' data-aligned-summaries='1'>The towels had lots of stains on them</span>. <span class='review-span highlight' data-aligned-summaries='1'>The detergent they used had a very strong smell</span> and the receptionists were not nice at all. The only good point was the location which was close to the beach. It was not quite cheap in comparison with the other available options. <span class='review-span highlight' data-aligned-summaries='2'>We could get a better room on Ocean resort walk (across the street) with the same price</span>.</div><div class='text-box'>My boyfriend and I stayed here for a weekend getaway. <span class='review-span highlight' data-aligned-summaries='2'>I</span> was a little nervous due to the previous reviews, but <span class='review-span highlight' data-aligned-summaries='2'>was pleasantly surprised when entering the room</span>. It was clean and had a microwave and mini fridge. The television worked just fine as well. The pool is also huge and looked very clean. The hotel is directly across from public beach access. The only two complaints I have is no shampoo in the shower and the walk to Sea Breeze for the night clubs was a bit far in heels.but both ways we had cabs stop and give us a five dollar ride right away.</div><div class='text-box'>As soon as I pulled into the over crowded parking lot I knew I messed up<span class='review-span highlight' data-aligned-summaries='2'>. What a dump</span>. If I thought the outside was bad the inside was worse. As soon I saw my room I handed in my key and left. The smell of the room hit you in the face when you open the door. The toilet still had urine and cigerette buts in it from the previous guest. This in a "non smoking room". <span class='review-span highlight' data-aligned-summaries='1 2'>The matress was disgusting</span>.<span class='review-span highlight' data-aligned-summaries='2'> I would not let a dog sleep on it</span>. Extremely dirty place.</div><div class='text-box'>This place was the worst motel I have ever seen! <span class='review-span highlight' data-aligned-summaries='2'>We unfortunately paid first</span>, then climbed 3 stories to our room. If that is what you call it! The screens were out, <span class='review-span highlight' data-aligned-summaries='1'>the curtains were ripped and falling down</span>, it stunk. We even looked at 2 other rooms and they were worse! <span class='review-span highlight' data-aligned-summaries='2'>Refused to give us a refund so we just cut our losses and left</span>. Went down the road to a Super 8 paid $25 more and was right on the ocean. Don't ever go to this dump!</div><div class='text-box'>The rooms were clean, recently painted, and the bathroom was newly remodeled. Great location right across the street from the beach and close to the shopping strip! The housekeepers did clean the rooms daily but they did ask if anything was needed. <span class='review-span highlight' data-aligned-summaries='2'>Overall, a good experience</span>! <span class='review-span highlight' data-aligned-summaries='2'>For the money it is as good as it gets</span>! P.S. One of the house keepers does use a stolen shopping cart as a utility cart to clean with!</div><div class='text-box'>We have stayed there three times now. The s staff is super friendly and the rooms are clean. <span class='review-span highlight' data-aligned-summaries='2'>Can't beat the price</span> and the location. Will stay there every trip we take. The staff has always been helpful and the pool is very clean. <span class='review-span highlight' data-aligned-summaries='2'>Would recommend to anyone</span> going to Daytona on a budget</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The rooms were not as seen on the internet.</span> <span id="1" class="summary-sentence">The King Suite was a full size dirty mattress, no heat, the curtains did not cover the windows, phone did not work, nasty towels and no hand towels, and the only mirror in the room was over the toilet.</span> <span id="2" class="summary-sentence">Of course you had to pay for the entire stay the day you checked in, and if I would have seen the room before we paid, I would have rather slept on the beach.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

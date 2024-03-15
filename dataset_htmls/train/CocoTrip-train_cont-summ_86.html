@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>Hotel <span class='review-span highlight' data-aligned-summaries='3'>location</span>: It suits perfectly our needs - <span class='review-span highlight' data-aligned-summaries='3'>100 meters from Champs Elysee</span> Hotel <span class='review-span highlight' data-aligned-summaries='1'>staff: Friendly and willing to assist</span> Hotel rooms: Probably newly renovated - Air-condition in the room was not noisy at all compared to other hotels I stayed - Size of the room: As a expected for 3* hotel <span class='review-span highlight' data-aligned-summaries='1'>Breakfast: Included in the price therefore no problem at all</span> - If it will not in the future (because this is an offer for July and August), it does not worth the price of a13. However, quality of food was good. You do not expect a 5* rich breakfast for a13 but a bit more. Overall comment: <span class='review-span highlight' data-aligned-summaries='0 4'>A comfortable and nice 3 nights stay</span>.</div><div class='text-box'>This was our first time visiting Paris and we were not sure what to expect or where to stay. Spent several days looking at Trip advisor and came across this Hotel, <span class='review-span highlight' data-aligned-summaries='3'>close to the Champs-Elysses</span> and l'arc de triomphe it proved to be a fantastic location. The <span class='review-span highlight' data-aligned-summaries='1 3'>staff were</span> <span class='review-span highlight' data-aligned-summaries='1'>extremely friendly and</span> <span class='review-span highlight' data-aligned-summaries='1 3'>helpful</span>,<span class='review-span highlight' data-aligned-summaries='3'> giving advice on where to eat</span> and how to get there. The Hotel itself is quite small but that added to the charm. <span class='review-span highlight' data-aligned-summaries='1'>Our room was</span> more than adaquate, <span class='review-span highlight' data-aligned-summaries='1'>clean</span> with all the amenities you would expect, including free wi-fi. <span class='review-span highlight' data-aligned-summaries='4'>All in all</span> <span class='review-span highlight' data-aligned-summaries='0 4'>this hotel added to our fantastic stay in Paris</span>. <span class='review-span highlight' data-aligned-summaries='4'>Would definately stay there again and would recommend to all</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>I stayed at this hotel</span> for 2 nights about 2 weeks ago and absolutely loved it. The room was <span class='review-span highlight' data-aligned-summaries='2'>spacious</span> (as was the <span class='review-span highlight' data-aligned-summaries='2'>bathroom</span>), the location was amazing (on a quiet street off of the main shopping street) and the staff were always <span class='review-span highlight' data-aligned-summaries='1'>friendly</span> and <span class='review-span highlight' data-aligned-summaries='1'>helpful</span>. They have free wifi in the hotel as well as a computer (just one) with a printer that is free for guests to use. The only problem though was that the computer was in french (the keyboard was completely different), so it took longer to use. All in all, <span class='review-span highlight' data-aligned-summaries='0'>I was very happy with my choice</span>.</div><div class='text-box'>My husband and I stayed at this fabulous place in Paris two weeks ago and we just l-o-v-e-d it, from the incredible room to the delicious breakfast. The entire place is cleaned and well decorated. <span class='review-span highlight' data-aligned-summaries='3'>Champs Elysses is just around the corner</span> and Celine gave us valuable tips to enjoy the city. <span class='review-span highlight' data-aligned-summaries='0'>That was beyond our expectations and honestly, I couldn't have better memories of my first time in Paris</span>. We really had the time of our lives there especially because everybody is so dedicated and put love and care in everything they do. Keep doing this excellent job, guys! That's precious and priceless!</div><div class='text-box'>My husband and I stayed at this hotel and found it to be excellently located and close to the major tourist attractions and the subway sytem. <span class='review-span highlight' data-aligned-summaries='1'>The rooms are clean</span> with simple decoration and the staff are very helpful and friendly. We did not eat in at the hotel but <span class='review-span highlight' data-aligned-summaries='3'>the staff provided us with some great advice on where to find good food</span>. Concidering the price of most decent hotels in Paris I though this hotel offered very good value for money and <span class='review-span highlight' data-aligned-summaries='0 4'>I would be happy to stay here again</span>.</div><div class='text-box'>This is a very reasonably priced and clean hotel <span class='review-span highlight' data-aligned-summaries='3'>on a quiet street</span> in the high-rent district of Paris' right bank; the staff is very polite and helpful. The rooms are small but quiet . It is an easy walk from the Arc de Triomphe, the shopping of Champs Elysees, and countless restaurants in the area. <span class='review-span highlight' data-aligned-summaries='1'>The breakfast is fine</span> and the staff cordial. <span class='review-span highlight' data-aligned-summaries='0 4'>Highly recommended for its value, staff, and location</span>.</div><div class='text-box'>My mother and I stayed there for a week and <span class='review-span highlight' data-aligned-summaries='0'>loved it</span>! The breakfast was so convenient and the staff there, attentive. With free Internet, air conditioning, a safe and a mini bar, the room contained all the essentials. My only disappointment was in it's size.it was a little small which meant having to be super organized with our things. However, <span class='review-span highlight' data-aligned-summaries='4'>we</span> managed and <span class='review-span highlight' data-aligned-summaries='4'>would definitely return</span>.</div><div class='text-box'>Hotel Galileo is a small hotel <span class='review-span highlight' data-aligned-summaries='3'>located close to the Champs ElysAes</span>. <span class='review-span highlight' data-aligned-summaries='0'>We were very pleased with our one night stay</span>. The price/quality ratio is very good for Paris standards. <span class='review-span highlight' data-aligned-summaries='3'>Our room was located at the side of the street, but there was no bothering noise</span>. <span class='review-span highlight' data-aligned-summaries='1'>The room was clean</span>, not too small and <span class='review-span highlight' data-aligned-summaries='2'>there was a nice bathroom</span>. <span class='review-span highlight' data-aligned-summaries='0 4'>We would certainly go back there</span>.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Great stay.</span> <span id="1" class="summary-sentence">The management was friendly and helpful, room was spotless and the breakfast was perfect - eggs fresh coffee and of course croissant !</span> <span id="2" class="summary-sentence">The bathroom was a nice size.</span> <span id="3" class="summary-sentence">The hotel is located just 2 blocks back from the Champs, and the side street was quiet and nice, and the restaurants the staff recommended were all good.</span> <span id="4" class="summary-sentence">All in all i would go back and stay here again, and have recommended it to my friends.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

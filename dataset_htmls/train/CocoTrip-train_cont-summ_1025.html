@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>My wife and I went to Rome with our 3-year-old daughter, around Easter hoilday. We stayed in the hotel Romulus. We booked the whole trip with lastminute.com. There is a good bus service: <span class='review-span highlight' data-aligned-summaries='5'>it takes about 25 minutes to get to Rome</span>. The bus is regular, about every 30 minutes. <span class='review-span highlight' data-aligned-summaries='3'>The hotel staff is pleasant and friendly</span>. The hotel is clean. There is an option to have an American or an Italian breakfast. In order to travel around Rome you can buy a travel card (metro+bus+tram), which is 4 euros for one day or 16 euros for 7 days. The bus final stop is at Tiburtina station, which has a left-luggage office and a train connection to Fiumicino Airport.</div><div class='text-box'>we have just returned from 4 days as sight seeing tourists. If you are like us <span class='review-span highlight' data-aligned-summaries='0 1'>DO NOT STAY THERE</span>. it is a contractors/worker hotel for employees who are sent to Rome to carry out tasks. In this respect it is ok notwithstanding <span class='review-span highlight' data-aligned-summaries='3'>a dire dining room and staff</span>. (Mrs Overall <Acorn Antiques> is alive and well and working here!) <span class='review-span highlight' data-aligned-summaries='0 1'>As a tourist hotel it is useless</span>. <span class='review-span highlight' data-aligned-summaries='5'>10k and a bus+metro ride from Rome</span>. <span class='review-span highlight' data-aligned-summaries='2'>You will also run the gauntlet of prostitutes</span> and their tools of the trade! on the flyover from the bus stop. Rooms and <span class='review-span highlight' data-aligned-summaries='3'>rception staff were fine</span> and the hotel is well appointed. But do not trust the dining room - you have been warned.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>You can get a very better place to stay if you want to visit Rome. Don't choose this hotel</span>: <span class='review-span highlight' data-aligned-summaries='1'>it's uncomfortable, not very clean</span> and <span class='review-span highlight' data-aligned-summaries='5'>the worst thing is that it is miles away from the centre of Rome</span>. The only bus that stops near the hotel passes every 30 minutes (if you're lucky) and on sunday every hour. <span class='review-span highlight' data-aligned-summaries='7'>This bus takes you at the closest underground station after an at least 30 minutes trip</span>. Then, you have to take the tube if you want to get the centre. Too much if you want to save time and spend it in the best way. The hotel is old fashioned and shabby. I want to forget it!</div><div class='text-box'>this hotel is just a fancy side road hotel.you have <span class='review-span highlight' data-aligned-summaries='5 7'>just one bus line 2m walking from the hotel that takes 20m to tiburtina station.the</span> problem is the bus comes always out of the schedule.we stayed in the room 203.it was old and very noisy because of the freeway and the train line in front of the hotel.the room wasnt so clean.the towels were changed every day but the bed clothes not, even when we asked for.the internet in the room was really bad.the bathroom was small and dirty.for young couples or friend groups looking for low costs holidays its not bad.</div><div class='text-box'>The rooms were very charm full and clean. + the room + the bathroom + comfortable + fridge in the room + <span class='review-span highlight' data-aligned-summaries='4'>free internet (in the lobby)</span> - the breakfast (not too many things to choose from but great croissants although) - location (not the fact that it was 30 min away from the town center but the problem was that the bus was full of gypsies). Be careful in the bus.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1'>We had a</span> <span class='review-span highlight' data-aligned-summaries='1 5'>bad experience</span> staying at this hotel. <span class='review-span highlight' data-aligned-summaries='2'>The bus stop was near some prostitutes</span> and <span class='review-span highlight' data-aligned-summaries='5'>it took us more than 1 hour to get to Rome each day (1 way)</span>. The breakfast was okay. <span class='review-span highlight' data-aligned-summaries='0'>We met some friends in Rome who showed us other hotels near for about the same price</span>. Please do not go to this hotel. Thanks</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='5'>Hotel would be perfect if it have good location. But now this hotel is very far from the centre</span> and there <span class='review-span highlight' data-aligned-summaries='2'>near the bus stop always</span> (day or night) <span class='review-span highlight' data-aligned-summaries='2'>are "working" prostitutes</span> (i don't know, maybe for some it's the advantage of hotel:D). <span class='review-span highlight' data-aligned-summaries='0'>I do not recommend this hotel</span> for my friends.</div><div class='text-box'>I did not like this hotel.I was so disappointing and <span class='review-span highlight' data-aligned-summaries='1'>getting to Rome from the Hotel was a nightmare</span>.I can't believe it has good reviews.with <span class='review-span highlight' data-aligned-summaries='0 7'>the same money you can find nice and better hotels</span> <span class='review-span highlight' data-aligned-summaries='7'>near the metro stations.the bus take 30 mins to get to the metro station</span> and there are many pick pockets in the bus.be careful with this hotel.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">There are much nicer and better hotels for the same price near Rome and the airport.</span> <span id="1" class="summary-sentence">It was a nightmare.</span> <span id="2" class="summary-sentence">Near the hotel there are many prostitutes standing under the bridge where your take the bus.</span> <span id="3" class="summary-sentence">The staff in the hotel was kind of rude.</span> <span id="4" class="summary-sentence">The internet did not work like they promised.</span> <span id="5" class="summary-sentence">The worst problem was the far away distance from Rome.</span> <span id="6" class="summary-sentence">Rome is a nice place to see if you stay near the colosseum, the vatican or any of the areas near the metro.</span> <span id="7" class="summary-sentence">There is not a metro stop near Hotel Romulus.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

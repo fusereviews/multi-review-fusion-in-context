@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2 3'>Great place for Indian food</span>. When most of the Indian restaurants are serving medicre food, <span class='review-span highlight' data-aligned-summaries='2'>Paradise has really stepped up their game</span>. Awesome taste, great portions. I went in with my family and had a great exp. And have been regular every week (the lady at front desk would vouch for it:)).</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 1 3'>Service was great</span>, <span class='review-span highlight' data-aligned-summaries='2 3'>authentic food from India</span> but a little to authentic with the no ice. I respect the cultural reasons but in AZ summer cold ice water is a necessity. Food was delicious & you can tell they are very popular within their own community with the amount of take out orders... tons!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='3'>Worst place to order food</span>... <span class='review-span highlight' data-aligned-summaries='1'>they say order will be ready in 20</span> mins and they <span class='review-span highlight' data-aligned-summaries='0 1'>keep you waiting</span> <span class='review-span highlight' data-aligned-summaries='1'>for more than an</span> <span class='review-span highlight' data-aligned-summaries='0 1'>hourWorst</span> <span class='review-span highlight' data-aligned-summaries='0'>Service</span> experience and there is no place to sit.Hope they realize how <span class='review-span highlight' data-aligned-summaries='3'>worst is their service</span> and at least try to empathize with people who are waiting in queue</div><div class='text-box'>One thing that I always missed in Phoenix (since I moved here in 2015) was a good biriyani place. I came to know about this place last year and I must say <span class='review-span highlight' data-aligned-summaries='2 3'>it's the best biriyani I had in Phoenix</span> till now. My personal favorites are paradise special chicken biriyani and goat biriyani.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 1 2 3'>Prompt service</span> and really tasty food. I've had the weekend combo special which has biryani, fried rice, a cup of dessert, 2 appatizers, 1 curry and also one naan. It was <span class='review-span highlight' data-aligned-summaries='2'>a big portion and</span> biryani was <span class='review-span highlight' data-aligned-summaries='0 2'>full of flavor although not the best I've had</span>.<span class='review-span highlight' data-aligned-summaries='0'></span></div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2'>Reasonable to mediocre food</span> but <span class='review-span highlight' data-aligned-summaries='0 1 2 3'>extremely slow</span> <span class='review-span highlight' data-aligned-summaries='3'>and inaccurate</span> <span class='review-span highlight' data-aligned-summaries='0 1 2 3'>service</span>. Ordered a dosa along with other non veg items. Butter chicken came with slivers of what tasted like tandoori chicken. <span class='review-span highlight' data-aligned-summaries='1'>Dosa arrived so late - the rest of the food was already consumed by the rest of the party</span>. Sambhar arrived cold. <span class='review-span highlight' data-aligned-summaries='3'>Management needs to hire additional help</span>, and train them better.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='3'>I wish I could give this restaurant zero stars</span>. The people who work here actively discriminate against LGBTQ customers. When same-sex couples go into this restaurant, <span class='review-span highlight' data-aligned-summaries='3'>they will seat you, give you attitude, and then proceed to tell you that everything on the menu is 'out'</span> .Yeah, they will never see my face or a dime of my money.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='3'>Worst Service</span> <span class='review-span highlight' data-aligned-summaries='0 3'>after being in restaurant after 30 mins also no one came to take order</span>, we had to leave and had to goto different restaurant also they had seated us in table after they asked us to change the table because more people came.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Service at this Indian restaurant is very slow.  </span><span id="1" class="summary-sentence">Customers will often be kept waiting an excessive amount of time either to order their food, or waiting to get it after the order has been placed.</span> <span id="2" class="summary-sentence">The place does have solid, authentic, Indian style food at least, once it arrives.  </span><span id="3" class="summary-sentence">Overall this place is not recommended, due to the poor service.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

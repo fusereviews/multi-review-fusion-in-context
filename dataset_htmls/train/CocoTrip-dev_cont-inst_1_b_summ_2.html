@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>1. The Strathcona is <span class='review-span highlight' data-aligned-summaries='1'>right in the heart of Toronto. Everything was at hand</span> 2. I am used to the European Hotel of "getting the arm in" for a safe deposit box. Therefore it was a great enhancement that the safe deposit box was pro bono 3. <span class='review-span highlight' data-aligned-summaries='0'>The staff and the concierge was more than helpful</span>. Well done & thank you 4. <span class='review-span highlight' data-aligned-summaries='0 2'>The rooms were lovely & clean</span> & well maintained over our four night stay 5. <span class='review-span highlight' data-aligned-summaries='2 4'>The rooms were bijou, however we were comfortable because my wife & I are slim</span>. If you are a disgusting big rotund(s); either lose weight or get another hotel 6. I would definitely stay here again</div><div class='text-box'>The hotel was not cheap - almost 200 Canadian dollars (including tax and a buffet breakfast) per night for a standard room. We were shocked by the so-called <span class='review-span highlight' data-aligned-summaries='2'>"standard" room.</span> <span class='review-span highlight' data-aligned-summaries='2 4'>It was tiny</span>: <span class='review-span highlight' data-aligned-summaries='4'>to do some ironing</span> on the ironing board, or to have access to the electric power points, <span class='review-span highlight' data-aligned-summaries='4'>one</span> literally <span class='review-span highlight' data-aligned-summaries='4'>had to move the furniture</span> around. <span class='review-span highlight' data-aligned-summaries='3'>Cupboard space was inadequate</span>. <span class='review-span highlight' data-aligned-summaries='3'>The shower was lukewarm</span>. The only <span class='review-span highlight' data-aligned-summaries='1'>redeeming featrure was the location</span>: not in an attractive part of Toronto, but at least within <span class='review-span highlight' data-aligned-summaries='1'>walking distance of the CN Tower and the main railway station</span>. I thought it was exceptionally bad value for money, and <span class='review-span highlight' data-aligned-summaries='0'>would not recommend it.</span></div><div class='text-box'>The location of this hotel is its best attribute. I was in Toronto for an Argos football game August 12 and stayed at the Strathcona (for the second time). I paid $83USD for a Friday night. This is cheap by downtown T.O. standards. <span class='review-span highlight' data-aligned-summaries='2'>The room was small and clean with no view at all</span>, but I did not care because I was noe in town for the view or the size of the room. Parking is two blocks down Wellington St. and cost $15CDN for a night - again not bad by T.O. standards. Overall <span class='review-span highlight' data-aligned-summaries='0'>a perefectly serviceable hotel</span> if you are looking for a clean room in a great location.</div><div class='text-box'>This place is <span class='review-span highlight' data-aligned-summaries='0 1'>located right center to all the places we wanted to see</span>. My friend and I went to see a concert and when I called to book they were the only hotel I found who <span class='review-span highlight' data-aligned-summaries='0'>did not talk down to you about not owning a credit card</span>. <span class='review-span highlight' data-aligned-summaries='1'>They are in walkin distance from the train station</span>, the cn tower, hockey hall of fame and the AC and the rogers center. It was amazing and being that we were first timers in a hotel they <span class='review-span highlight' data-aligned-summaries='0'>didn't make ya feel like any question was too stupid</span>. I am going back to toronto and I am staying there again!</div><div class='text-box'>Pros: Good location Affordable Cons: Hotel staff (see below) While our stay started out well, it turned into a disaster by the end. We were situated across from about 2-4 rooms of American college students who were in Toronto to drink heavily, smoke and make as much noise as they possible could. <span class='review-span highlight' data-aligned-summaries='0'>Despite numerous calls to the front desk to remedy the problem, they did absolutely nothing to help</span>. We had two sleepless nights & this put a major damper on what was otherwise a fantastic trip. <span class='review-span highlight' data-aligned-summaries='0'>My advice: Pay the extra money & stay somewhere else</span>!</div><div class='text-box'>My husband and me came for the Monster truck show at Rogers Center on Jan. It was super fun. <span class='review-span highlight' data-aligned-summaries='0'>What the hotel lacks in amenities and services</span> they make up for it by being centralized. Near to the night-club scene, sports arenas; Rogers Center/Air Canada Center. Restaurants, theater, shopping, and best of all, being cheap cheap cheap. Did I mention cheap? The weekend was fun and exciting. Thanks Gravedigger for tarin' the place up!</div><div class='text-box'>My wife and I stayed at the Strathcona while attending the Toronto Film Festival this past weekend. <span class='review-span highlight' data-aligned-summaries='2 4'>If there are only two in your party, this is a very cozy hotel</span>. Our <span class='review-span highlight' data-aligned-summaries='0 2'>room was very comfortable</span> and the <span class='review-span highlight' data-aligned-summaries='0'>location was great</span>. You <span class='review-span highlight' data-aligned-summaries='1'>are one block away from the train terminal</span> and the Airport Express shuttle picks you up right across the street. I would definitely stay there again.</div><div class='text-box'>I booked a <span class='review-span highlight' data-aligned-summaries='0 2'>Deluxe Room</span> which to be honest <span class='review-span highlight' data-aligned-summaries='0 2'>was worse than Basic Rooms</span> i have stayed in, <span class='review-span highlight' data-aligned-summaries='0 2'>in other Hotels</span>. Buffet Breakfast was expensive and we ate at other places. Pub was fine though if you like watching Sport. Ideal location though for Attractions.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">A highly recommended hotel that provides excellent customer service.</span> <span id="1" class="summary-sentence">This hotel is close to most of the major attractions in the area, with many of them being walking distance from the train station.</span> <span id="2" class="summary-sentence">The Delux room was not very impressive but was comfortable and clean despite being small.</span> <span id="3" class="summary-sentence">Cupboard space was also lacking and it was lacking much hot water in the shower.</span> <span id="4" class="summary-sentence">The hotel is considerable small, with limited room available for guests to move around and use some of the facilities with ease.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

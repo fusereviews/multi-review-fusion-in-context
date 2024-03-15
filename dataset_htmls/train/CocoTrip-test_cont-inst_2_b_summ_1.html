@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1'>In any season, this is one beautiful place</span>. The hotel is vintage class from a time when quality mattered. <span class='review-span highlight' data-aligned-summaries='5 6'>The staff is</span> <span class='review-span highlight' data-aligned-summaries='6'>professional</span>, <span class='review-span highlight' data-aligned-summaries='5'>helpful</span> <span class='review-span highlight' data-aligned-summaries='5 6'>and always available to</span> <span class='review-span highlight' data-aligned-summaries='5'>answer questions</span> or <span class='review-span highlight' data-aligned-summaries='6'>make you comfortable</span>. I have stayed here more times than I can count and it has been consistently wonderful for many years. <span class='review-span highlight' data-aligned-summaries='1 2'>So close to the never ending beauty of Boston Common</span> <span class='review-span highlight' data-aligned-summaries='2'>and</span> some of the best shopping within walking distances, <span class='review-span highlight' data-aligned-summaries='2 7'>restaurants abound</span> <span class='review-span highlight' data-aligned-summaries='7'>and there is</span> a local flavor that mixes easily with a world class feel. Boston is rich in American history.be sure to immerse and educate yourself. From Paul Revere to <span class='review-span highlight' data-aligned-summaries='7'>famous seafood</span> this place has it all. I have traveled the world, the comfort of this hotel appeals to my sense of tranquility. Tho <span class='review-span highlight' data-aligned-summaries='4'>the rooms are small</span>, they render a feeling like going home to visit Grandmom.it's my favorite place in the world.</div><div class='text-box'>We were very pleased for the most part with our stay during the holiday which included an extra night due to the winter storm. The <span class='review-span highlight' data-aligned-summaries='1'>front desk</span> <span class='review-span highlight' data-aligned-summaries='1 5 6'>staff were professional</span> <span class='review-span highlight' data-aligned-summaries='5'>and very helpful</span>, as were the staff in <span class='review-span highlight' data-aligned-summaries='7'>the breakfast restaurant , tea and lounge bar</span>. <span class='review-span highlight' data-aligned-summaries='1 3'>The rooms were nice</span>,<span class='review-span highlight' data-aligned-summaries='3'> updated some</span>. <span class='review-span highlight' data-aligned-summaries='4'>There is wireless in the lobby area though there is a charge for it in the room</span> and some services in the business center. We were able to fax at the front desk without a charge. The Whiskey Bar was not a positive experience and will not be revisited. <span class='review-span highlight' data-aligned-summaries='2'>The location was perfect for our needs</span> and we enjoyed staying in the historic hotel. The Christmas Tea was a treat and enjoyed by all. All in all we would most likely return.</div><div class='text-box'>The park plaza was very nice,one block from the subway, and only 15-20min to the hotel via subway. <span class='review-span highlight' data-aligned-summaries='3 4'>We asked the front desk for a renovated room and we recieved a king on the 8th floor</span>.<span class='review-span highlight' data-aligned-summaries='4'> the room was small</span> but adequate and very clean. The beds were very comfortable, and there were many channels to choose from an the tv. Room service food was not good, however the front desk promptly apologized and credited our account. Mccormicks and schmiidt was good (the cowder, and fish n' chips). <span class='review-span highlight' data-aligned-summaries='0'>What made our stay even better is that we got it for $100 dollars a night through Priceline's name your own price deal</span>!</div><div class='text-box'>When <span class='review-span highlight' data-aligned-summaries='0'>I found an online price</span> for the well-known Boston Park Plaza Hotel for $149/night, I thought there must be a mistake. Or they were doing construction next door. But I never found any problems and <span class='review-span highlight' data-aligned-summaries='0'>got a wonderful rate for</span> <span class='review-span highlight' data-aligned-summaries='0 1'>a fine hotel</span> <span class='review-span highlight' data-aligned-summaries='1'>at</span> <span class='review-span highlight' data-aligned-summaries='1 2'>a great location near the Boston Garden</span> <span class='review-span highlight' data-aligned-summaries='2'>near the Arlington St. subway stop</span>. In fact, <span class='review-span highlight' data-aligned-summaries='3 4'>we were upgraded</span> <span class='review-span highlight' data-aligned-summaries='3'>for free to the Towers floor</span> <span class='review-span highlight' data-aligned-summaries='4'>and got a huge room</span>, access to a lounge with free breakfast and evening appetizers <span class='review-span highlight' data-aligned-summaries='4'>and</span> to <span class='review-span highlight' data-aligned-summaries='4'>wireless internet</span>. This was a great place to stay for a mixed business/pleasure trip to Boston. I'd have been happy even if I had to pay more for the room.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='9'>All three of the south bank of elevators malfunctioned the entire four days we were there</span>! One group of guests was stuck in elevator #3 for over an hour and a half. My wife and I got stuck between floors twice in elevators #1 and 2 two days in a row when the electronics suddenly just went dead. After fiddling with the buttons it started up again each time after about five minutes. I believe <span class='review-span highlight' data-aligned-summaries='0 1'>these sorts of maintenance/safety issues are unforgivable in a hotel this expensive</span> and we will not be staying there again!</div><div class='text-box'>This <span class='review-span highlight' data-aligned-summaries='1 2'>hotel was very near the Public Gardens</span>,<span class='review-span highlight' data-aligned-summaries='2'> convenient to the Arlington stop on the T and in a central location</span>. <span class='review-span highlight' data-aligned-summaries='4'>The</span> <span class='review-span highlight' data-aligned-summaries='1 4'>rooms were very nice and spacious</span>. <span class='review-span highlight' data-aligned-summaries='5 6'>The staff was friendly and helpful</span>. My only complaint is that the walls were paper thin and we had very noisy neighbors who didn't sleep much on Saturday night. We called security but that was not much help. <span class='review-span highlight' data-aligned-summaries='8'>The hotel</span> did <span class='review-span highlight' data-aligned-summaries='8'>compensate us</span> for this inconvenience <span class='review-span highlight' data-aligned-summaries='8'>with lunch in the hotel restaurant</span>. Otherwise it was a pleasant experience and a good value</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1 3'>The room is fine but they need to finish the remodel</span> with new baths. <span class='review-span highlight' data-aligned-summaries='1'>Providing robes would be nice also</span> (like other fine hotels). <span class='review-span highlight' data-aligned-summaries='2'>The location is good for walking tours</span> of the Back Bay and, across the park, Beacon Hill. We also did the Freedom Trail on foot. <span class='review-span highlight' data-aligned-summaries='7'>An</span> easy and <span class='review-span highlight' data-aligned-summaries='7'>excellent restaurant is across the street</span> (Via Matta) <span class='review-span highlight' data-aligned-summaries='7'>but avoid ordinary Legal Seafoods unless you like boring food</span>. We got a $220 rate (total w/tax) from 1800hotels.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1'>Although</span> <span class='review-span highlight' data-aligned-summaries='1 2'>the location is great</span>,<span class='review-span highlight' data-aligned-summaries='1'> we found</span> <span class='review-span highlight' data-aligned-summaries='1 4'>the room very small</span>,<span class='review-span highlight' data-aligned-summaries='1'> and not soundproof</span>. There are no coffee makers. Would not stay there again.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The hotel was available with a deal through Priceline, but there were some maintenance issues that tarnished the stay a little.</span> <span id="1" class="summary-sentence">In general, a great place to stay for a trip to Boston.</span> <span id="2" class="summary-sentence">The location of the hotel is great for accessing nearby attractions and places to eat.</span> <span id="3" class="summary-sentence">Newly updated rooms, with upgrades on offer for guests to choose if they want to.</span> <span id="4" class="summary-sentence">The upgraded rooms in particular are an excellent size and there is wireless internet for guests to enjoy.</span> <span id="5" class="summary-sentence">Staff at the hotel is very helpful and always available to answer questions.</span> <span id="6" class="summary-sentence">They are very professional and make you feel comfortable.</span> <span id="7" class="summary-sentence">There are plenty of food choices here including seafood.</span> <span id="8" class="summary-sentence">There is lunch provided in the hotel's restaurant too.</span> <span id="9" class="summary-sentence">The hotel's elevators seemed to be malfunctioning a lot.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

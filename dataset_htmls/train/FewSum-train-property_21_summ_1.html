@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>Rude service. When I asked about why <span class='review-span highlight' data-aligned-summaries='1'>their delivery area was so small</span> (I live 8 minutes away), <span class='review-span highlight' data-aligned-summaries='3'>the employee said 'We don't care.</span>' <span class='review-span highlight' data-aligned-summaries='0'>They probably put the same effort into the stuff they call food</span>. I would avoid this place. It would not surprise me if the employees were doing nasty things to the food before serving it.</div><div class='text-box'>Ordered a roast beef from this location at about 12: 15 <span class='review-span highlight' data-aligned-summaries='1'>I asked them to hold on delivery</span> until 1: 00pm. <span class='review-span highlight' data-aligned-summaries='2 3'>I thought when you ask for hold on delivery that's also a hold on making the sandwich</span>. <span class='review-span highlight' data-aligned-summaries='0'>Nothing but the onions and crispy chips saved this sandwich.</span></div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='3'>Too bad-they had excellent service</span> etc. <span class='review-span highlight' data-aligned-summaries='1'>corporate decided they will no longer deliver beyond El Mirage and Bell Road</span>. They have lost $30.00 per week to other companies (Literally 2 steps beyond imaginary boundaries). When they go out of business, due to competition, perhaps they will recognize you should convenience the customers. Good riddance.</div><div class='text-box'>I get hooked on the turkey tom more and more each time I have one! <span class='review-span highlight' data-aligned-summaries='3'>Very nice customer service</span> at this location, (cant say the same for some of the others) and the hubby and 11 year old SSon love the vito. Good prices:)</div><div class='text-box'>Pretty horrible place subway, firehouse, blimpys, mr goodscents, cousins, Jersey mikes, safeway sub, <span class='review-span highlight' data-aligned-summaries='0'>pretty much any other sub place is 100000 times better</span>, <span class='review-span highlight' data-aligned-summaries='3'>the staff was horrible</span> <span class='review-span highlight' data-aligned-summaries='2'>the food tasted like it was left over from last week</span> and this sub franchise has to be the worst in the valley.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Best sandwiches I've had in a long time</span>! <span class='review-span highlight' data-aligned-summaries='1'>And they'll deliver--if you fall in their small delivery zone--</span> 1 sandwich to you. This comes in handy for me while I'm at work and hungry! I love the bread & their mayo. YUM! I usually order the beach club. No complaints from me!</div><div class='text-box'>The food I ordered was ok but <span class='review-span highlight' data-aligned-summaries='3'>the customer service was horrible</span>. The young man taking my order was rude and had no personality. He didn't say hi or even greet me. The lady making my sandwich said hi and was more friendly. <span class='review-span highlight' data-aligned-summaries='0'>The food was not the best</span> but what do you expect from <span class='review-span highlight' data-aligned-summaries='0'>a fast food sandwich</span> shop!</div><div class='text-box'>WOW!!! <span class='review-span highlight' data-aligned-summaries='3'>Amazing customer service here</span>. My wife made a large order and when I came to pick it up, <span class='review-span highlight' data-aligned-summaries='1'>everything was ready and they even loaded it into our car</span>. Great Job Guys!!! We will be back</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The sandwiches tend to below par.</span> <span id="1" class="summary-sentence">This location offers both delivery and take out options, with the delivery area being rather limited.</span> <span id="2" class="summary-sentence">However, the timing is off with take out as it is apparent the sandwiches have been sitting for quite sometime.</span> <span id="3" class="summary-sentence">The customer service is also disappointing.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

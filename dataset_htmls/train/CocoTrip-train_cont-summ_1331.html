@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>Disappointing Was in Hongkong last March and we stayed at the Marco Polo Gateway and enjoyed our stay there, there room and bathroom was big and spacious. As we planned our return and decided to stay at the Marcopolo Hongkong we thought it would be much better as we paid more than we did our last stay and those that have stayed there said that it is better. When we got there, the one checking us in wasnt as accomodating and was charging us more for a connecting room which we originally booked. The <span class='review-span highlight' data-aligned-summaries='1'>rooms were much smaller than the ones at Gateway</span>, we got duvet sheets at gateway where as <span class='review-span highlight' data-aligned-summaries='1'>wool blankets and thin worn out sheets at the Hongkong hotel</span>. I just expected that it would be nicer. Next time i would just stay at the Gateway.</div><div class='text-box'>Fantastic view of the Victoria Harbour There were some works going on in the street when we stayed there in May. But since we chose a habour view room, <span class='review-span highlight' data-aligned-summaries='1'>everything was great!</span> <span class='review-span highlight' data-aligned-summaries='1 2'>The room is spacious</span> and <span class='review-span highlight' data-aligned-summaries='0 3 5'>fantastic view of the Victoria Harbour</span>, especially in the evening when all the building are lighten up on HK island. We were on 9th floor. I believe if we chose a higher floor, the view must be even better.We liked very much the walk-in closet and bathroom. The in room dining was also wonderful.The only thing we didn't like was the hotel entry. You have to take stairs in order to get to the reception and lift. WIth a young kid with us, it was not very convenient. But <span class='review-span highlight' data-aligned-summaries='5 6'>the staff was always ready to help</span>!</div><div class='text-box'>Much better than expected Having booked the Hotel Marco Polo Hongkong mainly due to its location, we were slightly worried given <span class='review-span highlight' data-aligned-summaries='4'>some less than fabulous reviews on tripAdvisor.However, we were more than pleasantly surprised</span>! The hotel is very chic, clean and of a high standard. <span class='review-span highlight' data-aligned-summaries='6'>The front desk staff were excellent and extremely helpful</span> - esp. when our flight from Sydney was delayed on the outbound trip.<span class='review-span highlight' data-aligned-summaries='0 5'>Excellent location</span>, <span class='review-span highlight' data-aligned-summaries='1 2'>very big rooms</span> - <span class='review-span highlight' data-aligned-summaries='3'>ours overlooked the pool area</span> - with plenty of storage space and a great bathroon with shower and full size bath!On our first night, we ate at the Cucina restaurant which is within the hotel complex and the food, wine and cocktails were fabulous! Our waiter was exceptional, knowledgeable and very friendly without being intrusive.<span class='review-span highlight' data-aligned-summaries='5'>We would most definitely stay here again</span>.</div><div class='text-box'>Great hotel, good location We stayed at this hotel Nov '04 as a stopover on route from Australia. On arrival we were upgraded to to the Continental Club free of charge. <span class='review-span highlight' data-aligned-summaries='1 2'>The room was</span> <span class='review-span highlight' data-aligned-summaries='1'>wonderful</span> and <span class='review-span highlight' data-aligned-summaries='2'>very spacious</span>, the bathroom was large and luxurious. <span class='review-span highlight' data-aligned-summaries='1'>The furniture was very good quality</span> and the beds were just heaven. <span class='review-span highlight' data-aligned-summaries='3'>The</span> <span class='review-span highlight' data-aligned-summaries='1 3'>view</span> <span class='review-span highlight' data-aligned-summaries='3'>from our room</span> <span class='review-span highlight' data-aligned-summaries='1 3'>was amazing</span>, we looked over Hong Kong harbour.<span class='review-span highlight' data-aligned-summaries='6'>The staff were extremely friendly and efficient</span>. We were given a voucher when we arrived for a free cocktail in the bar (a very nice touch).Breakfast was really good. Excellent choice of chinese and continental food to choose from.I could not fault this hotel in anyway. <span class='review-span highlight' data-aligned-summaries='0 5'>Good location</span>,<span class='review-span highlight' data-aligned-summaries='5'> good food, excellent service</span> and fab rooms.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 5'>fantastic location</span> We stayed in this hotel in December for three nights, as a stop off on our way to Australia. We loved the location of it, right bang in the centre of Kowloon, and a two minute walk to the Star ferry.Our <span class='review-span highlight' data-aligned-summaries='2'>room was</span> fine, <span class='review-span highlight' data-aligned-summaries='2'>large</span> enough with two double beds, and really clean. We were initially offered an upgrade, but when the girl on the desk checked it out it was unavailable for the three nights, which was very disapointing. <span class='review-span highlight' data-aligned-summaries='1'>I think it is time for the hotel to modernise the bedrooms</span> as when you arrive the reception is very grand which leads you to expect more from the rooms, but all in all we enjoyed our stay here and would return.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='5'>Fantastic location</span> - scruffy rooms The foyer of the hotel is luxurious but the <span class='review-span highlight' data-aligned-summaries='1'>rooms are tired and very dirty</span>. Carpet was the sort your feet stick to! <span class='review-span highlight' data-aligned-summaries='6'>We were offered an upgrade</span> at a price but as we were only here for a few nights and were sightseeing all day we didn't bother. <span class='review-span highlight' data-aligned-summaries='0'>Location is</span> however <span class='review-span highlight' data-aligned-summaries='0'>wonderful</span> - walking distance of the Star ferry and on top of the shops. There was a free shuttle bus from the Kowloon station and on our journey to the airport we were able to check in our luggage at the station and then catch the train without lugging our cases. Hong Kong was just great - a good start to our 3 month round the world trip.</div><div class='text-box'>Great location We stayed here on the first leg of our honeymoon in October. <span class='review-span highlight' data-aligned-summaries='1'>The room was nicely furnished and comfortable</span> with <span class='review-span highlight' data-aligned-summaries='3'>a great view of the harbour</span>, though there was a bit of a musty smell, but it wasn't too bad. <span class='review-span highlight' data-aligned-summaries='6'>The staff were friendly and helpful</span> and there was a very good selection for breakfast. This is a good standard hotel, but <span class='review-span highlight' data-aligned-summaries='5'>the best thing about it is</span> <span class='review-span highlight' data-aligned-summaries='0 5'>the location</span>,<span class='review-span highlight' data-aligned-summaries='5'> which</span> <span class='review-span highlight' data-aligned-summaries='0 5'>is perfect</span>. You are on Kowloon, walkable to Nathan Road and the Peninsula, a short taxi to the Temple Street night market and right by the Star Ferry terminal to go and explore Hong Kong Island. This is the hotel's real plus point.</div><div class='text-box'>You pay for the view. We decided to upgrade to a harbour view suite which was <span class='review-span highlight' data-aligned-summaries='1 2 5'>a lovely large room</span> on the 8th floor <span class='review-span highlight' data-aligned-summaries='0 5'>with</span> <span class='review-span highlight' data-aligned-summaries='0 3 5'>a wonderful view of the harbour</span>. However <span class='review-span highlight' data-aligned-summaries='0'>it was very expensive</span> and you would have to sit in the room all day looking at the view to get your moneys worth (they know how to charge for the view!).We were on our way home after several weeks in cramped rooms in Europe so we really enjoyed the space and the view - but there are probably better value rooms and hotels in Hong Kong.However if money is not the issue you would find a harbour view suite in the MP hard to beat.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Overpriced but good location.</span> <span id="1" class="summary-sentence">Rooms are disappointing - everything looked worn out.</span> <span id="2" class="summary-sentence">and the room was the size of a postage stamp.</span> <span id="3" class="summary-sentence">The view was not very good either.</span> <span id="4" class="summary-sentence">The room was not reminiscent of the website at all!</span> <span id="5" class="summary-sentence">Saying that we had a good time as the location was really good</span> <span id="6" class="summary-sentence">and once you could speak to the staff they were very helpful.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

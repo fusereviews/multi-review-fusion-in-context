@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>love the Resor, but oh no! <span class='review-span highlight' data-aligned-summaries='0 5'>the Resor is</span> <span class='review-span highlight' data-aligned-summaries='0 1 5'>a great quality hotel in a fabulous location</span>. i have stayed there a few times now over the years and the standards seem to have remained the same. the staff are really lovely, rooms a big and airy and the location on <span class='review-span highlight' data-aligned-summaries='0 5'>Seminyak beach is excellent</span>. while i was there though we were told that they are closing in the early new year, for about 3 years and will re-open as a five star hotel.as if Seminyak needs more of them!. Seminyak is becoming more westernised with upmarket villa developments and familar branded shops moving in - such a shame. If you are staying in this area, make sure you get out and eat at the local warangs, away from the western/indo food in the upmarket hotels.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 1 5'>Love the Resor</span> <span class='review-span highlight' data-aligned-summaries='5'>Our 4th stay</span> at Resor Seminyak <span class='review-span highlight' data-aligned-summaries='5'>in 10 years</span>.We have got to know some of the staff quite well, who are always very friendly and helpful.Starting to look a little rough around the edges outside (from being <span class='review-span highlight' data-aligned-summaries='2'>right on the beach</span>) but soon to be knocked down and rebuilt - which in some ways is quite sad.<span class='review-span highlight' data-aligned-summaries='0 1 2'>Just a nice distance from the madness of Kuta</span> if you want to escape - but only a 10 minute trip on the free shuttle away.Walking distance from the endless line of restaurants on Jalan Lasmana.<span class='review-span highlight' data-aligned-summaries='4'>The all-you-can-eat breakfast buffet is a highlight</span> and Happy Hour from 3.00-6.00pm with 1/2 price drinks at the sunken poolbar is another. The spa is great and very reasonably priced.Will be interested to see if the charm is still there when rebuilt.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 5'>Great place for a break</span> Spent a week there after the hustle and bustle of Singapore.<span class='review-span highlight' data-aligned-summaries='1'>Everyone really friendly and the hotel was good value</span>.Although looking its age a little it is the staff that make it a great place.We were on half board and although the food was good the evening meal was never busy, most prefering the short walk to all the other local places.Booked a trip covering the main sights through Asian Trails ended up we were the only two on this with our own taxi and driver complete with guide.Excellent value and a hell of a day out covering the dance, a visit to the temples and lunch overlooking the volcano to mention but a few.It did rain but it was mainly overnight and the days were fine if a little humid</div><div class='text-box'>4-5 star with 3 star prices <span class='review-span highlight' data-aligned-summaries='0'>Looking for</span> <span class='review-span highlight' data-aligned-summaries='0 2'>a more relaxed resort</span> <span class='review-span highlight' data-aligned-summaries='0'>on the beach, this is the one</span>! <span class='review-span highlight' data-aligned-summaries='1 5'>Great grounds, pool and beach area and lovely rooms</span> <span class='review-span highlight' data-aligned-summaries='5'>at a good price</span>. Before heading to Lombok for complete serenity, we stayed here for one week for our honeymoon. They have a wonderful oveanfront SPA and friendly service all day. Fun activities for kids and adults at night, but only a 10 minute taxi to Kuta for all the nightlife you need. The great Kudeta restaurant is only a 2 minute walk from the hotel and with live music and a great beach view bar and outdoor restaurant.who needs more. And for us surfers, the break outside the resort can be perfect at times.</div><div class='text-box'>Relaxing Resor Our 5 nights at the Resor were <span class='review-span highlight' data-aligned-summaries='0'>very enjoyable</span>. Our enjoyment was increased greatly by the attitude and service of the friendly and helpful staff. <span class='review-span highlight' data-aligned-summaries='1'>The grounds of the hotel are lovely</span> and the location between the two best breakfast venues in Bali (La Lucciola and Ku de Ta) was perfect. We paid a little extra for a superior room which was very spacious and well equipped (apart from useless hairdryer which cut out every 30 secs). This was the first time we have stayed <span class='review-span highlight' data-aligned-summaries='0 1'>in North Seminyak</span> and <span class='review-span highlight' data-aligned-summaries='5'>we will definitely return</span> - <span class='review-span highlight' data-aligned-summaries='0 1'>Resor is a little gem</span>.</div><div class='text-box'>A tired hotel We <span class='review-span highlight' data-aligned-summaries='0 5'>stayed</span> in the hotel <span class='review-span highlight' data-aligned-summaries='0 5'>for 2 nights</span> and <span class='review-span highlight' data-aligned-summaries='0 5'>were</span> very <span class='review-span highlight' data-aligned-summaries='0 5'>glad it was not for longer</span>. Our stay was in the rooms in Taipan village. <span class='review-span highlight' data-aligned-summaries='1'>The accomodation was</span> far from the main hotel and was <span class='review-span highlight' data-aligned-summaries='1'>small dark and dingy</span>. The room including the ensuite although clean needed updating .The statement from the front desk was but the hotel is 18 years old ! A poor excuse This hotel is German run and it functions Just about . <span class='review-span highlight' data-aligned-summaries='0 5'>The fact that an item was stolen on arrival in the reception did not endear this hotel to us</span>.<span class='review-span highlight' data-aligned-summaries='0'></span></div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>cheap luxury</span> I stayed <span class='review-span highlight' data-aligned-summaries='0'>at the Resor Seminyak</span> twice the last two summers and find it <span class='review-span highlight' data-aligned-summaries='0 5'>an excellent choise</span>! The first time I had only booked for three nights but ended up staying three weeks at the resort.<span class='review-span highlight' data-aligned-summaries='1'>Great service</span>, <span class='review-span highlight' data-aligned-summaries='4'>good breakfast</span>, <span class='review-span highlight' data-aligned-summaries='1 2'>fantastic location on the Seminyak beach</span> <span class='review-span highlight' data-aligned-summaries='2'>far away from the craziness of Kuta</span>. I stayed at several hotels on Bali but <span class='review-span highlight' data-aligned-summaries='5'>will for sure choose this again next time</span> I am back!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1'>Nice Place</span> Wee stayed twice in this hotel, and feel it a good place to stay if you manage to get a good deal on the higher end rooms. The location is unbeatable, in the middle of trendy Seminyak, and <span class='review-span highlight' data-aligned-summaries='3'>near the Legian hotel</span> and Ku De Ta restaurant. Go to Ku De Ta for breakfast (order the ricotta pancakes), sunset cocktails, and dinner.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Wonderful time at the Resort Seminyak.</span> <span id="1" class="summary-sentence">The Resort Seminyak is a lovely hotel.</span> <span id="2" class="summary-sentence">The beach is the same one you have in Kuta (on the sunset side of Bali) just in a more quiet area.</span> <span id="3" class="summary-sentence">The hotel is next to the Oberoi and the Legian, two of the most expensive hotels on the island.</span> <span id="4" class="summary-sentence">The hotel has two pools and the breakfast is great - especially because of the great beach view!</span> <span id="5" class="summary-sentence">We will definetly go back to the Resort Seminyak and would recommend it to anyone.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>On a recent extended visit to Boston (2+ weeks), we were lucky enough to stay at the Colonnade Hotel. This hotel is head and shoulders above other area hotels! <span class='review-span highlight' data-aligned-summaries='0'>The rooms are</span> decorated with a quiet sophistication that is <span class='review-span highlight' data-aligned-summaries='0'>very comfortable</span> (feather pillows and comforter, wool throw blanket), and every person we encountered on <span class='review-span highlight' data-aligned-summaries='2'>the staff - from housekeeping to the front desk - was helpful, courteous, and kind</span>. The attached restaurant, Brasserie Jo, not only has very delicious food and a charming atmosphere, but also some of the best service we have encountered anywhere. As a whole, the service in the hotel was exceptional, and we want to thank in particular the front desk staff, concierge Jerry Good, and doorman Norman Maines. This hotel is superb in every respect, we could not recommend it more highly - we would never think of staying anywhere else in Boston.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2'>The service was outstanding from check-in to check-out</span>. The room service was outstanding, along with the guys up front, class act. <span class='review-span highlight' data-aligned-summaries='1'>The location is so nice and very easy to move around the City</span>. <span class='review-span highlight' data-aligned-summaries='1'>So many great places to eat around the hotel</span>. Nice size gym on the 5th floor with several carido machines. The Colonnade made my first stay in Boston a unique one and i will be back with my family. I felt very safe at all times and i felt like i was in the center of all activity with that location.</div><div class='text-box'>I stayed here for a wedding. While the wedding party was treated well, I was often treated poorly and spoken to as if I were trespassing on the property. The room was average and the shower was VERY bad. The water pressure was painful and I felt that the shower head was going to fall off. The TV was the smallest hotel TV I have ever seen. Upon checkout, the <span class='review-span highlight' data-aligned-summaries='2'>front desk left me on hold</span> for a long time to answer a simple question. I would not recommend this hotel to anyone.</div><div class='text-box'>My husband and I first stayed here for our wedding weekend and enjoyed it so much we returned for our first anniversary. <span class='review-span highlight' data-aligned-summaries='0'>The rooms are spacious, clean, and very comfortable</span>-ditto the bathrooms. <span class='review-span highlight' data-aligned-summaries='2'>The staff are polite, courteous, a thoughtful</span>-we even received a fruit and cheese plate in honor of our anniversary. We also <span class='review-span highlight' data-aligned-summaries='1'>love the location-within walking distance to Back Bay and the South End</span>-both great walking neighborhoods. And the T is right out front if you're going further afield.</div><div class='text-box'>Let's make this simple from the very first greeting from Norman Maines the exceptional greeter/doorman/guest advocate my entre stay this was an exceptional experience. With Norman setting the standard each and every time I entered and exited it was not surprising to find <span class='review-span highlight' data-aligned-summaries='2'>the entire team above the norm</span> and the rooms <span class='review-span highlight' data-aligned-summaries='2'>and service to match</span>. This is one boutique that gets it and knows how imortant the selection of team mebers is.</div><div class='text-box'>We had a great week in Boston staying at the Colonnade. <span class='review-span highlight' data-aligned-summaries='0'>It was very clean and comfortable</span> and the bathroom was excellent. <span class='review-span highlight' data-aligned-summaries='2'>The hotel staff were very helpful and polite</span>, especially Norman. If I visited Boston again, I would definately stay at the Colonnade Hotel and would recommend it to my friends.</div><div class='text-box'>I stayed at the Colonnade for four nights for a recent conference. <span class='review-span highlight' data-aligned-summaries='1'>It is immediately adjacent to numerous things: a T connection, two fair-sized shopping plazas, several restaurants, and the Hynes Convention Center</span>. Further, <span class='review-span highlight' data-aligned-summaries='2'>the staff was super friendly and super helpful</span>. Thanks!</div><div class='text-box'>In Boston for a graduation and combined leisure trip. <span class='review-span highlight' data-aligned-summaries='0'>The Colonnade was very comfortable</span>, convenient and <span class='review-span highlight' data-aligned-summaries='2'>friendly</span>. Highly recommend and would go back. Restaurant excellent.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The rooms are perfectly spacious, clean and comfortable.</span> <span id="1" class="summary-sentence">The hotel is well-located as it is within walking distance to some good sights.</span> <span id="2" class="summary-sentence">Finally, the staff were always friendly and helpful too.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

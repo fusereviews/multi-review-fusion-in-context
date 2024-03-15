@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>So I came here today and <span class='review-span highlight' data-aligned-summaries='4'>it was alright but</span> the only problem I had was with <span class='review-span highlight' data-aligned-summaries='2 3 4'>the host named marisela she was a very rude bitch</span> <span class='review-span highlight' data-aligned-summaries='2'>who has staring problems</span> lol but yeah that's the only problem I have eating there. Anyways <span class='review-span highlight' data-aligned-summaries='3'>I love the server named arcy</span> I do recommend him to others as he is very nice:))))))</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>IHOP is IHOP</span>.... so the 2 star rating is not for the nation wide chain, it's for this specific location. <span class='review-span highlight' data-aligned-summaries='2 4'>This IHOP has really really bad service</span>, <span class='review-span highlight' data-aligned-summaries='3'>food takes a long time to show up</span>, drink refiles never come, and it's not as clean as I would like.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2'>Horrible service</span> we put our name in never got called was skipped and host said he called our name when he never once called our name.... Will not be coming back <span class='review-span highlight' data-aligned-summaries='3'>after 30 min wait and he is telling everyone 10-15 min wait</span>.... As he had already crossed off our name...... Service was horribleDoes Not Deserve 1 Star only gave cause I had to...</div><div class='text-box'>i prefer breakfast its plentyful and the price is right, however i sometimes do dinner. i am really not a fan of dinner at ihop. <span class='review-span highlight' data-aligned-summaries='1 4'>not a lot of selection</span> <span class='review-span highlight' data-aligned-summaries='4'>and</span> <span class='review-span highlight' data-aligned-summaries='1 4'>the price is higher than i think it should be</span> <span class='review-span highlight' data-aligned-summaries='4'>for an ihop</span>. <span class='review-span highlight' data-aligned-summaries='2 3'>service is great though</span>,<span class='review-span highlight' data-aligned-summaries='3'> i have been going for years</span>.</div><div class='text-box'>On September 13, 2014 we went to this IHOP again. We were seated and given menus but after that <span class='review-span highlight' data-aligned-summaries='3 4'>we were completely ignored</span>. <span class='review-span highlight' data-aligned-summaries='3 4'>The server never did come back</span> to take our order and after about 15 minutes of waiting we got up and left the restaurant, unable to even order our food.<span class='review-span highlight' data-aligned-summaries='2 4'>Extremely poor service</span>.<span class='review-span highlight' data-aligned-summaries='4'></span></div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2 3 4'>We had an amazing server</span>.<span class='review-span highlight' data-aligned-summaries='3'> Her name is Kari</span>. She was very pleasant and very attentive to our needs. <span class='review-span highlight' data-aligned-summaries='1 4'>The food was great too</span>. I will definitely keep coming here for the food but mainly for her and the amazing service that she gives!!</div><div class='text-box'>We had an early before workday breakfast here and the <span class='review-span highlight' data-aligned-summaries='1'>food was delicious</span>. Best of all was the <span class='review-span highlight' data-aligned-summaries='2'>warm energetic and</span> <span class='review-span highlight' data-aligned-summaries='2 3'>friendly service</span> <span class='review-span highlight' data-aligned-summaries='3'>from Jen</span>. At 5am she was bubbly smiling and so pleasant. It truly was a great start to the day. Thank you Jen for a great experience!</div><div class='text-box'>I didn't give one star because this if the first time this has happened. We got some pancakes to go / pickup. <span class='review-span highlight' data-aligned-summaries='2'>The cook must have been multitasking a bit too much</span>. <span class='review-span highlight' data-aligned-summaries='1 4'>Our stack of pancakes were burnt</span>. <span class='review-span highlight' data-aligned-summaries='4'>Not happy</span> when we got home and opened the container....</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This IHOP has prices and food typical of any IHOP.</span> <span id="1" class="summary-sentence">The food is OK, as are the prices, in general.</span> <span id="2" class="summary-sentence">The main problem is the service.</span> <span id="3" class="summary-sentence">While some individual waitstaff are friendly, other waitstaff and especially management are slow, rude, or disappear entirely.</span> <span id="4" class="summary-sentence">This IHOP is not recommended.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

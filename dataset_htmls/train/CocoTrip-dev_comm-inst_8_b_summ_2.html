@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>The Orto de' Medici Hotel, Florence This medium-priced Hotel offers a very good price to service ratio. The rooms are very clean and being an old but refurbished building, it has high and well appointed rooms.The hotel offers - as a garni hotel - an excellent breakfast (self-service from two tables). Being not on a thoroughfare, it is quiet at night. <span class='review-span highlight' data-aligned-summaries='1 2'>Its situation in relation to the main attraction, the Piazza del Duomo, is a seven to ten minute's walk</span>. There are plenty of restaurants in the vicinity, especially just opposite is the restaurant Il Cardellino. At the reception English and French is spoken. <span class='review-span highlight' data-aligned-summaries='3'>The service personnel is very friendly</span> and is supervised by the proprietor himself.The Hopp on / Hopp-off Bus can be taken from the Piazza San Marco, approximately 200 meters from the hotel Orto de' Medici, where also other regular bus lines part for the hinterland.</div><div class='text-box'>A room with a view What a great place! Just returned from 4 nights here and delighted with the choice. <span class='review-span highlight' data-aligned-summaries='0 1'>Central location -</span> <span class='review-span highlight' data-aligned-summaries='0 1 2'>only a few minutes walk from the Accademia</span>,<span class='review-span highlight' data-aligned-summaries='1'></span> but tucked away in a side street so as quiet as it can be in Florence (or any major city for that matter!). Ask for room 45, on the 4th floor (don't panic there is a lift), if you want a room with a balcony <span class='review-span highlight' data-aligned-summaries='2'>and</span> <span class='review-span highlight' data-aligned-summaries='1 2'>a view over the roof tops to the Duomo</span> <span class='review-span highlight' data-aligned-summaries='2'>and Campanile</span>. Continental breakfast was light but adequate, but hotel too small to serve dinner - not a problem with so many good restaurants to choose from! Go and enjoy!</div><div class='text-box'>Short walk from the Madding crowds of Firenze The website was accurate in its promises. The service to arrange for private pick-up from the train station to the airport was excellent as was the arranging for museum tickets. Contact to confirm reservations was propmpt. The rooms are simple, but clean and we slept well for five restful nights. The common room is very comfortable, as is the breakfast area. The patio serves dynomite gin tonics for happy hour. <span class='review-span highlight' data-aligned-summaries='2'>The hotel is a pleasant walk from the main downtown sights</span> in a less touristy and more local scene. Would definitely stay there again.</div><div class='text-box'>Good 3 star hotel in Florence Good 3-star hotel <span class='review-span highlight' data-aligned-summaries='0'>in central Florence,</span> <span class='review-span highlight' data-aligned-summaries='0 1'>very close to the</span> <span class='review-span highlight' data-aligned-summaries='0'>Accademia and to the</span> <span class='review-span highlight' data-aligned-summaries='0 1'>Duomo</span>. Lots of restaurants nearby. Room is fairly spacious but basic in decor and clean. Bedroom windows are double-paned, so that noise is not a problem. Bathroom could use a little updating but would speculate that it has been updated within last 10 years. Good American style stand-up shower. The breakfast, which is included in the price of the room, is well above average and in a lovely room which also has a very nice terrace. <span class='review-span highlight' data-aligned-summaries='3'>Friendly front desk</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='3'>Extremely friendly/helpful staff</span> here! The Orto De Medici was a wonderful hotel, <span class='review-span highlight' data-aligned-summaries='0'>perfectly located in Florence</span>. The continental breakfast was grand and offered world travelers a diverse selection of foods and drinks.The hotel is superbly clean and beautifully decorated. The front desk staff was the best I've ever encountered. They were compassionate with our lost luggage situation and gladly booked us reservations for the Uffizi gallery.Although the walls are a bit thin in the room and it seemed a bit noisy at night.I would stay at this hotel a thousand times over.Thanks for a fabulous stay.</div><div class='text-box'>Wonderful We had a wonderful week's stay at this charming hotel. <span class='review-span highlight' data-aligned-summaries='3'>The service was first class</span>, the room and bathroom were spacious and immaculately clean.The best part, however was the sun-lit , beautifully appointed breakfast room with, again, perfect service.We would definitely go back when we return to Florence.</div><div class='text-box'>Absolutely Lovely! <span class='review-span highlight' data-aligned-summaries='0 1'>A view from the Bell Tower looking at the Duomo</span></div><div class='text-box'>My favorite Italian experience <span class='review-span highlight' data-aligned-summaries='0'>In front of the Hotel Orto De Medici</span></div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The location is great.</span> <span id="1" class="summary-sentence">It's close to the Duomo, and only a couple of streets away from the piazza and is at the heart of the city.</span> <span id="2" class="summary-sentence">With easy walking distance from some of the major attractions.</span> <span id="3" class="summary-sentence">The staff is friendly.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

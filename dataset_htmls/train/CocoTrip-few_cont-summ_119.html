@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>We were originally due to stay for 10 nights and we booked for three people - my teenager daughter and her friend and myself. On arrival in the room the beds were very small double beds and only two of them - I spoke to the manager who said that all the rooms were exactly the same (untrue) and that for an extra $10 we could have a rollaway bed. <span class='review-span highlight' data-aligned-summaries='3'>The rooms are far too small for more than two people</span>. The site is not well maintained and the pool not clean. We were then stranded due to the volcano and having enquired about staying for an additional five nights was told that we could have a special price of $39 per night - only to find out on the website for the hotel that the cost for that period of time would be $32 per night. Scammed! I would not recommend this hotel to anyone - there are far better places to stay which are closer to the amenities.</div><div class='text-box'>This is the second time we have stayed at this hotel and both times have been totally trouble free. <span class='review-span highlight' data-aligned-summaries='0'>We stayed for 10 nights and had no problems</span>. The room was clean and was cleaned every day, towels and bed sheets changed we came back every day to <span class='review-span highlight' data-aligned-summaries='3'>a spotless room</span>. We only seen reception staff to check in and out but they seemed friendly enough and there were no additional charges over what we paid when we booked. <span class='review-span highlight' data-aligned-summaries='1'>The location is exellent, took about 10 mins to get to disney and about 20 mins to Universal and Seaworld</span>. <span class='review-span highlight' data-aligned-summaries='4'>Aircon and tv worked well</span> and <span class='review-span highlight' data-aligned-summaries='4'>there was always a parking space outside our room</span> despite the hotel being quite busy over spring break. I will definatly stay here again if back in Orlando :)</div><div class='text-box'>The "Hotel" is actually like something straight out of My Name is Earl. <span class='review-span highlight' data-aligned-summaries='3'>Filthy carpets</span>, <span class='review-span highlight' data-aligned-summaries='3'>bugs in the refridgerator</span> and all over the room. Horrendously misrepresented by the pictures on the website, the bbq area and lagoon are disgraceful. I paid for 2 star Quality, but <span class='review-span highlight' data-aligned-summaries='0'>would never stay here, recommend it, etc</span>. In fairness the staff are very friendly and all issues raised were dealt with, they seem to know with the quality of their resort, they HAVE to provide good service. Bar is very reasonable, with Long Island Iced tea recommended. My honest advice, not even worth the small amount paid, I will never stay here again, you have been warned!</div><div class='text-box'>Is a nice <span class='review-span highlight' data-aligned-summaries='0'>hotel with many amenities</span>, room service was excellent. The shuttle was not so confy, because run for 3 hotels, but Champions is the first so you can have a seat haha. If you have a car, fine, because if you don't have a car you don't have many alternatives to eat. I like this hotel and really recomend it. <span class='review-span highlight' data-aligned-summaries='2'>This hotel is near to</span> a Chinese buffett, <span class='review-span highlight' data-aligned-summaries='2'>Dominos Pizza, Pizza Hut</span>, Walgreens, <span class='review-span highlight' data-aligned-summaries='2'>McDonalds</span>.</div><div class='text-box'>This is one of my favorite hotels in Kissimmee. It is a Instead super comfortable, <span class='review-span highlight' data-aligned-summaries='1'>accessible parks and disney</span> <span class='review-span highlight' data-aligned-summaries='2'>all the best places you can eat</span> in your vacation. The attention is very satisfactory. I have two Sometimes visiting this hotel and will not be the last. since <span class='review-span highlight' data-aligned-summaries='0'>its price</span> and the comfort of your rooms <span class='review-span highlight' data-aligned-summaries='0'>make your stay a very welcoming.</span></div><div class='text-box'>I had a lovey stay. <span class='review-span highlight' data-aligned-summaries='0'>The resort is a value</span>, and taking the back road on Sherberth, <span class='review-span highlight' data-aligned-summaries='1'>I traveled to Disney in 6 minutes</span>. The staff is warm and attentive. I felt like I was at home with family.</div><div class='text-box'>Champions World Resort was exactly what we were looking for. A brief relaxing weekend near Orlando Fl. <span class='review-span highlight' data-aligned-summaries='3'>The</span> <span class='review-span highlight' data-aligned-summaries='0 3'>rooms were nice</span> <span class='review-span highlight' data-aligned-summaries='3'>and clean</span>, and <span class='review-span highlight' data-aligned-summaries='0'>the hotel staff was very responsive</span> and attentive to our needs. I highly recommend this resort.</div><div class='text-box'>We stay here every year. I like the hotel, <span class='review-span highlight' data-aligned-summaries='3'>its clean</span>, the employees are very nice and <span class='review-span highlight' data-aligned-summaries='0'>the prices are great</span>. I will continue to stay here!</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The hotel is cheap but adequate for a short stay or long stay.</span> <span id="1" class="summary-sentence">This hotel is ideally located for some of the main tourist attractions such as Disney and Universal, which is very convenient.</span> <span id="2" class="summary-sentence">It is also perfectly central to some of the big chain restaurants, which is perfect after a busy day sightseeing in a busy area.</span> <span id="3" class="summary-sentence">The rooms are too small and there are bugs in the refrigerator and the carpets need a good clean.</span> <span id="4" class="summary-sentence">The positives were that both the TV and the aircon worked fine and there was plenty of parking.</span> <span id="5" class="summary-sentence">The BBQ and lagoon are represented differently, in a much more positive way in the pictures than what they actually are.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

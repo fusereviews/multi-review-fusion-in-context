@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='4 5'>I loved the hotel itself</span> <span class='review-span highlight' data-aligned-summaries='5'>but everything else turned me off to it</span>. <span class='review-span highlight' data-aligned-summaries='0'>The front desk women was rude</span> and really didn't want to help at all. The cleaning people were apparently having a meeting in the middle of the hall we when I was clealy struggling to carry all my bags past them. They all just looked and continued talking. <span class='review-span highlight' data-aligned-summaries='3'>The room itself wasn't bad</span>. It was cool having a fitness center in the hotel as well. The pool and pool area was nice but it was right near a busy highway so there was constantly traffic buzzing along at all times of the day. The neighborhood was kind of sketchy as well. And you should probably learn spanish before you come visit. Only some of the staff at the nearby Taco Bell spoke English.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='5'>This place is ridiculous</span>. <span class='review-span highlight' data-aligned-summaries='0 5'>The front desk person habitually lies</span>. <span class='review-span highlight' data-aligned-summaries='6'>We waited(AND ARE STILL WAITING) at the Miami Airport for over an for the shuttle</span>, He JUST arrived 1 HR 43 min after the first call. The shuttle to the Port of Miami really doesn't leave until noon, but they want you out AT 11 so they tell you to be in the lobby by 10:45 leaving you to wait in the parking lot/LOBBY for over an hour. NO SUCH THING AS CONTINENTAL breakfast you must pay $5.00 JUST FOR EGGS, toat and coffee. NEVER AGAIN! THE COUPLE RIDING with us agreesTHEY WAITED 1HR AND 15 MIN. The comforter had been burned with an iron and they had it on the bed like it was good to use-not good. KATINA-MICHIGAN</div><div class='text-box'>I say this because <span class='review-span highlight' data-aligned-summaries='1 2'>the first floor smells like a cigarette break room</span>. Luckily <span class='review-span highlight' data-aligned-summaries='2 5'>I asked for a non-smoking room</span> on the second floor, but you can only do so much to get the smoke out. <span class='review-span highlight' data-aligned-summaries='2 3 5'>I could still smell a little of the smoke in the bed covers</span>, which I'm assuming they use in all of the rooms. (The <span class='review-span highlight' data-aligned-summaries='3'>quarter-sized burn hole I found in my covers</span> gave it away.) <span class='review-span highlight' data-aligned-summaries='3'>The rest of the room was fine</span>, kind of old, neither good nor bad, a little ugly, but <span class='review-span highlight' data-aligned-summaries='4'>I was really just there to get a quick start to the airport the next morning. Which I did</span> - in their <span class='review-span highlight' data-aligned-summaries='6'>free, smoke-stinking shuttle</span>.</div><div class='text-box'>We stayed at this hotel because it was close to the airport with a free shuttle. We stayed here for 2 nights after our cruise docked. <span class='review-span highlight' data-aligned-summaries='4'>The hotel was dark, old decor, and a little dirty</span>. The room however was much nicer and better maintained than other common areas of hotel. The pool was large and seemed nice although we did not go in. Hotel is located next to airport with GREAT shopping and eating within 10 minute drive. <span class='review-span highlight' data-aligned-summaries='6'>The Shuttle was Great to the airport</span>. <span class='review-span highlight' data-aligned-summaries='4 5'>Overall not a great place for the family</span> but <span class='review-span highlight' data-aligned-summaries='4'>ok if you only want a quick place to sleep</span> while catching a ship or plane.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='4 5'>Unless you are desperate to save a dollar, do not stay here</span>! We stayed the night before a cruise. <span class='review-span highlight' data-aligned-summaries='6'>They had a courtesy shuttle to the port, but the driver charged us a $2 per person "luggage handling fee</span>". The place is run down. They advertise a fitness room, but 3 out of the 5 machines were broken and it was filthy! Also, there is NOTHING around there. Although I have to say; the <span class='review-span highlight' data-aligned-summaries='6'>shuttle picked us up promptly</span> at the airport, and <span class='review-span highlight' data-aligned-summaries='0'>the front desk people were very nice to us</span>. But it really kind of grossed me out!</div><div class='text-box'>We had stayed at t his hotel last year before our cruise. Granted <span class='review-span highlight' data-aligned-summaries='4'>it is not a "nice" hotel but it served the purpose for an overnight</span> and the <span class='review-span highlight' data-aligned-summaries='6'>free shuttle</span> to the pier <span class='review-span highlight' data-aligned-summaries='6'>was great</span>. This time the shuttle casts 6.00per person and then they charge $2.00 per person for the luggage once in the van. The room was okay, but <span class='review-span highlight' data-aligned-summaries='1 2'>the first room we were given reaked of smoke</span> and dirt. we were moved to the 4th floor and that roomwas better. Didn't take a shower the next morning, the tub was a little shaky. <span class='review-span highlight' data-aligned-summaries='4 5'>Won't stay there again</span>.</div><div class='text-box'>The only good thing about this hotel was the free shuttle to the cruise. Also, be aware that <span class='review-span highlight' data-aligned-summaries='6'>there are several Days Inn airport</span> buses. We got on the wrong bus with another couple and then called our hotel and <span class='review-span highlight' data-aligned-summaries='6'>they sent the right bus to transport us</span>. <span class='review-span highlight' data-aligned-summaries='4 5'>The hotel was filthy</span>. The hallways looked like they had never been cleaned. <span class='review-span highlight' data-aligned-summaries='1 2'>The non-smoking room smelled like a smoking room</span>. We were afraid to walk barefoot on the carpet<span class='review-span highlight' data-aligned-summaries='4'>.</span> <span class='review-span highlight' data-aligned-summaries='4 5'>We will not stay there again</span>.<span class='review-span highlight' data-aligned-summaries='4'></span></div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='4'>Stayed here one night to catch a curise ship</span>. <span class='review-span highlight' data-aligned-summaries='4'>The room was comfortable & clean</span>. The hotel had free transport to the pier. The only complaint was that <span class='review-span highlight' data-aligned-summaries='6'>we waited 45 min. at the airport for the shuttle</span> (the drive between hotel & airport was 10 min.)</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The front desk person was nice enough and from the oudside the hotel looked ok.</span> <span id="1" class="summary-sentence">The main problem was the smell of smoke.</span> <span id="2" class="summary-sentence">It was really overpowering in the hallways and the room itself smelled of smoke.</span> <span id="3" class="summary-sentence">The bedspread needed changing and the room was not spotless but nothing too bad.</span> <span id="4" class="summary-sentence">The hotel was ok for just one night but if we had to stay here on holiday</span> <span id="5" class="summary-sentence">I think we would probably have found somewhere else.</span> <span id="6" class="summary-sentence">The shuttle to the airport was fine.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

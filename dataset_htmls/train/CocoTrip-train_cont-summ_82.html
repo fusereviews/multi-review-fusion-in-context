@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>A friend who lives in London booked us in this hotel because it was the cheapest in this area. We had two triple rooms with private shower and toilet, we paid 79 pounds per room per night and this price also included breakfast. The first thing we checked when we went in the room was the beds if they were comfortable - they were new and comfortable, the <span class='review-span highlight' data-aligned-summaries='0'>rooms were clean</span> and the toilets spotless. we are very happy with the hotel and <span class='review-span highlight' data-aligned-summaries='2'>we will go back again</span> and we'll <span class='review-span highlight' data-aligned-summaries='3'>recommend it to other people</span>.</div><div class='text-box'>We were at St. Mary's Hospital for treatment and were looking for a hotel, they recommended us the continental as they said many people who accompany patients stay there and were very happy, so we booked there. It is just around the corner from the hospital, the <span class='review-span highlight' data-aligned-summaries='0'>room was clean</span>, <span class='review-span highlight' data-aligned-summaries='0'>the staff were friendly</span> and very helpful - we were pleased that we discovered this hotel and we <span class='review-span highlight' data-aligned-summaries='3'>will recommend it</span> to friends and others and <span class='review-span highlight' data-aligned-summaries='2'>we'll</span> definetely <span class='review-span highlight' data-aligned-summaries='2'>book again</span> hopefully this time for leisure.</div><div class='text-box'>I stayed with my girlfriend for a few nights at this hotel at the beginning of August. I picked this hotel as my friend liked it when he stayed here in May. The hotel is a budget hotel and is very central. We went to <span class='review-span highlight' data-aligned-summaries='0'>Oxford Street</span> and it <span class='review-span highlight' data-aligned-summaries='0'>only</span> took us <span class='review-span highlight' data-aligned-summaries='0'>15 minutes to walk via Hyde Park</span>. The price was very good, the <span class='review-span highlight' data-aligned-summaries='0'>room was clean</span>, <span class='review-span highlight' data-aligned-summaries='0'>the staff were nice</span> helpful and the <span class='review-span highlight' data-aligned-summaries='0'>reception was open 24 hours</span>.</div><div class='text-box'>I stayed at the continental with my wife and another couple in August after it was recommended by friends. It is nice hotel, clean, quiet, in a leafy square and most important safe. The prices are really low, almost half the prices of other hotels in the area as we asked few hotels on our way to the continental to compare. <span class='review-span highlight' data-aligned-summaries='2 3'>We</span> <span class='review-span highlight' data-aligned-summaries='2'>liked this hotel very much and we will be back</span> and <span class='review-span highlight' data-aligned-summaries='3'>recommend it to others</span>.</div><div class='text-box'>We visited London in July. We were eight friends from university and stayed for 10 days in two quadrooms with private shower and toilet. <span class='review-span highlight' data-aligned-summaries='3'>We had really nice time there</span>. The hotel is clean and <span class='review-span highlight' data-aligned-summaries='0'>the staff were friendly</span>. The prices were the cheapest one in that area after we checked the other hotels nearby for prices. <span class='review-span highlight' data-aligned-summaries='2'>We will go back again to this hotel</span> in our next trip.</div><div class='text-box'>My husband and myself visited London in September for few days. We stayed at the continental hotel after <span class='review-span highlight' data-aligned-summaries='3'>a friend recommended it</span> to us. The location is very good and <span class='review-span highlight' data-aligned-summaries='0'>everything is within walking distance, like oxford street</span>, Marble Arch <span class='review-span highlight' data-aligned-summaries='0'>and Hyde Park</span>. We liked the hotel, <span class='review-span highlight' data-aligned-summaries='0'>the room was</span> facing the square, it was quiet and <span class='review-span highlight' data-aligned-summaries='0'>clean</span> and the staff was helpful. <span class='review-span highlight' data-aligned-summaries='3'>We recommend it</span>.</div><div class='text-box'>I was visiting relatives with my wife and children in west London and stayed in this hotel for 8 nights. The location is excellent, <span class='review-span highlight' data-aligned-summaries='0'>everything is within walking distance</span>, the prices unbeatable, <span class='review-span highlight' data-aligned-summaries='0'>the rooms were very clean</span> and <span class='review-span highlight' data-aligned-summaries='0'>the staff were friendly</span>. The price also included breakfast which was continental. <span class='review-span highlight' data-aligned-summaries='0'>The reception was open 24 hours</span>. <span class='review-span highlight' data-aligned-summaries='3'>We do recommend this hotel</span> and <span class='review-span highlight' data-aligned-summaries='2'>we will definetely come back.</span></div><div class='text-box'>12 friends from university stayed in this hotel for 6 nights in 3 rooms with shower and toilet. The <span class='review-span highlight' data-aligned-summaries='0'>rooms were clean</span> with high ceilings,the <span class='review-span highlight' data-aligned-summaries='0'>reception was 24 hours open</span>. We asked for places to go for shopping and the <span class='review-span highlight' data-aligned-summaries='0'>staff</span> were very helpful and <span class='review-span highlight' data-aligned-summaries='0'>gave us directions.</span> our stay in this hotel was pleasant and <span class='review-span highlight' data-aligned-summaries='2'>we will book again</span></div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The rooms were clean, the staff friendly, reception 24 hours, everything is within walking distance like oxford street and Hyde park.</span> <span id="1" class="summary-sentence">Also, the kitchen was spotless.</span> <span id="2" class="summary-sentence">We will certainly stay there again.</span> <span id="3" class="summary-sentence">Highly recommended.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

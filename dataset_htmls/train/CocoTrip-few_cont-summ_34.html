@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>I spent quite a bit of time researching hotels in central Toronto and settled on 1 king west. My spouse and I stayed in a superior studio suite and were extremely satisfied with our stay. I was attracted initially to the non-cookie cutter rooms typical in most hotels. <span class='review-span highlight' data-aligned-summaries='0'>The room</span> was very modern with sophisticated looking furnishings, a very comfortable bed, nice walk-in shower and <span class='review-span highlight' data-aligned-summaries='0'>modern kitchenette</span>. We were stationed on the 18th floor and <span class='review-span highlight' data-aligned-summaries='1'>did find the room a bit dark as our bedroom window was frosted over as it clearly faced another building in close proximity</span>. We did not consider this an issue however because the room had so many other positives and the 'office' section of the room offered a view of the lake. My only disappointment was that there was no wi-fi (only hard-wired) so I was unable to use it.</div><div class='text-box'>This <span class='review-span highlight' data-aligned-summaries='0'>hotel was</span> spacious, quiet and <span class='review-span highlight' data-aligned-summaries='0'>very clean</span>. I would sum up the negative points of some other reviews by saying that this property is new and they are clearly still working on "opening" and getting their procedures in place. We had a glitch with our cards upon check-in and <span class='review-span highlight' data-aligned-summaries='2'>the staff upgraded us</span> to a deluxe 2-room suite on the 44th floor with views on 3 sides. We moved to this hotel after having a bad experience at the Cosmpolitan, which is right across the street. We <span class='review-span highlight' data-aligned-summaries='5'>did not have any</span> problems or <span class='review-span highlight' data-aligned-summaries='5'>costs involved with getting our car in and out</span>, and another cool benefit is that the concierge staff has a fleet of vintage cars (Bentley, '60 Cadillac, Rolls) with drivers who will take you to various downtown sites for free (with an advance reservation).</div><div class='text-box'>I've stayed at this hotel several times on trips to Toronto. It is in a great location. Walking distance to Eaton Centre, restaurants and theatres. <span class='review-span highlight' data-aligned-summaries='5'>Parking price is a little steep at 30$ a day</span> but will pay around that amount anywhere in T.O. <span class='review-span highlight' data-aligned-summaries='0'>The room came well equiped</span> - washer, dryer, <span class='review-span highlight' data-aligned-summaries='0'>kitchenette</span> and king bed. Only negative <span class='review-span highlight' data-aligned-summaries='1'>in the room</span> was <span class='review-span highlight' data-aligned-summaries='1'>the shower</span> which <span class='review-span highlight' data-aligned-summaries='1'>tended to leak</span> all over the bathroom floor and was so powerful it was an extremely uncomfortable experience. This could be room-specific as I did not have this experience on my previous stays. <span class='review-span highlight' data-aligned-summaries='4'>Overall, for the price, this is a great place to stay</span> in downtown T.O.</div><div class='text-box'>Fabulous few days in Toronto! Hotel is in a fab location to walk to the main shopping mall and the heart of Downtown. Hotel is very clean and <span class='review-span highlight' data-aligned-summaries='2'>the staff were lovely</span>, <span class='review-span highlight' data-aligned-summaries='2'>very helpful and pleasant</span> . <span class='review-span highlight' data-aligned-summaries='0'>The rooms were very clean</span> and comfortable, and just right for a short city break, as we didn't spend much time in the room. <span class='review-span highlight' data-aligned-summaries='5'>The parking in the hotel was very very expensive $30 per night</span>! We had a car for 4 nights so worked out very expensive. <span class='review-span highlight' data-aligned-summaries='3'>Lovely breakfast</span> though but again <span class='review-span highlight' data-aligned-summaries='4'>a little overpriced</span>.</div><div class='text-box'>I'd read the reviews and <span class='review-span highlight' data-aligned-summaries='4'>felt confident we'd get value.and we did</span>. A <span class='review-span highlight' data-aligned-summaries='0'>nice clean hotel</span> in a great location for site seeing. I'd recommend it to anyone looking for a short break to take in Torontos sites. Very good. My only small gripe is <span class='review-span highlight' data-aligned-summaries='3'>I would have liked bottled water available</span> in the room. You need to buy your own but that's a minor personal irritation. Great hotel.</div><div class='text-box'>everything seemed first rate .until i had to deal with <span class='review-span highlight' data-aligned-summaries='2'>the concierge.i think her name was christine</span>. maybe she should work by <span class='review-span highlight' data-aligned-summaries='2'>herself.she seemed upset when my family requested reservations</span> were asked to be made. but the rest of the property was outstanding. will stay again.just wouldnt use the conceirge again.</div><div class='text-box'>This was our third time staying at this hotel. What brings us back? Cleanliness, location (max 10 minute walk to Air Canada Centre, Rogers Centre, Union Station, Historic District), <span class='review-span highlight' data-aligned-summaries='2'>friendliness</span>, quality of room, and price. Also, <span class='review-span highlight' data-aligned-summaries='2'>the concierge is really helpful</span>.</div><div class='text-box'>Great Hotel. I stayed for 3nights in early July with my husband and 2 teenage sons sharing 1 <span class='review-span highlight' data-aligned-summaries='0'>room</span>. Plenty of space, 2 TVs, <span class='review-span highlight' data-aligned-summaries='0'>Very clean</span>. Nice bar area. <span class='review-span highlight' data-aligned-summaries='2'>Frendly staff</span> and good position. <span class='review-span highlight' data-aligned-summaries='4'>For the money it is hard to fault it</span>.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The rooms in the hotel were very clean with a well equipped kitchenette.</span> <span id="1" class="summary-sentence">However the rooms were rather dark and the shower leaked.</span> <span id="2" class="summary-sentence">The staff here are really friendly and absolutely lovely.</span> <span id="3" class="summary-sentence">Whilst there is no bottled water available for guests this hotel does supply a really nice breakfast.</span> <span id="4" class="summary-sentence">It does seem a bit overpriced, though.</span> <span id="5" class="summary-sentence">The parking at the hotel was highly priced.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

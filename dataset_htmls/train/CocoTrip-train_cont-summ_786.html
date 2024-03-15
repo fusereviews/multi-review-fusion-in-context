@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>Smart area, average hotel Stayed for 3 nights. Located on one of the smartest streets in Berlin - Ku'damm. surrounded by top designer shops. <span class='review-span highlight' data-aligned-summaries='1'>Near the underground and buses stop outside.</span> <span class='review-span highlight' data-aligned-summaries='5 6'>The hotel is ok if you are just looking for somewhere to sleep</span>. Just a lobby, no proper lounge area. <span class='review-span highlight' data-aligned-summaries='3'>The decor in the rooms was a bit scruffy</span> but the <span class='review-span highlight' data-aligned-summaries='3'>bathrooms were very new and clean</span>. Our rooms were at the front and <span class='review-span highlight' data-aligned-summaries='6'>it was quite noisy at night</span> - mainly traffic. Our room had two bathrooms - one for disabled use which seemed very well equipped. The breakfast room on the top floor was bright and <span class='review-span highlight' data-aligned-summaries='4'>the breakfast choice was good</span>. Not really within walking distance of the main sights but frequent buses and metro made it easy to get around.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 5 6'>Nice stay at the Hotel Agon Opera</span> I stayed here when I was <span class='review-span highlight' data-aligned-summaries='5'>in Berlin</span> for work. I wasn in the hotel long, but <span class='review-span highlight' data-aligned-summaries='3'>the rooms were</span> good, with plenty of room. More importantly they were <span class='review-span highlight' data-aligned-summaries='3'>clean</span>. The bathroom was good as well, with a nice bath in it. Every day the room was cleaned and I got fresh towels and sheets.It seems like a simple hotel during the week, where senior tourists and people on business trips stay. It <span class='review-span highlight' data-aligned-summaries='0'>is nothing special, but</span> <span class='review-span highlight' data-aligned-summaries='0 6'>the price quality ratio is good</span>.<span class='review-span highlight' data-aligned-summaries='1'>The location is fine too; with good</span> access to the public transport system (subway) and it is only a 15 minutes drive to the airport (Tegel).</div><div class='text-box'>A real find <span class='review-span highlight' data-aligned-summaries='1'>in a graet location</span> My teenage daughter and iI have just returned from a 3 night stay at the Agon Opera and were pleasantjy surprised with the standard of accommodation, <span class='review-span highlight' data-aligned-summaries='1'>great location</span> and friendly staff. <span class='review-span highlight' data-aligned-summaries='4'>The breakfast was good and plentiful</span> and it is worth asking for a room on the fifth floor for the view alone! The aircon was a must for the 36+ heatwave and being so <span class='review-span highlight' data-aligned-summaries='1'>close to</span> both trains and <span class='review-span highlight' data-aligned-summaries='1'>buses</span> was brilliant.There are numerous places to eat in the area but I would highly recommend the brilliant Malaysian restaurant in the Wilmersdorfstrasse 79 where the daily menus are delicious and the staff wonderful.<span class='review-span highlight' data-aligned-summaries='6'>We will definitely stay at the Agon again</span>. Incredible value for money.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Great Value at the Agon Opera</span> <span class='review-span highlight' data-aligned-summaries='1'>The hotel is situated directly opposite the airport bus stop, a real bonus</span>. Kurfurstendamm is a main shopping street and has many shops and restaurants in the vicinity. There is a subway station about 150 metres away and the S bahn station Savigny is about 500 m away. These allow for <span class='review-span highlight' data-aligned-summaries='5'>easy travel to all of Berlin`s sights</span>. The hotel has a nice breakfast room on the top floor, which can get crowded, but <span class='review-span highlight' data-aligned-summaries='4'>the breakfast is excellent</span>. <span class='review-span highlight' data-aligned-summaries='3'>Rooms are clean</span>, quiet and comfortable and <span class='review-span highlight' data-aligned-summaries='3'>the staff are generally friendly and helpful</span>. This hotel is great value, <span class='review-span highlight' data-aligned-summaries='0 5 6'>I would definately stay there again</span></div><div class='text-box'>loved the hotel! my cousin and i stayed here for 3 nights in feb 06. had a great time. was nice to have free internet in the lobby. the room was large and comfy. nice carpeting, drapes and bedding. not much english tv, so i got used to the same news on BBC. not a problem though as we didnt spend a lot of time in the room. <span class='review-span highlight' data-aligned-summaries='3 4'>staff was</span> friendly and <span class='review-span highlight' data-aligned-summaries='3 4'>helpful</span>. <span class='review-span highlight' data-aligned-summaries='4'>the breakfast was excellent</span>! especially since it was included in the great price we paid. eggs, bread, meat, yougurt, granola, etc. <span class='review-span highlight' data-aligned-summaries='0 6'>i was totally satisfied with my stay here</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 5 6'>Excellent hotel - Agon Opera</span> in Berlin We have just returned from a trip to Berlin where we stayed in the Agon Opera Hotel.<span class='review-span highlight' data-aligned-summaries='0 5 6'>We had a wonderful time</span> and the hotel was excellent.The Agon Opera is very well situated and great value for money. <span class='review-span highlight' data-aligned-summaries='3'>Everything was clean and well organised</span>.<span class='review-span highlight' data-aligned-summaries='1'>The bus stops right outside</span> and takes you to the Zoo station where you can get the s-bahn or u-bahn or buses to anywhere. The breakfast is served on the 6th floor with fantastic views of Ku'dam, and <span class='review-span highlight' data-aligned-summaries='4'>you can eat as much as you want of a well varied breakfast choice</span>.A great hotel in a great city!</div><div class='text-box'>why #38? <span class='review-span highlight' data-aligned-summaries='1'>The best part of the Agon was</span> <span class='review-span highlight' data-aligned-summaries='1 3'>the</span> <span class='review-span highlight' data-aligned-summaries='1 3 5'>staff on the desk</span> . <span class='review-span highlight' data-aligned-summaries='3'>they</span> <span class='review-span highlight' data-aligned-summaries='3 5'>were very helpful</span> and friendly. the rooms were small and w/o amenities. the bathroom very small . <span class='review-span highlight' data-aligned-summaries='4'>there was not much on the breakfast buffet that was tasty</span> .I think the price reflected the quality and if you are spending a lot on a vacation , <span class='review-span highlight' data-aligned-summaries='6'>i would spend a little more and get a nicer hotel</span> . we did have <span class='review-span highlight' data-aligned-summaries='1'>an easy walk to some good restaurants</span> ( ate at Dresslers and it was good) . spent <span class='review-span highlight' data-aligned-summaries='5'>the day</span> in Potsdam and it <span class='review-span highlight' data-aligned-summaries='5'>was interesting and fun</span>.</div><div class='text-box'>Great Hotel - <span class='review-span highlight' data-aligned-summaries='1'>Great Location</span> This is a great hotel in a great location. <span class='review-span highlight' data-aligned-summaries='3'>The staff are friendly and helpful</span>. <span class='review-span highlight' data-aligned-summaries='3'>The rooms are very clean</span> and a decent size. <span class='review-span highlight' data-aligned-summaries='4'>The breakfast offers a huge variety</span> and no matter what time you decide to eat, <span class='review-span highlight' data-aligned-summaries='4'>there is always a good selection</span>.The only negative thing I can say is that the water is a bit on the hard side so take plenty of toiletries with you.<span class='review-span highlight' data-aligned-summaries='5'>I have stayed in Berlin before</span> but <span class='review-span highlight' data-aligned-summaries='0 6'>this hotel was by far the best</span>. <span class='review-span highlight' data-aligned-summaries='0 5 6'>I would definately stay there again</span>.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Stay away from the Opera !</span> <span id="1" class="summary-sentence">The best thing I can say about this hotel is that the location is good and near a bus stop.</span> <span id="2" class="summary-sentence">It is next door to a Subway deli and the smell was awful every morning- not that nice fresh bread aroma but a sickly one !</span> <span id="3" class="summary-sentence">While the room was clean and the reception staff were helpful , I thought the general decor was jaded and there was no bar in the hotel.</span> <span id="4" class="summary-sentence">I was disappointed with the quality of the breakfast - not a great variety of bread and cereals etc and the breakfast staff were very unhelpful and grumpy.</span> <span id="5" class="summary-sentence">I enjoyed my stay in Berlin and will visit again</span> <span id="6" class="summary-sentence">but I certaintly wont book this Hotel again!</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

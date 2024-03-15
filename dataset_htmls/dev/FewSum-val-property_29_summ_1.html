@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>Absolutely love it here, I am glad <span class='review-span highlight' data-aligned-summaries='0'>they made the switch to all country</span>. The crowd was beginning to become a little too much. Some of the best staff you can ask for, great bands, <span class='review-span highlight' data-aligned-summaries='2'>and of course d.j. and karaoke</span>. Everything you need for a good night in one place!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 1'>Great old bar</span> <span class='review-span highlight' data-aligned-summaries='0'>with historical roots</span>. Good service, great drinks and decent food. Real draw is Friday and Saturday night after ten thirty to eleven, it ceases to be a bar and becomes a local party. Beautiful <span class='review-span highlight' data-aligned-summaries='2'>women frequently dance</span> and need a partner.</div><div class='text-box'>This isn't the best or worst. It's just another (better than most). I start by saying. I wanted to check so I called asking '<span class='review-span highlight' data-aligned-summaries='2'>Do you have Karaoke?' .yes</span>. and yes I know they do. But don't go out there on a hot <span class='review-span highlight' data-aligned-summaries='2'>Saturday-Country-Line-Danceing-Night</span> and expect to sing Karaokie. Not that the alternative is bad.</div><div class='text-box'>Solid performance. Good music, drinks and fun! Sometimes it takes a while to get a drink though. The bar is always slammed! There was a guy getting a little to handsey with me and the bouncer checked him right away.:)</div><div class='text-box'>Great place.... good music... good service <span class='review-span highlight' data-aligned-summaries='1'>cash only you got to love that</span>... <span class='review-span highlight' data-aligned-summaries='0 1'>old school</span> <span class='review-span highlight' data-aligned-summaries='0'>country bar</span>.... but <span class='review-span highlight' data-aligned-summaries='0 2'>they have a DJ that plays dance music</span> <span class='review-span highlight' data-aligned-summaries='2'>all night</span> why drive all the way downtown for a cold beer and good music</div><div class='text-box'>This review is solely for their nightlife as I was completely unaware that <span class='review-span highlight' data-aligned-summaries='2'>they serve food other than the hot dog cart</span> outside at 2am.<span class='review-span highlight' data-aligned-summaries='0'>How many places can you say play country in one room and hip hop in the other</span>? I feel it, I feel it. It's a people watching GOLDMINE.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2'>Great burgers. Awesome chili</span>. A little fancy for some. <span class='review-span highlight' data-aligned-summaries='1'>Cash only</span>. For you folks from the upper midwest, this place has a Grain Belt light above one of the tables. I feel like I'm right back in Stearns County when I'm at Roman's. Minus the 99 inches of snow of course.</div><div class='text-box'>I absolutely love this bar!! Everyone is so friendly whenever I go there. <span class='review-span highlight' data-aligned-summaries='2'>They have</span> darts, shuffleboard, <span class='review-span highlight' data-aligned-summaries='2'>karaoke</span>, live bands, <span class='review-span highlight' data-aligned-summaries='2'>and dancing</span>. I definitely recommend going here!! <span class='review-span highlight' data-aligned-summaries='1'>The only catch is they only take cash</span></div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">An old-fashion bar that specializes in country, and have just switched to playing only all country music.</span> <span id="1" class="summary-sentence">To go along with the old-school attitude is the fact that only cash is accepted as payment.</span> <span id="2" class="summary-sentence">There is karaoke, good food, games, and of course dancing that last all night.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

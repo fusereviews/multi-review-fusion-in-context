@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>I normally stay at the JW Marriott across the street when on business in Miami, but decided a change would be good and chose the Conrad. The staff were polite and professional, but I found the elevator system to be annoying (<span class='review-span highlight' data-aligned-summaries='0 1 2 5'>the hotel is on the 25th floor</span>,<span class='review-span highlight' data-aligned-summaries='1 2 5'> and you have to go</span> around two corners and down a corridor <span class='review-span highlight' data-aligned-summaries='1 2 5'>to access the guest room elevators</span>). The reception desk advised that I could self-park across the street, however upon checking out the parking garage told me that they didn't do this any more and any cars left overnight would now be towed! The room was clean, the amenities satisfactory, but I prefer the straight-forward layout and normal parking set-up of the JW, which is the same price.</div><div class='text-box'>This is the most boring hotel that I have ever stayed in. There is no life here what so ever. Could be because it's such a hassle to get to the lobby, then your room. <span class='review-span highlight' data-aligned-summaries='1 2'>You have to take 1 elevator to check in. Then a different elevator to go to your room</span>. <span class='review-span highlight' data-aligned-summaries='5'>If you want to</span> <span class='review-span highlight' data-aligned-summaries='3 5'>enjoy the pool</span>,<span class='review-span highlight' data-aligned-summaries='5'> you have to take a 3rd elevator</span> and it takes time to do this. If your on the go, this is not the place for you. I took my 2 elevator trips to my room twice only to have my key not work. Back for another 2 elevator rides to get a new key. I was quite annoyed.</div><div class='text-box'>Stayed here 1 night in April. I got upgraded to a 1 bedroom suite which was probably the nicest hotel room I've ever stayed in. Everything was immaculate. The view, the bathroom, the bed, everything. <span class='review-span highlight' data-aligned-summaries='0 5'>Checkin</span> <span class='review-span highlight' data-aligned-summaries='0'>was a little odd, being</span> <span class='review-span highlight' data-aligned-summaries='0 5'>on the 25th floor</span>. <span class='review-span highlight' data-aligned-summaries='1'>My room was on the 21st, so</span> <span class='review-span highlight' data-aligned-summaries='1 5'>I had to take an elevator up to 25</span>, walk around a corner, <span class='review-span highlight' data-aligned-summaries='1'>then another elevator down to 21</span>. No big deal considering what I had for a room. Great telescope to look out at the water or the city. Bring your ipod for the in room ipod stereo. The room service was also top notch. A+ stay.</div><div class='text-box'>I've stayed at the Conrad in Miami several times. Sometimes it is really good, sometimes (like last week) it was just OK. The rooms are good, clean, and well appointed. But some of the rooms are great (like the one I had two trips ago) and others are OK. My bathroom on this trip had a great view! <span class='review-span highlight' data-aligned-summaries='0'>The bar on the 25th floor is good</span> (service and food/wine options aren't great) but it's nice to be able to sit outside. Atrio (the nice restaurant on the 25th floor) is lovely - I ate there for the first time this trip and will eat there again for sure.</div><div class='text-box'>A bit of a nuisance having to ride two elevators to go from the ground floor to my expansive room on the 16th. <span class='review-span highlight' data-aligned-summaries='1'>An express elevator takes you to the 25 floor lobby</span> with fantastic views of Biscayne Bay. <span class='review-span highlight' data-aligned-summaries='1'>But then you have to take an other set of elevators down to the guestrooms</span>. <span class='review-span highlight' data-aligned-summaries='5'>It took 3 elevator rides to get to the pool from the room</span>. My room on the 16th floor was large and very nicely furnished though it was beginning to look worn. I'd stay there again if on business but I think I would prefer something more traditional like the JW Marriott next door if I had the family.</div><div class='text-box'>I enjoyed my stay at the Conrad Miami. Postives: View from the bar balcony and the room, Friday happy hour, comfortable bed and pillows, front desk and room service, location- near good restaurants (Morton's, Novecento, Gordon Biersch). Negatives: valet staff and concierge were not very friendly or helpful, <span class='review-span highlight' data-aligned-summaries='0'>the hotel set-up </span>(<span class='review-span highlight' data-aligned-summaries='0 1 5'>take an elevator up to 25</span> <span class='review-span highlight' data-aligned-summaries='0 1'>to get to the lobby</span> <span class='review-span highlight' data-aligned-summaries='1 5'>and then a separate elevator</span> <span class='review-span highlight' data-aligned-summaries='1'>back down to the rooms</span> + the pool is in a separate building so you have to walk outside to get to it).</div><div class='text-box'>An extremely nice, upscale hotel. Staff is professional, friendly and helpful. <span class='review-span highlight' data-aligned-summaries='7'>Rooms are spacious</span> and updated. One of the nicer Hiltons. Gold status got us turn-down service which after spending the past 8 days cruising was the perfect end to a vacation. Nice buffet breakfast in the morning with great selections of foods. If there was one strange thing about <span class='review-span highlight' data-aligned-summaries='0 1'>this hotel - the lobby is on the 25th floor</span> <span class='review-span highlight' data-aligned-summaries='1'>and to get to the sleeping rooms, you need to take another set of elevators</span>.</div><div class='text-box'>Stayed here for a night in June 2006. The hotel is classy. Great service from the get-go. We got a drink and a burger at the bar. Watched the World Cup. The room was incredible. The view of the bay was tremendous. The bathroom was nicer than any. Granite from top to bottom. Floor-to-ceiling windows. The bed was awesome. Sheets were so comfortable and clean. <span class='review-span highlight' data-aligned-summaries='3'>The pool was very nice</span>, we were the only people out there.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The lobby of the hotel is on the 25th floor.</span> <span id="1" class="summary-sentence">If your room is on the 9th floor, you still have to go to the 25th floor and transfer to another elevator to get to your room.</span> <span id="2" class="summary-sentence">It seems a waste of time and electricity to me.</span> <span id="3" class="summary-sentence">The pool is nice.</span> <span id="4" class="summary-sentence">But again, imaging your room on the 9th floor.</span> <span id="5" class="summary-sentence">You have to take one elevator to the 25th, transfer to another elevator, get to the ground floor, walk across street, take another elevator to the 13th floor in order to use the pool.</span> <span id="6" class="summary-sentence">But the time you get there, you are already tired if your time isn't up.</span> <span id="7" class="summary-sentence">Rooms are small.</span> <span id="8" class="summary-sentence">Bathroom counter top is too small.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

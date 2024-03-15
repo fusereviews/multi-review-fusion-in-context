@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>We wanted to stay in the Marais, and I found this hotel on the internet. <span class='review-span highlight' data-aligned-summaries='0'>We were extremely happy with our stay</span>, and will return here again. The hotel is spotless. While our room was a bit small, it had a wood beam running through the ceiling which lent it that Parisian ambience. And <span class='review-span highlight' data-aligned-summaries='5'>the bathroom was spacious</span> with a wonderful tub for bubble baths. The breakfast was huge with many choices. A metro stop is kitty-corner across the street, and <span class='review-span highlight' data-aligned-summaries='9'>the neighborhood is very nice</span> with grocery stores and cafes within a block of the hotel. <span class='review-span highlight' data-aligned-summaries='2'>Sam at the front desk was so nice</span>, and gave me special flower honey for my sore throat.thanks, Sam. I'll be back!</div><div class='text-box'>My husband and I just returned from a week in Paris, staying at the Austin Arts et Metiers hotel. It was a lovely experience all through. <span class='review-span highlight' data-aligned-summaries='2 3'>The guys working at the front desk were</span> <span class='review-span highlight' data-aligned-summaries='2'>all very friendly</span> and <span class='review-span highlight' data-aligned-summaries='3'>helpful</span> (and all spoke English, though we tried to use our very limited French when we could), the room (we had one of the ones facing the back - not as scenic as the ones with windows on the front, but rather charming in a big-city way) was VERY quiet and peaceful, and when they say it's near a Metro station they are not kidding; it's right in front. The location is perfect for sightseeing trips. Highly, highly recommended.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>This is a very friendly hotel</span>. Smallish but that I how I like them. <span class='review-span highlight' data-aligned-summaries='9'>The location is fantastic</span>, 50 metres from the Metro and <span class='review-span highlight' data-aligned-summaries='9'>only 2 stops to the river</span>. I gave breakfast a miss at the hotel and enjoyed my first meal of the day at a cafe. I would recommend this as <span class='review-span highlight' data-aligned-summaries='4'>the rooms were</span> quite okay as far as size was concerned and it also was <span class='review-span highlight' data-aligned-summaries='4'>very clean</span>. Lift was also okay (sick of walking up stairs by the time I checked into this hotel) and room was a/c. All in all a good place to stay. <span class='review-span highlight' data-aligned-summaries='1'>But if you want to look out of the window at sights of Paris, this hotel is not for you.</span></div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1'>It was good but the rooms was so small</span>. But really nice and with quiet street so was great sleep at night. It is kinda hard to find because it is hidden a bit with the main streets. <span class='review-span highlight' data-aligned-summaries='9'>Centre Pompidou was really close</span> - like 5 min walk but true is , <span class='review-span highlight' data-aligned-summaries='9'>when you want to see Eiffel Tower and Louvre then is better take metro</span> what is not again very easy to drive.Paris metro is the worst and very difficult i m ever seen. But well, it is Paris and huge city so dosnt matter where do you booking you still need public transport . But yeah <span class='review-span highlight' data-aligned-summaries='0'>overall we was like this hotel and why not get back there</span>!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2'>All the staff we encountered were friendly and helpful</span>. <span class='review-span highlight' data-aligned-summaries='4'>The room was cleaned to a very high standard</span>. <span class='review-span highlight' data-aligned-summaries='7'>The shower was great</span>, lots of hot water <span class='review-span highlight' data-aligned-summaries='7'>with plenty of pressure</span>. It was a freezing cold weekend outside and was nice to come back to a warm room. Didn't try the breakfast as <span class='review-span highlight' data-aligned-summaries='9'>we were surrounded by cafes and were a short walk or metro ride to all the local attractions</span>. <span class='review-span highlight' data-aligned-summaries='1'>Nothing bad to say about this hotel</span>, even the slight rumble of the metro didn't cause concern. I haven't visited Paris for a long time but <span class='review-span highlight' data-aligned-summaries='0 1'>the price seemed reasonable for</span> <span class='review-span highlight' data-aligned-summaries='0'>location and size of</span> <span class='review-span highlight' data-aligned-summaries='0 1'>the room</span>.</div><div class='text-box'>We stayed here for a night after renting an apartment around the corner and not being able to re-enter it at 11pm due to a problem with the lock! Quelle disaster! Fortunately this hotel was open and <span class='review-span highlight' data-aligned-summaries='2'>the friendly concierge</span> gave us heavily discounted rooms for the night. The rooms were great - clean, comfortable and secure. <span class='review-span highlight' data-aligned-summaries='0'>I would have gladly stayed on</span> but our problem was sorted out the next day. If anyone wants a review of an apartment on the fifth floor of 22 rue Montgolfier, I'll gladly supply one.</div><div class='text-box'>We stayed in the hotel for 5 days. <span class='review-span highlight' data-aligned-summaries='4'>The room was</span> lovely and <span class='review-span highlight' data-aligned-summaries='4'>clean</span>, <span class='review-span highlight' data-aligned-summaries='5'>bathroom was huge for european standards</span>! Breakfast was very filling and they even helped us have a bit to eat at 5am before our airport transfer came. <span class='review-span highlight' data-aligned-summaries='3'>The staff were very helpful with our billions of questions about paris</span>! Location was fabulous, pretty much across the road from the metro! Free internet was also a bonus! Highly recommended hotel for a paris trip!</div><div class='text-box'>This was the first time I stayed in a hotel in Paris, and <span class='review-span highlight' data-aligned-summaries='0'>I was very satisfied</span> with it. <span class='review-span highlight' data-aligned-summaries='4 5 8'>The room</span> was not very big, but <span class='review-span highlight' data-aligned-summaries='4'>was clean</span>, <span class='review-span highlight' data-aligned-summaries='5 8'>had a</span> <span class='review-span highlight' data-aligned-summaries='8'>nice bed</span> and <span class='review-span highlight' data-aligned-summaries='5'>shower</span>, and (important during a hot summer!) airconditioning. <span class='review-span highlight' data-aligned-summaries='0 2'>Staff was very friendly</span> and, to my astonishment, even understood my terrible french. After breakfast <span class='review-span highlight' data-aligned-summaries='9'>you can reach the subway in half a minute</span>!</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The hotel was fine for the price.</span> <span id="1" class="summary-sentence">It definitely was not a glamorous hotel.</span> <span id="2" class="summary-sentence">The staff was nice and there at all hours of the day and night.</span> <span id="3" class="summary-sentence">They were helpful with directions around the city but not very helpful booking excursions.</span> <span id="4" class="summary-sentence">The room had an odor but was relatively clean.</span> <span id="5" class="summary-sentence">The bathroom was small but had what you needed.</span> <span id="6" class="summary-sentence">The hair dryer was a bit weak.</span> <span id="7" class="summary-sentence">The shower pressure was acceptable.</span> <span id="8" class="summary-sentence">The bed was comfortable.</span> <span id="9" class="summary-sentence">The hotel is not in the greatest area.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

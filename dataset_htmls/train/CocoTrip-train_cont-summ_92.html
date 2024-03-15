@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='6'>I have never been disappointed in a Harrah's hotel and this was no exception</span>. <span class='review-span highlight' data-aligned-summaries='1'>The room was spacious</span> and the bathroom was fantastic. We had a room on the 24th floor with a great view of the Mississippi River. The room was clean and since we had a king size bed there was an ample sitting area with couch, chair and table. <span class='review-span highlight' data-aligned-summaries='1'>The bed was super comfortable</span>. The service at this hotel is top of the line. Each staff member was courteous and went out of their way to make us feel welcome and pampered. <span class='review-span highlight' data-aligned-summaries='5'>The casino is directly across the street from the hotel</span> and the food and staff there were wonderful as well. One drawback, you have to pay for internet access. I think Harrahs should make this service part of the room fee.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='4'>The location is great</span> and the hotel is A plus. <span class='review-span highlight' data-aligned-summaries='1'>The beds are comfortable</span>. <span class='review-span highlight' data-aligned-summaries='2'>The bathroom is large with a huge tub and a separate shower</span>. Everything was clean. <span class='review-span highlight' data-aligned-summaries='1'>The room was quiet</span>. <span class='review-span highlight' data-aligned-summaries='1'>Our view was fantastic</span>. If you by-pass the valet parking and self-park, you can have your parking validated after 30 minutes of casino play. We ate at the buffet and enjoyed the variety. We also dined at Besh Steaks and were very happy with our food and drink. The only negative is that the hotel doesn't have a pool. Tip - if you don't want to wait in the long lines at the Cafe du Monde for your coffee and begneits, try the stand in the Riverwalk.</div><div class='text-box'>We stayed two nights here Sept. 20,21st. The hotel staff was extremely friendly and check-in was very efficient. The parking attendent at valet even informed us of the choices to park and how to park free if we got our ticket validated in the casino. <span class='review-span highlight' data-aligned-summaries='1'>Rooms were very nice</span>, <span class='review-span highlight' data-aligned-summaries='1'>large and well equipped</span>. There was always staff present in the lobby any time of the day or night. <span class='review-span highlight' data-aligned-summaries='5'>The hotel is connected by an underground walkway to the casino</span>. We felt very safe any time of the day or night walking to and from the casino. <span class='review-span highlight' data-aligned-summaries='4'>There are many restaurants and nightlife within walking distance close proximity of the hotel</span>. Casino is close to shopping and the riverfront. <span class='review-span highlight' data-aligned-summaries='6'>Would definetly stay here again</span>.</div><div class='text-box'>My Granddaughter and I visited in August 2012. The <span class='review-span highlight' data-aligned-summaries='1'>rooms are beautiful</span>, the views from higher floors is special and the staff were very friendly and helpful every day of our 4 day stay. <span class='review-span highlight' data-aligned-summaries='4'>Location is great for touring the French Quarter</span>. We took the streetcar which is only 1 block away to get to the Jackson Square area and the French Market areas. French Quarter starts only 1 block away if one would just want to walk to the sites. And in the evening there is <span class='review-span highlight' data-aligned-summaries='5'>an underground walkway</span> from the hotel <span class='review-span highlight' data-aligned-summaries='5'>to the casino</span> so it's very safe to come and go. We loved the hotel and <span class='review-span highlight' data-aligned-summaries='6'>will</span> definitely <span class='review-span highlight' data-aligned-summaries='6'>stay here when we visit again</span>.</div><div class='text-box'>This was our first stay at the Harrah's hotel in New Orleans. Our room had a great view of the bridge and city. The service at this property is outstanding - the employees here are friendly and helpful. <span class='review-span highlight' data-aligned-summaries='0'>The hotel is absolutely beautiful from the lobby</span> to <span class='review-span highlight' data-aligned-summaries='2'>the bathrooms. Large deep soaking tub, separate shower</span> - I loved that after a late night (early morning) return to the room. <span class='review-span highlight' data-aligned-summaries='4'>The location is great</span> as it is only a walk across the street to the casino, a block from the Mississippi and <span class='review-span highlight' data-aligned-summaries='4'>a few blocks to</span> Bourbon Street and <span class='review-span highlight' data-aligned-summaries='4'>the French Quarter</span>. We loved our stay here and <span class='review-span highlight' data-aligned-summaries='6'>will stay here when we return</span>.</div><div class='text-box'>Stayed here two nights over a weekend and was <span class='review-span highlight' data-aligned-summaries='6'>pretty impressed</span> with Harrah's. The staff inside was very friendly and helpful. <span class='review-span highlight' data-aligned-summaries='1'>Our room was pretty standard size</span>, had a nice view of the river, and <span class='review-span highlight' data-aligned-summaries='1'>the beds were comfortable</span>. <span class='review-span highlight' data-aligned-summaries='2'>The bathroom was huge</span>, which was an added plus. Everything seemed fairly up to date and clean. We did not eat at any of the hotel restaurants-other than grab a drink at Ruth's Chris-so can't comment on their food. <span class='review-span highlight' data-aligned-summaries='4 5'>The casino is actually across the street from the hotel, but there is a walkway underground</span>. <span class='review-span highlight' data-aligned-summaries='6'>Would definitely stay here again</span>.</div><div class='text-box'>We stayed at the Harrah's on our final night in New Orleans, and <span class='review-span highlight' data-aligned-summaries='6'>we enjoyed our stay</span>. <span class='review-span highlight' data-aligned-summaries='1'>Our room was very large</span> and had a nice view of the river, <span class='review-span highlight' data-aligned-summaries='2'>the bathroom had a separate tub and shower</span>, and the room was clean <span class='review-span highlight' data-aligned-summaries='1'>and comfortable</span>. Since we were only there for one night we didn't utilize many of the services or amenities offerred at the hotel, but <span class='review-span highlight' data-aligned-summaries='6'>I recommend it</span> to anyone who wants to stay within <span class='review-span highlight' data-aligned-summaries='4'>walking distance to the French Quarter</span>. PS - The hotel and surrounding area was beautifully decorated for Christmas too - it was a nice touch!</div><div class='text-box'>The staff was exceptionally hospitable. Friendly and inviting from the moment we entered the property. The <span class='review-span highlight' data-aligned-summaries='1'>hotel room had wonderful decor and layout</span>. The <span class='review-span highlight' data-aligned-summaries='2'>bathroom was very</span> clean and <span class='review-span highlight' data-aligned-summaries='2'>large</span>. With it's <span class='review-span highlight' data-aligned-summaries='4'>location is within walking distance to</span> many attractions - the riverwalk, french market & <span class='review-span highlight' data-aligned-summaries='4'>french quarter</span>, there is no need to have a car. We <span class='review-span highlight' data-aligned-summaries='6'>will</span> definitely <span class='review-span highlight' data-aligned-summaries='6'>stay here again</span>.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The lobby was beautiful.</span> <span id="1" class="summary-sentence">The room was wonderful and spacious, the bed very comfortable.</span> <span id="2" class="summary-sentence">The bathroom was very large with a huge tub and separate shower.</span> <span id="3" class="summary-sentence">The toilet was in a separate room.</span> <span id="4" class="summary-sentence">The location was great, close to the French Quarter.</span> <span id="5" class="summary-sentence">The casino was nice, clean and had a great variety of slots and connected to the hotel by an underground walkway.</span> <span id="6" class="summary-sentence">We would definitely stay there again.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>Like the other reviewers, <span class='review-span highlight' data-aligned-summaries='0'>I have to say this hotel is close to perfect</span>. The rooms aren't as large as I would have liked (we were upgraded for an 8 night stay from a deluxe to one of the Richard Meier ultra-modern rooms on the two "executive" floors). I had been to Rome once before and, on the recommendation of friends, stayed in a fancy hotel on the Via Veneto. The Via Veneto area is sterile and not fun and we didn't really enjoy our stay there. But the Raphael, just off Piazza Navona in the historical center, is a whole other story. You walk out the door and you're right there, in the midst of everything. As befits a Relais & Chateaux hotel, everything is elegant and <span class='review-span highlight' data-aligned-summaries='0'>the staff and service are the best</span>. Really, the only problem is paying the bill at the end!</div><div class='text-box'>Our second stay here in 12 months and the service from <span class='review-span highlight' data-aligned-summaries='0'>this hotel is enough to make me want to return to Rome</span>, just so I can stay here again! The location is second to none and we have been able to walk to all the main sights from here. We have stayed in three different <span class='review-span highlight' data-aligned-summaries='0'>rooms</span> at this hotel and <span class='review-span highlight' data-aligned-summaries='0'>they have all been fabulous</span>. The buffet breakfast is very good and the rooftop is a pleasant area to enjoy a drink or two after a long day of sight seeing. We were left 'tasty treats' on our room every day and we love the adjustable beds.<span class='review-span highlight' data-aligned-summaries='0'>The staff at the front desk are very helpful and friendly and the doorman was a delight</span>! Hopefully we'll see you again next year!</div><div class='text-box'>We stayed at the Raphael for 3 nights and <span class='review-span highlight' data-aligned-summaries='0'>we had an enjoyable stay there</span>. Upon arrival we were upgraded to one of the newly renovated Richard Meier rooms, which was very nice, with a spacious bathroom and clever use of the available space. The hotel corridors could benefit from a decoration as they were a bit plain, and the elevator needs a small facelift, but nonetheless it was fuctional and the guest doesn't spend any time there. Breakfast was quite good, especially for Italy, and the location just off piazza Navona, ideal. <span class='review-span highlight' data-aligned-summaries='0'>The only downside is the staff, which while friendly and kind, didn't go beyond their duties</span> for advice etc.</div><div class='text-box'>Hotel Raphael is absolutely gorgeous! It is very comfortable, clean and quiet. A reasonable journey from Campiano Airport should cost you no more than 40 euro. Our sheets were changed every day and the delicious chocolates on our bed every night were fantastic. The Bulgari toiletries smell gorgeous so enjoyed several long soaks in the bath. Breakfast is amazing, made extra special by starting the day with a refreshing 'Bucks Fizz' Everything about the hotel is perfect <span class='review-span highlight' data-aligned-summaries='0'>the staff are very courteous and are most helpful</span>. <span class='review-span highlight' data-aligned-summaries='0'>Would highly recommend and would most definately visit again</span>. - Mike and Alison</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>A beautiful hotel in a very bustling area of Rome</span>. You expect everything to be perfect at an R&C but this is <span class='review-span highlight' data-aligned-summaries='0'>an entire staff taking service to whole new level</span>. Arrangements for cars, tours and restaurants via email.way before you get there. Thanks Anna. A glass of prosecco delivered anywhere in the hotel at the direction of Stephen in the restaurant. <span class='review-span highlight' data-aligned-summaries='0'>I can't say enough about this hotel</span></div><div class='text-box'>Selected hotel via Australian website. <span class='review-span highlight' data-aligned-summaries='0'>Very good value</span>. <span class='review-span highlight' data-aligned-summaries='0'>Great location - could walk to all main places and sights in Rome</span>. Brekky was a good size buffet and on roof top garden at level 6. Rooms not huge but good and nice bathroom. Wifi worked and was free. Loved having pre-dinner wine on roof top while seeing the sun go down on St Peter's basilica.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Highly recommend Hotel Raphael</span> as it was perfect for my solo holiday. Hotel Staff were excellent in making my stay comfortable. The hotel is <span class='review-span highlight' data-aligned-summaries='0'>perfectly situated in Piazza Navona</span> so close to dining and shopping and of course historic sites.</div><div class='text-box'>We were upgraded to a suite upon our arrival, and it only got better each day. <span class='review-span highlight' data-aligned-summaries='0'>The location is perfect</span> for accessing all the historic sights on foot, and <span class='review-span highlight' data-aligned-summaries='0'>there were tons of fantastic restaurants right nearby</span>.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This hotel is highly recommended and most of the staff is very helpful.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

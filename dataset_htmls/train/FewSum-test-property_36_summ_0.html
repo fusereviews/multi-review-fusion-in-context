@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>The food is good, the place is clean, and <span class='review-span highlight' data-aligned-summaries='3'>the staff is friendly</span>. I became an instant Rivas fan after trying what I think is the best chicken burrito in town. Make sure to try the avocado sauce too! Yum! The carne asada fries are an excellent choice as well.</div><div class='text-box'>Goes to show that just because a restaurant has a high rating, doesn't necessarily mean it is great. <span class='review-span highlight' data-aligned-summaries='0'>Three stars because the food was edible</span>. <span class='review-span highlight' data-aligned-summaries='2'>Ordered the chicken fries</span>, cheese quesadilla <span class='review-span highlight' data-aligned-summaries='2'>and a carnitas torta.</span> The three of us thought <span class='review-span highlight' data-aligned-summaries='0 2'>the food was bland and the meats dry</span>. It's okay, but not great.</div><div class='text-box'>This place is very delicious. I've had the chicken tacos, chicken quesadilla, and the California burrito and <span class='review-span highlight' data-aligned-summaries='2'>they were all very delicious</span>. The horchata and jaimaca are also very good! I definitely recommend this place, don't ever go back to Roberto's!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Food was good but a little expensive for a dive</span>. $7.99 for a chicken quesadilla, no rice or beans. <span class='review-span highlight' data-aligned-summaries='3'>Friendly service</span>, <span class='review-span highlight' data-aligned-summaries='3'>Tv was so loud</span> it was uncomfortable, staff didn't seem to mindAs I'm eating a overwhelming smell of pinesol cleaner overtook the taste of my food. Between loud TV and cleaner, I won't be back</div><div class='text-box'>The wife and I moved to area from San Diego. Heard good about this place. <span class='review-span highlight' data-aligned-summaries='0'>The food looked great</span>. We got our order and <span class='review-span highlight' data-aligned-summaries='0'>it was cold. Such a big disappointment</span>. I will continue to look for a 'good spot'</div><div class='text-box'>Came here for the steak fries after reading the reviews. <span class='review-span highlight' data-aligned-summaries='0'>Food was served</span> quickly and <span class='review-span highlight' data-aligned-summaries='2'>everything tasted pretty good</span> <span class='review-span highlight' data-aligned-summaries='0'>and seemed fresh</span>. <span class='review-span highlight' data-aligned-summaries='1'>The portion size was crazy--way too much to eat</span>. I definitely want to come back and try some of the other menu items.</div><div class='text-box'>Ordered through Uber eats. Got 2 chicken enchiladas, pastor fries, plain nachos, and a large sprite. The enchiladas and fries were good. But the soda was unflavored carbonated water, and '<span class='review-span highlight' data-aligned-summaries='2'>plain nachos' is just chips</span>. I figured nachos would at least come with cheese.</div><div class='text-box'>Rivas Mexican Grill is highly recommended. A variety of Mexican food. It's a delight. There isn't anything on the menu that I don't like. Great personal attention. <span class='review-span highlight' data-aligned-summaries='3'>The restaurant</span> is super clean and <span class='review-span highlight' data-aligned-summaries='3'>has a pleasant atmosphere</span>.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The food here is served fast and fresh, but it is a little expensive for a small joint like this.</span> <span id="1" class="summary-sentence">However, the portions are large.</span> <span id="2" class="summary-sentence">Some dishes taste a little bland and dry, like the chicken fries and carnitas torta.</span> <span id="3" class="summary-sentence">The service is friendly, but the atmosphere can be loud with the TV.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

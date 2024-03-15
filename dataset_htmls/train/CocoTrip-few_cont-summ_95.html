@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>I read many negative reviews after I made a non-refundable reservation for two nights. SO.I took all the negative comments to heart and when I checked in, I specifically asked for a refurbished, quiet room. Supposedly there are some rooms with antiquated furniture and lots of noise, I waited a few hours to check in, but the <span class='review-span highlight' data-aligned-summaries='3'>room was</span> very nice, <span class='review-span highlight' data-aligned-summaries='3'>small</span>, but nice flat screen tv, <span class='review-span highlight' data-aligned-summaries='3'>modern furniture</span>, <span class='review-span highlight' data-aligned-summaries='3'>comfortable king-size bed</span> and no noise even though we were near the elevator. I also got a coupon for free appetizer and $50 food and beverage credit. <span class='review-span highlight' data-aligned-summaries='0'>Everything in the hotel is expensive</span> and Canada has a ton of tax on everything but the food was good and <span class='review-span highlight' data-aligned-summaries='0'>the place is gorgeous</span> but be aware, parking was $42 a night. Absurd.</div><div class='text-box'>This review is a little late I know, however we have beeen constantly travelling since our stay in early Sept. I note all the other reviews regarding dated property and poor hotel standards and I also note the constant apologies from Hotel Management, however with so many poor reviews why don't they fix the problems, then they wouldn't have to keep apologing. I won't repeat all the comments from so many poor reviews other than so say, that was our experience as well. For the price, <span class='review-span highlight' data-aligned-summaries='0'>poor hotel</span>, <span class='review-span highlight' data-aligned-summaries='0'>poor value for money</span>, there are better options in Toronto.</div><div class='text-box'>Stayed at Royal York for 3 nights at start of a trans Canada tour. <span class='review-span highlight' data-aligned-summaries='0 1'>The lobby etc. of the hotel are very grand</span> <span class='review-span highlight' data-aligned-summaries='1'>and imposing</span> and <span class='review-span highlight' data-aligned-summaries='0'>well worth seeing</span>, <span class='review-span highlight' data-aligned-summaries='3'>Our room was the smallest one of any of the hotels we stayed at</span> during trip, although it had the normal two large beds, there was not a lot of room around them. <span class='review-span highlight' data-aligned-summaries='3'>Dark furniture and small window did not add to the rooms appearance</span>. Having said this we enjoyed our time here but if we ever return to Toronto will try somewhere else.</div><div class='text-box'>Stayed one night because of the hotel's convenient Porter Airline shuttle available outside the hotel's door. Staff was attentive and helpful, however the lines for the Concierge were long. <span class='review-span highlight' data-aligned-summaries='4'>Lovely restaurants in the hotel</span> and there is an underground mall under the hotel. The hotel is a little expensive and parking is very expensive but <span class='review-span highlight' data-aligned-summaries='0 2'>the location is terrific</span>. <span class='review-span highlight' data-aligned-summaries='3'>Rooms are small but comfortable</span>. <span class='review-span highlight' data-aligned-summaries='0 1'>Hotel is large</span> and hallways are very long. Only complaint, typical of expensive hotels, <span class='review-span highlight' data-aligned-summaries='5'>you must pay $16 for internet access</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2'>Located in heart of downtown near financial district and train station</span>. <span class='review-span highlight' data-aligned-summaries='0 1'>Historic hotel with grand lobby and lots of atmosphere</span>. <span class='review-span highlight' data-aligned-summaries='3'>Rooms small</span> but clean and <span class='review-span highlight' data-aligned-summaries='3'>comfortable</span>. Service good, excellent concierge. Can be pricey, try to get a deal online, worth about 150 to 250 per night depending on time of year and size of room you get.</div><div class='text-box'>We stayed at this hotel on 9th Aug for three nights.<span class='review-span highlight' data-aligned-summaries='2'>It is superbly located in the tourist area of Toronto</span>. <span class='review-span highlight' data-aligned-summaries='1'>We were made to feel special from the moment we arrived</span> in the hotel.We stayed on the gold floor with <span class='review-span highlight' data-aligned-summaries='4'>breakfast included</span> this <span class='review-span highlight' data-aligned-summaries='4'>was outstanding</span> <span class='review-span highlight' data-aligned-summaries='0'>we would highly recommend this</span> hotel for a <span class='review-span highlight' data-aligned-summaries='0'>truly fantastic first class hotel</span> in Torronto.</div><div class='text-box'>An <span class='review-span highlight' data-aligned-summaries='1'>upgrade to an enormous suite</span>, fresh fruit and workout clothes waiting for me, 5pm check out, free shuttle to city airport. Very Royal indeed!</div><div class='text-box'>The service was impecabble! But the room. <span class='review-span highlight' data-aligned-summaries='0 3'>The rooms are very small</span> <span class='review-span highlight' data-aligned-summaries='0'>and DIRTY</span>. You can see dust everywhere!</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Beautiful historic hotel well worth visiting.</span> <span id="1" class="summary-sentence">It's of a large size with a grand lobby and there is a very charming atmosphere about the building.</span> <span id="2" class="summary-sentence">This location is great for all the best tourist hot-spots and sight-seeing in the city.</span> <span id="3" class="summary-sentence">The rooms were small and dark with dark furniture but the bed was comfortable and the furniture was modern.</span> <span id="4" class="summary-sentence">The restaurants in general are brilliant and the breakfast served is an excellent quality.</span> <span id="5" class="summary-sentence">Internet access is $16 from the hotel.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

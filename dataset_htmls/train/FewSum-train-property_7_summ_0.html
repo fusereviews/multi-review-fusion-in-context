@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='3'>Cutest bakery</span> around Tempe area. <span class='review-span highlight' data-aligned-summaries='3'>Food was awesome</span>. We had the loaded waffles and bacon & blue galette. <span class='review-span highlight' data-aligned-summaries='2'>Warm atmosphere</span>. <span class='review-span highlight' data-aligned-summaries='2'>A few tables inside and out</span>. Chess board to play while you drink coffee or eat. Definitely coming back.</div><div class='text-box'>I've only been once and had a <span class='review-span highlight' data-aligned-summaries='0 3'>delicious little tart</span>! <span class='review-span highlight' data-aligned-summaries='0 3'>The crust tasted like it'd been frozen</span>, which is a pet-peeve for me, otherwise it would have been 5 stars. <span class='review-span highlight' data-aligned-summaries='1'>Service was also very personable</span>. I'll definitely be back!</div><div class='text-box'>Stopped in today to pick up some bakery items for one of my clients. <span class='review-span highlight' data-aligned-summaries='1'>The owners</span> of the bakery <span class='review-span highlight' data-aligned-summaries='1'>are very accommodating and very friendly</span>. <span class='review-span highlight' data-aligned-summaries='0'>The cinnamon roll I had was fantastic</span> I will be back. <span class='review-span highlight' data-aligned-summaries='3'>Our little bakery gem in Tempe</span></div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Yes--the sandwich was yummy for my tummy</span>!! I ordered the shredded chicken sandwich with sweetest season chips and iced chai latte for lunch. It was all most. I had this delivered to my house cause I worked from home and <span class='review-span highlight' data-aligned-summaries='3'>this was the best lunch ever</span>.</div><div class='text-box'>I love this little bakery in Tempe! <span class='review-span highlight' data-aligned-summaries='3'>Fantastic breakfast menu</span> and I can't wait to go back for lunch! <span class='review-span highlight' data-aligned-summaries='0'>I love their savory pastries</span>! Also <span class='review-span highlight' data-aligned-summaries='0'>their chocolate espresso cake is unbelievably fantastic</span>... with a cup of coffee... <span class='review-span highlight' data-aligned-summaries='3'>heavenly</span>!!!</div><div class='text-box'>They just upped the prices on the loaded waffles from I believe $7 to $9.50. Disappointed in the price jump I liked that <span class='review-span highlight' data-aligned-summaries='0'>it was a fast place to get a good waffle</span> but at that price I might as well save my self for a sit down restaurant. <span class='review-span highlight' data-aligned-summaries='3'>It was good but</span> sorry to say <span class='review-span highlight' data-aligned-summaries='3'>I won't be visiting any longer</span>...</div><div class='text-box'>I'm so happy I found this place. Amazing is an understatement. <span class='review-span highlight' data-aligned-summaries='3'>The food is really good, the</span> <span class='review-span highlight' data-aligned-summaries='0 3'>pastries are even better</span>, <span class='review-span highlight' data-aligned-summaries='1'>and the staff is incredibly nice and helpful</span>.The egg, cheese, and bacon <span class='review-span highlight' data-aligned-summaries='0'>sandwich with waffle bread is my favorite</span>. I really like the cream puff and bread pudding too. Pretty sure I've tried everything and it is all good</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 3'>Love love love their pastries</span>. Everything we have bought so far from here has. Even delicious. From huge chocolate covered strawberries to the most delicate cheese danish I've ever had. Oh and a yummy salty focaccia bread. Location is great and <span class='review-span highlight' data-aligned-summaries='2 3'>shop is cute</span>. Definitely a place to check out.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This bakery is well-known for its excellent pastries, sandwiches and desserts.</span> <span id="1" class="summary-sentence">The staff is very friendly, accommodating and personable.</span> <span id="2" class="summary-sentence">It has a nice atmosphere, and though it is primarily a takeout shop, there are a few indoor and outdoor tables available.</span> <span id="3" class="summary-sentence">This bakery is highly recommended.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

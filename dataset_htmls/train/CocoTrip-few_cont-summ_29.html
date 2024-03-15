@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>After reading earlier reviews I was concerned that the facilities and expereince would not be as nice as I had hoped. From the <span class='review-span highlight' data-aligned-summaries='0 3 6'>description of the room</span> we rented I <span class='review-span highlight' data-aligned-summaries='0 3 6'>thought it would be tight quarters</span>. I was pleasantly surprised to find <span class='review-span highlight' data-aligned-summaries='0 5 8'>the atmosphere and</span> <span class='review-span highlight' data-aligned-summaries='0 2 5 8'>facilities</span> <span class='review-span highlight' data-aligned-summaries='0 5 8'>to be</span> <span class='review-span highlight' data-aligned-summaries='0 2 5 8'>excellent</span>. We stayed in a <span class='review-span highlight' data-aligned-summaries='0 6'>small suite</span>, <span class='review-span highlight' data-aligned-summaries='0'>bedroom</span> and a <span class='review-span highlight' data-aligned-summaries='0'>pull out couch</span>. We had <span class='review-span highlight' data-aligned-summaries='0 5 8'>plenty of room</span> and were <span class='review-span highlight' data-aligned-summaries='0 5 8'>very comfortable</span>. <span class='review-span highlight' data-aligned-summaries='0 5 6 8 10'>The pull out couch was of excellent quality</span> and <span class='review-span highlight' data-aligned-summaries='0 6 8 10'>slept</span> <span class='review-span highlight' data-aligned-summaries='0 5 6 8 10'>better than some beds</span> <span class='review-span highlight' data-aligned-summaries='10'>I have expereinced during travels</span>. We stayed during the John Hagee ministeries event. <span class='review-span highlight' data-aligned-summaries='2 8'>The Chateau staff did an excellent job</span> handling the large crowd staying at the hotel and those that came in for the sessions. <span class='review-span highlight' data-aligned-summaries='4 6'>The Chateau</span> <span class='review-span highlight' data-aligned-summaries='4'>made a nice Spring Break destination</span> for these Michigan travelers.</div><div class='text-box'>Stayed last weekend and <span class='review-span highlight' data-aligned-summaries='3'>was disappointed over some details</span>. <span class='review-span highlight' data-aligned-summaries='2 7 8'>Room</span> <span class='review-span highlight' data-aligned-summaries='7'>413</span> <span class='review-span highlight' data-aligned-summaries='2 7 8'>was very noisy.too close to heating/AC units</span>. Also <span class='review-span highlight' data-aligned-summaries='2 7 8'>room was right above delivery area</span> <span class='review-span highlight' data-aligned-summaries='7 8'>which contributed to the noise</span>. <span class='review-span highlight' data-aligned-summaries='8'>Overall</span> <span class='review-span highlight' data-aligned-summaries='0 3 8'>not a very welcoming feeling at the Chateau</span>. <span class='review-span highlight' data-aligned-summaries='2 8'>Coffee pot would not work</span> and when I called to request another <span class='review-span highlight' data-aligned-summaries='2 8'>the woman at the front desk was rude</span> and didn't seem to believe me. <span class='review-span highlight' data-aligned-summaries='2 8'>The doormen were unpleasant and wouldn't even smile</span>,<span class='review-span highlight' data-aligned-summaries='8'> especially the one in the afternoon</span>. I come to Branson often to visit family and for vacations and I'm sorry to say this <span class='review-span highlight' data-aligned-summaries='3'>will not be my choice of hotel in the future</span>.</div><div class='text-box'>My husband and I stayed here before he deployed with the Army. <span class='review-span highlight' data-aligned-summaries='0 8'>It was so peaceful</span>. <span class='review-span highlight' data-aligned-summaries='1 2 3 4 5'>The area is beautiful</span>. <span class='review-span highlight' data-aligned-summaries='2 3 8'>The staff went out of their way to make our stay something to remember</span>. Some of the small details of this resort really make a difference. The ice cream shop packed up banana spits for us to take to our room. <span class='review-span highlight' data-aligned-summaries='0 9'>The cafe restaurant had the best food</span>. We can't wait to go back. Waking up to the chirping birds and <span class='review-span highlight' data-aligned-summaries='2 10 11'>the trickle of the water in the indoor atrium made for a nice touch</span>.</div><div class='text-box'>First time to Branson, stayed at Chateau on the Lake. It's about 10 minutes past the main strip of Branson activities but it's worth the drive for the <span class='review-span highlight' data-aligned-summaries='2'>gorgeous views</span> and lovely relaxing hotel. For the price and service level of the hotel, I did expect to have a mini fridge (empty or stocked) but our room type (king lakeview) did not have one. We took advantage of the great weather and hotel bar and had a glass of wine out on the deck. So lovely!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 5'>This was everything that i could of asked for</span>. <span class='review-span highlight' data-aligned-summaries='2 8'>Nice people</span>, <span class='review-span highlight' data-aligned-summaries='2'>nice scenery</span>. <span class='review-span highlight' data-aligned-summaries='0 5'>it was to die for</span>. I most definitely will be back here again! <span class='review-span highlight' data-aligned-summaries='9'>the food was expensive</span>. but i expected that. pull is 24hours. <span class='review-span highlight' data-aligned-summaries='10 11'>they also had a movie theater</span>.<span class='review-span highlight' data-aligned-summaries='11'> mainly showed kids movies</span> but they still had one.</div><div class='text-box'>When we pick up our daughter from a nearby camp we always stay at the Chateau and get a <span class='review-span highlight' data-aligned-summaries='9'>special room service dinner</span>. The <span class='review-span highlight' data-aligned-summaries='0 5'>beds are</span> so <span class='review-span highlight' data-aligned-summaries='0 5'>comfortable</span> and <span class='review-span highlight' data-aligned-summaries='5 9'>we</span> <span class='review-span highlight' data-aligned-summaries='0 5 9'>enjoy the room service</span> very much.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 4 5'>We</span> went for our one year anniversary and <span class='review-span highlight' data-aligned-summaries='0 4 5'>had a fabulous time</span>! <span class='review-span highlight' data-aligned-summaries='1 4 5'>The resort was stunning</span> and <span class='review-span highlight' data-aligned-summaries='10'>the</span> <span class='review-span highlight' data-aligned-summaries='1 10'>spa was lovely</span> as well!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 3 4 5'>Everything about</span> <span class='review-span highlight' data-aligned-summaries='0 1 2 3 4 5'>the resort was</span> <span class='review-span highlight' data-aligned-summaries='0 3 4 5'>perfect</span>! What <span class='review-span highlight' data-aligned-summaries='1 2'>a beautiful lake</span>!</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This hotel is not for everyone but perfect for others.</span> <span id="1" class="summary-sentence">The resort is beautiful and has a lovely spa.</span> <span id="2" class="summary-sentence">The people are nice and the facilities and scenery are excellent.</span> <span id="3" class="summary-sentence">The Chateau may not always feel welcoming so it may not be the number one choice for some who could be disappointed</span> <span id="4" class="summary-sentence">but it does make for a nice Spring Break destination and for some the resort</span> <span id="5" class="summary-sentence">will be perfect.</span> <span id="6" class="summary-sentence">Although some suites in this hotel are small, the pull out couch provided is of excellent quality for a good night's sleep.</span> <span id="7" class="summary-sentence">However, there can be an issue with noise in some rooms as they are next to the delivery area and the heating/AC units can be very loud.</span> <span id="8" class="summary-sentence">The hotel staff, for the most part were great although the woman at front desk was rude and the doorman was unpleasant, the overall experience was good.</span> <span id="9" class="summary-sentence">The cafe food was good but food was expensive.</span> <span id="10" class="summary-sentence">This hotel has some luxurious amenities that help make one's stay unforgettable.</span> <span id="11" class="summary-sentence">This includes an indoor atrium and a movie theatre to mainly entertain the kids.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

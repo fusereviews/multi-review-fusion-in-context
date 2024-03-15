@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>We've been here several times before, and it<span class='review-span highlight' data-aligned-summaries='0'>'s always been okay-maybe a little less</span>. We went today, and it was really good. The entire restaurant was cleaner, and the food was very tasty, much better than before. I'd definitely recommend it.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>This is my favorite mexican restaurant</span> the food is more on the traditional mexican style. They are the perfect combination of flavors and textures, <span class='review-span highlight' data-aligned-summaries='3'>cheap and</span> <span class='review-span highlight' data-aligned-summaries='0 3'>excellent food</span>. I'm extremely picky about Mexican food and this place is the only one I've ever been for real Mexican food.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>I have been living in NC for 8 years and this is the best Mexican food</span> I've had since moving here. Food was great. Had a shrimp dish and everything was cooked to perfection. My wife had a Burrito and that was really good also. This is my new favorite Mexican restaurant.</div><div class='text-box'>I have frequently visited this place for dinner <span class='review-span highlight' data-aligned-summaries='0'>over the last 10 years. The quality of food has been great every time</span>. Only concern, it <span class='review-span highlight' data-aligned-summaries='3'>use to be very cheap to eat here however prices have increased</span> over the years to where it's no longer a bargain. Food is still worth the price.</div><div class='text-box'>Delicious, affordable and <span class='review-span highlight' data-aligned-summaries='3'>a little nicer than most Mexican restaurants</span> I've been to, but <span class='review-span highlight' data-aligned-summaries='3'>it's still pretty casual</span>. I really like their seafood burrito. It's yummy! It's easy to find (right on the side of Roosevelt) and they have great dips.</div><div class='text-box'>This is our first time to eat at this location. We have eaten at the Waxhaw location three separate occasions. <span class='review-span highlight' data-aligned-summaries='0'>The food has been consistently good</span>. We thought we would have to give up good Mexican food when we left Texas. We have been pleasantly surprised. Mucho gusto.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>This is without a doubt my favorite mexican resturant</span> in town. The dip is fantastic, <span class='review-span highlight' data-aligned-summaries='2'>the employees are wonderful</span> and you can be in and out in 15 minutes. Everything on the menue is good and <span class='review-span highlight' data-aligned-summaries='3'>it is priced well</span>. Easy 5 Star.</div><div class='text-box'>Stopped here for a quick supper and had the carne asado tacos and one grilled chicken taco. The carne tacos were super. Chicken was bland. Beautiful presentation on authentic colorful plates. <span class='review-span highlight' data-aligned-summaries='3'>Bill was $14</span> and I gave waiter a $20 and he asked if I wanted change. Ummmm yeah so I just paid $20 <span class='review-span highlight' data-aligned-summaries='3'>for three tacos</span>.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The food at this Mexican restaurant has been consistently great for many years.</span> <span id="1" class="summary-sentence">The restaurant is very clean.  </span><span id="2" class="summary-sentence">The employees are friendly and nice.</span> <span id="3" class="summary-sentence">As the restaurant has become more upscale, the price of the food has risen over the years.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

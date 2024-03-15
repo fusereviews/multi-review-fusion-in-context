@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>So many delicious options. We got wagyu beef and <span class='review-span highlight' data-aligned-summaries='3 4'>it was expensive AF</span> <span class='review-span highlight' data-aligned-summaries='4'>but honestly amazingly good</span>. A good alternative to St Lawrence Market (because of SLM shit hours). I would go back and try more options, <span class='review-span highlight' data-aligned-summaries='2'>I like their take a number system</span>.</div><div class='text-box'>I picked up a frozen tourtiere for Christmas eve. It was easy to bake and absolutely delicious. <span class='review-span highlight' data-aligned-summaries='1'>The staff were incredibly helpful</span> and I'm really <span class='review-span highlight' data-aligned-summaries='3 5'>looking forward to checking out</span> <span class='review-span highlight' data-aligned-summaries='3'>some of their other offerings</span>, including <span class='review-span highlight' data-aligned-summaries='5'>other pies and cassoulet</span>. Can't wait to visit again.</div><div class='text-box'>I was out and about in Kensington Market on Sunday to pick up a bunch of different items for Mother's Day dinner. Stepped into Sanagan's on a whim and picked up the some of the biggest, juiciest and appropriately spiced pork sausages. <span class='review-span highlight' data-aligned-summaries='3 4'>Fair price point</span> and <span class='review-span highlight' data-aligned-summaries='1'>great customer service--these guys know their meat</span>.</div><div class='text-box'>I feel like I am going back in time when I walk into Sanagan's. The strangely familiar smell, the <span class='review-span highlight' data-aligned-summaries='0'>sawdust on the floor and</span> <span class='review-span highlight' data-aligned-summaries='0 3'>actual animals in the display cases</span> <span class='review-span highlight' data-aligned-summaries='0'>are rarely seen anymore in today's plastic wrapped meat-counters</span>. <span class='review-span highlight' data-aligned-summaries='1'>I love the attention I get</span> when I visit them, and have ben happy with the product so far.</div><div class='text-box'>Sanagans is a staple in Kensington and rightfully so! Their <span class='review-span highlight' data-aligned-summaries='3 4'>selections are great and reasonably priced</span>. <span class='review-span highlight' data-aligned-summaries='1'>The staff are friendly, knowledgeable</span>, and there are always a few people working so I never have to wait in line. I love stopping in here to peruse and always leave with something great.</div><div class='text-box'>The best butcher's place I've ever stepped into. <span class='review-span highlight' data-aligned-summaries='3'>This place has everything you need</span>. Fresh, delicious, mostly organic! They also have a food bar that serves chicken, fries, and the likes. <span class='review-span highlight' data-aligned-summaries='5'>They have a few tables</span> for you to sit and enjoy. <span class='review-span highlight' data-aligned-summaries='3'>Bit pricey</span> but come here for meat to make a nice home cooked meal.</div><div class='text-box'>Sanagan's offers <span class='review-span highlight' data-aligned-summaries='4'>quality products</span> and super informed service. No idea how to prep something? <span class='review-span highlight' data-aligned-summaries='1'>Just ask, and they'll tell you everything you need to know</span>. <span class='review-span highlight' data-aligned-summaries='5'>They also offer amazing prepared foods</span>, spices / seasonings / brines etc, and <span class='review-span highlight' data-aligned-summaries='3'>an awesome lunch selection</span> (get the Sunday Roast - so good)</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='5'>I purchased lamb sausages and Piri Piri chicken drumsticks</span>.The sausages were incredibly fatty. I cooked a pound of them and ended up with 1 cup of orange fat.The chicken was not delicious and had a slimy mouthfeel.<span class='review-span highlight' data-aligned-summaries='1'>The staff was pleasant</span> but <span class='review-span highlight' data-aligned-summaries='4'>the quality is not great</span>. I won't be back.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Sanagan's defines an old-fashioned butcher.</span> <span id="1" class="summary-sentence">The staff is extremely knowledgeable, attentive, and friendly.</span> <span id="2" class="summary-sentence">and a number system is implemented, which makes the service very organized.</span> <span id="3" class="summary-sentence">The selection is extensive, but it is also expensive.</span> <span id="4" class="summary-sentence">That being said, the quality is worth the price.</span> <span id="5" class="summary-sentence">The establishment also offers some prepared foods, but there are only a few tables available for patrons wishing to dine in rather than take orders home.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

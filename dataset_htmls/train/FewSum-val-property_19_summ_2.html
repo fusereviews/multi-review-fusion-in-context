@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>Blue Moon is a neighborhood <span class='review-span highlight' data-aligned-summaries='0'>bar that makes</span> <span class='review-span highlight' data-aligned-summaries='0 1'>great burgers</span> and cheese curds. Portions are large and good for sharing.<span class='review-span highlight' data-aligned-summaries='2'>The decor is a little dated</span>, but that isn't the reason to go. <span class='review-span highlight' data-aligned-summaries='4'>They only take cash</span>, <span class='review-span highlight' data-aligned-summaries='4'>but at least there is an ATM in the building</span>.</div><div class='text-box'>This place has a lot of character, great beer and excellent food. I had one of if not the best Reuben ever. The food is home made. The clam chowder has real clams and thankfully, they were not rubbery but rather cooked to perfection. I highly recommend Blue Moon Bar & Grill when in Madison, WI.</div><div class='text-box'>Definitely a mixed crowd as stated before. Decent food, <span class='review-span highlight' data-aligned-summaries='3'>a nice place to watch the game</span> that is on that day. Not a place where I am a regular, but there seem to be the same faces every time I walk by... weird. 2 stars.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Awesome beer</span> but <span class='review-span highlight' data-aligned-summaries='0 1'>Veggie burger tastes nasty</span>. A hint of curry, thyme, not sure here but kinda strange and Not a good experience. 1 of 5 stars. At most. A few years ago ur veggie burger rocked!! Please change ur recipe back. Ill be back then!</div><div class='text-box'>Love this place. <span class='review-span highlight' data-aligned-summaries='0 1'>Great burgers</span>, better cheese curds! <span class='review-span highlight' data-aligned-summaries='3'>Great place to watch the game</span> or bring family visiting from out of town. <span class='review-span highlight' data-aligned-summaries='2'>Great bar atmosphere</span> to enjoy every moment you are here. Minus 1 star only because <span class='review-span highlight' data-aligned-summaries='4'>they dont accept credit / debit cards</span>. They do have an atm inside though.</div><div class='text-box'>Its a Wisconsin bar. <span class='review-span highlight' data-aligned-summaries='2'>Lighting is pretty bad</span>, <span class='review-span highlight' data-aligned-summaries='0'>space isn't that comfortable but the beer</span> and bar food <span class='review-span highlight' data-aligned-summaries='0'>get the job done</span>, I guess. <span class='review-span highlight' data-aligned-summaries='2'>Service is... well, its a bar</span>. <span class='review-span highlight' data-aligned-summaries='0 1'>Burger is ok</span> but definitely <span class='review-span highlight' data-aligned-summaries='1'>NOT worth the hype</span>. <span class='review-span highlight' data-aligned-summaries='2'>The whole place could use an update</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='3'>This place is a hidden gem</span>!!!! Their clam chowder is to die for!!!!! It could be served anywhere in Boston!!!!! Try a Brat!!!! Top notch!!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1'>Food is fine and beer is pretty standard</span>. <span class='review-span highlight' data-aligned-summaries='1'>Atmosphere - eh</span>. <span class='review-span highlight' data-aligned-summaries='4'>Cash only is pretty annoying</span>. <span class='review-span highlight' data-aligned-summaries='2'>Waitstaff just doesn't really seem to care</span> the twice I've visited. I'm sure they do just fine with their regular crowd. Good for them. I pass.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Bugers and beer are the best features of this bar.</span> <span id="1" class="summary-sentence">While the beer selection is awesome and the burgers are tasty, the bar lacks anything fancy.</span> <span id="2" class="summary-sentence">Dimly lit, dated decor and average service make this bar typical.</span> <span id="3" class="summary-sentence">Overall, it's fun place to grab a beer and watch the game.</span> <span id="4" class="summary-sentence">Cash is a must, as it is the only form of payment accepted.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

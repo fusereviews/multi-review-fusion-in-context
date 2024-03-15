@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>Close to Christmas Market We stayed here for one night in late December on our way to Ireland. I reserved two rooms on the internet and had been impressed by the hotel's helpfulness and speed and ease in replying. <span class='review-span highlight' data-aligned-summaries='2'>The front desk staff were</span> similarly <span class='review-span highlight' data-aligned-summaries='2'>pleasant and helpful</span> when we arrived. <span class='review-span highlight' data-aligned-summaries='1'>Our rooms were small</span>, as were the bathromms, but well heated and very clean. <span class='review-span highlight' data-aligned-summaries='3'>The breakfast was</span> also <span class='review-span highlight' data-aligned-summaries='3'>good</span> and all that we required. <span class='review-span highlight' data-aligned-summaries='0'>I chose the hotel because of its proximity to the centre of the city and the Christmas market, and indeed it was perfect for this</span>. It was bitterly cold outside and it was great to be able to get back to the hotel in a couple of minutes. <span class='review-span highlight' data-aligned-summaries='2'>We were quite happy with our experience here</span> and <span class='review-span highlight' data-aligned-summaries='5'>would definitely recommend it to others</span></div><div class='text-box'>The Miramar Mix . A clean and comfortable hotel, with the bonus of free wireless internet for guests, and a good hearty breakfast included in the price. Very convenient for getting around the Altstadt, and not far from the cultural attractions of Frankfurt. Reasonable walking distance from the Hauptbahnhof. <span class='review-span highlight' data-aligned-summaries='2'>The staff are helpful</span> and speak English. Like all smaller hotels in Germany <span class='review-span highlight' data-aligned-summaries='3'>the elevator is real</span> slow (and <span class='review-span highlight' data-aligned-summaries='3'>small</span>), at times you wonder if it's stopped, but it gets you there. <span class='review-span highlight' data-aligned-summaries='4'>The room decor is a bit startling</span>, with more fake burr walnut panelling than you'd expect in a fake Rolls-Royce factory, and bright cheerful colours that somehow do work together but shouldn't. <span class='review-span highlight' data-aligned-summaries='3'>A good breakfast is included</span> in the rate. I'd definitely use the Miramar again.</div><div class='text-box'>The best hotel breakfast I've ever had <span class='review-span highlight' data-aligned-summaries='0'>The hotel Miramar is well-located</span> in Frankfurt, in a lovely area <span class='review-span highlight' data-aligned-summaries='5'>very close to the Altstadt</span>. The hotel itself is not impressive looking from the outside and the reception is ridiculously small but that is the worst criticism that I can give it. The room itself was lovely, <span class='review-span highlight' data-aligned-summaries='2'>the staff were friendly</span> and <span class='review-span highlight' data-aligned-summaries='3'>I have never had as good a breakfast</span> as I did at the Hotel Miramar. There was something the cater for all tastes (which is not always the case in hotels on mainland Europe) and I have to say I was really set up for the day of sightseeing after it. I really enjoyed my stay there and if I were to return to Frankfurt <span class='review-span highlight' data-aligned-summaries='2 5'>I wouldn't dream of staying anywhere else</span>.</div><div class='text-box'>Perfect Miramar <span class='review-span highlight' data-aligned-summaries='0'>Going to our first Christmas market</span> in Frankfurt we wanted to make sure we made the most of the limited time we had.We had a wonderful time which was helped in no small way by having booked the Hotel Miramar. It was easy to find just 10 minutes walk from the station. The <span class='review-span highlight' data-aligned-summaries='2'>staff were most friendly and helpful</span> (especially Mary who appeared to cover the desk in the evenings), the whole hotel was clean, efficient and the best value for money we have had on several of what we call our 'Ryanair' weekends. The <span class='review-span highlight' data-aligned-summaries='0'>location could not be better</span> and I would have no hesitation in recommending the Hotel Miramar to anyone.</div><div class='text-box'>Good hotel in good location <span class='review-span highlight' data-aligned-summaries='0 2'>This hotel is in an excellent location</span> around the corner from the Romerberg <span class='review-span highlight' data-aligned-summaries='5'>in the centre of the old town</span>. I stayed here for 3 nights in June 2004. <span class='review-span highlight' data-aligned-summaries='1'>The single room was compact</span>, but <span class='review-span highlight' data-aligned-summaries='2'>spotless and the bathroom</span> (shower only, no bath tub) <span class='review-span highlight' data-aligned-summaries='2'>looked new</span>. It had air conditioning and was very quiet. <span class='review-span highlight' data-aligned-summaries='2'>The staff were very friendly and helpful</span>. They had a computer set up in reception and one could purchase a voucher from the hotel to connect to the internet via the computer, and while not cheap was very convenient. <span class='review-span highlight' data-aligned-summaries='5'>I would certainly consider staying here again</span> if I ever return to Frankfurt.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Fantastic location</span>, clean and <span class='review-span highlight' data-aligned-summaries='5'>reasonable price</span> I have been going to Frankfurt for the last 4 years <span class='review-span highlight' data-aligned-summaries='0'>for the Christmas markets</span> and have stayed at this hotel for 3 of those years (we left it too late to book for the 4th time!). The hotel costs around 90 for 2 nights bed and <span class='review-span highlight' data-aligned-summaries='3'>breakfast for 2 people</span> which <span class='review-span highlight' data-aligned-summaries='3'>is fantastic value</span>. <span class='review-span highlight' data-aligned-summaries='0 5'>The hotel is 2 minutes walk from the main markets</span> <span class='review-span highlight' data-aligned-summaries='5'>and about 4 minutes walk to the high street</span>. <span class='review-span highlight' data-aligned-summaries='1'>The rooms are small</span> but always clean and well looked after.</div><div class='text-box'>Great Hotel, great location <span class='review-span highlight' data-aligned-summaries='0'>We stayed</span> in the Miramar in December <span class='review-span highlight' data-aligned-summaries='0'>to visit the Christmas market and the location was perfect</span>. We were very impressed with the welcome which included mulled wine and stollen cake.The hotel was spotlessly clean, the room was great and all the <span class='review-span highlight' data-aligned-summaries='2'>staff were friendly</span> and <span class='review-span highlight' data-aligned-summaries='2'>helpful</span>. <span class='review-span highlight' data-aligned-summaries='3'>The included breakfast was ample with lots of choice and really set you up for the day</span>. We will definately be staying at the Hotel Miramar on our next visit to Frankfurt.</div><div class='text-box'>The best location in town Stayed at the Miramar for two nights i September with my wife. <span class='review-span highlight' data-aligned-summaries='0'>The location was superb</span>. Just aorund the corner from Rmer/Altstadt and just two blocks from Zeil (Frankfurts main shopping street). <span class='review-span highlight' data-aligned-summaries='1'>The room was smaller</span> than usual but was modern and in excellent condition. <span class='review-span highlight' data-aligned-summaries='3'>The breakfast also was nice</span>. Highly recommend this hotel.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The hotel is in a good location being just around the corner from the Christmas Markets.</span> <span id="1" class="summary-sentence">Rooms are pretty small.</span> <span id="2" class="summary-sentence">While staff is very friendly and helpful, there isn't really that much going for the hotel except the location.</span> <span id="3" class="summary-sentence">The breakfast is just adequate and the lift could barely fit one person with their luggage.</span> <span id="4" class="summary-sentence">The decor in the rooms is also a bit faded.</span> <span id="5" class="summary-sentence">All in all though, if you are looking for a reasonably priced hotel in close proximity to the old town, then this isn't a bad choice.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

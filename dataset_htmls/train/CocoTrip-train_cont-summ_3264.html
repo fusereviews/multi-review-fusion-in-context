@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>OK. It's a budget hotel so If your looking for the Crown Plaza, this is NOT the place. <span class='review-span highlight' data-aligned-summaries='1'>The stairs are the most difficult thing about The Hotel Di Ann and they are not for the weak</span>. Otherwise, it is a great deal for the money. They provided everything we needed. <span class='review-span highlight' data-aligned-summaries='2 4'>The rooms are tiny</span> <span class='review-span highlight' data-aligned-summaries='2'>and old</span>, but the beds were comfortable, clean and warm. The bathrooms were decent and clean. The breakfast (Included with the room price) was adequate. They have a nice balcony/patio that looks over the street that is a nice place to chill. They have a nice cafe right below the hotel and many shops which will help in making your stay convenient. <span class='review-span highlight' data-aligned-summaries='8'>Euro for Euro, this was a great deal</span> and it was everything I expected.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 8'>This hotel is in a good location</span>. It was easy to get to all the attractions on foot. We enjoyed the balcony to watch the city while slowing down a little. You can hear the church bells ring well from here also. <span class='review-span highlight' data-aligned-summaries='1'>The stairs are steep</span> and <span class='review-span highlight' data-aligned-summaries='4'>the room we had was VERY SMALL</span>, but the price was good. My complaint is that we were charged 25 euro as a deposit on the room key, which is highly unusual. We were told we would get this back when we checked out, however, we forgot and the staff neglected to bring up the issue, so we paid an extra 25 euro. It seemed like a cheap trick in a city where many tourist might be distracted by the time they check out. .</div><div class='text-box'>Don't like this hotel. Unfriendly staff, <span class='review-span highlight' data-aligned-summaries='2 4'>really messy room</span> and halls. <span class='review-span highlight' data-aligned-summaries='4'>We had to ask for a rag to clean the room, because</span> <span class='review-span highlight' data-aligned-summaries='2 3 4'>the staff</span> <span class='review-span highlight' data-aligned-summaries='4'>didn't wipe it</span>. <span class='review-span highlight' data-aligned-summaries='4'>They</span> <span class='review-span highlight' data-aligned-summaries='2 3 4'>hadn't cleaned</span> <span class='review-span highlight' data-aligned-summaries='3 4'>it</span> <span class='review-span highlight' data-aligned-summaries='2 3 4'>for our arrival</span> either. I wanted to ask for a vacuum cleaner aswell. <span class='review-span highlight' data-aligned-summaries='3'>We asked for the towels ourselves</span>. Full of dust - the bedspread had old stains on it for example. <span class='review-span highlight' data-aligned-summaries='7'>The breakfast wasn't tasty - low budget food</span>. <span class='review-span highlight' data-aligned-summaries='5'>Hard to sleep because</span> of <span class='review-span highlight' data-aligned-summaries='6'>the refrigerator</span> <span class='review-span highlight' data-aligned-summaries='5 6'>in the room- really noisy</span>. <span class='review-span highlight' data-aligned-summaries='2'>One of the staff was friendly</span>. He came with coffee facilities. The cat was cute also. And <span class='review-span highlight' data-aligned-summaries='0'>the location is good</span>. There's so <span class='review-span highlight' data-aligned-summaries='8'>many other hotels in amsterdam</span>, so next time <span class='review-span highlight' data-aligned-summaries='8'>we will book in another place</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2'>the rooms are very basic but comfortable</span> .small things would greatly improve this hotel like clean curtains ,a mirror in the room(the only one was in the bathroom ) and a lick of paint ,<span class='review-span highlight' data-aligned-summaries='4 5'>the room</span> <span class='review-span highlight' data-aligned-summaries='4'>was quite small</span> and the <span class='review-span highlight' data-aligned-summaries='5'>noise from the traffic below made it impossible to get a full nights sleep</span> .on the plus side the bathroom area was adequate and the free safe in the rooms are a good idea and the <span class='review-span highlight' data-aligned-summaries='0'>views and location are great</span> <span class='review-span highlight' data-aligned-summaries='2'>.the staff were pleasent</span> enough and <span class='review-span highlight' data-aligned-summaries='7'>the breakfast was basic but acceptable(toast</span>,ceareal,preserves ,yogurts )but please move the cat .not everyones a fan of felines .also please note that <span class='review-span highlight' data-aligned-summaries='1'>the stairs are very steep</span> and would be difficult to climb for some people even just to the reception area</div><div class='text-box'>We did a long week-end in Amsterdam and thought this hotel was great. <span class='review-span highlight' data-aligned-summaries='4 8'>Yes the rooms are small but what do you expect</span> <span class='review-span highlight' data-aligned-summaries='8'>in a typical Amsterdam building</span>, which all tend to be tall and narrow? The beds were <span class='review-span highlight' data-aligned-summaries='2 4'>comfortable and clean</span>, as was <span class='review-span highlight' data-aligned-summaries='2'>the rest of the room</span>. We had a problem with the key card but the staff came up straight away to help us out. <span class='review-span highlight' data-aligned-summaries='2 3'>We found</span> <span class='review-span highlight' data-aligned-summaries='2 3 8'>the staff in general very polite and helpful</span> and they let us leave our luggage there on the last day. <span class='review-span highlight' data-aligned-summaries='7'>Breakfast was more than adequate.</span> We really enjoyed our stay here and would be more than happy to stay again. <span class='review-span highlight' data-aligned-summaries='0 8'>It's</span> also <span class='review-span highlight' data-aligned-summaries='0 8'>in a great location</span>, really close to Dam Square and a lot of the main sights.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='4'>the room in this hotel was scruffy</span> and <span class='review-span highlight' data-aligned-summaries='4'>cramped</span>. it is claimed that the hotel was upgraded in about 1999 so i hate to think what the rooms were like then! we had a double room overlooking the gardens (nice view) but there was hardly room to swing a cat (or should that be kitten?). we had a small en-suite, a fridge but no drink making facilities. staff were very friendly and the buffet <span class='review-span highlight' data-aligned-summaries='7'>breakfast adequate</span>. <span class='review-span highlight' data-aligned-summaries='0'>the only saving grace for this hotel is its location directly behind the palace in dam square, only two minutes walk</span>. i would not have minded so much but the room was not that cheap.</div><div class='text-box'>Hi My son and I stayed here from 24th of May 2006 for three nights. <span class='review-span highlight' data-aligned-summaries='1'>The stairs were very steep</span> making it not suitable for elderley, <span class='review-span highlight' data-aligned-summaries='4'>the room was very small</span> (room 302) the sink needs a new style tap its hard to wash without banging you face on it <span class='review-span highlight' data-aligned-summaries='7'>the breakfast was basic eggs, toast, cheese , cerial</span> , but <span class='review-span highlight' data-aligned-summaries='2'>the</span> <span class='review-span highlight' data-aligned-summaries='2 3'>staff were friendly</span> <span class='review-span highlight' data-aligned-summaries='2'>and</span> <span class='review-span highlight' data-aligned-summaries='2 4'>the room was clean</span> <span class='review-span highlight' data-aligned-summaries='4'>and cleaned each day</span> although there was a few complaints , all in all the hotel was o.k and I would stay again . close to center, but out of the way of the noise.</div><div class='text-box'>This was a great hotel for the price. <span class='review-span highlight' data-aligned-summaries='1'>The stairs were steep, but most of them are in Europe</span>. We had a corner room with large windows with <span class='review-span highlight' data-aligned-summaries='0 5 8'>great views of</span> <span class='review-span highlight' data-aligned-summaries='0 8'>the river and</span> <span class='review-span highlight' data-aligned-summaries='0 5 8'>the streets</span>. The <span class='review-span highlight' data-aligned-summaries='0 8'>downtown</span> area <span class='review-span highlight' data-aligned-summaries='0 8'>was just a few blocks away</span>. The bathroom had a plain floor that was also the bottom of the shower, but I have seen worse. Everyone was nice and internet was reasonable. They also had a housecat that was entertaining.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The hotel has a fantastic location.</span> <span id="1" class="summary-sentence">Sure, the stairs are steep, but that's common.</span> <span id="2" class="summary-sentence">What was worse was the staff and our room.</span> <span id="3" class="summary-sentence">The staff wasn't helpful and could hardly understand English.</span> <span id="4" class="summary-sentence">Our room was small, which was fine, but it wasn't very clean or well maintained.</span> <span id="5" class="summary-sentence">The room was on the street, which was very noisy.</span> <span id="6" class="summary-sentence">Also, the refrigerator didn't work.</span> <span id="7" class="summary-sentence">The breakfast was ok, nothing special.</span> <span id="8" class="summary-sentence">For the money you could probably find something better, but the location is tough to beat.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

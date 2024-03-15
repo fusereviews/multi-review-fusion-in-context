@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1'>Hotel Victoria is great</span> as a base from which to see the city. It's on Yonge Street, bonus, and <span class='review-span highlight' data-aligned-summaries='1'>is reasonably priced</span>. <span class='review-span highlight' data-aligned-summaries='0'>Things like CN Tower</span>, <span class='review-span highlight' data-aligned-summaries='0'>Rogers Centre/Skydome</span>, the Eaton Centre, harbourfront, Hockey Hall of Fame, Union station and Dundas Square are all <span class='review-span highlight' data-aligned-summaries='0'>between 5 and 20 minutes' walk</span>. A list of good food options in the area would have the 'Richtree market restaurant' at the top (it's also one of the closest), nice 'takesushi' place around the corner, Baton Rouge closer to Dundas square. The hotel itself is clean and comfortable. You don't choose hotel victoria because you want luxury, nice thick walls that block out most noise, or a view of anything but a brick wall (in our room anyway), but like i said it has friendly staff, is reasonably priced and is in a great location.</div><div class='text-box'>We <span class='review-span highlight' data-aligned-summaries='1'>got a decent deal online</span> by having to show our concert ticket to Bon Iver at Massey Hall. The queen room was small but nice and recently updated, the <span class='review-span highlight' data-aligned-summaries='0'>hotel was in a great location about a ten minute walk to Queen street</span> and only a few minutes from the GO station / Union. We paid a little extra for the "Business Room" which came with a bottle of water - although there was no fridge, a paper in the morning and Apple TV, which was a good to have after the show. The only faults: we were a disappointed when we asked downstairs for wine glasses on our way in, as we brought a bottle for after the show; and the pillows were a bit high/full for us - pretty minor. The breakfast down in the adjoining restaurant, Over Easy was great in the morning.</div><div class='text-box'>stayed here for three nights. they are renovations going on at the moment in the lobby but don't let that put you off - we were on 2nd floor - newly renovated and didn't hear a thing. rooms are contemporary (new new blue woodedn floor) - clean rooms but be careful as bath in slippery - they have a bath mat for you to use. would have been nice if there were a few leaflets on site seeing in toronto - there was only a niagara leaflet. Must eat in Over Easy - restaurant just walk through hotel lobby - they do breakfast/lunch from 10am-4pm. the french toast and side of fresh fruit is magic. <span class='review-span highlight' data-aligned-summaries='2'>would recommend this hotel</span> - <span class='review-span highlight' data-aligned-summaries='0'>hockey hall of fame is 5 minute walk - CN tower 15 mins and downtown shopping in yonge is a ten minute walk</span>.</div><div class='text-box'>My girlfriend and I are staying here late November on an extended business trip. (for the first time) Before we have even stayed there, I can say I am more than satisfied with the service at this Hotel. I sent an email to the Sales Manager with a couple of questions about the hotel and he got back to me with polite answers\suggestions in a timely manner. This is officially the first time I have ever written a review before I have stayed somewhere. Looking forward to our experience there.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2'>Best hotel stay I've ever had</span>! Every year my boyfriend and I celebrate our anniversary by having a hotel night, our normal hotel was unavaliable so we looked around and immediatly fell in love with the modern decor of these rooms. The location was amazing, having Netflicks avaliable to us as well was wonderful, and the hotel staff were very very nice! I think my boyfriend and I have found a new hotel for our future anniversaries! To sum up my experience: <span class='review-span highlight' data-aligned-summaries='1'>it was amazing</span>!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Location is perfect</span>, just on Yonge and Wellington (close to Eaton centre for shopping and CN Tower Skydome for sightseeing). Althouigh, the breakfast was an extra cost (there is an over easy in the hotel), this was quite good value for money and a good way to start the day. The free wi-fi in the rooms was a God send. Room was nice and the shower was really good. <span class='review-span highlight' data-aligned-summaries='1 2'>I would definitely recommend people to stay here</span>.</div><div class='text-box'>I stayed over thr weekend and was VERY impressed with the quality of service(friendly staff) and the <span class='review-span highlight' data-aligned-summaries='1'>great room</span> (really clean). I heard that they will be renovating in the near future and will make another reservation to see what the results are. <span class='review-span highlight' data-aligned-summaries='2'>Highly recommended</span></div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Convenient location downtown</span>. The staff were courteous and helpful. The room was modern and suited our needs for a one night rental.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The hotel is conveniently located for a short walk to good sights of the city.</span> <span id="1" class="summary-sentence">This is a really great hotel with great value for money.</span> <span id="2" class="summary-sentence">It's definitely a recommendable hotel.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>I searched long and hard to find the right hotel in Istanbul's historic Sultanahmet area, and <span class='review-span highlight' data-aligned-summaries='0'>I made the perfect choice</span>. I was traveling with a group of 8 so the pressure was on me. <span class='review-span highlight' data-aligned-summaries='2'>The Armada's staff was friendly</span>, attentive,and helpful, the rooms were spacious (mine had a lovely view of the Sea of Marmara), and the hotel's location was convenient. <span class='review-span highlight' data-aligned-summaries='4'>The breakfast buffet was sumptuous</span>, and I can say honestly that <span class='review-span highlight' data-aligned-summaries='5 6'>the rooftop</span> <span class='review-span highlight' data-aligned-summaries='6'>dinner we had at the Armada was the best meal we had in Istanbul, and the</span> <span class='review-span highlight' data-aligned-summaries='5 6'>view of the Blue Mosque and Hagia Sophia was unbeatable</span>. It was a 10-15 minute walk uphill to the sites, but we enjoyed the fascinating streets on the way. Faye USA</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>The Armada Hotel was a very good experience for me</span>. I have seldom stayed at a hotel with such an excellent service and with such friendliness towards the customers. <span class='review-span highlight' data-aligned-summaries='1'>The hotel is situated nearly perfect within a 10 minute walk from all major attractions</span> <span class='review-span highlight' data-aligned-summaries='0 1'>in Istanbul</span>,<span class='review-span highlight' data-aligned-summaries='1'> the Blue Mosque, Hagia Sophia, Topkapi</span> and the Grand Bazar. <span class='review-span highlight' data-aligned-summaries='5'>The view from the restaurant on the top floor was amazing</span>, <span class='review-span highlight' data-aligned-summaries='5'>the Bosphorus in one direction and the Hagia Sophia and Blue Mosque in the other</span>. The food was also excellent. On top of it all, the price was very modest. My stay in December was a business trip, but I intend to go back already the first week of January on a private trip.</div><div class='text-box'>The Armada is a smallish personal hotel with wonderful service in an excellent location. I always try to stay in a hotel with a <span class='review-span highlight' data-aligned-summaries='5'>rooftop restaurant</span> and this one <span class='review-span highlight' data-aligned-summaries='5'>may be the best i have ever seen.</span> <span class='review-span highlight' data-aligned-summaries='1 5'>The Bosphorous on one side and the Blue Mosque on the other</span>, up the hill. <span class='review-span highlight' data-aligned-summaries='5 6'>We enjoyed the hotel's restaurant and view so much</span> <span class='review-span highlight' data-aligned-summaries='5'>that we ended up eating most of our meals there-just captivated by the views</span>. <span class='review-span highlight' data-aligned-summaries='6'>The food is also terrific</span>. The hotel is within easy walking distance of so many sites in the Old City. <span class='review-span highlight' data-aligned-summaries='2'>The staff is friendly</span> and helpful. We had a room with a sea view and the beds were comfortable. <span class='review-span highlight' data-aligned-summaries='0'>What a gem of a hotel</span>. october 2010</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='3'>The hotel was clean</span> and the rooms adequate. <span class='review-span highlight' data-aligned-summaries='2'>The staff were exceptionally welcoming and helpful</span>. <span class='review-span highlight' data-aligned-summaries='4'>The buffet breakfast was good</span>, and served in <span class='review-span highlight' data-aligned-summaries='5'>the terrace restaurant which had</span> <span class='review-span highlight' data-aligned-summaries='1 5'>lovely views of both the Blue Mosque</span> <span class='review-span highlight' data-aligned-summaries='5'>and The Bosphorus.</span> <span class='review-span highlight' data-aligned-summaries='1'>The hotel is less than 10 minutes walk from Topkapi Palace and all the other attractions in Sultanahmet</span> and train and tram to other areas of the city, however, it was an uphill walk. <span class='review-span highlight' data-aligned-summaries='0'>Our 4 day stay was most enjoyable</span> and we were glad we stayed at this hotel</div><div class='text-box'>I have stayed at the <span class='review-span highlight' data-aligned-summaries='0'>Armada Hotel in Istanbul</span> twice now for conferences. <span class='review-span highlight' data-aligned-summaries='3'>The rooms are</span> incredibly comfortable and <span class='review-span highlight' data-aligned-summaries='3'>clean</span>. <span class='review-span highlight' data-aligned-summaries='4'>The breakfast is one of the best in the city</span> - <span class='review-span highlight' data-aligned-summaries='5'>with beautiful views of the Marmara Sea, Hagia Sophia, and Blue Mosque</span>. The hotel is impeccably clean and the staff is very helpful and <span class='review-span highlight' data-aligned-summaries='0'>welcoming</span>. I would highly recommend <span class='review-span highlight' data-aligned-summaries='0'>staying at the Armada</span> if you want to see <span class='review-span highlight' data-aligned-summaries='1'>the sites Sultanahmet - which are a short uphill walk away</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>The Armada is an excellent place to stay when visiting Istanbul</span>. It is <span class='review-span highlight' data-aligned-summaries='0'>close to the sea but</span> <span class='review-span highlight' data-aligned-summaries='0 1'>with easy access to the sites</span> <span class='review-span highlight' data-aligned-summaries='1'>of the old section</span> of Istanbul. <span class='review-span highlight' data-aligned-summaries='4 5 6'>The roof top breakfast</span> <span class='review-span highlight' data-aligned-summaries='4 6'>is fantastic</span>. The food is good and <span class='review-span highlight' data-aligned-summaries='6'>the</span> <span class='review-span highlight' data-aligned-summaries='5 6'>view is great</span>. <span class='review-span highlight' data-aligned-summaries='1 5'>You see the Blue Mosque, the Ayasofya</span> <span class='review-span highlight' data-aligned-summaries='5'>and the sea from your table</span>. We enjoyed walking along the sea in the evening.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>We really enjoyed our stay</span> at the Armada. <span class='review-span highlight' data-aligned-summaries='2'>The staff was friendly</span> and very helpful. The rooms were nicely furnished with everything we needed, and <span class='review-span highlight' data-aligned-summaries='1'>the hotel was located near the historical sites so that we easily walk to the Blue Mosque, the Hagia Sophia</span>, and many restaurants. <span class='review-span highlight' data-aligned-summaries='0'>We will definitely stay at the Armada when we visit Istanbul again</span>.</div><div class='text-box'>I was a little bit sceptical about the good reviews about the wonderful views and location but they were well deserved. <span class='review-span highlight' data-aligned-summaries='4'>The breakfast</span> served on <span class='review-span highlight' data-aligned-summaries='5'>the covered terrace</span> <span class='review-span highlight' data-aligned-summaries='4 5'>is terrific</span> <span class='review-span highlight' data-aligned-summaries='5'>and the views of the sea on one side and the blue mosque on the other are spectacular</span>. <span class='review-span highlight' data-aligned-summaries='3'>The rooms are</span> comfortable and <span class='review-span highlight' data-aligned-summaries='3'>very clean</span>. <span class='review-span highlight' data-aligned-summaries='2'>The staff was</span> helpful <span class='review-span highlight' data-aligned-summaries='2'>without being annoying</span>.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Very enjoyable stay at Armada Hotel in Istanbul .</span> <span id="1" class="summary-sentence">The hotel is very well situated near the Aghia Sophia Museum ,the Topkapi Palace and the SultanAhmet Blue Mosque.</span> <span id="2" class="summary-sentence">The hotel staff was very pleasant and friendly.</span> <span id="3" class="summary-sentence">The rooms were very clean .</span> <span id="4" class="summary-sentence">The buffet breakfast is generous and of excellent quality.</span> <span id="5" class="summary-sentence">The view from the terrace restaurant is beautiful , day and night ,overlooking on one side the Marmara Sea, the Bosphorus and on the other side the Blue Mosque and Aghia Sophia.</span> <span id="6" class="summary-sentence">Atmosphere and dinner in the restaurant was an enjoyable experience.</span> <span id="7" class="summary-sentence">Early check in is possible.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

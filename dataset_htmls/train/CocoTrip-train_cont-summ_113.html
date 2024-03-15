@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>We spent one night at Fusion on our way south. It was super easy to find from the Cancun Airport. And we were lucky enough to get off street parking right outside the hotel. <span class='review-span highlight' data-aligned-summaries='0'>There was actually a bit of confusion with our booking</span> between emails and phone calls. <span class='review-span highlight' data-aligned-summaries='0'>But</span> <span class='review-span highlight' data-aligned-summaries='0 1'>Kim was awesome and set us up with a room</span>, and a discount. The location was perfect. <span class='review-span highlight' data-aligned-summaries='3'>RIght on the beach</span> <span class='review-span highlight' data-aligned-summaries='5'>close to 5th</span>, but far enough away to be quiet. The rooms were pretty basic, but you are really paying for the rest of the hotel. The room had great A/C and a comfortable bed. Hotel is on the beach with a really cool bar and great beach access. <span class='review-span highlight' data-aligned-summaries='6'>For its price range we think its a great spot</span>!</div><div class='text-box'>My husband and I stayed at the Fusion the end of April, it was the second time we've stayed there. We love the service, the staff is very attentive and friendly. The food is very good, and having it served to you right on the beach is wonderful, you don't even have to leave your lounge chair! Our room was very basic, but very clean. We were in room 26, back in the garden section, and it was very quiet at night. The beach is beautiful! The location of the Fusion is perfect, right in the heart of Playa del Carmen. <span class='review-span highlight' data-aligned-summaries='0'>We just love this casual little beachfront hotel</span>, and <span class='review-span highlight' data-aligned-summaries='6'>we would definitely recommend it for anyone looking for a reasonably priced vacation</span>.</div><div class='text-box'>Me, my girl and our friend from Boston were in Fusion hotel for a week in February 09. We liked the place very much. <span class='review-span highlight' data-aligned-summaries='2'>Rooms are basic</span>, but <span class='review-span highlight' data-aligned-summaries='3'>the location on the beach is great</span>. <span class='review-span highlight' data-aligned-summaries='4'>Beach bar and its services were very pleasant</span>. The food in the restaurant was also good. <span class='review-span highlight' data-aligned-summaries='5'>Everything was close (shops, water sports, diving centre :-))</span>. The staff was helpfull and nice (specially the girl from Holland). The music band every day was very nice :-). We have enjoyed it. ! Do not leave your money in the room. Somebody who had keys of the room stolen all the money from my friends valet including old (not valid) Czechoslovakian notes).</div><div class='text-box'>We stayed at the Fusion over New Year's - <span class='review-span highlight' data-aligned-summaries='0 6'>this was the</span> <span class='review-span highlight' data-aligned-summaries='0 3 6'>best spot on the beach</span> <span class='review-span highlight' data-aligned-summaries='0 6'>in our opinion</span>. The location is great - <span class='review-span highlight' data-aligned-summaries='3'>the beach is clean</span>. The staff are very friendly and accommodating. Sergio was our server nearly every afternoon he was so kind and friendly! This hotel is beautiful and unique. I love the courtyard type garden setting. We had a room towards the back and had no problems with noise at night. <span class='review-span highlight' data-aligned-summaries='2'>We felt like we were in our own little villa</span>. Great atmosphere by day and by night - the food in the restaurant is excellent as well. <span class='review-span highlight' data-aligned-summaries='6'>Prices were very reasonable</span>! Love the house dog :) <span class='review-span highlight' data-aligned-summaries='6'>We will definitely come back!</span> <span class='review-span highlight' data-aligned-summaries='0 6'>Thank You for a great family vacation</span>!<span class='review-span highlight' data-aligned-summaries='6'></span></div><div class='text-box'>Stayed here with my family on a trip to Mexico and Guatemala in April 2011 and <span class='review-span highlight' data-aligned-summaries='0 6'>this was the hotel we loved the most</span> at this trip. The hotel has one of the best locations in Playa if you want the closeness to the city and the beach at the same time and you will not miss a pool here. <span class='review-span highlight' data-aligned-summaries='6'>The rooms are good at the price</span> and despite <span class='review-span highlight' data-aligned-summaries='5'>much music from the restaurant at night</span>, this will not be a problem in the "garden view" rooms. The food here is also one of the best we tasted in Playa and the service is excellent with such nice people working here. <span class='review-span highlight' data-aligned-summaries='6'>If I'm coming back to Playa this will be my choice</span>!</div><div class='text-box'>We stayed at Fusion for 4 Nights in May 06. It was just my fiance and I, we had the Ocean View room on the 2nd Floor. This place is not one of your all inclusive types, it is very good for people who only use their hotels to sleep. <span class='review-span highlight' data-aligned-summaries='6'>For what we paid, it could not have been better.</span> The young woman and the front desk was very helpful, and waiter and bartender at the restaurant were as well. Very good food and a bucket of SOL for $4. I highly recommend staying here and be sure and check out The Blue Lobster Restaurant, damn its good!</div><div class='text-box'>I was very happy with this hotel. I have two small children 3 and 7 who had a <span class='review-span highlight' data-aligned-summaries='3'>great time playing on the beach in front</span>. <span class='review-span highlight' data-aligned-summaries='6'>The casual atmosphere made it great</span> as I didn't have to worry about the kids being kids to the same degree as some other hotels. The food was excellent and reasonably priced as were the rooms. There was something on the menu for everyone. <span class='review-span highlight' data-aligned-summaries='5'>Every night we would go for a walk on 5th</span> come back eat dinner and <span class='review-span highlight' data-aligned-summaries='5'>then listen to the live music</span> while the kids played next to us on the beach. <span class='review-span highlight' data-aligned-summaries='6'>I highly recommend</span> Fusion <span class='review-span highlight' data-aligned-summaries='6'>Hotel</span>.</div><div class='text-box'>I stayed in this hotel over the weekend. I had the worst of luck with the weather, <span class='review-span highlight' data-aligned-summaries='0'>it rained all the time</span>. <span class='review-span highlight' data-aligned-summaries='6'>What made this</span> <span class='review-span highlight' data-aligned-summaries='0 6'>a good experince</span> <span class='review-span highlight' data-aligned-summaries='6'>was the service</span> <span class='review-span highlight' data-aligned-summaries='0 6'>at the hotel</span> <span class='review-span highlight' data-aligned-summaries='0'>and restaurant</span>. Very friendly staff and great looking girls. <span class='review-span highlight' data-aligned-summaries='6'>The room was very clean</span> and with a lot of space.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Had a great stay from the start.</span> <span id="1" class="summary-sentence">Kim was very nice.</span> <span id="2" class="summary-sentence">The room was a little outdated, yet cozy.</span> <span id="3" class="summary-sentence">This hotel is right on the beach, and it is a nice beach unlike in front of some of the pricier hotels.</span> <span id="4" class="summary-sentence">They have a free breakfast in the morning where you can eat and drink while looking out at the ocean.</span> <span id="5" class="summary-sentence">There was live entertainment in the restaurant the nights we were there, and the hotel is very close to 5th avenue with all the stores.</span> <span id="6" class="summary-sentence">This is a great hotel at a great price and we would definitely stay again!</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

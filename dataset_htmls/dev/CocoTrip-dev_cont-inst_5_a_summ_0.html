@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>- First thing is the location, no need for public transport, we could walk from hotel to anywhere. - <span class='review-span highlight' data-aligned-summaries='6'>No need for the expencive hotel breakfast 'cause</span> in the walking distance of 20-50 meters on the Rembrandt square <span class='review-span highlight' data-aligned-summaries='6'>there are cheaper places to eat</span>. - We got a deal in the hotel and got one night for free. - In the same walking distance- on the rembrandt square- there are couple of clubs. I remember one was awesome, one was terrible, and in the third we couldn't enter, the tickets were sold out. And there is a great coffeshop just by the entrance of hotel :D - <span class='review-span highlight' data-aligned-summaries='0'>Very clean, tidy and a safe hotel for reasonable price</span>. <span class='review-span highlight' data-aligned-summaries='1'>-I'm definintely sleeping there again and recommending it to friends</span>.</div><div class='text-box'>Me and my boyfriend stayed here as a 30th Birthday treat and had a great time. <span class='review-span highlight' data-aligned-summaries='0 1 3 8'>The room was immaculate</span>, and the bed amazingly comfortable to the point that we did not leave it until lunch time on the first morning! And was just as hard on day two. <span class='review-span highlight' data-aligned-summaries='0 1'>Great location</span> too. We paid for a cab from Central St on arrival but felt rather ripped of as it was a20 and was only a 5 minute ride. On the way back we caught a tram which was much cheaper (actually it was free as we did not realise you had to pay the driver when you got on!) and just as quick. Would definitely recommend this hotel and will hopefully be going back in the near future!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='3'>the room was very small</span>, but that's not the biggest problem - the receptionists were. <span class='review-span highlight' data-aligned-summaries='7'>the wifi at the lobby was very slow</span> and <span class='review-span highlight' data-aligned-summaries='5'>the receptionists didnt even know how guests can log on</span> (user name, password and patience required). <span class='review-span highlight' data-aligned-summaries='5'>but the worst was a</span> french-speaking tall male <span class='review-span highlight' data-aligned-summaries='1 5'>receptionist</span> who <span class='review-span highlight' data-aligned-summaries='1 5'>was extremely rude</span> and made it very clear that he didnt like being asked about how to connect to the internet. he made condescending remarks in french about american tourists (and i'm not even american!). <span class='review-span highlight' data-aligned-summaries='0 1 3 8'>the carpet is filthy</span> <span class='review-span highlight' data-aligned-summaries='0 1 8'>and so is the hotel's surroundings</span> <span class='review-span highlight' data-aligned-summaries='0 8'>- noisy, crowded</span>,<span class='review-span highlight' data-aligned-summaries='0'> and the street is disgusting after rain</span>.</div><div class='text-box'>I booked this hotel after reading reviews on this site and Expedia, with a real priority for me being its <span class='review-span highlight' data-aligned-summaries='0 1 3'>cleanliness</span> <span class='review-span highlight' data-aligned-summaries='0 1'>and quietness</span>.<span class='review-span highlight' data-aligned-summaries='0'> It</span> <span class='review-span highlight' data-aligned-summaries='0 1 3'>didn't disappoint</span> on either count and had the added bonus of being in an excellent location - <span class='review-span highlight' data-aligned-summaries='2'>far enough away from the slightly too brash touristy bits</span> but near enough as not to be a long walk from anywhere useful. <span class='review-span highlight' data-aligned-summaries='3'>The modern room was nice</span> and the bathroom was excellent, although some might be surprised at the European practice of having <span class='review-span highlight' data-aligned-summaries='4'>no shower curtain so the bathroom floor gets a bit wet</span>. I'd definitely book here again.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 2'>The Hotel is perfectly placed</span> for both travel and entertainment <span class='review-span highlight' data-aligned-summaries='2'>on the edge of Rembrandt Square</span>. It is within very easy walking distance to everywhere in Central Amsterdam, <span class='review-span highlight' data-aligned-summaries='2'>but sufficiently on the edge for it to be quiet at night</span>. <span class='review-span highlight' data-aligned-summaries='6'>It has a first class seafood Bistro if you wish to eat in</span>. It's main clientele are business and corporate, which should tell you a lot about the overall quality and respect this hotel has. <span class='review-span highlight' data-aligned-summaries='0 1'>This has been my hotel of choice</span>, even when travelling privately to Amsterdam with family.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>A good hotel</span> bang <span class='review-span highlight' data-aligned-summaries='0'>in the centre of Amsterdam</span>. <span class='review-span highlight' data-aligned-summaries='3'>Rooms are clean and modern</span> and I will be staying there again. A couple of things to note: My room had mosquitos (common for AMS this summer), they were fully booked so could not give me another room but did eventually find some fly spay so problem solved. Breakfast is expensive at EUR15, just take a walk down the street and have a better breakfast in one of the cafes.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='3'>We found our room the be of nice size</span> and <span class='review-span highlight' data-aligned-summaries='4'>bothe the room and bath were easy to navigate in a wheelchair</span>. The <span class='review-span highlight' data-aligned-summaries='0 1'>beds were compfortable and the room were nicely appointed</span>. <span class='review-span highlight' data-aligned-summaries='0 1 5'>The staff was most helpful</span> with directions and other touristy information. <span class='review-span highlight' data-aligned-summaries='6'>The food in the restaurant</span>'s food <span class='review-span highlight' data-aligned-summaries='6'>was quite good with a nice selection</span>. We would recommend the Eden Rembrandt Square as our stay was quite good.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 1'>The location of the hotel is excellent</span>. <span class='review-span highlight' data-aligned-summaries='2'>Its 5 mins from the Waterlooplein metro station</span> and hence easily accessible. <span class='review-span highlight' data-aligned-summaries='0 1'>Room service was mediocre</span> - <span class='review-span highlight' data-aligned-summaries='3'>the staff came to clean the room once in 3 days</span> in spite of a reminder. <span class='review-span highlight' data-aligned-summaries='3'>Hotel rooms were of good size</span>.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The hotel is great and provides a safe place to stay.</span> <span id="1" class="summary-sentence">It is a favourite with guests.</span> <span id="2" class="summary-sentence">The hotel is close to the metro line and Rembrandt Square and away from the louder tourist areas.</span> <span id="3" class="summary-sentence">The room was quite small at this hotel but it was quite modern and clean.</span> <span id="4" class="summary-sentence">Everything was wheelchair-accessible which was fantastic, even if there was no shower curtain and it left the bathroom floor somewhat wet.</span> <span id="5" class="summary-sentence">The staff at the front desk were unhelpful to guests.</span> <span id="6" class="summary-sentence">The hotel provides a fantastic selection of food in their seafood bistro.</span> <span id="7" class="summary-sentence">The WiFi in the hotel lobby is very slow.</span> <span id="8" class="summary-sentence">The carpet was dirty and the exterior of the hotel is noisy and overcrowded.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

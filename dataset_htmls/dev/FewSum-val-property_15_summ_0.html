@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>Winterlicious 2016 - <span class='review-span highlight' data-aligned-summaries='0 1'>food was delicious</span>:) <span class='review-span highlight' data-aligned-summaries='0'>One of Toronto's oldest restaurants</span> I was told. Had the choice to upgrade to their classic french onion soup (which did not disappoint) for a starter, the mushroom medallions for my entree, and the pouding chomeur for dessert - didn't go wrong with these choices.</div><div class='text-box'>I haven't been to <span class='review-span highlight' data-aligned-summaries='0'>Le Papillon</span> in years and was and drawn to their patio on Front St. The <span class='review-span highlight' data-aligned-summaries='0 1'>brunch menu was mediocre</span>, delicate (as in small serving size) dishes <span class='review-span highlight' data-aligned-summaries='0 1'>and</span> <span class='review-span highlight' data-aligned-summaries='0 1 3'>wasn't cheap</span>, $30 / head inc. tax and tip. <span class='review-span highlight' data-aligned-summaries='3'>I've had better and won't be back</span> for a while.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2'>When you miss France,</span> <span class='review-span highlight' data-aligned-summaries='0 2 3'>there's nothing like a little trip to the restaurant Le Papillon</span>. I tried it, and I adored finding <span class='review-span highlight' data-aligned-summaries='0 1'>French crepes in a warm setting</span>, and <span class='review-span highlight' data-aligned-summaries='2'>very friendly waiters</span> who were happy to share their passion for French cuisine!</div><div class='text-box'>I came here with some friends and <span class='review-span highlight' data-aligned-summaries='2'>found the service to be nothing special</span>. The beef bourguignon crepe was fine, but not amazing either. <span class='review-span highlight' data-aligned-summaries='1'>My friends felt similarly about their dishes, as well. Bottom line is that it's good</span>, but <span class='review-span highlight' data-aligned-summaries='3'>there are better places to go for the price point</span> that would offer better flavours and dishes.</div><div class='text-box'>Winterlicous tonight. For $25 / person you won't go wrong. <span class='review-span highlight' data-aligned-summaries='1'>We had lamb shank and duck breast. Portion not huge but you get appetizer, main dish, and desert</span>. <span class='review-span highlight' data-aligned-summaries='2'>Environment is what you expected in a class A French restaurant</span>. And it is casual so you don't have to wear tux.</div><div class='text-box'>Beautiful decor with very attentive staff. <span class='review-span highlight' data-aligned-summaries='0 3'>Surprisingly large portion</span> <span class='review-span highlight' data-aligned-summaries='0'>as not typical for French restaurants</span>. We had <span class='review-span highlight' data-aligned-summaries='1'>beef bourguignon and crepe of the day and two soups -</span> <span class='review-span highlight' data-aligned-summaries='0 1 3'>all very tasty</span>. I might call it tourist French as I didn't see fancy French sauces or complicated dishes</div><div class='text-box'>Brought Mom out for a birthday dinner tonight and <span class='review-span highlight' data-aligned-summaries='0 3'>it was a real treat</span>.<span class='review-span highlight' data-aligned-summaries='3'></span> <span class='review-span highlight' data-aligned-summaries='1'>Three words. French onion soup</span>. That, fish and a few choices from the aperitif menu. <span class='review-span highlight' data-aligned-summaries='2'>Soft music and a very pleasant French speaking server</span>. Bravo!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1'>Food was dreadful</span>: both the onion soup and the bechamel seemed to have cornstarch as the primary ingredient. Thick and goopy, not much flavour. Even the coffee was crummy. <span class='review-span highlight' data-aligned-summaries='2'>Service was quick and fine</span>. <span class='review-span highlight' data-aligned-summaries='0'>Once upon a time this was a decent French resto. Those days are long gone</span>.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Le Papillon is a French restaurant that is generally well-regarded.</span> <span id="1" class="summary-sentence">The food is pretty good, though some might find it expensive for the quality.</span> <span id="2" class="summary-sentence">The service is also good, and the atmosphere reminds one of a real restaurant in France.</span> <span id="3" class="summary-sentence">The price may seem a little high to some, but it is otherwise recommended.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>Great old hotel in a great location I stayed at the Ambassador a week ago and had a wonderful time! <span class='review-span highlight' data-aligned-summaries='4'>I did have one of the infamous windowless rooms</span> (<span class='review-span highlight' data-aligned-summaries='0'>the hotel is an old renovated warehouse of sorts</span>) <span class='review-span highlight' data-aligned-summaries='4'>but the ambiance of the</span> <span class='review-span highlight' data-aligned-summaries='0 4'>authentic New Orleans decor</span> <span class='review-span highlight' data-aligned-summaries='4'>(exposed brick, high ceilings, wood floors) made it almost seem like being in old France</span>. <span class='review-span highlight' data-aligned-summaries='2'>The hotel is located close to everything</span> there is in New Orleans and a close stumble to Bourbon St. <span class='review-span highlight' data-aligned-summaries='6'>I found the valet staff to be prompt and friendly</span> even though they were busy and <span class='review-span highlight' data-aligned-summaries='6'>the front desk staff was quick to attend to any request with a smile</span>. I am definetly staying at this hotel next time I am in New Orleans, and <span class='review-span highlight' data-aligned-summaries='1'>I am curious to see how wonderful the renovations will turn out</span>!</div><div class='text-box'>Great spot, <span class='review-span highlight' data-aligned-summaries='8'>great rate</span>, great effort! Just returned from stay for French Quarter Fest. As we arrived, a bus was dropping off a full load of European students to stay at the hotel. Despite the sudden rush, <span class='review-span highlight' data-aligned-summaries='6'>we were checked in cheerfully and quickly</span>. Everyone went out of their way. <span class='review-span highlight' data-aligned-summaries='2'>Location is great</span> for getting to (or away from) Quarter craziness or Garden District, and Warehouse <span class='review-span highlight' data-aligned-summaries='2'>area has its own charm and eateries</span>. <span class='review-span highlight' data-aligned-summaries='4'>Room was comfortable and quiet, if a bit dark</span>. Bandito's off the lobby great for delicious breakfast with no wait (!) or tequila any time. We'd recommend the Ambassador to anyone traveling to NoLa for biz or pleasure.</div><div class='text-box'>Got Bugs? The room service advertised is a joke.unless you like greasy Mexican food. The <span class='review-span highlight' data-aligned-summaries='0 4 5'>cleaning in the rooms was horrible</span>;<span class='review-span highlight' data-aligned-summaries='5'> barely vacuumed or dusted in almost 2 weeks</span> of staying there and the bathroom was just barely cleaned everyday. <span class='review-span highlight' data-aligned-summaries='6'>The management is lacking and not too interested in customer service</span>. My roommate was chewed up by some <span class='review-span highlight' data-aligned-summaries='4 5 8'>bugs in her bed</span> and was left with huge welts that itched and oozed. Since it was booked through Expedia.com, there was nothing that they would do except take off the mandatory $4.95 phone surcharge (although that was pretty cool, since all local and continental long distance charges were included in that).It was a <span class='review-span highlight' data-aligned-summaries='0'>big disappointment from start to finish</span>.</div><div class='text-box'>Welcoming and friendly staff, elegant hotel I traveled to New Orleans recently was gratful that I stayed at the Ambassador Hotel. The <span class='review-span highlight' data-aligned-summaries='6'>staff was very welcoming and friendly and assisted me with every aspect of my travel</span>, from directions to the local attractions - to recommendations for <span class='review-span highlight' data-aligned-summaries='2'>local restaurants</span>. The <span class='review-span highlight' data-aligned-summaries='0'>hotel itself is absolutely gorgeous, with antique brick walls and elaborate, lush curtains.</span> My favorite part of the hotel (besides the amazing staff), was the location. <span class='review-span highlight' data-aligned-summaries='2 3'>It is located quite close to all of the major local attractions</span> <span class='review-span highlight' data-aligned-summaries='3'>(the steamboat tours, downtown New Orleans, The French Quarter</span>, etc).When I return, I would definitely go back to this hotel.</div><div class='text-box'>AMBASSADOR HOTEL, NEW ORLEANS Please be advised when booking at this hotel to request a <span class='review-span highlight' data-aligned-summaries='4'>room with a window. Ours did not have one and the door into the room was the only way out. Had there been a fire my husband and I would have been dead. I am wondering how these rooms ever passed code</span>. The <span class='review-span highlight' data-aligned-summaries='1'>inexpensive rates</span> and <span class='review-span highlight' data-aligned-summaries='8'>free parking</span> were not bargain enough for the potential danger.</div><div class='text-box'>Buyer Beware Stayed during a convention. It is as kindly as I can put it <span class='review-span highlight' data-aligned-summaries='1'>a dump</span>. <span class='review-span highlight' data-aligned-summaries='0 1 4 5'>The rooms were</span> <span class='review-span highlight' data-aligned-summaries='0 1 4'>horrid,</span> <span class='review-span highlight' data-aligned-summaries='0 1 4 5'>poorly kept and bad condition</span>. The <span class='review-span highlight' data-aligned-summaries='5'>mattresses, boxsprings and pillows looked as if they were purchased from a Katerina Auction</span>. <span class='review-span highlight' data-aligned-summaries='6'>The service was comical</span> and <span class='review-span highlight' data-aligned-summaries='7'>even though it states they serve breakfast they only serve coffee and pastries</span>. Could not wait to check out.</div><div class='text-box'>Once is Too Much If you enjoy <span class='review-span highlight' data-aligned-summaries='0 4'>fraternity house decor</span>, you'll love the Ambassador. No extra charge for the <span class='review-span highlight' data-aligned-summaries='0 4 5'>beat-up furniture</span>,<span class='review-span highlight' data-aligned-summaries='0 4'> lightless broom closet rooms</span> <span class='review-span highlight' data-aligned-summaries='4'>and paper thin walls</span>. <span class='review-span highlight' data-aligned-summaries='0 6'>Hotels like the Ambassador don't count on repeat business</span>. <span class='review-span highlight' data-aligned-summaries='1'>There are much better hotel options in New Orleans</span>.</div><div class='text-box'>Had a Great Stay Just wanted to say that I had a great time at the Ambassador in New Orleans <span class='review-span highlight' data-aligned-summaries='4 5'>The rooms were great</span>, <span class='review-span highlight' data-aligned-summaries='5'>housekeeping was great</span>, very polite and <span class='review-span highlight' data-aligned-summaries='6'>Dave Smith the room manager was excellent with everything I needed</span>. Hope to go back soon. Thanks</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">With it being an old, renovated warehouse, this is not your typical hotel and the decor may not suit all tastes.</span> <span id="1" class="summary-sentence">However, as it is still a work in progress the rates are competitive.</span> <span id="2" class="summary-sentence">This hotel's location is unbeatable because there are lots of charming places to eat and</span> <span id="3" class="summary-sentence">lots of local classic sights are nearby.</span> <span id="4" class="summary-sentence">The rooms in this hotel are generally windowless, horrible and in bad condition.</span> <span id="5" class="summary-sentence">They were not very clean and the furnishings are in need of replacement.</span> <span id="6" class="summary-sentence">Management at this hotel was less than interested in customer service but the valet staff were prompt and friendly and front desk staff were prompt to help with a smile.</span> <span id="7" class="summary-sentence">The hotel claims to serve breakfast but only serve pastries and coffee.</span> <span id="8" class="summary-sentence">The beds contained bugs and though the rates were low and the parking free it was not worth it.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

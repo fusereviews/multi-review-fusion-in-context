@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Great</span> food and service. Been there twice and loved it all. <span class='review-span highlight' data-aligned-summaries='0'>Atmosphere</span>, service, food presentation and special service. We wanted to check out Modern Margarita next door but my grandson wanted their cookie in a pan, so James our waiter offered to send it over for him. Thanks James above and beyond!!!</div><div class='text-box'>Came here for a date night and happy hour. Place was pretty empty but quickly filled. <span class='review-span highlight' data-aligned-summaries='1'>Had the Med Plate for appetizer</span>. Pizza for main and <span class='review-span highlight' data-aligned-summaries='1'>gelato for desert</span>. Drinks are fantastic and if you are Lucy you will have Todd as the bartender. Great service and personality. Definitely will be back. Great addition to downtown Chandler.</div><div class='text-box'>Went in a Sunday with our family of 4. A large party was seated at the same time. There were no other guests so it <span class='review-span highlight' data-aligned-summaries='4'>was surprising on how long it took for someone to take our order</span>. <span class='review-span highlight' data-aligned-summaries='1'>Food was below average</span>. Service was too.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='3'>Pesto chicken pizza is a must</span>!! You won't regret it! Also <span class='review-span highlight' data-aligned-summaries='1'>had the fried calamari</span> comes <span class='review-span highlight' data-aligned-summaries='1'>with a lemon sauce delicious</span>!! My kids also had a <span class='review-span highlight' data-aligned-summaries='3'>cheese pizza</span> and that <span class='review-span highlight' data-aligned-summaries='3'>was really good</span> to. I will definitely be back! The Decour is super cute too</div><div class='text-box'>Love this place, the food is excellent, so much better than the Tempe location. I also <span class='review-span highlight' data-aligned-summaries='0'>like the chill atmosphere</span> much better than it's predecessor. Friendly staff, good drink specials, <span class='review-span highlight' data-aligned-summaries='1 3'>can't go wrong with their</span> <span class='review-span highlight' data-aligned-summaries='3'>pizzas</span> or <span class='review-span highlight' data-aligned-summaries='1'>appetizers</span>. Porco pizza is life</div><div class='text-box'>Went with a crowd, was planned ahead. <span class='review-span highlight' data-aligned-summaries='1'>Several people ordered calzones</span>. They were served burnt. <span class='review-span highlight' data-aligned-summaries='3'>Pizza was over cooked</span>. <span class='review-span highlight' data-aligned-summaries='1'>Chicken was under cooked</span>. <span class='review-span highlight' data-aligned-summaries='4'>Meals took way to long to come out</span>. <span class='review-span highlight' data-aligned-summaries='4'>Deserts took 25 minutes</span>. I won't go back.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1 3'>Very good</span> <span class='review-span highlight' data-aligned-summaries='3'>Margarite pizza</span> and <span class='review-span highlight' data-aligned-summaries='1'>Calzone selection</span>. The heirloom <span class='review-span highlight' data-aligned-summaries='1'>tomato and beet salad was a delicate blend of flavors</span> with the balsamic vinagarette. Get the dressing 'on the side'. Very nice property, decor, ambience and great location. Gotta say... way <span class='review-span highlight' data-aligned-summaries='4'>nicer than 'Crust' across the street. Quieter, better service</span> and selection.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2'>Malcom</span> made my family's experience here great. He offered some great cocktail recommendations and <span class='review-span highlight' data-aligned-summaries='2'>was able to answer all of my questions regarding the food</span>. <span class='review-span highlight' data-aligned-summaries='4'>We felt like we were his only table</span>, with the level of service he was able to give us, though we could see that we weren't. We will definitely be back!</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Super chill and laid-back atmosphere with a great beer selection.</span> <span id="1" class="summary-sentence">The menu is full of great options besides pizza.</span> <span id="2" class="summary-sentence">The wait staff is knowable and about all the food items.  </span><span id="3" class="summary-sentence">The Pizza is delicious with an excellent blend of herbs and spices.</span> <span id="4" class="summary-sentence">The only downside is the wait time and service can be slow when they are busy.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

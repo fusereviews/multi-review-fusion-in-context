@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>I was really impressed. I had lunch there today and thoroughly enjoyed it. <span class='review-span highlight' data-aligned-summaries='3'>The bun, bratwurst, homemade sweet potatoes fries and tea were delicious</span>. The couple beside me got their potato bacon soup and they said it was very good. I'm taking my husband next time. The service was prompt and courteous.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>We are from Chicago</span> (both Southside and Northside) <span class='review-span highlight' data-aligned-summaries='0'>and this place gets it</span>.... <span class='review-span highlight' data-aligned-summaries='2 4'>the Italian beef was juicy</span> <span class='review-span highlight' data-aligned-summaries='4'>on fresh bread</span> with perfect giardinera and <span class='review-span highlight' data-aligned-summaries='2'>the Chicago-style dog hit the mark</span>. We felt like we were back home. <span class='review-span highlight' data-aligned-summaries='5'>The servers are super-friendly</span> too. We will make the drive up here again soon!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='5'>Cashier was very friendly and helpful</span> when ordering from their menu since this was my first time up here. I ordered the # 4 which was the two corn dog combo with fries. <span class='review-span highlight' data-aligned-summaries='2 3'>Corn dogs were good but the fries not so much</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>This place could not be more perfect for a native Chicagoan-</span> I may never have to go home again! Seriously <span class='review-span highlight' data-aligned-summaries='1'>Matt's Chicago dog you are the most irreplaceable place in all of Charlotte</span>... Hit this up for a real Chicago dog!</div><div class='text-box'>One of my wife's and my favorite places to eat in Cornelius. My wife always gets the Matt Chicago style dog with all the peppers that come on it. I love their reuben. <span class='review-span highlight' data-aligned-summaries='3'>They have homemade potato</span> chips and <span class='review-span highlight' data-aligned-summaries='3'>fries that are delicious</span>, especially if you get a side of ranch for dipping.</div><div class='text-box'>First visit. Had the jumbo char dog with slaw, grilled onions, and mustard. Excellent. The dog was very good. <span class='review-span highlight' data-aligned-summaries='2'>The slaw was just right, but the onions were Luke warm</span>. Atmosphere is good with varied seating options and several tv's. I'll definitely make another trip to this place.</div><div class='text-box'>I got the chicken philly and that was hands down awesome. I <span class='review-span highlight' data-aligned-summaries='2'>have heard nothing bad about anything on the menu</span>. <span class='review-span highlight' data-aligned-summaries='5'>The staff is awesome and friendly</span> and the place always has customers. The great food is why they always have people here.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1'>Best Chicago Dogs in the Charlotte area</span> -- authentic dogs, <span class='review-span highlight' data-aligned-summaries='4'>italian beef</span>, and more! <span class='review-span highlight' data-aligned-summaries='2'>Pretty much everything on the menu</span> <span class='review-span highlight' data-aligned-summaries='2 4'>is good</span> -- deli sandwiches, salads, hamburgers, etc. Try the chips with ranch dipping sauce as a side!</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This place is more perfect for a native Chicagoan.</span> <span id="1" class="summary-sentence">In Charlotte area, this is the best Chicago dogs.</span> <span id="2" class="summary-sentence">Almost everything on the menu is awesome.</span> <span id="3" class="summary-sentence">The bratwurst, bun, tea and homemade sweet potatoes fries are delicious.</span> <span id="4" class="summary-sentence">On fresh bread, the Italian beef was juicy.</span> <span id="5" class="summary-sentence">The Cashier was very helpful and friendly.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

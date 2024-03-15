@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>I recently stayed at this hotel on a three day business trip. The location was great, directly on the marina. Try to book a marina view room, the night view over the boats were outstanding. The <span class='review-span highlight' data-aligned-summaries='0'>room was clean</span> and the bed was comfortable. It was a drive (2-3 miles) to any major restaurants or stores. The <span class='review-span highlight' data-aligned-summaries='2'>food in the hotel</span> lobby <span class='review-span highlight' data-aligned-summaries='2'>restaurant was good</span>, as was the service. Also, there was free WiFi in the lobby, with comfortable seating. I can see where there would be a great pre and post cruise hotel, as it is close to the LA cruise terminal. Overall I <span class='review-span highlight' data-aligned-summaries='4'>enjoyed my stay at this hotel</span>, and would stay there again if I was in the area.</div><div class='text-box'>We spent 2 nights at the Doubletree (April 28-April 30) prior to our cruise on the NCL Star. We arrived late on the first night but were pleasantly surprised when we were upgraded to a room with a balcony overlooking the marina. We had booked the cheapest king bed room. The staff at this hotel is what makes this place what is is, They are the best! This staff is as good as if not <span class='review-span highlight' data-aligned-summaries='4'>better than some of the 5* properties we have stayed at</span> in the past (Four Seasons, Ritz Carlton, etc.). I would DEFINITELY recommend this hotel to anyone and hope to stay there again some day in the future!</div><div class='text-box'>We stayed at the Doubletree, San Pedro for one night pre-cruise. We had a room with a marina view and complimentary breakfast. We enjoyed watching the activity on the marina the next day and also took a walk. It was the opening day of the yacht club. The staff here are extremely nice and helpful. It makes a big difference. We booked the shuttle for the cruise the next day for 1:30pm and were allowed to check out late with no problem. <span class='review-span highlight' data-aligned-summaries='2'>We ate dinner in the restaurant and found it pleasant</span> and the price for our meal was reasonable. I will definitely stay here again on my next cruise as <span class='review-span highlight' data-aligned-summaries='4'>it was a very positive experience</span>.</div><div class='text-box'>We spent just one night here but service was great, <span class='review-span highlight' data-aligned-summaries='0 4'>room was clean and comfortable</span> and the breakfast was fine. Our room was next to the ice machine so when we asked to be moved, we were given a nice room on the marina side. Doubletree has some of the most comfortable beds and this was no exception. <span class='review-span highlight' data-aligned-summaries='2'>Breakfast was hot and plentiful</span>. <span class='review-span highlight' data-aligned-summaries='4'>Overall, a solid value</span>. The marina has a nice walkway and there is a new park close by but otherwise it's a bit isolated. You'll need to drive out a ways for restaurants. Be sure to drive around the peninsula and visit Huntington Beach.</div><div class='text-box'>Spent two days before our cruise and <span class='review-span highlight' data-aligned-summaries='4'>found this hotel to be a delight to stay in</span> from the moment we arrived with their welcoming hot chocolate cookies to the time we got the complimentary shuttle to the ship the friendly staff could not do enough to make our stay a good one I highly recommend this hotel to cruise travellers if they are going out of San Pedro and the rooms overlooking the marine with balcony are just great. Thanks for a great stay Doubletree. Airline65</div><div class='text-box'>This was our second stay here as like last year we were joining a 2 week cruise to Hawaii. The staff seemed friendlier than last year and <span class='review-span highlight' data-aligned-summaries='3'>the shuttle service</span> to/frpm the pier <span class='review-span highlight' data-aligned-summaries='3'>was spot on</span>. The down side was the terrible service and food selection in the restaurant. We are loyal Hilton guests and <span class='review-span highlight' data-aligned-summaries='4'>would not rate this hotel better than the Hilton Garden Inn brand</span>. Being able to leave the car for 14 days was the only reason we used this hotel.</div><div class='text-box'>We chose this hotel for the convenience of being <span class='review-span highlight' data-aligned-summaries='4'>close to the cruise ship port</span>, and couldn't be happier with the hotel, the staff, the location, and even <span class='review-span highlight' data-aligned-summaries='3'>a shuttle bus to the terminal</span> ! We had a king room with a balcony overlooking the marina. <span class='review-span highlight' data-aligned-summaries='0'>The rooms</span> were very nice and <span class='review-span highlight' data-aligned-summaries='0'>comfy bedding</span>. The on site restaurant was great, and the staff very friendly and helpful. <span class='review-span highlight' data-aligned-summaries='4'>I would definately return</span>.</div><div class='text-box'>We stayed the night before our cruise in a marina view room. We loved the view. <span class='review-span highlight' data-aligned-summaries='0 4'>The bed and pillows were some of the most comfortable</span> encountered in a hotel. <span class='review-span highlight' data-aligned-summaries='1 4'>The location is very quiet</span>. We had <span class='review-span highlight' data-aligned-summaries='3'>the hotel van drive us to dinner and breakfast</span> and chose to walk back to the hotel and enjoy the marina and beach scenery and get some exercise. <span class='review-span highlight' data-aligned-summaries='3'>The van also drove us to the cruise terminal</span>.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The room is comfortable and clean.</span> <span id="1" class="summary-sentence">Quiet.</span> <span id="2" class="summary-sentence">The food at the restaurant is good.</span> <span id="3" class="summary-sentence">The shuttle service was fast and efficient.</span> <span id="4" class="summary-sentence">Overall this is a great place to stay at a good price.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

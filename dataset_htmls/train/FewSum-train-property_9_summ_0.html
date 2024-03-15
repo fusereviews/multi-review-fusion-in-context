@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1'>Best breakfast in Akron</span>. They <span class='review-span highlight' data-aligned-summaries='0'>care about quality</span> and it shows <span class='review-span highlight' data-aligned-summaries='0'>in the food</span>. The <span class='review-span highlight' data-aligned-summaries='2'>bar is designed like an island in your kitchen</span>, makes you feel like you're at home. <span class='review-span highlight' data-aligned-summaries='0 2'>Wait staff</span> <span class='review-span highlight' data-aligned-summaries='0'>is very professional</span> and <span class='review-span highlight' data-aligned-summaries='2'>treat you like family</span>. Owner is local and is very hands on; which shows in the food. <span class='review-span highlight' data-aligned-summaries='1'>Great place for lunch too</span>!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1 3'>Very busy on weekends</span>,<span class='review-span highlight' data-aligned-summaries='3'> yet there is never too long of a wait</span>. <span class='review-span highlight' data-aligned-summaries='0 2'>Service is great</span> and the portions are very generous, especially the <span class='review-span highlight' data-aligned-summaries='0'>pancakes! (My favorite</span>). The new interior is very nice and adds <span class='review-span highlight' data-aligned-summaries='2'>great atmosphere</span>!</div><div class='text-box'>What a great place! Food is amazing and it's <span class='review-span highlight' data-aligned-summaries='1'>not just</span> your ordinary <span class='review-span highlight' data-aligned-summaries='1'>breakfast</span> or <span class='review-span highlight' data-aligned-summaries='1'>lunch spot</span>. The food is unique and delicious. One of my favorite is the red eye hash! Fresh orange juice or a bloody mary, either way both delicious. The <span class='review-span highlight' data-aligned-summaries='0'>service is always great</span> and the atmosphere is good.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1'>One of our favorite breakfast spots</span>. <span class='review-span highlight' data-aligned-summaries='1 3'>There's often a wait</span> <span class='review-span highlight' data-aligned-summaries='3'>on the weekends but</span> we've <span class='review-span highlight' data-aligned-summaries='3'>never</span> waited <span class='review-span highlight' data-aligned-summaries='3'>more than 10 minutes</span>. The <span class='review-span highlight' data-aligned-summaries='0 2'>host and wait staff and always friendly</span> <span class='review-span highlight' data-aligned-summaries='0'>and accommodating and the food is consistently wonderful</span>. I recommend the eggs Benedict with crabmeat or the red eye hash!</div><div class='text-box'>Great restaurant. More thank <span class='review-span highlight' data-aligned-summaries='0 1 3'>likely you'll find a wait</span>, but it's worth it. <span class='review-span highlight' data-aligned-summaries='0 1'>Breakfast is amazing no matter what you get</span>. If you get a lunch try the fries, double fried, dipped in white French dressing. Or order it as a side. You'll thank me later.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Fantastic Omlets</span> <span class='review-span highlight' data-aligned-summaries='0 2'>wonderful friendly service</span>. Killer spicy Brown potatoes and the special crooked river jams. <span class='review-span highlight' data-aligned-summaries='1'>One of my top breakfast stops</span>. Relaxing with a cup of coffee and surfing the web. great way to start the day. <span class='review-span highlight' data-aligned-summaries='1'>And they have great sandwiches too for lunch</span>.</div><div class='text-box'>A <span class='review-span highlight' data-aligned-summaries='1'>very good breakfast spot</span> that has it's own take on popular dishes. <span class='review-span highlight' data-aligned-summaries='0'>The potatoes are especially tasty</span>, though everyone at our table <span class='review-span highlight' data-aligned-summaries='0 1'>enjoyed their</span> meals which ranged from <span class='review-span highlight' data-aligned-summaries='0 1'>pancakes, eggs and french toast</span>. I also <span class='review-span highlight' data-aligned-summaries='2'>like the Akron themed pictures on the wall</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1'>Great breakfast</span>!!! <span class='review-span highlight' data-aligned-summaries='1 3'>Come early because lines start early</span>. Bloody Mary's and mimosas. Fast and affordable. Great experience. <span class='review-span highlight' data-aligned-summaries='0 2'>Staff was friendly</span> and the portions are huge!!! $- $$. Great price and an amazing brunch stop in Akron / Fairlawn <span class='review-span highlight' data-aligned-summaries='0'>my eggs and sausage were cooked perfectly!</span>!!</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This restaurant has consistently good food and service.</span> <span id="1" class="summary-sentence">It is an especially popular place for breakfast, though they serve a tasty lunch as well.</span> <span id="2" class="summary-sentence">The atmosphere inside is positive and the staff are always friendly.</span> <span id="3" class="summary-sentence">Expect a short wait on the weekends, as it can become overcrowded.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

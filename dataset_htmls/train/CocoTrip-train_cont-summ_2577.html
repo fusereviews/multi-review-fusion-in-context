@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='6'>We had an amazing stay at the hotel</span>. We checked in quickly, didn't like our room close to the elevator, it was changed within minutes to a view of the strip and a nightly show of the volcano. Rooms were 5 star all the way. Central to the strip, just don't try to walk everywhere on the first day, distance is deceiving. <span class='review-span highlight' data-aligned-summaries='0'>The bed was comfortable</span> and <span class='review-span highlight' data-aligned-summaries='0'>the rooms were well kept.</span> Everyone was friendly. Buffet had a good assortment. We had the option to eat at the other resorts but we were happy to stay where we were. Wish we had time to go see the show LOVE at the hotel, but maybe we'll try another time. I loved the pool, the cascading falls were a nice touch.</div><div class='text-box'>We (2 adults, 2 children) <span class='review-span highlight' data-aligned-summaries='6'>stayed at the Mirage</span> for 1 night. The room was lovely and the bathroom felt very luxourious. The "volcanco" show outside the hotel was OK - not as spectacular or as long as I expected. The best bit about the hotel was the dolphin and big cats enclosure. <span class='review-span highlight' data-aligned-summaries='2'>Althought it costs extra to get into this part,</span> <span class='review-span highlight' data-aligned-summaries='2 6'>it was worth the fee to see the dolphins up close</span>. We ate in one of the restaurants for dinner and also had <span class='review-span highlight' data-aligned-summaries='4'>the buffet breakfast (huge choice of food) which were good</span>. <span class='review-span highlight' data-aligned-summaries='5'>Pool area was fantastic</span> and there were areas in the sun and in the shade.</div><div class='text-box'>This hotel is amazing! Me and my boyfriend stayed here in June last year for 1 week. We had a choice out of the Mirage and the MGM and I would definatly say the Mirage was the better choice. It is located right in the centre of the strip ideally located for everything, whereas the MGM was a little too far down the end of the strip, dont get me wrong an amazing hotel but just to big! The rooms were big and clean, <span class='review-span highlight' data-aligned-summaries='5'>pool was to die for</span> and <span class='review-span highlight' data-aligned-summaries='2'>so much to do just in the hotel alone, like the white tigers and dolphins</span>! <span class='review-span highlight' data-aligned-summaries='6'>The best holiday I have had so far</span>!</div><div class='text-box'>We have just returned from staying at the Mirage Hotel and we found it a great hotel. <span class='review-span highlight' data-aligned-summaries='0'>Rooms were lovely and clean</span>, stayed in a Tower room. Service from all the staff in the hotel was excellent. <span class='review-span highlight' data-aligned-summaries='4'>We had no complaints about the the food in any of the hotel restaurants</span>, <span class='review-span highlight' data-aligned-summaries='4'>Samba was very good</span>. The hotel was very busy compared with some of the other hotels we visited (which was quiet a few of them) but this may show how popular it is. We have been to Vegas 7 times, but <span class='review-span highlight' data-aligned-summaries='6'>this was the first time at the Mirage and would stay there again</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='6'>This was our holiday of a lifetime</span> and the Mirage certainly lived up to everything we had expected and more! <span class='review-span highlight' data-aligned-summaries='0'>The room</span> was large and <span class='review-span highlight' data-aligned-summaries='0'>kept clean</span>. <span class='review-span highlight' data-aligned-summaries='0'>The bed was</span> huge and <span class='review-span highlight' data-aligned-summaries='0'>so comfortable</span>, great nights sleep! Staff were polite and helpful. <span class='review-span highlight' data-aligned-summaries='5'>The pool was amazing</span>, it didn't bother us that we had to queue in the mornings to get a good poolside lounger. <span class='review-span highlight' data-aligned-summaries='1'>The Mirage was situated in possibly the best location</span> as was central to everything. Would definitely recommend this hotel to anyone and <span class='review-span highlight' data-aligned-summaries='6'>will be returning there as soon as we can</span>.</div><div class='text-box'>My mom and I stayed in a Tower room at this hotel. The <span class='review-span highlight' data-aligned-summaries='6'>room was</span> <span class='review-span highlight' data-aligned-summaries='0 6'>great.the most comfortable hotel bed</span> either of us had slept in and a large bathroom with whirlpool tub. We spent some time in the spa, and that was also very above average. Good workout room for those who like it. The room was <span class='review-span highlight' data-aligned-summaries='6'>definately worth the money.</span> The <span class='review-span highlight' data-aligned-summaries='3'>downsides.the casino was</span> dark and <span class='review-span highlight' data-aligned-summaries='3'>smokey</span>. (<span class='review-span highlight' data-aligned-summaries='3'>Not all the hotel casinos are</span>). <span class='review-span highlight' data-aligned-summaries='4 5'>Just average</span> <span class='review-span highlight' data-aligned-summaries='5'>pool</span> and <span class='review-span highlight' data-aligned-summaries='4'>restaurants</span>. We didn't have trouble with service.as others have complained about.</div><div class='text-box'>We stayed at the Mirage in January 2012. The hotel was packed when we got there but check in still when great. The rooms were nice and <span class='review-span highlight' data-aligned-summaries='0'>the beds were super comfy!We</span> stayed in the tower and had a private elevator which was nice. <span class='review-span highlight' data-aligned-summaries='1 6'>We didn't really care for Las Vegas as a whole but the hotel was good</span> <span class='review-span highlight' data-aligned-summaries='6'>on everything</span>. The people working at the Valet were also awesome. We don't gamble much but we saw some shows. <span class='review-span highlight' data-aligned-summaries='6'>It was a good time</span>.</div><div class='text-box'>This was our 5th trip to Las Vegas and out of all of the hotels we have stayed at, the <span class='review-span highlight' data-aligned-summaries='6'>Mirage is our favourite</span>. The <span class='review-span highlight' data-aligned-summaries='1'>location was great</span> and the <span class='review-span highlight' data-aligned-summaries='5'>pool was what sold us</span>. The pool has a very tropical feel to it, <span class='review-span highlight' data-aligned-summaries='5'>there are a lot of loungers</span> with good sun and the pool size is great. The <span class='review-span highlight' data-aligned-summaries='0'>rooms are</span> decent, <span class='review-span highlight' data-aligned-summaries='0'>clean</span> and comfortable.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The room was cleaned every day and the bed was so comfortable.</span> <span id="1" class="summary-sentence">Excellent location.</span> <span id="2" class="summary-sentence">Went to see the dolphins and the white tigers, we got a discount for this as we were staying in the hotel.</span> <span id="3" class="summary-sentence">Didn't like having to walk through the smokey casino, but this was the same in every hotel we visited.</span> <span id="4" class="summary-sentence">The buffet restaurant was our favourite, didn't really like the others.</span> <span id="5" class="summary-sentence">The pool was a big disappointment, the sun loungers were packed in like sardines, there was no room to move whatsoever.</span> <span id="6" class="summary-sentence">All the hotels are amazing and our holiday was fantastic but we would not stay in the Mirage again.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

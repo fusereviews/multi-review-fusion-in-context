@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 5'>Damn good Sichuan</span>. Keep in mind that this is not regular Chinese food you normally see here in Mississauga. Be prepared you crap fire cause <span class='review-span highlight' data-aligned-summaries='0'>it is SPICY</span>. <span class='review-span highlight' data-aligned-summaries='4'>Price is a little higher than the average Chinese food</span>. Food <span class='review-span highlight' data-aligned-summaries='2 3'>wait times can be lengthy</span> <span class='review-span highlight' data-aligned-summaries='2'>and</span> <span class='review-span highlight' data-aligned-summaries='1 2 5'>service is mediocre</span> but everyone comes for mainly the food. 4 / 5</div><div class='text-box'>Average across the board, <span class='review-span highlight' data-aligned-summaries='4'>a bit pricey for average though</span>. <span class='review-span highlight' data-aligned-summaries='0 5'>Authentic food</span> <span class='review-span highlight' data-aligned-summaries='5'>but</span> <span class='review-span highlight' data-aligned-summaries='1 2 3 5'>service was</span> <span class='review-span highlight' data-aligned-summaries='1 2 5'>not too friendly</span> <span class='review-span highlight' data-aligned-summaries='1'>however</span> <span class='review-span highlight' data-aligned-summaries='1 3'>efficient</span>. Would recommend for those cold winter nights to warm up. Worth a try on lazy evenings when the group becomes indecisive of food choices...</div><div class='text-box'>Went there as a <span class='review-span highlight' data-aligned-summaries='5'>friend recommended the place</span>. We ordered their famous Peking duck as my husband was craving for it. Our order came with a soup and a side dish. It was huge for two. <span class='review-span highlight' data-aligned-summaries='5'>We were satisfied and would definitely go back</span> to the place.</div><div class='text-box'>This is the spot to get your <span class='review-span highlight' data-aligned-summaries='0 5'>Sichuan spicy food</span> fix. The flavours are <span class='review-span highlight' data-aligned-summaries='0 5'>bold and authentic</span>. You can order using an iPad. The only downside is that it is <span class='review-span highlight' data-aligned-summaries='1 2 3 5'>hard to wave down a server</span> since they <span class='review-span highlight' data-aligned-summaries='3'>tend to be very busy</span>. Although I like to dine in, I commonly get take out because the wait is less.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1 5'>Worst service ever</span>. Yes their food is good, but <span class='review-span highlight' data-aligned-summaries='3'>you will have to wait so long</span> just to be seated when there are lots of tables available. <span class='review-span highlight' data-aligned-summaries='2'>The waiters there are rude and inattentive</span>. <span class='review-span highlight' data-aligned-summaries='5'>Don't recommend</span> coming here unless you're willing to wait and be served poorly.</div><div class='text-box'>This used to be a great place but my experiences have been unsatisfactory the last few times I came here. <span class='review-span highlight' data-aligned-summaries='1 2 3'>The servers</span> hand you a sheet of paper write down your orders - which is fine, except they <span class='review-span highlight' data-aligned-summaries='1 2 3'>pretty much ignore you the entire time you're there</span>. <span class='review-span highlight' data-aligned-summaries='0'>The food is mediocre and so unbelievably greasy</span> you might as well have swallowed a bucket of oil.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='3 5'>Long waits for a table</span> <span class='review-span highlight' data-aligned-summaries='3'>during peak times</span> but food is amazing. <span class='review-span highlight' data-aligned-summaries='0'>Large portions and the</span> <span class='review-span highlight' data-aligned-summaries='0 5'>best spicy, sliced beef I've had from any Sichuan place</span>, including ones in Markham and Toronto. We also had bowls of Dan Dan noodles, which were huge and very flavorful!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 1 5'>Food and customer service both were worst</span>!! Waste of money!!! <span class='review-span highlight' data-aligned-summaries='2 5'>Servers are always busy</span>.. you have to look for them by yourself. <span class='review-span highlight' data-aligned-summaries='2'>No one is listening to you</span>. <span class='review-span highlight' data-aligned-summaries='4'>Foods are very much pricy than it's quality</span>. <span class='review-span highlight' data-aligned-summaries='3'>You have to wait long time for food</span>. Overall this place is a mess. Very bad management.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This Chinese restaurant has decent, authentic, spicy Sichuan food.</span> <span id="1" class="summary-sentence">However, the service is not good at all.</span> <span id="2" class="summary-sentence">The servers are inattentive and sometimes rude.</span> <span id="3" class="summary-sentence">The wait times are long.</span> <span id="4" class="summary-sentence">The food is also a bit on the pricey side.</span> <span id="5" class="summary-sentence">This is not recommended unless "authentic" Sichuan is more important than customer service.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

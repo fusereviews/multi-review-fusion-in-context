@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>My new favorite for Indian food</span> in Champaign. The downtown location is perfect and the <span class='review-span highlight' data-aligned-summaries='1'>owners have put some love and care into the space</span>. The dishes are not your typical run-of-the-mill recipes. <span class='review-span highlight' data-aligned-summaries='3'>The sauce on the Tikka Masala</span>, for instance, <span class='review-span highlight' data-aligned-summaries='3'>has a smokey flavor I love</span>. <span class='review-span highlight' data-aligned-summaries='5'>The wine selection is nice too. Who knew wine paired well with Indian food</span>?</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='3'>I love the creamy curries that Himalayan has</span>, and although <span class='review-span highlight' data-aligned-summaries='2'>it may be expensive (relatively</span>), I personally love coming here whenever I'm looking for <span class='review-span highlight' data-aligned-summaries='0'>lavish Indian meals</span>. <span class='review-span highlight' data-aligned-summaries='3 4'>I always get</span> the classic butter chicken, <span class='review-span highlight' data-aligned-summaries='4'>naan</span>, and <span class='review-span highlight' data-aligned-summaries='3'>Shahi paneer</span>. I'm a huge fan!</div><div class='text-box'>Really good curry chicken. I enjoyed my meal, <span class='review-span highlight' data-aligned-summaries='0'>tasted pretty authentic</span> being that my family is from the Caribbean and eats curry all the time. My boyfriend enjoys their butter chicken. <span class='review-span highlight' data-aligned-summaries='4'>Everything tastes good with</span> white rice and <span class='review-span highlight' data-aligned-summaries='4'>the naan bread</span>!</div><div class='text-box'>I came here two days in a row because dang this place has some great food! Both times, I came during the lunch hour and honestly, <span class='review-span highlight' data-aligned-summaries='2'>the service was on point! Friendly and attentive</span>. <span class='review-span highlight' data-aligned-summaries='4'>I enjoyed the</span> rice puff salad with avocado, <span class='review-span highlight' data-aligned-summaries='4'>garlic naan</span> and the pistachio chicken. D to the lish!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>We loved the food here</span>. <span class='review-span highlight' data-aligned-summaries='2'>The service was very good</span>. <span class='review-span highlight' data-aligned-summaries='3'>The Dosa is</span> <span class='review-span highlight' data-aligned-summaries='0 3'>totally authentic</span>! Thin and crispy and full of curry potatoes. We came back a second time in one week just for more Dosa! The <span class='review-span highlight' data-aligned-summaries='3'>Himalayan lamb curry was really good as well</span>. We'll definitely be regulars.</div><div class='text-box'>I'm in town on business and this is across from the Hyatt. First, they have done a great job with the renovation on the property! Next, the food was delicious. I got <span class='review-span highlight' data-aligned-summaries='3'>the Chicken Tikka Masala and ate every morsel</span>. <span class='review-span highlight' data-aligned-summaries='3'>Can't wait to</span> come back with more people, so I can <span class='review-span highlight' data-aligned-summaries='1'>enjoy the ambiance</span> and <span class='review-span highlight' data-aligned-summaries='3'>share more options</span>!</div><div class='text-box'>My friends birthday was this evening and this was the place she chose to go! I had always seen it in passing, but had never been. Let me tell you - don't hesitate to stop! <span class='review-span highlight' data-aligned-summaries='3'>I had the Chicken Tikka Masala</span> with mild sauce and <span class='review-span highlight' data-aligned-summaries='3'>it was amazing</span>! <span class='review-span highlight' data-aligned-summaries='1'>The restaurant was clean and inviting</span> with <span class='review-span highlight' data-aligned-summaries='2'>great customer service</span>! I will be back!</div><div class='text-box'>Really enjoyed dinner here! <span class='review-span highlight' data-aligned-summaries='3'>Their butter chicken</span> and Bhuna ghost <span class='review-span highlight' data-aligned-summaries='3'>were great</span>. The starters were pretty good except the pani puri was missing the sweet chutney. <span class='review-span highlight' data-aligned-summaries='2'>The portions were a little small for the price</span> of the food. Overall great experience though.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This is truly an authentic Indian restaurant.</span> <span id="1" class="summary-sentence">It's very clean and offers a relaxing and welcoming atmosphere.</span> <span id="2" class="summary-sentence">The service is on point, attentive, and friendly, but the prices are a little high for the portion size.</span> <span id="3" class="summary-sentence">There are a variety of curries to choose from, and the Chicken Marsala, Classic Butter Chicken, and Shahi Paneer are exceptional.</span> <span id="4" class="summary-sentence">The naan is great, too.</span> <span id="5" class="summary-sentence">Also, the establishment has a wine selection, which pairs surprisingly well with the dishes.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

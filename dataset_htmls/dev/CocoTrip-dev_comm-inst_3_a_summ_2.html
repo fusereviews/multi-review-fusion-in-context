@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>I travel to Vancouver regularly on business and always stay at the Sutton Place Hotel. It is truly a top end hotel from the well appointed lobby, excellent restaurant, beautiful guest suites and most important of all 5 star pulse customer service. Every staff member greets you with a pleasant smile and no request is considered too small. I stay in La Grande Residence where the one and two bedroom fully equipped suites make your stay, wether it is only a few days or a couple of weeks, relaxed and stress-free. The staff are so customer oriented that they always greet yu by name when you call the front desk and make you feel welcome on arrival by saying "Welcome back to the Sutton Place". The beds are very comfortable, you get an excellent sleep. <span class='review-span highlight' data-aligned-summaries='0'>The hotel is the preferred location for many Hollywood actors</span> and crew shooting in Vancouver but <span class='review-span highlight' data-aligned-summaries='0 1'>the hotel staff treat every guest just as if they were an Oscar winner</span>!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Sutton Place hotel was a great stay</span>! The location at Burrard and Robson makes it super convenient for shopping and eating - lots of great locations around. <span class='review-span highlight' data-aligned-summaries='1'>Service was spot-on from all the staff</span>. The hotel is a bit old but everything was still clean and renovated. Rooms were roomy and beds really comfortable. I only have 2 complaints - the parking is outrageous (40$ per night), and the hotel charges for internet (20$ per day). I think the hotel would be much better value if they would eliminate or lower some of these charges! <span class='review-span highlight' data-aligned-summaries='0'>Can definitely recommend this hotel for anyone wanting to stay in downtown Vancouver</span>!</div><div class='text-box'>I stayed at the Sutton Place Vancouver for a 4-night business trip. During my stay I, unfortunately, came down with a really bad cold, <span class='review-span highlight' data-aligned-summaries='1'>so I used Room Service, which was excellent</span>. I also ate in the dining room (excellent service). The "gift shop" is really more of a convenience store than a gift shop, but there are plenty of other souvenir-type shops around. Convenient walk to shops, restaurants and the stunningly beautiful Vancouver Convention Centre. Very, very comfortable bed. (No back pain, yay!)</div><div class='text-box'>We stayed here for 5 nights in a grand suite. The rooms were lovely - plenty of room for three of us, beautiful views, very quiet. We had wi-fi and continental breakfast included in our rate - the wi-fi worked flawlessly and the morning pastries were delicious. Service in this hotel is top rate - the <span class='review-span highlight' data-aligned-summaries='1'>concierges helped us with car rental</span>, spa and restaurant reservations. And the <span class='review-span highlight' data-aligned-summaries='0'>location couldn't be better</span>. We were able to walk everywhere downtown. We <span class='review-span highlight' data-aligned-summaries='0'>highly recommend Sutton Place</span>.</div><div class='text-box'>This was my third time staying at Sutton Place and love staying here. <span class='review-span highlight' data-aligned-summaries='0'>Great location</span>, clean rooms, comfortable beds, <span class='review-span highlight' data-aligned-summaries='1'>friendly/helpful staff</span>. However, <span class='review-span highlight' data-aligned-summaries='0'>I don't recommend eating breakfast at the restaurant, pretty spendy</span> for what you get. Maybe the buffet is the better way to go. Parking is spendy but hotel usually has a deal that helps cover the cost of parking. But this is my hotel of choice when I come to Vancouver!</div><div class='text-box'>First the service at Sutton Place was great and <span class='review-span highlight' data-aligned-summaries='1'>the staff was very friendly and helpful</span>. <span class='review-span highlight' data-aligned-summaries='0'>The location is also great</span>. Unfortunately the <span class='review-span highlight' data-aligned-summaries='0'>hotel itself is outdated and the rooms are in need of an upgrade</span>. The price was very reasonable, but it would be nice to see this hotel receive a much needed makeover.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>We were pleased with the location of this Hotel</span> as it is only a 10 minute downhill walk from Canada Place from where the Cruise Ships depart. Our room was clean and comfortable. The Hotel is <span class='review-span highlight' data-aligned-summaries='0'>very close to the main shopping area</span> and across the road we were able to catch the Hop-on Hop-off Trolley Tour.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>It is central to all downtown activities</span> and <span class='review-span highlight' data-aligned-summaries='0 1'>the staff are friendly,and helpful</span>. The restaurant is great with always a little chef's surprise. We also enjoy the pool which has good hours for use. I have stayed with friends and family and for business and never been disappointed.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This hotel is in a great downtown location and it is highly recommended.</span> <span id="1" class="summary-sentence">The staff are friendly and helpful.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>My husband and I stayed at this hotel in January, it was quite difficult to find as the signage isn't too clear, however once we found it the hotel was chic and modern. <span class='review-span highlight' data-aligned-summaries='1'>The staff were friendly</span> and welcome glass of champagne really helped! <span class='review-span highlight' data-aligned-summaries='0'>The hotel is located around 5-10 minutes from La Rambla</span> so is just far enough away from the hustle and noise, however there are numerous restaurants located close to the hotel. <span class='review-span highlight' data-aligned-summaries='2 5'>The hotel rooms are great</span>, clean and modern with excellent facilities, the only downside to ours was being <span class='review-span highlight' data-aligned-summaries='0'>at the back of the hotel ran the metro</span> so noise was a minor issue. The hotel's restaurant was excellent with <span class='review-span highlight' data-aligned-summaries='6'>the breakfast being the best we have ever had</span> and the evening menu being equally good. This hotel gets a big thumbs up!</div><div class='text-box'>This is far from my favourite hotel, and really has no hope of ever even making it into the top ten. My biggest complaints are with the rooms. I don't know if this applies to every room in the hotel, but the frosted glass <span class='review-span highlight' data-aligned-summaries='2'>bathroom doors</span> that <span class='review-span highlight' data-aligned-summaries='2'>don't full close</span>: a nightmare for me. This is stylistic decorating that I could live without. Furthermore I found <span class='review-span highlight' data-aligned-summaries='2 3 4'>the bed</span> to be <span class='review-span highlight' data-aligned-summaries='2 3 4'>so hard and stiff</span> <span class='review-span highlight' data-aligned-summaries='3 4'>that I might as well have been sleeping on the floor</span>. I barely slept at all, so thankfully we only stayed for one night. <span class='review-span highlight' data-aligned-summaries='1 5'>The service was friendly enough</span>,<span class='review-span highlight' data-aligned-summaries='5'></span> <span class='review-span highlight' data-aligned-summaries='0 5'>and the location was</span>, admittedly, <span class='review-span highlight' data-aligned-summaries='0 5'>very ideal</span>. I would never stay here again, but I think, if possible, another hotel in the same area would be perfect.</div><div class='text-box'>It was my first time in Barcelona and my friend recommended staying at a H10 hotel. <span class='review-span highlight' data-aligned-summaries='0'>This one was right at the top of Las Ramblas</span>, not too far from the Bus Station, and <span class='review-span highlight' data-aligned-summaries='0'>really close to the a Metro line</span>. <span class='review-span highlight' data-aligned-summaries='2'>The rooms were a bit small</span> and some of our toiletries were already used before we got there. <span class='review-span highlight' data-aligned-summaries='2 3'>The double bed was two beds pushed together</span> <span class='review-span highlight' data-aligned-summaries='3'>but we managed</span>. <span class='review-span highlight' data-aligned-summaries='4'>The only soft bedding we could find was the blanket</span> in the closet. <span class='review-span highlight' data-aligned-summaries='1 5'>The staff was great</span>. We were on the 4th floor facing the back so <span class='review-span highlight' data-aligned-summaries='5'>it was relatively quiet</span>. Try not to get a room by the elevators because you can hear a lot of noise from the hallway. Even with the small things that could have been better, we enjoyed our stay.</div><div class='text-box'>We stayed at this hotel on August 2010. <span class='review-span highlight' data-aligned-summaries='0'>The location was great</span>, <span class='review-span highlight' data-aligned-summaries='6'>breakfast was excellent</span>!, <span class='review-span highlight' data-aligned-summaries='5'>the hotel was clean</span>. But the biggest problem was the size of the room. We had 2 luggages and if we wanted to take something out, we had to put them on the bed because there was not enough space in the room for us and the luggages together. It was <span class='review-span highlight' data-aligned-summaries='2'>the smallest hotel room I have ever seen</span>. When we checked-out we mentioned that to the reception, and they told us if we had mentioned it before they would have change the room to a bigger one. TAKE THAT AS ADVICE. Except of that we had no other problem. <span class='review-span highlight' data-aligned-summaries='1'>The personell was very friendly</span> even though their english was poor. I recommend this hotel.</div><div class='text-box'>I visited Barcelona on a 2 night 3 day mini brake with my wife at the beginning of October. It was our first time in Barca and we loved it. The Hotel was fantastic. We had read previous reviews and asked for a room on the front. We were on the 3rd floor and we had great viewes of the Street below. <span class='review-span highlight' data-aligned-summaries='0'>The hotel is ideally situated</span> for the Ramblas and the hop on hop off bus services. We stayed on a bed and <span class='review-span highlight' data-aligned-summaries='6'>breakfast</span> basis and the <span class='review-span highlight' data-aligned-summaries='6'>food was very good</span>. <span class='review-span highlight' data-aligned-summaries='2'>The room itself was excellent</span> and more than adequate for our needs. There is a magnificent roof terrace, with exceptional views of Barcelona. I would definately go back to Barcelona and this Hotel.</div><div class='text-box'>I stayed in this hotel with my Mum on a short city break. Never having visited Barcelona before I was unsure as to where to stay and as a result sought the advice of Tripadvisor. <span class='review-span highlight' data-aligned-summaries='0'>The hotel was</span> very easy to find (we got the airport bus to Place de Catalunya) and <span class='review-span highlight' data-aligned-summaries='0'>in an extremely convenient location for all the attractions</span>. <span class='review-span highlight' data-aligned-summaries='1'>The hotel staff were</span> <span class='review-span highlight' data-aligned-summaries='1 2'>excellent</span> as <span class='review-span highlight' data-aligned-summaries='2'>was the room</span> which was <span class='review-span highlight' data-aligned-summaries='2'>very modern and extremely clean</span>. It was also excellent when our flight was cancelled by easyJet that we were able to come back to the same room. However this time we had <span class='review-span highlight' data-aligned-summaries='6'>the Breakfast</span> which <span class='review-span highlight' data-aligned-summaries='6'>I think was the best I have ever had in a hotel</span>. <span class='review-span highlight' data-aligned-summaries='5'>Overall an outstanding hotel in a lovely city.</span></div><div class='text-box'>This was our first time to Barcelona and this hotel did not let us down. <span class='review-span highlight' data-aligned-summaries='0'>Great location to all the sights</span>, <span class='review-span highlight' data-aligned-summaries='0'>not far from the</span> waterfront, the <span class='review-span highlight' data-aligned-summaries='0'>metro around the corner</span>, and also getting on and off the aerobus to and from the airport again just around the corner. <span class='review-span highlight' data-aligned-summaries='2'>The room itself was</span> <span class='review-span highlight' data-aligned-summaries='2 5'>lovely and clean</span>, <span class='review-span highlight' data-aligned-summaries='3 4'>nice large king bed</span> and very modern. Up on the balcony you got great views across the city. <span class='review-span highlight' data-aligned-summaries='1 5'>The staff were most helpful</span> and <span class='review-span highlight' data-aligned-summaries='6'>the breakfast was great</span>. All in all I would stay here again and having 3days in Barcelona it was not enough so I suggest a week. Will be returning and will stay in this hotel for shizzle.</div><div class='text-box'>The flight: We flew with flyglobespan and the flight was flawless. <span class='review-span highlight' data-aligned-summaries='5'>The hotel was gorgeous and was so clean</span>. Check in was easy and we even got welcome cava. <span class='review-span highlight' data-aligned-summaries='2'>The room: Was spacious, clean and had a lovely wee balcony</span>. The Food: We didnt eat in the restaurant, but <span class='review-span highlight' data-aligned-summaries='6'>the breakfasts were fantastic</span>. <span class='review-span highlight' data-aligned-summaries='0'>Location: The hotel is so central and easy walking distance to everything</span>. Yet the surroundings are fairly quite. Will definitely go back here.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The hotel is in a fantastic location and very close to the underground, and so easy to get to.</span> <span id="1" class="summary-sentence">The staff were friendly.</span> <span id="2" class="summary-sentence">The room was very nice.</span> <span id="3" class="summary-sentence">The King size bed turned out to be the worst bed.</span> <span id="4" class="summary-sentence">It was like sleeping on the floor it was so hard.</span><span id="5" class="summary-sentence">Apart from the bed, it was a lovely hotel.</span> <span id="6" class="summary-sentence">The breakfast was good and varied.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

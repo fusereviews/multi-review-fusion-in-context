@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>Ok and has a pool <span class='review-span highlight' data-aligned-summaries='0 2'>The hotel is located just opposite the central station</span> <span class='review-span highlight' data-aligned-summaries='0'>which is very handy but not very scenic</span> and there is a <span class='review-span highlight' data-aligned-summaries='0'>some background noise</span>. We didn't find any good restaurants/bars nearby and you are near a number of seedy sex shops. <span class='review-span highlight' data-aligned-summaries='0 5 6'>The hotel is reasonable</span> <span class='review-span highlight' data-aligned-summaries='0'>though</span> <span class='review-span highlight' data-aligned-summaries='5 6'>for the price we paid</span>. <span class='review-span highlight' data-aligned-summaries='4'>The rooms are a good size and comfortable</span>. The breakfast buffet is really good with lots of choice and there is <span class='review-span highlight' data-aligned-summaries='3'>fruit and cake in the reception</span> throughout the day. <span class='review-span highlight' data-aligned-summaries='3'>The reception staff were really helpful</span> and were able to answer all our questions. There is a small swimming pool, sauna and steam room at the top of the hotel which overlooks the bright lights of the Frankfurt skyline - perfect if it's raining outside.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Not a fan since there is only limited A/C The location cannot be beat for convenience</span> but that is about the only thing is high priced hot box has going for it. The on-line site made no mention of the hotel only having A/C on a couple of floors. As such, it was a very hot night in Frankfurt. <span class='review-span highlight' data-aligned-summaries='0 2'>The location is great</span> <span class='review-span highlight' data-aligned-summaries='2'>with easy access to the train station</span> via underground tunnel. Good cheap eats and shopping in the underground area at the train station. The hotel bar is very over priced even on beer which is usually cheap everywhere in Germany. <span class='review-span highlight' data-aligned-summaries='3'>The staff was not very friendly or helpful</span>. They did not want to honor a non-smoking room request without more money.</div><div class='text-box'>Buona vacanza all' hotel Savoy a Francoforte <span class='review-span highlight' data-aligned-summaries='0 1'>The Savoy hotel is a very good</span> <span class='review-span highlight' data-aligned-summaries='0'>and not expensive</span> <span class='review-span highlight' data-aligned-summaries='0 1'>hotel</span> closed to the main station <span class='review-span highlight' data-aligned-summaries='0 2'>a few minutes walk from the city centre.from the main station is about 2 minuts walk</span>, to the city centre 10 minutes walk and to <span class='review-span highlight' data-aligned-summaries='2'>the Main River 3 minutes walk</span>. <span class='review-span highlight' data-aligned-summaries='5'>For</span> <span class='review-span highlight' data-aligned-summaries='5 6'>a double</span> <span class='review-span highlight' data-aligned-summaries='4 5 6'>room (not big but very clean)</span> with a very big and wonderful breakfast <span class='review-span highlight' data-aligned-summaries='5 6'>we paid 80 euro at night!Also</span> <span class='review-span highlight' data-aligned-summaries='3'>the staff is very kind and helpful!We</span> enjoied at Savoy Hotel!Also the SPA and swimming pool are very good! From the Roof Swimming Pool at noght we can see the City-SkyLine!Very Good</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Great hotel</span> I can't understand some of these reviews. I thought the Savoy was fantastic. I got a great rate 66 euro/night by emailing the <span class='review-span highlight' data-aligned-summaries='2'>hotel</span> directly. Lovely little lounge. Breakfast was delicious with the first hot and cold food we had seen for breakfast since we arrived 10 days earlier to the region. Free pasties in the lobby and free drink at the bar. <span class='review-span highlight' data-aligned-summaries='2'>Within walking distance of the Museums on the Main and to Romerburg if you have stamina</span>. <span class='review-span highlight' data-aligned-summaries='3'>All staff were pleasant and helpful</span>. I'd definitely stay here again. Could have used another pillow on the bed though.</div><div class='text-box'>The Savoy recommanded ! <span class='review-span highlight' data-aligned-summaries='1'>I stayed in the Savoy</span> from April 28 until 30 for two nights in a single comfort room. Found everything to be of a very good standard : room was rather small, but the bed was big and comfortable and everything was new, clean and working properly. The airconditining was perfect even with the very high temperatures outside. My room (720) was quiet even though it was opposite the elevators. Breakfast was extremely good. <span class='review-span highlight' data-aligned-summaries='0'>Overall</span> <span class='review-span highlight' data-aligned-summaries='0 5'>a good 4 star hotel</span>.I booked directly over the hotel website and <span class='review-span highlight' data-aligned-summaries='5'>only paid EUR 49,00 per night (bf included</span>).</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1 6'>The Savoy certainly won us</span>. We travelled through Europe by Eurail and we originally chose the Savoy because <span class='review-span highlight' data-aligned-summaries='0 2'>it was close to the Deutchebarn (main railway station</span>). We had read reviews to say the breakfast was excellent but after staying in 3, 4 and 5 star hotels throughout Europe and the Middle East over a period of 3 months we have to say <span class='review-span highlight' data-aligned-summaries='0'>the best breakfast we experienced was definitely at the Savoy</span>.What an absolute delight! Big congratulations to the Savoy.There is no question <span class='review-span highlight' data-aligned-summaries='0 6'>we will definitely be staying at the Savoy</span> whenever we travel to Frankfurt.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 4 5 6'>No air conditioning and noisy</span> We arrived at the hotel and were allocated a <span class='review-span highlight' data-aligned-summaries='0 2 5 6'>room</span> which <span class='review-span highlight' data-aligned-summaries='0 2 5 6'>was above the busy roads (and tram track</span>)<span class='review-span highlight' data-aligned-summaries='0'></span> after requesting a quiet room. Thinking they had misunderstood our requirements <span class='review-span highlight' data-aligned-summaries='3'>we requested another room</span> - unfortunately <span class='review-span highlight' data-aligned-summaries='3'>we got the same just on a different floor</span>. The room had no air conditioning and was like a sauna. If the window was opened the noise was excessive. I eventually resorted to sleeping on the tiled bathroom floor to cool down. Not a place to stay if you want a quiet or cool room.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>great value and very clean</span> Stayed here for one night late <span class='review-span highlight' data-aligned-summaries='0 2'>NovemberGreat location</span> - <span class='review-span highlight' data-aligned-summaries='2'>2 minutes from the train station</span> but still quiet enough to get a good nights sleep.Clean rooms although the wifi didn't work properly - not the hotel wifi but a general provider for the area</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Great location, hotel could have been better.</span> <span id="1" class="summary-sentence">We stayed in the Savoy.</span> <span id="2" class="summary-sentence">The hotel is in a great location, 2 minutes walk from the train station and an easy stroll to all the sites.</span> <span id="3" class="summary-sentence">The reception looked nice and the staff were good.</span> <span id="4" class="summary-sentence">However, we were disappointed with our room, firstly the interior was quite shabby and the shower leaked all over the bathroom.</span> <span id="5" class="summary-sentence">However, it wasn't bad for the money we paid so</span> <span id="6" class="summary-sentence">if you can get the hotel for a cheap price it is fine, but don't pay a lot.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

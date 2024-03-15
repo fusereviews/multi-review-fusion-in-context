@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>Great patio in the summer, <span class='review-span highlight' data-aligned-summaries='0 1'>food is just okay</span>.<span class='review-span highlight' data-aligned-summaries='0'> The waitresses are a little dumb and hardly ever come by to check your table. Typical pub</span>, <span class='review-span highlight' data-aligned-summaries='2 3'>but the main selling point is this place's patio</span>. I wouldn't come here for any other reason.</div><div class='text-box'>Great patio, especially for the crowded stretch of King street it's on. <span class='review-span highlight' data-aligned-summaries='0 1'>The food is just ok, relatively underwhelming pub food</span>. We had the wing special and were surprised how mild their spicy wings were. <span class='review-span highlight' data-aligned-summaries='1'>Good selection of beers on draft</span> and the <span class='review-span highlight' data-aligned-summaries='0'>service is relatively good</span>. <span class='review-span highlight' data-aligned-summaries='2 3'>I would recommend for patio</span> <span class='review-span highlight' data-aligned-summaries='3'>drinks</span> but do dinner somewhere else.</div><div class='text-box'>First time eating here ordered the <span class='review-span highlight' data-aligned-summaries='0'>poutine burger</span> and I was a but skeptial at first but I'm glad I went with my gut feeling because it <span class='review-span highlight' data-aligned-summaries='0'>was amazing a bit sloppy</span> so wouldn't recommend for a first date lol but other then that it was fantastic I'll definetly be returning!</div><div class='text-box'>Had the chicken wings. I could have made better at home. Other than the <span class='review-span highlight' data-aligned-summaries='0 1'>crappy food</span>, the <span class='review-span highlight' data-aligned-summaries='0 1'>waiter was giving us some attitude</span> and <span class='review-span highlight' data-aligned-summaries='0 3'>they put us right next to smokers on the patio</span>. Shame because <span class='review-span highlight' data-aligned-summaries='2 3'>it is a nice patio</span>.<span class='review-span highlight' data-aligned-summaries='3'></span></div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 1'>Decent-ish food</span> <span class='review-span highlight' data-aligned-summaries='1'>but</span> <span class='review-span highlight' data-aligned-summaries='0 1'>bad service</span>.<span class='review-span highlight' data-aligned-summaries='0'></span> We asked for fish and chips and upon inquiring after 50 min turns out the kitchen never received the order. In turn, they were hardly apologetic. <span class='review-span highlight' data-aligned-summaries='2'>Not going there again, despite the fact</span> <span class='review-span highlight' data-aligned-summaries='1 2 3'>their patio is nice</span>. They can really make good business out of it, but they are not interested.</div><div class='text-box'>Came here 2 days in a row on a Sunday and Monday. I was staying down the street at the Hyatt. <span class='review-span highlight' data-aligned-summaries='1'>Bathrooms have a pissy smell</span>. <span class='review-span highlight' data-aligned-summaries='0 1'>Food is good</span>, though. Not many patrons. I'm curious when there busy time is.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 1'>Food was okay. Poor service</span>,<span class='review-span highlight' data-aligned-summaries='0'> downright rude waitresses</span> even though the restaurant wasn't full. Wasn't even given forks / knives with the food, and took up to 15 minutes to flag the waitress down who seemed to ignore it at first. <span class='review-span highlight' data-aligned-summaries='1'>Won't be returning to this place</span>. Save your money and go elsewhere.</div><div class='text-box'>This is a nice place! Clean and respectable, I went with a friend and my teen son. <span class='review-span highlight' data-aligned-summaries='0 1'>The food was good</span> <span class='review-span highlight' data-aligned-summaries='0'>very tasty. I was disappointed at the rib. They were good but too small and they looked prepackaged</span>. <span class='review-span highlight' data-aligned-summaries='0 1'>The waitress was really friendly and attentive</span>.<span class='review-span highlight' data-aligned-summaries='0'></span> Lots of T.V's was a good thing as we went for super bowl.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The atmosphere is a typical pub with mediocre food and poor service.</span> <span id="1" class="summary-sentence">Not a great place to eat at, but good for getting beers on draft.</span> <span id="2" class="summary-sentence">The best feature here is the outdoor patio</span> <span id="3" class="summary-sentence">so it's a good place to go for patio drinks, if smokers are not minded.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

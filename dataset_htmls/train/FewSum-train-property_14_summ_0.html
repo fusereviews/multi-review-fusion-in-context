@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Damn good Sichuan</span>. Keep in mind that this is not regular Chinese food you normally see here in Mississauga. Be prepared you crap fire cause it is SPICY. <span class='review-span highlight' data-aligned-summaries='0'>Price is a little higher than the average Chinese food</span>. <span class='review-span highlight' data-aligned-summaries='1'>Food wait times can be lengthy and service is mediocre</span> but everyone comes for mainly the food. 4 / 5</div><div class='text-box'>Average across the board, a bit pricey for average though. <span class='review-span highlight' data-aligned-summaries='0'>Authentic food</span> but <span class='review-span highlight' data-aligned-summaries='1'>service was not too friendly however efficient</span>. Would recommend for those cold winter nights to warm up. Worth a try on lazy evenings when the group becomes indecisive of food choices...</div><div class='text-box'>Went there as a friend recommended the place. We ordered their famous Peking duck as my husband was craving for it. Our order came with a soup and a side dish. It was huge for two. <span class='review-span highlight' data-aligned-summaries='0'>We were satisfied</span> and would definitely go back to the place.</div><div class='text-box'>This is the spot to get your Sichuan spicy food fix. <span class='review-span highlight' data-aligned-summaries='0'>The flavours are bold and authentic</span>. You can order using an iPad. The only downside is that <span class='review-span highlight' data-aligned-summaries='1'>it is hard to wave down a server</span> since they tend to be very busy. Although I like to dine in, I commonly get take out because the wait is less.</div><div class='text-box'>Worst service ever. Yes <span class='review-span highlight' data-aligned-summaries='0'>their food is good</span>, but <span class='review-span highlight' data-aligned-summaries='1'>you will have to wait so long just to be seated when there are lots of tables available. The waiters there are rude and inattentive</span>. Don't recommend coming here unless you're willing to wait and be served poorly.</div><div class='text-box'>This used to be a great place but my experiences have been unsatisfactory the last few times I came here. The servers hand you a sheet of paper write down your orders - which is fine, except <span class='review-span highlight' data-aligned-summaries='1'>they pretty much ignore you the entire time you're there</span>. <span class='review-span highlight' data-aligned-summaries='0'>The food is mediocre</span> and <span class='review-span highlight' data-aligned-summaries='0'>so unbelievably greasy</span> you might as well have swallowed a bucket of oil.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1'>Long waits</span> for a table during peak times but <span class='review-span highlight' data-aligned-summaries='0'>food is amazing</span>. Large portions and the best spicy, sliced beef I've had from any Sichuan place, including ones in Markham and Toronto. We also had bowls of Dan Dan noodles, which were huge and very flavorful!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Food</span> and <span class='review-span highlight' data-aligned-summaries='1'>customer service</span> both <span class='review-span highlight' data-aligned-summaries='1'>were</span> <span class='review-span highlight' data-aligned-summaries='0 1'>worst</span>!! Waste of money!!! Servers are always busy.. you have to look for them by yourself. No one is listening to you. <span class='review-span highlight' data-aligned-summaries='0'>Foods are very much pricy than it's quality</span>. <span class='review-span highlight' data-aligned-summaries='1'>You have to wait long time for food</span>. Overall this place is a mess. Very bad management.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The quality of the food is ok, but can be a tad overpriced.  </span><span id="1" class="summary-sentence">The service is bad - for example waiting a while to be seated, or being ignored while waiting.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

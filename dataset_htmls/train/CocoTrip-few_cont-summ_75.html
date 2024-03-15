@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1'>Not a 4-star hotel</span>. We stayed here as part of a group tour through northern Italy. Of the 21 rooms occupied by our group, at least 7 rooms had problems such as foul odors and non-functioning air-conditioning and the occupannts requested a room change. <span class='review-span highlight' data-aligned-summaries='5'>The first room we were given was tiny</span> the a/c didn't work. The room they gave us next was handicap-accessible and was much larger, with a huge bathroom. The bathroom, however, had no put-down space at all we had to move a small table from the bedroom into it. <span class='review-span highlight' data-aligned-summaries='2'>The neighborhood is very seedy and we were uncomfortable walking around there at night</span>. There are better choices in beautiful Florence.</div><div class='text-box'>STAY AWAY FROM THIS HOTEL This <span class='review-span highlight' data-aligned-summaries='1'>hotel has the most uncaring staff I've ever witnessed</span>. <span class='review-span highlight' data-aligned-summaries='5'>Our</span> <span class='review-span highlight' data-aligned-summaries='1 5'>hotel room was burglarized while we slept</span> <span class='review-span highlight' data-aligned-summaries='5'>in our beds</span>. No one was injured thankfully, but <span class='review-span highlight' data-aligned-summaries='7'>the hotel displayed a no-care attitude</span>. They never sent a staff person up to the room when we called down to report the intrusion. They made us wait while they checked people in and out before giving us the insurance forms to fill out and made us wait once again while they copied the forms for us. <span class='review-span highlight' data-aligned-summaries='7'>They never apologized and basically treated us like we didn't exist</span>. Stay away from this one - there's plenty of hotels in Florence.</div><div class='text-box'>Great little hotel We stayed in a triple room for 4 nights april 10 <span class='review-span highlight' data-aligned-summaries='1'>-14,the hotel was great</span> very clean and <span class='review-span highlight' data-aligned-summaries='7'>the staff very helpfu</span>,had no problem with the area at all ,<span class='review-span highlight' data-aligned-summaries='3'>iit was very convenient as we were traveling by train,just cross the street and you are there</span>,also <span class='review-span highlight' data-aligned-summaries='4'>the buses on the other side of the station to go to Fiosole</span>,<span class='review-span highlight' data-aligned-summaries='3 4'>plaza Michelangelo and the discount mall</span> <span class='review-span highlight' data-aligned-summaries='3'>outside of Florence.the</span> breakfast was very good for that size hotel,we did not expect that good selection,the restaurant next door for a late dinner or snack is great.I will stay here again and really recommend it</div><div class='text-box'>Well located good hotel We were a little apprehensive booking this hotel because of some negative reviews. We selected it because of its convenient location and price. Wewere pleasantly surprised. <span class='review-span highlight' data-aligned-summaries='5'>The</span> <span class='review-span highlight' data-aligned-summaries='1 5'>room was</span> <span class='review-span highlight' data-aligned-summaries='1'>clean and</span> <span class='review-span highlight' data-aligned-summaries='1 5'>decent</span>. <span class='review-span highlight' data-aligned-summaries='7'>The</span> <span class='review-span highlight' data-aligned-summaries='1 7'>staff was very friendly and accomidating</span>. <span class='review-span highlight' data-aligned-summaries='2 3'>The location is perfect</span> <span class='review-span highlight' data-aligned-summaries='3'>if you arrive by train</span> and <span class='review-span highlight' data-aligned-summaries='2'>all</span> <span class='review-span highlight' data-aligned-summaries='2 3'>attractions are easily reachable by foot</span>. I would definitely recommend this hotel for a short stay in the city.</div><div class='text-box'>Don't recommend this hotel. The <span class='review-span highlight' data-aligned-summaries='0'>hotel is much older than the pictures on their website</span>. Our <span class='review-span highlight' data-aligned-summaries='6'>room is facing</span> to a <span class='review-span highlight' data-aligned-summaries='6'>construction site</span>. The worst thing is that the construction site started to have <span class='review-span highlight' data-aligned-summaries='8'>someone hammering</span> at 8 or 9am so I had to wake up by 8 or 9 am. The sound insulation was not good. The only thing that i like is the <span class='review-span highlight' data-aligned-summaries='2'>location. very convenient</span>.</div><div class='text-box'>Good location, but that's all. <span class='review-span highlight' data-aligned-summaries='2'>A great location</span>, <span class='review-span highlight' data-aligned-summaries='3'>beside the road from train station and walking distances from Florence tourist attractions</span>.<span class='review-span highlight' data-aligned-summaries='0 1 2'>The hotel</span> <span class='review-span highlight' data-aligned-summaries='0 1'>is old</span> <span class='review-span highlight' data-aligned-summaries='1'>little neglected</span> and <span class='review-span highlight' data-aligned-summaries='5'>the rooms are small</span>. The price is excellent but you get what you pay.</div><div class='text-box'>Big deal It's an excellent option : <span class='review-span highlight' data-aligned-summaries='2 3'>very close to train station and city main attractions</span>.<span class='review-span highlight' data-aligned-summaries='2'></span> <span class='review-span highlight' data-aligned-summaries='1'>If you don't want to spend so much, but need a clean and confortable hotel with a good breakfast, you can try this one</span></div><div class='text-box'>Whatever you do , <span class='review-span highlight' data-aligned-summaries='1'>DON"T STAY HERE</span>! The cigarette butts they left on the balcony</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This hotel is quite old compared to pictures on their website.</span> <span id="1" class="summary-sentence">Generally it's a okay hotel.</span> <span id="2" class="summary-sentence">The hotel is in a good location.</span> <span id="3" class="summary-sentence">It is close to the train station and the main attractions in Florence by foot.</span> <span id="4" class="summary-sentence">There are also nearby buses that go to Fiosole, the plaza Michelangelo and the discount mall.</span> <span id="5" class="summary-sentence">The rooms are rather small and unsafe.</span> <span id="6" class="summary-sentence">Some rooms are facing onto a construction site.</span> <span id="7" class="summary-sentence">The staff at the hotel had an unprofessional attitude towards guests.</span> <span id="8" class="summary-sentence">The hotel was quite noisy.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

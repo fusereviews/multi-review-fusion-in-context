@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>My son loves this place! Miss Beth, your gal <span class='review-span highlight' data-aligned-summaries='1'>Mady is exceptional. She has a great attitude</span>, and even if all of southern Nevada was in dire straits, I know that she would still bring a smile to work. Invest in her, and don't let your good people go! -Jake</div><div class='text-box'>Absolutely love this place I've been to multiple <span class='review-span highlight' data-aligned-summaries='0'>indoor playground</span> and this by far is my favorite spot for my child <span class='review-span highlight' data-aligned-summaries='5'>.tony the owner is so sweet and Accommodating he helped me with planning and arranging my sons birthday party</span> it was a blast I will definitely recommend this place to my friends and family</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 1'>This place is</span> <span class='review-span highlight' data-aligned-summaries='0'>awesome</span>! $10 per kid and there's <span class='review-span highlight' data-aligned-summaries='0 3'>plenty to do for</span> the price. <span class='review-span highlight' data-aligned-summaries='3'>Safe</span>, <span class='review-span highlight' data-aligned-summaries='1'>clean</span>, awesome! I will definitely be coming back here. <span class='review-span highlight' data-aligned-summaries='0 3'>Wearing three kids out</span> after school is not an easy task but this place is definitely up to the challenge. Thanks!</div><div class='text-box'>Specifically for my needs this places is perfect. There is a <span class='review-span highlight' data-aligned-summaries='2'>plentiful</span> <span class='review-span highlight' data-aligned-summaries='2 4'>seating for parents with deep comfy couches</span>. <span class='review-span highlight' data-aligned-summaries='0'>Several rooms with larger climbing structures for little monkeys</span>. Perfect for active kids. My husband feels it's a little cavey and dark. But <span class='review-span highlight' data-aligned-summaries='3'>our kid loves it</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 3'>Great place</span>. <span class='review-span highlight' data-aligned-summaries='1'>Super clean and the</span> <span class='review-span highlight' data-aligned-summaries='1 5'>staff is always nice</span>. The only frustrating thing is the lack of power outlets. In fact, I think there is onkI <span class='review-span highlight' data-aligned-summaries='4'>try to get some work done</span> <span class='review-span highlight' data-aligned-summaries='0 4'>while</span> <span class='review-span highlight' data-aligned-summaries='0 3 4'>my son plays</span> do it would be great to have a powersource behind a couch or table..</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 3'>My daughter LOVES this place</span>! <span class='review-span highlight' data-aligned-summaries='1'>Friendly staff, very clean</span> and so much to do. I like the fact that <span class='review-span highlight' data-aligned-summaries='5'>I can bring outside food</span> and the <span class='review-span highlight' data-aligned-summaries='4'>free wifi. I tend to bring work with me and I can knock out hours</span> why <span class='review-span highlight' data-aligned-summaries='0 3'>she plays and plays and plays</span>!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 5'>We had our daughters first birthday party here.</span> <span class='review-span highlight' data-aligned-summaries='0 3 5'>We had so much fun</span> playing on all the structures. <span class='review-span highlight' data-aligned-summaries='1 5'>The host was very helpful</span> and attentive to our needs. <span class='review-span highlight' data-aligned-summaries='5'>We were able to bring our own food for our event</span> and they even gave us a little extra time to setup and cleanup.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1'>Friendly staff</span>, <span class='review-span highlight' data-aligned-summaries='0 4'>perfect place for kids</span> <span class='review-span highlight' data-aligned-summaries='4'>when you need to escape the heat but they want to play</span>. My son is one and loved it. <span class='review-span highlight' data-aligned-summaries='1'>Very clean</span> also and very affordable. <span class='review-span highlight' data-aligned-summaries='0 3'>They had a great toddler area, bounce house for older kids</span> <span class='review-span highlight' data-aligned-summaries='3'>and lots of places for them to climb and slide</span>.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Great indoor playgrounds for kids, toddlers and up.</span> <span id="1" class="summary-sentence">Friendly staff and the place is very clean.  </span><span id="2" class="summary-sentence">Lots of comfy seating for the parents  who bring the kids here.</span> <span id="3" class="summary-sentence">Very safe, kids have fun</span><span id="4" class="summary-sentence">, parents can relax, maybe get some work done.  </span><span id="5" class="summary-sentence">Host is very accommodating, great for parties and food can be brought from home.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

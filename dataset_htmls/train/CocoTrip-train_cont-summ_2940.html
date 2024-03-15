@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>This hotel</span> was a pre booked offer so we did not pick it ourselves. It <span class='review-span highlight' data-aligned-summaries='0'>was fairly clean</span>, although we did have to point out a problem area which took 3 attempts for help before it was resolved. The staff were friendly and spoke good English. The rooms are small and basic and the views are not great. <span class='review-span highlight' data-aligned-summaries='1'>Breakfast is ok</span>, <span class='review-span highlight' data-aligned-summaries='3'>the pool is on the top floor</span> and has a view of the city and a sundeck. (Take you own towels as only the room ones are provided.) It is a fair walk into the centre but the 'bus touristic' stop is a ten minute walk away and you can get discount at the reception. (well worth using as city highlights fairly wide spread and good value for money)</div><div class='text-box'>right from even before starting my vacation this hotel and its management gave me an eerie feeling. first they charged the full amount of stay on my credit card 7 days before my arrival, while it was mentioned on the booking site that I can pay at the hotel. next, the hotel is just out of place from the touristic areas. Very small hotel to command a 3-star tag. their room rents are very expensive, not worth the kind of rooms or the customer service. their is no view from the rooms (infact we had a backyard opening with a small window) and the hotel is just bang on the edge of a busy junction. <span class='review-span highlight' data-aligned-summaries='1'>breakfast is ok</span> and <span class='review-span highlight' data-aligned-summaries='3'>the swimming pool</span> on the terrace is smaller than a baby pool.</div><div class='text-box'>Took my Teenage son for the weekend, I had been before and had loved it. Th emain feature was a Barcelona Home Win. <span class='review-span highlight' data-aligned-summaries='0'>The hotel was exceedingly clean and was to a very high standard</span>. There was minibar in room (take the drinks out put your own stuff in) and there was free wifi. The hotel is probably aimed at Business travellers but would be ok for a romantic getaway, due to it's high quality. It was a twenty minute walk to the stadium and about the same to placa de Catalunya. Not ideal but my suggestion is use the rental bikes that appear on standsat street corners all over the city! I paid 150 Euros for two nights which even out of season is superb value.</div><div class='text-box'>I have just returned from Barcelona, full of memories, full of colours. The only thing that i can say for the hotel is that it was ok. Nothing else nothing more. I was there with my boyfriend and we have booked a double room.unfortunately the room was too small.The other annoying thing of the room was <span class='review-span highlight' data-aligned-summaries='4'>the air condition. It didn't work properly</span> and as i have noticed from the other reviews it seems that everybody had the same problem! <span class='review-span highlight' data-aligned-summaries='4'>We couldn't switch on or off the air condition and our room was always cold</span>.Besides that the air condition had a strange noise that make our sleep difficult. Despite all of this problems i have to admit that the room was very clean.</div><div class='text-box'>The staff were helpful and nice, they even opened the pool early for us. The room was fine, but the windows couldn't be opened and <span class='review-span highlight' data-aligned-summaries='4'>the air con was poor so the room did get very warm</span>. <span class='review-span highlight' data-aligned-summaries='1'>The breakfast was ok, little choice in the way of hot food but an ok selection</span>. <span class='review-span highlight' data-aligned-summaries='3'>The pool was small and the jacuzzi was never on</span>. The location of the hotel wasn't central but close to the metro, few stops and you were in the main touristic areas so overall not too bad. I would recommend this hotel if you want a fairly priced ample hotel. But ensure you have a metro map!</div><div class='text-box'>I was a bit worried reading all the bad reviews. But it was a good experience :) It wasn't expensive, so you can not complain about the value. <span class='review-span highlight' data-aligned-summaries='0'>Rooms are very clean</span>, <span class='review-span highlight' data-aligned-summaries='4'>there was</span> a TV, <span class='review-span highlight' data-aligned-summaries='4'>A/C</span>, towels changed every day, nice staff. <span class='review-span highlight' data-aligned-summaries='1'>Breakfast was also really good</span>. Also there is a good location, <span class='review-span highlight' data-aligned-summaries='0'>hotel is situated 4/5 minutes from the metro station (Hospital Clinic)</span>, and also is not that far away from the Sagrada Familia, the most beautiful building I have ever seen. Lots of shops and cafe around the hotel. Me and my friends we had a great time ;)</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Easy access to the train station (by</span> bus or <span class='review-span highlight' data-aligned-summaries='0'>metro and even on foot)</span> and from there to the airport. There was construction going on on the floor above me so it was noisy during the day. Otherwise <span class='review-span highlight' data-aligned-summaries='0'>the hotel was clean</span> and the room reasonably large and well maintained except for the ugly linoleum on the floor and the lack of a tub in the bathroom. Access to downtown was also unproblematic. So an average experience overall.</div><div class='text-box'>Our stay at Sunotel Aston was a very good one. The staff were very helpful and friendly,<span class='review-span highlight' data-aligned-summaries='1'>breakfast was very good with a good selection of food on offer</span>. <span class='review-span highlight' data-aligned-summaries='0'>The hotel was very clean and tidy</span> but the rooms were small and compact . Overall a pleasant stay and we would return in the future</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The hotel was both clean and tidy and situated about a 5 minute walk from Hospital Clinic Metro Station.</span> <span id="1" class="summary-sentence">The breakfast buffet was good and had a good selection on offer.</span> <span id="2" class="summary-sentence">There was a choice of an english or a continental breakfast .</span> <span id="3" class="summary-sentence">There is also a swimming pool and sauna on the roof of the hotel.</span> <span id="4" class="summary-sentence">The problem with the hotel was that there was no air conditioning in the bedrooms.</span> <span id="5" class="summary-sentence">This was not very satisfactory when the daily temp was about 30/32.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

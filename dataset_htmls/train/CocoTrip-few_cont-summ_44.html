@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>We stayed here during Mardi Gras and <span class='review-span highlight' data-aligned-summaries='1'>couldnt ask for a better location</span>. St. Charles is the main parade route so that means it passes right out your door. <span class='review-span highlight' data-aligned-summaries='6'>The hotel gives you wristbands to enter the building</span> which is good because that means randoms cant go in. We stalked out positions within a couple blocks of the hotel to watch the parade and could easily go back to the room for a break. <span class='review-span highlight' data-aligned-summaries='3'>The room is equipped with a small kitchen</span> which was perfect to heat up our leftovers and make some small meals. Even if it wasnt Mardi Gras, <span class='review-span highlight' data-aligned-summaries='0'>it's a good base to explore New Orleans</span> with the trolley right outside your door. <span class='review-span highlight' data-aligned-summaries='2'>It's within walking distance of prime Garden district and it's a long walk to the French Quarter.probably</span> 30 minutes to 40 minutes. <span class='review-span highlight' data-aligned-summaries='4'>The rooms could be updated</span>, but <span class='review-span highlight' data-aligned-summaries='5'>the staff was very helpful</span> even during the stressful Mardi Gras time (super busy for them) It also had a very spacious and updated gym to burn those calories off from all the good food you eat in New Orleans</div><div class='text-box'>From the time we stepped out of our car to hand over our keys to the time we left we were treated like royalty. The porters, <span class='review-span highlight' data-aligned-summaries='5'>Kevin and Mr. Turner were exceptional and made us feel most welcome</span> especially after travelling 11 hours in the car. We stayed in a <span class='review-span highlight' data-aligned-summaries='3'>studio with a king bed and full kitchen, dressing area and shower</span>. <span class='review-span highlight' data-aligned-summaries='4'>All were very clean</span>. We exchanged our time share and this was definitely a pleasant surprise. The <span class='review-span highlight' data-aligned-summaries='0 1 2'>Resort is in a residential area right on the St. Charles trolley line</span>. We purchased a Jazzy Pass at Walgreens down the street and <span class='review-span highlight' data-aligned-summaries='2'>never needed our car</span>.</div><div class='text-box'>My daughter and I spend a weekend here while job hunting, school interviewing and house hunting. <span class='review-span highlight' data-aligned-summaries='0 2'>This was the perfect home base for all of our explorations</span>. We have made many many trips to New Orleans but this was our 1st time staying outside of the Quarter. It was wonderful! <span class='review-span highlight' data-aligned-summaries='5'>The staff was amazing, so very nice</span>. <span class='review-span highlight' data-aligned-summaries='3 4'>The rooms</span> <span class='review-span highlight' data-aligned-summaries='3'>were spacious</span> and well appointed, the beds very comfortable and everything <span class='review-span highlight' data-aligned-summaries='4'>upgraded and modern</span>. Having the streetcar stop right out front made everything so easy. Would recommend this to anyone visiting this amazing city!</div><div class='text-box'>WOW - looking via the internet I was looking forward to staying at the Avenue Plaza. Too bad there was no information about them being timeshares. <span class='review-span highlight' data-aligned-summaries='1'>The location is great</span> - right on the St. Charles streetcar line. But <span class='review-span highlight' data-aligned-summaries='5'>we didn't get fresh towels, the beds were not made up,</span> <span class='review-span highlight' data-aligned-summaries='4'>the floors were dirty</span>.NOT what you want to see when you are traveling, especially when you know there are so many hotels in NO that are way classier. <span class='review-span highlight' data-aligned-summaries='0'>Would not recommend staying here at all</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Great hotel</span>. My wife and I showed up at 11:30 PM for the BCS championship game. Our original hotel was oversold, and they contacted the Avenue Plaza. <span class='review-span highlight' data-aligned-summaries='5'>The staff was very nice</span>. <span class='review-span highlight' data-aligned-summaries='3'>The room was nicely appointed, with a refrigerator, stove, and coffee pot</span>. The bathroom was small, but <span class='review-span highlight' data-aligned-summaries='4'>everything worked</span>; <span class='review-span highlight' data-aligned-summaries='4'>it was clean</span>, and the bed was comfortable. We could have spent a lot more and gotten a lot less.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 1 2'>Great location for bar/ restaurant hopping on St Charles</span>, nice and clean pool, fantastic steak house on site! Fun 24/7 bar next door for karaoke. Loved my stay for my birthday. <span class='review-span highlight' data-aligned-summaries='2'>Walk down to the Blind Pelican for drinks</span>, 15$ taxi to quarter, <span class='review-span highlight' data-aligned-summaries='0 1 2'>great shopping on Magazine st</span>.<span class='review-span highlight' data-aligned-summaries='0'></span></div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='5'>Staff were very friendly and helpful</span>. <span class='review-span highlight' data-aligned-summaries='3 4'>Rooms were</span> <span class='review-span highlight' data-aligned-summaries='3'>large</span> and <span class='review-span highlight' data-aligned-summaries='4'>clean</span> <span class='review-span highlight' data-aligned-summaries='3'>and well appointed with tv, kitchenette, etc</span>. Great shower. Even though this is a timeshare there was no pressure to buy. <span class='review-span highlight' data-aligned-summaries='5'>All staff went out of there way to be helpful</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>This is a wonderful place to stay in a beautiful section of New Orleans</span>. <span class='review-span highlight' data-aligned-summaries='2'>Fine dining and transportation all within walking distance</span>. Well worth the money, I will stay here again!</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">If you can get a room which isn't overbooked this is a great place to base yourself to explore this amazing place.</span> <span id="1" class="summary-sentence">Excellent location as it is central to many of the major attractions in this area.</span> <span id="2" class="summary-sentence">You can simply walk to get to many places, and it is a great base to start at before going to explore what else there is on offer in the area.</span> <span id="3" class="summary-sentence">Rooms are very spacious with all amenities that are needed for a good night's stay.</span> <span id="4" class="summary-sentence">The rooms are slightly outdated but still look reasonably modern and are maintained to a good standard.</span> <span id="5" class="summary-sentence">Extremely friendly and helpful staff at this hotel, who are very attentive to the needs of their guests and go above and beyond to make them feel welcome.</span> <span id="6" class="summary-sentence">Hotel security requires seeing wristbands provided to its guests in order to enter the building.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>My husband and I are from VA beach as we left one beach area and traveled to another. we use to go ocean city all the time. We decided to take a trip up for our anniversary and im glad we stayed it this hotel. It was clean, clean, clean. Being from the beach area we <span class='review-span highlight' data-aligned-summaries='0'>wasnt expecting a big luxury room. But rather clean and</span> great service! and <span class='review-span highlight' data-aligned-summaries='0'>thats exactly what we got</span>. We went site seeing looking at the other hotels that we saw online and I'm glad i trusted the reviews from trip advisor and stayed at this hotel because we had orig booked at another hotel that im so glad that we cancelled. Just know that the pictures posted on their sites are not updated. Go by the reviews and not the pics.</div><div class='text-box'>I was a little nervous about staying at Park Place because we normally stay at the upper scale hotels, but I wanted a hotel on the board walk. After much thought and research we decided to stay at Park Place. We truly enjoyed our stay the hotel is very clean and <span class='review-span highlight' data-aligned-summaries='0'>we had no noise problems</span>. <span class='review-span highlight' data-aligned-summaries='4'>It is in the mains section of the board walk</span> and sits by the widest part of the beach. We had a great stay and all our needs were taken care of. The pool is small, but who needs a pool when you have an entire ocean. I would recommend this hotel and stay there a again. Kudos to the hotel! After we got there, <span class='review-span highlight' data-aligned-summaries='5'>we were glad we did not pick some of other hotels we looked at</span>.</div><div class='text-box'>I recently stayed at the Park Place for three days with my wife and our 6 year old daughter. <span class='review-span highlight' data-aligned-summaries='0'>The hotel was clean</span> and well maintained. <span class='review-span highlight' data-aligned-summaries='3'>The service staff were pleasant and the front desk was helpful</span> recommending attractions and providing directions. My daughter loved the pool and <span class='review-span highlight' data-aligned-summaries='4'>the access to the beach and boardwalk was very convenient</span>. <span class='review-span highlight' data-aligned-summaries='4'>The room was on the top floor with an ocean view.great view of the beach, water and boardwalk</span>, <span class='review-span highlight' data-aligned-summaries='0'>and surprisingly quiet</span> with the balcony door shut. The hotel location is great.it is close to the amusements but not right on top of them.still right in the heart of the boardwalk with many nearby shops and restaurants. Overall, <span class='review-span highlight' data-aligned-summaries='5'>we were pleased with the hotel, the staff and the location.would definitely stay again</span>!</div><div class='text-box'>We booked a room at the Park Place based on the reviews on TripAdvisor and we're very glad that we did. <span class='review-span highlight' data-aligned-summaries='0'>The room was clean</span>, spacious, and flawlessly maintained by the hotel's housekeeping staff. <span class='review-span highlight' data-aligned-summaries='3'>The staff at the hotel was friendly and helpful</span>, allowing us to keep our car in their lot for a few hours after we'd checked out. <span class='review-span highlight' data-aligned-summaries='4'>The location can't be beaten, as it's right on the bottom end of the boardwalk</span>. Best of all, we could actually see the bay from our bayview room, which we were skeptical about. <span class='review-span highlight' data-aligned-summaries='5'>We'd highly recommend this hotel.</span></div><div class='text-box'>We stayed here with our 2 small children, and we were very happy with the hotel. <span class='review-span highlight' data-aligned-summaries='0'>It was clean</span>, and the kitchenette was perfect for us. <span class='review-span highlight' data-aligned-summaries='3'>The staff was excellent</span> - we asked for an iron and had it in about 5 mins. We even asked about staying an extra night, and they were very accomodating about that. <span class='review-span highlight' data-aligned-summaries='4 5'>The location was perfect</span> <span class='review-span highlight' data-aligned-summaries='4'>too</span>. The only minus for us was trying to get the stroller <span class='review-span highlight' data-aligned-summaries='4'>out to the boardwalk</span> we had to go <span class='review-span highlight' data-aligned-summaries='4'>through the restaurant</span>. That was odd at times when it was crowded with people. <span class='review-span highlight' data-aligned-summaries='5'>We enjoyed ourselves and would stay again</span>!</div><div class='text-box'>This was a spur of the moment trip and we wanted to book a room with an oceanfront view. I was pleased that <span class='review-span highlight' data-aligned-summaries='0'>the room was very clean</span> and the hotel was clean also. The couch in the room was not so comfortable. The room was spacious and <span class='review-span highlight' data-aligned-summaries='1'>the bed was very comfortable</span>. <span class='review-span highlight' data-aligned-summaries='4'>The</span> oceanfront <span class='review-span highlight' data-aligned-summaries='4'>patio was very nice, we had an excellent view of the</span> beach and the <span class='review-span highlight' data-aligned-summaries='4'>boardwalk</span>. The pool was standard hotel size and very clean. The entire family enjoyed our stay in Ocean City and at the Park Place hotel</div><div class='text-box'>My family had been to Ocean City MD several times but never stayed here before the summer of 2008. Every other place we stayed at was dirty, run down, rude staff etc. I booked at Park Place based on the reviews here and we were so glad we did. <span class='review-span highlight' data-aligned-summaries='4'>The location is great, right on the boardwalk</span>. Parking was no hassle at all, plenty of room in the lot, the mgmt. was awesome. We ate at the on-site restaurant, food was great. We will be back!</div><div class='text-box'>This was my family's first time in ocean city and it couldnt have been better. <span class='review-span highlight' data-aligned-summaries='4'>The hotel was</span> amazing and <span class='review-span highlight' data-aligned-summaries='4'>right on the boardwalk</span>. The price was average for any decent hotel in the area, and <span class='review-span highlight' data-aligned-summaries='3'>the staff was very helpful</span>. <span class='review-span highlight' data-aligned-summaries='5'>We will definatley go back again</span>.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The room was clean and quiet.</span> <span id="1" class="summary-sentence">The bed was comfortable.</span> <span id="2" class="summary-sentence">The elevators were a bit slow, but they are not the worst.</span> <span id="3" class="summary-sentence">The staff were all very friendly and helpful.</span> <span id="4" class="summary-sentence">The location of the hotel on the boardwalk is good, and especially the deck that looks out over the boardwalk.</span> <span id="5" class="summary-sentence">We would definitely stay here again.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>Our company has rented conference rooms and held many meetings and corporate events <span class='review-span highlight' data-aligned-summaries='0'>at Place D'Armes</span> and <span class='review-span highlight' data-aligned-summaries='0 11'>we were extremely satisfied with their service</span>. There was always someone to greet and help with the setup and make sure we have everything we needed. More importantly, technical service was efficient and really went out of their way (even when it is your own equipment). <span class='review-span highlight' data-aligned-summaries='7'>The rooms are</span> clean and <span class='review-span highlight' data-aligned-summaries='7'>beautiful</span> and <span class='review-span highlight' data-aligned-summaries='10'>staff is great</span>. The only negative thing is that they charge for the conference room for the whole day regardless if you only need it for half a day or an hour.</div><div class='text-box'>The hotel is located <span class='review-span highlight' data-aligned-summaries='6'>in the OLD Town part of Montreal by the Notre Dame Cathedral</span> and <span class='review-span highlight' data-aligned-summaries='5'>short walking distance to the rivers edge</span>. <span class='review-span highlight' data-aligned-summaries='3'>This hotel was a great</span> value and <span class='review-span highlight' data-aligned-summaries='10 11'>the staff</span> and <span class='review-span highlight' data-aligned-summaries='6'>location</span> <span class='review-span highlight' data-aligned-summaries='6 10 11'>were excellent</span>. <span class='review-span highlight' data-aligned-summaries='12'>There are 2 restaurants in the hotel that are very highly rated</span>. <span class='review-span highlight' data-aligned-summaries='0'>The staff and service were excellent</span>. <span class='review-span highlight' data-aligned-summaries='0 1 2 7'>The rooms are specious and nicely decorated</span> <span class='review-span highlight' data-aligned-summaries='8'>The bathrooms are very nice with very big bathtubs</span>. <span class='review-span highlight' data-aligned-summaries='12'>There is also a roof terrace to have drinks and enjoy the views</span>. Couldn't use because it was raining.</div><div class='text-box'>We just returned from a mid-winter weekend get away to Montreal. We picked this hotel due to <span class='review-span highlight' data-aligned-summaries='6'>its location in Old Montreal, close to restaurants, Notre Dame and the cobblestone streets</span>. <span class='review-span highlight' data-aligned-summaries='11'>From the moment we arrived when</span> <span class='review-span highlight' data-aligned-summaries='0 11'>the valet service looked after the car</span> <span class='review-span highlight' data-aligned-summaries='11'>until we checked out the service of</span> <span class='review-span highlight' data-aligned-summaries='0 10 11'>the staff was top notch</span>. <span class='review-span highlight' data-aligned-summaries='2 7'>The rooms were nice</span> <span class='review-span highlight' data-aligned-summaries='2'>with hardwood floors and exposed brick</span>. <span class='review-span highlight' data-aligned-summaries='0'>The bar, Suite701, is the perfect spot for a night cap</span>. We would definately return.</div><div class='text-box'>Absolutely one of the best places to stay while visiting old city Montreal. <span class='review-span highlight' data-aligned-summaries='0 10 11'>Staff was very friendly and accommodating</span>. <span class='review-span highlight' data-aligned-summaries='0 6 12'>The rooftop</span> <span class='review-span highlight' data-aligned-summaries='0 12'>bar and restaurant was beautiful with a</span> <span class='review-span highlight' data-aligned-summaries='0 6 12'>view of Notre Dame Basilica</span>. <span class='review-span highlight' data-aligned-summaries='2 7'>We stayed in Junior Suite 3402 and really appreciated the</span> <span class='review-span highlight' data-aligned-summaries='2'>ambiance and</span> <span class='review-span highlight' data-aligned-summaries='2 7'>decor</span>. If I were to visit again I would think of staying in 3602 (second digit is the floor). The street noise was not bad however you will have early morning local truck deliveries.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 1 3'>Lovely hotel</span> <span class='review-span highlight' data-aligned-summaries='0 1'>in an historic building</span> <span class='review-span highlight' data-aligned-summaries='0'>with</span> <span class='review-span highlight' data-aligned-summaries='0 6'>a fantastic location</span>. <span class='review-span highlight' data-aligned-summaries='2 7'>Nice rooms</span>, <span class='review-span highlight' data-aligned-summaries='10'>very friendly and service-oriented staff</span>. <span class='review-span highlight' data-aligned-summaries='9 11'>Great little touches like chocolates on the pillow and turn-down service</span>. Very helpful concierge. I was in Laval <span class='review-span highlight' data-aligned-summaries='3'>for business</span> and went to Montreal for the weekend. <span class='review-span highlight' data-aligned-summaries='4 5'>I walked to</span> <span class='review-span highlight' data-aligned-summaries='4'>restaurants, bars</span>, <span class='review-span highlight' data-aligned-summaries='5'>the river</span>, <span class='review-span highlight' data-aligned-summaries='4'>shopping</span>. <span class='review-span highlight' data-aligned-summaries='5'>Close enough to walk to Mont Royal</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2'>Stayed in one of the Suites</span> which we got <span class='review-span highlight' data-aligned-summaries='2'>using</span> one of the major <span class='review-span highlight' data-aligned-summaries='2'>credit card upgrades</span>. <span class='review-span highlight' data-aligned-summaries='8'>Amazing bathroom with rain shower and a large tub</span>. <span class='review-span highlight' data-aligned-summaries='0 2 3 7'>Modern room</span>,<span class='review-span highlight' data-aligned-summaries='0 3 7'> clean bathroom</span>,<span class='review-span highlight' data-aligned-summaries='0 3'></span> <span class='review-span highlight' data-aligned-summaries='0 3 10 11'>great service</span>, great beds and blankets. The only thing that it lacks it is a pool but it can be overlooked. <span class='review-span highlight' data-aligned-summaries='6'>Location is great</span>, the old Montreal.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 1'>Le Place D'Armes is an amazingly elegant hotel</span> with <span class='review-span highlight' data-aligned-summaries='10 11'>staff that have a beautiful authenticity about them</span>. <span class='review-span highlight' data-aligned-summaries='2 7'>The comfort and design of the rooms is worth the price</span> and <span class='review-span highlight' data-aligned-summaries='3'>is a great fit for</span> both <span class='review-span highlight' data-aligned-summaries='3'>business</span> or personal occasions. If you are planning a trip to Montreal you simply need to check out this hotel.</div><div class='text-box'>Well <span class='review-span highlight' data-aligned-summaries='0'>I have nothing but good things to say about this hotel</span>, <span class='review-span highlight' data-aligned-summaries='0'>it was just wonderful in every way</span>. <span class='review-span highlight' data-aligned-summaries='6'>Perfect location</span>, spotless, <span class='review-span highlight' data-aligned-summaries='10'>nice staff.</span> Possibly the nicest place I have ever stayed. If you go to montreal and dont stay here you're missing out!</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The hotel, Le Place D'Armes, is amazing.</span> <span id="1" class="summary-sentence">It is elegant.</span> <span id="2" class="summary-sentence">The rooms are very nice and upgrades are available.</span> <span id="3" class="summary-sentence">This is a great place to stay on business as well.</span> <span id="4" class="summary-sentence">The hotel is within easy walking distance to restaurants, bars, and shopping.</span> <span id="5" class="summary-sentence">You can also walk to the Mont Royal or the river.</span> <span id="6" class="summary-sentence">Fantastic location.</span> <span id="7" class="summary-sentence">The rooms are nice and spacious with good decoration too.</span> <span id="8" class="summary-sentence">The bathrooms are really great because there are massive bathtubs and lovely rainfall showers.</span> <span id="9" class="summary-sentence">A nice touch is the turn-down service with cute chocolates left on the pillows.</span> <span id="10" class="summary-sentence">The staff at Le Place D'Armes is great.</span> <span id="11" class="summary-sentence">Really good service overall.</span> <span id="12" class="summary-sentence">The two restaurants at this hotel are highly recommended, and there is also the option to eat and have a few drinks on the roof terrace to enjoy the views.</span> </div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

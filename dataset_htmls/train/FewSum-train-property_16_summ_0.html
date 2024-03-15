@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 1'>Britt did a</span> cover up <span class='review-span highlight' data-aligned-summaries='0 1'>tattoo</span> of mine and <span class='review-span highlight' data-aligned-summaries='0 1'>I could not be happier</span>. <span class='review-span highlight' data-aligned-summaries='0 1'>The staff at illuminati is nice</span> <span class='review-span highlight' data-aligned-summaries='1'>and supportive</span>. It was the first tattoo location I've felt all good vibes. Britt is now the only artist I'll use for life, I'm so thankful for her talent.</div><div class='text-box'>Went in here for a walk-in and was greeted immediately by a friendly face. <span class='review-span highlight' data-aligned-summaries='0 1'>The staff was so polite and gave me all the information I needed to choose the perfect tattoo for me</span>! Definitely will be coming back for my next one!!! Everything was so clean and organized, didn't feel rushed or uncomfortable at any moment.</div><div class='text-box'>My husband and I got matching tattoos of a heart today by Tommy Woodside. He's amazing he has a very light had, he's super nice, <span class='review-span highlight' data-aligned-summaries='0'>makes great conversation, and</span> <span class='review-span highlight' data-aligned-summaries='0 1'>works with people really well</span>. He's been tattooing for about 23 years and it really shows in his work, definitely book with him <span class='review-span highlight' data-aligned-summaries='0 1'>he's amazing</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1'>I got inked by Dave, he's so amazing</span>! <span class='review-span highlight' data-aligned-summaries='0'>Everyone that works there is great! Super friendly staff</span> that makes you feel at home! I would definitely recommend this place to everyone looking for a <span class='review-span highlight' data-aligned-summaries='0 1'>great tattoo</span> and a fun time!!</div><div class='text-box'>Got my nipples pierced here today by Terry. <span class='review-span highlight' data-aligned-summaries='0 1'>He did a great job</span> <span class='review-span highlight' data-aligned-summaries='0'>making me feel comfortable and was very professional</span> and answered all my questions thoroughly. It didn't hurt nearly as much as I expected it to which was great. <span class='review-span highlight' data-aligned-summaries='1'>I would definitely recommend coming here to others</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1'>These guys were really awesome</span>. <span class='review-span highlight' data-aligned-summaries='0'>Friendly</span>, willing to work with you, not as surly as the artists in your average <span class='review-span highlight' data-aligned-summaries='0'>tattoo shop</span> (who seem to be stuck up their own asses here in Vegas). Their prices were also extremely reasonable and <span class='review-span highlight' data-aligned-summaries='0 1'>they did a great job with my tattoo</span> and my friend's. I will be seeing these gentlemen again.</div><div class='text-box'>Prime with illuminati tattoo was great. My wife had a lower back tattoo that needed to be covered up. <span class='review-span highlight' data-aligned-summaries='0 1'>He took his time made sure that he had everything that she wanted in the new art</span>. <span class='review-span highlight' data-aligned-summaries='0 1'>Came out great</span> and will be going to him for any future tattoos.</div><div class='text-box'>My sister and I stopped in at Illuminati Tattoo Co today to get matching tattoos. <span class='review-span highlight' data-aligned-summaries='1'>Tommy took great care of us</span>. He helped bring our creation to reality with <span class='review-span highlight' data-aligned-summaries='0 1'>great placement and skillful use of colors</span>. I love my new tattoo and am looking forward to scheduling my next session to start the work on my next tattoo.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">they seem to have enjoyed the great service from the tatoo shop and this clearly shows how professional and they also showed how warm entertaining and friendly the service at the tatoo shop.</span> <span id="1" class="summary-sentence">it sure shows a good picture of the owner and the shop because the services were awesome and great to the customers and will be happy to always visit the place</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

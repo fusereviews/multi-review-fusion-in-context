@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>We stayed at L'Hermitage in Aug. 2008, just two months after it opened. It is a very sleek, <span class='review-span highlight' data-aligned-summaries='1'>modern hotel in a great location</span> in downtown Vancouver. Because it was so new, the staff seemed to still be figuring things out. For example, we weren't able to check into our room the first night for over an hour after the guaranteed check-in time. To make up for this, the staff comped a round of drinks for us at their wonderful guest lounge on the 5th floor. The website did not do this place justice . there's a beautiful rooftop pool and hot tub and the rooms are large and luxuorious. Very nice breakfast and afternoon h'or doeurve buffets are included in the price. <span class='review-span highlight' data-aligned-summaries='1'>The staff was very friendly and made sure that all of our needs were met</span>. <span class='review-span highlight' data-aligned-summaries='0'>I would highly recommend this hotel</span> to anyone looking to be pampered in Vancouver!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>We will use this again</span>. We stayed on 3 separate occasions in quick succession. <span class='review-span highlight' data-aligned-summaries='1'>The staff were always helpful</span>, charming and friendly, the rooms elegant and spacious (wonderful bathrooms) and <span class='review-span highlight' data-aligned-summaries='1'>the location was great</span>, particularly if you are flying in (2 blocks down from Vancouver City Centre station on the Canada Line. Don't even think about a cab, on a Sunday when there is no $5 surcharge it cost under $6 for my wife and me to get to the airport. Heathrow and London Underground hang your heads in shame). Treat yourself to the $17.50 breakfast buffet, it <span class='review-span highlight' data-aligned-summaries='0'>must be the best "posh" value in Vancouver !</span></div><div class='text-box'>We are a family of 5 and had an extremely comfortable 4 night stay in their 2 bedroom suite. Kudos to Jean-michel & Hippo, Raymond, Elaisha, Mitch and a super housekeeping team for being <span class='review-span highlight' data-aligned-summaries='1'>so helpful and friendly</span>. <span class='review-span highlight' data-aligned-summaries='0'>We felt most at home and strongly recommend to all who plan to visit Vancouver</span>. <span class='review-span highlight' data-aligned-summaries='1'>Great location</span> with Japadog and Viet-Sub eateries and Sears, Hudson Bay, Holt Renfrew nearby. Easy access to the main attractions. <span class='review-span highlight' data-aligned-summaries='0 1'>The team deserves a great pat on their backs</span> for their great work attitude. Special thanks to Jean-michel for going out of your way for us.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>This is a really great hotel</span> - near new, small boutique style, great rooms more like small apartments with full kitchens. Fantastic pool and sun deck. Not a gripe, but you should know this <span class='review-span highlight' data-aligned-summaries='0 1'>hotel does not have room service</span> - wasn't an issue for me, but may be for some travellers. <span class='review-span highlight' data-aligned-summaries='1'>great location - close to everything</span>! Really reasonably priced compared to the other hotel i stayed in during my stay in Vanvouver.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>My stay at L'Hermitage exceeded that of any other</span> I have ever had in Vancouver. I have stayed at many of the better hotels <span class='review-span highlight' data-aligned-summaries='1'>downtown</span> while visiting <span class='review-span highlight' data-aligned-summaries='1'>this great city</span> over the past 15 years. <span class='review-span highlight' data-aligned-summaries='1'>The staff were extraordinarily friendly and helpful</span> without being overbearing. A great experience <span class='review-span highlight' data-aligned-summaries='0'>I will be recommending to friends</span>, family and business colleagues. Thank you L'Hermitage.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 1'>The front desk was fantastic</span>. <span class='review-span highlight' data-aligned-summaries='1'>Check in and check out were a breeze</span> as they let me spend more time with my family and getting to the wedding. <span class='review-span highlight' data-aligned-summaries='0'>It was the perfect end to our wedding night</span>, the room was top notch! Thanks!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>The amenities, breakfast buffet and service at this hotel are excellent</span>. <span class='review-span highlight' data-aligned-summaries='1'>Concierge helped us reserve a table at a great restaurant nearby</span> (Goldfish) and we used the bikes to see Stanley Park.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>If and when I visit Canada again this hotel will be a definite</span>. It is great!</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The hotel is highly recommended.</span> <span id="1" class="summary-sentence">It is in a great location and the staff at the hotel are very amiable and helpful to guests' needs.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

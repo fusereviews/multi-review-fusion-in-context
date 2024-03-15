@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>We stayed at this hotel for 6 nights last year. The hotel is very clean and <span class='review-span highlight' data-aligned-summaries='0'>the staff are very helpful</span>, curteous and pleasant. Our room faced rue de l"opera so it could be noisy some nights, particularly on the weekend but, in fairness, we live in a small city. <span class='review-span highlight' data-aligned-summaries='0'>On the plus side, it is very centrally located</span> and within walking distance to the area where the tour buses depart and arrive and quite close to the Louvre. One tip.unless you have endless money to blow, <span class='review-span highlight' data-aligned-summaries='0'>skip the buffet breakfast</span>; it is a bit of a rip off when compared to buffet's that we have purchased in other European hotels. If you have the time, take the day trips to Bruge and to Versailles. You will not regret it.</div><div class='text-box'>We have stayed at this hotel on a number of occasions, and have always found the hotel itself to be perfect. <span class='review-span highlight' data-aligned-summaries='0'>The location is excellent</span>, and <span class='review-span highlight' data-aligned-summaries='1'>the rooms</span> are scrupulously clean, <span class='review-span highlight' data-aligned-summaries='1'>spacious</span> and elegant. <span class='review-span highlight' data-aligned-summaries='0'>The hotel staff, i.e. front desk, concierge etc are amazing, and always go out of their way to be helpful</span>. Sadly, when it comes to the restaurant it is like another world. Whilst <span class='review-span highlight' data-aligned-summaries='0'>the food at breakfast is perfectly adequate</span>, the staff are not welcoming and very distant. At night the food in the restaurant is nowhere near as good as other restaurants in the vicinity. Like a pevious reviewer I hope Hotel Management reads this review as the restaurant and its staff are distracting from what is otherwise a faultless hotel</div><div class='text-box'>My wife and I stayed hered for three nights and thoroughly enjoyed our stay. <span class='review-span highlight' data-aligned-summaries='0'>It is in a good location</span>, being next to the Opera House. The Louvre is a short walk away and its easy to hop on a metro or bus to get to other areas. The <span class='review-span highlight' data-aligned-summaries='1'>rooms are small</span>, like all Paris hotels, but we found it to be clean and well-kept. We had a room on the back side f the building so it was very quiet. It also had a <span class='review-span highlight' data-aligned-summaries='1'>nice</span> little <span class='review-span highlight' data-aligned-summaries='1'>balcony</span> looking out <span class='review-span highlight' data-aligned-summaries='1'>over the street</span>. The bedding is kind of pornish (Purple velvet), but the beds are super comfortable. Great room for recovering from jet lag.</div><div class='text-box'>We have try the restaurant of the hotel , <span class='review-span highlight' data-aligned-summaries='0'>nice location</span> just nearby the Museum the Louvre and place of the Opera ; the design of the restaurant is nice and original the wine list was quiet full of possibility We recommend the Fish "The cardine" it was the first time for us ; it's seems that the Cardine it's a french fish from Bretagne <span class='review-span highlight' data-aligned-summaries='0'>the staff was helpfull</span> and very nice with us . but the best was the desert so sweat the Cheescake home made you've loved IT !</div><div class='text-box'>We stayed at this Hotel in August. <span class='review-span highlight' data-aligned-summaries='0'>The Staff were very friendly and helpful</span>, especially as we had arrived on an early flight from Australia and we were able to access our room in the morning. The <span class='review-span highlight' data-aligned-summaries='0'>Hotel is in a great location, close to restaurants</span>, bus tour of the city <span class='review-span highlight' data-aligned-summaries='0'>and other attractions</span>. <span class='review-span highlight' data-aligned-summaries='1'>The room was</span> lovely, clean and modern, <span class='review-span highlight' data-aligned-summaries='1'>overlooking L'Opera Avenue</span>. The staff made us feel very welcome including the General Manager.Would definately recommend and stay at this hotel again.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>This hotel is a real gem</span> - <span class='review-span highlight' data-aligned-summaries='0'>the staff are</span> courteous and <span class='review-span highlight' data-aligned-summaries='0'>helpful</span>, the <span class='review-span highlight' data-aligned-summaries='1'>rooms</span> are lovely and immaculate (if <span class='review-span highlight' data-aligned-summaries='1'>a bit small - to be expected</span>), and the <span class='review-span highlight' data-aligned-summaries='0'>location could not be better</span>. As others have said, it is on quite a busy road, but the room itself was very quiet. It really was a pleasure to be in the room after a long day of walking around Paris. We will certainly stay again.</div><div class='text-box'>Paris was having very hot weather when we were there, but the hotel room had good and quiet air conditioning. The <span class='review-span highlight' data-aligned-summaries='1'>room</span> was very attractive, quiet, and comfortable, <span class='review-span highlight' data-aligned-summaries='1'>with a</span> small <span class='review-span highlight' data-aligned-summaries='1'>balcony from which we could see the Opera Garnier</span>. Service was very good. The <span class='review-span highlight' data-aligned-summaries='0'>location was excellent</span>. The beds were extremely comfortable, robes and slippers were provided, turn-down service, <span class='review-span highlight' data-aligned-summaries='0'>helpful</span> and friendly concierge and <span class='review-span highlight' data-aligned-summaries='0'>staff</span>.</div><div class='text-box'>it is a fine hotel, <span class='review-span highlight' data-aligned-summaries='0'>very near all the shopping areas and the opera</span>. <span class='review-span highlight' data-aligned-summaries='0'>the service is very good</span> and <span class='review-span highlight' data-aligned-summaries='0'>the american breakfeast is very good</span>. <span class='review-span highlight' data-aligned-summaries='1'>the room I had was rather small</span> but it was also the cheappest, so it was wel worth the price. the only thing is that the isolation of the room is very poor, so you can hear olmost everyting of the other rooms.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">On balance the hotel was well located, the staff were very efficient and helpful, the breakfast adequate.</span> <span id="1" class="summary-sentence">Whilst the room itself was a bit on the small side - it was to the front of the hotel, had a nice view from the balcony but the bed was tiny - it was a very small double.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

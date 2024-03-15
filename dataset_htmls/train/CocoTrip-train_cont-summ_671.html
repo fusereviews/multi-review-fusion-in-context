@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>We stayed 3 nights at <span class='review-span highlight' data-aligned-summaries='0 8'>the San Giusto</span> at the end of our month long sojourn in Italy. It <span class='review-span highlight' data-aligned-summaries='0 8'>wasn't the worst of the hotels we stayed in (not by far) but it wasn't the best either</span>. <span class='review-span highlight' data-aligned-summaries='7'>The front desk staff was dismal, not rude but not personable either</span>. <span class='review-span highlight' data-aligned-summaries='3'>The rooms were tiny</span> but clean. We had problems with the electricity going off and got rather used to showering and eating in the dark, romantic no! Although <span class='review-span highlight' data-aligned-summaries='1'>the hotel is not centrally located</span> it is easy to find and close to the metro. There are several resturaunts within walking distance with good food at reasonable prices. <span class='review-span highlight' data-aligned-summaries='6'>The breakfasts were fresh and the service excellent</span>. <span class='review-span highlight' data-aligned-summaries='2'>Although there is an elevator it is only accessable after you climb a flight of stairs</span>.</div><div class='text-box'>Firstly the bad thing the directions we were given were not good, so once off the metro it was more difficult to find than we were led to believe, but this was only because the main entrance does not face the Piazza Bologna. Look for the Pizzeria Caffee and it is next door. (But I wouldnt recommend using the Pizzeria Caffee). The hotel was lovely and clean, <span class='review-span highlight' data-aligned-summaries='0 7'>the staff were very pleasant and helpful</span>. It is ideally located next to the Metro so sore feet on the way home dont have far to go. <span class='review-span highlight' data-aligned-summaries='6'>The breakfast wasnt brilliant</span> and we were not given any information on times etc, but for a quick snack in the morning before setting off it was fine. <span class='review-span highlight' data-aligned-summaries='0 8'>All in all I would definitely recommend this hotel</span>.</div><div class='text-box'>I stayed here for several nights while on a tour of Italy. It is well situated in Rome, right near the subway station. There is great food just a short walk away, in almost every direction you go. The room was frequently cleaned, and well maintained. One warning, <span class='review-span highlight' data-aligned-summaries='2'>the elevator is only accessible from the second floor</span> and up, which means that <span class='review-span highlight' data-aligned-summaries='2'>you have to carry your luggage up a flight of stairs before you can reach it!</span> That could be difficult for some people. There is a nice terrace on the 4th or 5th floor that has some outdoor seating, and there is also some space on the roof of the building (accessible via elevator). <span class='review-span highlight' data-aligned-summaries='0'>Overall, a decent place to stay</span>.</div><div class='text-box'>There is no way this is a 3 star hotel. There wasn't even tissue or soap. <span class='review-span highlight' data-aligned-summaries='3'>The rooms are very tiny</span> of course, the AC is ancient but did work. There are no plugs, they're so ancient you can't use them. Rotary dial phone, you can't use. <span class='review-span highlight' data-aligned-summaries='5 7'>The staff was friendly enough</span> <span class='review-span highlight' data-aligned-summaries='5'>but not helpful or able to put through a phone call</span>. <span class='review-span highlight' data-aligned-summaries='0 8'>I would not stay here again</span>, the room was not dirty but it could have been a lot cleaner. On the last night <span class='review-span highlight' data-aligned-summaries='8'>we switched to a hotel called Imperio</span> located next to Termini station <span class='review-span highlight' data-aligned-summaries='8'>which is better and less expensive</span>. We paid 75 euro per night there but <span class='review-span highlight' data-aligned-summaries='0'>San Giusto was about 125euro - RIP OFF</span>!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>We stayed at the Hotel San Giusto this September. The Hotel is basic</span>, clean and perfect for doing Rome on a budget. <span class='review-span highlight' data-aligned-summaries='7'>The staff are exceptionally friendly</span>, even putting up with my terrible Italian! Its close to a Metro Station which is a really convenient and cheap way to travel around the city. (Weekly unlimited ticket is only 16 euro) There is also a fantastic restaurant just around the corner, and plenty of shops in the area. <span class='review-span highlight' data-aligned-summaries='3'>The rooms are a little on the small side</span>, but very well kept and air conditioned. <span class='review-span highlight' data-aligned-summaries='8'>I would recommend this hotel</span> without hesitation, first class as long as you know what your getting.</div><div class='text-box'>This was not a good experience! I had not chosen this hotel but was <span class='review-span highlight' data-aligned-summaries='8'>sent there due to an overbooking error</span> at its sister hotel. The beds were uncomfortable but the bathroom was clean. <span class='review-span highlight' data-aligned-summaries='3'>The room was at the front of the hotel which was soo noisy</span> (even throughout the night). <span class='review-span highlight' data-aligned-summaries='2'>The lift only goes from the 1st floor</span> so a struggle to get luggage to the room and <span class='review-span highlight' data-aligned-summaries='2'>you still have to navigate stairs all the way</span>. <span class='review-span highlight' data-aligned-summaries='6'>Breakfast was poor</span>. <span class='review-span highlight' data-aligned-summaries='8'>I would not recommend this</span> as it certainly wasn't a budget hotel!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>We found a good price</span> through lastminute.com, and the location was excellent for access by public transport (<span class='review-span highlight' data-aligned-summaries='1'>the hotel is right at a Metro station, and on bus lines from major sites</span> including the Vatican). <span class='review-span highlight' data-aligned-summaries='0 8'>The room was well-fitted out</span>. However, we found that <span class='review-span highlight' data-aligned-summaries='4 8'>the shower water never got hot</span>, <span class='review-span highlight' data-aligned-summaries='4'>and there was an icy draft in the bathroom</span> (it was winter). Another drawback is that <span class='review-span highlight' data-aligned-summaries='2'>you must carry your luggage up one flight, before getting to the lift</span>! <span class='review-span highlight' data-aligned-summaries='6'>Breakfast was ok but nothing special</span>.</div><div class='text-box'>We recently visited Rome and spent 3 evenings at Hotel San Guisto. We travelled with our friends. We admit, their room had an unusual door that appeared very unsecure, however, <span class='review-span highlight' data-aligned-summaries='0'>overall, the rooms were clean, affordable and convenient</span>. <span class='review-span highlight' data-aligned-summaries='1'>The location was great</span>, as it was <span class='review-span highlight' data-aligned-summaries='1'>around the corner from the Bologna metro station</span> (line B), and also is at the end of bus line 62 (useful info, as metro line A closes at 9:30pm). <span class='review-span highlight' data-aligned-summaries='0 8'>We would consider staying here again</span>.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">It was the fault of my life selecting San Giusto Hotel.</span> <span id="1" class="summary-sentence">It was a central hotel but that is all.</span> <span id="2" class="summary-sentence">The elevator is not in the entrance you have to climb long stairs to reach it.</span> <span id="3" class="summary-sentence">The room is very small, every door in the room includes the door of the wardrobe does not function well and noisy.</span> <span id="4" class="summary-sentence">The bath was terrific; toilet siphon was out of function, the shower handle was broken, not mounted on the wall, it was on the floor.</span> <span id="5" class="summary-sentence">We warned the staff about the problems, nothing has changed.</span> <span id="6" class="summary-sentence">Breakfast includes nothing, it is disgusting.</span> <span id="7" class="summary-sentence">The staff behaved very agressive.</span> <span id="8" class="summary-sentence">I recommend any hotel in Rome but not San Giusto.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>We stayed at the Bellagio for 4 nights and had an awesome time. <span class='review-span highlight' data-aligned-summaries='3'>This hotel is right in the middle of the strip</span> with great restaurants and entertainment both in the hotel and all around. The lobby and the conservatory were both amazing to see and the water fountains out the front of the hotel are something not to be missed. <span class='review-span highlight' data-aligned-summaries='2'>The room was huge with a great big bathroom</span> and excellent features. <span class='review-span highlight' data-aligned-summaries='0'>We could not fault the service or anything at the hotel.</span> The Bellagio Buffet is one of the best in Vegas but you need to get there early to avoid the line. This hotel is almost like a little city all of its own. We would definately stay here again and would recommend it to anyone.</div><div class='text-box'>This was our second time staying at the Bellagio. The view of the fountains from <span class='review-span highlight' data-aligned-summaries='1'>the room with the music that the fountains are synchronized with on the TV is magical</span>. <span class='review-span highlight' data-aligned-summaries='1'>Rooms are always perfectly clean</span> and beautifully decorated, comfortable beds, and <span class='review-span highlight' data-aligned-summaries='1'>excellent room service</span>. The Fitness center has everything you could possibly want and the spa is excellent. The hotel's public areas are just beautiful in very season and <span class='review-span highlight' data-aligned-summaries='0'>the check-in/check-out is good considering the crowds</span>. All the hotels check-in areas are busy most of the time. <span class='review-span highlight' data-aligned-summaries='4'>All the restaurants have been wonderful and never encountered any member of the staff in any area of the hotel that was not nice</span>. Wonderful, love it, would come back again and again.</div><div class='text-box'>We only stayed one night but loved the hotel. Our room was beautiful; we had a <span class='review-span highlight' data-aligned-summaries='1'>fountain view room</span>, and it is well worth requesting one. After reading some reviews on here I had been looking out to see if the decor was tired, but in the room we had it <span class='review-span highlight' data-aligned-summaries='1'>was immaculate</span>. <span class='review-span highlight' data-aligned-summaries='3 7'>The location of the hotel on the strip is excellent</span>, <span class='review-span highlight' data-aligned-summaries='3'>you are right in the middle of everything</span>, yet with the sound proof window <span class='review-span highlight' data-aligned-summaries='1'>we didn't hear any of the noise outside</span>. We found <span class='review-span highlight' data-aligned-summaries='4'>the service was efficient</span> and the staff were very friendly. The Bellagio seemed so <span class='review-span highlight' data-aligned-summaries='7'>much more serene and calm compared with the other hotels</span> on the strip we went into.</div><div class='text-box'>We loved everything about our stay at the Bellagio. Our room was the "partial" lake view, but we could see all of the fountains and most of the strip. <span class='review-span highlight' data-aligned-summaries='1 2'>The bed was extremely comfortable</span> and the bathroom was laid out well. We have stayed at six other properties in Las Vegas, all <span class='review-span highlight' data-aligned-summaries='3'>on the strip</span> and the staff at the Bellagio was far and above the others. From the front desk to the bellman, all were very helpfull and gave us a feeling of being "special". The only disappointment was the quality of the 24 hour restaurant. It was convenient, but the food and service was average or below.</div><div class='text-box'>I stayed at the Bellagio for a week and could find very little to fault at all. The <span class='review-span highlight' data-aligned-summaries='2'>room</span> and <span class='review-span highlight' data-aligned-summaries='2'>bathroom</span> were <span class='review-span highlight' data-aligned-summaries='2'>large</span> and beautifully decorated. All the public parts of the <span class='review-span highlight' data-aligned-summaries='0'>hotel</span> were kept spotless and were amazing. <span class='review-span highlight' data-aligned-summaries='6'>The staff were helpful</span> and friendly. We tried <span class='review-span highlight' data-aligned-summaries='1'>room service</span> once and it was quick, reasonably priced and <span class='review-span highlight' data-aligned-summaries='1'>was of excellent quality</span>. <span class='review-span highlight' data-aligned-summaries='0'>The only negative about the whole stay was the check in - we arrived on Sunday afternoon and the queues were very long and slow moving</span>. However, check out was great as we used the automatic check out on the TV in the room.</div><div class='text-box'>Stayed at the Bellagio in July for my husands first time in vegas. <span class='review-span highlight' data-aligned-summaries='1 2'>Our room was</span> <span class='review-span highlight' data-aligned-summaries='2'>spacious</span> and very <span class='review-span highlight' data-aligned-summaries='1'>clean</span>, <span class='review-span highlight' data-aligned-summaries='1 2'>the bed was so comfortable</span> and it had a beautiful view of the fountains. <span class='review-span highlight' data-aligned-summaries='3'>The location of the hotel is perfect</span> for walking the strip and seeing the sights. <span class='review-span highlight' data-aligned-summaries='4'>The buffett was very good as was the pool side restaurant</span>. <span class='review-span highlight' data-aligned-summaries='1'>We have great service the entire time we were there</span> and the hotel in general is a beautiful. I don't know if I would recomend this as a family hotel but <span class='review-span highlight' data-aligned-summaries='7'>as a couple we had a great stay</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='7'>The Bellagio was one of the very best hotels I have ever stayed in</span> - if not the very best. <span class='review-span highlight' data-aligned-summaries='1 2'>The rooms were very large and the beds very comfortable</span>. <span class='review-span highlight' data-aligned-summaries='3'>The position on the strip was excellent</span>. <span class='review-span highlight' data-aligned-summaries='4'>The food was very good value and plentiful</span>. <span class='review-span highlight' data-aligned-summaries='4'>The service was impeccable</span>. Can highly recommend anyone to stay there, you would not be disappointed.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>The bellagio is probably one of the best hotels on the strip</span>. We stayed 4 nights in a "bellagio king" room, <span class='review-span highlight' data-aligned-summaries='1'>it was very comfortable</span>, <span class='review-span highlight' data-aligned-summaries='2'>great size</span> and spectacular views of the fountains and the strip. <span class='review-span highlight' data-aligned-summaries='2'>The bathroom was</span> excellent, <span class='review-span highlight' data-aligned-summaries='2'>very large</span>, clean and practical. I would stay here again.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Check in seemed to take ages due to the volume of people booking in and out, but after that we could not fault the hotel.</span> <span id="1" class="summary-sentence">All of the amenities were excellent, the rooms were clean and comfortable and the maid service was excellent.</span> <span id="2" class="summary-sentence">The bed was extremely comfortable and the room was of a good size as was the bathroom.</span> <span id="3" class="summary-sentence">The position of the hotel could not be better, right in the middle of the Strip.</span> <span id="4" class="summary-sentence">Service in the restaurants was attentive and the meal marvellous.</span> <span id="5" class="summary-sentence">The pool was of a good size, with excellent service by pool attendants and waitresses.</span> <span id="6" class="summary-sentence">The concierge service was first class, and very helpful.</span> <span id="7" class="summary-sentence">All in all probably one of the best hotels in the USA.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

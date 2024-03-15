@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>If you've been travelling for a while and squeezing into compact rooms, this hotel is a welcome change. The rooms are pleasant and very large, but not air-conditioned, so with days at 30+degrees, we were lucky to be away from the west side of the building, so the heat wasn't too much of a problem and the room seemed to cool down well at night. The bathroom was of a high standard. <span class='review-span highlight' data-aligned-summaries='2'>Breakfast</span> could get a bit frantic (as in crowded) but <span class='review-span highlight' data-aligned-summaries='3'>service</span> <span class='review-span highlight' data-aligned-summaries='2 3'>was very good</span>. The location is fantastic, and we particularly liked wandering into the leafy residential area south of Lietzenburger Str where there are some very nice restaurants. Lots of transport options were within easy walking distance and Tegel airport was a short taxi ride away.</div><div class='text-box'>We stayed here in January 2003 on our first trip to Berlin. <span class='review-span highlight' data-aligned-summaries='3'>The staff at the hotel were brilliant, very welcoming, friendly and helpful</span>. <span class='review-span highlight' data-aligned-summaries='6'>Rooms were</span> quite ordinary but spacious and <span class='review-span highlight' data-aligned-summaries='6'>very clean</span> with an excellent bathroom. <span class='review-span highlight' data-aligned-summaries='2'>Breakfast was nothing special but adequate</span> and served by very friendly staff. This hotel is a good reasonably priced choice very near to the main shopping street, buses and underground. It is a little away from the main sights as these were mostly around the Reichstadt but we didn't mind walking and the buses were very punctual when our legs got tired. Hotel sells bus tickets and has a very useful street map of Berlin - staff very willing to help and advise.</div><div class='text-box'>Stayed there over the Christmas period. Perfect location for walking around the city or catching the U/S-bahns to travel further afield. <span class='review-span highlight' data-aligned-summaries='3'>Friendly and relaxed atmosphere</span> and lots of cafes nearby for breakfast, lunch etc. <span class='review-span highlight' data-aligned-summaries='2'>The breakfast in the hotel is good</span> value too if you are in a rush and dont want to go out. The front of the hotel is on a fairly busy street but our room looked out to the back and was silent at night. The only downside is that because the hotel offers both smoking and non-smoking rooms <span class='review-span highlight' data-aligned-summaries='4'>some of the public spaces</span> (hall ways for example) <span class='review-span highlight' data-aligned-summaries='4'>do smell a little of cigarette smoke but our room itself was perfectly smoke free and nice</span>.</div><div class='text-box'>This is a very decent hotel; my wife and I were surprised by how large the room is in comparison to other European hotels. The room was comfortable, the bathroom was adequate. The hotel was clean and <span class='review-span highlight' data-aligned-summaries='3'>the hotel staff was friendly</span> and <span class='review-span highlight' data-aligned-summaries='3'>helpful</span>. <span class='review-span highlight' data-aligned-summaries='2'>The breakfast is also great</span> and highly recommended. The only negative against this hotel is the road noise, you can hear the road noise if you have a room facing the front of the hotel. <span class='review-span highlight' data-aligned-summaries='0'>Another great plus for this hotel is the location; it is a 15 minute walk to the Church War memorial "Gedachtniskirche". The train station is also 5 minutes away from the hotel.</span></div><div class='text-box'>When we arrived at the hotel I feared the worst as the building is a bit tired. That is the worst thing I have to say about this hotel. The bedrooms are massive, the hotel is clean and <span class='review-span highlight' data-aligned-summaries='3'>the staff are very friendly</span>. Situated just around the corner of the Kurfurstendamm, the hotel is a 2 minute walk from Uhlandstrasse underground. <span class='review-span highlight' data-aligned-summaries='1'>Berlin Zoo is also close by</span> as well as Kaiser Wilhelm Gedachtniskirche. Very very nice part of Berlin with easy access all over the city</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='7'>The hotel was excellent and in a very logical price</span>! We were lucky because we used an offer, staying for 3 nights but we only paid for the 2 nights! The location was perfect, only 5-10 minutes walk from the nearest metro station. And in the centre of the market in the "former West Berlin". The room was large even for 3 people! <span class='review-span highlight' data-aligned-summaries='2'>The breakfast was delicious</span> and the service excellent. I fully recommend it!</div><div class='text-box'>First impressions of this hotel when arriving were not great, however we were pleasantly surprised and all of our party (14 adults) gave this hotel the thumbs up! Although it had no bar, its <span class='review-span highlight' data-aligned-summaries='0'>location was excellent</span> and there were plenty of drinking and meeting places close by. The breakfast <span class='review-span highlight' data-aligned-summaries='3'>staff were</span> good, reception <span class='review-span highlight' data-aligned-summaries='3'>helpful</span> and the rooms were clean. In all the hotel was very good value for money and <span class='review-span highlight' data-aligned-summaries='2'>breakfast was included</span>.</div><div class='text-box'>Nice and clean hotel near Kurfurstendamm. Just a few minutes walk to the U-Bahn station Uhlandstrae and Berlins biggest shopping street. <span class='review-span highlight' data-aligned-summaries='2'>The breakfast was delicious</span>, <span class='review-span highlight' data-aligned-summaries='3'>the staff was friendly</span> and the room was spacious and clean. The hotel has everything you need for a weekend getaway in Berlin. The Bus from Airport Tegel stops at the Uhlandstrae and it`s very easy to find the hotel from there.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This hotel was located about two blocks from the hotel which was very convenient.</span> <span id="1" class="summary-sentence">It's close to the Zoo and Aquarium.</span> <span id="2" class="summary-sentence">The breakfast was very good and included fresh coffee and a traditional style meat and cheese assortment along with fruit and yogurt.</span> <span id="3" class="summary-sentence">The hotel staff was friendly and helpful.</span> <span id="4" class="summary-sentence">The negatives were that the hallway we were in smelled like cigarette smoke as well as the room.</span> <span id="5" class="summary-sentence">We left the window open for most of the day while we were gone to bring in fresh air.</span> <span id="6" class="summary-sentence">The carpets were vaccuum cleaned but had stains and the sink in the bathroom leaked all over the floor.</span> <span id="7" class="summary-sentence">Overall the experience was average for the $$ that we spent.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

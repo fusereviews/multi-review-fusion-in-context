@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>2 night stay had a great time. We arrived and were lucky the room was ready at 12:00pm. Poolview only because when we booked nothing else available. Pool view not needed. We were only in the room to sleep and change as we were out and about the rest of the time. <span class='review-span highlight' data-aligned-summaries='8'>Had the best sleep at this hotel</span> as the heating system was very quiet which means a lot to a light sleeper. Room was nice with 2 Queens and outside sink. <span class='review-span highlight' data-aligned-summaries='1'>The best part is the</span> <span class='review-span highlight' data-aligned-summaries='1 2'>fron of the line to all the rides</span> which <span class='review-span highlight' data-aligned-summaries='2 8'>was worth every penny</span>. <span class='review-span highlight' data-aligned-summaries='3 7'>The buffet breakfast was also great</span> <span class='review-span highlight' data-aligned-summaries='3'>with 1/2 price for 12 and under</span>. <span class='review-span highlight' data-aligned-summaries='0'>The pool area very nice</span> but expensive drinks. Nice place to stay. Also nice to go back to the parks at night.</div><div class='text-box'>I thought <span class='review-span highlight' data-aligned-summaries='0'>the hotel was amazing</span>. Although our hotel room was way smaller than we expected and out safe was broken when we arrived so they were in our room fixing it for 30 min. The fast pass for the Universal Studios were the best part of staying there. The pool was packed at times couldn't find a spot but <span class='review-span highlight' data-aligned-summaries='6'>the restaurants there were amazing</span>. The 'fake beach' was great. The ferry to the parks was amazing always there when we were otherwise had to wait for 5-10 min. <span class='review-span highlight' data-aligned-summaries='4'>The people there were very nice</span>. Loved the pictures and memorabillia throughout the hotel. Highly recommended, espically <span class='review-span highlight' data-aligned-summaries='1'>if you are going to the Universal parks, got first in line in a 3 hour line because of the fast pass</span>. Loved it.</div><div class='text-box'>The Hard Rock Hotel at Universal Studios is AWESOME! My husband and I took a chance as a walk in and were able to get a King Suite for only $144 a night! I was surprised because online it was like $250. So of course we took the room :) <span class='review-span highlight' data-aligned-summaries='0'>This place is beautiful & classy</span> and <span class='review-span highlight' data-aligned-summaries='4'>spare no expense to make the customers happy</span>! Our room was very spacious and CLEAN! <span class='review-span highlight' data-aligned-summaries='1'>One of the best perks</span> about staying at Universal Studios <span class='review-span highlight' data-aligned-summaries='1'>is the Express pass for the parks. You go to the front of the line</span>! It was awesome and so worth it! <span class='review-span highlight' data-aligned-summaries='8'>We will be staying there again the next time we go to Universal Studios</span>!</div><div class='text-box'>from the minute we stepped out of the taxi we were made to feel welcome, the check in was quick and easy, the room was fab.and <span class='review-span highlight' data-aligned-summaries='1 2'>the room key is worth its weight in gold for getting on all the rides in universal straight away.the</span> <span class='review-span highlight' data-aligned-summaries='4'>kids were made to feel really welcome</span> and the staff couldnt do enough for us.the location was ideal and couldnt fault anything, <span class='review-span highlight' data-aligned-summaries='3'>we ate in the beach club which was a little pricey</span> but the food was great.although we ate out at other places around the resort just for variety.cant wait to go back.cant think of any cons.have been spoilt now and <span class='review-span highlight' data-aligned-summaries='8'>wouldnt want to stay in any other place in Orlando when we go back</span> ! go see for yourself !</div><div class='text-box'>This is our 4-5th time at the Hard Rock and <span class='review-span highlight' data-aligned-summaries='8'>we've never been disappointed</span>! <span class='review-span highlight' data-aligned-summaries='3'>Sure it's pricey, but</span> the service has been great each time. It's our favorite hotel in Orlando, especially when we stay with our friends, the Doc and his family. <span class='review-span highlight' data-aligned-summaries='6'>Ate at the Kitchen</span> every morning and <span class='review-span highlight' data-aligned-summaries='3 6 7'>the food was excellent</span>.<span class='review-span highlight' data-aligned-summaries='7'></span> <span class='review-span highlight' data-aligned-summaries='4 7'>The service was outstanding</span>, every time. <span class='review-span highlight' data-aligned-summaries='1'>The express pass feature with your room key is fantastic</span>. It wasn't very crowded when we went, but <span class='review-span highlight' data-aligned-summaries='1'>we did not wait for longer than a minute on the rides that were crowded</span>. All in all, a great stay. Recession-Shmession, stimulate the economy! <span class='review-span highlight' data-aligned-summaries='8'>Stay at the Hard Rock!</span></div><div class='text-box'>We have stayed here before and it was great, the room was nice, they have remodled them in the last year. Check in was easy and no problem getting a room before 3pm. Still charging to park in the hotel lot which is the only negative it has, for the price of the room you would think the parking would be free. The pool area was clean and the food at the pool bar was really good (the nachos). Being able to <span class='review-span highlight' data-aligned-summaries='1'>use your hotel room key as a fast pass</span> <span class='review-span highlight' data-aligned-summaries='2'>is worth the price of the room</span>, also the parks are right there, we just love the Hard Rock</div><div class='text-box'>The Hard Rock is a pricey hotel, but well worth it. The room was beautiful, with alot of ammenities. We <span class='review-span highlight' data-aligned-summaries='6'>enjoyed eating iin the Kitchen restaurant at the hotel</span>. The <span class='review-span highlight' data-aligned-summaries='3'>food again was pricey</span> but worth it. We loved the water taxi over to the parks and city walk. The <span class='review-span highlight' data-aligned-summaries='1'>automatic</span> <span class='review-span highlight' data-aligned-summaries='1 2'>fast pass</span> showing your room key was <span class='review-span highlight' data-aligned-summaries='2'>worth the price of the hotel itself</span>.In 95degree temperatures, the five minute wait <span class='review-span highlight' data-aligned-summaries='1'>just for staying at the hotel was wonderful</span>. I wish Disney would do the same. We also liked the memorabilia everywhere.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='8'>This place was the best hotel I have ever stayed in</span>! <span class='review-span highlight' data-aligned-summaries='4'>The staff was very friendly</span>, and did eveything they could to make our stay more enjoyable! <span class='review-span highlight' data-aligned-summaries='0'>The scenery is gorgeous</span>! <span class='review-span highlight' data-aligned-summaries='7'>The food is graet</span> and the pool is spectacular. The best thing would probably be the <span class='review-span highlight' data-aligned-summaries='1'>Express passes you get for staying there</span>. <span class='review-span highlight' data-aligned-summaries='1'>The longest we had to wait in line for was 10 mins</span>. It was great because of all the things on site!</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The hotel is beautiful.</span> <span id="1" class="summary-sentence">People staying at the hotel can get passes that allow them to go to the front of all of the lines in the theme parks - so there is absolutely no wait time at all!</span> <span id="2" class="summary-sentence">That alone, is worth the price of the hotel.</span> <span id="3" class="summary-sentence">The food at the hotel is pricey.</span> <span id="4" class="summary-sentence">The staff is very nice.</span> <span id="5" class="summary-sentence">"</span><span id="6" class="summary-sentence">The Kitchen" is the best restaurant around -</span> <span id="7" class="summary-sentence">The food there is perfect and service is excellent.</span> <span id="8" class="summary-sentence">We would definitely go back!</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

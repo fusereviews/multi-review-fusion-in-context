@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>I and my wife stayed in Albergo del Senato for three nights. The hotel is a boutique hotel with a very good management in a very good location. <span class='review-span highlight' data-aligned-summaries='1'>The room was</span> very good - <span class='review-span highlight' data-aligned-summaries='1'>quite spacious</span>, <span class='review-span highlight' data-aligned-summaries='1'>clean</span>, nicely decorated, with free wi-fi. <span class='review-span highlight' data-aligned-summaries='1'>The bathroom was</span> also very good - <span class='review-span highlight' data-aligned-summaries='1'>spotless</span> and everything worked fine. <span class='review-span highlight' data-aligned-summaries='2'>Breakfast buffet was much more than adequate</span>. The location was superb. Our room had a nice view of the Pantheon. <span class='review-span highlight' data-aligned-summaries='4'>The hotel is in a walking distance to all of the highlights</span> in the old part of the city. There are lots of restaurants and cafes very close to the hotel. <span class='review-span highlight' data-aligned-summaries='2 3'>The people at the front desk</span> <span class='review-span highlight' data-aligned-summaries='2'>and the breakfast room was very courteous</span> and <span class='review-span highlight' data-aligned-summaries='3'>helpful</span>. <span class='review-span highlight' data-aligned-summaries='0 5'>We would certainly consider staying in Albergo del Senato in our next visit</span> <span class='review-span highlight' data-aligned-summaries='0'>to Rome</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 5'>This hotel was the perfect spot</span> for our honeymoon. <span class='review-span highlight' data-aligned-summaries='4'>The location was perfect; we walked everywhere</span> while we were in Rome. The staff went above and beyond any other hotel I've been to. <span class='review-span highlight' data-aligned-summaries='3'>The front desk was always available and helpful with suggestions</span> (especially Alessandra). The staff came to our rooms twice a day to clean up the rooms and to turn down the beds at night. The rooftop bar gave great views and the bartender Michele was very hospitable. The room was beautiful and looked right onto the Pantheon and the Piazza della Rotonda. <span class='review-span highlight' data-aligned-summaries='1'>The bathroom was spotless</span>. And last but not least, <span class='review-span highlight' data-aligned-summaries='2'>the breakfast was amazing</span>. There was plenty to choose from and it was all good!</div><div class='text-box'>We stayed at the <span class='review-span highlight' data-aligned-summaries='0'>Albergo del Senato</span> for the first leg of our honeymoon. <span class='review-span highlight' data-aligned-summaries='0'>The hotel is in a perfect location</span> and our room had a view of the Pantheon. Wow! <span class='review-span highlight' data-aligned-summaries='2 3'>The staff was usually very helpful</span>, although upon arriving on our first day, the concierge scolded us because we didn't find the limo we had reserved at the airport (the limo driver was no where to be found). However, the other concierges during our stay were very helpful and polite. If you do get a room with a view of the square, it can be a bit noisy at night, so keep that in mind. Overall we had a wonderful stay and <span class='review-span highlight' data-aligned-summaries='5'>I would highly recommend this hotel</span>.</div><div class='text-box'>Our family of three <span class='review-span highlight' data-aligned-summaries='0'>stayed</span> <span class='review-span highlight' data-aligned-summaries='0 5'>at the Albergo del Senato</span> June 19-23. First two nights <span class='review-span highlight' data-aligned-summaries='1'>were in a small room, then we upgraded to a large suite</span> for the final two nights. <span class='review-span highlight' data-aligned-summaries='0'>The del Senato has the best location in Rome</span> - right next to the Pantheon. <span class='review-span highlight' data-aligned-summaries='4'>We walked everywhere from this hotel</span>. The decor was nice. <span class='review-span highlight' data-aligned-summaries='3'>The staff was helpful</span> and the <span class='review-span highlight' data-aligned-summaries='2'>breakfast was above average</span>. The rooftop terrace has a fabulous view over Rome and is a great place for a drink in the evening, though the bartender was the least friendly of all the staff at the hotel. <span class='review-span highlight' data-aligned-summaries='5'>We would stay here again</span> based on location alone.</div><div class='text-box'>We spent two nights at <span class='review-span highlight' data-aligned-summaries='5'>Albergo del Senato</span> in July. The location of the hotel is fantastic. It is very central and you have a great view of Pantheon and Piazza. We had a room with a small terrace and it was really a pleasure to watch the Piazza from the balcony. The <span class='review-span highlight' data-aligned-summaries='1'>room</span> is very beautiful, but <span class='review-span highlight' data-aligned-summaries='1'>was on the small side</span>. If we stayed longer, we would have a serious storage room problem. <span class='review-span highlight' data-aligned-summaries='3'>The service was good and friendly</span>. <span class='review-span highlight' data-aligned-summaries='2'>Breakfast was Ok</span>. It also has a very beautiful terrace where you can have some drinks. <span class='review-span highlight' data-aligned-summaries='5'>I would stay there again</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 5'>The Albergo del Senato hotel was lovely</span>. <span class='review-span highlight' data-aligned-summaries='0 3'>The staff was extremely helpful and very professional</span>. They went out of their way to help us and we really appreciated that. <span class='review-span highlight' data-aligned-summaries='0'>The location was perfect</span> right beside the Pantheon so there was plenty to see and do right outside the hotel door. <span class='review-span highlight' data-aligned-summaries='0 1'>The room was very clean</span> and serviced every day and night. The rooftop bar was the perfect location to watch the sunset over Rome. <span class='review-span highlight' data-aligned-summaries='2'>The breakfast each morning was very nice with</span> plenty of choices and <span class='review-span highlight' data-aligned-summaries='2'>great service</span>. <span class='review-span highlight' data-aligned-summaries='5'>I would definitely stay here again</span>.</div><div class='text-box'>We recently stayed <span class='review-span highlight' data-aligned-summaries='0'>at The Albergo</span> and <span class='review-span highlight' data-aligned-summaries='0'>had a lovely stay</span>. <span class='review-span highlight' data-aligned-summaries='1'>The room was a good size</span>. There was a welcome basket of fruit. We overlooked the Pantheon and the Square, the room was very nicely decorated and quiet. <span class='review-span highlight' data-aligned-summaries='2 3'>The staff are very friendly and helfpul</span>. The <span class='review-span highlight' data-aligned-summaries='2'>breakfast was good</span> with a good variety of choices. <span class='review-span highlight' data-aligned-summaries='5'>We would definately stay there again as it is</span> <span class='review-span highlight' data-aligned-summaries='0 5'>very central to all the sites</span>. Lovely, lovely Hotel. My favourite thing about the Hotel was the roof top tarrace bar overlooking the City, wonderful.</div><div class='text-box'>We stayed at the Albergo Del Senato in Rome for our family trip. The hotel is right next to the Pantheon, and it's surreal to be in front of such a monument every time you step out of the hotel. <span class='review-span highlight' data-aligned-summaries='3'>The staff was very accommodating</span>, and the rooms were very comfortable. <span class='review-span highlight' data-aligned-summaries='0 5'>We definitely recommend it</span>.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The Albergo del Senato was the perfect place to stay in Rome.</span> <span id="1" class="summary-sentence">The bedroom and bathroom were a good size and very clean.</span> <span id="2" class="summary-sentence">Breakfast was very good and the wait staff was pleasant and efficient.</span> <span id="3" class="summary-sentence">The front desk staff was attentive and helpful if not overly friendly.</span> <span id="4" class="summary-sentence">You can walk everywhere from the hotel.</span> <span id="5" class="summary-sentence">I would definitely stay at the Albergo del Senato again and would recommend it to anyone going to Rome.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

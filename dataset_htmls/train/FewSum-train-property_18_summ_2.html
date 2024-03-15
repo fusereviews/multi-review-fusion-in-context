@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>The sign on the door says they open at 8, but when we arrived at 8: 05 it was closed, the lights were off, and no one was there. Waiting another 5 minutes didn't help. So, <span class='review-span highlight' data-aligned-summaries='0'>don't expect to stop by right at opening time if you are in a hurry like we were.</span></div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1'>The guy working all the time is great</span>, very down to earth and personable. He works too much! Give him a vacation, he deserves it. <span class='review-span highlight' data-aligned-summaries='0 2'>The coffee is amazing</span>, great flavor. <span class='review-span highlight' data-aligned-summaries='2'>The iced Cafe White Chocolate is my go to</span>. <span class='review-span highlight' data-aligned-summaries='0'>Highly recommend</span>!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>This is an awesome little coffee spot tucked behind a barber shop</span>. <span class='review-span highlight' data-aligned-summaries='1'>The staff is super real and friendly</span>. <span class='review-span highlight' data-aligned-summaries='2'>The tea is freshly brewed.</span> <span class='review-span highlight' data-aligned-summaries='1'>You'll love the music</span> if you don't like Top 20 garbage. And the ambiance is great.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Cool little place</span>. I would imagine a lot of regulars go here but a <span class='review-span highlight' data-aligned-summaries='0'>worthy coffee shop</span> either way. The Americano was very good and they had an <span class='review-span highlight' data-aligned-summaries='1'>unreal chocolate muffin with cream cheese</span> on top more or less. Awesome. <span class='review-span highlight' data-aligned-summaries='1'>The service was friendly</span>. <span class='review-span highlight' data-aligned-summaries='3'>Cool decor as well</span>. Will go back.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>There's lots of good things to say about this cafe.1</span>) Small but lots of seating. <span class='review-span highlight' data-aligned-summaries='2'>Cozy.2</span>) Wonderful espresso3) <span class='review-span highlight' data-aligned-summaries='1'>Nice baristas4</span>) Very convenient location5) Prices are competitiveReminds me of cafes that I used to visit a lot when I lived in a smaller city. I defintely recommend!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2'>I enjoyed the coffee</span> and my husband was absolutely <span class='review-span highlight' data-aligned-summaries='0 2'>delighted with the shot of cubano</span> especially because it<span class='review-span highlight' data-aligned-summaries='0'>'s rare for places to make it</span>. <span class='review-span highlight' data-aligned-summaries='1'>Very nice barista, friendly and talkative</span> without being intrusive. <span class='review-span highlight' data-aligned-summaries='3'>It was fun being almost int the barber shop</span> and watching men get their haircut. <span class='review-span highlight' data-aligned-summaries='1'>Fun atmosphere</span> all around.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>I love</span> coming to <span class='review-span highlight' data-aligned-summaries='0'>my neighborhood coffee shop</span>. <span class='review-span highlight' data-aligned-summaries='1 3'>Open mic nights</span>, <span class='review-span highlight' data-aligned-summaries='2'>rotating drinks</span>, <span class='review-span highlight' data-aligned-summaries='1'>burritos</span>, good music, <span class='review-span highlight' data-aligned-summaries='1'>helpful staff</span>, <span class='review-span highlight' data-aligned-summaries='1 3'>cool artwork</span>, and a library <span class='review-span highlight' data-aligned-summaries='3'>make this place the amazing place that it is</span>. The staff is really helpful and quick as well. Big ups to them!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>I love this cafe</span>, I'm so glad I stumbled upon it. <span class='review-span highlight' data-aligned-summaries='1'>The atmosphere is</span> <span class='review-span highlight' data-aligned-summaries='1 2'>everything a cafe should be</span> and the cappuccino was the closes to Italy I've come to in along time. Service is a little slow but definitely worth the wait. You can sit outside on a warm day. Great place to read or use your computer.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">A great local coffee spot.</span> <span id="1" class="summary-sentence">From the friendly staff, to the delicious food, to the fun atmosphere, this place has it all.</span> <span id="2" class="summary-sentence">With a wide range of coffee, teas, and blended drinks it is everything a cozy coffee shop should be.  </span><span id="3" class="summary-sentence">If food and coffee alone are not enough, the cool decor, open mic night and artwork add to the charm of this hidden gem.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

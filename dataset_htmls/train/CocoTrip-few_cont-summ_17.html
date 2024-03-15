@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>Okay after all the rave reviews of other guests I was expecting amazing. Guaranteed we had the crapiest weather over the NYE period, but we had paid for a package deal and half of what we paid for we never saw, they took some money off the final bill but even still what was outlined in our package was not included. The staff were aloof; one gentleman behind the counter was very approachable however the rest were rather aloof. The <span class='review-span highlight' data-aligned-summaries='3'>room was</span> probably <span class='review-span highlight' data-aligned-summaries='3'>the smallest</span> we had stayed in ad had a slanting roof which proved extremely difficult to move around as you were continually hunched over. The staff were not overly interested in what you did and in informing you of anything to do or see, which was quite disappointing after the fantastic experiences we had had in Rome and Florence. Maybe this is the service you receive when you go to Flashy hotels and if this is the case then I <span class='review-span highlight' data-aligned-summaries='0'>am happily never going to a fancy hotel again -</span> <span class='review-span highlight' data-aligned-summaries='0 1'>midrange hotels</span> <span class='review-span highlight' data-aligned-summaries='0'>for me </span>(<span class='review-span highlight' data-aligned-summaries='0 1'>better value for money</span>)</div><div class='text-box'>My wife and I returned to this <span class='review-span highlight' data-aligned-summaries='1'>superbly placed hotel for a wonderful four day break</span>. (100 metres from St Marco). Right from the start, whilst making my reservation by phone, Jacopo made me feel welcome, and this wonderful service contiued throughout our stay. <span class='review-span highlight' data-aligned-summaries='6'>The resturant for breakfast is right on the lagoon and to sit outside in the sunshine</span> and <span class='review-span highlight' data-aligned-summaries='5'>start your day with a plentiful multi choice breakfast</span> is a pure joy. <span class='review-span highlight' data-aligned-summaries='0'>This lovely Hotel</span> helped make our trip to this very special city all the more enjoyable. <span class='review-span highlight' data-aligned-summaries='3 4'>Our room was</span> <span class='review-span highlight' data-aligned-summaries='3'>not large</span> but <span class='review-span highlight' data-aligned-summaries='4'>perfectly equipped</span>. A Lagoon view would have made it even better (maybe next time) I am sure there will be a next time, and definately at Savoia and Jolanda.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>We stayed here</span> for three nights in January 2004 <span class='review-span highlight' data-aligned-summaries='0'>as part of our honeymoon and we loved it</span>. We did request a balcony room as recommended on trip advisor. <span class='review-span highlight' data-aligned-summaries='2'>It was</span> beautiful <span class='review-span highlight' data-aligned-summaries='2'>a perfect view of the grand canal</span>. It s location was perfect <span class='review-span highlight' data-aligned-summaries='2'>three doors away from the bridge of Sighs and 200 m from St. Marks Square</span>. The room was plush , exposed beams, <span class='review-span highlight' data-aligned-summaries='4'>tastefully decorated</span> but a bit disappointed that <span class='review-span highlight' data-aligned-summaries='4'>there was no bath in the bathroom</span>. and <span class='review-span highlight' data-aligned-summaries='3'>room (or suite as it was called) was small by suite standards.1</span> room.(Bed with a couch and table) <span class='review-span highlight' data-aligned-summaries='0'>I would highly recommend it if you wanted to splash out for a special occassion</span> <span class='review-span highlight' data-aligned-summaries='0 3'>it is a bit pricey</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='1 2'>In the middle of everthing</span>.<span class='review-span highlight' data-aligned-summaries='2'> St. Marks, Museums, anf fine restarants</span>. I really believe I could spend the rest of my life in this most beautiful city. The hotel and staff are magnificent. We have stayed there on two separate trips now and look forward to the third soon. My wife just loves to get lost waling the canals and alleways. <span class='review-span highlight' data-aligned-summaries='5'>Wonderful breakfast at the hotel</span> as well. Steps away fro the San Zaccaria vaparetto stop.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2'>The hotel</span> is very conveniently located from the San Marco stop and <span class='review-span highlight' data-aligned-summaries='2'>faces the Grand Canal</span>. The staff were not necessarily friendly, but they were not rude either. They were helpful in giving us information and directions as well as storing our luggage after checkout so we could explore a bit before our scheduled time of departure. We were pleasantly surprised when we returned after dinner to find turn down service and chocolates on our pillows :-)</div><div class='text-box'>what a <span class='review-span highlight' data-aligned-summaries='0 1 2'>beautiful place looking out onto the St giorgio magiore church island</span>. The <span class='review-span highlight' data-aligned-summaries='0 3'>rooms</span> <span class='review-span highlight' data-aligned-summaries='0'>with views</span> <span class='review-span highlight' data-aligned-summaries='0 3'>are</span> <span class='review-span highlight' data-aligned-summaries='0 1 3'>quite expensive.but</span> <span class='review-span highlight' data-aligned-summaries='0 1'>venice is a precious place</span> with very little space. the <span class='review-span highlight' data-aligned-summaries='5 6'>restaurant is good</span> (<span class='review-span highlight' data-aligned-summaries='5'>especially</span> the free <span class='review-span highlight' data-aligned-summaries='5'>breakfast).but</span> explore the many small trattorias, restaurants, and pannini bars.for much better though. <span class='review-span highlight' data-aligned-summaries='1'>the best value compared to cipriani, hilton danelli</span> etc.would highly recommend</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 1'>Definately the best bed i've slept</span> during our vacation, <span class='review-span highlight' data-aligned-summaries='0 1'>rooms immaculates</span>, <span class='review-span highlight' data-aligned-summaries='5 6'>wide choice at the restaurant for breakfast(homemade cakes!)</span>. More then <span class='review-span highlight' data-aligned-summaries='1 2'>central position facing the san marco</span> basin.5 stars!</div><div class='text-box'>The location was great and the employees were very helpful.<span class='review-span highlight' data-aligned-summaries='4'>My ronn</span> did not have a great view but it <span class='review-span highlight' data-aligned-summaries='4'>was very beautifuly decorated</span>.I was on the second floor facing an alley.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This hotel is lovely for staying at for a special occasion as it can be quite expensive.</span> <span id="1" class="summary-sentence">However it is well worth the money for an enjoyable trip that is perfectly placed for a short break.</span> <span id="2" class="summary-sentence">The hotel is in a location looking onto the St Giorgio maggiore church island, the grand canal, and was only short walk to the bridge of sighs and St Marks Square.</span> <span id="3" class="summary-sentence">The rooms at this hotel are quite expensive, yet the rooms are considerably small.</span> <span id="4" class="summary-sentence">However, they are decorated to a good standard and equipped with all amenities.</span> <span id="5" class="summary-sentence">A lovely, multi choice breakfast for starting your day.</span> <span id="6" class="summary-sentence">The restaurant serving breakfast is also on the lagoon so you are able to sit outside and enjoy the sun while you eat.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

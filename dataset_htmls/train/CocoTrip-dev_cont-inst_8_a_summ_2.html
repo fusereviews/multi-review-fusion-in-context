@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>Great Location Stayed at the Brunelleschi in late December. The location was terrific, the breakfast hearty, and <span class='review-span highlight' data-aligned-summaries='2'>the rooms large and above average</span> for Italy for the price. Turn two corners and you are in the piazza next to Giotto's campanile. As an american who speaks fluent italian, and a mother of 3, I never go to Italy to sleep in 5 star resort hotels. <span class='review-span highlight' data-aligned-summaries='0 1'>This hotel could never be compared to the Four Seasons</span>,<span class='review-span highlight' data-aligned-summaries='1'> but</span>, in Florence, <span class='review-span highlight' data-aligned-summaries='1'>it was</span> <span class='review-span highlight' data-aligned-summaries='0 1'>the perfect place to start and end each day</span>.</div><div class='text-box'>Lovely hotel We stayed here for my husband's birthday weekend. We're ususally more 3* hotel people so this was a bit of a treat, but it was worth every penny. <span class='review-span highlight' data-aligned-summaries='0 1'>The hotel is beautiful - such a lovely building and a GREAT location</span>. The staff were unfailingly polite as we checked in and went to the bar. <span class='review-span highlight' data-aligned-summaries='2'>Our room was a good size with an ENORMOUS bathroom, and views of the campanile</span>. <span class='review-span highlight' data-aligned-summaries='1 3'>Breakfast was excellent</span>.I found the hotel pretty much faultless. And Florence? Just beautiful.</div><div class='text-box'>Great location, great staff! <span class='review-span highlight' data-aligned-summaries='0 1'>This hotel was a real find</span>! We loved the location and the front desk staff was the friendliest in Italy! <span class='review-span highlight' data-aligned-summaries='3'>The breakfast buffet was</span> also <span class='review-span highlight' data-aligned-summaries='3'>excellent</span>! This hotel was in a quiet alley, just steps from the Duomo and the best shopping in Florence! The only negative was the multiple levels on the different floors, making it difficult to get around in the hotel. A minor inconvenience for <span class='review-span highlight' data-aligned-summaries='1'>an</span> otherwise <span class='review-span highlight' data-aligned-summaries='1'>excellent hotel</span>.</div><div class='text-box'>Wonderful stay in Florence <span class='review-span highlight' data-aligned-summaries='0'>Hotel Brunelleschi is a lovely hotel</span> in an excellent location in the heart of Florence. <span class='review-span highlight' data-aligned-summaries='2'>The rooms are brilliant</span> , although the bells of the Duomo wake you up early in the morning! All the staff are very helpful and can make good suggestions for eating out - I had the best sea bass I have ever had from one of their recommendations. <span class='review-span highlight' data-aligned-summaries='1'>I would thoroughly recommend a stay at this delightful hotel</span>.</div><div class='text-box'>great location,if a little noisy <span class='review-span highlight' data-aligned-summaries='0 1'>lovely hotel</span>,very friendly helpful staffright in the middle of all the actionwe had a suite,which had a separete bedroom(very handy)clean,<span class='review-span highlight' data-aligned-summaries='3'>very good choice on buffet breakfastonly</span> down side was our room was on the front of the hotelwhich is on one of the main streets.so bin men and road sweepers could be heard ealy in the morninggood value more money</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 1'>Great experience</span>! My friend and I stayed for 4 nights. We had no complaints whatsoever. The service, staff, cleanliness, comfort etc were all exemplary. Special tip: <span class='review-span highlight' data-aligned-summaries='3'>bring a picnic lunch up to the rooftop terrace and get a breathtaking view of the city</span>. The view of the Duomo there by sunrise is sublime.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>only Brunelleschi is the only one who could have build something better</span>! a portion of our large room</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 1'>Brunelleschi was Perfect</span>! <span class='review-span highlight' data-aligned-summaries='3'>View from Rooftop Patio</span></div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The hotel is simply beautiful and delightful.</span> <span id="1" class="summary-sentence">It was a really nice experience and though it was no Four Seasons it was the excellent.</span> <span id="2" class="summary-sentence">The room was great.</span> <span id="3" class="summary-sentence">The breakfast buffet was great but why not take a picnic to the rooftop terrace for some really nice views.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

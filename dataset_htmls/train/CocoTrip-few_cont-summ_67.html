@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>Stayed here over Memorial Day weekend 2012. <span class='review-span highlight' data-aligned-summaries='2'>I think this</span> <span class='review-span highlight' data-aligned-summaries='2 3 8'>hotel</span> <span class='review-span highlight' data-aligned-summaries='2'>is a steal if you catch it on an off-season weekend</span> when the prices are lower. In any event, <span class='review-span highlight' data-aligned-summaries='2'>the rooms were really comfortable, though slightly on the smaller side</span>. We were on the courtyard side of the building, and <span class='review-span highlight' data-aligned-summaries='3'>you'd never know you were steps from the mayhem on Bourbon</span>. <span class='review-span highlight' data-aligned-summaries='9'>The complimentary breakfast was great</span>, and <span class='review-span highlight' data-aligned-summaries='8'>the welcome drinks were a nice touch</span>. <span class='review-span highlight' data-aligned-summaries='1'>Love the courtyard and pool - very upscale feeling, but cozy and completely non-pretentious</span>. One downside to this being a boutique hotel: <span class='review-span highlight' data-aligned-summaries='6'>there's no housekeeping after midnight</span>, so we had to walk down to get the extra towels the housekeeper never left. Also <span class='review-span highlight' data-aligned-summaries='10'>we had a hard time getting the shower gels refilled, and had to call to ask for this to be done</span>. But otherwise <span class='review-span highlight' data-aligned-summaries='6 7'>the service was outstanding</span>,<span class='review-span highlight' data-aligned-summaries='7'> especially</span> Shawn <span class='review-span highlight' data-aligned-summaries='7'>at the front desk</span>. I will definitely stay here again and recommend this place to my friends.</div><div class='text-box'>We stayed at the <span class='review-span highlight' data-aligned-summaries='0'>Hotel le Marais</span> for four nights and loved it. <span class='review-span highlight' data-aligned-summaries='0 2'>This modern, boutique</span> <span class='review-span highlight' data-aligned-summaries='0 2 5'>hotel</span> <span class='review-span highlight' data-aligned-summaries='0 2'>was clean and well-maintained</span>.<span class='review-span highlight' data-aligned-summaries='2'></span> <span class='review-span highlight' data-aligned-summaries='2 5'>The beds were heavenly</span>!<span class='review-span highlight' data-aligned-summaries='2'></span> <span class='review-span highlight' data-aligned-summaries='5'>The one issue in the room was that the shower would spray outside the stall, leaving huge puddles on the floor</span>, so we had to have the shower head practically facing the opposite wall to avoid the mess. <span class='review-span highlight' data-aligned-summaries='6 7'>The staff was extremely helpful</span>, particularly Pierre, who booked several tours for us and got us $10 discounts per person per tour. The best part of the hotel is that it is in the heart of the French Quarters. This visit was all of our first times in Nola. <span class='review-span highlight' data-aligned-summaries='4'>Being able to walk to key landmarks, check out local art galleries</span> and antiques, and grab a beignet was a huge plus! <span class='review-span highlight' data-aligned-summaries='8'>Other hotel perks: free drinks per guest, free bottled water in the room</span>, 15% off our stay, and chocolates and <span class='review-span highlight' data-aligned-summaries='8'>ginger snaps in the lobby.</span></div><div class='text-box'>This hotel is in the very heart of the French Quarter. <span class='review-span highlight' data-aligned-summaries='0 2'>It</span> <span class='review-span highlight' data-aligned-summaries='0'>is</span> new, <span class='review-span highlight' data-aligned-summaries='0'>clean</span>, and <span class='review-span highlight' data-aligned-summaries='2'>has good facilities</span>. WiFi, <span class='review-span highlight' data-aligned-summaries='9'>breakfast</span>, and <span class='review-span highlight' data-aligned-summaries='0'>a very well equipped business centre</span> <span class='review-span highlight' data-aligned-summaries='9'>was free</span> (normally charged for at other hotels), so I felt like I had good value for money. <span class='review-span highlight' data-aligned-summaries='1 6 7'>The staff were friendly</span> <span class='review-span highlight' data-aligned-summaries='6 7'>and helpful</span>. As <span class='review-span highlight' data-aligned-summaries='0'>this hotel has only just opened</span>, there were a few very small teething problems in the area of service, but I am sure this will be sorted out in no time. <span class='review-span highlight' data-aligned-summaries='2'>I would definitely stay there again</span>.</div><div class='text-box'>3 couples - friends for 30+ years, vacationing together for the first time. The hotel was fabulous - <span class='review-span highlight' data-aligned-summaries='0 5'>the rooms were clean</span> and the <span class='review-span highlight' data-aligned-summaries='5'>beds were incredibly comfortable</span>. <span class='review-span highlight' data-aligned-summaries='1'>The pool area was lovely</span> and a wonderful way to end the evening. <span class='review-span highlight' data-aligned-summaries='3'>The location - perfect walking distance to everything</span>. <span class='review-span highlight' data-aligned-summaries='6 7'>The staff pleasant and professional</span>. My husband and I had been to the French Quarter 15 years earlier and we begged our friends to share this experience with us. Thank you for making this <span class='review-span highlight' data-aligned-summaries='2'>a most memorable experience</span> for us.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='3 4'>The hotel is located less than one block off of Bourbon St</span> <span class='review-span highlight' data-aligned-summaries='4'>in the heart of the French Quarter</span>. <span class='review-span highlight' data-aligned-summaries='6'>The</span> <span class='review-span highlight' data-aligned-summaries='2 6'>service was outstanding</span> and the <span class='review-span highlight' data-aligned-summaries='0 2 5'>accommodations were clean</span> and comfortable. It was a pleasure to stop after a full day on the road, enjoy some hot food and relax. <span class='review-span highlight' data-aligned-summaries='1 2'>The courtyard</span> <span class='review-span highlight' data-aligned-summaries='2'>was very nice</span> and relaxing. <span class='review-span highlight' data-aligned-summaries='6 7'>Everyone from the front desk to the general manager made us feel welcomed and comfortable</span>. Well done!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2'>Beautifully remodeled</span> <span class='review-span highlight' data-aligned-summaries='0 2 3'>hotel</span> <span class='review-span highlight' data-aligned-summaries='3'>in the perfect location</span>. <span class='review-span highlight' data-aligned-summaries='0 2'>Very clean</span> and very quiet - unbelieveable since <span class='review-span highlight' data-aligned-summaries='3'>it's only 1/2 block off Bourbon Street</span>. <span class='review-span highlight' data-aligned-summaries='6 7'>The staff was excellent</span>, <span class='review-span highlight' data-aligned-summaries='2'>the bar was a nice</span> quiet retreat and <span class='review-span highlight' data-aligned-summaries='1 2'>the courtyard is charming</span>. <span class='review-span highlight' data-aligned-summaries='2'>We will definitely stay here again</span> on our next trip to NOLA!</div><div class='text-box'>Our room was very nice, and <span class='review-span highlight' data-aligned-summaries='6'>the service was excellent</span>. We felt like this was a real bargain, especially regarding <span class='review-span highlight' data-aligned-summaries='3'>the location in the center of "the quarter</span>", yet <span class='review-span highlight' data-aligned-summaries='3'>it was easy to find</span>. <span class='review-span highlight' data-aligned-summaries='0 5'>The room was clean</span> and well arranged. <span class='review-span highlight' data-aligned-summaries='10'>Valet parking is really required</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='9'>Super breakfast included in price</span>. <span class='review-span highlight' data-aligned-summaries='3'>Great convenient location</span>. <span class='review-span highlight' data-aligned-summaries='0 2 5'>Hotel was clean</span>-<span class='review-span highlight' data-aligned-summaries='6 7'>service outstanding</span>. Maybe <span class='review-span highlight' data-aligned-summaries='10'>need a little help retreiving car</span></div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Hotel le Marais is a new, clean, modern boutique hotel.</span> <span id="1" class="summary-sentence">With a courtyard and pool, it feels very upscale but is cozy and non-pretentious.</span> <span id="2" class="summary-sentence">It has good facilities and is well maintained and offers a memorable experience you'll want to experience again.</span> <span id="3" class="summary-sentence">The hotel is in a great location only 1/2 block away from Bourbon Street.</span> <span id="4" class="summary-sentence">Key landmarks and local galleries are within walking distance.</span> <span id="5" class="summary-sentence">This hotel can boast of having heavenly beds and clean rooms but the shower sprayed outside of the shower stall and caused puddles on the floor.</span> <span id="6" class="summary-sentence">The staff and service were great although there is no housekeeping after midnight.</span> <span id="7" class="summary-sentence">The front desk staff was outstanding though and overall the staff was very pleasant and helpful.</span> <span id="8" class="summary-sentence">The hotel offered ginger snaps in the lobby and free drinks to guests plus in the room there was free bottled water.</span> <span id="9" class="summary-sentence">Breakfast was also offered free.</span> <span id="10" class="summary-sentence">The hotel shouldn't need to be asked to refill the shower gels and should offer valet parking.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

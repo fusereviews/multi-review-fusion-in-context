@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>The strongest point of this hotel is its location. The Metro station was just around the corner and proved to be very convenient for our daily commute. The double room of the hotel had a small balcony overlooking a park. <span class='review-span highlight' data-aligned-summaries='1'>The room was small</span> and the rates were a tad expensive for its size. The bathroom had glazed glass doors, without any lock, and was small as well. Nevertheless, <span class='review-span highlight' data-aligned-summaries='1'>the room was</span> well maintained and <span class='review-span highlight' data-aligned-summaries='1'>clean</span>. The breakfast spread was also good. The most negative point of this hotel is its elevator - the smallest I have ever seen - just 2 people and it is full ! It stopped working when we were checking out and we had to carry all our luggage through the stairs.</div><div class='text-box'>We are 3 middle aged women from NYC who just returned from this Heavenly Hotel.It is beautiful, <span class='review-span highlight' data-aligned-summaries='1'>the rooms are clean</span>, and the location is wonderful. <span class='review-span highlight' data-aligned-summaries='1'>The staff is always available to help out</span> with directions, or any requests we had. Although the park below is sometimes noisy, the closed windows cut out any noise. We loved this warm hotel, and will return any time. <span class='review-span highlight' data-aligned-summaries='1'>The rooms are a bit small</span> compared to rooms in America, but European rooms are generally small. I stayed in room 81, which had <span class='review-span highlight' data-aligned-summaries='0'>an amazing view of the Eiffel Tower</span>, and the buildings surrounding the hotel. We had an amazing Thanksgiving in the City of Lights and hope to return again next year.</div><div class='text-box'>A friend and I visited Paris in November and stayed at the Little Palace Hotel and found it delightful. It is a small hotel which gives special services. It is right off Rue Serbasterpol and easy to find. <span class='review-span highlight' data-aligned-summaries='0'>It is a bit of a walk to some of the museums</span> (there was a transit strike on when we were there and taxis were scarce). The rooms are spotless and the view from the balcony is delightful. The little park out front has children playing in the afternoon and their voices are delightful.the other side of the park has a ping-pong table and some benches.no sign of homeless when we were there. I would recommend this hotel if the metro is running.</div><div class='text-box'>We got to the hotel at night and the immediate impresion was that we did a bad mistake. A heavy small of urine wellcomeed us outside of the hotel, it was dark and some homless drunk people were hanging there passing their time breaking empty bottles. In the morning it looked better espwecially if yoy walk to the side of St martin street and not Sebastopol.The staff is excellent. The description of a superior room does not match the room we got: <span class='review-span highlight' data-aligned-summaries='1'>a small</span> badly planned <span class='review-span highlight' data-aligned-summaries='1'>room</span> facing a wall at the back of the hotel. The price is high for <span class='review-span highlight' data-aligned-summaries='0'>a 3 stars hotel</span> in a not so great neighborhood</div><div class='text-box'>We stayed in a double room on the 6th floor with a small baloncy with <span class='review-span highlight' data-aligned-summaries='0'>a pleasant view of</span> the square across, <span class='review-span highlight' data-aligned-summaries='0'>the arts and metier museum</span> and near by rooftops - very parisian. <span class='review-span highlight' data-aligned-summaries='0'>we could even see the top of the effiel tower</span>! the lifts are small but <span class='review-span highlight' data-aligned-summaries='1'>the room itself spacious for paris</span>. our bathroom was tiny but the balcony made up for it. we ate nearby and walked to the marais, canal st martin and louvre from here. <span class='review-span highlight' data-aligned-summaries='0'>metros are close by</span> and there are many restaurants to chose from - had great crepes from houblon & sarrasin.</div><div class='text-box'>This <span class='review-span highlight' data-aligned-summaries='0'>three-star hotel</span> was quite different to my previous experiences in similar houses in Paris. The location is very pleasant, <span class='review-span highlight' data-aligned-summaries='0'>a bit further away from the busiest quarters of the city, but in the walking distance from them</span>. My hotel room was a DSU with a nice city view over the roofs. <span class='review-span highlight' data-aligned-summaries='1'>The room was surprisingly spacious</span> for a Parisian hotel with a proper bathroom with a bath tube. The staff at the reception was friendly and spoke good English. The continental breakfast was very good.</div><div class='text-box'>Every thing is small in this hotel starting by the elevator <span class='review-span highlight' data-aligned-summaries='1'>.The room are also abit sqeezy.but clean</span>, restroom is spotless an the sleep is very deep.If you have view by the window, it is charming to see Paris.The price is correct and include a good breakfast. We also appreciate the the subway entrance across the parc in front of the hotel and the museum at the left. Any other hotel would interest us but we appreciated our 2 last trip in Paris in this Little Palace.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>The hotel is well-placed for the main attractions of Central Paris</span> - it's about a 15 minute walk to the centre. It overlooks a small park and the rooms near or at the top have wonderful views of the Paris rooftops and the Eiffel Tower - beautiful at dusk. <span class='review-span highlight' data-aligned-summaries='1'>The hotel staff were very helpful</span> and friendly and the breakfast was delicious.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The hotel is a 3 star but in the centre of Paris and within easy distance of most attractions and very close to an underground station.</span> <span id="1" class="summary-sentence">The rooms are quite small but clean and the staff are very helpful.</span> <span id="2" class="summary-sentence">One issue would be that the walls are very thin and you can hear the televisions of adjoining rooms and even the occupants talking.</span> <span id="3" class="summary-sentence">Also the air con doesn't work sometimes in the rooms.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

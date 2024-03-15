@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 6'>cute place.great location</span>! we stayed at the stratford on august 31 for one night.the room was very small, but well laid out. the bed was comfy and <span class='review-span highlight' data-aligned-summaries='2'>the linens we nice and clean. overall, the room was spotless</span>. the bathroom was actually a decent size considering how small the room was. the only thing about the shower was that the drain was a little slow.so the shower kinda filled up with water. we almost overflowed onto the floor oopps! the hotel offers a complimentary breakfast in a great tea room that has lots of windows. <span class='review-span highlight' data-aligned-summaries='5 6'>you can look out and see the</span> <span class='review-span highlight' data-aligned-summaries='5'>hustle and bustle of the street and the</span> <span class='review-span highlight' data-aligned-summaries='5 6'>cable cars zip by</span>. the breakfast was simple.toast, cereal, muffins.hey! it's free!i <span class='review-span highlight' data-aligned-summaries='0'>would totally stay here again</span>!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 1'>Pefect for travelers on a BUDGET who don't want a DIVE hotel</span>! My husband and I were first time visitors to San Francisco. We wanted <span class='review-span highlight' data-aligned-summaries='0'>to see the sites and enjoy the city</span> - not spend time in our hotel room. <span class='review-span highlight' data-aligned-summaries='0'>The Stratford was absolutely perfect</span> for this. <span class='review-span highlight' data-aligned-summaries='6'>Best hotel location in the city - close to Union Square</span>, but it's easy to get to other areas by hopping on <span class='review-span highlight' data-aligned-summaries='6'>the cable cars</span>. <span class='review-span highlight' data-aligned-summaries='2'>The rooms are</span> small and the beds aren't pillow-top (by any means!), but the place is <span class='review-span highlight' data-aligned-summaries='2'>clean</span>, quaint, and <span class='review-span highlight' data-aligned-summaries='1 2 6'>the staff is very friendly</span>. You will feel safe here and you will be glad that you saved some money on the hotel so you can spend it on other things.We would definitely stay here again!</div><div class='text-box'>Okay The <span class='review-span highlight' data-aligned-summaries='6'>location is really great</span> and the breakfast is not bad (it also has granola and orange juice). Lots of europeans stay here and it is possible to make friends. The room is small (but not that small for SF patterns). The shower works great. The two problems I found were that the room was very smelly and that the hotel has no common areas at all (there is just one sofa in the back of the elevator in the first floor) to seat outside the room an relax. Since it was rainning a lot I missed that kind of area to spend some time (and did not want to stay much in the room because the smell was bad).</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Wonderful experience at the Stratford</span> My husband and I stayed here for five days and found it to be a wonderful experience. As noted by the reviews the room was indeed small but adequate for our needs as we were only in the room to sleep. We had no problem with street noise and slept with the window open. <span class='review-span highlight' data-aligned-summaries='1 2'>The staff was very helpful</span> with any questions we had and very knowledgeable about the area. We loved the convenience of the hotel and would hightly recommend it to anyone. Also, we loved the breakfast in the AM. We thought it was quite adequate for our needs. We would definitely stay here again on our next trip to San Francisco.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Stratford lived up to expectations</span> Read some of the other reviews - yes the room is smallish, yes the tv is up high and yes the elevator is very slow BUT considering <span class='review-span highlight' data-aligned-summaries='6'>the location</span>, the price, and that I wanted to be outside the hotel playing tourist, these things were <span class='review-span highlight' data-aligned-summaries='6'>not an inconvenience at all</span>. <span class='review-span highlight' data-aligned-summaries='2'>The room and bathroom were clean</span>, the furnishing were clean, the bed was comfortable - it was a great stay and I would stay there again.Best of all <span class='review-span highlight' data-aligned-summaries='1 2 6'>the staff</span> that I talked with <span class='review-span highlight' data-aligned-summaries='1 2 6'>were helpful and wanted to be helpful</span>, gee it makes a difference. Thanks.Another reviewer mentioned to request a room away from the elevator - great bit of advice that.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='6'>Great location</span> Great location, right in the centre of the city with the main tram line right outside.<span class='review-span highlight' data-aligned-summaries='2'>Clean and recently decorated</span>, it is basic and the rooms are small, but <span class='review-span highlight' data-aligned-summaries='1 2 6'>the staff were really friendly and helpful</span>, and for the price and location <span class='review-span highlight' data-aligned-summaries='1'>you'd be hard pushed to find a better budget hotel</span>. We passed some of the others and they looked nowhere near as good.The breakfast was toast, muffins, juice, coffee etc so again basic but all freshly cooked and complimentary.If you want something luxurious you'll need to spend more, but <span class='review-span highlight' data-aligned-summaries='0'>if you want a clean and friendly base in the centre of the action The Stratford it spot on</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 1'>Good hotel for the price</span> <span class='review-span highlight' data-aligned-summaries='5'>We stayed in a Queen</span> on the 8th floor, <span class='review-span highlight' data-aligned-summaries='5'>away from Powell, which had no view</span> but was <span class='review-span highlight' data-aligned-summaries='5'>reasonably quiet when the windows were shut</span>. The room layout was a bit awkward as the sink was not in the bathroom but the bedroom area. <span class='review-span highlight' data-aligned-summaries='2'>The room was clean</span> except for some scuff marks on the wall. <span class='review-span highlight' data-aligned-summaries='2'>The room had a slightly humid feel</span> to itThere is a free continental breakfast, which includes muffins, cereal , toast and coffee/tea.<span class='review-span highlight' data-aligned-summaries='6'>This hotel has excellent access to public transportation</span> around the city and to the airport. Unfortunately the hotel elevator is rather slow.<span class='review-span highlight' data-aligned-summaries='1 2 6'>The people at the front desk were always friendly</span>.<span class='review-span highlight' data-aligned-summaries='0'>Excellent value</span>.</div><div class='text-box'>Great place to stay We have just returned from San Francisco <span class='review-span highlight' data-aligned-summaries='0'>after spending 2 days at the Stratford and I have to say that we loved it</span>! It was a great place to stay and was <span class='review-span highlight' data-aligned-summaries='6'>right in the centre of things with cable cars passing all of the time</span>! <span class='review-span highlight' data-aligned-summaries='2'>The rooms were</span> small but <span class='review-span highlight' data-aligned-summaries='2'>clean</span> and the people on the front desk were very helpful. The continental breakfast was also very nice, in all a good place to stay.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Stratford Hotel was disappointing This hotel was disappointing.</span> <span id="1" class="summary-sentence">Even though it is a budget hotel, some customer service would be appreciated as we were paying money for the room!</span> <span id="2" class="summary-sentence">The staff were cold on arrival and first impressions of the room was that it was clean but on closer inspection, the room smelt of damp, the radiator did not work and the phone line also did not work.</span> <span id="3" class="summary-sentence">We were moved to another room</span> <span id="4" class="summary-sentence">whereupon the radiator was leaking and the toilet flush was broken.</span> <span id="5" class="summary-sentence">In addition as our rooms overlooked Powell street, we could hear the noise of the cable cars and also the live bands on the street and from the bar across the road.</span> <span id="6" class="summary-sentence">However, not all the staff were rude and the hotel is in an excellent location - near the shops and transport.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

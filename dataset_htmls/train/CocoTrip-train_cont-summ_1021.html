@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>Unfortunately <span class='review-span highlight' data-aligned-summaries='0'>the photographs of the rooms are nothing like the reality</span>. <span class='review-span highlight' data-aligned-summaries='1'>Our tripple room</span> on the 5th floor <span class='review-span highlight' data-aligned-summaries='1'>was large but very gloomy - there was bare grey plaster board ceiling (unpainted)</span> and <span class='review-span highlight' data-aligned-summaries='1'>the decor and furniture generally looked tired and in need of modernisation</span>. <span class='review-span highlight' data-aligned-summaries='1'>The room</span>, however, <span class='review-span highlight' data-aligned-summaries='1'>was clean</span> and the bedding was white, crisp and clean. Do<span class='review-span highlight' data-aligned-summaries='4'>n't expect too much for breakfast</span> - there isn't much choice, <span class='review-span highlight' data-aligned-summaries='4'>bread rolls are hard and stale</span>. <span class='review-span highlight' data-aligned-summaries='4'>Crossoint and coffee are the best bet</span>. My overall feeling is it is not good value for money and I'm sure <span class='review-span highlight' data-aligned-summaries='0 7'>there are better hotels in Rome for a similar price</span>. <span class='review-span highlight' data-aligned-summaries='7'>I would say it is a 1-2 star hotel, definiately not a 3</span>. <span class='review-span highlight' data-aligned-summaries='7'>On the plus side it is in a good position for sightseeing</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='5'>The staff here are very</span> friendly and <span class='review-span highlight' data-aligned-summaries='5'>helpful</span>. Room was a small single which felt quite depressing at first but I spent very little time there so it really didn't matter. Bed was comfortable. Shower clean with plenty of hot water. There were some students shouting in the corridor a lot one night but I was so tired they barely kept me awake. <span class='review-span highlight' data-aligned-summaries='3'>The area</span>, just 2 or 3 streets down from the train station <span class='review-span highlight' data-aligned-summaries='3'>felt perfectly safe</span> and there are plenty of other hotels in the area too. Friends stayed in a separate hotel just a block away. Their room was bigger but they still had similar issues with noise and trying to get fresh air in without also suffering the Rome traffic noise.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 7'>This is the worst hotel I've ever stayed at</span>. The elevator broke (while we were in it), <span class='review-span highlight' data-aligned-summaries='1'>the rooms are smelly</span>, <span class='review-span highlight' data-aligned-summaries='1'>and you run out of hot water through a normal shower</span>. <span class='review-span highlight' data-aligned-summaries='2'>The bathroom had a musty smell</span>, that I cannot attribute to anything in particular. It is not a smell you would want to find out on your own. To cap it all off, <span class='review-span highlight' data-aligned-summaries='5'>I think we got scammed for 100 euro (fake note)</span>. That point is debateable, but <span class='review-span highlight' data-aligned-summaries='7'>this hotel is not 3 stars.and</span> <span class='review-span highlight' data-aligned-summaries='0 7'>I'm surprised it is in business still</span>. Upon check-in, I called the Hilton to book another room. That tells you something. Stay away.far, far, away.</div><div class='text-box'>I was looking for <span class='review-span highlight' data-aligned-summaries='3'>a non-expensive hotel</span> (single room) <span class='review-span highlight' data-aligned-summaries='3'>close to Termini station</span> for 2 nights, and found Hotel Giada on the website nyceRome.com. The hotel (3 stars) is quite basic, but clean, and it satisfied my needs. <span class='review-span highlight' data-aligned-summaries='1'>The room was simply furnished, but the bed was good</span>. <span class='review-span highlight' data-aligned-summaries='4'>The breakfast was average</span>. The location of the hotel was superb, 3 minutes from Termini station and 3 minutes from Maria Maggiore, so <span class='review-span highlight' data-aligned-summaries='6 7'>I felt I got fair value for the money</span>. <span class='review-span highlight' data-aligned-summaries='0 7'>There are many 3 stars hotels in the same street</span> <span class='review-span highlight' data-aligned-summaries='0'>as this hotel,</span> <span class='review-span highlight' data-aligned-summaries='0 7'>so next time i may try another one</span>.</div><div class='text-box'>After reading a few reviews regarding Hotel Giada, I thought that perhaps my stay in Rome would be seriously impacted. I was very pleased to find that <span class='review-span highlight' data-aligned-summaries='0 7'>Hotel Giada was exactly what I was looking for</span> when I booked it. <span class='review-span highlight' data-aligned-summaries='5'>The 24 hour staff was fine</span>; <span class='review-span highlight' data-aligned-summaries='1'>the room was great despite no air-conditioning</span>; <span class='review-span highlight' data-aligned-summaries='1'>the room and bathroom were clean</span>-big, clean towels daily; <span class='review-span highlight' data-aligned-summaries='4'>the breakfast room was bright and warm with a nice breakfast</span>. The elevator was vintage but memorable. <span class='review-span highlight' data-aligned-summaries='3'>The location, 5 minutes from the Termini</span> and within walking distance to all but Vatican City <span class='review-span highlight' data-aligned-summaries='3'>is perfect</span>. <span class='review-span highlight' data-aligned-summaries='0 7'>Would recommend</span>.</div><div class='text-box'>this hotel was the worst place i have ever stayed <span class='review-span highlight' data-aligned-summaries='1'>the room was small dark</span> and <span class='review-span highlight' data-aligned-summaries='1'>smelled funny</span>. <span class='review-span highlight' data-aligned-summaries='1'>The bathroom was appalling i felt dirtier after a shower as the water stank</span> and made me feel sick just before the hot water ran out, <span class='review-span highlight' data-aligned-summaries='1'>and it was full of insects</span>. <span class='review-span highlight' data-aligned-summaries='1'>Mouldy walls and cracked radiators</span> added to the over all ambience. It was like an eppisode of Fawlty Towers with out the homour. <span class='review-span highlight' data-aligned-summaries='0'>I would advise anyone staying in rome to avoid this hotel</span>.</div><div class='text-box'>This is the perfect place if you need a clean room and place to shower. The bed was somewhat comfy, <span class='review-span highlight' data-aligned-summaries='4'>breakfast was ok</span> <span class='review-span highlight' data-aligned-summaries='1'>but the rooms were clean</span> and is in a perfect location. The train station and Coloseum are both extremely close. The only thing that annoyed me was you had to go to the lobby to use the Internet. <span class='review-span highlight' data-aligned-summaries='0 6 7'>If you're on a budget</span> <span class='review-span highlight' data-aligned-summaries='0 7'>and can live without all the pamperings of a nice hotel</span> <span class='review-span highlight' data-aligned-summaries='0 6 7'>this is your place</span>.</div><div class='text-box'>We stayed at the Hotel Giada and found the rooms to be clean, including the bathroom. <span class='review-span highlight' data-aligned-summaries='4'>The breakfast was nice</span> and the staff were friendly. The hotel is within easy reach of all the sights and <span class='review-span highlight' data-aligned-summaries='3'>we didn't feel threatened by the area</span>. i must admit that we were dreading our stay there because of all the bad reviews, <span class='review-span highlight' data-aligned-summaries='0 7'>we enjoyed ourselves and would stay there again</span> <span class='review-span highlight' data-aligned-summaries='7'>for a</span> <span class='review-span highlight' data-aligned-summaries='6 7'>low budget</span> <span class='review-span highlight' data-aligned-summaries='7'>break</span>.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">I would advise anyone thinking of staying here to choose another Hotel.</span> <span id="1" class="summary-sentence">The room was cramped, smelly, old, dark and not at all up to the standard.</span> <span id="2" class="summary-sentence">The net curtains were filty and the bathroom was old and tatty.</span> <span id="3" class="summary-sentence">The area near Termini Station is horrible and unsafe.</span> <span id="4" class="summary-sentence">The breakfast room was ugly and the food was just disgusting, as well as the tea and coffee.</span> <span id="5" class="summary-sentence">Generally not very helpful staff.</span> <span id="6" class="summary-sentence">I know the price is cheap but</span> <span id="7" class="summary-sentence">as the saying goes " you get what uou pay for " but in this case I would not stay here even in they pay me.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

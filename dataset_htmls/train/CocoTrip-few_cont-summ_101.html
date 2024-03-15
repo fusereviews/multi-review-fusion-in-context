@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>We enjoyed our stay at the Hyatt - had a nice room (paid for an upgraded water view, which was nice to have), the staff was friendly and helpful, <span class='review-span highlight' data-aligned-summaries='1'>the location is perfect</span> and we had a very decent rate. The lobbies were pretty nice, but we didn't hang out there or eat at any of the places. We walked most places (or took a cab if our destination was really far), even in the middle of winter. I try not to be too picky about these things, but <span class='review-span highlight' data-aligned-summaries='5'>our room was dusty the whole time we were there. It was enough to be noticed, so it should have been cleaned by the staff</span>. Also, <span class='review-span highlight' data-aligned-summaries='4'>we weren't very fond of the bed. It was a bit on the hard side and wasn't exactly plus. It wasn't horrible though</span>. Again, <span class='review-span highlight' data-aligned-summaries='5'>not horrible, but our room was very hot no matter how we set the temp at</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Overall the hotel is ok, very busy and noisy</span>. <span class='review-span highlight' data-aligned-summaries='7'>Valet parking is the only choice you have and an additional $50 for every 24 hours</span>. Valet parking stole our Ipod so they told us to fill out a claims report which we did and then we had to wait more than a week to call the claims department because the one and only person they have working claims was on vacation. Once I was able to talk to the claims department she was no help at all. She basically called me a liar and we will not be getting reimbursed for the loss of our IPod. I am furious that it cost me $50 per day extra and then we will have to pay another $250 + to replace our IPod.</div><div class='text-box'>I stayed here for two nights to partake in the Chicago St. Patricks festivities. Check in went super fast, and we were given a <span class='review-span highlight' data-aligned-summaries='0'>room</span> the <span class='review-span highlight' data-aligned-summaries='0'>was</span> <span class='review-span highlight' data-aligned-summaries='0 5'>so newly remodeled</span> <span class='review-span highlight' data-aligned-summaries='5'>you could still catch a whiff of the fresh paint</span>. <span class='review-span highlight' data-aligned-summaries='2'>It overlooked the river, which made for some great shots</span> when they dyed it! Also, they allowed us a late check out of 2pm, at no charge, in order to not miss the parade. <span class='review-span highlight' data-aligned-summaries='4'>The beds were amazing</span>, as was the bathroom. <span class='review-span highlight' data-aligned-summaries='4'>Plenty of space</span>, with a very nice desk set up. <span class='review-span highlight' data-aligned-summaries='1'>And being</span> <span class='review-span highlight' data-aligned-summaries='1 2'>one block from Michigan</span>, and a 10 minute walk to Navy Pier, <span class='review-span highlight' data-aligned-summaries='1'>this is a great location</span>. Couldn't have been more pleased with this hotel.</div><div class='text-box'>We loved our stay at the Hyatt Regency. <span class='review-span highlight' data-aligned-summaries='2'>I really don't think there is a better location in downtown</span>. So <span class='review-span highlight' data-aligned-summaries='1'>conveniently located off the river and a short jaunt to Michigan Ave</span>, Grant Park, and Navy Pier. I have already recommended this hotel to other travelers heading to Chicago. I would say, however, <span class='review-span highlight' data-aligned-summaries='7'>the dining in the hotel is pretty pricey</span>. So, if you are looking to save a few bucks get outside of the four walls of the hotel. That being said, I will still always stay at this hotel when traveling to Chicago, with out a doubt.</div><div class='text-box'>I stayed two nights on business. <span class='review-span highlight' data-aligned-summaries='1'>The location was great</span> and <span class='review-span highlight' data-aligned-summaries='3'>the room was very nice</span>. <span class='review-span highlight' data-aligned-summaries='7'>The price was $25-$30 cheaper than any comparable hotels in the area</span>. I had two minor complaints. The closet door was off the track, and wouldn't open when I checked in, and they didn't fix it the second day. Also, the Big Bar closed early, and the bartender was not very polite about letting me know before last call. Other than that, I would highly recommend the place.</div><div class='text-box'>As a hotel, it's very nice, <span class='review-span highlight' data-aligned-summaries='0'>with very nice amenitiies</span>, but it's also expensive. <span class='review-span highlight' data-aligned-summaries='6'>Canned soft drink in the mini-bar cost $4.25</span>, and Internet use in the business center was something like $10 for 7 minutes (or was that $7 for 10 minutes?). <span class='review-span highlight' data-aligned-summaries='1'>Location is good</span>. <span class='review-span highlight' data-aligned-summaries='7'>If price is no object, it's a good choice</span>, <span class='review-span highlight' data-aligned-summaries='7'>but there are better bargains</span> in the area.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>The Hyatt is recently remodeled and very nice</span>. The staff was extremely friendly and always helpful. <span class='review-span highlight' data-aligned-summaries='1'>The location is centrally located on the mag mile and we could</span> <span class='review-span highlight' data-aligned-summaries='1 2'>easily walk to all there was to do downtown</span>. Will definitely stay here again. Classy but not stuffy.</div><div class='text-box'>Stayed there Feb 2005. A former jewel that has fallen into disrepair. <span class='review-span highlight' data-aligned-summaries='0'>The hotel is dark, and shabby</span>. <span class='review-span highlight' data-aligned-summaries='0'>Even the newer wing is not up to par</span>. If you stay in the Loop area, try the Burham instead.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This recently remodelled Hyatt has very nice amenities but might be too dark and shabby for some and can be noisy when busy but is okay.</span> <span id="1" class="summary-sentence">The location of the hotel is great for convenience.</span> <span id="2" class="summary-sentence">Close to downtown and overlooking the river for some really good views.</span> <span id="3" class="summary-sentence">The rooms at this hotel are rather average.</span> <span id="4" class="summary-sentence">They are quite spacious with very comfortable beds.</span> <span id="5" class="summary-sentence">However, the cleanliness is not quite up to scratch and the rooms get very hot.</span> <span id="6" class="summary-sentence">The soft drink from the minibar was expensive.</span> <span id="7" class="summary-sentence">The cost of this hotel is average, however the valet parking is expensive and unfortunately is the only option whilst staying at this hotel.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

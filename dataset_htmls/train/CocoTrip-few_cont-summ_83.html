@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>My husband and i have been staying at The Talbott for nearly 20 years and we love it! <span class='review-span highlight' data-aligned-summaries='1'>The location can't be beat</span>, of course, and the <span class='review-span highlight' data-aligned-summaries='0 2'>rooms are beautiful</span>, <span class='review-span highlight' data-aligned-summaries='2'>especially the spacious marble baths</span>. <span class='review-span highlight' data-aligned-summaries='3 4'>The fluffy down duvets are delightful</span> <span class='review-span highlight' data-aligned-summaries='3'>too</span>. The ever gracious staff is what sets The Talbott apart from the rest. You will be warmly greeted at the door by the bellmen, then experience the same personal touch at the front desk and the concierge desk. People who are happy doing their job and personally connected to your excellent experience, that's the big deal. I am attaching a photo of Gene at the concierge desk, just one of the good friends you will also make at The Talbott hotel!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>The Talbott is a great place to stay</span>. It is a luxury boutique in the heart of the Gold Coast, <span class='review-span highlight' data-aligned-summaries='1'>easily within walking distance of Michigan Avenue, State Street, and Navy Pier</span>. The staff is exceptionally friendly. They provide twenty-four-hour room service, concierge service, and the front desk staff and waitstaff are even cheerful late at night. <span class='review-span highlight' data-aligned-summaries='2 3'>The rooms are</span> <span class='review-span highlight' data-aligned-summaries='2'>modern, well decorated</span>, and <span class='review-span highlight' data-aligned-summaries='3'>comfortable</span>. <span class='review-span highlight' data-aligned-summaries='3 7'>They feature flat-screen sattelite televisions, ihome alarm clocks, and many other conveniences one would expect from a luxury hotel</span>, without the sameness of the chains.</div><div class='text-box'>In a word - NOISY. A new hotel is being constructed out back. They start at 8 a.m. sharp and don't end until late at night. Every Day. I'd wait until it's done before staying there. If you only need one bed, they can move your room to the front of the hotel where it's not as bad. If you need more than one bed, though, you're out of luck. The <span class='review-span highlight' data-aligned-summaries='0'>hotel is nice</span>, restaurant has very good food and otherwise the stay was fine.</div><div class='text-box'>We stayed 5 nights at the Talbott which was <span class='review-span highlight' data-aligned-summaries='1'>in</span> easy <span class='review-span highlight' data-aligned-summaries='1'>walking distance of the Hancock Tower</span>, Millenium park, <span class='review-span highlight' data-aligned-summaries='1'>Sears Tower</span> etc. Staff were friendly, and helpful. <span class='review-span highlight' data-aligned-summaries='5 6'>Menu was</span> <span class='review-span highlight' data-aligned-summaries='5'>varied</span> but <span class='review-span highlight' data-aligned-summaries='6'>limited</span>. <span class='review-span highlight' data-aligned-summaries='1'>Numerous Restaurants nearby</span>, avoid Gibsons as very expensive. We had <span class='review-span highlight' data-aligned-summaries='2'>large</span> <span class='review-span highlight' data-aligned-summaries='3'>comfortable</span> <span class='review-span highlight' data-aligned-summaries='2 3'>Room</span> with walk in wardrobe, well equipped bathroom with his and hers toilet rolls and basins. <span class='review-span highlight' data-aligned-summaries='0'>Not cheap</span>, but central and <span class='review-span highlight' data-aligned-summaries='0'>not as expensive as the Water Tower next door</span>.</div><div class='text-box'>My wife and I just spent 3 nights at The Talbott. <span class='review-span highlight' data-aligned-summaries='3'>The room was</span> spacious, <span class='review-span highlight' data-aligned-summaries='3'>comfortable</span> and <span class='review-span highlight' data-aligned-summaries='3'>well-appointed</span>. The hotel is quiet although there is some construction nearby. Linens and towels first-class. Free <span class='review-span highlight' data-aligned-summaries='4'>Wi-Fi in the room</span>. The <span class='review-span highlight' data-aligned-summaries='1'>location is terrific</span>, just <span class='review-span highlight' data-aligned-summaries='1'>one block to Michigan Avenue</span>. We will stay here on future visits.</div><div class='text-box'>We were advised by a friend about this hotel. We were travelling with a nother couple. old friends, and <span class='review-span highlight' data-aligned-summaries='0'>we were delighted with this hotel</span>. The staff were extremely courteous and friendly, the rooms were excellent, and the service efficient. <span class='review-span highlight' data-aligned-summaries='1'>It is a great location</span>, and we would recommend it to our friends.</div><div class='text-box'>Much <span class='review-span highlight' data-aligned-summaries='0'>more than we expected</span>, this <span class='review-span highlight' data-aligned-summaries='0'>hotel is gracious in every way</span>. <span class='review-span highlight' data-aligned-summaries='2 3'>Suites are</span> <span class='review-span highlight' data-aligned-summaries='2'>large</span>, <span class='review-span highlight' data-aligned-summaries='3'>well appointed, with fabulous bathrooms</span>. The staff, including the front desk, and the concierge were so helpful. A lovely, quiet and accomodating hotel, one of the very best! The Parkers</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Extremely helpful staff</span>, <span class='review-span highlight' data-aligned-summaries='1'>very convenient location</span>, <span class='review-span highlight' data-aligned-summaries='0 2'>spacious</span> <span class='review-span highlight' data-aligned-summaries='0 3'>and well appointed</span> <span class='review-span highlight' data-aligned-summaries='0 2 3'>room</span>. We surely would stay here again.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Delightful hotel, and although it's not cheap, it's a much fairer price than other hotels in the vicinity.</span> <span id="1" class="summary-sentence">This hotel offers a terrific location near Michigan Avenue, State Stree and Navy Pier and within walking distance of Hancock Tower and the Sears Tower not to mention the many restaurants close by.</span> <span id="2" class="summary-sentence">Rooms are extremely spacious, with a modern decor.</span> <span id="3" class="summary-sentence">Rooms are very comfortable and well equipped with essential amenities for each person's stay.</span> <span id="4" class="summary-sentence">The fluffy down duvets are particularly nice, and free Wi-Fi is available in all rooms too.</span> <span id="5" class="summary-sentence">The menu at this hotel was varied in terms of dishes' cuisine-type</span> <span id="6" class="summary-sentence">but it was also quite limited.</span> <span id="7" class="summary-sentence">Extra features of the room were things you would only normally see from a luxury hotel such as the electrical equipment; flat-screen satellite TV's, ihome alarm clocks etc.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

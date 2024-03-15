@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2 3'>Poor quality food</span>. Steak sandwich with mushrooms had mushrooms than steak on it. Steak was stone cold. I asked for a fresh one and it was so so. I didn't finish it. My girlfriends salad was called a 'chopped salad' the lumps of lettuce were never chopped. Barely any chicken in it either. <span class='review-span highlight' data-aligned-summaries='3'>Poor experience</span></div><div class='text-box'>I love this place, everything tastes good and <span class='review-span highlight' data-aligned-summaries='0'>I love the healthy choices</span>. I <span class='review-span highlight' data-aligned-summaries='1'>would prefer a more friendly</span> and <span class='review-span highlight' data-aligned-summaries='1'>professional staff</span>. But I guess all <span class='review-span highlight' data-aligned-summaries='2'>the 'to cool', pierced, tattoo'd people need to act like they don't really give a st # t</span> so everyone knows they are cool.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2 3'>Loved everything we ordered</span>. We got a beet salad, the teriyaki chicken and forbidden rice bowl, and iced tea. Would definitely return here again in a heartbeat. <span class='review-span highlight' data-aligned-summaries='2'>It was cute, clean</span> <span class='review-span highlight' data-aligned-summaries='3'>and the prices were right</span>. <span class='review-span highlight' data-aligned-summaries='0'>Focus is on healthy eating</span>, which is my favorite!</div><div class='text-box'>I've recently found this charming new restaurant although it's been around for many years. I love it. <span class='review-span highlight' data-aligned-summaries='2 3'>The food is really good</span> and <span class='review-span highlight' data-aligned-summaries='2'>I just had the</span> <span class='review-span highlight' data-aligned-summaries='2 3'>best service ever</span> <span class='review-span highlight' data-aligned-summaries='2'>from Ezra</span>. She's kind, genuine, informative, real perfection in the restaurant world. And best of all great smile! Keep up the good work chop shop!</div><div class='text-box'>Had to go out to eat after eating a salad here. <span class='review-span highlight' data-aligned-summaries='3'>Very expensive</span> which I can deal with if you receive a healthy portion. Could hardly see the quinoa and kale salad it was so puny. <span class='review-span highlight' data-aligned-summaries='3'>R.I.P. off</span>!!!!</div><div class='text-box'>Great spot. Went there tonight for the first time. <span class='review-span highlight' data-aligned-summaries='2 3'>Club sandwich was fantastic</span>. <span class='review-span highlight' data-aligned-summaries='1'>Friendly staff</span>. <span class='review-span highlight' data-aligned-summaries='2'>Comfortable seating. Quiet and inviting</span>. Indulged on some toffee cookies for desert. Milk too !. Everything is fresh and homemade. <span class='review-span highlight' data-aligned-summaries='3'>Very reasonable prices too</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>ChopShop is the greatest versatile spot</span> because <span class='review-span highlight' data-aligned-summaries='3'>you could literally eat all three meals of your day at this spot</span>. From the breakfast sandwiches and acai bowls, to the wraps and salads, and finally their protein bowls, ChopShop has it all! <span class='review-span highlight' data-aligned-summaries='2'>My favorites are the Moroccan Turkey Wrap and the Chicken Teriyaki Protein Bowl, you won't be disappointed trying either of these</span>.</div><div class='text-box'>Perfect! <span class='review-span highlight' data-aligned-summaries='2'>Real food. Quality choices</span>. Fast. Great service. <span class='review-span highlight' data-aligned-summaries='0 3'>Not just various combinations of corn, wheat and sugar on the menu</span>. If you only want more of that, go somewhere else. If you want <span class='review-span highlight' data-aligned-summaries='0 3'>food that will nourish your body</span>, come here. We will definitely be back!</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">ChopShop restaurant offers a healthy and nutritious variety of dishes.</span> <span id="1" class="summary-sentence">Staff is efficient, warm and friendly but lacks some measure of professionalism.</span> <span id="2" class="summary-sentence">The food quality is about average and the environment is comfortable and inviting.</span> <span id="3" class="summary-sentence">Overall a recommended place for breakfast, lunch or dinner.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

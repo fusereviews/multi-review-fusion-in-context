@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>5 days at the Maxwell I stayed here Aug 16-20, 2004. The location was great. <span class='review-span highlight' data-aligned-summaries='0 2'>The Maxwell is in the heart of Union Square and its near everything</span>. The cable cars and public transportation are right there. <span class='review-span highlight' data-aligned-summaries='2'>The staff was friendly</span>. The elevators are very small and the ice machine is located on the Mezzanine level. The resturant Max's located next door was over priced, the staff was not that friendly and the food was average. Eat elsewhere if possible.<span class='review-span highlight' data-aligned-summaries='3'>The room was spacious, but</span> <span class='review-span highlight' data-aligned-summaries='3 6'>the bed was not comfortable</span>.<span class='review-span highlight' data-aligned-summaries='6'> The bathroom was too small and</span> <span class='review-span highlight' data-aligned-summaries='4 6'>water was all over the floor everytime I took a shower</span>. <span class='review-span highlight' data-aligned-summaries='7'>If you are looking to stay in Union Square on a budget</span> <span class='review-span highlight' data-aligned-summaries='0 7'>I'd recommend the Maxwell</span>. If you are looking for luxury, try the 4 Seasons.</div><div class='text-box'>Great Hotel for the Money Alot of people complain about the Noise of the city and the size of the rooms, If thats the case, SAN FRANCISCO may not be for you. For the money, its a great Hotel. We were very satisfied and WE are picky. <span class='review-span highlight' data-aligned-summaries='2'>The staff was GREAT</span>. <span class='review-span highlight' data-aligned-summaries='3'>The rooms were comfy</span>, the restaurant ajoining the hotel, Max's on the Square was fantastic. They had no problems with us having 2 children in the room and were able to answer any questions we had. We also enjoyed the sounds of the street beneath us. The music from the nightclubs and the sounds of the people. It made the City more romantic. <span class='review-span highlight' data-aligned-summaries='7'>We WILL be staying there again</span>, and again, and again.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='7'>Good price, but we couldn't sleep</span>! My girlfriends and I had an event in the city and booked a night at Maxwell. <span class='review-span highlight' data-aligned-summaries='2'>The price was excellent - especially for the location</span>. The hotel is right in the heart of shopping and site seeing. <span class='review-span highlight' data-aligned-summaries='3'>The room was old and small</span>. We were not as fortunate as some of the other viewers to be upgraded to one of the new rooms. But it was fine for the night. The one thing that I must warn you all on though is the noise at night! We were in bed by 1am, but the rest of the city was still out partying until about 4am. <span class='review-span highlight' data-aligned-summaries='0'>The street noise was SO LOUD that none of us fell asleep much before the sun came up</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 1 7'>Loved the Maxwell to the Max</span>! Enjoyed the Maxwell this past weekend. We passed-by Los Angeles and stayed at Mondrian and did not enjoy our stay. Eventhough Mondrian had more amenities to offer, the employees there were not helpful and snotty! When we arrived in San Francisco this weekend, we were greeted by the nice staff at the Maxwell.The <span class='review-span highlight' data-aligned-summaries='2'>employees at the Maxwell were friendly, accommodating</span>, and does not provide robotic service like other chain hotels.<span class='review-span highlight' data-aligned-summaries='2 7'>The location is the best</span>. The Maxwell is just a few blocks from cable cars and steps away from the main union square. It's definitely theatrical, sentimental, and nostalgic (got the description from their brochure at the desk). We loved the Maxwell to the MAX!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='2'>Great Hotel in a great location</span> We just returned yesterday and had to write a positive review. We loved the location in Union Square. It was just a short walk to the cable car and F-line trolley. There were a few good breakfast places locally. <span class='review-span highlight' data-aligned-summaries='2'>The staff was courteous and very helpful</span>. <span class='review-span highlight' data-aligned-summaries='3 4 6'>The room was clean</span> <span class='review-span highlight' data-aligned-summaries='3 4'>and decorated nicely</span>,<span class='review-span highlight' data-aligned-summaries='3'> it had charm</span> that the other CA hotels we stayed in did not have. <span class='review-span highlight' data-aligned-summaries='6'>The bathroom was spacious and clean</span>. If I had to complain about anything it would be some of the slightly worn carpets, but personally I only noticed as it was mentioned in other reviews. <span class='review-span highlight' data-aligned-summaries='0 1 7'>I would stay at the Maxwell again in a heartbeat</span>. A truly good find.</div><div class='text-box'>Great place for the price <span class='review-span highlight' data-aligned-summaries='1'>My husband and I stayed at the Maxwell</span> for 5 nights .we found this hotel to be great find. <span class='review-span highlight' data-aligned-summaries='2'>It's in a wonderful location and the staff is very accomodating</span>. We reallly liked the homey feeling we had there. <span class='review-span highlight' data-aligned-summaries='3 6'>The rooms were very clean</span> <span class='review-span highlight' data-aligned-summaries='3'>and comfortable</span>. <span class='review-span highlight' data-aligned-summaries='3 6 7'>I didn't have any problem</span> sleeping even with a window that faced the street with the typical city noises. We were on the go and didn't eat at the hotel so I can't comment on their food, but it did look nice and was always busy. <span class='review-span highlight' data-aligned-summaries='0 7'>I would recommend this place without reservation</span>.</div><div class='text-box'>Okay stay This place is not bad, but not great. <span class='review-span highlight' data-aligned-summaries='2'>The front desk was really helpful and friendly</span> - that's about all the service you'll get. For the price, it's a good find. <span class='review-span highlight' data-aligned-summaries='3'>The hotel is charming and the room was nice</span>. <span class='review-span highlight' data-aligned-summaries='7'>We didn't have problems</span> hearing our neighbors but we did have a room facing the street with a jazz bar so the street noise was loud. <span class='review-span highlight' data-aligned-summaries='2'>The location is great</span> - one block away from the cable car and taxis on the next block.If you are looking <span class='review-span highlight' data-aligned-summaries='0'>for comfort at</span> <span class='review-span highlight' data-aligned-summaries='0 7'>a good price I'd recommend the Maxwell</span>.<span class='review-span highlight' data-aligned-summaries='7'></span></div><div class='text-box'>Maxwell <span class='review-span highlight' data-aligned-summaries='3'>has the old San Francisco charm</span> I personally prefer the charm of the Maxwell over the institutional feel of a big, new hotel. When you step in to the lobby of the hotel, it brings you back to how San Francisco hotels should feel back in the 40s. <span class='review-span highlight' data-aligned-summaries='3'>Although</span>, <span class='review-span highlight' data-aligned-summaries='3 4 6'>the modern amenities in the room</span> and the lobby <span class='review-span highlight' data-aligned-summaries='3 4 6'>make the hotel really comfortable</span>.<span class='review-span highlight' data-aligned-summaries='4'></span> <span class='review-span highlight' data-aligned-summaries='0 7'>Stay at the Maxwell if you want the small, boutique feel in a hotel</span>.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Skip the Maxwell</span> <span id="1" class="summary-sentence">We stayed at the Maxwell Hotel in San Francisco over the Labor Day Weekend.</span> <span id="2" class="summary-sentence">The hotel is in a great location and the staff was very friendly and helpful.</span> <span id="3" class="summary-sentence">The lobby looked okay, but we were disapointed with the room.</span> <span id="4" class="summary-sentence">It was run down and the decor was shabby.</span> <span id="5" class="summary-sentence">The bathroom tile on the floor had missing pieces and they had painted over the tile in the shower.</span> <span id="6" class="summary-sentence">The rooms need a major overhaul.</span> <span id="7" class="summary-sentence">Even though we had a good rate,we would not stay there again because of these problems.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

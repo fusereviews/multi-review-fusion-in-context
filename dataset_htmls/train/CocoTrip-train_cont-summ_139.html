@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Hotel</span> Lirico was awesome. We stayed there from October 2nd to October 4th, 2007. It <span class='review-span highlight' data-aligned-summaries='0'>is very clean</span> and <span class='review-span highlight' data-aligned-summaries='1'>very close to the Termini</span>. Our room was a double standard - <span class='review-span highlight' data-aligned-summaries='0'>it was a small room</span> but comfortable. The bathroom was super clean. The bed was a bit hard to sleep on. The breakfast room was nice and airy and <span class='review-span highlight' data-aligned-summaries='5'>the breakfast was awesome</span>. <span class='review-span highlight' data-aligned-summaries='3'>All the staff were super nice</span> and <span class='review-span highlight' data-aligned-summaries='3'>helpful</span>. They have a website - you can contact them directly and all my emails and questions and concerns were answered the next day at the latest. <span class='review-span highlight' data-aligned-summaries='8'>I loved this place and we would definitely stay here again</span>. <span class='review-span highlight' data-aligned-summaries='9'>I would highly recommend it!</span></div><div class='text-box'>we have just return from a 3 night stay at the lirico. <span class='review-span highlight' data-aligned-summaries='0'>we had a triple room which was a good size for the 3 of us</span>, comfortable and <span class='review-span highlight' data-aligned-summaries='0'>very clean</span>. we spent little time there as we were out most of the day. The hotel lift is very small and there is a flight of steps up to the reception from the street. The breakfast room was quiet small, and very busy on the second morning. <span class='review-span highlight' data-aligned-summaries='1'>The location was excellent near the railway station</span>. <span class='review-span highlight' data-aligned-summaries='3'>Very friendly</span> and <span class='review-span highlight' data-aligned-summaries='3'>helpful staff</span> all spoke english very well. <span class='review-span highlight' data-aligned-summaries='9'>If like us you are looking for a decent hotel with no frills this is the one for you</span>.</div><div class='text-box'>We stayed at Hotel Lirico for 4 nights using it as a base to see all the sights. <span class='review-span highlight' data-aligned-summaries='3'>The staff were friendly</span>, <span class='review-span highlight' data-aligned-summaries='0'>rooms clean</span> and the hotel has a <span class='review-span highlight' data-aligned-summaries='8'>very pleasant atmosphere</span>. <span class='review-span highlight' data-aligned-summaries='0'>Our room was small</span> and occasionally it was noisy in the morning (from around 8:30-9:00), although very quiet at night, but those were the only negatives - everything else <span class='review-span highlight' data-aligned-summaries='8'>was exactly what we needed</span> and <span class='review-span highlight' data-aligned-summaries='1'>the location was excellent</span> - <span class='review-span highlight' data-aligned-summaries='1'>we could walk everywhere</span> <span class='review-span highlight' data-aligned-summaries='8'>which is what we were looking for</span> (<span class='review-span highlight' data-aligned-summaries='1'>just 20 mins to most of the major attractions)and it's near the main railway station</span>. I would happily stay there again.</div><div class='text-box'>We stayed in the Hotel Lirico for 4 nights in mid June. The hotel was very nicely decorated and <span class='review-span highlight' data-aligned-summaries='3'>the staff</span>, <span class='review-span highlight' data-aligned-summaries='3'>particularly Tony on reception were very helpful</span>. <span class='review-span highlight' data-aligned-summaries='5'>Breakfast was adequate and plenty of it</span>. <span class='review-span highlight' data-aligned-summaries='8'>A very enjoyable stay</span> and <span class='review-span highlight' data-aligned-summaries='9'>would definetely recommend to friends</span> and family. Hopefully when we return to Rome in the future we will stay here again. The only thing I didn't realise (didn't read the small print properly) was that there was a 10% charge for payment using a card - my mistake but just wanted to make others aware.</div><div class='text-box'>We stayed at the Hotel Lirico mainly because of the great price and the <span class='review-span highlight' data-aligned-summaries='1'>convenient location</span>. <span class='review-span highlight' data-aligned-summaries='1 2'>The Termini train station is about a five minute walk from the hotel</span>. Our <span class='review-span highlight' data-aligned-summaries='0'>room was clean</span> and <span class='review-span highlight' data-aligned-summaries='0'>small</span>, but the staff made <span class='review-span highlight' data-aligned-summaries='8'>the stay very enjoyable</span>. The continental <span class='review-span highlight' data-aligned-summaries='5'>breakfast</span> in the morning <span class='review-span highlight' data-aligned-summaries='5'>was good</span> as well. Yes, the immediate perimeter around the train station is a little shady, but the area surrounding the Lirico a few blocks away was very nice. For the price, the customer service, and the location, this hotel was a great catch.</div><div class='text-box'>My husband and I stayed in this hotel for our last stop, in Rome, on a 2 1/2 week trip. <span class='review-span highlight' data-aligned-summaries='1 8 9'>The hotel</span> <span class='review-span highlight' data-aligned-summaries='1 9'>was</span> <span class='review-span highlight' data-aligned-summaries='1'>convenient to the train station and</span> <span class='review-span highlight' data-aligned-summaries='1 8 9'>within decent walking distance of the Ancient Rome sites</span>. We booked through the hotel website, and <span class='review-span highlight' data-aligned-summaries='8'>we were given the room directly in front of the entrance, which was a little annoying</span>. <span class='review-span highlight' data-aligned-summaries='0'>The room was small</span>, <span class='review-span highlight' data-aligned-summaries='0'>and the bathroom was very small and not very clean</span>. <span class='review-span highlight' data-aligned-summaries='5'>The included breakfast was pretty minimal</span>. The neighborhood was okay to walk through at night.</div><div class='text-box'>Hotel Lirico was <span class='review-span highlight' data-aligned-summaries='1'>in</span> <span class='review-span highlight' data-aligned-summaries='1 8 9'>a great location</span> <span class='review-span highlight' data-aligned-summaries='1'>next to the Opera House</span>. The hotel was on a block of its own and in a quiet, clean and safe area <span class='review-span highlight' data-aligned-summaries='1'>close to transportation and walking distance to many local sites</span>. The hotel was spotless and <span class='review-span highlight' data-aligned-summaries='3'>the staff was helpful and friendly</span>. <span class='review-span highlight' data-aligned-summaries='5'>Breakfast was good</span> and <span class='review-span highlight' data-aligned-summaries='6'>the coffee</span> they served <span class='review-span highlight' data-aligned-summaries='6'>was the best we had in Italy</span>. <span class='review-span highlight' data-aligned-summaries='8 9'>I</span> <span class='review-span highlight' data-aligned-summaries='8'>would return to this hotel</span> and <span class='review-span highlight' data-aligned-summaries='9'>have already recommended it to friends</span> planning trips to Italy.</div><div class='text-box'>We spent one night at the Lirico. Found <span class='review-span highlight' data-aligned-summaries='3 7 8'>the staff very helpful</span> <span class='review-span highlight' data-aligned-summaries='3 8'>and welcoming</span> + they spoke english! <span class='review-span highlight' data-aligned-summaries='0'>The hotel was clean</span>, very cosy, and quiet! <span class='review-span highlight' data-aligned-summaries='5'>A nice breakfast</span> too. There was also a supermarket next to the hotel and some nice restaurants in the street. <span class='review-span highlight' data-aligned-summaries='1 2'>Very close to the Termini station</span> as well and <span class='review-span highlight' data-aligned-summaries='1'>convenient to explore Rome</span>. <span class='review-span highlight' data-aligned-summaries='8 9'>We will return</span>!</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">Rooms are small but air conditioned, nicely decorated and very clean.</span> <span id="1" class="summary-sentence">The location is excellent, walking distance to most attractions and also close to the public transportation.</span> <span id="2" class="summary-sentence">Termini Station is just up the street.</span> <span id="3" class="summary-sentence">The staff is very friendly and helpful.</span> <span id="4" class="summary-sentence">The wireless in the room is free.</span> <span id="5" class="summary-sentence">Breakfast is excellent and plenty of it.</span> <span id="6" class="summary-sentence">The coffee is awesome.</span> <span id="7" class="summary-sentence">The service is quick and efficient.</span> <span id="8" class="summary-sentence">Very enjoyable stay.</span> <span id="9" class="summary-sentence">I would recommend the hotel to friends.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

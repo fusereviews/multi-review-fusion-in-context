@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>We had a week at Vdara. <span class='review-span highlight' data-aligned-summaries='0 3'>The room was spacious</span> <span class='review-span highlight' data-aligned-summaries='0'>and very comfortable</span>, we were on the 36th floor and had views towards The Mandalay Bay and mountains which was nice. The kitchen area was very functional and the bathroom again was spacious. There was plenty of storage space in the room, kitchen and bathroom, also plenty of towels were supplied daily. <span class='review-span highlight' data-aligned-summaries='5'>All staff we encountered were curtious and very pleasant</span> including housekeeping. Some have mentioned the <span class='review-span highlight' data-aligned-summaries='1 2'>walk to the strip</span>, to be honest wherever you stay in Vegas you are going to have a walk due to the size of all the hotels and casinos. <span class='review-span highlight' data-aligned-summaries='0 6'>Would definately stay here again</span> <span class='review-span highlight' data-aligned-summaries='6'>and I do hope to return</span> one day as Vegas is the most amazing place.</div><div class='text-box'>My girls and I went for a weekend in Vegas and stayed at the Vdara. I <span class='review-span highlight' data-aligned-summaries='0'>would highly recommend this hotel</span>! <span class='review-span highlight' data-aligned-summaries='3'>It was really spacious</span> and very comfortable for the 5 of us. <span class='review-span highlight' data-aligned-summaries='5'>The staff was all very friendly</span>. The <span class='review-span highlight' data-aligned-summaries='4'>hotel</span> room has a kitchenette which is nice for bringing back leftovers or drinks. The bathroom is huge with a nice tub and a great shower. <span class='review-span highlight' data-aligned-summaries='4'>This</span> <span class='review-span highlight' data-aligned-summaries='1 4'>hotel</span> <span class='review-span highlight' data-aligned-summaries='4'>doesn't have a casino attached</span>, but it is tram connected to the Cosmopolitan and also <span class='review-span highlight' data-aligned-summaries='1'>a couple minute walk across to the Aria</span>. There are great restaurants close, and <span class='review-span highlight' data-aligned-summaries='2 4'>the whole complex is easy walking distance to the strip</span> <span class='review-span highlight' data-aligned-summaries='4'>and many of the popular sites</span> <span class='review-span highlight' data-aligned-summaries='2 4'>in Vegas</span>. <span class='review-span highlight' data-aligned-summaries='6'>I would definitely stay here again</span> - great place.</div><div class='text-box'>We stayed at the Vdara for 5 nights in October 2011, <span class='review-span highlight' data-aligned-summaries='1 6'>we picked the hotel for the location</span> <span class='review-span highlight' data-aligned-summaries='6'>and price</span>. <span class='review-span highlight' data-aligned-summaries='0 1'>The view from our 49th floor room was amazing</span>,<span class='review-span highlight' data-aligned-summaries='1'></span> <span class='review-span highlight' data-aligned-summaries='1 2 4'>we overlooked</span> <span class='review-span highlight' data-aligned-summaries='1 4'>the Bellagio fountains</span> <span class='review-span highlight' data-aligned-summaries='4'>and</span> <span class='review-span highlight' data-aligned-summaries='2 4'>the Strip</span>,<span class='review-span highlight' data-aligned-summaries='2'></span> <span class='review-span highlight' data-aligned-summaries='3'>the room was huge</span> and had the most beautiful bathroom. Another bonus was the non smoking throughout the hotel, was lovely not to have the smell of smoke lurking in the rooms and lobby. <span class='review-span highlight' data-aligned-summaries='0'>However you do need to call room service to bring the cutlery</span> to your room, <span class='review-span highlight' data-aligned-summaries='0'>it would be nice if these items were already allocated</span> to the rooms.</div><div class='text-box'>Just spent 11 days at the Vdara in las Vegas, Our 2nd stay there, <span class='review-span highlight' data-aligned-summaries='0'>we have stayed in most of the 5 star hotels in the strip and would highly recommend this hotel</span>, . We had a wonderful strip view from our suite, <span class='review-span highlight' data-aligned-summaries='3'>the room was spotless</span> and <span class='review-span highlight' data-aligned-summaries='5'>the staff were all very polite and friendly</span>. It is nice to have the smoke free environment and <span class='review-span highlight' data-aligned-summaries='4'>a peaceful place to stay</span> but <span class='review-span highlight' data-aligned-summaries='4'>still enjoy the</span> shopping and <span class='review-span highlight' data-aligned-summaries='4'>entertainment on the strip</span>. Added bonus was the small kitchen area including the refrigerator/ microwave and 2 complimentary bottles of water each day.</div><div class='text-box'>Yes, this hotel is off the strip, but it's quiet and its <span class='review-span highlight' data-aligned-summaries='1 4'>easy to get to the strip</span> <span class='review-span highlight' data-aligned-summaries='1'>through the Bellagio</span>, which in 100+ temps is preferable anyway. We were on the 50th floor over looking the Bellagio fountains - the panoramic view was incredible. The "suite" was comfortable and luxurious, <span class='review-span highlight' data-aligned-summaries='5'>the staff were very friendly and helpful</span>. <span class='review-span highlight' data-aligned-summaries='0'>We</span> were there for a week and <span class='review-span highlight' data-aligned-summaries='0 6'>would, without question, go back again</span> <span class='review-span highlight' data-aligned-summaries='0'>it was that good</span>.</div><div class='text-box'>The Vdara <span class='review-span highlight' data-aligned-summaries='6'>was a wonderful place to stay</span> <span class='review-span highlight' data-aligned-summaries='2 4'>away</span> <span class='review-span highlight' data-aligned-summaries='4'>from the craziness</span> of <span class='review-span highlight' data-aligned-summaries='2'>the Strip</span> <span class='review-span highlight' data-aligned-summaries='2 4'>but close enough to take it</span> <span class='review-span highlight' data-aligned-summaries='2'>all</span> <span class='review-span highlight' data-aligned-summaries='2 4'>in</span>. The Vdara required a bit of walking to get to the Strip, but there was a <span class='review-span highlight' data-aligned-summaries='1'>nice walkway through the Bellagio</span>. The <span class='review-span highlight' data-aligned-summaries='3'>room was spacious</span> and the bed was comfortable. The salon was nice, but nothing too special. <span class='review-span highlight' data-aligned-summaries='4'>No casino</span> and no smoking <span class='review-span highlight' data-aligned-summaries='4'>makes this hotel a relaxing stay</span>. I <span class='review-span highlight' data-aligned-summaries='0'>would</span> definitely <span class='review-span highlight' data-aligned-summaries='0'>stay there again!</span></div><div class='text-box'>It was our first trip to Las Vegas and stayed at the Vdara! Wow! <span class='review-span highlight' data-aligned-summaries='0'>The</span> <span class='review-span highlight' data-aligned-summaries='0 3'>room was</span> <span class='review-span highlight' data-aligned-summaries='0'>amazing</span>! <span class='review-span highlight' data-aligned-summaries='3'>Very clean and spacious</span>. We were fortunate to be upgraded to the corner suite! <span class='review-span highlight' data-aligned-summaries='0 5'>The service at the desk was fast and friendly</span>! <span class='review-span highlight' data-aligned-summaries='0 6'>Would stay there again without a doubt</span>! <span class='review-span highlight' data-aligned-summaries='1 2 4'>The hotel is right in the middle of the strip</span> <span class='review-span highlight' data-aligned-summaries='1 4'>and close to everything</span> you want to see! Very happy with our first trip to Las Vegas!</div><div class='text-box'>Las Vegas is 24/7. After being in the casinos and enjoying the shows <span class='review-span highlight' data-aligned-summaries='4'>it was nice to relax in a smoke free, non-gaming hotel</span>. We had a cornor suite on a high floor. The view was spectacular. It is very easy to access the strip and all the other hotels. <span class='review-span highlight' data-aligned-summaries='1'>The Bellagio and Aria were steps away</span>. <span class='review-span highlight' data-aligned-summaries='5'>The staff was helpful</span> and <span class='review-span highlight' data-aligned-summaries='5'>friendly</span>. <span class='review-span highlight' data-aligned-summaries='4'>The spa was also very relaxing</span> and enjoyable.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">The vdara hotel was the best in every way and we would recommend it to everyone.</span> <span id="1" class="summary-sentence">The hotel is ideally situated in the new citycentre complex and was adjoined to the Bellagio and the Aria by a short walk way.</span> <span id="2" class="summary-sentence">It was also central to the Las Vegas strip.</span> <span id="3" class="summary-sentence">The room was spacious and spotless.</span> <span id="4" class="summary-sentence">The hotel was peaceful and relaxing without a casino yet close to all the entertainment.</span> <span id="5" class="summary-sentence">All the staff were very friendly and helpful.</span> <span id="6" class="summary-sentence">We hope to stay there again in the future.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

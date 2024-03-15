@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>Ordered Mario's <span class='review-span highlight' data-aligned-summaries='4'>delivery and</span> have been <span class='review-span highlight' data-aligned-summaries='4'>in the restaurant</span> before and both <span class='review-span highlight' data-aligned-summaries='4'>were amazing experiences</span>. The food is delivered promptly and is so hot and fresh. <span class='review-span highlight' data-aligned-summaries='0 1'>Their chicken is perfect</span> <span class='review-span highlight' data-aligned-summaries='1'>- so juicy!</span>! <span class='review-span highlight' data-aligned-summaries='3'>And so well priced</span>. <span class='review-span highlight' data-aligned-summaries='4'>Delivery guy is always friendly</span>. <span class='review-span highlight' data-aligned-summaries='2'>And don't forget to get their piri piri sauce</span> it's THE BEST!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 2 5'>The gold standard in Portuguese chicken</span>. You want the best, just come here. The level of attention and dedication these guys have to make sure they put out the best product is what sets them apart from everyone else. I heard a new location is opening downtown soon!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>We love going to marios for a quick chicken</span> purchase. <span class='review-span highlight' data-aligned-summaries='4'>The staff is very friendly</span> they will <span class='review-span highlight' data-aligned-summaries='2'>add some Piri piri sauce to your chicken</span> and cut it all up for you. They send it home with you in a nice little thermal bag to keep it warm. Just be careful because the sauce does start to leak out after some time:)</div><div class='text-box'>Work at the hospital and our group frequently order from this place... <span class='review-span highlight' data-aligned-summaries='0 1'>The chicken is always fresh</span>.<span class='review-span highlight' data-aligned-summaries='1'>... Juicy and perfectly cooked</span>.... We always call in before we pick up Cuz the line during lunch hour can get really long at times... The potatoes are really flavorful as well... Good choice for dine in as well...</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='4'>Very fast and friendly service</span>. <span class='review-span highlight' data-aligned-summaries='1'>The</span> <span class='review-span highlight' data-aligned-summaries='1 2'>chicken was moist and the piri piri hot sauce was delicious</span>. Got steamed vegetables which was good. Next time i will try the potatoes and rice when i can eat carbs again. <span class='review-span highlight' data-aligned-summaries='0 3'>$10 for half chicken meal</span>. I will be back often!</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 5'>The chicken is the best</span> in Mississauga. (<span class='review-span highlight' data-aligned-summaries='0 5'>Short of Portugal</span>, Toronto is where you find the best). <span class='review-span highlight' data-aligned-summaries='4'>Customer service is not their forte</span>. I've followed Mario's BBQ for over 15 years, so I have a soft spot for them. I prefer their chicken over Brasas.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0 5'>One of the</span> <span class='review-span highlight' data-aligned-summaries='0 2 5'>most flavorful Portuguese chicken</span> situated in the heart of Mississauga! Perfect dinner solution whenever you don't feel like cooking. <span class='review-span highlight' data-aligned-summaries='3'>What you get for the price is ridiculous</span>! The rice, chicken and potatoes goes together so well.. <span class='review-span highlight' data-aligned-summaries='2'>Must ask for the piri piri sauce</span>, it makes the meal that much better!</div><div class='text-box'>Great food but can be a hit and miss. Today the <span class='review-span highlight' data-aligned-summaries='1'>chicken was really dry, rice was uncooked</span> and oh my the lady taking the order <span class='review-span highlight' data-aligned-summaries='4'>whom I assume is the owner gave the worst customer service</span> ever. The jane location is much better.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">This restaurant's specialty is Portuguese chicken.</span> <span id="1" class="summary-sentence">It is juicy, fresh, and delicious.</span> <span id="2" class="summary-sentence">It is recommended to enjoy the chicken with Piri piri sauce.</span> <span id="3" class="summary-sentence">The value is great, one can expect a lot of food for the price.</span> <span id="4" class="summary-sentence">Although most of the time the staff are friendly, occasionally the customer service at Mario's is lacking.</span> <span id="5" class="summary-sentence">The Portuguese chicken is often regarded as the best that can be found outside of Portugal.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

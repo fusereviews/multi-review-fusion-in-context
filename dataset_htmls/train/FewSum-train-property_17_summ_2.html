@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>I love this place! Even though it is kind of a far drive for me, I will not bring my cat anywhere else. <span class='review-span highlight' data-aligned-summaries='0 1'>The staff is amazing</span>,<span class='review-span highlight' data-aligned-summaries='1'> the service is warm</span>, <span class='review-span highlight' data-aligned-summaries='2'>the place is clean</span> and <span class='review-span highlight' data-aligned-summaries='0'>they are open 24 / 7</span>. What more could you ask for?!?!</div><div class='text-box'>Front office: excellent! <span class='review-span highlight' data-aligned-summaries='1'>Bright, caring, thoughtful</span>.<span class='review-span highlight' data-aligned-summaries='3'>Surgeon</span>: five star! <span class='review-span highlight' data-aligned-summaries='0 3'>Good work</span>, followed up with phone call, <span class='review-span highlight' data-aligned-summaries='0 3'>great manner</span>.Intake / tech: not so much. When done, tech came out to explain antibiotic meds. I informed him that I CLEARLY today the intake person that cat was already on Clavamox! Oops! Sorry!....</div><div class='text-box'>I have been taking my 4 year old boxer here for a while now. <span class='review-span highlight' data-aligned-summaries='1 3'>They are</span> <span class='review-span highlight' data-aligned-summaries='1'>very friendly</span> and <span class='review-span highlight' data-aligned-summaries='3'>knowledgeable here</span>. My dog is very hyper and loving they were very <span class='review-span highlight' data-aligned-summaries='3'>loving to him</span> and helped me feel as ease. <span class='review-span highlight' data-aligned-summaries='0'>I will continue to go here for all my dogs needs</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>Great hours (7 am- 11pm everyday!</span>) <span class='review-span highlight' data-aligned-summaries='0'>and great personnel</span>. They also have boarding and grooming in office. I've been taking both my dogs here since 2010 and don't have a single complaint. I recently moved to N Scottsdale from old town and <span class='review-span highlight' data-aligned-summaries='3'>still go to this vet because they are so reliable</span>.</div><div class='text-box'><span class='review-span highlight' data-aligned-summaries='0'>won't be back</span>, euthanasia was <span class='review-span highlight' data-aligned-summaries='0 1'>pretty traumatic for me</span>, never saw it done that way & with <span class='review-span highlight' data-aligned-summaries='1'>such lack of empathy for the owner</span>. Had to put my cat down because of the sky hi bill & that put me in shock.</div><div class='text-box'>I am new to the area, and <span class='review-span highlight' data-aligned-summaries='0'>this clinic</span> is near my house. The staff here <span class='review-span highlight' data-aligned-summaries='0'>is amazing</span>. <span class='review-span highlight' data-aligned-summaries='0'>Wonderful</span> customer service and <span class='review-span highlight' data-aligned-summaries='0'>bed side manner</span> from the front desk to the techs to the Doctors. As fellow pet owners, you <span class='review-span highlight' data-aligned-summaries='1 3'>know our pets are like our children, and they made them and me feel so comfortable</span>.<span class='review-span highlight' data-aligned-summaries='1'></span> Will definitely be returning here!</div><div class='text-box'>Had to come back here yesterday because our dog hurt himself over the weekend. We had the same vet and while we had to wait about 3 hrs (walk in only, no appointments) <span class='review-span highlight' data-aligned-summaries='3'>she was very kind and gentle with our dog</span>. <span class='review-span highlight' data-aligned-summaries='0'>Very happy with the service</span>!</div><div class='text-box'>Had a great experience here last night with our sick cat. <span class='review-span highlight' data-aligned-summaries='1'>Staff was</span> wonderful, <span class='review-span highlight' data-aligned-summaries='0 1'>very friendly and</span> <span class='review-span highlight' data-aligned-summaries='0 1 3'>really took care of</span> <span class='review-span highlight' data-aligned-summaries='0 1'>us</span> and <span class='review-span highlight' data-aligned-summaries='3'>our boy</span>. So thankful that this place is here and <span class='review-span highlight' data-aligned-summaries='0'>open 24 hours</span>. I will definitely recommend them to everyone I know.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">A great veterinary clinic that is open for most of the day.</span> <span id="1" class="summary-sentence">The staff is friendly and treat customers like family.</span> <span id="2" class="summary-sentence">The clinic is clean and brightly lit.</span> <span id="3" class="summary-sentence">The surgeons is experienced and knows how to take care of the pets.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>

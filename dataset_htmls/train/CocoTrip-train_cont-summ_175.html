@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Review</title>
+    <style>
+        body { 
+			font-family: Arial, sans-serif; 
+			display: flex; 
+			justify-content: center; /* This will center the .reviews container on the screen */
+			align-items: flex-start;
+			height: 100vh;
+			 margin: 2px; /* Remove default margin */
+			}
+			
+        .highlight { background-color: yellow; 
+					 color: black !important; /* Dark grey for muted text */
+					 cursor: pointer;}
+        .not-hover-highlight { background-color: lightyellow; 
+							color: #606060 !important; /* Dark grey for muted text */}
+        .summary {
+			width: 50%; 
+			font-size: 1.0rem; 
+			padding: 10px; 
+			height: 100vh; /* Maximum height to a third of the viewport height */
+			background-color: #9e9e9e0a;
+		}
+        .reviews {
+			width: 50%;
+			font-size: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			max-height: 100vh; /* Maximum height to a third of the viewport height */
+			overflow-y: auto; /* Enable vertical scrolling */
+			background-color: #9e9e9e0a; /* Light grey background */
+		}
+        .text-box { 
+            width: calc(100% - 20px); /* Adjust based on padding */
+            margin: 10px;
+            padding: 10px; 
+            background-color: #9e9e9e0a; /* Light grey background */
+			color: #606060bf;
+            border: 2px solid #ddd; /* Cartoonish border */
+            border-radius: 20px; /* Rounded corners for cartoonish effect */
+            position: relative; 
+            box-shadow: 3px 3px #bbb; /* Soft shadow for depth */
+        }
+        .text-box:before { 
+            content: ''; 
+            position: absolute; 
+            right: 100%; 
+            bottom: 20%; 
+            border-top: 10px solid transparent; 
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid #ddd; /* Arrow matching the border */
+        }
+		.summary-box {
+			padding: 10px;
+			margin: 10px 0;
+			background-color: #e6e6fa; /* Lavender background for a pleasant look */
+			border: 1px solid #ddd; /* Light border for definition */
+			border-radius: 5px; /* Slightly rounded corners */
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+			cursor: pointer;
+		}
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<div class='column reviews'><h2>Reviews</h2><div class='text-box'>If you want to be <span class='review-span highlight' data-aligned-summaries='0'>near the airport</span>, I recommend this hotel! Nice location within a few miles of MCO. We stayed here overnight for an early flight out in the morning. The hotel is new and in great condition. <span class='review-span highlight' data-aligned-summaries='4'>The suites are nice with a small seating area and</span> <span class='review-span highlight' data-aligned-summaries='2 4'>nice comfortable bedroom</span>. I really liked the lights directly over the headboard; they were controlled by a switch close by-great for reading! Small sink but nice shelves around it. We had a view of a small lake and the outdoor pool from our window. <span class='review-span highlight' data-aligned-summaries='2'>Breakfast was good</span> with a few hot items along with the usual fare. <span class='review-span highlight' data-aligned-summaries='6'>I hope to stay here again when we fly in and out of Orlando</span>.</div><div class='text-box'>This turned out to be a great place to stay for three nights. <span class='review-span highlight' data-aligned-summaries='0'>It is conveniently located, and although is very close to the airport,</span> there isn't much noise. The rooms were a little small, but adequate for two people. We especially liked the configuration of the suite with the separate desk/living room area. <span class='review-span highlight' data-aligned-summaries='3'>Staff was very friendly</span> and helpful. My husband enjoyed the lounge/business area in the lobby too. <span class='review-span highlight' data-aligned-summaries='2'>Breakfast was just ok</span>, but there are restaurants all around if you're looking for more of a gourmet experience. It was cozy-particularly for an "airport" hotel. <span class='review-span highlight' data-aligned-summaries='6'>I would definitely stay here again</span>, especially with the convenient access to the 528 Expressway.</div><div class='text-box'>This is a wonderful hotel. We stayed here one night before going on a cruise. The staff gets an A+. Everyone was really nice and went out of their way to make us comfortable. We did have a run in with one of the shuttle drivers but I will not lower the hotelas score because of one person especially since the other drivers were great. It is in a good location and we were able to walk to certain places. The hotel lobby was clean and quiet. The rooms are huge and clean. We had a great time the short time we were at the hotel. Oh I forgot to mention that <span class='review-span highlight' data-aligned-summaries='2'>the breakfast buffet was the best</span>!</div><div class='text-box'>I stayed here for 3 nights for a business trip and had a comfortable stay. <span class='review-span highlight' data-aligned-summaries='4'>The rooms are nicely arranged for a living/working area with a sofa, couch, desk, microwave, and refrigerator. And the other part of the room is the bed and bathroom</span>. There isn't a lot of counter space, but still very nice. Complimentary breakfast is served and the spread is the typical continental breakfast - bread, muffins, waffles, eggs, sausage, yogurt, etc. <span class='review-span highlight' data-aligned-summaries='0'>It's very close to the airport and the Hertz rental car returns</span>. You can walk to nearby restaurants too.</div><div class='text-box'>This newly built (2007) <span class='review-span highlight' data-aligned-summaries='0'>airport hotel</span> has all the amenities you need, and is very clean. The standard <span class='review-span highlight' data-aligned-summaries='2 4'>suites</span> <span class='review-span highlight' data-aligned-summaries='4'>are</span> <span class='review-span highlight' data-aligned-summaries='4 5'>perfect with separate bathroom sinks from the shower and toilet</span>, and <span class='review-span highlight' data-aligned-summaries='3'>they have a good-sized seating/living area for the price</span>. Nice kitchen and <span class='review-span highlight' data-aligned-summaries='5'>all very clean</span> and <span class='review-span highlight' data-aligned-summaries='2'>comfortable</span>. It also has a nice pool area with some chaise lounge chairs and a decent sized fitness center. The buffet <span class='review-span highlight' data-aligned-summaries='2'>breakfast was good enough</span>, and the <span class='review-span highlight' data-aligned-summaries='3'>service</span> all around (restaurant, house-keeping and reception) was excellent and <span class='review-span highlight' data-aligned-summaries='3'>friendly</span>.</div><div class='text-box'>My husband I stayed at the Springhill Suites for pre and post cruise. <span class='review-span highlight' data-aligned-summaries='0'>The hotel is very close to MCO</span>. <span class='review-span highlight' data-aligned-summaries='0'>We rented a car from Budget and the hotel offered free parking</span>. <span class='review-span highlight' data-aligned-summaries='2'>Room was</span> clean and <span class='review-span highlight' data-aligned-summaries='2'>comfortable</span>. <span class='review-span highlight' data-aligned-summaries='2'>Breakfast in the morning was good</span>. The hotel has a business centre with 2 computers and free Internet access. In the mornings, the sound of planes overhead can be heard but we were up early so it didn't disturb us. <span class='review-span highlight' data-aligned-summaries='6'>I wouldn't hesitate to stay here again.</span></div><div class='text-box'>Our family stayed here for one night after a Disney Trip over Thanksgiving weekend. <span class='review-span highlight' data-aligned-summaries='0'>It was conveiently located near the airport. We dropped off our rental car and called the hotel and the shuttle came to pick us up.</span> It is within walking distance to a few restaurants and they gave us coupons for these as well. The hotel is very well-maintained and clean. <span class='review-span highlight' data-aligned-summaries='2'>Free breakfast in the morning was nice</span> as was <span class='review-span highlight' data-aligned-summaries='1'>the complimentary shuttle service to the airport</span>. <span class='review-span highlight' data-aligned-summaries='6'>Would definitely stay here again.</span></div><div class='text-box'>We stayed here for a night before a cruise after coming in late. <span class='review-span highlight' data-aligned-summaries='0 1'>It</span> <span class='review-span highlight' data-aligned-summaries='0'>is very convenient located to the airport and</span> <span class='review-span highlight' data-aligned-summaries='1'>has an Airport Shuttle</span>, which we didn't use. <span class='review-span highlight' data-aligned-summaries='2 6'>The rooms were comfortable</span> <span class='review-span highlight' data-aligned-summaries='2'>and the breakfast was very good</span>, with a great selection. <span class='review-span highlight' data-aligned-summaries='3'>The staff was very friendly,</span> <span class='review-span highlight' data-aligned-summaries='3 6'>overall a great value</span> <span class='review-span highlight' data-aligned-summaries='2 3 6'>for the money</span>.</div></div><div class='column summary'><h4>Summary</h4><div class='summary-box'><span id="0" class="summary-sentence">It is located very close to the airport and very convenient for a rental car return at the airport.</span> <span id="1" class="summary-sentence">There is also an airport shuttle.</span> <span id="2" class="summary-sentence">The rooms were comfortable and the breakfast was good for this price range.</span> <span id="3" class="summary-sentence">The staff was friendly and this place is a good value for the money.</span> <span id="4" class="summary-sentence">The suites are nice with a bedroom, a sitting area with wet bar, and a bath area.</span> <span id="5" class="summary-sentence">The bathroom and shower were nice and clean!</span> <span id="6" class="summary-sentence">I would stay here again if in the area.</span></div></div>
+<script>
+    document.querySelectorAll('.summary-sentence').forEach(sentence => {
+        sentence.addEventListener('mouseenter', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			this.classList.add('highlight');
+        });
+		
+		sentence.addEventListener('mouseleave', function() {
+            const summaryId = this.getAttribute('id');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (!span.getAttribute('data-aligned-summaries').split(' ').includes(summaryId)) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+				this.classList.remove('highlight');
+			});
+        });
+    });
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseenter', function() {
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('highlight');
+					span.classList.add('not-hover-highlight');
+				}
+			});
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.add('highlight');
+				}
+			});
+		});
+	});
+	
+	document.querySelectorAll('.review-span').forEach(span => {
+		span.addEventListener('mouseleave', function() {
+			const AlignSummariesId = this.getAttribute('data-aligned-summaries').split(' ');
+			document.querySelectorAll('.review-span').forEach(span => {
+				if (span !== this) {
+					span.classList.remove('not-hover-highlight');
+					span.classList.add('highlight');
+				}
+			});
+			document.querySelectorAll('.summary-sentence').forEach(sentence => {
+				if (AlignSummariesId.includes(sentence.getAttribute('id'))) {
+					sentence.classList.remove('highlight');
+				}
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>
