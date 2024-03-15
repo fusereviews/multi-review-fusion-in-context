@@ -1,4 +1,4 @@
-# multi-review-fusion-in-context
+# Multi-review Fusion-in-Context
 
 ## Overview
 This is the repository of the paper "Multi-Review Fusion-in-Context".
