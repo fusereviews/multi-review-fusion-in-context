@@ -4,7 +4,7 @@
 This is the repository of the paper "Multi-Review Fusion-in-Context".
 
 ## FuseReviews Benchmark
-For the FuseReviews benchmark, see [FuseReviews](https://fusereviews.github.io/)
+For the FuseReviews benchmark, see [benchmark website](https://fusereviews.github.io/).
 
 ## Code Coming Soon!
 We're excited to share that the code is on its way! 
