@@ -21,8 +21,8 @@ python prompt_gpt.py --model-name <MODEL> --n-demos <N_DEMOS> --split <SPLIT> --
 
 * `<MODEL>`- model name (e.g., gpt-4).
 * `<N_DEMOS>` - number of few-shot examples.
-* `<SPLIT>` - data split (any one of train, validation, or test)
-* `<API_KEY>` - OpenAI key
+* `<SPLIT>` - data split (any one of train, validation, or test).
+* `<API_KEY>` - OpenAI key.
 
 
 ## Code for Finetuning Experiments Coming Soon!
