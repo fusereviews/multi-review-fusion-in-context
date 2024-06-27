@@ -1,0 +1,26 @@
+{
+    // Model config
+    "experiment_type": "seq2seq",      
+    "model_name_or_path": "/PATH/TO/MODEL/CHECKPOINT/DIR",
+    "source_prefix": "",
+    "output_dir": "/PATH/TO/OUTPUT",
+    "max_source_length": 1500,
+    "max_target_length": 200,  // Lowering this will yield unreliable rouge results (based only on the limited summary)!
+    "include_inputs_for_metrics": true,
+    "min_length": 100,
+    "length_penalty": 2.0,
+    "early_stopping": true,
+    "no_repeat_ngram_size": 3,
+    "max_grad_norm": 1.0,
+    // Train config                
+    "overwrite_output_dir": true,
+    "validation_file": "data/dev__highlights_with_full_inputs.csv", // Necessary just not to crash run.py, doesn't do anything
+    // Predict
+    "do_predict": true,
+    "predict_with_generate": true,
+    "test_file": "data/dev__highlights_with_full_inputs.csv",
+    "per_device_eval_batch_size": 16,  // Sometimes can be larger than training batch size (no grad is activated)
+    "num_beams": 2,  // Lever to play with if getting OOM
+    // Cancel Wandb
+    "report_to": "none"
+}

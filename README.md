@@ -26,15 +26,18 @@ python prompt_gpt.py --model-name <MODEL> --n-demos <N_DEMOS> --split <SPLIT> --
 
 
 ## Code for Finetuning Experiments Coming Soon!
-We're excited to share that the code is on its way! 
-Our team is working hard to ensure that we deliver high-quality and well-documented code for you to use. 
+To finetune Flan-T5 large, run:
+```
+cd finetuned_experiments
+python -m src.run_experiments configs/train/train_flan_t5_large.json
+```
 
-Here's what you can expect:
-* **Comprehensive Documentation**: Clear instructions on how to set up and use the code.
-* **Fully Tested**: Code that has been rigorously tested to ensure reliability and performance.
+To evaluate the finetuned model, update the `model_name_or_path` and `output_dir` in [evaluation configs](https://github.com/fusereviews/multi-review-fusion-in-context/tree/main/finetuned_experiments/configs/eval/eval_flan_t5_large.json) to point to the relative path of the finetuned checkpoint and directory where to store the results, accordingly. Then, run:
+```
+cd finetuned_experiments
+python -m src.run_experiments configs/eval/eval_flan_t5_large.json
+```
 
-## Timeline
-Our target for releasing the code is June 2024. Please stay tuned for updates!
 
 ## Stay Updated
 To receive the latest news and updates, please star or watch this repository.
