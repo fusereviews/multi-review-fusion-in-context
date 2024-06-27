@@ -25,7 +25,7 @@ python prompt_gpt.py --model-name <MODEL> --n-demos <N_DEMOS> --split <SPLIT> --
 * `<API_KEY>` - OpenAI key.
 
 
-## Code for Finetuning Experiments Coming Soon!
+## Code for Finetuning Experiments!
 To finetune Flan-T5 large, run:
 ```
 cd finetuned_experiments
